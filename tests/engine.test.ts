@@ -1,0 +1,17 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {walk,assess} from '../lib/arb/engine.ts';
+import {defaults} from '../lib/arb/types.ts';
+const now=1800000000000;
+const market=(venue)=>({id:venue,venue,title:'Threshold',outcome:'Yes',opposite:'No',category:'Economics',rules:'Identical test conditions',url:'https://example.com',closeAt:new Date(now+86400000).toISOString(),open:true,feeRate:venue==='kalshi'?700:600,feeRounding:venue==='kalshi'?'ceil':'even',minQty:1,hash:'rules',settlement:null});
+const pair={id:'pair',a:market('kalshi'),b:market('poly'),inverted:false,reviewed:true};
+const book=(yes,no)=>({yes:[{price:yes,quantity:100}],no:[{price:no,quantity:100}],yesBids:[],noBids:[],receivedAt:now,exchangeAt:now,open:true});
+const a=book(4000,7000),b=book(7000,5000),cash={kalshi:500000,poly:500000};
+test('Walk consumes ascending depth without mutating it',()=>{const levels=[{price:5000,quantity:4},{price:4000,quantity:2}];const f=walk(levels,3,700,'ceil');assert.equal(f?.cost,13000);assert.equal(levels[0].price,5000);assert.equal(walk(levels,7,700,'ceil'),null)});
+test('Size respects combined budget and positive net dollars',()=>{const q=assess(pair,a,b,defaults,cash,now);assert.ok(q?.eligible);assert.equal(q.quantity,10);assert.ok(q.cost+q.fees+q.reserve<=defaults.maxTrade)});
+test('No venue cash means no fillable quantity',()=>{const q=assess(pair,a,b,defaults,{kalshi:0,poly:500000},now);assert.ok(!q?.eligible)});
+test('Stale and future observations cannot qualify',()=>{assert.ok(!assess(pair,{...a,receivedAt:now-3000},b,defaults,cash,now)?.eligible);assert.ok(!assess(pair,{...a,receivedAt:now+10000},b,defaults,cash,now)?.eligible)});
+test('Unreviewed pairs and sports remain ineligible',()=>{assert.ok(assess({...pair,reviewed:false},a,b,defaults,cash,now)?.reasons.includes('Settlement rules need review'));assert.ok(!assess({...pair,a:{...pair.a,category:'Sports'}},a,b,defaults,cash,now)?.eligible)});
+test('Unknown fees and nonpositive spreads never qualify',()=>{assert.ok(!assess({...pair,a:{...pair.a,feeRate:null}},a,b,defaults,cash,now)?.eligible);assert.ok(!assess(pair,book(4900,7000),book(7000,4900),defaults,cash,now)?.eligible)});
+test('Unknown closure and contracts beyond challenge horizon cannot qualify',()=>{assert.ok(!assess({...pair,a:{...pair.a,closeAt:''}},a,b,defaults,cash,now)?.eligible);assert.ok(!assess({...pair,a:{...pair.a,closeAt:new Date(now+60*86400000).toISOString()}},a,b,defaults,cash,now)?.eligible)});
+test('Previously reviewed pair losing its category cannot enter',()=>{assert.ok(!assess({...pair,a:{...pair.a,category:'Unknown'}},a,b,defaults,cash,now)?.eligible)});
