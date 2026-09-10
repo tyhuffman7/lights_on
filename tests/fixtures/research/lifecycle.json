@@ -1,0 +1,217 @@
+{
+  "provenance": "Synthetic deterministic protocol fixture; never actual market evidence",
+  "startedAt": 1800000000000,
+  "endMono": 2500,
+  "pairs": [
+    {
+      "id": "pair",
+      "a": {
+        "id": "kalshi",
+        "venue": "kalshi",
+        "title": "Synthetic threshold fixture",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "Economics",
+        "rules": "Synthetic identical resolution source, time and void handling.",
+        "url": "https://example.com/fixture",
+        "closeAt": "2027-01-16T08:00:00+00:00",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "fixture-rules",
+        "settlement": null
+      },
+      "b": {
+        "id": "poly",
+        "venue": "poly",
+        "title": "Synthetic threshold fixture",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "Economics",
+        "rules": "Synthetic identical resolution source, time and void handling.",
+        "url": "https://example.com/fixture",
+        "closeAt": "2027-01-16T08:00:00+00:00",
+        "open": true,
+        "feeRate": 600,
+        "feeRounding": "even",
+        "minQty": 1,
+        "hash": "fixture-rules",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": false
+    }
+  ],
+  "events": [
+    {
+      "venue": "kalshi",
+      "mono": 0,
+      "message": {
+        "type": "orderbook_snapshot",
+        "sid": 1,
+        "seq": 1,
+        "msg": {
+          "market_ticker": "kalshi",
+          "yes_dollars_fp": [
+            [
+              "0.3000",
+              "20.00"
+            ]
+          ],
+          "no_dollars_fp": [
+            [
+              "0.6000",
+              "20.00"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "venue": "poly",
+      "mono": 0,
+      "message": {
+        "marketData": {
+          "marketSlug": "poly",
+          "bids": [
+            {
+              "px": {
+                "value": ".6000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "offers": [
+            {
+              "px": {
+                "value": ".7000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "state": "MARKET_STATE_OPEN",
+          "transactTime": "2027-01-15T08:00:00+00:00"
+        }
+      }
+    },
+    {
+      "venue": "poly",
+      "mono": 50,
+      "message": {
+        "marketData": {
+          "marketSlug": "poly",
+          "bids": [
+            {
+              "px": {
+                "value": ".6100",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "offers": [
+            {
+              "px": {
+                "value": ".7000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "state": "MARKET_STATE_OPEN",
+          "transactTime": "2027-01-15T08:00:00.050000+00:00"
+        }
+      }
+    },
+    {
+      "venue": "poly",
+      "mono": 100,
+      "message": {
+        "marketData": {
+          "marketSlug": "poly",
+          "bids": [
+            {
+              "px": {
+                "value": ".3000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "offers": [
+            {
+              "px": {
+                "value": ".7000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "state": "MARKET_STATE_OPEN",
+          "transactTime": "2027-01-15T08:00:00.100000+00:00"
+        }
+      }
+    },
+    {
+      "venue": "poly",
+      "mono": 500,
+      "message": {
+        "marketData": {
+          "marketSlug": "poly",
+          "bids": [
+            {
+              "px": {
+                "value": ".6000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "offers": [
+            {
+              "px": {
+                "value": ".7000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "state": "MARKET_STATE_OPEN",
+          "transactTime": "2027-01-15T08:00:00.500000+00:00"
+        }
+      }
+    },
+    {
+      "venue": "poly",
+      "mono": 2100,
+      "message": {
+        "marketData": {
+          "marketSlug": "poly",
+          "bids": [
+            {
+              "px": {
+                "value": ".3000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "offers": [
+            {
+              "px": {
+                "value": ".7000",
+                "currency": "USD"
+              },
+              "qty": "20"
+            }
+          ],
+          "state": "MARKET_STATE_OPEN",
+          "transactTime": "2027-01-15T08:00:02.100000+00:00"
+        }
+      }
+    }
+  ]
+}

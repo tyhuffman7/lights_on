@@ -11,7 +11,13 @@
     "build": "vinext build",
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "research:init": "node --experimental-strip-types worker/cli.ts init",
+    "research:observe": "node --experimental-strip-types worker/cli.ts observe",
+    "research:report": "node --experimental-strip-types worker/cli.ts report",
+    "research:replay": "node --experimental-strip-types worker/cli.ts replay",
+    "research:probe": "node --experimental-strip-types worker/cli.ts probe"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -37,6 +43,7 @@
     "sonner": "^2.0.8",
     "tailwind-merge": "3.6.0",
     "vaul": "^1.1.2",
+    "ws": "^8.21.3",
     "zod": "^3.25.76"
   },
   "devDependencies": {
@@ -46,6 +53,7 @@
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
+    "@types/ws": "^8.18.1",
     "@vitejs/plugin-react": "6.0.2",
     "@vitejs/plugin-rsc": "0.5.26",
     "drizzle-kit": "0.31.10",

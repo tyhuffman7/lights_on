@@ -1,5 +1,6 @@
 import type {Book,Market,Level,Venue,Pair} from './types.ts';
 import {USD} from './core.ts';
+import {matchCandidates} from '../research/matching.ts';
 import {GENERAL_KALSHI_RATE} from '../research/fees.ts';
 const K='https://external-api.kalshi.com/trade-api/v2';
 const P='https://gateway.polymarket.us/v1';
@@ -85,8 +86,7 @@ export async function discover():Promise<Discovery>{
 const stop=new Set(['will','the','be','in','of','by','a','an','to','on','at','for','is','than','before','after','above','below','yes','no','and','or','2026']);
 function words(s:string){return new Set(s.toLowerCase().replace(/federal reserve/g,'fed').replace(/swedish/g,'sweden').replace(/bitcoin/g,'btc').replace(/ethereum/g,'eth').split(/[^a-z0-9]+/).filter(x=>x&&!stop.has(x)));}
 function tokens(m:Market){return words(m.title+' '+m.outcome);}
-export function suggest(d:Discovery):Pair[]{const ranked:{p:Pair;s:number}[]=[];
+export function suggest(d:Discovery):Pair[]{
  const near=(m:Market)=>{const t=Date.parse(m.closeAt);return t>d.at&&t<=d.at+30*86400000;};
- for(const b of d.poly.filter(near)){const bt=tokens(b);let best:{a:Market;s:number}|null=null;for(const a of d.kalshi.filter(near)){const at=tokens(a),shared=[...bt].filter(x=>at.has(x)).length;const score=shared/Math.max(1,new Set([...bt,...at]).size);if(shared>=2&&score>=.45&&(!best||score>best.s))best={a,s:score};}if(best)ranked.push({p:{id:best.a.id+'::'+b.id,a:best.a,b,inverted:false,reviewed:false},s:best.s});}
- return ranked.sort((a,b)=>b.s-a.s).slice(0,12).map(x=>x.p);
+ return matchCandidates(d.kalshi.filter(near),d.poly.filter(near)).map(c=>c.pair);
 }

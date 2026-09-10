@@ -1,8 +1,14 @@
 # Lights On
 
-A private Kalshi + Polymarket US arbitrage research tool with a $100 paper bankroll and a 30-day $1,000 stretch target. **It never submits real orders, holds keys, or moves money.** The target is a game objective, not a forecast. It requires roughly 7.98% compound growth daily and may be infeasible under the available opportunities and limits.
+A Kalshi + Polymarket US arbitrage research tool. The primary objective is to measure executable opportunity depth, duration, fees and latency survival. The $100 paper bankroll challenge is optional at `/challenge`. **It never submits real orders, holds keys, or moves money.** The target is a game objective, not a forecast. It requires roughly 7.98% compound growth daily and may be infeasible under the available opportunities and limits.
 
-## Use it
+## Research observer (current priority)
+
+Start with [research setup](docs/research/SETUP.md), [continuation handoff](docs/research/HANDOFF.md), and [validation](docs/research/VALIDATION.md). The standalone observer runs independently of the browser and stores lifecycle evidence in SQLite. `npm run research:init` creates ignored local setup files; `npm run research:observe` serves the protected local research dashboard. Actual stream validation awaits API credentials and reviewed mappings. No live profitability has been demonstrated.
+
+The site home displays exported research reports; the legacy UI below is available at `/challenge`.
+
+## Legacy paper challenge
 
 1. Sign in to the private site. The ledger starts with $50 of simulated cash at each venue.
 2. Choose **Discover markets**. Discovery samples public, non-sports markets and prioritizes contracts relevant to the next 30 days. Counts describe the bounded sample, not exchange-wide coverage.

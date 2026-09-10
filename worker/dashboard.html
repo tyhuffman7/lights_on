@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Lights On · Research observer</title>
+  <style>
+    body {
+      font: 16px system-ui;
+      max-width: 1100px;
+      margin: 32px auto;
+      padding: 0 20px;
+      color: #17212e;
+      background: #f6f8fa;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    button,
+    input,
+    textarea {
+      font: inherit;
+      padding: 8px;
+      margin: 5px;
+    }
+    button {
+      cursor: pointer;
+    }
+    section,
+    details {
+      background: white;
+      padding: 18px;
+      margin: 16px 0;
+      border: 1px solid #ccd3db;
+      border-radius: 8px;
+    }
+    dl {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    dt {
+      font-size: 14px;
+      color: #465265;
+    }
+    dd {
+      font-size: 24px;
+      margin: 5px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 9px;
+      text-align: left;
+      border-bottom: 1px solid #ccd3db;
+    }
+    pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-size: 14px;
+    }
+    .error {
+      color: #a52222;
+    }
+    label {
+      display: block;
+    }
+    input[type="password"],
+    textarea {
+      max-width: 90%;
+      width: 500px;
+    }
+  </style>
+  <h1>Lights On research</h1>
+  <p>Kalshi × Polymarket US · Paper observation only</p>
+  <section id="login">
+    <label
+      >Local dashboard token
+      <input id="token" type="password" autocomplete="off" /></label
+    ><button id="connect">Connect</button>
+    <p>Use RESEARCH_CONTROL_TOKEN from your local .env.research file.</p>
+  </section>
+  <p id="message" role="status"></p>
+  <main id="main" hidden>
+    <section>
+      <strong id="health"></strong>
+      <p>
+        <button id="refresh">Refresh report</button
+        ><button id="pause">Pause observation</button
+        ><button id="resume">Resume observation</button
+        ><button id="download">Export report</button>
+      </p>
+      <p id="coverage"></p>
+    </section>
+    <section>
+      <h2>Observed opportunities</h2>
+      <dl id="metrics"></dl>
+      <p>
+        Money totals use conservative fee bounds. They are modeled
+        opportunities, not achieved profit.
+      </p>
+    </section>
+    <section>
+      <h2>Hedge survival · $100 opening size</h2>
+      <p>
+        Kalshi first; stale and missing observations are excluded from the
+        evaluable denominator.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Delay</th>
+            <th>Survived</th>
+            <th>Evaluable</th>
+            <th>Rate</th>
+            <th>Missing / stale</th>
+          </tr>
+        </thead>
+        <tbody id="survival"></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Bankroll scenarios</h2>
+      <p>
+        Capital stays committed; shared-market exposure cannot be counted twice.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Bankroll</th>
+            <th>Entries</th>
+            <th>Theoretical profit</th>
+          </tr>
+        </thead>
+        <tbody id="capital"></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Market mapping review</h2>
+      <p>
+        Text matches are candidates only. Read each venue's settlement rules,
+        outcomes, dates, resolution source and void treatment before approval.
+      </p>
+      <div id="mappings"></div>
+    </section>
+    <details>
+      <summary>Full research report and diagnostics</summary>
+      <pre id="report"></pre>
+    </details>
+  </main>
+  <script>
+    let report = null;
+    const $ = (id) => document.getElementById(id);
+    const money = (n) =>
+      n === null
+        ? "Unavailable"
+        : new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          }).format(n / 10000);
+    const value = (n) => (n === null ? "Unavailable" : String(n));
+    async function api(path, body) {
+      const response = await fetch("/api/" + path, {
+        method: body ? "POST" : "GET",
+        headers: {
+          "X-Research-Token": $("token").value,
+          "Content-Type": "application/json",
+        },
+        body: body ? JSON.stringify(body) : undefined,
+      });
+      if (!response.ok)
+        throw Error(
+          response.status === 403
+            ? "Check your local dashboard token."
+            : "Request failed. Check local configuration and reload mapping rules.",
+        );
+      return response.json();
+    }
+    function cell(row, text) {
+      const td = document.createElement("td");
+      td.textContent = text;
+      row.append(td);
+    }
+    function metric(label, text) {
+      const div = document.createElement("div"),
+        dt = document.createElement("dt"),
+        dd = document.createElement("dd");
+      dt.textContent = label;
+      dd.textContent = text;
+      div.append(dt, dd);
+      $("metrics").append(div);
+    }
+    async function refresh() {
+      try {
+        const data = await api("state");
+        report = data.report;
+        $("main").hidden = false;
+        $("message").textContent = "";
+        $("health").textContent = data.health.paused
+          ? "Observation paused"
+          : "Observer running";
+        $("coverage").textContent =
+          report.dataMode +
+          " · " +
+          report.bookUpdates +
+          " book updates · " +
+          data.health.books.filter((b) => b.valid && b.ageMs <= 2000).length +
+          " recently updated books";
+        $("metrics").replaceChildren();
+        for (const [k, v] of Object.entries({
+          "Opportunities detected": report.opportunitiesDetected,
+          "Rule-verified opportunities": report.ruleVerifiedOpportunities,
+          "Gross arbs": report.grossArbCount,
+          "Fee-positive arbs": report.feePositiveArbCount,
+          "1%+ net arbs": report.netOnePercentCount,
+          "Median lifetime (ms)": value(report.lifetime.p50),
+          "P10 / P90 lifetime (ms)":
+            value(report.lifetime.p10) + " / " + value(report.lifetime.p90),
+          "Censored lifetimes": report.lifetime.censoredCount,
+          "Theoretical profit": money(report.theoreticalProfit),
+          "Average ROI (%)": value(report.executableRoi.average),
+          "Average quantity": value(report.executableQuantity.average),
+          "500ms orphan losses": money(report.orphan.losses),
+        }))
+          metric(k, String(v));
+        $("survival").replaceChildren();
+        for (const [delay, b] of Object.entries(report.survival)) {
+          const row = document.createElement("tr");
+          [
+            delay + "ms",
+            b.survived,
+            b.evaluable,
+            b.rate === null ? "Unavailable" : (b.rate * 100).toFixed(1) + "%",
+            b.unobserved + " / " + b.bookStale,
+          ].forEach((x) => cell(row, x));
+          $("survival").append(row);
+        }
+        $("capital").replaceChildren();
+        for (const [d, b] of Object.entries(report.capitalConstrained)) {
+          const row = document.createElement("tr");
+          ["$" + d, b.entries, money(b.profit)].forEach((x) => cell(row, x));
+          $("capital").append(row);
+        }
+        $("mappings").replaceChildren();
+        if (!data.mappings.length)
+          $("mappings").textContent =
+            "No mappings yet. Add exact market IDs to observer.config.json and restart the observer.";
+        for (const m of data.mappings) {
+          const details = document.createElement("details"),
+            title = document.createElement("summary"),
+            rules = document.createElement("pre");
+          title.textContent = m.id + " · " + m.status;
+          rules.textContent = [m.pair.a, m.pair.b]
+            .map(
+              (v) =>
+                v.venue +
+                "\n" +
+                v.title +
+                "\nYES: " +
+                v.outcome +
+                "\nNO: " +
+                v.opposite +
+                "\nCloses: " +
+                v.closeAt +
+                "\n" +
+                v.rules,
+            )
+            .join("\n\n");
+          details.append(title, rules);
+          const checks = [];
+          for (const label of [
+            "Settlement sources, dates and rules match",
+            "Outcomes and direct/inverted relationship match",
+            "Void, tie and exceptional settlement cases match",
+          ]) {
+            const l = document.createElement("label"),
+              c = document.createElement("input");
+            c.type = "checkbox";
+            l.append(c, document.createTextNode(label));
+            details.append(l);
+            checks.push(c);
+          }
+          const evidence = document.createElement("textarea");
+          evidence.placeholder =
+            "Record what you checked and why the mapping is equivalent";
+          details.append(evidence);
+          const approve = document.createElement("button");
+          approve.textContent = "Approve for research";
+          approve.onclick = async () => {
+            try {
+              await api("review", {
+                id: m.id,
+                aHash: m.pair.a.hash,
+                bHash: m.pair.b.hash,
+                rulesChecked: checks[0].checked,
+                outcomesChecked: checks[1].checked,
+                voidChecked: checks[2].checked,
+                evidence: evidence.value,
+              });
+              await refresh();
+            } catch (e) {
+              $("message").textContent = e.message;
+            }
+          };
+          details.append(approve);
+          $("mappings").append(details);
+        }
+        $("report").textContent = JSON.stringify(data, null, 2);
+      } catch (e) {
+        $("message").textContent = e.message;
+      }
+    }
+    $("connect").onclick = refresh;
+    $("refresh").onclick = refresh;
+    for (const action of ["pause", "resume"])
+      $(action).onclick = async () => {
+        try {
+          await api(action, {});
+          await refresh();
+        } catch (e) {
+          $("message").textContent = e.message;
+        }
+      };
+    $("download").onclick = () => {
+      if (!report) return;
+      const url = URL.createObjectURL(
+          new Blob([JSON.stringify(report, null, 2)], {
+            type: "application/json",
+          }),
+        ),
+        a = document.createElement("a");
+      a.href = url;
+      a.download = "lights-on-research.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    };
+  </script>
+</html>

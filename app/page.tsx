@@ -1,2 +1,4 @@
-import Dashboard from './dashboard';
-export default function Home(){return <Dashboard/>;}
+import Research from "./research";
+export default function Home() {
+  return <Research />;
+}

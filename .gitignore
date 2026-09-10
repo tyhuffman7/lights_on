@@ -51,3 +51,5 @@ next-env.d.ts
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
+/observer.config.json
+/research-data/*.lock

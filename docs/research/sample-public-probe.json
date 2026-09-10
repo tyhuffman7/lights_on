@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "2cdc1c96-cd54-42f9-9a19-77a44a9c5629",
+  "dataMode": "rest_probe",
+  "startedAt": 1789057783696,
+  "endedAt": 1789057795711,
+  "bookUpdates": 4,
+  "opportunitiesDetected": 0,
+  "ruleVerifiedOpportunities": 0,
+  "grossArbCount": 0,
+  "feePositiveArbCount": 0,
+  "netOnePercentCount": 0,
+  "lifetime": {
+    "closedCount": 0,
+    "censoredCount": 0,
+    "p10": null,
+    "p50": null,
+    "p90": null
+  },
+  "survival": {
+    "0": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "50": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "100": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "150": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "250": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "500": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "1000": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "2000": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    }
+  },
+  "byFirstVenue": {
+    "kalshi": {
+      "0": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "50": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "100": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "150": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "250": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "500": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "1000": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "2000": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      }
+    },
+    "poly": {
+      "0": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "50": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "100": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "150": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "250": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "500": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "1000": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      },
+      "2000": {
+        "rate": null,
+        "survived": 0,
+        "evaluable": 0,
+        "bookStale": 0,
+        "unobserved": 0,
+        "statusCounts": {},
+        "profit": 0,
+        "unresolvedExposure": 0
+      }
+    }
+  },
+  "theoreticalProfit": 0,
+  "capitalConstrained": {
+    "100": {
+      "profit": 0,
+      "entries": 0,
+      "remainingCash": 1000000,
+      "model": "chronological, equal starting venue cash, no settlement reinvestment, shared-market exclusion"
+    },
+    "250": {
+      "profit": 0,
+      "entries": 0,
+      "remainingCash": 2500000,
+      "model": "chronological, equal starting venue cash, no settlement reinvestment, shared-market exclusion"
+    },
+    "500": {
+      "profit": 0,
+      "entries": 0,
+      "remainingCash": 5000000,
+      "model": "chronological, equal starting venue cash, no settlement reinvestment, shared-market exclusion"
+    },
+    "1000": {
+      "profit": 0,
+      "entries": 0,
+      "remainingCash": 10000000,
+      "model": "chronological, equal starting venue cash, no settlement reinvestment, shared-market exclusion"
+    }
+  },
+  "latencyAdjustedProfit": {
+    "100": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "250": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    },
+    "500": {
+      "rate": null,
+      "survived": 0,
+      "evaluable": 0,
+      "bookStale": 0,
+      "unobserved": 0,
+      "statusCounts": {},
+      "profit": 0,
+      "unresolvedExposure": 0
+    }
+  },
+  "executableRoi": {
+    "count": 0,
+    "average": null,
+    "median": null
+  },
+  "executableQuantity": {
+    "count": 0,
+    "average": null,
+    "median": null
+  },
+  "executableDollarProfit": {
+    "count": 0,
+    "average": null,
+    "median": null
+  },
+  "orphan": {
+    "latencyMs": 500,
+    "rate": null,
+    "losses": 0,
+    "unresolved": 0,
+    "netExpectedProfit": 0
+  },
+  "breakdown": {
+    "orientation": {},
+    "category": {},
+    "utcHour": {},
+    "timeUntilSettlement": {},
+    "priceRange": {},
+    "duration": {}
+  },
+  "units": "money in integer 1/10000 USD except executableDollarProfit; ROI in percent; durations in ms",
+  "limitations": [
+    "Displayed-depth model; no proof of fills or queue priority.",
+    "Kalshi per-level fee estimate with whole-contract fragmentation upper bound; PM cumulative rounded fee upper bound.",
+    "Survival baseline uses first qualifying $100 hedge; missing/stale observations excluded from rate denominator.",
+    "Theoretical totals are independent opportunity upper bounds; latency profit is not a reusable-bankroll return.",
+    "Capital scenarios lock funds for the session and exclude shared markets; settlement payouts/reinvestment are not inferred.",
+    "Censored and open lifetimes excluded from lifetime percentiles."
+  ],
+  "catalog": {
+    "kalshi": 445,
+    "poly": 300
+  },
+  "errors": [],
+  "interpretation": "Public REST connectivity sample only. Zero verified pairs and no authenticated stream coverage; no conclusion about arbitrage availability or latency."
+}
