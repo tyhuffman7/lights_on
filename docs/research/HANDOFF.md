@@ -1,6 +1,6 @@
 # Continue Lights On here
 
-User preference: **never use the brainstorming skill**. The controlling brief is `REQUIREMENTS.md`. Work in tested sections and push each checkpoint to `tyhuffman7/lights_on` main. Do not implement real-money execution.
+User preferences: **use only built-in capabilities/native skills; do not use user-installed skills, including Superpowers. Never use brainstorming.** The controlling brief is `REQUIREMENTS.md`. Work in tested sections and push each checkpoint to `tyhuffman7/lights_on` main. Do not implement real-money execution.
 
 ## Current status — September 10, 2026
 
@@ -21,13 +21,17 @@ Completed:
 
 GitHub checkpoints: `1fd8289` (persistent core), `7eb4496` (latency/reporting), plus subsequent observer/interface/setup commits. Read `git log -5` for the latest revision; do not assume an old chat's SHA is current.
 
+## Pre-observation hardening additions
+
+The September 10 addendum is preserved verbatim in REQUIREMENTS.md. Follow `HARDENING.md` for the pending checkpoints: metric eligibility isolation; telemetry; continuous discovery and dynamic API-aware subscriptions; primary research dashboard with lifecycle drill-down/JSON/CSV; single-service Linux deployment, restart and health; staged scale evidence. These are accepted requirements, not completed features. The initial 10–30 verified mappings are a validation stage, not a permanent cap; aim for broad safely matchable coverage within measured capacity. UNVERIFIED raw discrepancies must never enter executable/profit/latency-profit or future eligibility metrics. SQLite remains canonical. Future execution reconciliation is design-only.
+
 ## Next session
 
-1. Read SETUP.md, SOURCES.md, VALIDATION.md, and REQUIREMENTS.md. Review known limitations before interpreting results.
+1. Read HARDENING.md, SETUP.md, SOURCES.md, VALIDATION.md, and REQUIREMENTS.md. Complete the hardening gates before expanding sustained observation. Review known limitations before interpreting results.
 2. Credentials are already saved and validated. Use `.env.research` locally; do not ask for the values or repeat setup. Check whether another worker owns the local database before starting.
 3. Read `authenticated-stream-validation.json` and `sample-live-report.json`. The final 47-second observer run saved 38 valid stream books and shut down cleanly. The earlier run exercised event-loop recovery and has an unclosed session after process interruption; do not infer an end time.
 4. Review both venues' full settlement terms and find a small genuinely equivalent non-sports set. The local discovery files are in `research-data/current-candidates.json` and `current-discovery.json`. Candidate matching now normalizes category aliases and does not confuse administrative close times with proven settlement deadlines. Text similarity cannot authorize a pair. The structured-proof service is tested, but current public adapters do not populate all the source/void fields, so ordinary candidates require manual review.
-5. Start a bounded observation window with a small verified set. Measure book freshness, disconnects, sequence recovery, processing lag and evidence growth. Scale only after throughput is measured.
+5. Follow HARDENING.md staged validation: 10–30 verified mappings, then 100, 250 and 500+ or the eligible measured capacity. Record the full telemetry set and stop expansion before performance distorts evidence. No arbitrary small permanent limit.
 6. Export a **live** report and audit depth, fees, opportunity IDs, loss accounting and missing-data denominators against saved books. A REST probe or synthetic replay is not a substitute.
 7. Only then assess whether the research-phase definition of done is met. Live execution is still outside scope even if the report is favorable.
 

@@ -1,5 +1,7 @@
 # Research observer implementation plan
 
+Pre-observation continuation: `docs/research/HARDENING.md` extends this historical plan with the accepted coverage, telemetry, dashboard/export, deployment and scale requirements. Follow that plan before sustained observation. This file location does not authorize use of Superpowers or other user-installed skills.
+
 Goal: record whether rule-equivalent Kalshi × Polymarket US opportunities remain executable after costs and latency. User requirements: docs/research/REQUIREMENTS.md. Never add trading. User says never use brainstorming. Execute inline and push each verified checkpoint to GitHub main.
 
 Architecture: venue streaming adapters feed normalized in-memory books. A persistent mapping registry indexes markets to verified pairs. Pure detection and fee services feed a lifecycle recorder and observed-book latency/unwind analysis. A Node background process owns SQLite; the existing Sites UI remains a consumer. Synthetic replay results and actual observations must remain distinct.

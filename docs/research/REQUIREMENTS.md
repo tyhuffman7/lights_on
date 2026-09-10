@@ -338,3 +338,182 @@ Return at completion:
 7. A sample research report from actual observed data
 
 Do not implement real-money execution until this research phase demonstrates that the strategy merits it.
+
+---
+
+## Pre-observation hardening addendum — September 10, 2026
+
+Add the following requirements to the pre-observation hardening phase.
+
+## Broad market coverage is the ultimate goal
+
+The suggested initial set of 10–30 verified mappings is only for staged performance validation.
+
+It is NOT an intended permanent market limit.
+
+The production research goal is to continuously discover and observe as much of the safely matchable Kalshi × Polymarket US universe as the exchange APIs and observer performance reasonably allow.
+
+The desired lifecycle is:
+
+exchange market catalogs
+→ candidate discovery
+→ structured/text candidate matching
+→ persistent mapping registry
+→ stream subscription management
+→ continuous arb observation
+
+New candidate mappings may automatically enter the registry as UNVERIFIED.
+
+UNVERIFIED mappings may be observed and their raw price discrepancies recorded for research, but they must never contribute to statistics labeled executable, arbitrage profit, latency-adjusted profit, or future trading eligibility.
+
+AUTO_VERIFIED and MANUAL_VERIFIED mappings may contribute to those metrics.
+
+There must be no arbitrary small permanent pair limit.
+
+Subscription management should support dynamically adding/removing markets as markets open, close, resolve, become invalidated, or new candidates are discovered.
+
+Implement API-aware batching/sharding and measure performance before increasing coverage.
+
+## Staged scale testing
+
+Use staged load tests rather than immediately subscribing to the full universe.
+
+Suggested progression:
+
+10–30 verified mappings
+100 mappings
+250 mappings
+500+ mappings or the maximum viable eligible universe
+
+At each stage record:
+
+- total subscribed markets per venue
+- messages/sec
+- book updates/sec
+- evaluations/sec
+- p50/p95/p99 processing lag
+- event-loop lag
+- persistence queue depth
+- reconnects
+- parser errors
+- sequence/reconciliation recoveries
+- CPU usage
+- memory usage
+- database growth rate
+
+Stop scaling when observer performance risks distorting the data.
+
+Document the tested safe operating envelope.
+
+## Infrastructure architecture
+
+Do not introduce unnecessary infrastructure.
+
+For the current research phase, SQLite is acceptable unless measurements demonstrate otherwise.
+
+The observer must remain deployable as a single inexpensive persistent service with durable disk.
+
+Support two operating environments:
+
+1. local development/testing on macOS
+2. inexpensive always-on Linux/VPS deployment
+
+Do not require Supabase, PostgreSQL, Redis, Kafka, Kubernetes, or other infrastructure unless actual scale measurements justify them.
+
+Add clear deployment instructions for an inexpensive persistent Linux host.
+
+The service must automatically restart after process/server reboot and resume PAPER_RESEARCH observation safely.
+
+Persist credentials only through environment/secret files outside Git.
+
+The dashboard/control interface must not be publicly accessible without authentication. Prefer loopback/private-network access or a secure authenticated control mechanism.
+
+Add health monitoring sufficient to detect when the observer stops unexpectedly.
+
+## Measure infrastructure latency
+
+Record network/processing timestamps so we can later compare local-machine observation versus cloud/VPS observation.
+
+Do not assume a particular hosting provider or geographic region is optimal.
+
+Later infrastructure decisions should be based on measured Kalshi and Polymarket US round-trip/stream latency.
+
+## Research dashboard is the primary results interface
+
+During PAPER_RESEARCH, Kalshi and Polymarket US accounts should remain untouched.
+
+The Lights On research dashboard/report must be the primary interface for results.
+
+The dashboard should emphasize useful research metrics rather than the $100 → $1,000 gamification.
+
+At minimum show:
+
+- observer uptime
+- stream health by venue
+- number of subscribed markets
+- number of candidate mappings
+- verified/unverified/invalidated mapping counts
+- gross discrepancies detected
+- fee-positive opportunities
+- qualifying net arbs
+- survival rates at each latency bucket
+- modeled orphan rate/loss
+- theoretical opportunity
+- bankroll-constrained opportunity for $100/$250/$500/$1,000
+- latency-adjusted opportunity
+- processing latency
+- persistence backlog
+
+Add an opportunity table containing:
+
+- first seen timestamp
+- pair/event
+- orientation
+- Kalshi executable price
+- Polymarket US executable price
+- quantity/depth
+- gross edge
+- fees
+- reserve
+- net edge
+- ROI
+- opportunity lifetime
+- survival by latency bucket
+- $100-bankroll modeled profit
+- final status/rejection reason
+
+Allow drilling into an opportunity to see its recorded lifecycle/book states.
+
+Clearly distinguish:
+
+RAW DISCREPANCY
+UNVERIFIED CANDIDATE
+VERIFIED ARBITRAGE
+FEE-POSITIVE
+LATENCY-SURVIVABLE
+
+Never display an unverified price discrepancy in a way that could reasonably be mistaken for a guaranteed arb.
+
+## Data retention/export
+
+The SQLite research database is the canonical research record during this phase.
+
+Provide:
+
+- JSON report export
+- CSV opportunity export
+- session-level reports
+- database size/growth statistics
+- safe backup instructions
+
+Do not store credentials, signatures, authorization headers, private keys, or secrets in exported research evidence.
+
+## Future execution observability — design only
+
+Do NOT implement live trading in this phase.
+
+However, preserve an architecture where future live execution will reconcile Lights On's internal order state against the actual Kalshi and Polymarket US order/fill state.
+
+When execution is eventually added, the exchange accounts/fill APIs will be the authoritative source of truth, while Lights On will provide the combined cross-venue operational view.
+
+Do not represent a future two-leg trade as successful until both exchange fills have been independently confirmed.
