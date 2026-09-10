@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "scope": "Authenticated market-data acceptance and bounded observer validation; not profitability evidence",
+  "handshakesAndPayloads": {
+    "startedAt": 1789060231166,
+    "ids": {
+      "kalshi": [
+        "KXEMMYCSACTO-26SEP14-STE",
+        "KXEMMYCSACTO-26SEP14-COL",
+        "KXEMMYCSACTO-26SEP14-TYL",
+        "KXEMMYCSACTO-26SEP14-TIE"
+      ],
+      "poly": [
+        "mlaec-swepm-2026-09-13-noodad",
+        "mlaec-swepm-2026-09-13-ebbbus",
+        "mlaec-swepm-2026-09-13-jimake",
+        "mlaec-swepm-2026-09-13-ulfkri"
+      ]
+    },
+    "venues": {
+      "kalshi": {
+        "connected": true,
+        "messages": 7,
+        "parsedBooks": 6,
+        "normalizationErrors": [],
+        "messageTypes": {
+          "subscribed": 1,
+          "orderbook_snapshot": 4,
+          "orderbook_delta": 2
+        },
+        "lastBook": {
+          "marketId": "KXEMMYCSACTO-26SEP14-STE",
+          "yesLevels": 15,
+          "noLevels": 8,
+          "exchangeAgeMs": -72
+        }
+      },
+      "poly": {
+        "connected": true,
+        "messages": 9,
+        "parsedBooks": 9,
+        "normalizationErrors": [],
+        "messageTypes": {
+          "SUBSCRIPTION_TYPE_MARKET_DATA": 9
+        },
+        "lastBook": {
+          "marketId": "mlaec-swepm-2026-09-13-ulfkri",
+          "yesLevels": 4,
+          "noLevels": 4,
+          "exchangeAgeMs": 64
+        }
+      }
+    },
+    "endedAt": 1789060276187
+  },
+  "observerRuns": [
+    {
+      "id": "ac56311e-4e56-4a74-ab18-24086e8e9d63",
+      "started_at": 1789060289205,
+      "ended_at": null,
+      "bookRecords": 68,
+      "validStreamBooks": {
+        "kalshi": 36,
+        "poly": 12
+      },
+      "diagnostics": [
+        {
+          "kind": "CONNECTED",
+          "count": 4
+        },
+        {
+          "kind": "DISCONNECTED",
+          "count": 4
+        },
+        {
+          "kind": "EVENT_LOOP_DELAY",
+          "count": 4
+        },
+        {
+          "kind": "PAUSED",
+          "count": 2
+        },
+        {
+          "kind": "RECONNECT",
+          "count": 2
+        },
+        {
+          "kind": "REST_RECONCILIATION",
+          "count": 13
+        }
+      ]
+    },
+    {
+      "id": "7b1cfee1-e709-4d3d-9f86-dcbc1a3cf35c",
+      "started_at": 1789060575416,
+      "ended_at": 1789060622637,
+      "bookRecords": 42,
+      "validStreamBooks": {
+        "kalshi": 35,
+        "poly": 3
+      },
+      "diagnostics": [
+        {
+          "kind": "CONNECTED",
+          "count": 2
+        },
+        {
+          "kind": "PAUSED",
+          "count": 2
+        },
+        {
+          "kind": "STOP",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "mappingStatus": "Two Emmy candidates, both UNVERIFIED; exceptional settlement equivalence not established",
+  "observerRunning": false,
+  "limitations": [
+    "Short sample with no verified mappings; no profitability conclusion.",
+    "First observer run recorded event-loop-delay recoveries; ended_at is null after process interruption. Final run shut down cleanly.",
+    "Book records include invalidation records; validStreamBooks counts accepted stream snapshots/updates only.",
+    "Idle books are conservatively stale after two seconds; heartbeats do not renew depth.",
+    "Credentials and full local databases are excluded from Git."
+  ]
+}

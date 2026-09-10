@@ -29,12 +29,15 @@ function words(s: string) {
       .toLowerCase()
       .replace(/bitcoin/g, "btc")
       .replace(/ethereum/g, "eth")
+      .replace(/emmys/g, "emmy")
       .split(/[^a-z0-9]+/)
       .filter(
         (x) =>
           x &&
           ![
             "will",
+            "win",
+            "awards",
             "the",
             "be",
             "in",
@@ -51,8 +54,15 @@ function words(s: string) {
 }
 function fields(m: StructuredInput): Partial<StructuredMarket> {
   return {
-    category: m.category.toLowerCase(),
-    resolutionDeadline: m.closeAt,
+    category:
+      (
+        { entertainment: "culture", elections: "politics" } as Record<
+          string,
+          string
+        >
+      )[m.category.toLowerCase()] ?? m.category.toLowerCase(),
+    // Administrative closeAt is not a proven resolution deadline.
+    // Only explicitly extracted settlement fields may authorize equivalence.
     outcome: m.outcome,
     opposite: m.opposite,
     ...m.structured,

@@ -10,12 +10,12 @@ function px(v: unknown) {
   return p;
 }
 function quantity(v: unknown, signed = false) {
-  if (!/^-?\d+(?:\.\d{1,2})?$/.test(String(v)))
+  if (!/^-?\d+(?:\.\d{1,4})?$/.test(String(v)))
     throw new Error("Invalid quantity precision");
-  const n = Math.round(Number(v) * 100);
+  const n = Math.round(Number(v) * 10000);
   if (!Number.isSafeInteger(n) || (!signed && n < 0))
     throw new Error("Invalid quantity");
-  return n / 100;
+  return n / 10000;
 }
 function canonical(ls: Level[], bid = false) {
   const map = new Map<number, number>();
@@ -108,12 +108,16 @@ export class BookCache {
       this.subscriptions.set(id, sid);
       let yes: Level[], no: Level[];
       if (data.type === "orderbook_snapshot") {
-        if (!Array.isArray(m.yes_dollars_fp) || !Array.isArray(m.no_dollars_fp))
+        if (
+          (m.yes_dollars_fp !== undefined &&
+            !Array.isArray(m.yes_dollars_fp)) ||
+          (m.no_dollars_fp !== undefined && !Array.isArray(m.no_dollars_fp))
+        )
           throw new Error("Missing snapshot sides");
         const parse = (ls: unknown[][]) =>
           ls.map((l) => ({ price: px(l[0]), quantity: quantity(l[1]) }));
-        yes = parse(m.yes_dollars_fp);
-        no = parse(m.no_dollars_fp);
+        yes = parse(m.yes_dollars_fp ?? []);
+        no = parse(m.no_dollars_fp ?? []);
       } else {
         const old = this.get("kalshi", id);
         if (!old?.valid) throw new Error("Delta requires current snapshot");
@@ -126,8 +130,8 @@ export class BookCache {
           delta = quantity(m.delta_fp, true),
           index = ls.findIndex((l) => l.price === p);
         const q =
-          Math.round(((index < 0 ? 0 : ls[index].quantity) + delta) * 100) /
-          100;
+          Math.round(((index < 0 ? 0 : ls[index].quantity) + delta) * 10000) /
+          10000;
         if (q < 0) throw new Error("Negative depth");
         if (index >= 0) ls.splice(index, 1);
         if (q > 0) ls.push({ price: p, quantity: q });

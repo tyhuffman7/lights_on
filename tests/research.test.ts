@@ -364,3 +364,82 @@ test("A larger lower-ROI size cannot hide a smaller qualifying hedge", () => {
   assert.equal(e.reasons.length, 0);
   assert.equal(e.bankroll["1000000"].quantity, 1);
 });
+
+test("Venue category aliases and administrative expiry differences do not suppress manual-review candidates", async () => {
+  const { matchCandidates } = await import("../lib/research/matching.ts");
+  const a = {
+    ...market("kalshi"),
+    title: "Will Stephen Root win Comedy Supporting Actor at the Emmy Awards?",
+    outcome: "Stephen Root",
+    category: "Entertainment",
+  };
+  const b = {
+    ...market("poly"),
+    title:
+      "Stephen Root Widows Bay Emmys Outstanding Supporting Actor in a Comedy Series",
+    category: "culture",
+    closeAt: new Date(now + 14 * 86400000).toISOString(),
+  };
+  const matches = matchCandidates([a], [b]);
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].status, "UNVERIFIED");
+});
+
+test("Actual authenticated snapshots support omitted empty Kalshi sides and PM four-decimal quantities", async () => {
+  const { readFileSync } = await import("node:fs");
+  const frames = JSON.parse(
+    readFileSync(
+      new URL(
+        "./fixtures/research/authenticated-books-2026-09-10.json",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  );
+  const c = new BookCache();
+  for (const f of frames) {
+    const b =
+      f.venue === "kalshi"
+        ? c.kalshi(f.message, f.at, f.mono)
+        : c.poly(f.message, f.at, f.mono);
+    assert.ok(b?.valid);
+  }
+  assert.equal(c.get("kalshi", "KXEMMYCSACTO-26SEP14-TIE").yesBids.length, 0);
+  assert.equal(
+    c.get("poly", "mlaec-swepm-2026-09-13-noodad").yesBids[0].quantity,
+    47.99,
+  );
+});
+
+test("Accepted fractional quantity precision is preserved across snapshot and delta", () => {
+  const c = new BookCache();
+  c.kalshi(
+    {
+      type: "orderbook_snapshot",
+      sid: 1,
+      seq: 1,
+      msg: {
+        market_ticker: "precision",
+        yes_dollars_fp: [["0.40", "1.0001"]],
+      },
+    },
+    now,
+    0,
+  );
+  const b = c.kalshi(
+    {
+      type: "orderbook_delta",
+      sid: 1,
+      seq: 2,
+      msg: {
+        market_ticker: "precision",
+        side: "yes",
+        price_dollars: "0.40",
+        delta_fp: "0.0001",
+      },
+    },
+    now + 1,
+    1,
+  );
+  assert.equal(b?.yesBids[0].quantity, 1.0002);
+});

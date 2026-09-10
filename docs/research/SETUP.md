@@ -2,14 +2,18 @@
 
 This phase observes market data and simulates fills. It has no order-submission client or live-trading mode. Read `HANDOFF.md` for completion status.
 
-## Your next steps
+## Local setup status
+
+Both credentials are saved and were accepted by the exchanges on September 10, 2026. No credential setup is pending for this machine. The bounded validation worker is stopped; two configured Emmy candidates remain UNVERIFIED pending exceptional-settlement review. See `HANDOFF.md` before restarting.
+
+## Credential setup for a fresh machine
 
 The local setup files already exist at:
 
 - `/Users/tylerhuffman/Documents/code_projects/lights-on/.env.research`
 - `/Users/tylerhuffman/Documents/code_projects/lights-on/observer.config.json`
 
-Both are ignored by Git. The first file has owner-only permissions and an automatically generated dashboard control token. Keep that token in the file.
+Both are ignored by Git. The first file has owner-only permissions and an automatically generated dashboard control token. The local Kalshi PEM is at `research-data/kalshi-private-key.pem` with owner-only permissions. Keep that token in the file.
 
 1. Create a Kalshi API key for access to the read stream. Put its key ID after `KALSHI_KEY_ID=`. Save the downloaded private key outside Git (for example, `research-data/kalshi-private-key.pem`) and put its absolute path after `KALSHI_PRIVATE_KEY_PATH=`. Quote a path containing spaces. Prefer the narrowest read-only permissions the venue supports.
 2. Create a **Polymarket US** API key through its developer portal. Put its key ID after `POLYMARKET_KEY_ID=` and its base64 secret after `POLYMARKET_SECRET_KEY=`. These are the U.S. API credentials, not international wallet credentials.
@@ -94,7 +98,7 @@ Money uses integer 1/10,000 USD; ROI is percent; quantity is whole contracts, co
 
 ## Limits to interpret correctly
 
-- Live venue handshake/schema compatibility and sustained throughput remain unverified until credentials are configured. The local scripted WebSocket test is not a venue acceptance test.
+- Live venue handshakes and sampled payload compatibility passed on September 10, 2026; see `authenticated-stream-validation.json`. Sustained throughput and research results still require a longer verified-market run. The first bounded observer run experienced event-loop recoveries; the final 47-second run recorded no recoveries. Neither establishes long-term reliability.
 - PM-US streams expose displayed top depth with no documented sequence counter. Full replacements and timestamps are checked; recovery uses new subscriptions. Kalshi checks sequences across each subscription, including markets sharing that subscription.
 - Book freshness is deliberately conservative: a 2-second default timeout and exchange timestamp check can reject idle but still resting liquidity. Heartbeats do not refresh depth. This can undercount opportunities.
 - REST reconciliation is sampled, not atomic with stream updates. Comparisons skip a raced snapshot; mismatches force a fresh stream subscription. Rule metadata is checked every 60 seconds by default, so changes between metadata polls are not instantly known.
