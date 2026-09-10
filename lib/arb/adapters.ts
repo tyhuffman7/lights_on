@@ -1,5 +1,6 @@
 import type {Book,Market,Level,Venue,Pair} from './types.ts';
 import {USD} from './core.ts';
+import {GENERAL_KALSHI_RATE} from '../research/fees.ts';
 const K='https://external-api.kalshi.com/trade-api/v2';
 const P='https://gateway.polymarket.us/v1';
 type Obj=Record<string,any>;
@@ -22,7 +23,7 @@ export function price(v:unknown):number {const s=String(v);if(!/^(?:0|1)(?:\.\d{
 async function hash(text:string){const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));return [...new Uint8Array(buf)].map(x=>x.toString(16).padStart(2,'0')).join('');}
 export async function normalizeKalshi(m:Obj,series?:Obj,category?:string):Promise<Market>{
  const rules=[m.rules_primary,m.rules_secondary,series?.contract_terms_url,JSON.stringify(series?.settlement_sources??[])].filter(Boolean).join('\n\n');
- const rate=series && ['quadratic','quadratic_with_maker_fees'].includes(series.fee_type)&&Number.isFinite(series.fee_multiplier)?Math.round(700*series.fee_multiplier):null;
+ const rate=series && ['quadratic','quadratic_with_maker_fees'].includes(series.fee_type)&&Number.isFinite(series.fee_multiplier)?Math.round(GENERAL_KALSHI_RATE*series.fee_multiplier):null;
  let settlement=null;if(m.status==='settled'&&m.settlement_value_dollars!==undefined)settlement=price(m.settlement_value_dollars);else if(m.status==='settled'&&['yes','no'].includes(m.result))settlement=m.result==='yes'?USD:0;
  const id=String(m.ticker);const closeAt=m.expected_expiration_time||m.expiration_time||m.close_time||'';
  return {id,venue:'kalshi',title:String(m.title||id),outcome:m.yes_sub_title||'Yes',opposite:m.no_sub_title||'No',category:category||series?.category||'Unknown',rules,url:`https://kalshi.com/markets/${encodeURIComponent(id.split('-')[0].toLowerCase())}/${encodeURIComponent(String(m.event_ticker||id).toLowerCase())}`,closeAt,open:m.status==='active'&&m.market_type==='binary'&&!m.is_provisional&&m.notional_value_dollars==='1.0000'&&(m.exchange_index??0)===0,feeRate:rate,feeRounding:'ceil',minQty:1,hash:await hash(JSON.stringify([rules,closeAt,m.yes_sub_title,m.no_sub_title,m.floor_strike,m.cap_strike,m.strike_type])),settlement,series:id.split('-')[0]};
