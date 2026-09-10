@@ -14,10 +14,11 @@ const tables = new Set([
 export class ResearchStore {
   db: DatabaseSync;
   path: string;
-  constructor(path: string) {
+  constructor(path: string, readOnly = false) {
     this.path = path;
-    mkdirSync(dirname(path), { recursive: true });
-    this.db = new DatabaseSync(path);
+    if (!readOnly) mkdirSync(dirname(path), { recursive: true });
+    this.db = new DatabaseSync(path, { readOnly });
+    if (readOnly) return;
     this.db
       .exec(`PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA foreign_keys=ON; PRAGMA busy_timeout=5000;
    CREATE TABLE IF NOT EXISTS sessions(id TEXT PRIMARY KEY, started_at INTEGER NOT NULL, ended_at INTEGER, mode TEXT NOT NULL, config TEXT NOT NULL);

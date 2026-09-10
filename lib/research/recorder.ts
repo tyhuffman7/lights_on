@@ -20,17 +20,19 @@ export class Recorder {
     { id: string; firstMono: number; lastMono: number; lastWall: number }
   >();
   index = new Map<string, Mapping[]>();
+  mappingVersions = new Map<string, string>();
   constructor(
     store: ResearchStore,
     registry: MappingRegistry,
     config: ResearchConfig,
     mode = "live",
     at = Date.now(),
+    sessionId = randomUUID(),
   ) {
     this.store = store;
     this.registry = registry;
     this.config = config;
-    this.sessionId = randomUUID();
+    this.sessionId = sessionId;
     // Crash recovery cannot infer how long a quote persisted after the last state.
     store.db
       .prepare("UPDATE opportunities SET status='CENSORED' WHERE status='OPEN'")
@@ -43,6 +45,25 @@ export class Recorder {
     this.reindex();
   }
   reindex() {
+    for (const m of this.registry.list()) {
+      const version = JSON.stringify([
+        m.pair.inverted,
+        m.pair.a.hash,
+        m.pair.b.hash,
+        m.status,
+        m.active,
+      ]);
+      const old = this.mappingVersions.get(m.id);
+      if (old && old !== version)
+        for (const [key, op] of this.active)
+          if (key.startsWith(`${m.id}:`)) {
+            this.store.db
+              .prepare("UPDATE opportunities SET status='CENSORED' WHERE id=?")
+              .run(op.id);
+            this.active.delete(key);
+          }
+      this.mappingVersions.set(m.id, version);
+    }
     this.index.clear();
     for (const m of this.registry.list())
       for (const market of [m.pair.a, m.pair.b]) {
@@ -50,7 +71,7 @@ export class Recorder {
         this.index.set(key, [...(this.index.get(key) || []), m]);
       }
   }
-  update(book: StreamBook) {
+  update(book: StreamBook, prepared?: Record<string, Evaluation[]>) {
     const immutable = structuredClone(book),
       key = `${book.venue}:${book.marketId}`;
     this.store.transaction(() => {
@@ -68,7 +89,13 @@ export class Recorder {
         );
       this.books.set(key, { book: immutable, id: Number(row.lastInsertRowid) });
       for (const m of this.index.get(key) || [])
-        this.observe(m, book.receivedAt, book.receivedMono);
+        this.observe(
+          m,
+          book.receivedAt,
+          book.receivedMono,
+          false,
+          prepared?.[m.id],
+        );
     });
   }
   tick(wall: number, mono: number, force = false) {
@@ -90,19 +117,26 @@ export class Recorder {
       }
     }
   }
-  private observe(m: Mapping, wall: number, mono: number, timer = false) {
+  private observe(
+    m: Mapping,
+    wall: number,
+    mono: number,
+    timer = false,
+    prepared?: Evaluation[],
+  ) {
     const a = this.books.get(`kalshi:${m.pair.a.id}`),
       b = this.books.get(`poly:${m.pair.b.id}`);
     if (!a || !b) return;
-    for (const e of evaluate(
-      m.pair,
-      a.book,
-      b.book,
-      this.config,
-      mono,
-      wall,
-      isVerified(m),
-    )) {
+    for (const e of prepared ??
+      evaluate(
+        m.pair,
+        a.book,
+        b.book,
+        this.config,
+        mono,
+        wall,
+        isVerified(m),
+      )) {
       const key = `${m.id}:${e.orientation}`,
         current = this.active.get(key);
       // Record all gross edges, including unverified/fee-negative candidates. Grade

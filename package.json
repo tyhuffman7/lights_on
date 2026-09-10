@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22.13.0"
+    "node": ">=22.16.0"
   },
   "scripts": {
     "install:ci": "node scripts/install-ci.mjs",
@@ -17,7 +17,12 @@
     "research:observe": "node --experimental-strip-types worker/cli.ts observe",
     "research:report": "node --experimental-strip-types worker/cli.ts report",
     "research:replay": "node --experimental-strip-types worker/cli.ts replay",
-    "research:probe": "node --experimental-strip-types worker/cli.ts probe"
+    "research:probe": "node --experimental-strip-types worker/cli.ts probe",
+    "test:detector": "node --experimental-strip-types --test tests/detector-equivalence.test.ts",
+    "test:load": "node --experimental-strip-types worker/scale.ts",
+    "research:csv": "node --experimental-strip-types worker/export-csv.ts",
+    "research:backup": "node --experimental-strip-types worker/backup.ts",
+    "research:health": "node --experimental-strip-types worker/health-check.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

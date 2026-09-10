@@ -1,3 +1,5 @@
+import { Depth, sizes } from "./sizing.ts";
+import { feeSchedule } from "./fees.ts";
 import type { ResearchStore } from "./store.ts";
 import { firstQualifying, latencyBuckets } from "./latency.ts";
 import type { SizeQuote, Evaluation } from "./types.ts";
@@ -119,13 +121,16 @@ export function researchReport(s: ResearchStore, sessionId: string) {
             rows.filter((x) => x.status === status).length,
           ]),
         ),
-        profit: valid.reduce((n, x) => n + (x.data.profit ?? 0), 0),
+        profit:
+          valid.length && !valid.some((x) => x.data.profit === null)
+            ? valid.reduce((n, x) => n + x.data.profit, 0)
+            : null,
         unresolvedExposure: valid.filter((x) => x.data.profit === null).length,
       };
     }
     byFirstVenue[first] = buckets;
   }
-  Object.assign(survival, byFirstVenue.kalshi);
+  Object.assign(survival, byFirstVenue);
   const bests = qualifying.map((x) => x.qualified!.e.best!).filter(Boolean);
   // One-entry-per-opportunity upper bound; no summation of every update.
   const theoreticalProfit = qualifying.reduce(
@@ -160,24 +165,38 @@ export function researchReport(s: ResearchStore, sessionId: string) {
       const markets = [`kalshi:${meta.pair.a.id}`, `poly:${meta.pair.b.id}`];
       if (held.some((h) => h.markets.some((m) => markets.includes(m))))
         continue;
-      const candidates = start.e.curve.filter(
-        (q: SizeQuote) =>
-          q.profit > 0 &&
-          q.roi >= meta.config.minRoi &&
-          q.aFill.cost +
-            (q.aFill.feeUpper ?? q.aFill.fees) +
-            Math.ceil(q.reserve / 2) <=
-            cashA &&
-          q.bFill.cost +
-            (q.bFill.feeUpper ?? q.bFill.fees) +
-            Math.floor(q.reserve / 2) <=
-            cashB,
-      );
-      const q = candidates.reduce(
-        (a: SizeQuote | null, b: SizeQuote) =>
-          !a || b.profit > a.profit ? b : a,
-        null,
-      );
+      const readBook = (id: number) => {
+        const row = s.db
+          .prepare("SELECT body FROM book_updates WHERE id=?")
+          .get(id) as { body: string } | undefined;
+        return row ? JSON.parse(row.body) : null;
+      };
+      const aBook = readBook(start.aBookId),
+        bBook = readBook(start.bBookId),
+        af = feeSchedule(meta.pair.a),
+        bf = feeSchedule(meta.pair.b);
+      const q =
+        aBook &&
+        bBook &&
+        af &&
+        bf &&
+        start.e.maxQuantity > 0 &&
+        start.e.maxQuantity <= 1000000
+          ? sizes(
+              new Depth(aBook[start.e.aSide], af),
+              new Depth(bBook[start.e.bSide], bf),
+              Math.max(
+                1,
+                Math.ceil(meta.pair.a.minQty),
+                Math.ceil(meta.pair.b.minQty),
+              ),
+              start.e.maxQuantity,
+              { ...meta.config, bankrolls: [dollars * 10000] },
+              { [dollars * 10000]: { a: cashA, b: cashB } },
+            ).bankroll[dollars * 10000]
+          : null;
+      if (q && (q.profit < meta.config.minProfit || q.roi < meta.config.minRoi))
+        continue;
       if (!q) continue;
       cashA -=
         q.aFill.cost +
@@ -240,15 +259,30 @@ export function researchReport(s: ResearchStore, sessionId: string) {
       breakdown[field][key] = group;
     }
   }
-  const orphanRows = latency
-    .filter((x) => x.first_venue === "kalshi" && x.latency_ms === 500)
-    .map((x) => ({ status: String(x.status), data: JSON.parse(x.body) }))
-    .filter((x) => x.data.observationComplete && x.status !== "BOOK_STALE");
-  const losses = orphanRows
-    .filter((x) => x.data.unwind?.sufficientDepth)
-    .reduce((n, x) => n + Math.max(0, x.data.unwind.realizedLoss), 0);
+  const orphan: Record<string, any> = {};
+  for (const first of ["kalshi", "poly"]) {
+    const rows = latency
+      .filter((x) => x.first_venue === first && x.latency_ms === 500)
+      .map((x) => ({ status: String(x.status), data: JSON.parse(x.body) }))
+      .filter((x) => x.data.observationComplete && x.status !== "BOOK_STALE");
+    orphan[first] = {
+      latencyMs: 500,
+      evaluable: rows.length,
+      rate: rows.length
+        ? rows.filter((x) => x.status !== "SURVIVED").length / rows.length
+        : null,
+      losses: rows
+        .filter((x) => x.data.unwind?.sufficientDepth)
+        .reduce((n, x) => n + Math.max(0, x.data.unwind.realizedLoss), 0),
+      unresolved: rows.filter((x) => x.data.profit === null).length,
+      netExpectedProfit:
+        !rows.length || rows.some((x) => x.data.profit === null)
+          ? null
+          : rows.reduce((n, x) => n + x.data.profit, 0),
+    };
+  }
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     sessionId,
     dataMode: session.mode,
     startedAt: session.started_at,
@@ -260,9 +294,22 @@ export function researchReport(s: ResearchStore, sessionId: string) {
     ruleVerifiedOpportunities: states.filter((x) =>
       x.states.some((e) => e.verified),
     ).length,
-    grossArbCount: ops.length,
+    rawDiscrepancyCount: ops.length,
+    grossArbCount: states.filter((x) =>
+      x.states.some(
+        (e) =>
+          e.verified &&
+          !e.reasons.some((r) => r !== "EDGE_BELOW_THRESHOLD") &&
+          (e.bestGross?.grossProfit ?? 0) > 0,
+      ),
+    ).length,
     feePositiveArbCount: states.filter((x) =>
-      x.states.some((e) => e.verified && e.curve.some((q) => q.feeProfit > 0)),
+      x.states.some(
+        (e) =>
+          e.verified &&
+          !e.reasons.some((r) => r !== "EDGE_BELOW_THRESHOLD") &&
+          e.curve.some((q) => q.feeProfit > 0),
+      ),
     ).length,
     netOnePercentCount: qualifying.filter((x) =>
       x.states.some((e) => e.reasons.length === 0 && (e.best?.roi ?? 0) >= 1),
@@ -281,26 +328,20 @@ export function researchReport(s: ResearchStore, sessionId: string) {
     byFirstVenue,
     theoreticalProfit,
     capitalConstrained,
-    latencyAdjustedProfit: {
-      100: survival[100],
-      250: survival[250],
-      500: survival[500],
-    },
+    latencyAdjustedProfit: Object.fromEntries(
+      ["kalshi", "poly"].map((v) => [
+        v,
+        {
+          100: byFirstVenue[v][100],
+          250: byFirstVenue[v][250],
+          500: byFirstVenue[v][500],
+        },
+      ]),
+    ),
     executableRoi: summary(bests.map((q) => q.roi)),
     executableQuantity: summary(bests.map((q) => q.quantity)),
     executableDollarProfit: summary(bests.map((q) => q.profit / 10000)),
-    orphan: {
-      latencyMs: 500,
-      rate: orphanRows.length
-        ? orphanRows.filter((x) => x.status !== "SURVIVED").length /
-          orphanRows.length
-        : null,
-      losses,
-      unresolved: orphanRows.filter((x) => x.data.profit === null).length,
-      netExpectedProfit: orphanRows.some((x) => x.data.profit === null)
-        ? null
-        : orphanRows.reduce((n, x) => n + x.data.profit, 0),
-    },
+    orphan,
     breakdown,
     units:
       "money in integer 1/10000 USD except executableDollarProfit; ROI in percent; durations in ms",

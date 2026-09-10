@@ -1,0 +1,8 @@
+[Unit]
+Description=Check Lights On every minute
+[Timer]
+OnBootSec=90
+OnUnitInactiveSec=60
+Unit=lights-on-health.service
+[Install]
+WantedBy=timers.target

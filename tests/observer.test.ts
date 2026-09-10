@@ -17,6 +17,21 @@ test("Observer dashboard rejects unauthenticated and cross-origin control; publi
     assert.equal((await fetch(base)).status, 200);
     assert.equal((await fetch(base + "/api/state")).status, 403);
     const headers = { "X-Research-Token": token };
+    for (const endpoint of ["health", "sessions", "opportunities", "csv"]) {
+      assert.equal((await fetch(base + "/api/" + endpoint)).status, 403);
+      const response = await fetch(base + "/api/" + endpoint, { headers });
+      assert.equal(response.status, 200);
+      const body = await response.text();
+      assert.ok(!body.includes(token));
+      if (endpoint === "csv") {
+        assert.match(response.headers.get("content-type")!, /text\/csv/);
+        assert.match(
+          response.headers.get("content-disposition")!,
+          /attachment/,
+        );
+        assert.match(body, /firstSeenAt/);
+      }
+    }
     assert.equal((await fetch(base + "/api/state", { headers })).status, 200);
     assert.equal(
       (
@@ -33,7 +48,7 @@ test("Observer dashboard rejects unauthenticated and cross-origin control; publi
     );
   } finally {
     await new Promise((r) => server.close(r));
-    o.stop();
+    await o.stop();
     s.close();
   }
 });

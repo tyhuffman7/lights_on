@@ -1,0 +1,230 @@
+{
+  "session": {
+    "id": "83630b40-3f14-4dd0-ba91-9f77adb5b3eb",
+    "mode": "live",
+    "started_at": 1789069346258,
+    "ended_at": 1789069587613
+  },
+  "interpretation": "Bounded authenticated market-data smoke test only. Two unverified mappings; zero opportunities. No orders, fills or profitability evidence. Observer stopped cleanly.",
+  "books": [
+    {
+      "venue": "kalshi",
+      "records": 4
+    },
+    {
+      "venue": "poly",
+      "records": 24
+    }
+  ],
+  "opportunities": 0,
+  "diagnostics": [
+    {
+      "kind": "CONNECTED",
+      "count": 5
+    },
+    {
+      "kind": "DISCONNECTED",
+      "count": 3
+    },
+    {
+      "kind": "PAUSED",
+      "count": 2
+    },
+    {
+      "kind": "RECONCILIATION_MISMATCH",
+      "count": 3
+    },
+    {
+      "kind": "RECONNECT",
+      "count": 3
+    },
+    {
+      "kind": "REST_RECONCILIATION",
+      "count": 11
+    },
+    {
+      "kind": "STOP",
+      "count": 1
+    },
+    {
+      "kind": "TELEMETRY",
+      "count": 24
+    }
+  ],
+  "lastSample": {
+    "telemetry": {
+      "uptimeMs": 241241.8185,
+      "counters": {
+        "kalshiDeferredMarkets": 0,
+        "polyDeferredMarkets": 0,
+        "CONNECTED": 5,
+        "messages": 13,
+        "bookUpdates": 24,
+        "evaluations": 44,
+        "RECONCILIATION_MISMATCH": 3,
+        "DISCONNECTED": 3,
+        "RECONNECT": 3
+      },
+      "rates": {
+        "kalshiDeferredMarkets": 0,
+        "polyDeferredMarkets": 0,
+        "CONNECTED": 0.020726091484010264,
+        "messages": 0.05388783785842669,
+        "bookUpdates": 0.09948523912324927,
+        "evaluations": 0.18238960505929033,
+        "RECONCILIATION_MISMATCH": 0.01243565489040616,
+        "DISCONNECTED": 0.01243565489040616,
+        "RECONNECT": 0.01243565489040616
+      },
+      "latencyMs": {
+        "kalshiRestRoundTrip": {
+          "count": 22,
+          "p50": 58.56408300000476,
+          "p95": 260.6566670000029,
+          "p99": 278.84904100000006
+        },
+        "polyRestRoundTrip": {
+          "count": 13,
+          "p50": 132.28537499999948,
+          "p95": 301.32512499999996,
+          "p99": 301.32512499999996
+        },
+        "persistenceAck": {
+          "count": 2511,
+          "p50": 0.22566599999845494,
+          "p95": 1.253958999994211,
+          "p99": 4.366707999986829
+        },
+        "persistenceWrite": {
+          "count": 2511,
+          "p50": 0.017416000002413057,
+          "p95": 0.14041599998017773,
+          "p99": 0.8334160000085831
+        },
+        "evaluation": {
+          "count": 24,
+          "p50": 1.0020409999997355,
+          "p95": 4.0755830000000515,
+          "p99": 4.810791999999992
+        },
+        "processing": {
+          "count": 24,
+          "p50": 1.2505420000015874,
+          "p95": 4.319707999999991,
+          "p99": 4.9883330000000115
+        },
+        "polyExchangeToReceive": {
+          "count": 10,
+          "p50": 19206,
+          "p95": 178566,
+          "p99": 178566
+        }
+      },
+      "eventLoopMs": {
+        "p50": 11.051007,
+        "p95": 12.836863,
+        "p99": 15.147007,
+        "max": 54.099967
+      },
+      "cpuPercent": 1.022965676243234,
+      "memory": {
+        "rss": 61456384,
+        "heapTotal": 17743872,
+        "heapUsed": 15874016,
+        "external": 10319205,
+        "arrayBuffers": 115078
+      },
+      "sampleLimit": 10000
+    },
+    "persistence": {
+      "queueDepth": 0,
+      "queueBytes": 0,
+      "lastAckAt": 1789069587436,
+      "failed": false
+    },
+    "discovery": null,
+    "streams": [
+      {
+        "venue": "kalshi",
+        "markets": 2,
+        "connected": true,
+        "heartbeatAgeMs": 4644.9433749999735,
+        "lastMessageAgeMs": 239689.21525,
+        "rttMs": 130.7003750000149
+      },
+      {
+        "venue": "poly",
+        "markets": 2,
+        "connected": true,
+        "heartbeatAgeMs": 3084.329832999996,
+        "lastMessageAgeMs": 58108.70499999999,
+        "rttMs": 77.9345420000027
+      }
+    ],
+    "subscribed": {
+      "kalshi": 2,
+      "poly": 2
+    },
+    "mode": "PAPER_RESEARCH",
+    "paused": false,
+    "sessionId": "83630b40-3f14-4dd0-ba91-9f77adb5b3eb",
+    "mappings": [
+      {
+        "id": "KXEMMYCSACTO-26SEP14-PAU::tac-emmys-smcs-2026-09-14-paulwd",
+        "status": "UNVERIFIED",
+        "active": true,
+        "reason": null
+      },
+      {
+        "id": "KXEMMYCSACTO-26SEP14-MIC::tac-emmys-smcs-2026-09-14-michae",
+        "status": "UNVERIFIED",
+        "active": true,
+        "reason": null
+      }
+    ],
+    "books": [
+      {
+        "venue": "kalshi",
+        "marketId": "KXEMMYCSACTO-26SEP14-MIC",
+        "valid": true,
+        "connection": "LIVE",
+        "ageMs": 239690.231083,
+        "bookChangeAgeMs": 239690.231416,
+        "sequence": 1
+      },
+      {
+        "venue": "kalshi",
+        "marketId": "KXEMMYCSACTO-26SEP14-PAU",
+        "valid": true,
+        "connection": "LIVE",
+        "ageMs": 239689.22912499998,
+        "bookChangeAgeMs": 239689.229792,
+        "sequence": 2
+      },
+      {
+        "venue": "poly",
+        "marketId": "tac-emmys-smcs-2026-09-14-michae",
+        "valid": true,
+        "connection": "LIVE",
+        "ageMs": 58109.209,
+        "bookChangeAgeMs": 58109.209084,
+        "sequence": null
+      },
+      {
+        "venue": "poly",
+        "marketId": "tac-emmys-smcs-2026-09-14-paulwd",
+        "valid": true,
+        "connection": "LIVE",
+        "ageMs": 58108.72291699998,
+        "bookChangeAgeMs": 58108.723,
+        "sequence": null
+      }
+    ],
+    "database": "research-data/hardening-smoke.sqlite"
+  },
+  "backup": {
+    "integrity": "ok",
+    "tableCountsMatched": true
+  },
+  "externalHealthCheck": "passed while active"
+}

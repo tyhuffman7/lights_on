@@ -1,0 +1,52 @@
+export const market = (venue: string, id = venue) => ({
+  id,
+  venue,
+  title: "Will Example win?",
+  outcome: "Yes",
+  opposite: "No",
+  category: "Economics",
+  rules: "Fixture equivalent source and void policy",
+  url: "https://example.com",
+  closeAt: new Date(Date.now() + 86400000).toISOString(),
+  open: true,
+  feeRate: venue === "kalshi" ? 700 : 600,
+  feeRounding: venue === "kalshi" ? "ceil" : "even",
+  minQty: 1,
+  hash: "fixture",
+  settlement: null,
+});
+export const pair = (id = "p") => ({
+  id,
+  a: market("kalshi", "K" + id),
+  b: market("poly", "P" + id),
+  inverted: false,
+  reviewed: false,
+});
+export const config = {
+  maxAgeMs: 2000,
+  reserve: 100,
+  minProfit: 1,
+  minRoi: 1,
+  bankrolls: [1000000, 2500000, 5000000, 10000000],
+};
+export const book = (
+  venue: string,
+  id: string,
+  mono = performance.now(),
+  wall = Date.now(),
+) => ({
+  venue,
+  marketId: id,
+  yes: [{ price: venue === "kalshi" ? 4000 : 7000, quantity: 100 }],
+  no: [{ price: venue === "kalshi" ? 7000 : 4000, quantity: 100 }],
+  yesBids: [{ price: 3000, quantity: 100 }],
+  noBids: [{ price: 3000, quantity: 100 }],
+  receivedAt: wall,
+  exchangeAt: wall,
+  receivedMono: mono,
+  sequence: 1,
+  connection: "LIVE",
+  valid: true,
+  open: true,
+  source: "fixture",
+});

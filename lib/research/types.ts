@@ -62,5 +62,6 @@ export type Mapping = {
   reason: string | null;
   createdAt: number;
   lastVerifiedAt: number | null;
+  metadataAt?: number;
   normalized: Record<string, unknown>;
 };

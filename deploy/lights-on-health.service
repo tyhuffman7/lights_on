@@ -1,0 +1,11 @@
+[Unit]
+Description=Check Lights On paper observer health
+After=lights-on-observer.service
+[Service]
+Type=oneshot
+User=lights-on
+WorkingDirectory=/opt/lights-on
+ExecStart=/usr/bin/node --experimental-strip-types worker/health-check.ts
+NoNewPrivileges=true
+PrivateTmp=true
+UMask=0077

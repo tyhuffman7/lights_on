@@ -17,7 +17,7 @@ export default function Research() {
       if (file.size > 5000000) throw new Error("Report file is too large");
       const value = JSON.parse(await file.text());
       if (
-        value.schemaVersion !== 1 ||
+        ![1, 2].includes(value.schemaVersion) ||
         !value.sessionId ||
         !value.survival ||
         !value.lifetime ||
@@ -130,10 +130,15 @@ export default function Research() {
                 </tr>
               </thead>
               <tbody>
-                {Object.entries(report.survival).map(
-                  ([delay, b]: [string, any]) => (
-                    <tr key={delay}>
-                      <td>{delay}ms</td>
+                {Object.entries(
+                  report.byFirstVenue ?? { kalshi: report.survival },
+                ).flatMap(([venue, buckets]: [string, any]) =>
+                  Object.entries(buckets).map(([delay, b]: [string, any]) => (
+                    <tr key={venue + delay}>
+                      <td>
+                        {venue === "poly" ? "Polymarket US" : "Kalshi"} first ·{" "}
+                        {delay}ms
+                      </td>
                       <td>
                         {b.survived} / {b.evaluable}
                       </td>
@@ -146,7 +151,7 @@ export default function Research() {
                         {b.unobserved} / {b.bookStale}
                       </td>
                     </tr>
-                  ),
+                  )),
                 )}
               </tbody>
             </table>

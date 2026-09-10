@@ -40,7 +40,14 @@ export function firstQualifying(s: ResearchStore, opportunityId: string) {
   for (const r of rows) {
     const e = JSON.parse(r.body) as Evaluation;
     if (e.verified && e.reasons.length === 0)
-      return { id: Number(r.id), at: Number(r.at), mono: Number(r.mono), e };
+      return {
+        id: Number(r.id),
+        at: Number(r.at),
+        mono: Number(r.mono),
+        aBookId: Number(r.a_book_id),
+        bBookId: Number(r.b_book_id),
+        e,
+      };
   }
   return null;
 }
@@ -166,12 +173,14 @@ export function analyzeLatency(
   sessionId: string,
   observedThroughMono: number,
   final = true,
+  batchLimit = -1,
+  batchOffset = 0,
 ) {
   const ops = s.db
     .prepare(
-      "SELECT * FROM opportunities WHERE session_id=? AND (SELECT COUNT(*) FROM latency_tests l WHERE l.opportunity_id=opportunities.id)<16 ORDER BY first_mono",
+      "SELECT * FROM opportunities WHERE session_id=? AND (SELECT COUNT(*) FROM latency_tests l WHERE l.opportunity_id=opportunities.id)<16 ORDER BY first_mono LIMIT ? OFFSET ?",
     )
-    .all(sessionId) as Record<string, any>[];
+    .all(sessionId, batchLimit, batchOffset) as Record<string, any>[];
   for (const op of ops) {
     const start = firstQualifying(s, op.id);
     if (!start) continue;
@@ -187,6 +196,21 @@ export function analyzeLatency(
       if (!coverage && !final) continue;
       const a = asof(s, sessionId, "kalshi", meta.pair.a.id, target),
         b = asof(s, sessionId, "poly", meta.pair.b.id, target);
+      const changes = s.db
+        .prepare(
+          "SELECT body FROM mapping_history WHERE pair_id=? AND at>? AND at<=?",
+        )
+        .all(op.pair_id, start.at, wall) as { body: string }[];
+      const mappingValid = !changes.some((r) => {
+        const m = JSON.parse(r.body);
+        return (
+          !m.active ||
+          !["AUTO_VERIFIED", "MANUAL_VERIFIED"].includes(m.status) ||
+          m.pair.inverted !== meta.pair.inverted ||
+          m.pair.a.hash !== meta.pair.a.hash ||
+          m.pair.b.hash !== meta.pair.b.hash
+        );
+      });
       for (const first of ["kalshi", "poly"] as const) {
         const result = latencyCase(
           meta.pair,
@@ -198,7 +222,7 @@ export function analyzeLatency(
           target,
           wall,
           meta.config,
-          coverage,
+          coverage && mappingValid,
         );
         s.db
           .prepare(
@@ -219,4 +243,5 @@ export function analyzeLatency(
       }
     }
   }
+  return ops.length;
 }

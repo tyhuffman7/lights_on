@@ -105,6 +105,21 @@ export class StreamConnection {
   attempt = 0;
   lastPong = 0;
   connectedAt = 0;
+  lastMessage = 0;
+  pingAt = 0;
+  rttMs: number | null = null;
+  health() {
+    return {
+      venue: this.options.venue,
+      markets: this.options.ids.length,
+      connected: this.socket?.readyState === WebSocket.OPEN,
+      heartbeatAgeMs: performance.now() - this.lastPong,
+      lastMessageAgeMs: this.lastMessage
+        ? performance.now() - this.lastMessage
+        : null,
+      rttMs: this.rttMs,
+    };
+  }
   constructor(options: Options) {
     this.options = options;
   }
@@ -142,22 +157,32 @@ export class StreamConnection {
             this.recover("HEARTBEAT_TIMEOUT");
             return;
           }
-          if (ws.readyState === WebSocket.OPEN) ws.ping();
+          if (ws.readyState === WebSocket.OPEN) {
+            this.pingAt = performance.now();
+            ws.ping();
+          }
         }, this.options.heartbeatMs ?? 5000);
       });
       ws.on("pong", () => {
         this.lastPong = performance.now();
+        if (this.pingAt) this.rttMs = this.lastPong - this.pingAt;
       });
       ws.on("message", (bytes) => {
         const wall = Date.now(),
           mono = performance.now();
+        this.lastMessage = mono;
         try {
           const message = JSON.parse(bytes.toString());
           if (message.type === "error" || message.error)
             throw new Error("Venue subscription rejected");
           this.options.onMessage(message, wall, mono);
-        } catch {
-          this.recover("INVALID_FRAME_OR_SEQUENCE");
+        } catch (error) {
+          const reason =
+            error instanceof Error && /sequence/i.test(error.message)
+              ? "SEQUENCE_RECOVERY"
+              : "PARSER_RECOVERY";
+          this.options.onDiagnostic(reason, { venue: this.options.venue });
+          this.recover(reason);
         }
       });
       ws.on("error", () => {
@@ -166,6 +191,7 @@ export class StreamConnection {
         });
       });
       ws.on("close", () => {
+        if (this.stopped) return;
         if (this.heartbeat) clearInterval(this.heartbeat);
         this.heartbeat = null;
         this.options.onInvalid("DISCONNECTED");

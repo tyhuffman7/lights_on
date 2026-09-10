@@ -136,7 +136,7 @@ test("Empty observations produce null rates, never fabricated zero-success evide
   const recorder = new Recorder(s, new MappingRegistry(s), config, "live", now);
   recorder.stop(now, 0);
   const report = researchReport(s, recorder.sessionId);
-  assert.equal(report.survival["100"].rate, null);
+  assert.equal(report.survival.kalshi["100"].rate, null);
   assert.equal(report.opportunitiesDetected, 0);
   assert.equal(report.lifetime.p50, null);
   s.close();
@@ -149,5 +149,23 @@ test("Qualifying lifetime ends when net edge fails even if gross spread remains 
   const report = researchReport(s, recorder.sessionId);
   assert.equal(report.lifetime.closedCount, 1);
   assert.equal(report.lifetime.p50, 100);
+  s.close();
+});
+
+test("Reports keep asymmetric first-leg survival and orphan economics separate", () => {
+  const { s, recorder } = setup();
+  recorder.update({ ...b("poly", 75), no: [{ price: 7000, quantity: 10 }] });
+  recorder.update(b("kalshi", 2000));
+  recorder.stop(now + 2000, 2000);
+  analyzeLatency(s, recorder.sessionId, 2000);
+  const report = researchReport(s, recorder.sessionId);
+  assert.equal(report.survival.kalshi[500].rate, 0);
+  assert.equal(report.survival.poly[500].rate, 1);
+  assert.ok(report.orphan.kalshi.losses > 0);
+  assert.equal(report.orphan.poly.losses, 0);
+  assert.notEqual(
+    report.latencyAdjustedProfit.kalshi[500].profit,
+    report.latencyAdjustedProfit.poly[500].profit,
+  );
   s.close();
 });

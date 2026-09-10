@@ -1,9 +1,15 @@
-import { market, book as restBook } from "../lib/arb/adapters.ts";
+import {
+  market,
+  book as restBook,
+  observeRequestTiming,
+} from "../lib/arb/adapters.ts";
 import type { Venue } from "../lib/arb/types.ts";
 import type { StreamBook } from "../lib/research/types.ts";
 import { BookCache } from "../lib/research/books.ts";
 import { MappingRegistry } from "../lib/research/mappings.ts";
-import { Recorder } from "../lib/research/recorder.ts";
+import { LiveRecorder } from "./live-recorder.ts";
+import { Telemetry } from "./telemetry.ts";
+import { catalog, applyCatalog, reconcileGroups } from "./coverage.ts";
 import type { ResearchStore } from "../lib/research/store.ts";
 import { analyzeLatency } from "../lib/research/latency.ts";
 import { StreamConnection, authHeaders } from "./streams.ts";
@@ -12,7 +18,12 @@ export class Observer {
   store: ResearchStore;
   config: ObserverConfig;
   registry: MappingRegistry;
-  recorder: Recorder;
+  recorder: LiveRecorder;
+  telemetry = new Telemetry();
+  discoveryStatus: unknown = null;
+  discovering = false;
+  abort = new AbortController();
+  shardCaches = new Map<StreamConnection, BookCache>();
   cache = new BookCache();
   streams: StreamConnection[] = [];
   timers: ReturnType<typeof setInterval>[] = [];
@@ -25,14 +36,31 @@ export class Observer {
     this.store = store;
     this.config = config;
     this.registry = new MappingRegistry(store);
-    this.recorder = new Recorder(store, this.registry, config, "live");
+    this.recorder = new LiveRecorder(
+      store.path,
+      this.registry,
+      config,
+      this.telemetry,
+      () => this.pause(),
+      config.maxPersistencePending,
+    );
+    this.registry.persist = (m, at) =>
+      this.recorder.enqueue("mapping", { m, at });
+    observeRequestTiming((host, ms) =>
+      this.telemetry.sample(
+        `${host.includes("kalshi") ? "kalshi" : "poly"}RestRoundTrip`,
+        ms,
+      ),
+    );
   }
   async initialize() {
+    await this.recorder.ready;
     for (const entry of this.config.markets) {
       const a = await market("kalshi", entry.kalshi),
         b = await market("poly", entry.poly);
       const id = `${a.id}::${b.id}`;
-      if (this.registry.get(id)) this.registry.refresh(id, a, b);
+      if (this.registry.get(id))
+        this.registry.refresh(id, a, b, Date.now(), entry.inverted);
       else
         this.registry.add({
           id,
@@ -44,13 +72,20 @@ export class Observer {
     }
     this.recorder.reindex();
   }
-  private invalid(venue: Venue, reason: string) {
+  private invalid(venue: Venue, reason: string, ids?: string[]) {
     if (this.stopped) return;
-    this.cache.reset(venue);
+    if (!ids) this.cache.reset(venue);
     const wall = Date.now(),
       mono = performance.now();
     for (const b of this.cache.books.values())
-      if (b.venue === venue)
+      if (b.venue === venue && (!ids || ids.includes(b.marketId)))
+        this.cache.books.set(`${b.venue}:${b.marketId}`, {
+          ...b,
+          valid: false,
+          connection: "DISCONNECTED",
+        });
+    for (const b of this.cache.books.values())
+      if (b.venue === venue && (!ids || ids.includes(b.marketId)))
         this.recorder.update({
           ...b,
           valid: false,
@@ -58,53 +93,17 @@ export class Observer {
           receivedAt: wall,
           receivedMono: mono,
         });
-    this.store.diagnostic(this.recorder.sessionId, wall, reason, { venue });
+    this.telemetry.count(reason);
+    this.recorder.diagnostic(reason, { venue, markets: ids?.length });
   }
   resume() {
     if (this.stopped || !this.paused) return;
-    const mappings = this.registry.list().filter((m) => m.active);
-    if (!mappings.length)
-      throw new Error(
-        "No active mappings. Add market IDs to observer.config.json and restart.",
-      );
-    // Check credentials before opening either connection, without logging values.
+    if (this.recorder.failed)
+      throw new Error("Persistence failed; restart required");
     for (const venue of ["kalshi", "poly"] as Venue[]) authHeaders(venue);
     this.paused = false;
-    this.streams = (["kalshi", "poly"] as Venue[]).map((venue) => {
-      const ids = [
-        ...new Set(
-          mappings.map((m) => (venue === "kalshi" ? m.pair.a.id : m.pair.b.id)),
-        ),
-      ];
-      return new StreamConnection({
-        venue,
-        ids,
-        headers: () => authHeaders(venue),
-        onInvalid: (reason) => this.invalid(venue, reason),
-        onDiagnostic: (kind, body) => {
-          if (!this.stopped)
-            this.store.diagnostic(
-              this.recorder.sessionId,
-              Date.now(),
-              kind,
-              body,
-            );
-        },
-        onMessage: (message, wall, mono) => {
-          if (this.paused || this.stopped) return;
-          const b =
-            venue === "kalshi"
-              ? this.cache.kalshi(message, wall, mono)
-              : this.cache.poly(message, wall, mono);
-          if (b) {
-            if (!ids.includes(b.marketId))
-              throw new Error("Unsubscribed market");
-            this.recorder.update(b);
-          }
-        },
-      });
-    });
-    this.streams.forEach((s) => s.start());
+    this.syncSubscriptions();
+    if (this.config.discoveryEnabled) void this.discover();
     this.lastTick = performance.now();
     this.timers.push(
       setInterval(() => {
@@ -114,6 +113,10 @@ export class Observer {
           this.streams.forEach((s) => s.recover("EVENT_LOOP_DELAY"));
         }
         this.lastTick = mono;
+        if (this.recorder.failed) {
+          this.pause();
+          return;
+        }
         this.recorder.tick(wall, mono);
       }, 100),
     );
@@ -127,14 +130,20 @@ export class Observer {
       ),
     );
     this.timers.push(
-      setInterval(() => {
-        analyzeLatency(
-          this.store,
-          this.recorder.sessionId,
-          performance.now(),
-          false,
-        );
-      }, 5000),
+      setInterval(() => this.recorder.analyze(performance.now()), 5000),
+    );
+    this.timers.push(
+      setInterval(() => void this.discover(), this.config.discoveryIntervalMs),
+    );
+    this.timers.push(
+      setInterval(
+        () =>
+          this.recorder.diagnostic("TELEMETRY", {
+            ...this.health(),
+            telemetry: this.telemetry.snapshot(true),
+          }),
+        10000,
+      ),
     );
   }
   pause() {
@@ -143,7 +152,9 @@ export class Observer {
     this.timers = [];
     this.streams.forEach((s) => s.stop());
     this.streams = [];
-    for (const v of ["kalshi", "poly"] as Venue[]) this.invalid(v, "PAUSED");
+    this.shardCaches.clear();
+    if (!this.recorder.failed)
+      for (const v of ["kalshi", "poly"] as Venue[]) this.invalid(v, "PAUSED");
   }
   async metadata() {
     if (this.busyMetadata || this.paused || this.stopped) return;
@@ -152,21 +163,23 @@ export class Observer {
       for (const m of this.registry.list()) {
         if (!m.active && m.reason !== "METADATA_UNAVAILABLE") continue;
         try {
+          const fetchedAt = Date.now();
           const a = await market("kalshi", m.pair.a.id),
             b = await market("poly", m.pair.b.id);
           if (this.stopped || this.paused) return;
-          this.registry.refresh(m.id, a, b);
+          this.registry.refresh(m.id, a, b, fetchedAt);
         } catch {
           if (this.stopped) return;
           this.registry.deactivate(m.id, "METADATA_UNAVAILABLE");
           this.recorder.reindex();
-          this.invalid("kalshi", "METADATA_UNAVAILABLE");
-          this.invalid("poly", "METADATA_UNAVAILABLE");
+          this.invalid("kalshi", "METADATA_UNAVAILABLE", [m.pair.a.id]);
+          this.invalid("poly", "METADATA_UNAVAILABLE", [m.pair.b.id]);
         }
       }
       if (!this.stopped) {
         this.recorder.reindex();
         this.recorder.tick(Date.now(), performance.now(), true);
+        this.syncSubscriptions();
       }
     } finally {
       this.busyMetadata = false;
@@ -196,12 +209,10 @@ export class Observer {
               valid: false,
               source: "rest",
             };
-            this.store.diagnostic(
-              this.recorder.sessionId,
-              Date.now(),
-              "REST_RECONCILIATION",
-              { book: rest, raced: before !== after },
-            );
+            this.recorder.diagnostic("REST_RECONCILIATION", {
+              book: rest,
+              raced: before !== after,
+            });
             if (before === after) {
               const top = (ls: { price: number; quantity: number }[]) =>
                 JSON.stringify(
@@ -212,13 +223,21 @@ export class Observer {
                 top(snapshot.no) !== top(before.no)
               )
                 this.streams
-                  .find((s) => s.options.venue === venueMarket.venue)
+                  .find(
+                    (s) =>
+                      s.options.venue === venueMarket.venue &&
+                      s.options.ids.includes(venueMarket.id),
+                  )
                   ?.recover("RECONCILIATION_MISMATCH");
             }
           } catch {
             if (!this.stopped)
               this.streams
-                .find((s) => s.options.venue === venueMarket.venue)
+                .find(
+                  (s) =>
+                    s.options.venue === venueMarket.venue &&
+                    s.options.ids.includes(venueMarket.id),
+                )
                 ?.recover("RECONCILIATION_FAILED");
           }
         }
@@ -226,15 +245,144 @@ export class Observer {
       this.busyReconcile = false;
     }
   }
-  stop() {
+  async stop() {
     this.pause();
     this.stopped = true;
-    const mono = performance.now();
-    analyzeLatency(this.store, this.recorder.sessionId, mono, true);
-    this.recorder.stop(Date.now(), mono);
+    this.abort.abort();
+    observeRequestTiming(null);
+    this.telemetry.close();
+    await this.recorder.stop(Date.now(), performance.now());
+  }
+  async discover() {
+    if (
+      !this.config.discoveryEnabled ||
+      this.discovering ||
+      this.stopped ||
+      this.paused
+    )
+      return;
+    this.discovering = true;
+    try {
+      const data = await catalog(undefined, this.abort.signal);
+      if (this.stopped || this.paused) return;
+      this.discoveryStatus = applyCatalog(this.registry, data);
+      this.recorder.reindex();
+      this.syncSubscriptions();
+      this.recorder.diagnostic("DISCOVERY", this.discoveryStatus);
+    } catch {
+      this.recorder.diagnostic("DISCOVERY_FAILED", {});
+    } finally {
+      this.discovering = false;
+    }
+  }
+  syncSubscriptions() {
+    if (this.paused || this.stopped) return;
+    for (const venue of ["kalshi", "poly"] as Venue[]) {
+      const mappings = this.registry
+        .list()
+        .filter(
+          (m) =>
+            m.active &&
+            m.pair.a.open &&
+            m.pair.b.open &&
+            [m.pair.a, m.pair.b].every(
+              (x) => Date.parse(x.closeAt) > Date.now(),
+            ),
+        );
+      const desired = [
+        ...new Set(
+          mappings.map((m) => (venue === "kalshi" ? m.pair.a.id : m.pair.b.id)),
+        ),
+      ];
+      const selected = this.config.maxSubscribedMarketsPerVenue
+        ? desired.slice(0, this.config.maxSubscribedMarketsPerVenue)
+        : desired;
+      this.telemetry.counters[`${venue}DeferredMarkets`] =
+        desired.length - selected.length;
+      const old = this.streams.filter((s) => s.options.venue === venue);
+      const groups = reconcileGroups(
+        old.map((s) => s.options.ids),
+        selected,
+        this.config.shardSize,
+      );
+      for (const s of old)
+        if (
+          !groups.some(
+            (g) => JSON.stringify(g) === JSON.stringify(s.options.ids),
+          )
+        ) {
+          s.stop();
+          this.invalid(venue, "SUBSCRIPTION_CHANGED", s.options.ids);
+          this.streams = this.streams.filter((x) => x !== s);
+          this.shardCaches.delete(s);
+        }
+      for (const ids of groups) {
+        if (
+          this.streams.some(
+            (s) =>
+              s.options.venue === venue &&
+              JSON.stringify(s.options.ids) === JSON.stringify(ids),
+          )
+        )
+          continue;
+        const cache = new BookCache();
+        const stream = new StreamConnection({
+          venue,
+          ids,
+          headers: () => authHeaders(venue),
+          onInvalid: (reason) => {
+            cache.reset(venue);
+            if (!this.recorder.failed) this.invalid(venue, reason, ids);
+          },
+          onDiagnostic: (kind, body) => {
+            this.telemetry.count(kind);
+            this.recorder.diagnostic(kind, body);
+          },
+          onMessage: (message, wall, mono) => {
+            if (this.paused || this.stopped || this.recorder.failed) return;
+            this.telemetry.count("messages");
+            const book =
+              venue === "kalshi"
+                ? cache.kalshi(message, wall, mono)
+                : cache.poly(message, wall, mono);
+            if (book) {
+              if (!ids.includes(book.marketId))
+                throw new Error("Unsubscribed market");
+              this.cache.books.set(`${venue}:${book.marketId}`, book);
+              if (book.exchangeAt !== null)
+                this.telemetry.sample(
+                  `${venue}ExchangeToReceive`,
+                  wall - book.exchangeAt,
+                );
+              this.recorder.update(book);
+            }
+          },
+        });
+        this.streams.push(stream);
+        this.shardCaches.set(stream, cache);
+        stream.start();
+      }
+    }
   }
   health() {
     return {
+      telemetry: this.telemetry.snapshot(),
+      persistence: {
+        queueDepth: this.recorder.backlog,
+        queueBytes: this.recorder.backlogBytes,
+        lastAckAt: this.recorder.lastAckAt,
+        failed: this.recorder.failed,
+      },
+      discovery: this.discoveryStatus,
+      streams: this.streams.map((s) => s.health()),
+      subscribed: Object.fromEntries(
+        ["kalshi", "poly"].map((v) => [
+          v,
+          this.streams
+            .filter((s) => s.options.venue === v)
+            .reduce((n, s) => n + s.options.ids.length, 0),
+        ]),
+      ),
       mode: "PAPER_RESEARCH",
       paused: this.paused,
       sessionId: this.recorder.sessionId,
@@ -250,6 +398,7 @@ export class Observer {
         valid: b.valid,
         connection: b.connection,
         ageMs: performance.now() - b.receivedMono,
+        bookChangeAgeMs: performance.now() - b.receivedMono,
         sequence: b.sequence,
       })),
       database: this.config.database,

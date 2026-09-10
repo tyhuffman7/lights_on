@@ -43,14 +43,46 @@ export function dashboardServer(observer: Observer, token: string) {
     }
     res.setHeader("Content-Type", "application/json");
     try {
-      if (req.method === "GET" && req.url === "/api/state") {
+      const url = new URL(req.url ?? "/", origin);
+      if (req.method === "GET" && url.pathname === "/api/health") {
+        res.end(JSON.stringify(observer.health()));
+        return;
+      }
+      if (req.method === "GET" && url.pathname === "/api/state") {
         res.end(
           JSON.stringify({
             health: observer.health(),
-            report: researchReport(observer.store, observer.recorder.sessionId),
+            report: await observer.recorder.report(
+              url.searchParams.get("session") ?? undefined,
+            ),
             mappings: observer.registry.list(),
           }),
         );
+        return;
+      }
+      if (
+        req.method === "GET" &&
+        ["sessions", "opportunities", "detail", "csv"].includes(
+          url.pathname.slice(5),
+        ) &&
+        url.pathname.startsWith("/api/")
+      ) {
+        const kind = url.pathname.slice(5),
+          data = {
+            sessionId: url.searchParams.get("session") ?? undefined,
+            offset: Number(url.searchParams.get("offset") ?? 0),
+            limit: Number(url.searchParams.get("limit") ?? 100),
+            id: url.searchParams.get("id"),
+          };
+        const value = await observer.recorder.send(kind, data);
+        if (kind === "csv") {
+          res.setHeader("Content-Type", "text/csv; charset=utf-8");
+          res.setHeader(
+            "Content-Disposition",
+            'attachment; filename="opportunities.csv"',
+          );
+          res.end(value);
+        } else res.end(JSON.stringify(value));
         return;
       }
       if (
@@ -74,6 +106,7 @@ export function dashboardServer(observer: Observer, token: string) {
           !m ||
           m.pair.a.hash !== body.aHash ||
           m.pair.b.hash !== body.bHash ||
+          body.inverted !== m.pair.inverted ||
           body.rulesChecked !== true ||
           body.outcomesChecked !== true ||
           body.voidChecked !== true
@@ -83,10 +116,17 @@ export function dashboardServer(observer: Observer, token: string) {
           );
         // Refresh through official metadata immediately before granting verification.
         const { market } = await import("../lib/arb/adapters.ts");
+        const fetchedAt = Date.now();
         const a = await market("kalshi", m.pair.a.id),
           b = await market("poly", m.pair.b.id);
-        observer.registry.refresh(m.id, a, b);
-        if (a.hash !== body.aHash || b.hash !== body.bHash)
+        observer.registry.refresh(m.id, a, b, fetchedAt);
+        if (
+          a.hash !== body.aHash ||
+          b.hash !== body.bHash ||
+          observer.registry.get(m.id)?.pair.inverted !== body.inverted ||
+          observer.registry.get(m.id)?.pair.a.hash !== body.aHash ||
+          observer.registry.get(m.id)?.pair.b.hash !== body.bHash
+        )
           throw new Error("Rules changed during review; reload");
         observer.registry.verify(
           m.id,
@@ -94,6 +134,7 @@ export function dashboardServer(observer: Observer, token: string) {
           String(body.evidence ?? ""),
         );
         observer.recorder.reindex();
+        observer.syncSubscriptions();
         observer.recorder.tick(Date.now(), performance.now(), true);
         res.end(JSON.stringify({ ok: true }));
         return;

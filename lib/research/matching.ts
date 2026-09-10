@@ -73,16 +73,26 @@ export function matchCandidates(
   poly: StructuredInput[],
 ): Candidate[] {
   const found: Candidate[] = [];
-  for (const a of kalshi)
-    for (const b of poly) {
-      if (!a.open || !b.open) continue;
-      const sa = fields(a),
-        sb = fields(b);
+  const prepare = (markets: StructuredInput[]) =>
+    markets
+      .filter((m) => m.open)
+      .map((m) => ({
+        m,
+        structured: fields(m),
+        tokens: words(m.title + " " + m.outcome),
+      }));
+  const preparedPoly = prepare(poly);
+  for (const left of prepare(kalshi))
+    for (const right of preparedPoly) {
+      const a = left.m,
+        b = right.m,
+        sa = left.structured,
+        sb = right.structured;
       // Reject known structural conflicts before spending effort on text. Missing
       // structured fields remain review requirements, never inferred equality.
       if (keys.some((k) => sa[k] && sb[k] && sa[k] !== sb[k])) continue;
-      const at = words(a.title + " " + a.outcome),
-        bt = words(b.title + " " + b.outcome),
+      const at = left.tokens,
+        bt = right.tokens,
         shared = [...at].filter((x) => bt.has(x)).length;
       const score = shared / Math.max(1, new Set([...at, ...bt]).size);
       const direct = equivalent(sa, sb),

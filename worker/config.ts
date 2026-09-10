@@ -24,6 +24,16 @@ export const configSchema = z
     bankrolls: z
       .array(z.number().int().positive().max(100000000))
       .default([1000000, 2500000, 5000000, 10000000]),
+    discoveryEnabled: z.boolean().default(true),
+    discoveryIntervalMs: z.number().int().min(60000).default(300000),
+    shardSize: z.number().int().min(1).max(100).default(100),
+    maxSubscribedMarketsPerVenue: z
+      .number()
+      .int()
+      .positive()
+      .nullable()
+      .default(500),
+    maxPersistencePending: z.number().int().min(10).max(10000).default(2000),
     markets: z
       .array(
         z.object({

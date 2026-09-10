@@ -1,0 +1,101 @@
+{
+  "mode": "fixture",
+  "concurrentReports": 5,
+  "reportIntervalMs": 5000,
+  "mappings": 500,
+  "subscribedMarkets": {
+    "kalshi": 500,
+    "poly": 500
+  },
+  "shardsPerVenue": 5,
+  "targetUpdatesPerSecond": 1000,
+  "durationMs": 30018.349291,
+  "updates": 29990,
+  "updatesPerSecond": 999.0556012682383,
+  "evaluationsPerSecond": 1998.1112025364766,
+  "measurements": {
+    "at": 1789069995823,
+    "host": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M1 Pro",
+      "runtime": "v25.8.1"
+    },
+    "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+    "interval": {
+      "startMono": 329.04925,
+      "endMono": 31233.421375,
+      "durationMs": 30904.372125
+    },
+    "intervalRates": {
+      "messages": 970.4128554593632,
+      "evaluations": 1940.8257109187264,
+      "bookUpdates": 970.4128554593632
+    },
+    "uptimeMs": 30019.271459000003,
+    "counters": {
+      "messages": 29990,
+      "evaluations": 59980,
+      "bookUpdates": 29990
+    },
+    "rates": {
+      "messages": 999.0249110795384,
+      "evaluations": 1998.0498221590767,
+      "bookUpdates": 999.0249110795384
+    },
+    "latencyMs": {
+      "processingLag": {
+        "count": 10000,
+        "p50": 0.013249999999970896,
+        "p95": 0.035500000001775334,
+        "p99": 0.07454100000177277
+      },
+      "evaluation": {
+        "count": 10000,
+        "p50": 0.2236250000023574,
+        "p95": 0.3152089999966847,
+        "p99": 0.3794159999997646
+      },
+      "processing": {
+        "count": 10000,
+        "p50": 0.23695799999768496,
+        "p95": 0.35499999999956344,
+        "p99": 0.435749999996915
+      },
+      "persistenceAck": {
+        "count": 10000,
+        "p50": 13.456500000000233,
+        "p95": 38.14629099999729,
+        "p99": 76.12720799999806
+      },
+      "persistenceWrite": {
+        "count": 10000,
+        "p50": 0.23995799999829615,
+        "p95": 0.47370800000135205,
+        "p99": 1.862915999998222
+      }
+    },
+    "eventLoopMs": {
+      "p50": 27.017215,
+      "p95": 29.310975,
+      "p99": 33.718271,
+      "max": 154.533887
+    },
+    "cpuPercent": 124.66740590661446,
+    "memory": {
+      "rss": 805879808,
+      "heapTotal": 154812416,
+      "heapUsed": 50973848,
+      "external": 8568780,
+      "arrayBuffers": 2143455
+    },
+    "sampleLimit": 10000
+  },
+  "maxBacklog": 171,
+  "maxQueueBytes": 589948,
+  "persistenceDrained": true,
+  "databaseGrowthBytesPerSecond": 12297093.235259071,
+  "bookRecords": 30990,
+  "stopReason": null,
+  "passed": true
+}

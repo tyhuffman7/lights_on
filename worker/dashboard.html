@@ -94,6 +94,13 @@
         ><button id="download">Export report</button>
       </p>
       <p id="coverage"></p>
+      <label
+        >Session
+        <select id="session">
+          <option value="">Current session</option>
+        </select></label
+      >
+      <pre id="stream-health"></pre>
     </section>
     <section>
       <h2>Observed opportunities</h2>
@@ -106,8 +113,8 @@
     <section>
       <h2>Hedge survival · $100 opening size</h2>
       <p>
-        Kalshi first; stale and missing observations are excluded from the
-        evaluable denominator.
+        Both first-leg venues shown separately; stale and missing observations
+        are excluded from the evaluable denominator.
       </p>
       <table>
         <thead>
@@ -137,6 +144,22 @@
         </thead>
         <tbody id="capital"></tbody>
       </table>
+    </section>
+    <section style="overflow: auto">
+      <h2>Opportunity evidence</h2>
+      <p>
+        RAW DISCREPANCY / UNVERIFIED CANDIDATE are not verified hedges. All
+        profits are modeled, never guaranteed.
+      </p>
+      <button id="previous">Previous 100</button
+      ><button id="next">Next 100</button
+      ><button id="csv">Export this page CSV</button>
+      <table>
+        <thead id="op-head"></thead>
+        <tbody id="ops"></tbody>
+      </table>
+      <pre id="detail"></pre>
+      <button id="more-states" hidden>Next lifecycle states</button>
     </section>
     <section>
       <h2>Market mapping review</h2>
@@ -195,7 +218,10 @@
     }
     async function refresh() {
       try {
-        const data = await api("state");
+        const session = $("session").value;
+        const data = await api(
+          "state" + (session ? "?session=" + encodeURIComponent(session) : ""),
+        );
         report = data.report;
         $("main").hidden = false;
         $("message").textContent = "";
@@ -223,21 +249,49 @@
           "Theoretical profit": money(report.theoreticalProfit),
           "Average ROI (%)": value(report.executableRoi.average),
           "Average quantity": value(report.executableQuantity.average),
-          "500ms orphan losses": money(report.orphan.losses),
+          "Kalshi-first 500ms orphan losses": money(
+            report.orphan.kalshi.losses,
+          ),
+          "PM-US-first 500ms orphan losses": money(report.orphan.poly.losses),
+          "Kalshi-first orphan rate": value(report.orphan.kalshi.rate),
+          "PM-US-first orphan rate": value(report.orphan.poly.rate),
+          "Kalshi-first latency-adjusted 500ms": money(
+            report.latencyAdjustedProfit.kalshi[500].profit,
+          ),
+          "PM-US-first latency-adjusted 500ms": money(
+            report.latencyAdjustedProfit.poly[500].profit,
+          ),
+          "Observer uptime (seconds)": (
+            data.health.telemetry.uptimeMs / 1000
+          ).toFixed(0),
+          "Subscribed Kalshi / PM-US": JSON.stringify(data.health.subscribed),
+          "Candidate mappings": data.mappings.length,
+          "Verification counts": JSON.stringify(
+            data.mappings.reduce(
+              (a, m) => ((a[m.status] = (a[m.status] ?? 0) + 1), a),
+              {},
+            ),
+          ),
+          "Processing p50/p95/p99 (ms)": JSON.stringify(
+            data.health.telemetry.latencyMs.processing ?? null,
+          ),
+          "Persistence backlog": data.health.persistence.queueDepth,
+          "Database / WAL bytes": JSON.stringify(report.database),
         }))
           metric(k, String(v));
         $("survival").replaceChildren();
-        for (const [delay, b] of Object.entries(report.survival)) {
-          const row = document.createElement("tr");
-          [
-            delay + "ms",
-            b.survived,
-            b.evaluable,
-            b.rate === null ? "Unavailable" : (b.rate * 100).toFixed(1) + "%",
-            b.unobserved + " / " + b.bookStale,
-          ].forEach((x) => cell(row, x));
-          $("survival").append(row);
-        }
+        for (const [venue, buckets] of Object.entries(report.byFirstVenue))
+          for (const [delay, b] of Object.entries(buckets)) {
+            const row = document.createElement("tr");
+            [
+              venue + " first · " + delay + "ms",
+              b.survived,
+              b.evaluable,
+              b.rate === null ? "Unavailable" : (b.rate * 100).toFixed(1) + "%",
+              b.unobserved + " / " + b.bookStale,
+            ].forEach((x) => cell(row, x));
+            $("survival").append(row);
+          }
         $("capital").replaceChildren();
         for (const [d, b] of Object.entries(report.capitalConstrained)) {
           const row = document.createElement("tr");
@@ -293,6 +347,7 @@
             try {
               await api("review", {
                 id: m.id,
+                inverted: m.pair.inverted,
                 aHash: m.pair.a.hash,
                 bHash: m.pair.b.hash,
                 rulesChecked: checks[0].checked,
@@ -308,11 +363,133 @@
           details.append(approve);
           $("mappings").append(details);
         }
+        $("stream-health").textContent = JSON.stringify(
+          {
+            streams: data.health.streams,
+            persistence: data.health.persistence,
+            telemetry: data.health.telemetry,
+          },
+          null,
+          2,
+        );
         $("report").textContent = JSON.stringify(data, null, 2);
+        if (!$("session").dataset.loaded) {
+          for (const row of await api("sessions")) {
+            const option = document.createElement("option");
+            option.value = row.id;
+            option.textContent =
+              new Date(row.started_at).toLocaleString() + " · " + row.mode;
+            $("session").append(option);
+          }
+          $("session").dataset.loaded = "yes";
+        }
+        await loadOpportunities();
       } catch (e) {
         $("message").textContent = e.message;
       }
     }
+    let offset = 0,
+      detailId = null,
+      detailOffset = 0;
+    const query = () =>
+      "?session=" +
+      encodeURIComponent(report.sessionId) +
+      "&offset=" +
+      offset +
+      "&limit=100";
+    async function showDetail() {
+      const rows = await api(
+        "detail?session=" +
+          encodeURIComponent(report.sessionId) +
+          "&id=" +
+          encodeURIComponent(detailId) +
+          "&offset=" +
+          detailOffset +
+          "&limit=100",
+      );
+      $("detail").textContent = JSON.stringify(rows, null, 2);
+      $("more-states").hidden = rows.length < 100;
+    }
+    async function loadOpportunities() {
+      const rows = await api("opportunities" + query());
+      $("op-head").replaceChildren();
+      $("ops").replaceChildren();
+      const keys = [
+        "firstSeenAt",
+        "pair",
+        "orientation",
+        "labels",
+        "priceBasis",
+        "kalshiPrice",
+        "polymarketUSPrice",
+        "quantity",
+        "depth",
+        "grossEdge",
+        "fees",
+        "reserve",
+        "netEdge",
+        "roi",
+        "lifetimeMs",
+        "survival",
+        "bankroll100Profit",
+        "status",
+        "reasons",
+      ];
+      const header = document.createElement("tr");
+      for (const key of ["Lifecycle", ...keys]) cell(header, key);
+      $("op-head").append(header);
+      for (const row of rows) {
+        const tr = document.createElement("tr"),
+          button = document.createElement("button");
+        button.textContent = "View states";
+        button.onclick = async () => {
+          detailId = row.id;
+          detailOffset = 0;
+          await showDetail();
+        };
+        const td = document.createElement("td");
+        td.append(button);
+        tr.append(td);
+        for (const key of keys)
+          cell(
+            tr,
+            typeof row[key] === "object"
+              ? JSON.stringify(row[key])
+              : (row[key] ?? "Unavailable"),
+          );
+        $("ops").append(tr);
+      }
+    }
+    $("session").onchange = () => {
+      offset = 0;
+      refresh();
+    };
+    $("previous").onclick = () => {
+      offset = Math.max(0, offset - 100);
+      loadOpportunities();
+    };
+    $("next").onclick = () => {
+      offset += 100;
+      loadOpportunities();
+    };
+    $("more-states").onclick = () => {
+      detailOffset += 100;
+      showDetail();
+    };
+    $("csv").onclick = async () => {
+      const response = await fetch("/api/csv" + query(), {
+        headers: { "X-Research-Token": $("token").value },
+      });
+      if (!response.ok) return;
+      const url = URL.createObjectURL(await response.blob()),
+        a = document.createElement("a");
+      a.href = url;
+      a.download = "opportunities-page.csv";
+      document.body.append(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 30000);
+    };
     $("connect").onclick = refresh;
     $("refresh").onclick = refresh;
     for (const action of ["pause", "resume"])
@@ -334,8 +511,10 @@
         a = document.createElement("a");
       a.href = url;
       a.download = "lights-on-research.json";
+      document.body.append(a);
       a.click();
-      URL.revokeObjectURL(url);
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 30000);
     };
   </script>
 </html>

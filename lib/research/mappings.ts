@@ -51,26 +51,35 @@ export function equivalent(
 }
 export class MappingRegistry {
   store: ResearchStore;
+  cache = new Map<string, Mapping>();
+  persist: ((m: Mapping, at: number) => void) | null = null;
   constructor(store: ResearchStore) {
     this.store = store;
+    for (const row of store.rows("mappings")) {
+      const m = JSON.parse(row.body);
+      this.cache.set(m.id, m);
+    }
   }
   list(): Mapping[] {
-    return this.store.rows("mappings").map((r) => JSON.parse(r.body));
+    return [...this.cache.values()];
   }
   get(id: string) {
-    return this.list().find((m) => m.id === id);
+    return this.cache.get(id);
   }
   private save(m: Mapping, at: number) {
-    this.store.transaction(() => {
-      this.store.db
-        .prepare(
-          "INSERT INTO mappings(id,body) VALUES(?,?) ON CONFLICT(id) DO UPDATE SET body=excluded.body",
-        )
-        .run(m.id, JSON.stringify(m));
-      this.store.db
-        .prepare("INSERT INTO mapping_history(pair_id,at,body) VALUES(?,?,?)")
-        .run(m.id, at, JSON.stringify(m));
-    });
+    if (this.persist) this.persist(m, at);
+    else
+      this.store.transaction(() => {
+        this.store.db
+          .prepare(
+            "INSERT INTO mappings(id,body) VALUES(?,?) ON CONFLICT(id) DO UPDATE SET body=excluded.body",
+          )
+          .run(m.id, JSON.stringify(m));
+        this.store.db
+          .prepare("INSERT INTO mapping_history(pair_id,at,body) VALUES(?,?,?)")
+          .run(m.id, at, JSON.stringify(m));
+      });
+    this.cache.set(m.id, m);
     return m;
   }
   add(
@@ -79,7 +88,7 @@ export class MappingRegistry {
     normalized: Record<string, unknown> = {},
   ): Mapping {
     const old = this.get(pair.id);
-    if (old) return old;
+    if (old) return this.refresh(pair.id, pair.a, pair.b, at, pair.inverted);
     if (pair.a.venue !== "kalshi" || pair.b.venue !== "poly")
       throw new Error("Unsupported mapping venues");
     return this.save(
@@ -90,6 +99,7 @@ export class MappingRegistry {
         active: true,
         reason: null,
         createdAt: at,
+        metadataAt: at,
         lastVerifiedAt: null,
         normalized,
       },
@@ -128,14 +138,44 @@ export class MappingRegistry {
       at,
     );
   }
-  refresh(id: string, a: Market, b: Market, at = Date.now()) {
+  refresh(
+    id: string,
+    a: Market,
+    b: Market,
+    at = Date.now(),
+    inverted?: boolean,
+  ) {
     const m = this.get(id);
     if (!m) throw new Error("Unknown mapping");
-    const changed = a.hash !== m.pair.a.hash || b.hash !== m.pair.b.hash;
+    if (at < (m.metadataAt ?? m.createdAt)) return m;
+    const orientation = inverted ?? m.pair.inverted;
+    const changed =
+      a.hash !== m.pair.a.hash ||
+      b.hash !== m.pair.b.hash ||
+      orientation !== m.pair.inverted ||
+      a.id !== m.pair.a.id ||
+      b.id !== m.pair.b.id;
+    if (
+      !changed &&
+      JSON.stringify(a) === JSON.stringify(m.pair.a) &&
+      JSON.stringify(b) === JSON.stringify(m.pair.b) &&
+      m.reason !== "METADATA_UNAVAILABLE"
+    ) {
+      const fresh = { ...m, metadataAt: at };
+      this.cache.set(id, fresh);
+      return fresh;
+    }
     return this.save(
       {
         ...m,
-        pair: { ...m.pair, a, b, reviewed: !changed && m.pair.reviewed },
+        metadataAt: at,
+        pair: {
+          ...m.pair,
+          a,
+          b,
+          inverted: orientation,
+          reviewed: !changed && m.pair.reviewed,
+        },
         status: changed ? "INVALIDATED" : m.status,
         active: changed
           ? false
@@ -150,6 +190,12 @@ export class MappingRegistry {
       },
       at,
     );
+  }
+  reactivate(id: string, expectedReason: string, at = Date.now()) {
+    const m = this.get(id);
+    if (!m || m.reason !== expectedReason || m.status === "INVALIDATED")
+      return m;
+    return this.save({ ...m, active: true, reason: null }, at);
   }
   deactivate(id: string, reason: string, at = Date.now()) {
     const m = this.get(id);

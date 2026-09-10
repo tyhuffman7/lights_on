@@ -207,13 +207,15 @@ test("Mapping audit survives restart and invalidation cannot silently reverify",
   assert.equal(new MappingRegistry(reopened).list()[0].status, "INVALIDATED");
   reopened.close();
 });
-test("Detector evaluates both direct/inverted orientations and every shared whole quantity", () => {
+test("Detector evaluates both direct/inverted orientations and retains compact optimal sizes", () => {
   const p = pair();
   const a = book("kalshi"),
     b = book("poly", 7000, 4000);
   const result = evaluate(p, a, b, config, 0, now, true);
   assert.equal(result.length, 2);
-  assert.equal(result[0].curve.length, 20);
+  assert.equal(result[0].maxQuantity, 20);
+  assert.equal(result[0].best.quantity, 20);
+  assert.ok(result[0].curve.length < 20);
   assert.ok(result[0].best.profit > 0);
   assert.equal(result[0].aSide, "yes");
   assert.equal(result[0].bSide, "no");

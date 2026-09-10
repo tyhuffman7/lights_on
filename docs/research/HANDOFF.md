@@ -1,50 +1,36 @@
 # Continue Lights On here
 
-User preferences: **use only built-in capabilities/native skills; do not use user-installed skills, including Superpowers. Never use brainstorming.** The controlling brief is `REQUIREMENTS.md`. Work in tested sections and push each checkpoint to `tyhuffman7/lights_on` main. Do not implement real-money execution.
+Use built-in capabilities/native skills only. Do not use installed skills, including Superpowers, and never brainstorming. Keep live trading completely disabled. Push tested implementation checkpoints to `tyhuffman7/lights_on` main. HARDENING.md is the implementation specification; REQUIREMENTS.md preserves the original brief.
 
-## Current status — September 10, 2026
+## September 10 hardening implementation
 
-Both local credentials were accepted by the real authenticated market-data WebSockets. Sanitized actual frames exposed and now cover two parser fixes: omitted empty Kalshi sides and four-decimal PM-US quantities. The research phase is **not complete**: no verified-market observation period or profitable live arbitrage has been demonstrated. Local `.env.research` contains credentials; `research-data/kalshi-private-key.pem` contains the Kalshi private key. Both are owner-only and ignored by Git. Never print or commit them. The Kalshi path setting was repaired locally after a PEM was entered into the path field.
+The hardening code is implemented. Detector sizing uses cumulative depth and bounded exact search; randomized tests compare it to the original exhaustive implementation. SQLite writes/expiry/latency analysis run in a dedicated worker with ordered messages, bounded queue count/bytes, failure pause and shutdown drain. Reports use a separate read-only worker. Performance instrumentation covers processing, persistence, event loop, request/ping RTT, CPU/memory, coverage and database growth.
 
-The observer is currently **stopped** after bounded validation. `observer.config.json` contains two UNVERIFIED Emmy supporting-actor pairs (Paul W. Downs and Michael Urie). No manual or automatic verification was granted: the available headline rules do not establish equivalent tie/cancellation/void handling. Do not ask the user to approve an unsupported equivalence claim.
+Mapping orientation/identity/hash changes invalidate prior verification and censor active opportunities. Older metadata cannot replace newer review state. Discovery now paginates catalogs, persists UNVERIFIED candidates, reconciles deduplicated subscriptions and reports incomplete/deferred coverage. Groups have their own cache/connection/recovery; a default configurable 500-market-per-venue ceiling and 100-market group size reflect local synthetic measurements. Text similarity never grants verification. Heartbeat health does not renew stale books.
 
-Completed:
+Schema-2 reports represent Kalshi-first and PM-US-first separately, keep unavailable profit unknown, and exclude raw candidates from eligible profit. The dashboard supports sessions, opportunity pages, recorded-book/mapping-history detail and JSON/CSV export. Full-session CSV, consistent SQLite backup, external health checker and systemd health timer are included. EXECUTION-BOUNDARY.md is design only; no order client was added.
 
-- Separate market-data, mapping/matching, detection/fee, and research/simulation modules.
-- Persistent SQLite mapping registry/history, full normalized book records, opportunity lifecycles, rejection states, and restart censorship.
-- Kalshi snapshot/delta parsing and subscription-scoped sequence checking; PM-US full-book replacements; reconnect/heartbeat and conservative freshness gates.
-- Eight latency buckets, both first-leg venue scenarios, fixed $100 opening hedge and price limit, as-of book lookup, partial IOC unwind and residual exposure reporting.
-- Research KPIs, censored lifetime accounting, independent theoretical profit, conservative chronological bankroll scenarios, breakdowns and JSON export.
-- Background Node worker, metadata/reconciliation loops, single-observer lease with confirmed-dead-owner recovery, token-protected loopback controls, deterministic protocol replay fixture, and systemd template.
-- Site home now shows research report snapshots and links to worker controls; the legacy challenge/scanner/ledger remains at `/challenge`.
-- 56 tests pass, TypeScript passes, Sites/Vinext build passes. See `VALIDATION.md` for exact files and evidence.
+See VALIDATION.md and SCALE-VALIDATION.md for exact checks and measurements. The staged 30/100/250/500 synthetic mapping run passed, as did a 30-second 500-mapping run with five concurrent reports. These are not exchange fill or full-universe reliability measurements. Earlier failed stages are preserved in scale-validation.json.
 
-GitHub checkpoints: `1fd8289` (persistent core), `7eb4496` (latency/reporting), plus subsequent observer/interface/setup commits. Read `git log -5` for the latest revision; do not assume an old chat's SHA is current.
+## Current local state
 
-## Pre-observation hardening additions
+The observer is **stopped**. Credentials are already saved and validated in ignored owner-only `.env.research`; the Kalshi PEM is in ignored `research-data/kalshi-private-key.pem`. Never print or commit either. `observer.config.json` still has two UNVERIFIED Emmy supporting-actor candidates. Do not approve equivalence without full settlement/tie/cancellation/void evidence.
 
-The September 10 addendum is preserved verbatim in REQUIREMENTS.md. Follow `HARDENING.md` for the pending checkpoints: metric eligibility isolation; telemetry; continuous discovery and dynamic API-aware subscriptions; primary research dashboard with lifecycle drill-down/JSON/CSV; single-service Linux deployment, restart and health; staged scale evidence. These are accepted requirements, not completed features. The initial 10–30 verified mappings are a validation stage, not a permanent cap; aim for broad safely matchable coverage within measured capacity. UNVERIFIED raw discrepancies must never enter executable/profit/latency-profit or future eligibility metrics. SQLite remains canonical. Future execution reconciliation is design-only.
+The latest bounded authenticated smoke session lasted about four minutes, persisted 28 book records including invalidations, exercised three reconciliation mismatch recoveries, passed the external health check and shut down cleanly. It found zero opportunities. Its summary is hardening-live-validation.json. The database is local-only at research-data/hardening-smoke.sqlite. A consistent backup passed integrity and matched table counts. Earlier authenticated-stream-validation.json and sample-live-report.json remain historical evidence.
 
-## Next session
+## Remaining operating/research work
 
-1. Read HARDENING.md, SETUP.md, SOURCES.md, VALIDATION.md, and REQUIREMENTS.md. Complete the hardening gates before expanding sustained observation. Review known limitations before interpreting results.
-2. Credentials are already saved and validated. Use `.env.research` locally; do not ask for the values or repeat setup. Check whether another worker owns the local database before starting.
-3. Read `authenticated-stream-validation.json` and `sample-live-report.json`. The final 47-second observer run saved 38 valid stream books and shut down cleanly. The earlier run exercised event-loop recovery and has an unclosed session after process interruption; do not infer an end time.
-4. Review both venues' full settlement terms and find a small genuinely equivalent non-sports set. The local discovery files are in `research-data/current-candidates.json` and `current-discovery.json`. Candidate matching now normalizes category aliases and does not confuse administrative close times with proven settlement deadlines. Text similarity cannot authorize a pair. The structured-proof service is tested, but current public adapters do not populate all the source/void fields, so ordinary candidates require manual review.
-5. Follow HARDENING.md staged validation: 10–30 verified mappings, then 100, 250 and 500+ or the eligible measured capacity. Record the full telemetry set and stop expansion before performance distorts evidence. No arbitrary small permanent limit.
-6. Export a **live** report and audit depth, fees, opportunity IDs, loss accounting and missing-data denominators against saved books. A REST probe or synthetic replay is not a substitute.
-7. Only then assess whether the research-phase definition of done is met. Live execution is still outside scope even if the report is favorable.
+1. Check current Git status/log and HARDENING.md before modifying anything. Implementation is present; do not recreate a plan instead of inspecting code.
+2. Review representative catalog candidates against both venues' authoritative settlement terms. No justified real verified mapping set exists yet. Missing equivalence evidence is a real observation gate, not permission to weaken verification.
+3. Once suitable mappings exist, run actual verified-market observation in stages, retaining telemetry and failed stages. The synthetic 500 ceiling is configurable, not a promise of hours-long reliability or arbitrage profitability. Measure real catalog size, shared-market fanout, books, recovery and disk growth on the chosen host.
+4. Audit any qualifying opportunity against recorded books, timestamps, fee bounds, both first-leg scenarios and loss/unknown denominators. Export a live report. Zero verified opportunities gives no profitability conclusion.
+5. If deploying to Linux, follow SETUP.md. Actual service-failure/reboot validation still needs a Linux host. No host was provisioned, paid service purchased, notification sent or public control endpoint enabled. Test restart, fresh snapshots and the external timer on that host before unattended observation.
+6. The embedded browser exercised authenticated reports and detail without JavaScript errors but did not expose the download completion event. API/CLI exports pass tests; native save-dialog completion remains unverified.
 
-## Evidence already obtained
+## Limits
 
-Authenticated validation: `authenticated-stream-validation.json` records a 45-second standalone handshake/payload check (6 Kalshi parsed snapshots/deltas; 9 PM-US full books; no normalization errors after fixes) plus two bounded observer runs. `sample-live-report.json` is the final real 47-second session, with zero verified opportunities and null survival denominators. Its 42 book records include 4 shutdown invalidations. The sample demonstrates ingestion and persistence, not opportunity frequency, fills, or returns. `tests/fixtures/research/authenticated-books-2026-09-10.json` contains whitelisted public book payloads from the first live check; no credentials or account data.
+SQLite remains canonical, with full books and compact selected quote evidence. A bounded detector search can reject pathological depth; it never substitutes an approximate profitable result. Queue failure pauses observation. Price freshness remains conservatively two seconds even on healthy idle streams. REST reconciliation is sampled and non-atomic; metadata polling is not instantaneous. The periodic metadata/reconciliation sweep can take longer than its timer at broad coverage because requests are throttled.
 
-Actual public REST probe: `sample-public-probe.json`, September 10 16:29:43–16:29:55 UTC. Catalog samples: 445 Kalshi and 300 PM-US markets; four books retrieved; no request errors. Zero verified mappings and no authenticated stream coverage. This establishes public connectivity only.
+Synthetic modes are explicit. Simulated fills are not actual fills; fill fragmentation/queue priority/partial hedge submissions remain unmodeled. Residual orphan exposure keeps net P&L unknown. Capital is locked per venue and is not recycled from assumed settlements. Full research-phase completion still requires sustained verified live evidence.
 
-Synthetic replay: `tests/fixtures/research/lifecycle.json` passed through the same book parsers/recorder, with output in ignored `research-data/replay.sqlite`. Never present its profit/lifetime as actual evidence.
-
-## Operational constraints
-
-The worker is separate from Sites/Cloudflare request handlers and requires a persistent disk/process. GitHub stores code and handoff docs, not running processes, local evidence or credentials. No cloud infrastructure was provisioned and the existing hosted Sites deployment was not republished; the user selected GitHub as the checkpoint destination. Remote worker control uses an SSH tunnel; the hosted report viewer is currently snapshot-only.
-
-Fee arithmetic is exact for the declared model, but visible depth does not reveal fill fragmentation. Quotes retain fee bounds and assumptions. Bankroll scenarios do not reuse shared-market exposure or reinvest unobserved settlements. Partial hedges, queue priority and venue acknowledgments are not modeled. Review SETUP.md for full limits.
+GitHub preserves source and sanitized validation/handoff files, not credentials, local databases or a running observer. The worker needs a persistent process/disk separate from the hosted request-oriented site. The hosted site remains a report-snapshot viewer; live controls are loopback-only and use an SSH tunnel remotely.

@@ -6,7 +6,23 @@ Four components are explicit: `lib/research/books.ts` plus `worker/streams.ts` f
 
 **Implementation checkpoint, not completed strategy validation.** Both authenticated venue streams have now been exercised with real credentials and public book messages. A short live report is saved, but the verified-market observation/report required by the user's definition of done remains outstanding. No live trading was implemented.
 
-## Checks completed
+## Hardening implementation validation — latest checkpoint
+
+Actual code now implements optimized detector sizing, worker-thread persistence and report readers, latency/health telemetry, orientation invalidation, per-group recovery, continuous candidate discovery/subscriptions, eligible-profit isolation, both-first-venue reporting, paginated evidence/CSV, backup and external health checks. HARDENING.md records the remaining operating gates; it is not the deliverable in place of code.
+
+- `npm test`: **72 passed, 0 failed** after the hardening changes. Includes all prior safety tests, mixed/raw eligibility, registry version races, independent shards, queue overflow/drain, actual SQLite worker recording and staged-load correctness.
+- `npx tsc --noEmit --incremental false`: **passed**.
+- `npm run build`: **passed**. Vinext still prints its informational route-classification limitation.
+- `npm run test:detector`: **3 passed**: 5,000 seeded randomized comparisons against the original exhaustive detector, million-contract bounded-probe sizing, and the zero-fee qualifying-interior regression. Both orientations, fee schedules, fractional displayed depth, bankroll limits and thresholds are compared.
+- `npm run test:load`: staged real parser/evaluator/worker/SQLite run at 30, 100, 250, 500 synthetic verified mappings. Full measured results and predeclared thresholds are in scale-validation.json; earlier failed stages were retained. A 30-second 500-mapping run with five concurrent report reads also passed, in scale-soak.json.
+- Authenticated dashboard: synthetic fixture/raw labels, both venue-first tables, lifecycle books and mapping history were exercised in the actual embedded browser; no JavaScript errors. Native download-event completion was unavailable in that browser. Authenticated JSON/CSV endpoints, attachment headers, unauthenticated denial, cross-origin denial and secret exclusion pass API tests; CLI CSV was generated and parsed.
+- Actual read-stream smoke: about four minutes, two unverified pairs, 28 persisted records including invalidations, zero opportunities, three reconciliation mismatch recoveries, external health check passed, clean stop. See hardening-live-validation.json. No order/account mutation endpoint was called.
+- Online SQLite backup command: passed; `PRAGMA integrity_check` returned `ok`, and sessions/books/opportunities/diagnostic counts matched. Linux power-loss/reboot validation is not claimed.
+- `git diff --check`: passed. Secret audit found no configured credential/control-token values or private-key payload in tracked/proposed files or reachable Git-history blobs; local secret/config/evidence paths remain ignored. Review the final commit for the exact audit counts.
+
+The observer is stopped and live trading remains disabled. Synthetic capacity and authenticated ingestion are established; verified live profitability, sustained broad venue coverage, actual Linux restart/reboot and native save-dialog completion are not established.
+
+## Earlier checks completed
 
 - `npm test`: **56 passed, 0 failed**, including all 31 original tests and 25 added research/worker tests.
 - `npx tsc --noEmit --incremental false`: **passed**.

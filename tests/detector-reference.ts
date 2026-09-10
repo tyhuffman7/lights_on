@@ -1,14 +1,13 @@
-import { Depth, sizes } from "./sizing.ts";
-import type { Level, Pair, Side, Fill } from "../arb/types.ts";
-import { feeSchedule, feeBounds, integer } from "./fees.ts";
-import type { FeeSchedule } from "./fees.ts";
-import { fresh } from "./books.ts";
+import type { Level, Pair, Side, Fill } from "../lib/arb/types.ts";
+import { feeSchedule, feeBounds, integer } from "../lib/research/fees.ts";
+import type { FeeSchedule } from "../lib/research/fees.ts";
+import { fresh } from "../lib/research/books.ts";
 import type {
   StreamBook,
   ResearchConfig,
   SizeQuote,
   Evaluation,
-} from "./types.ts";
+} from "../lib/research/types.ts";
 export function fill(
   levels: Level[],
   q: number,
@@ -85,42 +84,72 @@ export function evaluate(
       curve: SizeQuote[] = [];
     // Explicit numerical support limit; never silently truncate and call it full depth.
     if (maxQuantity > 1000000) reasons.push("UNSUPPORTED_QUANTITY");
-    const runSizing = () =>
-      afee && bfee && maxQuantity > 0 && maxQuantity <= 1000000
-        ? sizes(
-            new Depth(a[aSide], afee),
-            new Depth(b[bSide], bfee),
-            Math.max(1, Math.ceil(pair.a.minQty), Math.ceil(pair.b.minQty)),
-            maxQuantity,
-            c,
-          )
-        : {
-            best: null,
-            bestGross: null,
-            bankroll: Object.fromEntries(c.bankrolls.map((x) => [x, null])),
-            curve: [],
-            probes: 0,
-          };
-    let sized: ReturnType<typeof sizes>;
-    try {
-      sized = runSizing();
-    } catch (error) {
-      if (!(error instanceof Error) || error.message !== "SIZING_WORK_LIMIT")
-        throw error;
-      reasons.push("SIZING_WORK_LIMIT");
-      sized = {
-        best: null,
-        bestGross: null,
-        bankroll: Object.fromEntries(c.bankrolls.map((x) => [x, null])),
-        curve: [],
-        probes: 8192,
-      };
+    if (afee && bfee && maxQuantity <= 1000000) {
+      for (
+        let q = Math.max(1, Math.ceil(pair.a.minQty), Math.ceil(pair.b.minQty));
+        q <= maxQuantity;
+        q++
+      ) {
+        const af = fill(a[aSide], q, afee),
+          bf = fill(b[bSide], q, bfee);
+        if (!af || !bf) break;
+        const cost = af.cost + bf.cost,
+          fees = af.fees + bf.fees,
+          feeUpper = af.feeUpper + bf.feeUpper,
+          reserve = q * c.reserve,
+          payout = q * 10000,
+          outlay = cost + feeUpper + reserve;
+        curve.push({
+          quantity: q,
+          aFill: af,
+          bFill: bf,
+          aVwap: af.cost / q,
+          bVwap: bf.cost / q,
+          cost,
+          fees,
+          feeUpper,
+          reserve,
+          payout,
+          grossProfit: payout - cost,
+          feeProfit: payout - cost - fees,
+          profit: payout - outlay,
+          roi: ((payout - outlay) / outlay) * 100,
+          outlay,
+        });
+      }
     }
-    const { best, bestGross, bankroll } = sized;
-    curve.push(...sized.curve);
+    const qualifies = (q: SizeQuote) =>
+      q.profit >= c.minProfit && q.roi >= c.minRoi;
+    const select = (x: SizeQuote | null, y: SizeQuote) =>
+      !x ||
+      (qualifies(y) && !qualifies(x)) ||
+      (qualifies(x) === qualifies(y) && y.profit > x.profit)
+        ? y
+        : x;
+    const best = curve.reduce<SizeQuote | null>(select, null);
+    const bestGross = curve.reduce<SizeQuote | null>(
+      (x, y) => (!x || y.grossProfit > x.grossProfit ? y : x),
+      null,
+    );
     if (!best) reasons.push("DEPTH_GONE");
     else if (best.profit < c.minProfit || best.roi < c.minRoi)
       reasons.push("EDGE_BELOW_THRESHOLD");
+    const bankroll: Record<string, SizeQuote | null> = {};
+    for (const dollars of c.bankrolls)
+      bankroll[dollars] = curve
+        .filter(
+          (x) =>
+            x.outlay <= dollars &&
+            x.aFill.cost +
+              (x.aFill as Fill & { feeUpper: number }).feeUpper +
+              Math.ceil(x.reserve / 2) <=
+              dollars / 2 &&
+            x.bFill.cost +
+              (x.bFill as Fill & { feeUpper: number }).feeUpper +
+              Math.floor(x.reserve / 2) <=
+              dollars / 2,
+        )
+        .reduce<SizeQuote | null>(select, null);
     return {
       pairId: pair.id,
       aSide,

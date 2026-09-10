@@ -108,14 +108,18 @@ async function main() {
     return;
   }
   if (command === "discover") {
-    const { discover } = await import("../lib/arb/adapters.ts");
+    const { catalog } = await import("./coverage.ts");
     const { matchCandidates } = await import("../lib/research/matching.ts");
-    const discovery = await discover();
+    const discovery = await catalog();
     console.log(
       JSON.stringify(
         {
           at: discovery.at,
-          counts: discovery.counts,
+          counts: {
+            kalshi: discovery.kalshi.length,
+            poly: discovery.poly.length,
+          },
+          complete: discovery.complete,
           errors: discovery.errors,
           candidates: matchCandidates(discovery.kalshi, discovery.poly),
         },
@@ -195,14 +199,17 @@ async function main() {
       process.env.RESEARCH_CONTROL_TOKEN ?? "",
     );
     await once(server, "listening");
-    const stop = () => {
-      observer.stop();
+    let stopping = false;
+    const stop = async () => {
+      if (stopping) return;
+      stopping = true;
       server.close();
-      setTimeout(() => {
+      try {
+        await observer.stop();
+      } finally {
         s.close();
         release();
-        process.exit(0);
-      }, 100).unref();
+      }
     };
     process.once("SIGINT", stop);
     process.once("SIGTERM", stop);
@@ -217,7 +224,7 @@ async function main() {
       );
     }
   } catch (e) {
-    observer.stop();
+    await observer.stop();
     s.close();
     release();
     throw e;
