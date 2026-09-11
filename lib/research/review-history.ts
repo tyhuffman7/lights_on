@@ -80,7 +80,7 @@ export function historicalDiscrepancies(
     medianQuantity: median(g.quantities),
     medianWorstBookAgeMs: median(g.ages),
     stateSamples: g.edges.length,
-    occurrencesPerObservedHour:
+    occurrencesPerEventSpanHour:
       g.lastAt > g.firstAt
         ? (g.occurrences * 3600000) / (g.lastAt - g.firstAt)
         : null,
@@ -95,5 +95,23 @@ export function historicalActivity(
     .prepare("SELECT pair_id,COUNT(*) n FROM opportunities GROUP BY pair_id")
     .all() as any[])
     out[row.pair_id] = { count: Number(row.n) };
+  return out;
+}
+
+export function recordedActivity(
+  prior: Record<string, ResearchActivity>,
+  store: ResearchStore,
+) {
+  const recorded = historicalActivity(store),
+    out: Record<string, ResearchActivity> = {};
+  for (const id of new Set([...Object.keys(prior), ...Object.keys(recorded)])) {
+    const p = prior[id] ?? {};
+    out[id] = {
+      ...p,
+      count:
+        (p.priorCount ?? 0) +
+        Math.max(0, (recorded[id]?.count ?? 0) - (p.persistedBaseline ?? 0)),
+    };
+  }
   return out;
 }

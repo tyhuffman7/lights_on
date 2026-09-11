@@ -360,6 +360,14 @@ test("Unsubscribed ring histories expire while post-opportunity evidence remains
   rec.tick(now + 6000, 6000);
   rec.tick(now + 9000, 9000);
   assert.equal(rec.history.size, 0);
-  assert.equal(s.rows("opportunities")[0].status,"CENSORED");
+  assert.equal(s.rows("opportunities")[0].status, "CENSORED");
   s.close();
+});
+test("Reconciliation alternates venues before exhausting a large unseen Kalshi catalog", () => {
+  const s = new ReconciliationScheduler(),
+    ms = Array.from({ length: 500 }, (_, i) => pair(String(i)).a).concat([
+      pair("poly").b,
+    ]);
+  assert.equal(s.take(ms, 0, 1, 100)[0].venue, "kalshi");
+  assert.equal(s.take(ms, 100, 1, 100)[0].venue, "poly");
 });

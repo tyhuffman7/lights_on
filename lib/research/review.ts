@@ -1,9 +1,11 @@
-import type { Mapping, StreamBook } from "./types.ts";
+import type { Mapping } from "./types.ts";
 import type { Market } from "../arb/types.ts";
 import { catalogEntities } from "./entities.ts";
 import { generalHints } from "./identity.ts";
 export type ResearchActivity = {
   count?: number;
+  priorCount?: number;
+  persistedBaseline?: number;
   maxGross?: number;
   medianGross?: number;
   updates?: number;
@@ -73,6 +75,7 @@ export function reviewPackage(
     "period",
     "propType",
     "units",
+    "outcome",
   ] as const)
     compare(key, a.canonical?.[key], b.canonical?.[key]);
   for (const key of [
@@ -138,6 +141,8 @@ export function reviewPackage(
       "general.placement",
     ].includes(k),
   );
+  if (!m.pair.inverted && differ.includes("outcome"))
+    structural.push("outcome");
   let score =
     match.filter(
       (k) =>
@@ -177,6 +182,9 @@ export function reviewPackage(
     score,
     status,
     relationship: m.pair.inverted ? "INVERTED" : "DIRECT",
+    outcomeReview: m.pair.inverted
+      ? "Confirm tie, draw, void and retirement states remain complementary."
+      : "Confirm both YES and NO definitions agree.",
     match,
     differ,
     unknown,

@@ -114,6 +114,9 @@ export class LiveRecorder {
     this.ready.catch(() => {});
   }
   async read(kind: string, data: any) {
+    if (kind === "capacity")
+      while (this.readBusy && !this.closing)
+        await new Promise((resolve) => setTimeout(resolve, 25));
     if (this.readBusy) throw new Error("Report reader busy");
     this.readBusy = true;
     let reader: Worker | undefined;
@@ -168,6 +171,8 @@ export class LiveRecorder {
         "detail",
         "csv",
         "activity",
+        "capacity",
+        "review",
       ].includes(kind)
     )
       return this.read(kind, data);
@@ -298,21 +303,20 @@ export class LiveRecorder {
               s === "HEALTHY_RESTING_BOOK_RESEARCH",
           )
         ) {
-          const research = evaluate(
-            m.pair,
-            a,
-            b,
-            { ...this.config, maxAgeMs: Number.MAX_SAFE_INTEGER },
-            book.receivedMono,
-            book.receivedAt,
-            false,
-          );
-          const rejected = research.filter(
+          // Sizing is independent of the freshness flag and already computed above.
+          // Count rejected raw observations without running sizing a second time.
+          const rejected = evaluations[m.id].filter(
             (e) =>
               m.active &&
               e.bestGross &&
               e.bestGross.grossProfit > 0 &&
-              !e.reasons.some((r) => r !== "MAPPING_UNVERIFIED"),
+              !e.reasons.some((r) =>
+                [
+                  "MARKET_CLOSED",
+                  "UNSUPPORTED_QUANTITY",
+                  "SIZING_WORK_LIMIT",
+                ].includes(r),
+              ),
           ).length;
           if (rejected)
             this.telemetry.count(

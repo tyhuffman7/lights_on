@@ -111,14 +111,11 @@ export class StreamConnection {
   lastReconciliationAt: number | null = null;
   lastDisconnect: Record<string, unknown> | null = null;
   recoveryReason: string | null = null;
-  get shard() {
+  shard: string;
+  isHealthy() {
     return (
-      this.options.venue +
-      ":" +
-      createHash("sha256")
-        .update(this.options.ids.join("|"))
-        .digest("hex")
-        .slice(0, 12)
+      this.socket?.readyState === WebSocket.OPEN &&
+      performance.now() - this.lastPong < 15000
     );
   }
   lastPong = 0;
@@ -148,6 +145,13 @@ export class StreamConnection {
   }
   constructor(options: Options) {
     this.options = options;
+    this.shard =
+      options.venue +
+      ":" +
+      createHash("sha256")
+        .update(options.ids.join("|"))
+        .digest("hex")
+        .slice(0, 12);
   }
   start() {
     if (!this.stopped) return;

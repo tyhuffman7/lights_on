@@ -39,6 +39,7 @@ export class Observer {
   shardCaches = new Map<StreamConnection, BookCache>();
   cache = new BookCache();
   streams: StreamConnection[] = [];
+  marketStreams = new Map<string, StreamConnection>();
   timers: ReturnType<typeof setInterval>[] = [];
   paused = true;
   stopped = false;
@@ -58,13 +59,7 @@ export class Observer {
       config.maxPersistencePending,
     );
     this.recorder.streamHealthy = (venue, id) =>
-      this.streams.some(
-        (s) =>
-          s.options.venue === venue &&
-          s.options.ids.includes(id) &&
-          s.health().connected &&
-          s.health().heartbeatAgeMs < 15000,
-      );
+      this.marketStreams.get(venue + ":" + id)?.isHealthy() ?? false;
     this.registry.persist = (m, at) => {
       this.recorder.patchMapping(m);
       this.recorder.enqueue("mapping", { m, at });
@@ -83,6 +78,10 @@ export class Observer {
     await this.recorder.ready;
     if (this.store.path !== ":memory:")
       this.recorder.activity = await this.recorder.send("activity", {});
+    for (const a of Object.values(this.recorder.activity)) {
+      a.priorCount = a.count ?? 0;
+      a.persistedBaseline = a.count ?? 0;
+    }
     for (const entry of this.config.markets) {
       const a = await market("kalshi", entry.kalshi),
         b = await market("poly", entry.poly);
@@ -202,6 +201,7 @@ export class Observer {
     this.streams.forEach((s) => s.stop());
     this.streams = [];
     this.shardCaches.clear();
+    this.marketStreams.clear();
     if (!this.recorder.failed)
       for (const v of ["kalshi", "poly"] as Venue[]) this.invalid(v, "PAUSED");
   }
@@ -486,14 +486,40 @@ export class Observer {
   }
   private async applySubscriptions() {
     if (this.paused || this.stopped) return;
-    this.capacity = this.capacityScheduler.select(
-      this.registry.list(),
-      this.config.maxSubscribedMarketsPerVenue ?? 500,
-      this.config.explorationFraction,
-      this.config.explorationRotationMs,
-      Date.now(),
-      this.recorder.activity,
+    const selectionStarted = performance.now();
+    if (this.store.path === ":memory:")
+      this.capacity = this.capacityScheduler.select(
+        this.registry.list(),
+        this.config.maxSubscribedMarketsPerVenue ?? 500,
+        this.config.explorationFraction,
+        this.config.explorationRotationMs,
+        Date.now(),
+        this.recorder.activity,
+      );
+    else {
+      this.capacity = await this.recorder.send("capacity", {
+        cap: this.config.maxSubscribedMarketsPerVenue ?? 500,
+        fraction: this.config.explorationFraction,
+        rotationMs: this.config.explorationRotationMs,
+        now: Date.now(),
+        activity: this.recorder.activity,
+        previousSelected: [...this.capacityScheduler.selected],
+        previousExploration: [...this.capacityScheduler.exploration],
+        previousEpoch: this.capacityScheduler.epoch,
+      });
+      this.capacityScheduler.selected = new Set(this.capacity!.selectedIds);
+      this.capacityScheduler.exploration = new Set(
+        this.capacity!.explorationIds,
+      );
+      this.capacityScheduler.epoch = Math.floor(
+        Date.now() / this.config.explorationRotationMs,
+      );
+    }
+    this.telemetry.sample(
+      "capacityWorkerRoundTrip",
+      performance.now() - selectionStarted,
     );
+    if (this.paused || this.stopped || !this.capacity) return;
     for (const venue of ["kalshi", "poly"] as Venue[]) {
       const selected = this.capacity.subscribed[venue];
       const desired = new Set(
@@ -520,6 +546,8 @@ export class Observer {
           this.invalid(venue, "SUBSCRIPTION_CHANGED", s.options.ids);
           this.streams = this.streams.filter((x) => x !== s);
           this.shardCaches.delete(s);
+          for (const id of s.options.ids)
+            this.marketStreams.delete(venue + ":" + id);
           await new Promise<void>((resolve) => setImmediate(resolve));
           if (this.paused || this.stopped) return;
         }
@@ -582,6 +610,7 @@ export class Observer {
           },
         });
         this.streams.push(stream);
+        for (const id of ids) this.marketStreams.set(venue + ":" + id, stream);
         this.shardCaches.set(stream, cache);
         stream.start();
         await new Promise<void>((resolve) => setImmediate(resolve));

@@ -29,6 +29,10 @@ for (const m of new MappingRegistry(source).list())
   )
     registry.add(m.pair, Date.now(), m.normalized);
 const activity = historicalActivity(source);
+for (const a of Object.values(activity)) {
+  a.priorCount = a.count ?? 0;
+  a.persistedBaseline = 0;
+}
 source.close();
 const config = configSchema.parse({
   database: path,
@@ -50,7 +54,9 @@ try {
   const initialBytes = bytes(),
     startedAt = Date.now();
   observer.resume();
-  console.log(`Authenticated PAPER_RESEARCH validation running on port ${config.port}`);
+  console.log(
+    `Authenticated PAPER_RESEARCH validation running on port ${config.port}`,
+  );
   let finish!: () => void;
   const done = new Promise<void>((r) => (finish = r));
   const timer = setTimeout(finish, seconds * 1000);

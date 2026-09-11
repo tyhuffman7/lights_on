@@ -257,6 +257,8 @@
       $("review-count").textContent =
         data.total +
         " candidates; showing first 100. Priority is for human rule review only.";
+      $("review-count").textContent +=
+        " Queue counts: " + JSON.stringify(data.counts);
       $("review-queue").replaceChildren();
       for (const r of data.rows) {
         const details = document.createElement("details"),
