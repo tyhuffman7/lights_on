@@ -1,0 +1,203 @@
+{
+  "startedAt": 1789169710240,
+  "endedAt": 1789170310521,
+  "pairCount": 242,
+  "scope": {
+    "Elections": 75,
+    "Entertainment": 154,
+    "Economics": 8,
+    "Politics": 5
+  },
+  "telemetry": {
+    "at": 1789170310353,
+    "host": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M1 Pro",
+      "runtime": "v25.8.1"
+    },
+    "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+    "interval": {
+      "startMono": 590420.75625,
+      "endMono": 600344.756791,
+      "durationMs": 9924.000541000045
+    },
+    "intervalRates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0,
+      "messages": 63.18016584235465,
+      "bookUpdates": 63.18016584235465,
+      "evaluations": 132.40628056914514,
+      "STRICT_EXECUTION_FRESH": 75.27206361122634,
+      "EXCHANGE_TIMESTAMP_OLD": 0.30229744422179256,
+      "reconciliationRequests": 0.5038290737029876,
+      "kalshiRestRequests": 0.30229744422179256,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 56.831919513697,
+      "strictBookAgeOnlyRejectedEvaluations": 4.735993292808083,
+      "polyRestRequests": 0.20153162948119505,
+      "reconciliationOlderRestSnapshots": 0.10076581474059752,
+      "deferredInvalidBookEvaluations": 0,
+      "SUBSCRIPTION_CHANGED": 0,
+      "DISCONNECT_DETAIL": 0,
+      "CONNECTION_UNHEALTHY": 0
+    },
+    "uptimeMs": 600132.6708750001,
+    "counters": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 8,
+      "messages": 31113,
+      "bookUpdates": 31309,
+      "evaluations": 62312,
+      "STRICT_EXECUTION_FRESH": 35259,
+      "EXCHANGE_TIMESTAMP_OLD": 719,
+      "reconciliationRequests": 295,
+      "kalshiRestRequests": 1478,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 26302,
+      "strictBookAgeOnlyRejectedEvaluations": 2186,
+      "polyRestRequests": 806,
+      "reconciliationOlderRestSnapshots": 78,
+      "deferredInvalidBookEvaluations": 200,
+      "SUBSCRIPTION_CHANGED": 2,
+      "DISCONNECT_DETAIL": 2,
+      "CONNECTION_UNHEALTHY": 32
+    },
+    "rates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0.013330385743432219,
+      "messages": 51.84353645442582,
+      "bookUpdates": 52.170130905139914,
+      "evaluations": 103.83037455559355,
+      "STRICT_EXECUTION_FRESH": 58.752008865959574,
+      "EXCHANGE_TIMESTAMP_OLD": 1.1980684186909707,
+      "reconciliationRequests": 0.49155797428906306,
+      "kalshiRestRequests": 2.462788766099102,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 43.82697572796928,
+      "strictBookAgeOnlyRejectedEvaluations": 3.642527904392854,
+      "polyRestRequests": 1.343036363650796,
+      "reconciliationOlderRestSnapshots": 0.12997126099846412,
+      "deferredInvalidBookEvaluations": 0.33325964358580545,
+      "SUBSCRIPTION_CHANGED": 0.0033325964358580547,
+      "DISCONNECT_DETAIL": 0.0033325964358580547,
+      "CONNECTION_UNHEALTHY": 0.053321542973728875
+    },
+    "latencyMs": {
+      "persistenceAck": {
+        "count": 10000,
+        "p50": 0.6207920000888407,
+        "p95": 6.2426249999552965,
+        "p99": 11.067915999912657
+      },
+      "persistenceWrite": {
+        "count": 10000,
+        "p50": 0.20991700002923608,
+        "p95": 0.5144160000490956,
+        "p99": 1.507500000006985
+      },
+      "capacityWorkerRoundTrip": {
+        "count": 5,
+        "p50": 191.02795799996238,
+        "p95": 198.94549999991432,
+        "p99": 198.94549999991432
+      },
+      "processingLag": {
+        "count": 10000,
+        "p50": 0.1549589999485761,
+        "p95": 0.362749999971129,
+        "p99": 0.8037079999921843
+      },
+      "evaluation": {
+        "count": 10000,
+        "p50": 0.5680419999989681,
+        "p95": 1.528374999994412,
+        "p99": 3.467791999981273
+      },
+      "processing": {
+        "count": 10000,
+        "p50": 0.7319160000188276,
+        "p95": 2.0236250000307336,
+        "p99": 4.112375000026077
+      },
+      "validBookProcessing": {
+        "count": 10000,
+        "p50": 0.7319160000188276,
+        "p95": 2.0236250000307336,
+        "p99": 4.112375000026077
+      },
+      "receiveToPersistenceAck": {
+        "count": 10000,
+        "p50": 1.5336670000106096,
+        "p95": 7.760084000066854,
+        "p99": 12.77720800001407
+      },
+      "polyExchangeToReceive": {
+        "count": 4081,
+        "p50": 63,
+        "p95": 49639,
+        "p99": 240448
+      },
+      "kalshiExchangeToReceive": {
+        "count": 10000,
+        "p50": -21,
+        "p95": 50,
+        "p99": 69
+      },
+      "kalshiRestRoundTrip": {
+        "count": 1478,
+        "p50": 167.05629100004444,
+        "p95": 231.4725829999952,
+        "p99": 257.53133399999933
+      },
+      "polyRestRoundTrip": {
+        "count": 806,
+        "p50": 198.95612499996787,
+        "p95": 302.58983299997635,
+        "p99": 408.80233299999963
+      },
+      "invalidBookProcessing": {
+        "count": 200,
+        "p50": 1.7703749999927823,
+        "p95": 6.082792000001064,
+        "p99": 6.372833000001265
+      }
+    },
+    "eventLoopMs": {
+      "p50": 11.771903,
+      "p95": 13.672447,
+      "p99": 15.802367,
+      "max": 104.792063
+    },
+    "cpuPercent": 9.574104825225826,
+    "memory": {
+      "rss": 410091520,
+      "heapTotal": 161464320,
+      "heapUsed": 39742640,
+      "external": 11393263,
+      "arrayBuffers": 1877486
+    },
+    "sampleLimit": 10000
+  },
+  "persistence": {
+    "queueDepth": 0,
+    "queueBytes": 0,
+    "lastAckAt": 1789170310327,
+    "failed": false
+  },
+  "storage": {
+    "processed": 31309,
+    "persisted": 84,
+    "ringRecords": 762,
+    "ringBytes": 2629894,
+    "logicalBytes": 3313664,
+    "bytesPerHour": 6721455.938048074,
+    "projectedGBPerDay": 0.16131494251315376,
+    "evidencePerSecond": 0.14234031196251706
+  },
+  "subscribed": {
+    "kalshi": 217,
+    "poly": 217
+  },
+  "interpretation": "Bounded read-only run; no builds or tests during collection. Other host activity not measured. Different market load prevents causal before/after claims. No orders or fills."
+}

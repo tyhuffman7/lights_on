@@ -1,0 +1,1093 @@
+{
+  "timingSummary": {},
+  "capitalScenarios": {},
+  "timingInterpretation": "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
+  "at": "2026-09-11T23:46:13.352Z",
+  "policy": {
+    "capitalPerVenue": 1000000,
+    "totalLossLimit": 2000000,
+    "contractsPerPair": 1,
+    "maxPairDebit": 20000,
+    "maxCommitted": 100000,
+    "reservePerVenue": 100000,
+    "maxDepthFraction": 0.25,
+    "maxBookAgeMs": 2000,
+    "maxMetadataAgeMs": 60000,
+    "maxAccountAgeMs": 5000,
+    "maxPlanAgeMs": 250,
+    "minimumNetProfit": 100,
+    "uncertaintyReserve": 100
+  },
+  "opportunities": 13,
+  "statesAudited": 32,
+  "opportunitiesWithPositiveStandaloneOneContractModel": 1,
+  "freshPositiveStandaloneModels": 1,
+  "positiveEventsStillMatching": 0,
+  "remainingReviewPairs": [],
+  "eligibleStates": 0,
+  "blockersByOpportunity": {
+    "RULE_EQUIVALENCE_UNVERIFIED": 13,
+    "APPROVAL_EVIDENCE_MISSING": 13,
+    "EXECUTION_PROTOCOL_UNVALIDATED": 13,
+    "LIVE_FEE_BOUND_UNVALIDATED": 13,
+    "NO_MODELED_NET_EDGE": 12,
+    "BOOK_NOT_STRICTLY_FRESH": 13
+  },
+  "freshPositiveModelExamples": [
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 15,
+        "limitLegs": [
+          {
+            "venue": "kalshi",
+            "marketId": "KXLOSEMAJORITY-27JAN01",
+            "side": "yes",
+            "quantity": 1,
+            "limitPrice": 480,
+            "modeledDebit": 580,
+            "feeUpper": 100
+          },
+          {
+            "venue": "poly",
+            "marketId": "paccc-usho-midterms-2026-11-03-rep",
+            "side": "no",
+            "quantity": 1,
+            "limitPrice": 8260,
+            "modeledDebit": 8360,
+            "feeUpper": 100
+          }
+        ],
+        "at": 1789169945419,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXLOSEMAJORITY-27JAN01::paccc-usho-midterms-2026-11-03-rep",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the Republican Party loses majority control of the U.S. House of Representatives before the 2026 midterms?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169945419,
+      "modeledNetPerOneContractUSD": 0.096,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.096,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXLOSEMAJORITY-27JAN01::paccc-usho-midterms-2026-11-03-rep",
+          "a": {
+            "id": "KXLOSEMAJORITY-27JAN01",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "outcome": "republican party",
+              "entities": [],
+              "numbers": [
+                "2026"
+              ],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Will the Republican Party loses majority control of the U.S. House of Representatives before the 2026 midterms?",
+            "outcome": "Republican Party",
+            "opposite": "Republican Party",
+            "category": "Elections",
+            "rules": "If the Republican Party loses majority control of the U.S. House of Representatives after Issuance and before Nov 3, 2026, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/PARTYCHAMBERCONTROL.pdf\n\n[{\"name\":\" San Francisco Unified School District\",\"url\":\"https://www.sfusd.edu/\"}]",
+            "url": "https://kalshi.com/markets/kxlosemajority/kxlosemajority-27jan01",
+            "closeAt": "2027-01-08T15:00:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "afba12cacab90ec39afe9b80086cfbbf367bbf8089fcf8c3361cf8cf97001fe6",
+            "settlement": null,
+            "series": "KXLOSEMAJORITY"
+          },
+          "b": {
+            "id": "paccc-usho-midterms-2026-11-03-rep",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "usho",
+              "eventAt": "2026-11-03T00:00:00.000Z",
+              "eventDate": "2026-11-03",
+              "participants": [],
+              "marketType": "winner",
+              "entities": [],
+              "numbers": [],
+              "aliases": []
+            },
+            "title": "Republican Party · U.S House Midterm Winner",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "politics",
+            "rules": "This market will settle to Yes if the Republican Party wins control of the United States House of Representatives in the 2026 United States midterm election. Outcome sourced from relevant state electoral authorities, and the United States House of Representatives.\n\nA party wins control of the United States House of Representatives if it wins a majority of the chamber’s voting seats. If no party wins a majority of voting seats, the chamber will be deemed controlled by the party with which the first elected Speaker of the House of the Congress that convenes after the 2026 midterm election is affiliated.\n\nThe following rules govern the counting of seats for determining which party wins control of the chamber.\n\nAll House elections in the 2026 United States midterm election that elect voting members and determine representation in the upcoming 120th Congress are included. Where a seat is decided by a runoff, the runoff result will determine attribution of that seat.\n\nSeats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected.\n\nHouse members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party are included in that party’s count. If the caucus decisions of members of the House elected as independents cannot be determined on the date of the election, this market may remain open until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n",
+            "url": "https://polymarket.us/event/paccc-usho-midterms-2026-11-03-rep",
+            "closeAt": "2027-02-01T23:59:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 1,
+            "hash": "0858d41d5ae7a54a8a82c5f4b09b27e48d1bc2120d5096ac724a90e9881639d6",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXLOSEMAJORITY-27JAN01::paccc-usho-midterms-2026-11-03-rep",
+          "ruleHashes": [
+            "afba12cacab90ec39afe9b80086cfbbf367bbf8089fcf8c3361cf8cf97001fe6",
+            "0858d41d5ae7a54a8a82c5f4b09b27e48d1bc2120d5096ac724a90e9881639d6"
+          ],
+          "createdAt": 1789169945419,
+          "expiresAt": 1789169945669,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXLOSEMAJORITY-27JAN01",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 480,
+              "modeledDebit": 580,
+              "feeUpper": 100
+            },
+            {
+              "venue": "poly",
+              "marketId": "paccc-usho-midterms-2026-11-03-rep",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 8260,
+              "modeledDebit": 8360,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 960,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXLOSEMAJORITY-27JAN01",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 480,
+          "modeledDebit": 580,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "paccc-usho-midterms-2026-11-03-rep",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8260,
+          "modeledDebit": 8360,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "topStandaloneModels": [
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 15,
+        "limitLegs": [
+          {
+            "venue": "kalshi",
+            "marketId": "KXLOSEMAJORITY-27JAN01",
+            "side": "yes",
+            "quantity": 1,
+            "limitPrice": 480,
+            "modeledDebit": 580,
+            "feeUpper": 100
+          },
+          {
+            "venue": "poly",
+            "marketId": "paccc-usho-midterms-2026-11-03-rep",
+            "side": "no",
+            "quantity": 1,
+            "limitPrice": 8260,
+            "modeledDebit": 8360,
+            "feeUpper": 100
+          }
+        ],
+        "at": 1789169945419,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXLOSEMAJORITY-27JAN01::paccc-usho-midterms-2026-11-03-rep",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the Republican Party loses majority control of the U.S. House of Representatives before the 2026 midterms?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169945419,
+      "modeledNetPerOneContractUSD": 0.096,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.096,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXLOSEMAJORITY-27JAN01::paccc-usho-midterms-2026-11-03-rep",
+          "a": {
+            "id": "KXLOSEMAJORITY-27JAN01",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "outcome": "republican party",
+              "entities": [],
+              "numbers": [
+                "2026"
+              ],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Will the Republican Party loses majority control of the U.S. House of Representatives before the 2026 midterms?",
+            "outcome": "Republican Party",
+            "opposite": "Republican Party",
+            "category": "Elections",
+            "rules": "If the Republican Party loses majority control of the U.S. House of Representatives after Issuance and before Nov 3, 2026, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/PARTYCHAMBERCONTROL.pdf\n\n[{\"name\":\" San Francisco Unified School District\",\"url\":\"https://www.sfusd.edu/\"}]",
+            "url": "https://kalshi.com/markets/kxlosemajority/kxlosemajority-27jan01",
+            "closeAt": "2027-01-08T15:00:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "afba12cacab90ec39afe9b80086cfbbf367bbf8089fcf8c3361cf8cf97001fe6",
+            "settlement": null,
+            "series": "KXLOSEMAJORITY"
+          },
+          "b": {
+            "id": "paccc-usho-midterms-2026-11-03-rep",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "usho",
+              "eventAt": "2026-11-03T00:00:00.000Z",
+              "eventDate": "2026-11-03",
+              "participants": [],
+              "marketType": "winner",
+              "entities": [],
+              "numbers": [],
+              "aliases": []
+            },
+            "title": "Republican Party · U.S House Midterm Winner",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "politics",
+            "rules": "This market will settle to Yes if the Republican Party wins control of the United States House of Representatives in the 2026 United States midterm election. Outcome sourced from relevant state electoral authorities, and the United States House of Representatives.\n\nA party wins control of the United States House of Representatives if it wins a majority of the chamber’s voting seats. If no party wins a majority of voting seats, the chamber will be deemed controlled by the party with which the first elected Speaker of the House of the Congress that convenes after the 2026 midterm election is affiliated.\n\nThe following rules govern the counting of seats for determining which party wins control of the chamber.\n\nAll House elections in the 2026 United States midterm election that elect voting members and determine representation in the upcoming 120th Congress are included. Where a seat is decided by a runoff, the runoff result will determine attribution of that seat.\n\nSeats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected.\n\nHouse members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party are included in that party’s count. If the caucus decisions of members of the House elected as independents cannot be determined on the date of the election, this market may remain open until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n",
+            "url": "https://polymarket.us/event/paccc-usho-midterms-2026-11-03-rep",
+            "closeAt": "2027-02-01T23:59:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 1,
+            "hash": "0858d41d5ae7a54a8a82c5f4b09b27e48d1bc2120d5096ac724a90e9881639d6",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXLOSEMAJORITY-27JAN01::paccc-usho-midterms-2026-11-03-rep",
+          "ruleHashes": [
+            "afba12cacab90ec39afe9b80086cfbbf367bbf8089fcf8c3361cf8cf97001fe6",
+            "0858d41d5ae7a54a8a82c5f4b09b27e48d1bc2120d5096ac724a90e9881639d6"
+          ],
+          "createdAt": 1789169945419,
+          "expiresAt": 1789169945669,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXLOSEMAJORITY-27JAN01",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 480,
+              "modeledDebit": 580,
+              "feeUpper": 100
+            },
+            {
+              "venue": "poly",
+              "marketId": "paccc-usho-midterms-2026-11-03-rep",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 8260,
+              "modeledDebit": 8360,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 960,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXLOSEMAJORITY-27JAN01",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 480,
+          "modeledDebit": 580,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "paccc-usho-midterms-2026-11-03-rep",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8260,
+          "modeledDebit": 8360,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXGOVWINS-27JAN01-R1::usgovcc-demvrep-2026-11-03-rep",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the difference between the number of Republican governors and the number of Democratic governors be between 1 and 50 governors after the 2026 midterms?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169945406,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXGOVWINS-27JAN01-R1",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2800,
+          "modeledDebit": 3000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "usgovcc-demvrep-2026-11-03-rep",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6800,
+          "modeledDebit": 6900,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXGOVWINS-27JAN01-R1::usgovcc-demvrep-2026-11-03-rep",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the difference between the number of Republican governors and the number of Democratic governors be between 1 and 50 governors after the 2026 midterms?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169957466,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXGOVWINS-27JAN01-R1",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2800,
+          "modeledDebit": 3000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "usgovcc-demvrep-2026-11-03-rep",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6800,
+          "modeledDebit": 6900,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXPRESNOMD-28-SAS::enwc-uspres-nom-dem-2028-stasmi",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Stephen A. Smith be the Democratic Presidential nominee in 2028?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169982593,
+      "modeledNetPerOneContractUSD": -0.014,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-SAS",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 40,
+          "modeledDebit": 140,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-stasmi",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 9900,
+          "modeledDebit": 9900,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXPRESNOMD-28-PB::enwc-uspres-nom-dem-2028-petbut",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Will Pete Buttigieg be the Democratic Presidential nominee in 2028?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169764112,
+      "modeledNetPerOneContractUSD": -0.016,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-PB",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 9460,
+          "modeledDebit": 9560,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-petbut",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 500,
+          "modeledDebit": 500,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXPRESNOMD-28-MK::enwc-uspres-nom-dem-2028-markel",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Mark Kelly be the Democratic Presidential nominee in 2028?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789170065151,
+      "modeledNetPerOneContractUSD": -0.017,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-MK",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 370,
+          "modeledDebit": 470,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-markel",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 9600,
+          "modeledDebit": 9600,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXPRESNOMD-28-MO::enwc-uspres-nom-dem-2028-micoba",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Will Michelle Obama be the Democratic Presidential nominee in 2028?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169711682,
+      "modeledNetPerOneContractUSD": -0.019,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-MO",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 9790,
+          "modeledDebit": 9890,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-micoba",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 200,
+          "modeledDebit": 200,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXGOVWINS-27JAN01-R-50::usgovcc-demvrep-2026-11-03-dem",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Will the difference between the number of Republican governors and the number of Democratic governors be between -50 and -1 governors after the 2026 midterms?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169893516,
+      "modeledNetPerOneContractUSD": -0.02,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXGOVWINS-27JAN01-R-50",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 4100,
+          "modeledDebit": 4300,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "usgovcc-demvrep-2026-11-03-dem",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 5700,
+          "modeledDebit": 5800,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789170045761,
+      "modeledNetPerOneContractUSD": -0.02,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8500,
+          "modeledDebit": 8600,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789170052802,
+      "modeledNetPerOneContractUSD": -0.02,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8500,
+          "modeledDebit": 8600,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXBIGBROTHERRANK-26DEC31R2-TAY::rtc-bbus-s28-2-2026-10-01-taybro",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Will Taylor Brown finish in 2 place in Big Brother Season 28?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789170203146,
+      "modeledNetPerOneContractUSD": -0.02,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXBIGBROTHERRANK-26DEC31R2-TAY",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7800,
+          "modeledDebit": 8000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "rtc-bbus-s28-2-2026-10-01-taybro",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2000,
+          "modeledDebit": 2100,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXEMMYLIMITEDACTR-26SEP14-SARA::tac-emmys-lfls-2026-09-14-sarahp",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Sarah Pidgeon win Movie/Limited Actress at the Emmy Awards?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169914454,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEMMYLIMITEDACTR-26SEP14-SARA",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 3500,
+          "modeledDebit": 3700,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "tac-emmys-lfls-2026-09-14-sarahp",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6400,
+          "modeledDebit": 6500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXGOVWINS-27JAN01-R-50::usgovcc-demvrep-2026-11-03-dem",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Will the difference between the number of Republican governors and the number of Democratic governors be between -50 and -1 governors after the 2026 midterms?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789169940208,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXGOVWINS-27JAN01-R-50",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 4200,
+          "modeledDebit": 4400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "usgovcc-demvrep-2026-11-03-dem",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 5700,
+          "modeledDebit": 5800,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "interpretation": "Historical standalone scenarios using assumed $100 cash per venue, not actual account balances or fills. Fees are model estimates, live fee bounds and execution protocol are unvalidated. Positive model values are not earnings, independent opportunities, or approval; conditional capital-scenario sums are not realized profit or monthly income. Verification is frozen as observed; every live launch blocker remains enforced."
+}

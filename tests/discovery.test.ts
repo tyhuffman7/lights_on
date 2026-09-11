@@ -805,3 +805,24 @@ test("Explicit conflicting acting/interim service rules reject an office pair", 
   assert.equal(matchCandidates([a], [aligned]).length, 1);
   assert.equal(matchCandidates([a], [aligned])[0].status, "UNVERIFIED");
 });
+
+test("Loss of chamber control before election is not election control", () => {
+  const a = {
+    ...market("kalshi"),
+    category: "politics",
+    title: "Will Republicans control the House in 2026?",
+    outcome: "Republican",
+    rules:
+      "If the Republican Party loses majority control of the U.S. House of Representatives after Issuance and before Nov 3, 2026, then Yes.",
+  };
+  const b = {
+    ...market("poly"),
+    category: "politics",
+    title: a.title,
+    outcome: "Republican",
+    rules:
+      "This market settles Yes if the Republican Party wins control of the United States House of Representatives in the 2026 midterm election.",
+  };
+  assert.equal(matchCandidates([a], [b]).length, 0);
+  assert.equal(matchCandidates([{ ...a, rules: b.rules }], [b]).length, 1);
+});

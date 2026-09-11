@@ -596,3 +596,16 @@ export function interimService(
   );
   return values.size === 1 ? [...values][0] : undefined;
 }
+
+// Loss of current chamber control is not the result of an upcoming election.
+export function chamberControlEvent(
+  rules: string,
+): "loss-during-term" | "election-result" | undefined {
+  const primary = rules.split(/\n/)[0];
+  if (!/House of Representatives|Senate/i.test(primary)) return undefined;
+  if (/loses? (?:majority )?control/i.test(primary) && /before/i.test(primary))
+    return "loss-during-term";
+  if (/wins? control/i.test(primary) && /election/i.test(primary))
+    return "election-result";
+  return undefined;
+}

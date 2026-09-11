@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-11T23:46:13.668Z",
+  "mode": "RESEARCH_SIZE_SWEEP",
+  "matchingIntervals": 12,
+  "states": 30,
+  "maximumContracts": 200,
+  "maximumCombinedDebitUSD": 180,
+  "depthFraction": 0.25,
+  "reservePerContractUSD": 0.01,
+  "positivePairSizes": [],
+  "submittedOrders": 0,
+  "confirmedFills": 0,
+  "interpretation": "Best observed historical states with assumed funds and both fills; not executable plans, independent earning events, arrival checks, or realized profit. Current matching is required, settlement equivalence remains unverified. Prices and fee estimates are based on recorded depth. Live one-contract pilot limits are unchanged."
+}

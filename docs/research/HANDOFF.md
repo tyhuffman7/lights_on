@@ -1,3 +1,9 @@
+## Completed filtered 242-pair run
+
+Ten-minute run `work/proof/live-filtered-phase12` stopped and drained. 31,309 updates, no event-loop delay episodes or recovery reconnects, two subscription-change disconnects, processing p99 4.11ms, event-loop max 104.79ms, final pre-stop queue zero. Reports `docs/pilot/live-filtered-phase12-{audit,health,full-budget-size-audit}.json`. No builds/tests during collection; other host activity not instrumented. Different load and short duration prevent attributing all improvement to telemetry sorting.
+
+13 opportunity intervals / 32 states yielded one positive one-contract model. It is a confirmed false pair: Kalshi losing House majority before November 3 versus PM-US control won in the midterm election. New tested chamber-event exclusion removes that pair. Thus no positive one-contract occurrence in this run survives current matching. No profitable or filled trade established. Live trading disabled; no orders submitted.
+
 ## Telemetry reporting overhead
 
 Numeric typed-array sorting reduces the 16-metric / 10,000-sample synthetic snapshot benchmark median from 32.15ms to 9.67ms (30 iterations each). The quantile regression checks finite values, duplicates, empty/singleton arrays, and preserves source order. See `docs/pilot/telemetry-snapshot-performance.json`. This reduces main-thread reporting work but does not establish the cause or resolution of the prior recovery episode. No fresh live stability run yet. The historical telemetry snapshot just before recovery had zero persistence backlog; recovery itself added invalidation messages. Do not blame the network or metadata refresh solely from their concurrent activity.
