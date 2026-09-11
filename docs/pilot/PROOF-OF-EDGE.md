@@ -12,6 +12,8 @@ Before another execution step, prioritize the remaining nomination pairs' contro
 
 Next observation should focus on a justified review shortlist at a relevant active market window; repeatedly broadening raw candidate counts is not evidence of profitability. Do not restart the completed runs. A cloud comparison may improve availability, but none has been provisioned. Avoid paid hosting or additional funding until its value is measured.
 
+A later [four-pair REST snapshot](final-shortlist-rest-snapshot.json) again showed positive conditional one-contract values: Newsom $0.04, Emanuel $0.036, AOC $0.02, artist $0.01. It did not apply stream freshness or prove arrival liquidity, settlement equivalence, account funds, or account-specific fees. It is not inconsistent with zero strict stream opportunities: a resting displayed book can be old by the strict book-change criterion. The follow-up should compare targeted REST confirmation and healthy resting-book evidence without silently weakening launch gates. This compact snapshot does not retain underlying book levels and is therefore indicative, not a reproducible fill audit.
+
 ## Earlier scope and selection
 
 A complete public catalog fetch returned 136,079 Kalshi and 105,672 Polymarket US records. The initial discovery run found 863 candidates, including 350 non-sports candidates. Applying the final additional checks to those saved candidates retained 755, including 242 non-sports. This is filtering of a snapshot, not an exhaustive rerun of discovery after every edit. The broad live sample started with the earlier 350 non-sports candidates plus 28 current matches from the historical shortlist.

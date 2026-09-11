@@ -1,0 +1,84 @@
+{
+  "at": "2026-09-11T23:49:48.378Z",
+  "results": [
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "startedAt": 1789170585481,
+      "endedAt": 1789170585651,
+      "stillMatching": true,
+      "booksOpen": true,
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "modeledNetUSD": 0.04
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "modeledNetUSD": -0.12
+        }
+      ]
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "startedAt": 1789170586282,
+      "endedAt": 1789170586542,
+      "stillMatching": true,
+      "booksOpen": true,
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "modeledNetUSD": 0.036
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "modeledNetUSD": -0.108
+        }
+      ]
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "startedAt": 1789170587137,
+      "endedAt": 1789170587480,
+      "stillMatching": true,
+      "booksOpen": true,
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "modeledNetUSD": 0.02
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "modeledNetUSD": -0.13
+        }
+      ]
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "startedAt": 1789170588035,
+      "endedAt": 1789170588377,
+      "stillMatching": true,
+      "booksOpen": true,
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "modeledNetUSD": 0.01
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "modeledNetUSD": -0.13
+        }
+      ]
+    }
+  ],
+  "orders": 0,
+  "fills": 0,
+  "interpretation": "Non-atomic public REST snapshots. One contract, 25% displayed depth, whole-contract fee estimates and one-cent uncertainty reserve; no account, settlement, stream-freshness or arrival validation. Not executable plans or profit."
+}
