@@ -2,7 +2,17 @@
 
 **Profitability is not proven. No live orders, fills, or realized profit.** The user authorized $100 per venue, but accepting the loss budget does not establish an executable edge. Both bounded observers were stopped and drained. The original historical database was read-only throughout.
 
-## Scope and selection
+## Latest outcome and next decision
+
+The latest completed 242-pair, ten-minute run recorded 31,309 book updates, zero delay episodes, no recovery reconnects, and an empty final pre-stop persistence queue. Two disconnects were subscription changes. Processing p99 was 4.11ms. This is short-run evidence, not sustained uptime proof or exchange order latency. See [latest audit](live-filtered-phase12-audit.json) and [health](live-filtered-phase12-health.json).
+
+Its single positive one-contract model was a false relationship between losing House control before Election Day and winning control in the election. The tested exclusion removes it. No positive one-contract or full-pilot-budget size model survives current matching in that run. Earlier positive scenarios remain historical evidence and are not earnings.
+
+Before another execution step, prioritize the remaining nomination pairs' controlling end-date and contingency interpretation, obtain a defensible account-specific Kalshi fractional-fee bound, and collect repeatable fresh paired liquidity. Read-only account checks and nonbinding previews have succeeded; actual simultaneous fills, orphan handling at a venue, exits, and realized net profit have not been demonstrated. Existing user holdings are not bot inventory. The $100 per venue remains a maximum allocation, not an assertion of available cash.
+
+Next observation should focus on a justified review shortlist at a relevant active market window; repeatedly broadening raw candidate counts is not evidence of profitability. Do not restart the completed runs. A cloud comparison may improve availability, but none has been provisioned. Avoid paid hosting or additional funding until its value is measured.
+
+## Earlier scope and selection
 
 A complete public catalog fetch returned 136,079 Kalshi and 105,672 Polymarket US records. The initial discovery run found 863 candidates, including 350 non-sports candidates. Applying the final additional checks to those saved candidates retained 755, including 242 non-sports. This is filtering of a snapshot, not an exhaustive rerun of discovery after every edit. The broad live sample started with the earlier 350 non-sports candidates plus 28 current matches from the historical shortlist.
 

@@ -249,6 +249,8 @@ try {
         opportunities: report.opportunities,
         states: states,
         positiveStandaloneModels: positive,
+        positiveEventsStillMatching: report.positiveEventsStillMatching,
+        remainingReviewPairs: report.remainingReviewPairs.length,
         freshPositiveStandaloneModels: freshPositive,
         eligibleStates: eligible,
         blockers,
