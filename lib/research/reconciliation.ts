@@ -37,3 +37,17 @@ export class ReconciliationScheduler {
     return taken;
   }
 }
+
+/** Compare venue event times only; local receive time cannot establish REST currency. */
+export function olderRestSnapshot(
+  streamAt: number | null,
+  restAt: number | null,
+) {
+  return (
+    streamAt !== null &&
+    restAt !== null &&
+    Number.isFinite(streamAt) &&
+    Number.isFinite(restAt) &&
+    restAt < streamAt
+  );
+}

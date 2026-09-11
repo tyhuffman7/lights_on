@@ -213,7 +213,34 @@ export class StreamConnection {
             error instanceof Error && /sequence/i.test(error.message)
               ? "SEQUENCE_RECOVERY"
               : "PARSER_RECOVERY";
-          this.options.onDiagnostic(reason, { venue: this.options.venue });
+          const known = [
+            "Venue subscription rejected",
+            "Exchange timestamp moved backwards",
+            "Missing full market book",
+            "Missing exchange timestamp",
+            "Invalid price precision",
+            "Invalid book price",
+            "Invalid quantity precision",
+            "Invalid quantity",
+            "Duplicate price",
+            "Crossed or locked book",
+            "Non-USD book",
+            "Unsubscribed market",
+            "Kalshi sequence gap or reorder",
+            "Missing sequence/market",
+            "Missing snapshot sides",
+            "Delta requires current snapshot",
+            "Unknown side",
+            "Negative depth",
+            "Invalid exchange timestamp",
+          ];
+          this.options.onDiagnostic(reason, {
+            venue: this.options.venue,
+            parserReason:
+              error instanceof Error && known.includes(error.message)
+                ? error.message
+                : "OTHER_PARSE_ERROR",
+          });
           this.recover(reason);
         }
       });
@@ -273,15 +300,18 @@ export class StreamConnection {
       this.retry = setTimeout(() => this.connect(), 30000);
     }
   }
-  requestSnapshot(marketId: string, sid: number) {
+  requestSnapshot(marketId: string, sid?: number) {
+    // PM-US rejects a second subscription to an already subscribed slug.
+    // Kalshi supports an explicit snapshot command on the existing subscription.
     if (
       this.options.venue !== "kalshi" ||
+      sid === undefined ||
       !this.options.ids.includes(marketId) ||
       this.socket?.readyState !== WebSocket.OPEN
     )
       return false;
     this.options.onDiagnostic("SNAPSHOT_REQUEST", {
-      venue: "kalshi",
+      venue: this.options.venue,
       shard: this.shard,
       marketId,
       ...this.options.context?.(),

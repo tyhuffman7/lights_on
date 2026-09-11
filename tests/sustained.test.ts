@@ -371,3 +371,56 @@ test("Reconciliation alternates venues before exhausting a large unseen Kalshi c
   assert.equal(s.take(ms, 0, 1, 100)[0].venue, "kalshi");
   assert.equal(s.take(ms, 100, 1, 100)[0].venue, "poly");
 });
+
+test("Polymarket quarantine requires a non-regressing full snapshot and preserves sibling validity", async () => {
+  const { BookCache } = await import("../lib/research/books.ts");
+  const c = new BookCache();
+  const snapshot = (id, ts) => ({
+    marketData: {
+      marketSlug: id,
+      transactTime: new Date(ts).toISOString(),
+      state: "MARKET_STATE_OPEN",
+      bids: [{ px: { currency: "USD", value: "0.4" }, qty: "10" }],
+      offers: [{ px: { currency: "USD", value: "0.6" }, qty: "10" }],
+    },
+  });
+  c.poly(snapshot("a", now), now, 0);
+  c.poly(snapshot("b", now), now, 0);
+  c.quarantine("a", "poly");
+  assert.equal(c.poly(snapshot("a", now - 1), now, 1), null);
+  assert.equal(c.get("poly", "a").valid, false);
+  assert.equal(c.get("poly", "b").valid, true);
+  c.poly(snapshot("a", now), now, 2);
+  assert.equal(c.get("poly", "a").valid, true);
+  assert.equal(c.pendingSnapshots.size, 0);
+});
+test("Polymarket recovery does not issue a duplicate slug subscription", async () => {
+  const { StreamConnection } = await import("../worker/streams.ts");
+  const sent = [];
+  const stream = new StreamConnection({
+    venue: "poly",
+    ids: ["a", "b"],
+    url: "ws://127.0.0.1",
+    headers: () => ({}),
+    onMessage: () => {},
+    onInvalid: () => {},
+    onDiagnostic: () => {},
+  });
+  stream.socket = {
+    readyState: 1,
+    send: (message) => sent.push(JSON.parse(message)),
+  };
+  assert.equal(stream.requestSnapshot("a"), false);
+  assert.equal(sent.length, 0);
+});
+
+test("Reconciliation does not treat older REST evidence as a newer stream contradiction", async () => {
+  const { olderRestSnapshot } =
+    await import("../lib/research/reconciliation.ts");
+  assert.equal(olderRestSnapshot(now, now - 60000), true);
+  assert.equal(olderRestSnapshot(now, now), false);
+  assert.equal(olderRestSnapshot(now, now + 1), false);
+  assert.equal(olderRestSnapshot(null, now), false);
+  assert.equal(olderRestSnapshot(now, null), false);
+  assert.equal(olderRestSnapshot(now, NaN), false);
+});

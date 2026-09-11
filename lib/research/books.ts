@@ -33,9 +33,9 @@ function complement(ls: Level[]) {
 export class BookCache {
   books = new Map<string, StreamBook>();
   pendingSnapshots = new Set<string>();
-  quarantine(id: string) {
+  quarantine(id: string, venue: Venue = "kalshi") {
     this.pendingSnapshots.add(id);
-    const b = this.get("kalshi", id);
+    const b = this.get(venue, id);
     if (b) {
       b.valid = false;
       b.connection = "RECOVERING";
@@ -48,8 +48,8 @@ export class BookCache {
   }
   reset(venue: Venue) {
     this.invalidate(venue);
+    this.pendingSnapshots.clear();
     if (venue === "kalshi") {
-      this.pendingSnapshots.clear();
       this.sequences.clear();
       this.subscriptions.clear();
     }
@@ -171,6 +171,14 @@ export class BookCache {
       const ts = Date.parse(m.transactTime);
       if (!Number.isFinite(ts)) throw new Error("Missing exchange timestamp");
       const old = this.get("poly", m.marketSlug);
+      if (
+        this.pendingSnapshots.has(m.marketSlug) &&
+        old?.exchangeAt !== null &&
+        old?.exchangeAt !== undefined &&
+        ts < old.exchangeAt
+      )
+        return null;
+      this.pendingSnapshots.delete(m.marketSlug);
       if (old?.valid && old.exchangeAt !== null && ts < old.exchangeAt)
         throw new Error("Exchange timestamp moved backwards");
       return this.save(

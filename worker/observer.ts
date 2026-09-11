@@ -1,5 +1,8 @@
 import { CapacityScheduler } from "../lib/research/capacity.ts";
-import { ReconciliationScheduler } from "../lib/research/reconciliation.ts";
+import {
+  ReconciliationScheduler,
+  olderRestSnapshot,
+} from "../lib/research/reconciliation.ts";
 import { reviewQueue } from "../lib/research/review.ts";
 import { Worker } from "node:worker_threads";
 import {
@@ -308,7 +311,20 @@ export class Observer {
             streamAgeMs: performance.now() - before.receivedMono,
             restLevels: snapshot.yes.length + snapshot.no.length,
           });
-          if (before === after) {
+          if (
+            before === after &&
+            olderRestSnapshot(before.exchangeAt, snapshot.exchangeAt)
+          ) {
+            // An older venue timestamp is not evidence that the newer stream is wrong.
+            // Keep strict age/sequence gates; never replace stream books with REST.
+            this.telemetry.count("reconciliationOlderRestSnapshots");
+            this.recorder.diagnostic("RECONCILIATION_OLDER_REST", {
+              venue: venueMarket.venue,
+              marketId: venueMarket.id,
+              streamExchangeAt: before.exchangeAt,
+              restExchangeAt: snapshot.exchangeAt,
+            });
+          } else if (before === after) {
             const top = (ls: { price: number; quantity: number }[]) =>
               JSON.stringify(
                 [...ls].sort((a, b) => a.price - b.price).slice(0, 10),
@@ -321,53 +337,61 @@ export class Observer {
                 venueMarket.venue + ":" + venueMarket.id,
               );
               this.telemetry.count("reconciliationMismatches");
-              const stream = this.streams.find(
-                (s) =>
-                  s.options.venue === venueMarket.venue &&
-                  s.options.ids.includes(venueMarket.id),
+              this.recorder.diagnostic("RECONCILIATION_DIFFERENCE", {
+                venue: venueMarket.venue,
+                marketId: venueMarket.id,
+                streamExchangeAt: before.exchangeAt,
+                restExchangeAt: snapshot.exchangeAt,
+                streamYes: before.yes.slice(0, 3),
+                restYes: [...snapshot.yes]
+                  .sort((a, b) => a.price - b.price)
+                  .slice(0, 3),
+                streamNo: before.no.slice(0, 3),
+                restNo: [...snapshot.no]
+                  .sort((a, b) => a.price - b.price)
+                  .slice(0, 3),
+              });
+              this.repairBook(
+                venueMarket.venue,
+                venueMarket.id,
+                "RECONCILIATION_MISMATCH",
               );
-              const shard = stream ? this.shardCaches.get(stream) : undefined;
-              const sid = shard?.subscriptions.get(venueMarket.id);
-              if (
-                stream &&
-                shard &&
-                venueMarket.venue === "kalshi" &&
-                sid !== undefined
-              ) {
-                shard.quarantine(venueMarket.id);
-                this.invalid("kalshi", "RECONCILIATION_MISMATCH", [
-                  venueMarket.id,
-                ]);
-                if (stream.requestSnapshot(venueMarket.id, sid)) {
-                  const key = "kalshi:" + venueMarket.id;
-                  this.snapshotTimers.set(
-                    key,
-                    setTimeout(() => {
-                      this.snapshotTimers.delete(key);
-                      stream.recover("SNAPSHOT_TIMEOUT");
-                    }, 10000),
-                  );
-                } else stream.recover("RECONCILIATION_MISMATCH");
-              } else stream?.recover("RECONCILIATION_MISMATCH");
             } else
               this.reconciliationSuspicious.delete(
                 venueMarket.venue + ":" + venueMarket.id,
               );
           }
         } catch {
-          if (!this.stopped)
-            this.streams
-              .find(
-                (s) =>
-                  s.options.venue === venueMarket.venue &&
-                  s.options.ids.includes(venueMarket.id),
-              )
-              ?.recover("RECONCILIATION_FAILED");
+          if (!this.stopped && !this.paused)
+            this.repairBook(
+              venueMarket.venue,
+              venueMarket.id,
+              "RECONCILIATION_FAILED",
+            );
         }
       }
     } finally {
       this.busyReconcile = false;
     }
+  }
+  private repairBook(venue: Venue, id: string, reason: string) {
+    const stream = this.marketStreams.get(venue + ":" + id),
+      shard = stream ? this.shardCaches.get(stream) : undefined;
+    if (!stream || !shard) return;
+    shard.quarantine(id, venue);
+    this.invalid(venue, reason, [id]);
+    if (stream.requestSnapshot(id, shard.subscriptions.get(id))) {
+      const key = venue + ":" + id;
+      const old = this.snapshotTimers.get(key);
+      if (old) clearTimeout(old);
+      this.snapshotTimers.set(
+        key,
+        setTimeout(() => {
+          this.snapshotTimers.delete(key);
+          stream.recover("SNAPSHOT_TIMEOUT");
+        }, 10000),
+      );
+    } else stream.recover(reason);
   }
   async stop() {
     this.pause();
@@ -576,6 +600,12 @@ export class Observer {
             discoveryActive: this.discovering,
           }),
           onInvalid: (reason) => {
+            for (const id of ids) {
+              const key = venue + ":" + id;
+              const timer = this.snapshotTimers.get(key);
+              if (timer) clearTimeout(timer);
+              this.snapshotTimers.delete(key);
+            }
             cache.reset(venue);
             if (!this.recorder.failed) this.invalid(venue, reason, ids);
           },
