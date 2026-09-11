@@ -15,6 +15,21 @@ const clauses = (rules: string, pattern: RegExp) =>
   rules.split(/(?<=[.!?])\s+|\n+/).filter((s) => pattern.test(s));
 function evidence(m: Market, registry: ReturnType<typeof catalogEntities>) {
   const i = m.identity ? registry.normalize(m.identity) : undefined;
+  const sources: string[] = [];
+  for (const line of m.rules.split(/\n+/)) {
+    try {
+      const value = JSON.parse(line);
+      if (Array.isArray(value))
+        for (const source of value)
+          if (
+            typeof source?.name === "string" &&
+            typeof source?.url === "string"
+          )
+            sources.push(`${source.name}: ${source.url}`);
+    } catch {
+      /* Ordinary rule prose is not structured source metadata. */
+    }
+  }
   return {
     title: m.title,
     yes: m.outcome,
@@ -26,11 +41,26 @@ function evidence(m: Market, registry: ReturnType<typeof catalogEntities>) {
     eventDate: i?.eventDate ?? null,
     administrativeCloseAt: m.closeAt,
     rules: m.rules,
-    settlementSource: clauses(
+    settlementSource: [
+      ...sources,
+      ...clauses(m.rules, /source|according to|as reported|determined by/i),
+    ],
+    outcomeLabelWarning:
+      m.outcome === m.opposite
+        ? "Venue metadata repeats the same YES/NO label. Verify the actual payout definitions in the full rules."
+        : null,
+    referencedDocuments: [
+      ...new Set(
+        m.rules.match(/https?:\/\/[^\s"<>]+\.pdf(?:\?[^\s"<>]*)?/gi) ?? [],
+      ),
+    ],
+    referencedDocumentStatus:
+      "Linked external documents are not extracted here; inspect them before approval.",
+    cancellation: clauses(
       m.rules,
-      /source|according to|as reported|determined by/i,
+      /void|cancel|postpon|abandon|reschedul|not started|fair market price/i,
     ),
-    cancellation: clauses(m.rules, /void|cancel|postpon|abandon|reschedul/i),
+    tie: clauses(m.rules, /\btie\b|\bdraw\b|\$0\.50/i),
     overtime: clauses(m.rules, /overtime|extra innings|regulation/i),
     retirement: clauses(m.rules, /retire|walkover|disqualif/i),
   };
@@ -107,6 +137,7 @@ export function reviewPackage(
   for (const key of [
     "settlementSource",
     "cancellation",
+    "tie",
     "overtime",
     "retirement",
   ] as const)
@@ -150,6 +181,7 @@ export function reviewPackage(
           "rules",
           "settlementSource",
           "cancellation",
+          "tie",
           "overtime",
           "retirement",
         ].includes(k),

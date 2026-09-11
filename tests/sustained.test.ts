@@ -424,3 +424,20 @@ test("Reconciliation does not treat older REST evidence as a newer stream contra
   assert.equal(olderRestSnapshot(now, null), false);
   assert.equal(olderRestSnapshot(now, NaN), false);
 });
+
+test("Review packages expose embedded settlement sources, ties, payout caveats and external-rule gaps", () => {
+  const m = mapping();
+  m.pair.a.outcome = "Team";
+  m.pair.a.opposite = "Team";
+  m.pair.a.rules =
+    'A tie resolves to $0.50. If the game is not started within 48 hours, resolve to a fair market price.\nhttps://example.com/terms.pdf\n[{"name":"League","url":"https://example.com"}]';
+  const r = reviewPackage(m);
+  assert.ok(r.kalshi.settlementSource.includes("League: https://example.com"));
+  assert.equal(r.kalshi.tie.length, 1);
+  assert.equal(r.kalshi.cancellation.length, 1);
+  assert.ok(r.kalshi.outcomeLabelWarning);
+  assert.deepEqual(r.kalshi.referencedDocuments, [
+    "https://example.com/terms.pdf",
+  ]);
+  assert.equal(r.verification, "UNVERIFIED");
+});
