@@ -1,0 +1,112 @@
+{
+  "at": "2026-09-11T23:32:29.162Z",
+  "markets": [
+    {
+      "id": "KXPRESNOMD-28-GN",
+      "venue": "kalshi",
+      "source": "https://external-api.kalshi.com/trade-api/v2/markets/KXPRESNOMD-28-GN",
+      "dates": {
+        "close_time": "2028-11-07T15:00:00Z",
+        "created_time": "2024-11-06T07:25:28.68557Z",
+        "expected_expiration_time": "2028-11-07T15:00:00Z",
+        "expiration_time": "2028-11-07T15:00:00Z",
+        "latest_expiration_time": "2028-11-07T15:00:00Z",
+        "open_time": "2024-11-06T15:00:00Z",
+        "updated_time": "2026-08-08T16:46:17.14604Z"
+      }
+    },
+    {
+      "id": "enwc-uspres-nom-dem-2028-gavnew",
+      "venue": "poly",
+      "source": "https://gateway.polymarket.us/v1/market/slug/enwc-uspres-nom-dem-2028-gavnew",
+      "dates": {
+        "endDate": "2028-08-24T23:00:00Z",
+        "startDate": "2026-08-14T00:48:30Z",
+        "createdAt": "2026-08-14T00:48:30Z",
+        "updatedAt": "2026-09-11T23:26:11Z",
+        "gameStartTime": "2026-08-13T16:00:00Z"
+      }
+    },
+    {
+      "id": "KXPRESNOMD-28-REMA",
+      "venue": "kalshi",
+      "source": "https://external-api.kalshi.com/trade-api/v2/markets/KXPRESNOMD-28-REMA",
+      "dates": {
+        "close_time": "2028-11-07T15:00:00Z",
+        "created_time": "2025-03-12T13:47:06.604846Z",
+        "expected_expiration_time": "2028-11-07T15:00:00Z",
+        "expiration_time": "2028-11-07T15:00:00Z",
+        "latest_expiration_time": "2028-11-07T15:00:00Z",
+        "open_time": "2025-03-12T14:00:30Z",
+        "updated_time": "2026-08-08T16:46:17.14604Z"
+      }
+    },
+    {
+      "id": "enwc-uspres-nom-dem-2028-rahema",
+      "venue": "poly",
+      "source": "https://gateway.polymarket.us/v1/market/slug/enwc-uspres-nom-dem-2028-rahema",
+      "dates": {
+        "endDate": "2028-08-24T23:00:00Z",
+        "startDate": "2026-08-14T00:48:15Z",
+        "createdAt": "2026-08-14T00:48:16Z",
+        "updatedAt": "2026-09-11T22:54:45Z",
+        "gameStartTime": "2026-08-13T16:00:00Z"
+      }
+    },
+    {
+      "id": "KXAOCRUN-28-27JAN01",
+      "venue": "kalshi",
+      "source": "https://external-api.kalshi.com/trade-api/v2/markets/KXAOCRUN-28-27JAN01",
+      "dates": {
+        "close_time": "2027-01-01T15:00:00Z",
+        "created_time": "2026-07-07T16:47:04.781135Z",
+        "expected_expiration_time": "2028-01-01T15:00:00Z",
+        "expiration_time": "2028-01-01T15:00:00Z",
+        "latest_expiration_time": "2028-01-01T15:00:00Z",
+        "occurrence_datetime": "2027-01-01T15:00:00Z",
+        "open_time": "2026-07-07T17:00:00Z",
+        "updated_time": "2026-07-27T16:33:21.308189Z"
+      }
+    },
+    {
+      "id": "cranc-uspres28-12-31-2026-aleoca",
+      "venue": "poly",
+      "source": "https://gateway.polymarket.us/v1/market/slug/cranc-uspres28-12-31-2026-aleoca",
+      "dates": {
+        "endDate": "2027-01-14T23:00:00Z",
+        "startDate": "2026-07-02T00:46:30Z",
+        "createdAt": "2026-07-02T00:46:30Z",
+        "updatedAt": "2026-09-11T23:09:49Z",
+        "gameStartTime": "2027-01-01T04:59:00Z"
+      }
+    },
+    {
+      "id": "KX1ALBUM-26DEC-YOU",
+      "venue": "kalshi",
+      "source": "https://external-api.kalshi.com/trade-api/v2/markets/KX1ALBUM-26DEC-YOU",
+      "dates": {
+        "close_time": "2026-12-27T04:59:00Z",
+        "created_time": "2025-12-04T21:07:19.5347Z",
+        "expected_expiration_time": "2026-12-27T15:00:00Z",
+        "expiration_time": "2026-12-27T15:00:00Z",
+        "latest_expiration_time": "2026-12-27T15:00:00Z",
+        "occurrence_datetime": "2026-08-31T14:00:00Z",
+        "open_time": "2026-01-01T15:00:00Z",
+        "updated_time": "2026-09-09T16:15:11.780815Z"
+      }
+    },
+    {
+      "id": "ccpc-bilbrd-1album-any2026-youaga",
+      "venue": "poly",
+      "source": "https://gateway.polymarket.us/v1/market/slug/ccpc-bilbrd-1album-any2026-youaga",
+      "dates": {
+        "endDate": "2027-01-09T23:00:00Z",
+        "startDate": "2026-07-22T16:52:19Z",
+        "createdAt": "2026-07-22T16:52:19Z",
+        "updatedAt": "2026-09-11T22:10:50Z",
+        "gameStartTime": "2026-12-27T04:59:00Z"
+      }
+    }
+  ],
+  "interpretation": "Public API dates are evidence, not definitive legal issuance or settlement timestamps. Start windows differ for AOC and artist contracts. Intervening event history and controlling rules remain unverified. No orders or fills."
+}
