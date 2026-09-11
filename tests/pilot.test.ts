@@ -43,6 +43,7 @@ function fixture() {
         reconciledAt: now,
         unresolvedOrders: 0,
         unmatchedContracts: 0,
+        occupiedMarkets: [],
       },
       poly: {
         venue: "poly",
@@ -52,6 +53,7 @@ function fixture() {
         reconciledAt: now,
         unresolvedOrders: 0,
         unmatchedContracts: 0,
+        occupiedMarkets: [],
       },
     },
   } as any;
@@ -349,4 +351,23 @@ test("Delayed arrival does not treat stale books or vanished buffered depth as f
     arrivalEvidence(x.mapping.pair, plan, arrivals).status,
     "ONE_LEG_ONLY",
   );
+});
+
+test("Pilot rejects an occupied selected market and missing position inspection", () => {
+  const x = fixture();
+  x.accounts.kalshi.occupiedMarkets = [x.mapping.pair.a.id];
+  assert.ok(pilotPreflight(x).reasons.includes("EXISTING_MARKET_POSITION"));
+  x.accounts.kalshi.occupiedMarkets = ["unrelated-manual-market"];
+  assert.equal(pilotPreflight(x).eligible, true);
+  delete x.accounts.kalshi.occupiedMarkets;
+  assert.ok(pilotPreflight(x).reasons.includes("INVALID_ACCOUNT_STATE"));
+});
+
+test("Paired exits reject expired metadata and unsupported minimum size", () => {
+  const x = exitFixture();
+  x.inventory[0].market.closeAt = new Date(now - 1).toISOString();
+  assert.ok(pilotExitQuote(x).reasons.includes("BOOK_NOT_EXECUTABLE"));
+  const y = exitFixture();
+  y.inventory[1].market.minQty = 2;
+  assert.ok(pilotExitQuote(y).reasons.includes("EXIT_SIZE_UNSUPPORTED"));
 });

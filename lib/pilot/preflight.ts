@@ -30,6 +30,7 @@ export type PilotAccount = {
   reconciledAt: number;
   unresolvedOrders: number;
   unmatchedContracts: number;
+  occupiedMarkets: string[];
 };
 export type PilotHealth = {
   streamHealthy: boolean;
@@ -122,6 +123,10 @@ export function pilotPreflight(input: {
     if (
       !acct ||
       acct.venue !== market.venue ||
+      !Array.isArray(acct.occupiedMarkets) ||
+      !acct.occupiedMarkets.every(
+        (id) => typeof id === "string" && id.length > 0,
+      ) ||
       ![
         acct.available,
         acct.cumulativeSpent,
@@ -139,6 +144,8 @@ export function pilotPreflight(input: {
       wall - acct.reconciledAt > p.maxAccountAgeMs
     )
       reasons.push("ACCOUNT_RECONCILIATION_REQUIRED");
+    if (acct.occupiedMarkets.includes(market.id))
+      reasons.push("EXISTING_MARKET_POSITION");
     if (acct.unresolvedOrders || acct.unmatchedContracts)
       reasons.push("UNRESOLVED_EXPOSURE");
     if (

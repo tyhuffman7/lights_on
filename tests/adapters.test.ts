@@ -7,3 +7,8 @@ test('Changing settlement rules invalidates a saved fingerprint',async()=>{const
 test('Unknown Kalshi fee types do not default to general fees',async()=>{const m=await normalizeKalshi({ticker:'ABC-X',status:'active',market_type:'binary',notional_value_dollars:'1.0000'},{fee_type:'new_schedule',fee_multiplier:1});assert.equal(m.feeRate,null);});
 test('A multi-year match is excluded from 30-day discovery suggestions',()=>{const base={venue:'kalshi',id:'a',title:'Will Taylor Swift win person of the year?',outcome:'Taylor Swift',closeAt:'2045-01-01T00:00:00Z',open:true};assert.equal(suggest({kalshi:[base],poly:[{...base,id:'b',venue:'poly'}],errors:[],counts:{kalshi:1,poly:1},at:Date.now()}).length,0);});
 test('Poly payout comes only from matching published settlement, never last price',async()=>{const m={slug:'fixture',closed:true,status:'MARKET_STATUS_RESOLVED',marketSides:[{long:true,price:'1'}]};assert.equal((await normalizePoly(m)).settlement,null);assert.equal((await normalizePoly(m,{slug:'fixture',settlement:0})).settlement,0);assert.equal((await normalizePoly(m,{slug:'fixture',settlement:.5})).settlement,5000);assert.equal((await normalizePoly(m,{slug:'other',settlement:1})).settlement,null);assert.equal((await normalizePoly({...m,closed:false},{slug:'fixture',settlement:1})).settlement,null);assert.throws(()=>price('1.1'));});
+
+test('Missing or invalid PM-US minimum quantity never defaults to one contract',async()=>{
+ for(const minimumTradeQty of [undefined,null,0,-1,NaN,true,'1'])assert.equal((await normalizePoly({slug:'fixture',minimumTradeQty})).minQty,0);
+ assert.equal((await normalizePoly({slug:'fixture',minimumTradeQty:0.01})).minQty,0.01);
+});

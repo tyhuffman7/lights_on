@@ -1,0 +1,179 @@
+{
+  "startedAt": 1789165712171,
+  "endedAt": 1789166312356,
+  "pairCount": 22,
+  "scope": {
+    "Economics": 8,
+    "Entertainment": 14
+  },
+  "telemetry": {
+    "at": 1789166312316,
+    "host": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M1 Pro",
+      "runtime": "v25.8.1"
+    },
+    "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+    "interval": {
+      "startMono": 590427.354792,
+      "endMono": 600331.450875,
+      "durationMs": 9904.096082999953
+    },
+    "intervalRates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0,
+      "messages": 5.452289592857362,
+      "bookUpdates": 5.452289592857362,
+      "reconciliationRequests": 0.5048416289682742,
+      "evaluations": 10.904579185714724,
+      "STRICT_EXECUTION_FRESH": 5.452289592857362,
+      "EXCHANGE_TIMESTAMP_OLD": 0,
+      "polyRestRequests": 0.20193665158730967,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 5.452289592857362,
+      "strictBookAgeOnlyRejectedEvaluations": 5.452289592857362,
+      "kalshiRestRequests": 0.3029049773809645,
+      "reconciliationOlderRestSnapshots": 0.10096832579365483
+    },
+    "uptimeMs": 600096.959791,
+    "counters": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 2,
+      "messages": 1463,
+      "bookUpdates": 1462,
+      "reconciliationRequests": 299,
+      "evaluations": 2892,
+      "STRICT_EXECUTION_FRESH": 1632,
+      "EXCHANGE_TIMESTAMP_OLD": 21,
+      "polyRestRequests": 338,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 1239,
+      "strictBookAgeOnlyRejectedEvaluations": 841,
+      "kalshiRestRequests": 527,
+      "reconciliationOlderRestSnapshots": 84
+    },
+    "rates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0.003332794754861871,
+      "messages": 2.4379393631814588,
+      "bookUpdates": 2.4362729658040276,
+      "reconciliationRequests": 0.4982528158518497,
+      "evaluations": 4.819221215530265,
+      "STRICT_EXECUTION_FRESH": 2.719560519967287,
+      "EXCHANGE_TIMESTAMP_OLD": 0.03499434492604964,
+      "polyRestRequests": 0.5632423135716562,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 2.064666350636929,
+      "strictBookAgeOnlyRejectedEvaluations": 1.4014401944194168,
+      "kalshiRestRequests": 0.878191417906103,
+      "reconciliationOlderRestSnapshots": 0.13997737970419857
+    },
+    "latencyMs": {
+      "persistenceAck": {
+        "count": 7964,
+        "p50": 0.34745800006203353,
+        "p95": 2.797374999965541,
+        "p99": 12.37504100000001
+      },
+      "persistenceWrite": {
+        "count": 7964,
+        "p50": 0.08266600000206381,
+        "p95": 1.0214999999152496,
+        "p99": 3.5217919999849983
+      },
+      "capacityWorkerRoundTrip": {
+        "count": 11,
+        "p50": 120.69087500002934,
+        "p95": 139.41162500000792,
+        "p99": 139.41162500000792
+      },
+      "polyExchangeToReceive": {
+        "count": 454,
+        "p50": 5,
+        "p95": 153,
+        "p99": 253436
+      },
+      "processingLag": {
+        "count": 1462,
+        "p50": 0.19558300002245232,
+        "p95": 0.44516699999803677,
+        "p99": 3.2166249999972933
+      },
+      "evaluation": {
+        "count": 1462,
+        "p50": 1.4142080000019632,
+        "p95": 4.307624999957625,
+        "p99": 5.728875000029802
+      },
+      "processing": {
+        "count": 1462,
+        "p50": 1.6315409999806434,
+        "p95": 4.858000000007451,
+        "p99": 6.200583999976516
+      },
+      "validBookProcessing": {
+        "count": 1462,
+        "p50": 1.6315409999806434,
+        "p95": 4.858000000007451,
+        "p99": 6.200583999976516
+      },
+      "receiveToPersistenceAck": {
+        "count": 1462,
+        "p50": 2.4122080000233836,
+        "p95": 6.455582999973558,
+        "p99": 13.092499999999973
+      },
+      "polyRestRoundTrip": {
+        "count": 338,
+        "p50": 191.40274999989197,
+        "p95": 337.9797499999986,
+        "p99": 468.88658299998497
+      },
+      "kalshiExchangeToReceive": {
+        "count": 987,
+        "p50": -58,
+        "p95": 9,
+        "p99": 30
+      },
+      "kalshiRestRoundTrip": {
+        "count": 527,
+        "p50": 166.32595899999433,
+        "p95": 233.1662500000093,
+        "p99": 256.26391699997475
+      }
+    },
+    "eventLoopMs": {
+      "p50": 12.050431,
+      "p95": 14.229503,
+      "p99": 16.138239,
+      "max": 88.604671
+    },
+    "cpuPercent": 2.4525954947557014,
+    "memory": {
+      "rss": 119898112,
+      "heapTotal": 34062336,
+      "heapUsed": 23649952,
+      "external": 11020196,
+      "arrayBuffers": 701058
+    },
+    "sampleLimit": 10000
+  },
+  "storage": {
+    "processed": 1462,
+    "persisted": 460,
+    "ringRecords": 76,
+    "ringBytes": 112725,
+    "logicalBytes": 3379200,
+    "bytesPerHour": 19062654.056380313,
+    "projectedGBPerDay": 0.4575036973531275,
+    "evidencePerSecond": 0.7726115966289736
+  },
+  "persistenceBeforeStop": {
+    "queueDepth": 0,
+    "queueBytes": 0,
+    "lastAckAt": 1789166312315,
+    "failed": false
+  },
+  "interpretation": "Ten-minute corrected shortlist. No overlapping builds, full tests, catalog refresh or historical audit. Light code edits and a few read-only account probes occurred; other host activity was not instrumented. No orders or fills; successful observer stop/drain."
+}

@@ -52,7 +52,7 @@ export function feeSchedule(m: Market): FeeSchedule | null {
       rounding: "ceil",
       aggregation: "level",
       source:
-        "supported Kalshi series quadratic metadata; per displayed level estimate",
+        "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
     };
   if (m.venue === "poly" && m.feeRounding === "even")
     return {
@@ -84,6 +84,8 @@ export function feesForLevels(
 }
 // Visible L2 does not disclose resting-order fill fragmentation. Keep fee bounds
 // with every research quote; do not claim these are exact collected commissions.
+// Kalshi upper is conditional on whole-contract fragmentation and does not bound
+// fractional-fill balance rounding or identify the account precision class.
 export function feeBounds(levels: Level[], schedule: FeeSchedule) {
   const estimated = feesForLevels(levels, schedule);
   const upper =

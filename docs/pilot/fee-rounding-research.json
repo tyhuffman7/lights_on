@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-11T22:54:54.741Z",
+  "source": "https://docs.kalshi.com/getting_started/fee_rounding",
+  "mode": "PUBLISHED_MECHANICS_SIMULATION",
+  "scenario": "One contract bought at $0.50 as 100 fills of 0.01 contracts, 0.07 quadratic coefficient. Each exact model fee is $0.000175.",
+  "centAligned": {
+    "feeUSD": 0.5,
+    "balanceChangeUSD": -1,
+    "unrebatedRoundingUSD": 0.4825
+  },
+  "centicentAligned": {
+    "feeUSD": 0.0175,
+    "balanceChangeUSD": -0.5175,
+    "unrebatedRoundingUSD": 0
+  },
+  "venueValidated": false,
+  "accountPrecisionEstablished": false,
+  "interpretation": "Applying the currently published per-fill nonnegative-fee rebate cap exposes a fractional-fragmentation risk not covered by the existing whole-contract fee estimate. This is an adversarial simulation, not a claim that the exchanges actually produced these fills or fees. Clarify actual account precision and cap handling before enabling any live fee-validation gate."
+}

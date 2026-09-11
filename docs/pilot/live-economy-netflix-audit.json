@@ -1,0 +1,31 @@
+{
+  "timingSummary": {},
+  "timingInterpretation": "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
+  "at": "2026-09-11T21:46:02.699Z",
+  "policy": {
+    "capitalPerVenue": 1000000,
+    "totalLossLimit": 2000000,
+    "contractsPerPair": 1,
+    "maxPairDebit": 20000,
+    "maxCommitted": 100000,
+    "reservePerVenue": 100000,
+    "maxDepthFraction": 0.25,
+    "maxBookAgeMs": 2000,
+    "maxMetadataAgeMs": 60000,
+    "maxAccountAgeMs": 5000,
+    "maxPlanAgeMs": 250,
+    "minimumNetProfit": 100,
+    "uncertaintyReserve": 100
+  },
+  "opportunities": 0,
+  "statesAudited": 0,
+  "opportunitiesWithPositiveStandaloneOneContractModel": 0,
+  "freshPositiveStandaloneModels": 0,
+  "positiveEventsStillMatching": 0,
+  "remainingReviewPairs": [],
+  "eligibleStates": 0,
+  "blockersByOpportunity": {},
+  "freshPositiveModelExamples": [],
+  "topStandaloneModels": [],
+  "interpretation": "Historical standalone scenarios using assumed $100 cash per venue, not actual account balances or fills. Fees are model estimates, live fee bounds and execution protocol are unvalidated. Positive model values are not earnings, independent opportunities, or approval; no profit sum or monthly extrapolation is valid. Verification is frozen as observed; every live launch blocker remains enforced."
+}

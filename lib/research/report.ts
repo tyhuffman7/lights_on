@@ -180,6 +180,9 @@ export function researchReport(s: ResearchStore, sessionId: string) {
         bBook &&
         af &&
         bf &&
+        [meta.pair.a, meta.pair.b].every(
+          (m) => Number.isFinite(m.minQty) && m.minQty > 0,
+        ) &&
         start.e.maxQuantity > 0 &&
         start.e.maxQuantity <= 1000000
           ? sizes(

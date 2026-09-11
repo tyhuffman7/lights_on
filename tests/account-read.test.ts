@@ -70,3 +70,41 @@ test("Kalshi query parameters are excluded from signature and private error bodi
     (e) => !String(e).includes("secret"),
   );
 });
+
+test("Single-order reconciliation reads reject paths and remain GET-only", async () => {
+  const { readOrder } = await import("../lib/pilot/account-read.ts");
+  const keys = generateKeyPairSync("ed25519");
+  const raw = keys.privateKey
+    .export({ type: "pkcs8", format: "der" })
+    .subarray(-32);
+  const options = {
+    at: 123,
+    env: {
+      POLYMARKET_KEY_ID: "fixture",
+      POLYMARKET_SECRET_KEY: raw.toString("base64"),
+    },
+    fetch: async (url: any, init: any) => {
+      assert.equal(url, "https://api.polymarket.us/v1/order/owned-order");
+      assert.equal(init.method, "GET");
+      assert.equal(init.body, undefined);
+      assert.ok(
+        verify(
+          null,
+          Buffer.from("123GET/v1/order/owned-order"),
+          keys.publicKey,
+          Buffer.from(init.headers["X-PM-Signature"], "base64"),
+        ),
+      );
+      return new Response(JSON.stringify({ order: { id: "owned-order" } }));
+    },
+  };
+  assert.equal((await readOrder("poly", "owned-order", options)).ok, true);
+  for (const id of [
+    "../balances",
+    "https://example.com",
+    "a?token=x",
+    "a/b",
+    "",
+  ])
+    await assert.rejects(readOrder("poly", id, options));
+});

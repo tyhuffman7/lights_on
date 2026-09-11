@@ -1,0 +1,99 @@
+{
+  "at": "2026-09-11T22:23:38.814Z",
+  "scenario": "100/100ms hypothetical entries",
+  "results": [
+    {
+      "id": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx:kalshi_no+pm_us_yes",
+      "entryAt": 1789107335765,
+      "entryDebitUSD": 0.98,
+      "checkedBookUpdates": 1899,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu:kalshi_yes+pm_us_no",
+      "entryAt": 1789107635122,
+      "entryDebitUSD": 0.98,
+      "checkedBookUpdates": 2272,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNCAAFUNDEFEATED-26-IND::aachc-cfb-undefeated-2026-11-28-ind:kalshi_no+pm_us_yes",
+      "entryAt": 1789107834045,
+      "entryDebitUSD": 0.97,
+      "checkedBookUpdates": 1787,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNCAAFSECQ-26-UGA::aqc-cfb-sec-2026-12-05-champq-ga:kalshi_no+pm_us_yes",
+      "entryAt": 1789107887558,
+      "entryDebitUSD": 0.94,
+      "checkedBookUpdates": 1200,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNCAAFACCQUAL-26-SMU::aqc-cfb-acc-2026-12-05-champq-smu:kalshi_yes+pm_us_no",
+      "entryAt": 1789108544232,
+      "entryDebitUSD": 0.97,
+      "checkedBookUpdates": 1192,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNFLLASTTOLOSE-27-KC::aachc-nfl-2027-01-10-lastundefeated-kc:kalshi_yes+pm_us_no",
+      "entryAt": 1789109220489,
+      "entryDebitUSD": 0.98,
+      "checkedBookUpdates": 668,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNFLLASTTOLOSE-27-DAL::aachc-nfl-2027-01-10-lastundefeated-dal:kalshi_yes+pm_us_no",
+      "entryAt": 1789111939794,
+      "entryDebitUSD": 0.95,
+      "checkedBookUpdates": 530,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNCAAFMWCQUAL-26-UNLV::aqc-cfb-mwc-2026-12-04-champq-unlv:kalshi_no+pm_us_yes",
+      "entryAt": 1789112634882,
+      "entryDebitUSD": 0.96,
+      "checkedBookUpdates": 1952,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent:kalshi_no+pm_us_yes",
+      "entryAt": 1789112635382,
+      "entryDebitUSD": 0.94,
+      "checkedBookUpdates": 718,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    },
+    {
+      "id": "KXNCAAFAACQUAL-26-ECU::aqc-cfb-aac-2026-12-05-champq-ecar:kalshi_yes+pm_us_no",
+      "entryAt": 1789123019936,
+      "entryDebitUSD": 0.96,
+      "checkedBookUpdates": 274,
+      "lastObserved": 1789125894913,
+      "status": "NO_POSITIVE_BID_QUOTE_OBSERVED",
+      "exit": null
+    }
+  ],
+  "confirmedFills": 0,
+  "realizedProfit": 0,
+  "interpretation": "Entries are assumed from displayed liquidity, not fills. Subsequent bid quotes require fresh paired books, a 75% depth haircut, modeled exit fees and reserve. These are isolated quotes, with no sell-arrival or fill evidence; unobserved intervals do not prove absence of exits. No capital release or monthly income is inferred."
+}

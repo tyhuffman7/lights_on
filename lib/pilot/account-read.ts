@@ -3,28 +3,34 @@ import { readFileSync } from "node:fs";
 import type { Venue } from "../arb/types.ts";
 const endpoints = {
   kalshi: {
-    balance: "https://external-api.kalshi.com/trade-api/v2/portfolio/balance?exchange_index=0&subaccount=0",
+    fills:
+      "https://external-api.kalshi.com/trade-api/v2/portfolio/fills?limit=100",
+    balance:
+      "https://external-api.kalshi.com/trade-api/v2/portfolio/balance?exchange_index=0&subaccount=0",
     orders:
       "https://external-api.kalshi.com/trade-api/v2/portfolio/orders?status=resting&limit=1000",
     positions:
       "https://external-api.kalshi.com/trade-api/v2/portfolio/positions?limit=1000",
   },
   poly: {
+    fills:
+      "https://api.polymarket.us/v1/portfolio/activities?types=ACTIVITY_TYPE_TRADE&limit=100",
     balance: "https://api.polymarket.us/v1/account/balances",
     orders: "https://api.polymarket.us/v1/orders/open",
     positions: "https://api.polymarket.us/v1/portfolio/positions",
   },
 } as const;
 type Operation = keyof typeof endpoints.kalshi;
+type ReadOptions = {
+  env?: Record<string, string | undefined>;
+  fetch?: typeof fetch;
+  at?: number;
+};
 // Deliberately fixed GET destinations. Cannot submit, modify, or cancel orders.
 export async function readAccount(
   venue: Venue,
   operation: Operation,
-  options: {
-    env?: Record<string, string | undefined>;
-    fetch?: typeof fetch;
-    at?: number;
-  } = {},
+  options: ReadOptions = {},
 ) {
   if (
     !Object.hasOwn(endpoints, venue) ||
@@ -33,6 +39,27 @@ export async function readAccount(
     throw Error("Unsupported account read");
   const url = endpoints[venue]?.[operation];
   if (!url) throw Error("Unsupported account read");
+  return signedGet(venue, url, options);
+}
+export async function readOrder(
+  venue: Venue,
+  orderId: string,
+  options: ReadOptions = {},
+) {
+  if (
+    !["kalshi", "poly"].includes(venue) ||
+    typeof orderId !== "string" ||
+    !/^[a-zA-Z0-9_-]{1,128}$/.test(orderId)
+  )
+    throw Error("Invalid order read identity");
+  const base =
+    venue === "kalshi"
+      ? "https://external-api.kalshi.com/trade-api/v2/portfolio/orders/"
+      : "https://api.polymarket.us/v1/order/";
+  return signedGet(venue, base + orderId, options);
+}
+// Private helper: only the fixed account/order GET constructors above can call it.
+async function signedGet(venue: Venue, url: string, options: ReadOptions) {
   const env = options.env ?? process.env,
     timestamp = String(options.at ?? Date.now());
   const path = new URL(url).pathname;

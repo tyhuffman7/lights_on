@@ -1,0 +1,57 @@
+{
+  "checks": [
+    {
+      "at": 1789163256954,
+      "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "side": "yes",
+      "limitPrice": 8100,
+      "mode": "NONBINDING_PREVIEW_ONLY",
+      "status": 200,
+      "roundTripMs": 360.0394160000001,
+      "submittedOrders": 0,
+      "preview": {
+        "state": "ORDER_STATE_PENDING_NEW",
+        "quantity": 1,
+        "cumQuantity": 0,
+        "leavesQuantity": 1,
+        "price": {
+          "value": "0.81",
+          "currency": "USD"
+        },
+        "intent": "ORDER_INTENT_BUY_LONG",
+        "commissionsBasisPoints": "0",
+        "commissionNotionalTotalCollected": {
+          "value": "0.0000",
+          "currency": "USD"
+        }
+      }
+    },
+    {
+      "at": 1789163257127,
+      "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "side": "no",
+      "limitPrice": 1900,
+      "mode": "NONBINDING_PREVIEW_ONLY",
+      "status": 200,
+      "roundTripMs": 170.8821250000001,
+      "submittedOrders": 0,
+      "preview": {
+        "state": "ORDER_STATE_PENDING_NEW",
+        "quantity": 1,
+        "cumQuantity": 0,
+        "leavesQuantity": 1,
+        "price": {
+          "value": "0.81",
+          "currency": "USD"
+        },
+        "intent": "ORDER_INTENT_BUY_SHORT",
+        "commissionsBasisPoints": "0",
+        "commissionNotionalTotalCollected": {
+          "value": "0.0000",
+          "currency": "USD"
+        }
+      }
+    }
+  ],
+  "interpretation": "Nonbinding previews only. Pending and zero cumulative quantity do not validate fills or actual fee rates. No actual order was submitted."
+}

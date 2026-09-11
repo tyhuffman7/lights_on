@@ -1,0 +1,2595 @@
+{
+  "timingSummary": {},
+  "capitalScenarios": {},
+  "timingInterpretation": "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
+  "at": "2026-09-11T22:22:53.745Z",
+  "policy": {
+    "capitalPerVenue": 1000000,
+    "totalLossLimit": 2000000,
+    "contractsPerPair": 1,
+    "maxPairDebit": 20000,
+    "maxCommitted": 100000,
+    "reservePerVenue": 100000,
+    "maxDepthFraction": 0.25,
+    "maxBookAgeMs": 2000,
+    "maxMetadataAgeMs": 60000,
+    "maxAccountAgeMs": 5000,
+    "maxPlanAgeMs": 250,
+    "minimumNetProfit": 100,
+    "uncertaintyReserve": 100
+  },
+  "opportunities": 23,
+  "statesAudited": 256,
+  "opportunitiesWithPositiveStandaloneOneContractModel": 3,
+  "freshPositiveStandaloneModels": 3,
+  "positiveEventsStillMatching": 0,
+  "remainingReviewPairs": [],
+  "eligibleStates": 0,
+  "blockersByOpportunity": {
+    "RULE_EQUIVALENCE_UNVERIFIED": 23,
+    "APPROVAL_EVIDENCE_MISSING": 23,
+    "EXECUTION_PROTOCOL_UNVALIDATED": 23,
+    "LIVE_FEE_BOUND_UNVALIDATED": 23,
+    "NO_MODELED_NET_EDGE": 20,
+    "BOOK_NOT_STRICTLY_FRESH": 23
+  },
+  "freshPositiveModelExamples": [
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 44,
+        "limitLegs": [
+          {
+            "venue": "kalshi",
+            "marketId": "KXMUSKNW-26DEC31-T800",
+            "side": "yes",
+            "quantity": 1,
+            "limitPrice": 6000,
+            "modeledDebit": 6200,
+            "feeUpper": 200
+          },
+          {
+            "venue": "poly",
+            "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "side": "no",
+            "quantity": 1,
+            "limitPrice": 3500,
+            "modeledDebit": 3600,
+            "feeUpper": 100
+          }
+        ],
+        "at": 1789164661938,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164661938,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "a": {
+            "id": "KXMUSKNW-26DEC31-T800",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "line": 800,
+              "outcome": "above 800 billion",
+              "entities": [],
+              "numbers": [
+                "31",
+                "2026",
+                "800",
+                "800"
+              ],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+            "outcome": "Above $800 billion",
+            "opposite": "Above $800 billion",
+            "category": "Financials",
+            "rules": "If Forbes reports that Elon Musk's net worth on December 31, 2026 at 5:00 PM ET is above $800 billion, then the market resolves to Yes.\n\nThis market will be determined by the net worth value displayed for Elon Musk on the Forbes Real-Time Billionaires page at 5:00 PM ET on December 31, 2026.\n\nThe relevant value is the dollar-denominated net worth shown by Forbes at that time, regardless of any later updates, corrections, or revisions.\n\nhttps://assets.kalshi.com/contract_terms/ECONSTAT.pdf\n\n[{\"name\":\"Bureau of Labor Statistics- Employment Situation\",\"url\":\"https://www.bls.gov/news.release/empsit.nr0.htm\"},{\"name\":\"Bureau of Labor Statistics- Consumer Price Index\",\"url\":\"https://www.bls.gov/news.release/cpi.nr0.htm\"}]",
+            "url": "https://kalshi.com/markets/kxmusknw/kxmusknw-26dec31",
+            "closeAt": "2027-01-07T23:30:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "settlement": null,
+            "series": "KXMUSKNW"
+          },
+          "b": {
+            "id": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "elonmusk",
+              "eventAt": "2026-07-23T21:30:00.000Z",
+              "eventDate": "2026-07-23",
+              "participants": [],
+              "marketType": "future",
+              "line": 800,
+              "entities": [],
+              "numbers": [
+                "800",
+                "31"
+              ],
+              "aliases": [],
+              "eventKey": "elon musk net worth on december 31"
+            },
+            "title": "Above $800 Billion · Elon Musk Net Worth on December 31?",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "finance",
+            "rules": "This market will settle to Yes if Elon Musk's net worth, according to the Bloomberg Billionaires Index, is above $800 billion on December 31, 2026. Outcome sourced from Bloomberg Billionaires Index.\n\nThe Bloomberg Billionaires Index figures are updated after the close of every trading day in New York. This market settles based on the net-worth figure published by the Bloomberg Billionaires Index for December 31, 2026 or, if December 31, 2026 is not a trading day, the most recent figure published before December 31, 2026.",
+            "url": "https://polymarket.us/event/pnwpc-elonmusk-2026-12-31-gt800b",
+            "closeAt": "2027-01-14T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 0.01,
+            "hash": "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "ruleHashes": [
+            "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30"
+          ],
+          "createdAt": 1789164661938,
+          "expiresAt": 1789164662188,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXMUSKNW-26DEC31-T800",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 6000,
+              "modeledDebit": 6200,
+              "feeUpper": 200
+            },
+            {
+              "venue": "poly",
+              "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 3500,
+              "modeledDebit": 3600,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXMUSKNW-26DEC31-T800",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6000,
+          "modeledDebit": 6200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3500,
+          "modeledDebit": 3600,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 102,
+        "limitLegs": [
+          {
+            "venue": "kalshi",
+            "marketId": "KXMUSKNW-26DEC31-T800",
+            "side": "yes",
+            "quantity": 1,
+            "limitPrice": 6000,
+            "modeledDebit": 6200,
+            "feeUpper": 200
+          },
+          {
+            "venue": "poly",
+            "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "side": "no",
+            "quantity": 1,
+            "limitPrice": 3500,
+            "modeledDebit": 3600,
+            "feeUpper": 100
+          }
+        ],
+        "at": 1789164807573,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164807573,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "a": {
+            "id": "KXMUSKNW-26DEC31-T800",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "line": 800,
+              "outcome": "above 800 billion",
+              "entities": [],
+              "numbers": [
+                "31",
+                "2026",
+                "800",
+                "800"
+              ],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+            "outcome": "Above $800 billion",
+            "opposite": "Above $800 billion",
+            "category": "Financials",
+            "rules": "If Forbes reports that Elon Musk's net worth on December 31, 2026 at 5:00 PM ET is above $800 billion, then the market resolves to Yes.\n\nThis market will be determined by the net worth value displayed for Elon Musk on the Forbes Real-Time Billionaires page at 5:00 PM ET on December 31, 2026.\n\nThe relevant value is the dollar-denominated net worth shown by Forbes at that time, regardless of any later updates, corrections, or revisions.\n\nhttps://assets.kalshi.com/contract_terms/ECONSTAT.pdf\n\n[{\"name\":\"Bureau of Labor Statistics- Employment Situation\",\"url\":\"https://www.bls.gov/news.release/empsit.nr0.htm\"},{\"name\":\"Bureau of Labor Statistics- Consumer Price Index\",\"url\":\"https://www.bls.gov/news.release/cpi.nr0.htm\"}]",
+            "url": "https://kalshi.com/markets/kxmusknw/kxmusknw-26dec31",
+            "closeAt": "2027-01-07T23:30:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "settlement": null,
+            "series": "KXMUSKNW"
+          },
+          "b": {
+            "id": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "elonmusk",
+              "eventAt": "2026-07-23T21:30:00.000Z",
+              "eventDate": "2026-07-23",
+              "participants": [],
+              "marketType": "future",
+              "line": 800,
+              "entities": [],
+              "numbers": [
+                "800",
+                "31"
+              ],
+              "aliases": [],
+              "eventKey": "elon musk net worth on december 31"
+            },
+            "title": "Above $800 Billion · Elon Musk Net Worth on December 31?",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "finance",
+            "rules": "This market will settle to Yes if Elon Musk's net worth, according to the Bloomberg Billionaires Index, is above $800 billion on December 31, 2026. Outcome sourced from Bloomberg Billionaires Index.\n\nThe Bloomberg Billionaires Index figures are updated after the close of every trading day in New York. This market settles based on the net-worth figure published by the Bloomberg Billionaires Index for December 31, 2026 or, if December 31, 2026 is not a trading day, the most recent figure published before December 31, 2026.",
+            "url": "https://polymarket.us/event/pnwpc-elonmusk-2026-12-31-gt800b",
+            "closeAt": "2027-01-14T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 0.01,
+            "hash": "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "ruleHashes": [
+            "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30"
+          ],
+          "createdAt": 1789164807573,
+          "expiresAt": 1789164807823,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXMUSKNW-26DEC31-T800",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 6000,
+              "modeledDebit": 6200,
+              "feeUpper": 200
+            },
+            {
+              "venue": "poly",
+              "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 3500,
+              "modeledDebit": 3600,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXMUSKNW-26DEC31-T800",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6000,
+          "modeledDebit": 6200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3500,
+          "modeledDebit": 3600,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 182,
+        "limitLegs": [
+          {
+            "venue": "kalshi",
+            "marketId": "KXMUSKNW-26DEC31-T800",
+            "side": "yes",
+            "quantity": 1,
+            "limitPrice": 6000,
+            "modeledDebit": 6200,
+            "feeUpper": 200
+          },
+          {
+            "venue": "poly",
+            "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "side": "no",
+            "quantity": 1,
+            "limitPrice": 3500,
+            "modeledDebit": 3600,
+            "feeUpper": 100
+          }
+        ],
+        "at": 1789165021622,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165021622,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "a": {
+            "id": "KXMUSKNW-26DEC31-T800",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "line": 800,
+              "outcome": "above 800 billion",
+              "entities": [],
+              "numbers": [
+                "31",
+                "2026",
+                "800",
+                "800"
+              ],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+            "outcome": "Above $800 billion",
+            "opposite": "Above $800 billion",
+            "category": "Financials",
+            "rules": "If Forbes reports that Elon Musk's net worth on December 31, 2026 at 5:00 PM ET is above $800 billion, then the market resolves to Yes.\n\nThis market will be determined by the net worth value displayed for Elon Musk on the Forbes Real-Time Billionaires page at 5:00 PM ET on December 31, 2026.\n\nThe relevant value is the dollar-denominated net worth shown by Forbes at that time, regardless of any later updates, corrections, or revisions.\n\nhttps://assets.kalshi.com/contract_terms/ECONSTAT.pdf\n\n[{\"name\":\"Bureau of Labor Statistics- Employment Situation\",\"url\":\"https://www.bls.gov/news.release/empsit.nr0.htm\"},{\"name\":\"Bureau of Labor Statistics- Consumer Price Index\",\"url\":\"https://www.bls.gov/news.release/cpi.nr0.htm\"}]",
+            "url": "https://kalshi.com/markets/kxmusknw/kxmusknw-26dec31",
+            "closeAt": "2027-01-07T23:30:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "settlement": null,
+            "series": "KXMUSKNW"
+          },
+          "b": {
+            "id": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "elonmusk",
+              "eventAt": "2026-07-23T21:30:00.000Z",
+              "eventDate": "2026-07-23",
+              "participants": [],
+              "marketType": "future",
+              "line": 800,
+              "entities": [],
+              "numbers": [
+                "800",
+                "31"
+              ],
+              "aliases": [],
+              "eventKey": "elon musk net worth on december 31"
+            },
+            "title": "Above $800 Billion · Elon Musk Net Worth on December 31?",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "finance",
+            "rules": "This market will settle to Yes if Elon Musk's net worth, according to the Bloomberg Billionaires Index, is above $800 billion on December 31, 2026. Outcome sourced from Bloomberg Billionaires Index.\n\nThe Bloomberg Billionaires Index figures are updated after the close of every trading day in New York. This market settles based on the net-worth figure published by the Bloomberg Billionaires Index for December 31, 2026 or, if December 31, 2026 is not a trading day, the most recent figure published before December 31, 2026.",
+            "url": "https://polymarket.us/event/pnwpc-elonmusk-2026-12-31-gt800b",
+            "closeAt": "2027-01-14T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 0.01,
+            "hash": "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "ruleHashes": [
+            "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30"
+          ],
+          "createdAt": 1789165021622,
+          "expiresAt": 1789165021872,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXMUSKNW-26DEC31-T800",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 6000,
+              "modeledDebit": 6200,
+              "feeUpper": 200
+            },
+            {
+              "venue": "poly",
+              "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 3500,
+              "modeledDebit": 3600,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXMUSKNW-26DEC31-T800",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6000,
+          "modeledDebit": 6200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3500,
+          "modeledDebit": 3600,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "topStandaloneModels": [
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 44,
+        "limitLegs": [
+          {
+            "venue": "kalshi",
+            "marketId": "KXMUSKNW-26DEC31-T800",
+            "side": "yes",
+            "quantity": 1,
+            "limitPrice": 6000,
+            "modeledDebit": 6200,
+            "feeUpper": 200
+          },
+          {
+            "venue": "poly",
+            "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "side": "no",
+            "quantity": 1,
+            "limitPrice": 3500,
+            "modeledDebit": 3600,
+            "feeUpper": 100
+          }
+        ],
+        "at": 1789164661938,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164661938,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "a": {
+            "id": "KXMUSKNW-26DEC31-T800",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "line": 800,
+              "outcome": "above 800 billion",
+              "entities": [],
+              "numbers": [
+                "31",
+                "2026",
+                "800",
+                "800"
+              ],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+            "outcome": "Above $800 billion",
+            "opposite": "Above $800 billion",
+            "category": "Financials",
+            "rules": "If Forbes reports that Elon Musk's net worth on December 31, 2026 at 5:00 PM ET is above $800 billion, then the market resolves to Yes.\n\nThis market will be determined by the net worth value displayed for Elon Musk on the Forbes Real-Time Billionaires page at 5:00 PM ET on December 31, 2026.\n\nThe relevant value is the dollar-denominated net worth shown by Forbes at that time, regardless of any later updates, corrections, or revisions.\n\nhttps://assets.kalshi.com/contract_terms/ECONSTAT.pdf\n\n[{\"name\":\"Bureau of Labor Statistics- Employment Situation\",\"url\":\"https://www.bls.gov/news.release/empsit.nr0.htm\"},{\"name\":\"Bureau of Labor Statistics- Consumer Price Index\",\"url\":\"https://www.bls.gov/news.release/cpi.nr0.htm\"}]",
+            "url": "https://kalshi.com/markets/kxmusknw/kxmusknw-26dec31",
+            "closeAt": "2027-01-07T23:30:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "settlement": null,
+            "series": "KXMUSKNW"
+          },
+          "b": {
+            "id": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "elonmusk",
+              "eventAt": "2026-07-23T21:30:00.000Z",
+              "eventDate": "2026-07-23",
+              "participants": [],
+              "marketType": "future",
+              "line": 800,
+              "entities": [],
+              "numbers": [
+                "800",
+                "31"
+              ],
+              "aliases": [],
+              "eventKey": "elon musk net worth on december 31"
+            },
+            "title": "Above $800 Billion · Elon Musk Net Worth on December 31?",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "finance",
+            "rules": "This market will settle to Yes if Elon Musk's net worth, according to the Bloomberg Billionaires Index, is above $800 billion on December 31, 2026. Outcome sourced from Bloomberg Billionaires Index.\n\nThe Bloomberg Billionaires Index figures are updated after the close of every trading day in New York. This market settles based on the net-worth figure published by the Bloomberg Billionaires Index for December 31, 2026 or, if December 31, 2026 is not a trading day, the most recent figure published before December 31, 2026.",
+            "url": "https://polymarket.us/event/pnwpc-elonmusk-2026-12-31-gt800b",
+            "closeAt": "2027-01-14T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 0.01,
+            "hash": "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "ruleHashes": [
+            "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30"
+          ],
+          "createdAt": 1789164661938,
+          "expiresAt": 1789164662188,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXMUSKNW-26DEC31-T800",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 6000,
+              "modeledDebit": 6200,
+              "feeUpper": 200
+            },
+            {
+              "venue": "poly",
+              "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 3500,
+              "modeledDebit": 3600,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXMUSKNW-26DEC31-T800",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6000,
+          "modeledDebit": 6200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3500,
+          "modeledDebit": 3600,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 102,
+        "limitLegs": [
+          {
+            "venue": "kalshi",
+            "marketId": "KXMUSKNW-26DEC31-T800",
+            "side": "yes",
+            "quantity": 1,
+            "limitPrice": 6000,
+            "modeledDebit": 6200,
+            "feeUpper": 200
+          },
+          {
+            "venue": "poly",
+            "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "side": "no",
+            "quantity": 1,
+            "limitPrice": 3500,
+            "modeledDebit": 3600,
+            "feeUpper": 100
+          }
+        ],
+        "at": 1789164807573,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164807573,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "a": {
+            "id": "KXMUSKNW-26DEC31-T800",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "line": 800,
+              "outcome": "above 800 billion",
+              "entities": [],
+              "numbers": [
+                "31",
+                "2026",
+                "800",
+                "800"
+              ],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+            "outcome": "Above $800 billion",
+            "opposite": "Above $800 billion",
+            "category": "Financials",
+            "rules": "If Forbes reports that Elon Musk's net worth on December 31, 2026 at 5:00 PM ET is above $800 billion, then the market resolves to Yes.\n\nThis market will be determined by the net worth value displayed for Elon Musk on the Forbes Real-Time Billionaires page at 5:00 PM ET on December 31, 2026.\n\nThe relevant value is the dollar-denominated net worth shown by Forbes at that time, regardless of any later updates, corrections, or revisions.\n\nhttps://assets.kalshi.com/contract_terms/ECONSTAT.pdf\n\n[{\"name\":\"Bureau of Labor Statistics- Employment Situation\",\"url\":\"https://www.bls.gov/news.release/empsit.nr0.htm\"},{\"name\":\"Bureau of Labor Statistics- Consumer Price Index\",\"url\":\"https://www.bls.gov/news.release/cpi.nr0.htm\"}]",
+            "url": "https://kalshi.com/markets/kxmusknw/kxmusknw-26dec31",
+            "closeAt": "2027-01-07T23:30:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "settlement": null,
+            "series": "KXMUSKNW"
+          },
+          "b": {
+            "id": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "elonmusk",
+              "eventAt": "2026-07-23T21:30:00.000Z",
+              "eventDate": "2026-07-23",
+              "participants": [],
+              "marketType": "future",
+              "line": 800,
+              "entities": [],
+              "numbers": [
+                "800",
+                "31"
+              ],
+              "aliases": [],
+              "eventKey": "elon musk net worth on december 31"
+            },
+            "title": "Above $800 Billion · Elon Musk Net Worth on December 31?",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "finance",
+            "rules": "This market will settle to Yes if Elon Musk's net worth, according to the Bloomberg Billionaires Index, is above $800 billion on December 31, 2026. Outcome sourced from Bloomberg Billionaires Index.\n\nThe Bloomberg Billionaires Index figures are updated after the close of every trading day in New York. This market settles based on the net-worth figure published by the Bloomberg Billionaires Index for December 31, 2026 or, if December 31, 2026 is not a trading day, the most recent figure published before December 31, 2026.",
+            "url": "https://polymarket.us/event/pnwpc-elonmusk-2026-12-31-gt800b",
+            "closeAt": "2027-01-14T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 0.01,
+            "hash": "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "ruleHashes": [
+            "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30"
+          ],
+          "createdAt": 1789164807573,
+          "expiresAt": 1789164807823,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXMUSKNW-26DEC31-T800",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 6000,
+              "modeledDebit": 6200,
+              "feeUpper": 200
+            },
+            {
+              "venue": "poly",
+              "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 3500,
+              "modeledDebit": 3600,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXMUSKNW-26DEC31-T800",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6000,
+          "modeledDebit": 6200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3500,
+          "modeledDebit": 3600,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 182,
+        "limitLegs": [
+          {
+            "venue": "kalshi",
+            "marketId": "KXMUSKNW-26DEC31-T800",
+            "side": "yes",
+            "quantity": 1,
+            "limitPrice": 6000,
+            "modeledDebit": 6200,
+            "feeUpper": 200
+          },
+          {
+            "venue": "poly",
+            "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "side": "no",
+            "quantity": 1,
+            "limitPrice": 3500,
+            "modeledDebit": 3600,
+            "feeUpper": 100
+          }
+        ],
+        "at": 1789165021622,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "BOTH_DISPLAYED_AVAILABLE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 6200
+              },
+              {
+                "venue": "poly",
+                "status": "DISPLAYED_AVAILABLE",
+                "debit": 3600
+              }
+            ],
+            "modeledNet": 100,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165021622,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "a": {
+            "id": "KXMUSKNW-26DEC31-T800",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "line": 800,
+              "outcome": "above 800 billion",
+              "entities": [],
+              "numbers": [
+                "31",
+                "2026",
+                "800",
+                "800"
+              ],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+            "outcome": "Above $800 billion",
+            "opposite": "Above $800 billion",
+            "category": "Financials",
+            "rules": "If Forbes reports that Elon Musk's net worth on December 31, 2026 at 5:00 PM ET is above $800 billion, then the market resolves to Yes.\n\nThis market will be determined by the net worth value displayed for Elon Musk on the Forbes Real-Time Billionaires page at 5:00 PM ET on December 31, 2026.\n\nThe relevant value is the dollar-denominated net worth shown by Forbes at that time, regardless of any later updates, corrections, or revisions.\n\nhttps://assets.kalshi.com/contract_terms/ECONSTAT.pdf\n\n[{\"name\":\"Bureau of Labor Statistics- Employment Situation\",\"url\":\"https://www.bls.gov/news.release/empsit.nr0.htm\"},{\"name\":\"Bureau of Labor Statistics- Consumer Price Index\",\"url\":\"https://www.bls.gov/news.release/cpi.nr0.htm\"}]",
+            "url": "https://kalshi.com/markets/kxmusknw/kxmusknw-26dec31",
+            "closeAt": "2027-01-07T23:30:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "settlement": null,
+            "series": "KXMUSKNW"
+          },
+          "b": {
+            "id": "pnwpc-elonmusk-2026-12-31-gt800b",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "elonmusk",
+              "eventAt": "2026-07-23T21:30:00.000Z",
+              "eventDate": "2026-07-23",
+              "participants": [],
+              "marketType": "future",
+              "line": 800,
+              "entities": [],
+              "numbers": [
+                "800",
+                "31"
+              ],
+              "aliases": [],
+              "eventKey": "elon musk net worth on december 31"
+            },
+            "title": "Above $800 Billion · Elon Musk Net Worth on December 31?",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "finance",
+            "rules": "This market will settle to Yes if Elon Musk's net worth, according to the Bloomberg Billionaires Index, is above $800 billion on December 31, 2026. Outcome sourced from Bloomberg Billionaires Index.\n\nThe Bloomberg Billionaires Index figures are updated after the close of every trading day in New York. This market settles based on the net-worth figure published by the Bloomberg Billionaires Index for December 31, 2026 or, if December 31, 2026 is not a trading day, the most recent figure published before December 31, 2026.",
+            "url": "https://polymarket.us/event/pnwpc-elonmusk-2026-12-31-gt800b",
+            "closeAt": "2027-01-14T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 0.01,
+            "hash": "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+          "ruleHashes": [
+            "14796e06b518a2cfb970efb0591b3491bd2f1ec4e90c9bf4f14cc7b61f447447",
+            "a6e5622a2e1e196c40883204e751d72b8f1e1673422785abc5d5ff4a4e36bc30"
+          ],
+          "createdAt": 1789165021622,
+          "expiresAt": 1789165021872,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXMUSKNW-26DEC31-T800",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 6000,
+              "modeledDebit": 6200,
+              "feeUpper": 200
+            },
+            {
+              "venue": "poly",
+              "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 3500,
+              "modeledDebit": 3600,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXMUSKNW-26DEC31-T800",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6000,
+          "modeledDebit": 6200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "pnwpc-elonmusk-2026-12-31-gt800b",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3500,
+          "modeledDebit": 3600,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789163655067,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789163740991,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789163915959,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164662163,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164711017,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164770972,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164789601,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164937401,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164965528,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164970236,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164989210,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165029135,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165102873,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165127921,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165131747,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165219266,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165226776,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164114898,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8600,
+          "modeledDebit": 8700,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164254151,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8600,
+          "modeledDebit": 8700,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789164471096,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8600,
+          "modeledDebit": 8700,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "interpretation": "Historical standalone scenarios using assumed $100 cash per venue, not actual account balances or fills. Fees are model estimates, live fee bounds and execution protocol are unvalidated. Positive model values are not earnings, independent opportunities, or approval; conditional capital-scenario sums are not realized profit or monthly income. Verification is frozen as observed; every live launch blocker remains enforced."
+}

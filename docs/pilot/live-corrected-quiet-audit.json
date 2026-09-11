@@ -1,0 +1,818 @@
+{
+  "timingSummary": {},
+  "capitalScenarios": {},
+  "timingInterpretation": "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
+  "at": "2026-09-11T22:39:12.863Z",
+  "policy": {
+    "capitalPerVenue": 1000000,
+    "totalLossLimit": 2000000,
+    "contractsPerPair": 1,
+    "maxPairDebit": 20000,
+    "maxCommitted": 100000,
+    "reservePerVenue": 100000,
+    "maxDepthFraction": 0.25,
+    "maxBookAgeMs": 2000,
+    "maxMetadataAgeMs": 60000,
+    "maxAccountAgeMs": 5000,
+    "maxPlanAgeMs": 250,
+    "minimumNetProfit": 100,
+    "uncertaintyReserve": 100
+  },
+  "opportunities": 19,
+  "statesAudited": 173,
+  "opportunitiesWithPositiveStandaloneOneContractModel": 0,
+  "freshPositiveStandaloneModels": 0,
+  "positiveEventsStillMatching": 0,
+  "remainingReviewPairs": [],
+  "eligibleStates": 0,
+  "blockersByOpportunity": {
+    "RULE_EQUIVALENCE_UNVERIFIED": 19,
+    "APPROVAL_EVIDENCE_MISSING": 19,
+    "EXECUTION_PROTOCOL_UNVALIDATED": 19,
+    "LIVE_FEE_BOUND_UNVALIDATED": 19,
+    "NO_MODELED_NET_EDGE": 19,
+    "BOOK_NOT_STRICTLY_FRESH": 18
+  },
+  "freshPositiveModelExamples": [],
+  "topStandaloneModels": [
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165740112,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166045916,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166116328,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166123833,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166127575,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166131102,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166141610,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166156243,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166168875,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166176427,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166191674,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166213461,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166248208,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166259609,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166261706,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166280685,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789166299199,
+      "modeledNetPerOneContractUSD": 0,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7200,
+          "modeledDebit": 7400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165719516,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXU3-26SEP-T4.0",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789165894344,
+      "modeledNetPerOneContractUSD": -0.02,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "NO_MODELED_NET_EDGE"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8500,
+          "modeledDebit": 8600,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "interpretation": "Historical standalone scenarios using assumed $100 cash per venue, not actual account balances or fills. Fees are model estimates, live fee bounds and execution protocol are unvalidated. Positive model values are not earnings, independent opportunities, or approval; conditional capital-scenario sums are not realized profit or monthly income. Verification is frozen as observed; every live launch blocker remains enforced."
+}

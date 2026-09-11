@@ -1,4 +1,5 @@
 // Historical, read-only capital-fit audit. No credential access, network, or orders.
+import { replayCapital } from "../lib/pilot/capital-replay.ts";
 import { writeFileSync } from "node:fs";
 import { ResearchStore } from "../lib/research/store.ts";
 import { pilotPolicy, pilotPreflight } from "../lib/pilot/preflight.ts";
@@ -47,6 +48,7 @@ try {
             reconciledAt: row.at,
             unresolvedOrders: 0,
             unmatchedContracts: 0,
+            occupiedMarkets: [],
           },
         ]),
       ) as any;
@@ -148,6 +150,7 @@ try {
       timingFromFirstPositiveState: firstFresh
         ? {
             stateId: firstFresh.stateId,
+            limitLegs: firstFresh.plan.legs,
             at: firstFresh.wall,
             scenarios: timing,
           }
@@ -181,6 +184,28 @@ try {
     }
   const report = {
     timingSummary,
+    capitalScenarios: Object.fromEntries(
+      Object.keys(timingSummary).map((key) => [
+        key,
+        replayCapital(
+          candidates
+            .filter(
+              (c) =>
+                c.matchesCurrentDiscovery && c.timingFromFirstPositiveState,
+            )
+            .map((c) => ({
+              id: c.mappingId + ":" + c.orientation,
+              at: c.timingFromFirstPositiveState.at,
+              legs: c.timingFromFirstPositiveState.limitLegs,
+              displayedBoth: c.timingFromFirstPositiveState.scenarios.some(
+                (t: any) =>
+                  `${t.kalshiDelayMs}/${t.polyDelayMs}` === key &&
+                  t.status === "BOTH_DISPLAYED_AVAILABLE",
+              ),
+            })),
+        ),
+      ]),
+    ),
     timingInterpretation:
       "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
     at: new Date().toISOString(),
@@ -215,7 +240,7 @@ try {
       )
       .slice(0, 25),
     interpretation:
-      "Historical standalone scenarios using assumed $100 cash per venue, not actual account balances or fills. Fees are model estimates, live fee bounds and execution protocol are unvalidated. Positive model values are not earnings, independent opportunities, or approval; no profit sum or monthly extrapolation is valid. Verification is frozen as observed; every live launch blocker remains enforced.",
+      "Historical standalone scenarios using assumed $100 cash per venue, not actual account balances or fills. Fees are model estimates, live fee bounds and execution protocol are unvalidated. Positive model values are not earnings, independent opportunities, or approval; conditional capital-scenario sums are not realized profit or monthly income. Verification is frozen as observed; every live launch blocker remains enforced.",
   };
   writeFileSync(output, JSON.stringify(report, null, 2) + "\n");
   console.log(

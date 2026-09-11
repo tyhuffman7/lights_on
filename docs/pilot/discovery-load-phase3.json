@@ -1,0 +1,151 @@
+{
+  "at": "2026-09-11T22:25:09.574Z",
+  "mode": "fixture",
+  "catalogMarketsPerVenue": 25000,
+  "workload": "Repeated indexed matching of 25,000 sports markets per venue in a worker concurrent with 500 verified synthetic mappings, 1,000 target book updates/sec, SQLite persistence and reports every second. No network or fill claim.",
+  "completedDiscoveryCycles": 5,
+  "cycles": [
+    {
+      "durationMs": 2590.310792,
+      "comparisons": 25000,
+      "candidates": 25000
+    },
+    {
+      "durationMs": 2490.195041,
+      "comparisons": 25000,
+      "candidates": 25000
+    },
+    {
+      "durationMs": 2477.5742920000002,
+      "comparisons": 25000,
+      "candidates": 25000
+    },
+    {
+      "durationMs": 2593.2332079999996,
+      "comparisons": 25000,
+      "candidates": 25000
+    },
+    {
+      "durationMs": 2472.7945419999996,
+      "comparisons": 25000,
+      "candidates": 25000
+    }
+  ],
+  "result": {
+    "mode": "fixture",
+    "concurrentReports": 11,
+    "reportIntervalMs": 1000,
+    "mappings": 500,
+    "subscribedMarkets": {
+      "kalshi": 500,
+      "poly": 500
+    },
+    "shardsPerVenue": 5,
+    "targetUpdatesPerSecond": 1000,
+    "durationMs": 12022.196375,
+    "updates": 11988,
+    "updatesPerSecond": 997.1555634317277,
+    "evaluationsPerSecond": 1994.3111268634555,
+    "measurements": {
+      "at": 1789165508612,
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "runtime": "v25.8.1"
+      },
+      "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+      "interval": {
+        "startMono": 1360.715125,
+        "endMono": 14068.614709,
+        "durationMs": 12707.899583999999
+      },
+      "intervalRates": {
+        "messages": 943.3502303632933,
+        "evaluations": 1886.7004607265867,
+        "CONNECTION_UNHEALTHY": 1886.7004607265867,
+        "bookUpdates": 943.3502303632933
+      },
+      "uptimeMs": 12707.899583999999,
+      "counters": {
+        "messages": 11988,
+        "evaluations": 23976,
+        "CONNECTION_UNHEALTHY": 23976,
+        "bookUpdates": 11988
+      },
+      "rates": {
+        "messages": 943.3502303632933,
+        "evaluations": 1886.7004607265867,
+        "CONNECTION_UNHEALTHY": 1886.7004607265867,
+        "bookUpdates": 943.3502303632933
+      },
+      "latencyMs": {
+        "processingLag": {
+          "count": 10000,
+          "p50": 0.0145410000004631,
+          "p95": 0.039958000000297034,
+          "p99": 0.06662500000038563
+        },
+        "evaluation": {
+          "count": 10000,
+          "p50": 0.23029200000019046,
+          "p95": 0.3297499999998763,
+          "p99": 0.44637499999953434
+        },
+        "processing": {
+          "count": 10000,
+          "p50": 0.24466599999959726,
+          "p95": 0.37083399999937683,
+          "p99": 0.4966659999990952
+        },
+        "validBookProcessing": {
+          "count": 10000,
+          "p50": 0.24466599999959726,
+          "p95": 0.37083399999937683,
+          "p99": 0.4966659999990952
+        },
+        "persistenceAck": {
+          "count": 10000,
+          "p50": 13.340083999999479,
+          "p95": 22.033957999999984,
+          "p99": 48.0463749999999
+        },
+        "persistenceWrite": {
+          "count": 10000,
+          "p50": 0.25420800000028976,
+          "p95": 0.5210420000003069,
+          "p99": 1.5532079999998132
+        },
+        "receiveToPersistenceAck": {
+          "count": 10000,
+          "p50": 13.61579200000051,
+          "p95": 22.447292000000743,
+          "p99": 48.24391699999978
+        }
+      },
+      "eventLoopMs": {
+        "p50": 23.396351,
+        "p95": 33.652735,
+        "p99": 34.471935,
+        "max": 37.781503
+      },
+      "cpuPercent": 280.4681903913917,
+      "memory": {
+        "rss": 1202274304,
+        "heapTotal": 155336704,
+        "heapUsed": 62887024,
+        "external": 8649800,
+        "arrayBuffers": 1416291
+      },
+      "sampleLimit": 10000
+    },
+    "maxBacklog": 91,
+    "maxQueueBytes": 310192,
+    "persistenceDrained": true,
+    "databaseGrowthBytesPerSecond": 12162105.112843825,
+    "bookRecords": 12988,
+    "stopReason": null,
+    "passed": true
+  },
+  "passed": true
+}

@@ -177,7 +177,10 @@ export async function normalizePoly(m: Obj, published?: Obj): Promise<Market> {
       ? Math.round(m.feeCoefficient * 10000)
       : null,
     feeRounding: "even",
-    minQty: Number(m.minimumTradeQty) || 1,
+    minQty:
+      Number.isFinite(m.minimumTradeQty) && m.minimumTradeQty > 0
+        ? m.minimumTradeQty
+        : 0, // zero denotes missing/unsupported size metadata
     hash: await hash(
       JSON.stringify([rules, closeAt, long?.description, short?.description]),
     ),

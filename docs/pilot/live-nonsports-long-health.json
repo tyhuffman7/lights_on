@@ -1,0 +1,210 @@
+{
+  "startedAt": 1789163491268,
+  "endedAt": 1789165291418,
+  "pairCount": 26,
+  "scope": {
+    "Financials": 4,
+    "Economics": 8,
+    "Entertainment": 14
+  },
+  "telemetry": {
+    "at": 1789165291360,
+    "host": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M1 Pro",
+      "runtime": "v25.8.1"
+    },
+    "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+    "interval": {
+      "startMono": 1790599.972833,
+      "endMono": 1800319.197708,
+      "durationMs": 9719.224875000073
+    },
+    "intervalRates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0,
+      "messages": 6.6877761175373065,
+      "bookUpdates": 6.6877761175373065,
+      "evaluations": 13.375552235074613,
+      "STRICT_EXECUTION_FRESH": 6.6877761175373065,
+      "EXCHANGE_TIMESTAMP_OLD": 0,
+      "reconciliationRequests": 0.514444316733639,
+      "kalshiRestRequests": 0.2057777266934556,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 6.6877761175373065,
+      "strictBookAgeOnlyRejectedEvaluations": 6.4819983908438505,
+      "polyRestRequests": 0.3086665900401834,
+      "reconciliationOlderRestSnapshots": 0,
+      "eventLoopDelayEpisodes": 0,
+      "RECOVERY_DETAIL": 0,
+      "deferredInvalidBookEvaluations": 0,
+      "EVENT_LOOP_DELAY": 0,
+      "DISCONNECT_DETAIL": 0,
+      "DISCONNECTED": 0,
+      "RECONNECT": 0,
+      "CONNECTION_UNHEALTHY": 0
+    },
+    "uptimeMs": 1800102.488541,
+    "counters": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 4,
+      "messages": 11041,
+      "bookUpdates": 11089,
+      "evaluations": 22064,
+      "STRICT_EXECUTION_FRESH": 11245,
+      "EXCHANGE_TIMESTAMP_OLD": 118,
+      "reconciliationRequests": 892,
+      "kalshiRestRequests": 1896,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 10675,
+      "strictBookAgeOnlyRejectedEvaluations": 9457,
+      "polyRestRequests": 1171,
+      "reconciliationOlderRestSnapshots": 245,
+      "eventLoopDelayEpisodes": 1,
+      "RECOVERY_DETAIL": 2,
+      "deferredInvalidBookEvaluations": 50,
+      "EVENT_LOOP_DELAY": 2,
+      "DISCONNECT_DETAIL": 2,
+      "DISCONNECTED": 2,
+      "RECONNECT": 2,
+      "CONNECTION_UNHEALTHY": 26
+    },
+    "rates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0.002222095700363171,
+      "messages": 6.133539656927442,
+      "bookUpdates": 6.160204805331801,
+      "evaluations": 12.25707988320325,
+      "STRICT_EXECUTION_FRESH": 6.246866537645964,
+      "EXCHANGE_TIMESTAMP_OLD": 0.06555182316071353,
+      "reconciliationRequests": 0.49552734118098707,
+      "kalshiRestRequests": 1.053273361972143,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 5.930217900344212,
+      "strictBookAgeOnlyRejectedEvaluations": 5.253589759583627,
+      "polyRestRequests": 0.6505185162813183,
+      "reconciliationOlderRestSnapshots": 0.1361033616472442,
+      "eventLoopDelayEpisodes": 0.0005555239250907927,
+      "RECOVERY_DETAIL": 0.0011110478501815855,
+      "deferredInvalidBookEvaluations": 0.027776196254539635,
+      "EVENT_LOOP_DELAY": 0.0011110478501815855,
+      "DISCONNECT_DETAIL": 0.0011110478501815855,
+      "DISCONNECTED": 0.0011110478501815855,
+      "RECONNECT": 0.0011110478501815855,
+      "CONNECTION_UNHEALTHY": 0.01444362205236061
+    },
+    "latencyMs": {
+      "persistenceAck": {
+        "count": 10000,
+        "p50": 0.36454099998809397,
+        "p95": 2.596333999885246,
+        "p99": 10.067999999970198
+      },
+      "persistenceWrite": {
+        "count": 10000,
+        "p50": 0.11179200001060963,
+        "p95": 0.7296249999199063,
+        "p99": 4.951666999841109
+      },
+      "capacityWorkerRoundTrip": {
+        "count": 32,
+        "p50": 133.3128339999821,
+        "p95": 156.90412500000093,
+        "p99": 162.95833399999538
+      },
+      "polyExchangeToReceive": {
+        "count": 1109,
+        "p50": -37,
+        "p95": 54836,
+        "p99": 247150
+      },
+      "processingLag": {
+        "count": 10000,
+        "p50": 0.16516700014472008,
+        "p95": 0.4107920000096783,
+        "p99": 2.4673750000074506
+      },
+      "evaluation": {
+        "count": 10000,
+        "p50": 1.0175409999210387,
+        "p95": 2.701166999991983,
+        "p99": 4.630917000002228
+      },
+      "processing": {
+        "count": 10000,
+        "p50": 1.1827080000657588,
+        "p95": 3.6109170001000166,
+        "p99": 5.304166999878362
+      },
+      "validBookProcessing": {
+        "count": 10000,
+        "p50": 1.18383300001733,
+        "p95": 3.6239160001277924,
+        "p99": 5.304166999878362
+      },
+      "receiveToPersistenceAck": {
+        "count": 10000,
+        "p50": 1.7707919999957085,
+        "p95": 5.5095830000936985,
+        "p99": 9.56395799992606
+      },
+      "kalshiRestRoundTrip": {
+        "count": 1896,
+        "p50": 165.07912500000384,
+        "p95": 234.59474999993108,
+        "p99": 277.37408400001004
+      },
+      "kalshiExchangeToReceive": {
+        "count": 9880,
+        "p50": -119,
+        "p95": -60,
+        "p99": -25
+      },
+      "polyRestRoundTrip": {
+        "count": 1171,
+        "p50": 188.3046659999527,
+        "p95": 288.06112500000745,
+        "p99": 442.7943750000559
+      },
+      "invalidBookProcessing": {
+        "count": 50,
+        "p50": 0.8365420000627637,
+        "p95": 1.8562079999828711,
+        "p99": 1.9793330000247806
+      }
+    },
+    "eventLoopMs": {
+      "p50": 12.050431,
+      "p95": 14.008319,
+      "p99": 15.925247,
+      "max": 328.990719
+    },
+    "cpuPercent": 3.3554745568379483,
+    "memory": {
+      "rss": 238010368,
+      "heapTotal": 157270016,
+      "heapUsed": 37365280,
+      "external": 10684997,
+      "arrayBuffers": 337215
+    },
+    "sampleLimit": 10000
+  },
+  "storage": {
+    "processed": 11088,
+    "persisted": 851,
+    "ringRecords": 84,
+    "ringBytes": 116757,
+    "logicalBytes": 6049792,
+    "bytesPerHour": 11588282.948343003,
+    "projectedGBPerDay": 0.2781187907602321,
+    "evidencePerSecond": 0.475326584552277
+  },
+  "persistenceBeforeStop": {
+    "queueDepth": 1,
+    "queueBytes": 4603,
+    "lastAckAt": 1789165291316,
+    "failed": false
+  },
+  "interpretation": "Thirty-minute read-only shortlist observation. Development and catalog refresh overlapped; not a host-isolated latency benchmark. All three fresh positive models are Forbes/Bloomberg conflicts rejected by current matching. No orders or fills. Observer exited successfully after stop/drain."
+}

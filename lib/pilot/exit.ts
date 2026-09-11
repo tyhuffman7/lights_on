@@ -75,9 +75,17 @@ export function pilotExitQuote(input: {
     if (
       !book.open ||
       !item.market.open ||
+      !Number.isFinite(Date.parse(item.market.closeAt)) ||
+      Date.parse(item.market.closeAt) <= wall ||
       !fresh(book, mono, wall, p.maxBookAgeMs)
     )
       reasons.push("BOOK_NOT_EXECUTABLE");
+    if (
+      !Number.isFinite(item.market.minQty) ||
+      item.market.minQty <= 0 ||
+      item.market.minQty > 1
+    )
+      reasons.push("EXIT_SIZE_UNSUPPORTED");
     const schedule = feeSchedule(item.market);
     if (!schedule) {
       reasons.push("UNKNOWN_FEES");

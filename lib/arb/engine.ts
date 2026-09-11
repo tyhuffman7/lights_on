@@ -12,6 +12,7 @@ export function walk(levels:Level[],q:number,rate:number,rounding:'ceil'|'even')
  return left ? null : {quantity:q,cost,fees,levels:used};
 }
 export function assess(pair:Pair,a:Book,b:Book,s:Settings,cash:{kalshi:number;poly:number},now=Date.now()):Quote|null {
+ if([pair.a,pair.b].some(m=>!Number.isFinite(m.minQty)||m.minQty<=0))return null;
  const reasons:string[]=[];
  if(!pair.reviewed)reasons.push('Settlement rules need review');
  if([pair.a,pair.b].some(m=>/sport|unknown/i.test(m.category)||!m.category))reasons.push('Category excluded for Ohio research');

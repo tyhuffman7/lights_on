@@ -535,3 +535,15 @@ export function netflixChart(rules: string) {
         : undefined,
   };
 }
+
+// A shared person's name is insufficient when wealth estimates use different publishers.
+export function netWorthSource(rules: string) {
+  const primary = rules.split(/\n/)[0];
+  if (!/net[ -]worth/i.test(primary)) return undefined;
+  const sources = [
+    ["forbes", /\bForbes\b/i],
+    ["bloomberg", /\bBloomberg\b/i],
+  ] as const;
+  const found = sources.filter(([, pattern]) => pattern.test(primary));
+  return found.length === 1 ? found[0][0] : undefined;
+}

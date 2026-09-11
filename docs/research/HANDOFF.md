@@ -1,6 +1,22 @@
+## Fee precision follow-up
+
+Current fill and order evidence uses explicit integer microdollars, preserving six-decimal fees and fractional notional. Existing Kalshi/PM-US order checks still reconcile. New published-mechanics rounding simulation documents account precision and fractional rebate-cap sensitivity; the old whole-contract `feeUpper` is not an unconditional live bound. Live fee validation remains off. See PROOF-OF-EDGE.md and `fee-rounding-research.json`. 168 tests and TypeScript pass after these edits; build also passed. Last usage reading was 23% used / 77% remaining. User has returned and authorized retrying the existing signed checkpoint. Verify actual Git state before reporting push completion.
+
+## Latest working state
+
+Previous pushed checkpoint: `1609cd5`. During this checkpoint preparation, 1Password signing failed while the user was away; they have now returned. Keep signed commits enabled. Verify HEAD and origin/main to determine the latest pushed checkpoint.
+
+Latest evidence is at the end of [PROOF-OF-EDGE.md](../pilot/PROOF-OF-EDGE.md). Both the 26-pair 30-minute observer and corrected 22-pair 600-second quieter run finished and stopped. The latter processed 1,462 updates, no reconnects/delay episodes, zero positive models even with a full-$200-budget size sweep. Fresh full catalog produced 1,773 unverified candidates, but the 30-minute non-sports run's three positive models were all Forbes/Bloomberg conflicts now rejected. No eligible pairs, bot fills or profits. Existing position/cash snapshot guards, unknown minimum sizing guards, source mismatch rejection, capital replay, historical early-exit audit, buy/sell serialization, nonbinding preview, fill parsers and restart-safe fill journal are local additions. No submit transport. One Kalshi and three PM-US pre-existing fills parsed; private amounts/IDs were not stored in reports.
+
+Final validation: 165 tests, TypeScript and build pass (existing route-classification notice). Fresh load passed 997.16 updates/sec / processing p99 0.497ms. Run final verification after remaining edits. Signing/push are pending. Latest usage check: 21% used / 79% remaining, stop target 30% used / 70% remaining; continue useful work until then or substantiated confidence. No skills or subagents.
+
 # Continue Lights On here
 
 Use built-in capabilities/native skills only. Do not use installed skills, including Superpowers, and never brainstorming. No sub-agents unless the user authorizes them. The user subsequently authorized a $100-per-venue pilot and accepted at most $200 total loss; see ../pilot/PILOT.md. Live trading remains technically disabled until the documented launch prerequisites are satisfied. Do not request the same budget authorization again. Push tested implementation checkpoints to `tyhuffman7/lights_on` main. HARDENING.md remains the implementation specification.
+
+## Protocol and capital follow-up
+
+Pure one-contract order serialization and a fixed nonbinding PM-US preview client are added. Live Spotify YES/NO previews returned HTTP 200, pending state and zero cumulative fills; no actual orders were submitted. Capital replay excludes repeated market inventory and settlement cash recycling, but isolates budget constraints rather than the stricter current intent-ledger inventory halt. Historical scenarios show only $0.27–$0.39 conditional modeled net under $10 committed, not earnings. 146 tests, TypeScript and build pass. A 26-pair non-sports observer is currently bounded to 1800 seconds at `work/proof/live-nonsports-long`; inspect its result/progress before doing anything with it. A five-minute economics/Netflix sample ended with zero recorded opportunities and no reconnects. Current private reads show neither venue meets the full $100 pilot funding level; do not move funds or publish balances. Usage last checked at 15% used (85% remaining), below the user stop threshold. Continue the active goal.
 
 ## Current follow-up
 

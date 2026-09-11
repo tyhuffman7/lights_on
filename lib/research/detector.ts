@@ -73,6 +73,10 @@ export function evaluate(
     )
   )
     common.push("CATEGORY_EXCLUDED");
+  const minimumKnown = [pair.a, pair.b].every(
+    (m) => Number.isFinite(m.minQty) && m.minQty > 0,
+  );
+  if (!minimumKnown) common.push("UNKNOWN_MINIMUM_QUANTITY");
   const afee = feeSchedule(pair.a),
     bfee = feeSchedule(pair.b);
   if (!afee || !bfee) common.push("UNKNOWN_FEES");
@@ -86,7 +90,7 @@ export function evaluate(
     // Explicit numerical support limit; never silently truncate and call it full depth.
     if (maxQuantity > 1000000) reasons.push("UNSUPPORTED_QUANTITY");
     const runSizing = () =>
-      afee && bfee && maxQuantity > 0 && maxQuantity <= 1000000
+      minimumKnown && afee && bfee && maxQuantity > 0 && maxQuantity <= 1000000
         ? sizes(
             new Depth(a[aSide], afee),
             new Depth(b[bSide], bfee),

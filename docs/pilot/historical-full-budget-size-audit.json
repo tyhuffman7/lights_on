@@ -1,0 +1,4075 @@
+{
+  "at": "2026-09-11T22:43:54.007Z",
+  "mode": "RESEARCH_SIZE_SWEEP",
+  "matchingIntervals": 1314,
+  "states": 6895,
+  "maximumContracts": 200,
+  "maximumCombinedDebitUSD": 180,
+  "depthFraction": 0.25,
+  "reservePerContractUSD": 0.01,
+  "positivePairSizes": [
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 10,
+      "modeledNet": 9900,
+      "debit": 89100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 10,
+          "limitPrice": 1000,
+          "modeledDebit": 11000,
+          "feeUpper": 1000
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 10,
+          "limitPrice": 7700,
+          "modeledDebit": 78100,
+          "feeUpper": 1100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 9,
+      "modeledNet": 8900,
+      "debit": 80200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 9,
+          "limitPrice": 1000,
+          "modeledDebit": 9900,
+          "feeUpper": 900
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 9,
+          "limitPrice": 7700,
+          "modeledDebit": 70300,
+          "feeUpper": 1000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 8,
+      "modeledNet": 7900,
+      "debit": 71300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 8,
+          "limitPrice": 1000,
+          "modeledDebit": 8800,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 8,
+          "limitPrice": 7700,
+          "modeledDebit": 62500,
+          "feeUpper": 900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-MIA::aachc-nfl-2027-01-10-lastundefeated-mia",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789131630681,
+      "quantity": 3,
+      "modeledNet": 7700,
+      "debit": 22000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-MIA",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 100,
+          "modeledDebit": 600,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-mia",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7000,
+          "modeledDebit": 21400,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 7,
+      "modeledNet": 7000,
+      "debit": 62300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 7,
+          "limitPrice": 1000,
+          "modeledDebit": 7700,
+          "feeUpper": 700
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 7,
+          "limitPrice": 7700,
+          "modeledDebit": 54600,
+          "feeUpper": 700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-TB::aachc-nfl-2027-01-10-lastundefeated-tb",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789126958769,
+      "quantity": 4,
+      "modeledNet": 6400,
+      "debit": 33200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-TB",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 200,
+          "modeledDebit": 1200,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-tb",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 7900,
+          "modeledDebit": 32000,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 6,
+      "modeledNet": 6000,
+      "debit": 53400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 1000,
+          "modeledDebit": 6600,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 7700,
+          "modeledDebit": 46800,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-MIA::aachc-nfl-2027-01-10-lastundefeated-mia",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789131630681,
+      "quantity": 2,
+      "modeledNet": 5100,
+      "debit": 14700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-MIA",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 100,
+          "modeledDebit": 400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-mia",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7000,
+          "modeledDebit": 14300,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 5,
+      "modeledNet": 5000,
+      "debit": 44500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 1000,
+          "modeledDebit": 5500,
+          "feeUpper": 500
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 7700,
+          "modeledDebit": 39000,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-ARK::aqc-cfb-sec-2026-12-05-champq-ark",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124109633,
+      "quantity": 4,
+      "modeledNet": 4800,
+      "debit": 34800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-ARK",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 700,
+          "modeledDebit": 3200,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ark",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 7800,
+          "modeledDebit": 31600,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-VAN::aqc-cfb-sec-2026-12-05-champq-vand",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124109649,
+      "quantity": 4,
+      "modeledNet": 4800,
+      "debit": 34800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-VAN",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 800,
+          "modeledDebit": 3600,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-vand",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 7700,
+          "modeledDebit": 31200,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-TB::aachc-nfl-2027-01-10-lastundefeated-tb",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789126958769,
+      "quantity": 3,
+      "modeledNet": 4800,
+      "debit": 24900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-TB",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 200,
+          "modeledDebit": 900,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-tb",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7900,
+          "modeledDebit": 24000,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 4,
+      "modeledNet": 4000,
+      "debit": 35600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1000,
+          "modeledDebit": 4400,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 7700,
+          "modeledDebit": 31200,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 9,
+      "modeledNet": 3600,
+      "debit": 85500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 9,
+          "limitPrice": 1300,
+          "modeledDebit": 12600,
+          "feeUpper": 900
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 9,
+          "limitPrice": 8000,
+          "modeledDebit": 72900,
+          "feeUpper": 900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-ARK::aqc-cfb-sec-2026-12-05-champq-ark",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124109633,
+      "quantity": 3,
+      "modeledNet": 3600,
+      "debit": 26100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-ARK",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 700,
+          "modeledDebit": 2400,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ark",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7800,
+          "modeledDebit": 23700,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-VAN::aqc-cfb-sec-2026-12-05-champq-vand",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124109649,
+      "quantity": 3,
+      "modeledNet": 3600,
+      "debit": 26100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-VAN",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 800,
+          "modeledDebit": 2700,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-vand",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7700,
+          "modeledDebit": 23400,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 8,
+      "modeledNet": 3200,
+      "debit": 76000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 8,
+          "limitPrice": 1300,
+          "modeledDebit": 11200,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 8,
+          "limitPrice": 8000,
+          "modeledDebit": 64800,
+          "feeUpper": 800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-TB::aachc-nfl-2027-01-10-lastundefeated-tb",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789126958769,
+      "quantity": 2,
+      "modeledNet": 3200,
+      "debit": 16600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-TB",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 200,
+          "modeledDebit": 600,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-tb",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7900,
+          "modeledDebit": 16000,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 3,
+      "modeledNet": 3000,
+      "debit": 26700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1000,
+          "modeledDebit": 3300,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7700,
+          "modeledDebit": 23400,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 7,
+      "modeledNet": 2800,
+      "debit": 66500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 7,
+          "limitPrice": 1300,
+          "modeledDebit": 9800,
+          "feeUpper": 700
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 7,
+          "limitPrice": 8000,
+          "modeledDebit": 56700,
+          "feeUpper": 700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-PHI::aachc-nfl-2027-01-10-lastundefeated-phi",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789129978356,
+      "quantity": 2,
+      "modeledNet": 2600,
+      "debit": 17200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-PHI",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 500,
+          "modeledDebit": 1200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-phi",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7900,
+          "modeledDebit": 16000,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-MIA::aachc-nfl-2027-01-10-lastundefeated-mia",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789131630681,
+      "quantity": 1,
+      "modeledNet": 2600,
+      "debit": 7300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-MIA",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 100,
+          "modeledDebit": 200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-mia",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7000,
+          "modeledDebit": 7100,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 6,
+      "modeledNet": 2400,
+      "debit": 57000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 1300,
+          "modeledDebit": 8400,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 8000,
+          "modeledDebit": 48600,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-ARK::aqc-cfb-sec-2026-12-05-champq-ark",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124109633,
+      "quantity": 2,
+      "modeledNet": 2400,
+      "debit": 17400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-ARK",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 700,
+          "modeledDebit": 1600,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ark",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7800,
+          "modeledDebit": 15800,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-VAN::aqc-cfb-sec-2026-12-05-champq-vand",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124109649,
+      "quantity": 2,
+      "modeledNet": 2400,
+      "debit": 17400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-VAN",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 800,
+          "modeledDebit": 1800,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-vand",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7700,
+          "modeledDebit": 15600,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-HOU::aachc-nfl-2027-01-10-lastundefeated-hou",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789113964677,
+      "quantity": 4,
+      "modeledNet": 2100,
+      "debit": 37500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-HOU",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 500,
+          "modeledDebit": 2400,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-hou",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8700,
+          "modeledDebit": 35100,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-NAVY::aqc-cfb-aac-2026-12-05-champq-navy",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789110233946,
+      "quantity": 4,
+      "modeledNet": 2000,
+      "debit": 37600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAACQUAL-26-NAVY",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 6700,
+          "modeledDebit": 27600,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-aac-2026-12-05-champq-navy",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 2400,
+          "modeledDebit": 10000,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 2,
+      "modeledNet": 2000,
+      "debit": 17800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1000,
+          "modeledDebit": 2200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7700,
+          "modeledDebit": 15600,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 5,
+      "modeledNet": 2000,
+      "debit": 47500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 1300,
+          "modeledDebit": 7000,
+          "feeUpper": 500
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 8000,
+          "modeledDebit": 40500,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 3,
+      "modeledNet": 1800,
+      "debit": 27900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1300,
+          "modeledDebit": 4200,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7800,
+          "modeledDebit": 23700,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789112635382,
+      "quantity": 3,
+      "modeledNet": 1600,
+      "debit": 28100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFCUSAQUAL-26-WKU",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7700,
+          "modeledDebit": 23700,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-cusa-2026-12-04-champq-wkent",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1400,
+          "modeledDebit": 4400,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-HOU::aachc-nfl-2027-01-10-lastundefeated-hou",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789113964677,
+      "quantity": 3,
+      "modeledNet": 1600,
+      "debit": 28100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-HOU",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 500,
+          "modeledDebit": 1800,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-hou",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8700,
+          "modeledDebit": 26300,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 4,
+      "modeledNet": 1600,
+      "debit": 38000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1300,
+          "modeledDebit": 5600,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8000,
+          "modeledDebit": 32400,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-TB::aachc-nfl-2027-01-10-lastundefeated-tb",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789126958769,
+      "quantity": 1,
+      "modeledNet": 1600,
+      "debit": 8300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-TB",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 200,
+          "modeledDebit": 300,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-tb",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7900,
+          "modeledDebit": 8000,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-NAVY::aqc-cfb-aac-2026-12-05-champq-navy",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789110233946,
+      "quantity": 3,
+      "modeledNet": 1500,
+      "debit": 28200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAACQUAL-26-NAVY",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 6700,
+          "modeledDebit": 20700,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-aac-2026-12-05-champq-navy",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 2400,
+          "modeledDebit": 7500,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-ECU::aqc-cfb-aac-2026-12-05-champq-ecar",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123019994,
+      "quantity": 4,
+      "modeledNet": 1500,
+      "debit": 38100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAACQUAL-26-ECU",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 2300,
+          "modeledDebit": 10000,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-aac-2026-12-05-champq-ecar",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 6900,
+          "modeledDebit": 28100,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFMWCQUAL-26-UNLV::aqc-cfb-mwc-2026-12-04-champq-unlv",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789112634882,
+      "quantity": 5,
+      "modeledNet": 1400,
+      "debit": 48100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFMWCQUAL-26-UNLV",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 6300,
+          "modeledDebit": 32500,
+          "feeUpper": 1000
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-mwc-2026-12-04-champq-unlv",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 3000,
+          "modeledDebit": 15600,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-ND::aachc-cfb-undefeated-2026-11-28-nd",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124994451,
+      "quantity": 2,
+      "modeledNet": 1300,
+      "debit": 18500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-ND",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 3800,
+          "modeledDebit": 8000,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-nd",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 5100,
+          "modeledDebit": 10500,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-PHI::aachc-nfl-2027-01-10-lastundefeated-phi",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789129978356,
+      "quantity": 1,
+      "modeledNet": 1300,
+      "debit": 8600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-PHI",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 500,
+          "modeledDebit": 600,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-phi",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7900,
+          "modeledDebit": 8000,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSBELTQUAL-26-JMU::aqc-cfb-sbelt-2026-12-04-champq-jmad",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789108769843,
+      "quantity": 4,
+      "modeledNet": 1200,
+      "debit": 38400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSBELTQUAL-26-JMU",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 7000,
+          "modeledDebit": 28800,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sbelt-2026-12-04-champq-jmad",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 2300,
+          "modeledDebit": 9600,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 2,
+      "modeledNet": 1200,
+      "debit": 18600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1300,
+          "modeledDebit": 2800,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7800,
+          "modeledDebit": 15800,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-ARK::aqc-cfb-sec-2026-12-05-champq-ark",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124109633,
+      "quantity": 1,
+      "modeledNet": 1200,
+      "debit": 8700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-ARK",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 700,
+          "modeledDebit": 800,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ark",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7800,
+          "modeledDebit": 7900,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-VAN::aqc-cfb-sec-2026-12-05-champq-vand",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124109649,
+      "quantity": 1,
+      "modeledNet": 1200,
+      "debit": 8700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-VAN",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 900,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-vand",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7700,
+          "modeledDebit": 7800,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSBELT-26-CCAR::tec-cfb-sbeltchamp-2026-12-04-w-coast",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127900088,
+      "quantity": 1,
+      "modeledNet": 1200,
+      "debit": 8700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSBELT-26-CCAR",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 500,
+          "modeledDebit": 600,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-cfb-sbeltchamp-2026-12-04-w-coast",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8000,
+          "modeledDebit": 8100,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFMWCQUAL-26-UNLV::aqc-cfb-mwc-2026-12-04-champq-unlv",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789112634882,
+      "quantity": 4,
+      "modeledNet": 1100,
+      "debit": 38500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFMWCQUAL-26-UNLV",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 6300,
+          "modeledDebit": 26000,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-mwc-2026-12-04-champq-unlv",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 3000,
+          "modeledDebit": 12500,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789112635382,
+      "quantity": 2,
+      "modeledNet": 1100,
+      "debit": 18700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFCUSAQUAL-26-WKU",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7700,
+          "modeledDebit": 15800,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-cusa-2026-12-04-champq-wkent",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1400,
+          "modeledDebit": 2900,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-HOU::aachc-nfl-2027-01-10-lastundefeated-hou",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789113964677,
+      "quantity": 2,
+      "modeledNet": 1100,
+      "debit": 18700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-HOU",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 500,
+          "modeledDebit": 1200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-hou",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8700,
+          "modeledDebit": 17500,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-ECU::aqc-cfb-aac-2026-12-05-champq-ecar",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123019994,
+      "quantity": 3,
+      "modeledNet": 1100,
+      "debit": 28600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAACQUAL-26-ECU",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 2300,
+          "modeledDebit": 7500,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-aac-2026-12-05-champq-ecar",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 6900,
+          "modeledDebit": 21100,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-NAVY::aqc-cfb-aac-2026-12-05-champq-navy",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789110233946,
+      "quantity": 2,
+      "modeledNet": 1000,
+      "debit": 18800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAACQUAL-26-NAVY",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 6700,
+          "modeledDebit": 13800,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-aac-2026-12-05-champq-navy",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 2400,
+          "modeledDebit": 5000,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789122653581,
+      "quantity": 1,
+      "modeledNet": 1000,
+      "debit": 8900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-BRE",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1000,
+          "modeledDebit": 1100,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-bre",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7700,
+          "modeledDebit": 7800,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789125862554,
+      "quantity": 2,
+      "modeledNet": 1000,
+      "debit": 18800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-LV",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1300,
+          "modeledDebit": 2800,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-lv",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7900,
+          "modeledDebit": 16000,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSBELTQUAL-26-JMU::aqc-cfb-sbelt-2026-12-04-champq-jmad",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789108769843,
+      "quantity": 3,
+      "modeledNet": 900,
+      "debit": 28800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSBELTQUAL-26-JMU",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7000,
+          "modeledDebit": 21600,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sbelt-2026-12-04-champq-jmad",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 2300,
+          "modeledDebit": 7200,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789110231841,
+      "quantity": 3,
+      "modeledNet": 900,
+      "debit": 28800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFCUSAQUAL-26-MTU",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1100,
+          "modeledDebit": 3600,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-cusa-2026-12-04-champq-mtnst",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8300,
+          "modeledDebit": 25200,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123025201,
+      "quantity": 1,
+      "modeledNet": 900,
+      "debit": 9000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1300,
+          "modeledDebit": 1400,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7500,
+          "modeledDebit": 7600,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAAC-26-RICE::tec-cfb-aacchamp-2026-12-05-w-rice",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789132338171,
+      "quantity": 2,
+      "modeledNet": 900,
+      "debit": 18900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAAC-26-RICE",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 100,
+          "modeledDebit": 400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-cfb-aacchamp-2026-12-05-w-rice",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 9200,
+          "modeledDebit": 18500,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789107635122,
+      "quantity": 7,
+      "modeledNet": 800,
+      "debit": 68500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-LSU",
+          "side": "yes",
+          "quantity": 7,
+          "limitPrice": 1300,
+          "modeledDebit": 9800,
+          "feeUpper": 700
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-lsu",
+          "side": "no",
+          "quantity": 7,
+          "limitPrice": 8300,
+          "modeledDebit": 58700,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFMWCQUAL-26-UNLV::aqc-cfb-mwc-2026-12-04-champq-unlv",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789112634882,
+      "quantity": 3,
+      "modeledNet": 800,
+      "debit": 28900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFMWCQUAL-26-UNLV",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 6300,
+          "modeledDebit": 19500,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-mwc-2026-12-04-champq-unlv",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 3000,
+          "modeledDebit": 9400,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789125862554,
+      "quantity": 7,
+      "modeledNet": 800,
+      "debit": 68500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-LV",
+          "side": "yes",
+          "quantity": 7,
+          "limitPrice": 1300,
+          "modeledDebit": 9800,
+          "feeUpper": 700
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-lv",
+          "side": "no",
+          "quantity": 7,
+          "limitPrice": 8300,
+          "modeledDebit": 58700,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789107635122,
+      "quantity": 6,
+      "modeledNet": 700,
+      "debit": 58700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-LSU",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 1300,
+          "modeledDebit": 8400,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-lsu",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 8300,
+          "modeledDebit": 50300,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFB10QUAL-26-IND::aqc-cfb-bigten-2026-12-05-champq-ind",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107881143,
+      "quantity": 1,
+      "modeledNet": 700,
+      "debit": 9200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFB10QUAL-26-IND",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6100,
+          "modeledDebit": 6300,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-bigten-2026-12-05-champq-ind",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2800,
+          "modeledDebit": 2900,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-ECU::aqc-cfb-aac-2026-12-05-champq-ecar",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123019994,
+      "quantity": 2,
+      "modeledNet": 700,
+      "debit": 19100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAACQUAL-26-ECU",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 2300,
+          "modeledDebit": 5000,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-aac-2026-12-05-champq-ecar",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 6900,
+          "modeledDebit": 14100,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124141369,
+      "quantity": 4,
+      "modeledNet": 700,
+      "debit": 38900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-OKLA",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 2500,
+          "modeledDebit": 10800,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 6900,
+          "modeledDebit": 28100,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-ND::aachc-cfb-undefeated-2026-11-28-nd",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124994451,
+      "quantity": 1,
+      "modeledNet": 700,
+      "debit": 9200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-ND",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 3800,
+          "modeledDebit": 4000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-nd",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 5100,
+          "modeledDebit": 5200,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789125862554,
+      "quantity": 6,
+      "modeledNet": 700,
+      "debit": 58700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-LV",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 1300,
+          "modeledDebit": 8400,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-lv",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 8300,
+          "modeledDebit": 50300,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789107635122,
+      "quantity": 5,
+      "modeledNet": 600,
+      "debit": 48900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-LSU",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 1300,
+          "modeledDebit": 7000,
+          "feeUpper": 500
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-lsu",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 8300,
+          "modeledDebit": 41900,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFACCQUAL-26-SMU::aqc-cfb-acc-2026-12-05-champq-smu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789108544232,
+      "quantity": 4,
+      "modeledNet": 600,
+      "debit": 39000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFACCQUAL-26-SMU",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 4200,
+          "modeledDebit": 17600,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-acc-2026-12-05-champq-smu",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 5200,
+          "modeledDebit": 21400,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSBELTQUAL-26-JMU::aqc-cfb-sbelt-2026-12-04-champq-jmad",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789108769843,
+      "quantity": 2,
+      "modeledNet": 600,
+      "debit": 19200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSBELTQUAL-26-JMU",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7000,
+          "modeledDebit": 14400,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sbelt-2026-12-04-champq-jmad",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 2300,
+          "modeledDebit": 4800,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789110231841,
+      "quantity": 2,
+      "modeledNet": 600,
+      "debit": 19200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFCUSAQUAL-26-MTU",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1100,
+          "modeledDebit": 2400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-cusa-2026-12-04-champq-mtnst",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8300,
+          "modeledDebit": 16800,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124141369,
+      "quantity": 8,
+      "modeledNet": 600,
+      "debit": 78600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-OKLA",
+          "side": "yes",
+          "quantity": 8,
+          "limitPrice": 2500,
+          "modeledDebit": 21600,
+          "feeUpper": 1600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "side": "no",
+          "quantity": 8,
+          "limitPrice": 7000,
+          "modeledDebit": 57000,
+          "feeUpper": 1000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789125862554,
+      "quantity": 3,
+      "modeledNet": 600,
+      "debit": 29100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-LV",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1300,
+          "modeledDebit": 4200,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-lv",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8200,
+          "modeledDebit": 24900,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789107635122,
+      "quantity": 4,
+      "modeledNet": 500,
+      "debit": 39100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-LSU",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1300,
+          "modeledDebit": 5600,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-lsu",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8300,
+          "modeledDebit": 33500,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-UGA::aqc-cfb-sec-2026-12-05-champq-ga",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107887558,
+      "quantity": 1,
+      "modeledNet": 500,
+      "debit": 9400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-UGA",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 5100,
+          "modeledDebit": 5300,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ga",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 4000,
+          "modeledDebit": 4100,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFACCQUAL-26-SMU::aqc-cfb-acc-2026-12-05-champq-smu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789108544232,
+      "quantity": 3,
+      "modeledNet": 500,
+      "debit": 29200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFACCQUAL-26-SMU",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 4200,
+          "modeledDebit": 13200,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-acc-2026-12-05-champq-smu",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 5200,
+          "modeledDebit": 16000,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSBELTQUAL-26-JMU::aqc-cfb-sbelt-2026-12-04-champq-jmad",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789108769843,
+      "quantity": 1,
+      "modeledNet": 500,
+      "debit": 9400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSBELTQUAL-26-JMU",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6800,
+          "modeledDebit": 7000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sbelt-2026-12-04-champq-jmad",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2300,
+          "modeledDebit": 2400,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-NAVY::aqc-cfb-aac-2026-12-05-champq-navy",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789110233946,
+      "quantity": 1,
+      "modeledNet": 500,
+      "debit": 9400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAACQUAL-26-NAVY",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6700,
+          "modeledDebit": 6900,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-aac-2026-12-05-champq-navy",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2400,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFMWCQUAL-26-UNLV::aqc-cfb-mwc-2026-12-04-champq-unlv",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789112634882,
+      "quantity": 2,
+      "modeledNet": 500,
+      "debit": 19300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFMWCQUAL-26-UNLV",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 6300,
+          "modeledDebit": 13000,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-mwc-2026-12-04-champq-unlv",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 3000,
+          "modeledDebit": 6300,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789112635382,
+      "quantity": 1,
+      "modeledNet": 500,
+      "debit": 9400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFCUSAQUAL-26-WKU",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7700,
+          "modeledDebit": 7900,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-cusa-2026-12-04-champq-wkent",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-HOU::aachc-nfl-2027-01-10-lastundefeated-hou",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789113964677,
+      "quantity": 1,
+      "modeledNet": 500,
+      "debit": 9400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-HOU",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 500,
+          "modeledDebit": 600,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-hou",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8700,
+          "modeledDebit": 8800,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124141369,
+      "quantity": 3,
+      "modeledNet": 500,
+      "debit": 29200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-OKLA",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 2500,
+          "modeledDebit": 8100,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 6900,
+          "modeledDebit": 21100,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124141369,
+      "quantity": 7,
+      "modeledNet": 500,
+      "debit": 68800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-OKLA",
+          "side": "yes",
+          "quantity": 7,
+          "limitPrice": 2500,
+          "modeledDebit": 18900,
+          "feeUpper": 1400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "side": "no",
+          "quantity": 7,
+          "limitPrice": 7000,
+          "modeledDebit": 49900,
+          "feeUpper": 900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789125862554,
+      "quantity": 1,
+      "modeledNet": 500,
+      "debit": 9400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-LV",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1300,
+          "modeledDebit": 1400,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-lv",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7900,
+          "modeledDebit": 8000,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789125862554,
+      "quantity": 5,
+      "modeledNet": 500,
+      "debit": 49000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-LV",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 1300,
+          "modeledDebit": 7000,
+          "feeUpper": 500
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-lv",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 8300,
+          "modeledDebit": 42000,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789129628916,
+      "quantity": 4,
+      "modeledNet": 500,
+      "debit": 39100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-TEX",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1100,
+          "modeledDebit": 4800,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-tx",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8500,
+          "modeledDebit": 34300,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-NFO::aachc-epl-2027-05-30-relegation-not",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789129858101,
+      "quantity": 2,
+      "modeledNet": 500,
+      "debit": 19300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-NFO",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8500,
+          "modeledDebit": 17200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-not",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1000,
+          "modeledDebit": 2100,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAAC-26-RICE::tec-cfb-aacchamp-2026-12-05-w-rice",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789132338171,
+      "quantity": 1,
+      "modeledNet": 500,
+      "debit": 9400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAAC-26-RICE",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 100,
+          "modeledDebit": 200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-cfb-aacchamp-2026-12-05-w-rice",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 9200,
+          "modeledDebit": 9200,
+          "feeUpper": 0
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-IND::aachc-cfb-undefeated-2026-11-28-ind",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107287670,
+      "quantity": 3,
+      "modeledNet": 400,
+      "debit": 29300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-IND",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8400,
+          "modeledDebit": 25500,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-ind",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1200,
+          "modeledDebit": 3800,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-DAL::aachc-nfl-2027-01-10-lastundefeated-dal",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789109220488,
+      "quantity": 1,
+      "modeledNet": 400,
+      "debit": 9500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-DAL",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 400,
+          "modeledDebit": 500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-dal",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8900,
+          "modeledDebit": 9000,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-ECU::aqc-cfb-aac-2026-12-05-champq-ecar",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123019994,
+      "quantity": 1,
+      "modeledNet": 400,
+      "debit": 9500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFAACQUAL-26-ECU",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2300,
+          "modeledDebit": 2500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-aac-2026-12-05-champq-ecar",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6900,
+          "modeledDebit": 7000,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124141369,
+      "quantity": 5,
+      "modeledNet": 400,
+      "debit": 49100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-OKLA",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 2500,
+          "modeledDebit": 13500,
+          "feeUpper": 1000
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 7000,
+          "modeledDebit": 35600,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124141369,
+      "quantity": 6,
+      "modeledNet": 400,
+      "debit": 59000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-OKLA",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 2500,
+          "modeledDebit": 16200,
+          "feeUpper": 1200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 7000,
+          "modeledDebit": 42800,
+          "feeUpper": 800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789125862554,
+      "quantity": 4,
+      "modeledNet": 400,
+      "debit": 39200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-LV",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1300,
+          "modeledDebit": 5600,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-lv",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8300,
+          "modeledDebit": 33600,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-UTAH::aachc-cfb-undefeated-2026-11-28-utah",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127109077,
+      "quantity": 3,
+      "modeledNet": 400,
+      "debit": 29300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-UTAH",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 800,
+          "modeledDebit": 2700,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-utah",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8800,
+          "modeledDebit": 26600,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 19,
+      "modeledNet": 400,
+      "debit": 187700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 19,
+          "limitPrice": 1300,
+          "modeledDebit": 26600,
+          "feeUpper": 1900
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 19,
+          "limitPrice": 8400,
+          "modeledDebit": 161100,
+          "feeUpper": 1500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 20,
+      "modeledNet": 400,
+      "debit": 197600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 20,
+          "limitPrice": 1300,
+          "modeledDebit": 28000,
+          "feeUpper": 2000
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 20,
+          "limitPrice": 8400,
+          "modeledDebit": 169600,
+          "feeUpper": 1600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 21,
+      "modeledNet": 400,
+      "debit": 207500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 21,
+          "limitPrice": 1300,
+          "modeledDebit": 29400,
+          "feeUpper": 2100
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 21,
+          "limitPrice": 8400,
+          "modeledDebit": 178100,
+          "feeUpper": 1700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789129628916,
+      "quantity": 3,
+      "modeledNet": 400,
+      "debit": 29300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-TEX",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1100,
+          "modeledDebit": 3600,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-tx",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8500,
+          "modeledDebit": 25700,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-NFO::aachc-epl-2027-05-30-relegation-not",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789132338648,
+      "quantity": 1,
+      "modeledNet": 400,
+      "debit": 9500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-NFO",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8500,
+          "modeledDebit": 8600,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-not",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 900,
+          "modeledDebit": 900,
+          "feeUpper": 0
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-IND::aachc-cfb-undefeated-2026-11-28-ind",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107287670,
+      "quantity": 2,
+      "modeledNet": 300,
+      "debit": 19500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-IND",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8400,
+          "modeledDebit": 17000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-ind",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1200,
+          "modeledDebit": 2500,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107335765,
+      "quantity": 4,
+      "modeledNet": 300,
+      "debit": 39300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-TEX",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 9300,
+          "modeledDebit": 37600,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-tx",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 400,
+          "modeledDebit": 1700,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789107635122,
+      "quantity": 3,
+      "modeledNet": 300,
+      "debit": 29400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-LSU",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1300,
+          "modeledDebit": 4200,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-lsu",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8300,
+          "modeledDebit": 25200,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFACCQUAL-26-SMU::aqc-cfb-acc-2026-12-05-champq-smu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789108544232,
+      "quantity": 2,
+      "modeledNet": 300,
+      "debit": 19500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFACCQUAL-26-SMU",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 4200,
+          "modeledDebit": 8800,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-acc-2026-12-05-champq-smu",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 5200,
+          "modeledDebit": 10700,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-KC::aachc-nfl-2027-01-10-lastundefeated-kc",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789109220489,
+      "quantity": 2,
+      "modeledNet": 300,
+      "debit": 19500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-KC",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 800,
+          "modeledDebit": 1800,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-kc",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8800,
+          "modeledDebit": 17700,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789110231841,
+      "quantity": 1,
+      "modeledNet": 300,
+      "debit": 9600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFCUSAQUAL-26-MTU",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1100,
+          "modeledDebit": 1200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-cusa-2026-12-04-champq-mtnst",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8300,
+          "modeledDebit": 8400,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-ALA::aachc-cfb-undefeated-2026-11-28-ala",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789110232184,
+      "quantity": 2,
+      "modeledNet": 300,
+      "debit": 19500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-ALA",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 800,
+          "modeledDebit": 1800,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-ala",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8800,
+          "modeledDebit": 17700,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFMWCQUAL-26-UNLV::aqc-cfb-mwc-2026-12-04-champq-unlv",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789112634882,
+      "quantity": 1,
+      "modeledNet": 300,
+      "debit": 9600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFMWCQUAL-26-UNLV",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6300,
+          "modeledDebit": 6500,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-mwc-2026-12-04-champq-unlv",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 3000,
+          "modeledDebit": 3100,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-ALA::aqc-cfb-sec-2026-12-05-champq-ala",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123875225,
+      "quantity": 4,
+      "modeledNet": 300,
+      "debit": 39300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-ALA",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 2500,
+          "modeledDebit": 10800,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ala",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 7000,
+          "modeledDebit": 28500,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124141369,
+      "quantity": 2,
+      "modeledNet": 300,
+      "debit": 19500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-OKLA",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 2500,
+          "modeledDebit": 5400,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 6900,
+          "modeledDebit": 14100,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-UTAH::aachc-cfb-undefeated-2026-11-28-utah",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127109077,
+      "quantity": 2,
+      "modeledNet": 300,
+      "debit": 19500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-UTAH",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 800,
+          "modeledDebit": 1800,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-utah",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8800,
+          "modeledDebit": 17700,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 13,
+      "modeledNet": 300,
+      "debit": 128400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 13,
+          "limitPrice": 1300,
+          "modeledDebit": 18200,
+          "feeUpper": 1300
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 13,
+          "limitPrice": 8400,
+          "modeledDebit": 110200,
+          "feeUpper": 1000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 14,
+      "modeledNet": 300,
+      "debit": 138300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 14,
+          "limitPrice": 1300,
+          "modeledDebit": 19600,
+          "feeUpper": 1400
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 14,
+          "limitPrice": 8400,
+          "modeledDebit": 118700,
+          "feeUpper": 1100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 15,
+      "modeledNet": 300,
+      "debit": 148200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 15,
+          "limitPrice": 1300,
+          "modeledDebit": 21000,
+          "feeUpper": 1500
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 15,
+          "limitPrice": 8400,
+          "modeledDebit": 127200,
+          "feeUpper": 1200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 16,
+      "modeledNet": 300,
+      "debit": 158100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 16,
+          "limitPrice": 1300,
+          "modeledDebit": 22400,
+          "feeUpper": 1600
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 16,
+          "limitPrice": 8400,
+          "modeledDebit": 135700,
+          "feeUpper": 1300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 17,
+      "modeledNet": 300,
+      "debit": 168000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 17,
+          "limitPrice": 1300,
+          "modeledDebit": 23800,
+          "feeUpper": 1700
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 17,
+          "limitPrice": 8400,
+          "modeledDebit": 144200,
+          "feeUpper": 1400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 18,
+      "modeledNet": 300,
+      "debit": 177900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 18,
+          "limitPrice": 1300,
+          "modeledDebit": 25200,
+          "feeUpper": 1800
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 18,
+          "limitPrice": 8400,
+          "modeledDebit": 152700,
+          "feeUpper": 1500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-CRY::aachc-epl-2027-05-30-relegation-cry",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789127122638,
+      "quantity": 1,
+      "modeledNet": 300,
+      "debit": 9600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXEPLRELEGATION-27-CRY",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7500,
+          "modeledDebit": 7700,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-epl-2027-05-30-relegation-cry",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1800,
+          "modeledDebit": 1900,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-IND::aachc-cfb-undefeated-2026-11-28-ind",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107287670,
+      "quantity": 1,
+      "modeledNet": 200,
+      "debit": 9700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-IND",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8300,
+          "modeledDebit": 8400,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-ind",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1200,
+          "modeledDebit": 1300,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107335765,
+      "quantity": 2,
+      "modeledNet": 200,
+      "debit": 19600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-TEX",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 9300,
+          "modeledDebit": 18800,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-tx",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 400,
+          "modeledDebit": 800,
+          "feeUpper": 0
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107335765,
+      "quantity": 3,
+      "modeledNet": 200,
+      "debit": 29500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-TEX",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 9300,
+          "modeledDebit": 28200,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-tx",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 400,
+          "modeledDebit": 1300,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789107635122,
+      "quantity": 2,
+      "modeledNet": 200,
+      "debit": 19600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-LSU",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1300,
+          "modeledDebit": 2800,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-lsu",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8300,
+          "modeledDebit": 16800,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFACCQUAL-26-SMU::aqc-cfb-acc-2026-12-05-champq-smu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789108544232,
+      "quantity": 1,
+      "modeledNet": 200,
+      "debit": 9700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFACCQUAL-26-SMU",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 4200,
+          "modeledDebit": 4400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-acc-2026-12-05-champq-smu",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 5200,
+          "modeledDebit": 5300,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-ALA::aqc-cfb-sec-2026-12-05-champq-ala",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123875225,
+      "quantity": 3,
+      "modeledNet": 200,
+      "debit": 29500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-ALA",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 2500,
+          "modeledDebit": 8100,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ala",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 7000,
+          "modeledDebit": 21400,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789124141369,
+      "quantity": 1,
+      "modeledNet": 200,
+      "debit": 9700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-OKLA",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2500,
+          "modeledDebit": 2700,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 6900,
+          "modeledDebit": 7000,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 10,
+      "modeledNet": 200,
+      "debit": 98800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 10,
+          "limitPrice": 1300,
+          "modeledDebit": 14000,
+          "feeUpper": 1000
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 10,
+          "limitPrice": 8400,
+          "modeledDebit": 84800,
+          "feeUpper": 800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 11,
+      "modeledNet": 200,
+      "debit": 108700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 11,
+          "limitPrice": 1300,
+          "modeledDebit": 15400,
+          "feeUpper": 1100
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 11,
+          "limitPrice": 8400,
+          "modeledDebit": 93300,
+          "feeUpper": 900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127072112,
+      "quantity": 12,
+      "modeledNet": 200,
+      "debit": 118600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-GS",
+          "side": "yes",
+          "quantity": 12,
+          "limitPrice": 1300,
+          "modeledDebit": 16800,
+          "feeUpper": 1200
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-gsv",
+          "side": "no",
+          "quantity": 12,
+          "limitPrice": 8400,
+          "modeledDebit": 101800,
+          "feeUpper": 1000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSBELT-26-LT::tec-cfb-sbeltchamp-2026-12-04-w-loutch",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127901231,
+      "quantity": 2,
+      "modeledNet": 200,
+      "debit": 19600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSBELT-26-LT",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1200,
+          "modeledDebit": 2600,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-cfb-sbeltchamp-2026-12-04-w-loutch",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8400,
+          "modeledDebit": 17000,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789128947466,
+      "quantity": 2,
+      "modeledNet": 200,
+      "debit": 19600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-TEX",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1100,
+          "modeledDebit": 2400,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-tx",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8500,
+          "modeledDebit": 17200,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789107335765,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-TEX",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 9300,
+          "modeledDebit": 9400,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-tx",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 400,
+          "modeledDebit": 400,
+          "feeUpper": 0
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789107635122,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-LSU",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1300,
+          "modeledDebit": 1400,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-lsu",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8300,
+          "modeledDebit": 8400,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNFLLASTTOLOSE-27-KC::aachc-nfl-2027-01-10-lastundefeated-kc",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789109220489,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLLASTTOLOSE-27-KC",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 900,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-nfl-2027-01-10-lastundefeated-kc",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8800,
+          "modeledDebit": 8900,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-UGA::aachc-cfb-undefeated-2026-11-28-ga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789110219048,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-UGA",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1800,
+          "modeledDebit": 2000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-ga",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7700,
+          "modeledDebit": 7800,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-ALA::aachc-cfb-undefeated-2026-11-28-ala",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789110232184,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-ALA",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 900,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-ala",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8800,
+          "modeledDebit": 8900,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFB12QUAL-26-BYU::aqc-cfb-big12-2026-12-04-champq-byu",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789110344582,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFB12QUAL-26-BYU",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 4000,
+          "modeledDebit": 4200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-big12-2026-12-04-champq-byu",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 5500,
+          "modeledDebit": 5600,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-ALA::aqc-cfb-sec-2026-12-05-champq-ala",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123875225,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-ALA",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2500,
+          "modeledDebit": 2700,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ala",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7000,
+          "modeledDebit": 7100,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-ALA::aqc-cfb-sec-2026-12-05-champq-ala",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789123875225,
+      "quantity": 2,
+      "modeledNet": 100,
+      "debit": 19700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSECQ-26-ALA",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 2500,
+          "modeledDebit": 5400,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aqc-cfb-sec-2026-12-05-champq-ala",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7000,
+          "modeledDebit": 14300,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789125863229,
+      "quantity": 8,
+      "modeledNet": 100,
+      "debit": 79100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXWNBA-26-LV",
+          "side": "yes",
+          "quantity": 8,
+          "limitPrice": 1300,
+          "modeledDebit": 11200,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-wnba-champion-2026-10-31-w-lv",
+          "side": "no",
+          "quantity": 8,
+          "limitPrice": 8400,
+          "modeledDebit": 67900,
+          "feeUpper": 700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-IND::aachc-cfb-undefeated-2026-11-28-ind",
+      "orientation": "kalshi_no+pm_us_yes",
+      "at": 1789126616444,
+      "quantity": 4,
+      "modeledNet": 100,
+      "debit": 39500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-IND",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8400,
+          "modeledDebit": 34000,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-ind",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1300,
+          "modeledDebit": 5500,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-UTAH::aachc-cfb-undefeated-2026-11-28-utah",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127109077,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-UTAH",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 900,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-utah",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8800,
+          "modeledDebit": 8900,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFSBELT-26-LT::tec-cfb-sbeltchamp-2026-12-04-w-loutch",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789127901231,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFSBELT-26-LT",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1200,
+          "modeledDebit": 1300,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "tec-cfb-sbeltchamp-2026-12-04-w-loutch",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8400,
+          "modeledDebit": 8500,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789128947466,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNCAAFUNDEFEATED-26-TEX",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1100,
+          "modeledDebit": 1200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "aachc-cfb-undefeated-2026-11-28-tx",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8500,
+          "modeledDebit": 8600,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    }
+  ],
+  "submittedOrders": 0,
+  "confirmedFills": 0,
+  "interpretation": "Best observed historical states with assumed funds and both fills; not executable plans, independent earning events, arrival checks, or realized profit. Current matching is required, settlement equivalence remains unverified. Prices and fee estimates are based on recorded depth. Live one-contract pilot limits are unchanged."
+}

@@ -41,7 +41,7 @@ Kalshi's [current V2 create-order specification](https://docs.kalshi.com/api-ref
 
 The [Polymarket US order overview](https://docs.polymarket.us/api-reference/orders/overview) distinguishes order acknowledgments, partial fills, fills, and cancellations; includes IOC/FOK; and requires an automatic-order indicator for automated activity. Its NO exposure and price representation require explicit translation tests. Do not copy a generic YES/NO price directly into an order request without validating those semantics.
 
-No exchange write endpoint was called. Remaining launch work is concrete: establish a genuinely eligible pair with reviewed rules, support its actual fee/tick/quantity regime, implement and test authoritative order/fill/balance adapters and paired recovery, resolve sustained-observer stalls, and collect a realistic fill simulation before any live pilot entry. The accepted loss budget does not remove those implementation requirements.
+The explicitly nonbinding PM-US preview endpoint has been tested; no order submission or cancellation endpoint was called. Remaining launch work is concrete: establish a genuinely eligible pair with reviewed rules, support its actual fee/tick/quantity regime, implement and test authoritative order/fill/balance adapters and paired recovery, resolve sustained-observer stalls, and collect a realistic fill simulation before any live pilot entry. The accepted loss budget does not remove those implementation requirements.
 
 ## Validation
 
@@ -52,3 +52,12 @@ The prior foundation checkpoint had 130 passing tests, including 15 pilot regres
 The target is automatic execution, not alerts. The public [ARBS page](https://www.arbs.xyz/) describes a scanner with manual user execution; its public page does not establish the described early-exit crossing feature. Its generic Polymarket coverage is not evidence of Polymarket US liquidity.
 
 An early exit must price the actual owned contracts against executable bids on both venues, subtract sale fees and the actual entry costs, and confirm both sales before reporting realized profit. A displayed cross alone is insufficient. Unmatched fills need a separate exposure-recovery path. Longer settlement horizons are acceptable, but rule differences, void outcomes, and incomplete fills prevent describing an unverified candidate as guaranteed profit. A quote-only early-exit evaluator implements bid/depth, actual entry cost, fee, freshness and inventory checks. It never reports realized profit. Early-exit execution, sale reconciliation and venue transports remain unimplemented.
+
+## Read-only execution evidence follow-up
+
+[Existing order checks](existing-order-schema-check.json) validate one completed Kalshi order and one canceled PM-US order with three partial-fill records. Individual fills and the fetched order agree on quantity and fees; Kalshi's cumulative fill cost also agrees. These are pre-existing user holdings, never bot trades. The canceled PM-US order retains inventory and must not release its filled amount as unused cash.
+
+The order-evidence adapter refuses incomplete fill totals, inconsistent fees, unknown states, wrong order/market/side/venue, and unsupported precision. It reports source update time without inventing an exchange revision. Connecting this evidence to the durable intent ledger still requires serialized reconciliation and bot-owned order registration. The fill journal survives duplicate replay/restart, but does not itself prove order completion or apply accounting adjustments. Corrections/rebates outside the supported taker path remain fail-closed. No automatic submission or profit claim is enabled.
+
+
+Fill/order evidence uses explicit microdollar fields so six-decimal fees and fractional trade notional remain exact. The preflight/reservation unit remains $0.0001; no implicit conversion or automatic evidence-to-ledger bridge has been added. The Kalshi whole-contract fee estimate is not a certified fractional-fill bound; see the latest fee-rounding section in PROOF-OF-EDGE.md before any fee gate is enabled.

@@ -1,0 +1,23 @@
+{
+  "mode": "READ_ONLY_EXISTING_ACCOUNT_RECORD_VALIDATION",
+  "date": "2026-09-11",
+  "kalshi": {
+    "fillRecordsParsed": 1,
+    "orderGetStatus": 200,
+    "orderState": "FILLED",
+    "orderAndFillTotalsAgree": true,
+    "scope": "exchange index 0, primary subaccount"
+  },
+  "polymarketUS": {
+    "fillRecordsParsed": 3,
+    "orderGetStatus": 200,
+    "orderState": "CANCELED",
+    "partialInventoryRemains": true,
+    "orderAndFillTotalsAgree": true,
+    "accountActivityOwnershipSelectorValidated": true
+  },
+  "submittedOrders": 0,
+  "botFills": 0,
+  "realizedBotProfitUSD": 0,
+  "interpretation": "Existing user trades only. Confirms supported response parsing and reconciliation for these records, not every exchange state or future execution. Account identifiers, quantities and amounts omitted. Existing holdings were not imported into a bot ledger."
+}

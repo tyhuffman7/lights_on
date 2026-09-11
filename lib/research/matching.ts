@@ -4,6 +4,7 @@ import {
   categoryName,
   generalHints,
   netflixChart,
+  netWorthSource,
 } from "./identity.ts";
 import type { Market, Pair } from "../arb/types.ts";
 import { equivalent } from "./mappings.ts";
@@ -113,6 +114,7 @@ export function discoverCandidates(
         m: { ...m, identity },
         structured: fields(m),
         chart: netflixChart(m.rules),
+        netWorthSource: netWorthSource(m.rules),
         identity,
         // Primary payout dates/concepts disambiguate generic titles. Exclude later
         // exception paragraphs and examples; preserve title-based entity/placement.
@@ -225,6 +227,14 @@ export function discoverCandidates(
             right.chart![k] !== undefined &&
             left.chart![k] !== right.chart![k],
         )
+      ) {
+        reject("structuralConflict");
+        continue;
+      }
+      if (
+        left.netWorthSource &&
+        right.netWorthSource &&
+        left.netWorthSource !== right.netWorthSource
       ) {
         reject("structuralConflict");
         continue;

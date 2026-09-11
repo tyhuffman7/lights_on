@@ -1,0 +1,180 @@
+{
+  "startedAt": 1789162803854,
+  "endedAt": 1789163104030,
+  "pairCount": 25,
+  "scope": {
+    "Financials": 4,
+    "Economics": 8,
+    "Entertainment": 13
+  },
+  "telemetry": {
+    "at": 1789163103990,
+    "host": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M1 Pro",
+      "runtime": "v25.8.1"
+    },
+    "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+    "interval": {
+      "startMono": 290350.516916,
+      "endMono": 300303.775375,
+      "durationMs": 9953.258459000033
+    },
+    "intervalRates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0,
+      "messages": 0.2009392208831411,
+      "bookUpdates": 0.2009392208831411,
+      "evaluations": 0.4018784417662822,
+      "STRICT_EXECUTION_FRESH": 0.2009392208831411,
+      "EXCHANGE_TIMESTAMP_OLD": 0,
+      "reconciliationRequests": 0.4018784417662822,
+      "kalshiRestRequests": 0.2009392208831411,
+      "polyRestRequests": 0.2009392208831411,
+      "reconciliationOlderRestSnapshots": 0.2009392208831411,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 0.2009392208831411,
+      "strictBookAgeOnlyRejectedEvaluations": 0.10046961044157054
+    },
+    "uptimeMs": 300094.62458400003,
+    "counters": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 2,
+      "messages": 174,
+      "bookUpdates": 173,
+      "evaluations": 302,
+      "STRICT_EXECUTION_FRESH": 160,
+      "EXCHANGE_TIMESTAMP_OLD": 24,
+      "reconciliationRequests": 149,
+      "kalshiRestRequests": 267,
+      "polyRestRequests": 170,
+      "reconciliationOlderRestSnapshots": 46,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 118,
+      "strictBookAgeOnlyRejectedEvaluations": 8
+    },
+    "rates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0.006664564561169526,
+      "messages": 0.5798171168217489,
+      "bookUpdates": 0.5764848345411641,
+      "evaluations": 1.0063492487365986,
+      "STRICT_EXECUTION_FRESH": 0.5331651648935621,
+      "EXCHANGE_TIMESTAMP_OLD": 0.07997477473403432,
+      "reconciliationRequests": 0.49651005980712976,
+      "kalshiRestRequests": 0.8897193689161318,
+      "polyRestRequests": 0.5664879876994098,
+      "reconciliationOlderRestSnapshots": 0.15328498490689912,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 0.3932093091090021,
+      "strictBookAgeOnlyRejectedEvaluations": 0.026658258244678105
+    },
+    "latencyMs": {
+      "persistenceAck": {
+        "count": 3429,
+        "p50": 0.3454159999964759,
+        "p95": 2.5898330000054557,
+        "p99": 17.458250000025146
+      },
+      "persistenceWrite": {
+        "count": 3429,
+        "p50": 0.08029200000237324,
+        "p95": 0.5056660000045667,
+        "p99": 1.6925840000039898
+      },
+      "capacityWorkerRoundTrip": {
+        "count": 6,
+        "p50": 144.9129589999793,
+        "p95": 159.31091600001673,
+        "p99": 159.31091600001673
+      },
+      "polyExchangeToReceive": {
+        "count": 89,
+        "p50": -17,
+        "p95": 309332,
+        "p99": 1327258
+      },
+      "processingLag": {
+        "count": 173,
+        "p50": 0.16704199999730918,
+        "p95": 0.4038750000036089,
+        "p99": 1.2979580000001079
+      },
+      "evaluation": {
+        "count": 173,
+        "p50": 1.3434159999997064,
+        "p95": 4.317542000004323,
+        "p99": 5.318167000019457
+      },
+      "processing": {
+        "count": 173,
+        "p50": 1.5113329999730922,
+        "p95": 4.724874999985332,
+        "p99": 5.5604590000002645
+      },
+      "validBookProcessing": {
+        "count": 173,
+        "p50": 1.5113329999730922,
+        "p95": 4.724874999985332,
+        "p99": 5.5604590000002645
+      },
+      "receiveToPersistenceAck": {
+        "count": 173,
+        "p50": 2.527209000007133,
+        "p95": 11.617334000000028,
+        "p99": 18.875583000000006
+      },
+      "kalshiRestRoundTrip": {
+        "count": 267,
+        "p50": 166.74679099999776,
+        "p95": 229.53883400000632,
+        "p99": 252.26250000001164
+      },
+      "polyRestRoundTrip": {
+        "count": 170,
+        "p50": 187.7924580000108,
+        "p95": 283.7094999999972,
+        "p99": 450.9670000000042
+      },
+      "kalshiExchangeToReceive": {
+        "count": 60,
+        "p50": -137,
+        "p95": -81,
+        "p99": -73
+      }
+    },
+    "eventLoopMs": {
+      "p50": 12.058623,
+      "p95": 14.106623,
+      "p99": 15.818751,
+      "max": 83.820543
+    },
+    "cpuPercent": 2.1221459760660912,
+    "memory": {
+      "rss": 121733120,
+      "heapTotal": 23511040,
+      "heapUsed": 17077464,
+      "external": 10570628,
+      "arrayBuffers": 220286
+    },
+    "sampleLimit": 10000
+  },
+  "storage": {
+    "processed": 173,
+    "persisted": 0,
+    "ringRecords": 48,
+    "ringBytes": 47562,
+    "logicalBytes": 462848,
+    "bytesPerHour": 2286958.979272504,
+    "projectedGBPerDay": 0.0548870155025401,
+    "evidencePerSecond": 0
+  },
+  "persistence": {
+    "queueDepth": 0,
+    "queueBytes": 0,
+    "lastAckAt": 1789163103937,
+    "failed": false
+  },
+  "interpretation": "Five-minute selected-candidate research observation; no orders or fills. Not a representative income estimate."
+}

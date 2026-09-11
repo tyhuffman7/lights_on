@@ -725,3 +725,30 @@ test("Netflix candidates distinguish chart date, region, rank, format and explic
   assert.equal(matchCandidates([en], [nonEn]).length, 0);
   assert.equal(matchCandidates([a], [b])[0].status, "UNVERIFIED");
 });
+
+test("Net-worth markets with Forbes versus Bloomberg sources are not paired", () => {
+  const a = {
+    ...market("kalshi"),
+    category: "Economics",
+    title:
+      "Will Elon Musk's net worth be above $600 billion on December 31, 2026?",
+    outcome: "Above $600 billion",
+    rules:
+      "If Forbes reports that Elon Musk's net worth on December 31, 2026 is above $600 billion, then the market resolves to Yes.",
+  };
+  const b = {
+    ...market("poly"),
+    category: "finance",
+    title: "Above $600 Billion · Elon Musk Net Worth on December 31, 2026?",
+    outcome: "Yes",
+    rules:
+      "This market will settle to Yes if Elon Musk's net worth, according to the Bloomberg Billionaires Index, is above $600 billion on December 31, 2026.",
+  };
+  assert.equal(matchCandidates([a], [b]).length, 0);
+  const same = {
+    ...b,
+    rules: b.rules.replace("Bloomberg Billionaires Index", "Forbes"),
+  };
+  assert.equal(matchCandidates([a], [same]).length, 1);
+  assert.equal(matchCandidates([a], [same])[0].status, "UNVERIFIED");
+});

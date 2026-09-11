@@ -1,0 +1,70 @@
+{
+  "startedAt": 1789164810403,
+  "endedAt": 1789164967347,
+  "complete": true,
+  "errors": [],
+  "markets": {
+    "kalshi": 137965,
+    "poly": 105553
+  },
+  "open": {
+    "kalshi": 137965,
+    "poly": 105553
+  },
+  "unknownMinimumQuantity": 0,
+  "candidates": 1773,
+  "statusCounts": {
+    "UNVERIFIED": 1773
+  },
+  "categoryCounts": {
+    "Sports": 1474,
+    "Elections": 112,
+    "Entertainment": 154,
+    "Economics": 8,
+    "Politics": 25
+  },
+  "diagnostics": {
+    "comparisons": 22183502,
+    "blockedByIndex": 14511326351,
+    "comparisonLimitDeferred": 835794746,
+    "rejected": {
+      "structuralConflict": 10677974,
+      "insufficientSimilarity": 1523952,
+      "dateMismatch": 496118,
+      "thresholdMismatch": 8144400,
+      "outcomeMismatch": 1339285,
+      "other": 0
+    },
+    "categories": {
+      "kalshi": {
+        "sports": 83179,
+        "economics": 13679,
+        "climate and weather": 1269,
+        "mentions": 968,
+        "science and technology": 981,
+        "culture": 9119,
+        "politics": 23381,
+        "commodities": 852,
+        "crypto": 4044,
+        "ai": 4,
+        "business": 1,
+        "companies": 395,
+        "unknown": 88,
+        "social": 2,
+        "world": 3
+      },
+      "poly": {
+        "sports": 98070,
+        "politics": 6288,
+        "culture": 731,
+        "economics": 255,
+        "technology": 79,
+        "geopolitics": 9,
+        "crypto": 54,
+        "science": 7,
+        "climate": 60
+      }
+    }
+  },
+  "interpretation": "Sequential public catalog refresh and indexed candidate discovery. Catalog is not an atomic exchange snapshot; candidate similarity is not settlement equivalence or profitability. No orders."
+}
