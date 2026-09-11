@@ -32,6 +32,15 @@ function complement(ls: Level[]) {
 }
 export class BookCache {
   books = new Map<string, StreamBook>();
+  pendingSnapshots = new Set<string>();
+  quarantine(id: string) {
+    this.pendingSnapshots.add(id);
+    const b = this.get("kalshi", id);
+    if (b) {
+      b.valid = false;
+      b.connection = "RECOVERING";
+    }
+  }
   sequences = new Map<number, number>();
   subscriptions = new Map<string, number>();
   get(venue: Venue, id: string) {
@@ -40,6 +49,7 @@ export class BookCache {
   reset(venue: Venue) {
     this.invalidate(venue);
     if (venue === "kalshi") {
+      this.pendingSnapshots.clear();
       this.sequences.clear();
       this.subscriptions.clear();
     }
@@ -108,6 +118,7 @@ export class BookCache {
       this.subscriptions.set(id, sid);
       let yes: Level[], no: Level[];
       if (data.type === "orderbook_snapshot") {
+        this.pendingSnapshots.delete(id);
         if (
           (m.yes_dollars_fp !== undefined &&
             !Array.isArray(m.yes_dollars_fp)) ||
@@ -119,6 +130,7 @@ export class BookCache {
         yes = parse(m.yes_dollars_fp ?? []);
         no = parse(m.no_dollars_fp ?? []);
       } else {
+        if (this.pendingSnapshots.has(id)) return null;
         const old = this.get("kalshi", id);
         if (!old?.valid) throw new Error("Delta requires current snapshot");
         yes = structuredClone(old.yesBids);

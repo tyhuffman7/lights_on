@@ -32,7 +32,8 @@ export class ResearchStore {
    CREATE INDEX IF NOT EXISTS states_opportunity ON opportunity_states(opportunity_id,mono);
    CREATE TABLE IF NOT EXISTS latency_tests(id INTEGER PRIMARY KEY,opportunity_id TEXT NOT NULL REFERENCES opportunities(id),latency_ms INTEGER NOT NULL,first_venue TEXT NOT NULL,status TEXT NOT NULL,body TEXT NOT NULL,UNIQUE(opportunity_id,latency_ms,first_venue));
    CREATE TABLE IF NOT EXISTS diagnostics(id INTEGER PRIMARY KEY,session_id TEXT NOT NULL,at INTEGER NOT NULL,kind TEXT NOT NULL,body TEXT NOT NULL);
-   PRAGMA user_version=1;`);
+   CREATE TABLE IF NOT EXISTS session_stats(session_id TEXT PRIMARY KEY,body TEXT NOT NULL);
+   PRAGMA user_version=2;`);
   }
   rows(table: string) {
     if (!tables.has(table)) throw new Error("Unknown table");

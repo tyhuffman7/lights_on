@@ -2,6 +2,19 @@
 // These public metadata/text hints may block or rank pairs, never verify them.
 export type Identity = {
   sports: boolean;
+  season?: string;
+  sport?: string;
+  general?: {
+    person?: string;
+    event?: string;
+    company?: string;
+    ticker?: string;
+    asset?: string;
+    jurisdiction?: string;
+    indicator?: string;
+    window?: string;
+  };
+
   competition?: string;
   eventAt?: string;
   eventDate?: string;
@@ -19,7 +32,12 @@ export type Identity = {
   numbers: string[];
   units?: string;
   location?: string;
-  aliases?: { name: string; aliases: string[] }[];
+  aliases?: {
+    name: string;
+    aliases: string[];
+    venue?: string;
+    venueId?: string;
+  }[];
 };
 export const normalizeText = (x: unknown) =>
   String(x ?? "")
@@ -106,7 +124,9 @@ export function identity(
     categoryName(String(m.category ?? series?.category ?? "")) === "sports";
   const sides = m.marketSides ?? [],
     long = sides.find((s: any) => s.long === true);
-  const teams = sides.map((s: any) => s.team).filter(Boolean);
+  const teams = sides.map((s: any) => s.team ?? s.player).filter(Boolean);
+  if (!teams.length && m.player && typeof m.player === "object")
+    teams.push(m.player);
   const teamName = (t: any) => t.safeName || t.name;
   let competition = normalizeText(
     m.league ??
@@ -183,6 +203,56 @@ export function identity(
     : undefined;
   return {
     sports,
+    season: m.season ? String(m.season) : undefined,
+    sport:
+      normalizeText(m.sport) ||
+      (
+        {
+          nfl: "football",
+          cfb: "football",
+          nba: "basketball",
+          cbb: "basketball",
+          wcbb: "basketball",
+          wnba: "basketball",
+          mlb: "baseball",
+          nhl: "hockey",
+          atp: "tennis",
+          wta: "tennis",
+          ufc: "mma",
+        } as Record<string, string>
+      )[competition],
+    general: sports
+      ? undefined
+      : {
+          person:
+            typeof m.person === "string" ? normalizeText(m.person) : undefined,
+          event:
+            typeof m.eventName === "string"
+              ? normalizeText(m.eventName)
+              : undefined,
+          company:
+            typeof m.company === "string"
+              ? normalizeText(m.company)
+              : undefined,
+          ticker:
+            typeof m.stockTicker === "string"
+              ? m.stockTicker.toUpperCase()
+              : undefined,
+          asset:
+            typeof m.asset === "string" ? normalizeText(m.asset) : undefined,
+          jurisdiction:
+            typeof m.jurisdiction === "string"
+              ? normalizeText(m.jurisdiction)
+              : undefined,
+          indicator:
+            typeof m.indicator === "string"
+              ? normalizeText(m.indicator)
+              : undefined,
+          window:
+            typeof m.observationWindow === "string"
+              ? m.observationWindow
+              : undefined,
+        },
     competition: competition || undefined,
     eventAt,
     eventDate,
@@ -224,6 +294,11 @@ export function identity(
       .toLowerCase(),
     aliases: teams.map((t: any) => ({
       name: normalizeText(teamName(t)),
+      venue,
+      venueId:
+        t.id || t.teamId || t.playerId
+          ? String(t.id ?? t.teamId ?? t.playerId)
+          : undefined,
       aliases: [
         t.name,
         t.alias,

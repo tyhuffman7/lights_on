@@ -1,3 +1,5 @@
+import { freshnessResearch } from "../lib/research/freshness.ts";
+import type { ResearchActivity } from "../lib/research/review.ts";
 import { serialize } from "node:v8";
 import { Worker } from "node:worker_threads";
 import { randomUUID } from "node:crypto";
@@ -34,6 +36,10 @@ export class LiveRecorder {
   backlogBytes = 0;
   lastAckAt = Date.now();
   onFailure: () => void;
+  activity: Record<string, ResearchActivity> = {};
+  rawActive = new Set<string>();
+  streamHealthy: (venue: string, id: string) => boolean = () => false;
+  storage: Record<string, number> = {};
   next = 0;
   failed = false;
   closing = false;
@@ -78,6 +84,7 @@ export class LiveRecorder {
         this.pending.delete(m.id);
         this.backlogBytes -= p.bytes;
         this.lastAckAt = Date.now();
+        if (m.storage) this.storage = m.storage;
         telemetry.sample("persistenceAck", performance.now() - p.at);
         telemetry.sample("persistenceWrite", m.writeMs);
         if (p.receivedMono !== undefined)
@@ -133,7 +140,10 @@ export class LiveRecorder {
           if (code !== 0) reject(new Error("Research reader exited"));
         });
       });
-      if (result?.database) {
+      if (
+        result?.database &&
+        result.database.growthBytesPerSecond === undefined
+      ) {
         const bytes = result.database.bytes + result.database.walBytes,
           at = Date.now();
         result.database.growthBytesPerSecond = this.databaseSample
@@ -151,7 +161,14 @@ export class LiveRecorder {
   send(kind: string, data: any): Promise<any> {
     if (
       this.path !== ":memory:" &&
-      ["report", "sessions", "opportunities", "detail", "csv"].includes(kind)
+      [
+        "report",
+        "sessions",
+        "opportunities",
+        "detail",
+        "csv",
+        "activity",
+      ].includes(kind)
     )
       return this.read(kind, data);
     if (this.failed && kind !== "stop")
@@ -236,9 +253,73 @@ export class LiveRecorder {
           isVerified(m),
         );
         this.telemetry.count("evaluations", 2);
-        for (const e of evaluations[m.id])
+        const activity = (this.activity[m.id] ??= {});
+        activity.updates = (activity.updates ?? 0) + 1;
+        activity.depth = Math.min(
+          a.yes.reduce((n, l) => n + l.quantity, 0) +
+            a.no.reduce((n, l) => n + l.quantity, 0),
+          b.yes.reduce((n, l) => n + l.quantity, 0) +
+            b.no.reduce((n, l) => n + l.quantity, 0),
+        );
+        for (const e of evaluations[m.id]) {
           if (e.reasons.includes("SIZING_WORK_LIMIT"))
             this.telemetry.count("SIZING_WORK_LIMIT");
+          const key = m.id + ":" + e.orientation;
+          const raw =
+            m.active &&
+            !!e.bestGross &&
+            e.bestGross.grossProfit > 0 &&
+            !e.reasons.some((r) =>
+              ["BOOK_STALE", "MARKET_CLOSED", "UNSUPPORTED_QUANTITY"].includes(
+                r,
+              ),
+            );
+          if (raw) {
+            if (!this.rawActive.has(key))
+              activity.count = (activity.count ?? 0) + 1;
+            this.rawActive.add(key);
+          } else this.rawActive.delete(key);
+        }
+        const states = [a, b].map((leg) =>
+          freshnessResearch(
+            leg,
+            book.receivedMono,
+            book.receivedAt,
+            this.config.maxAgeMs,
+            this.streamHealthy(leg.venue, leg.marketId),
+          ),
+        );
+        for (const state of states) this.telemetry.count(state);
+        if (
+          states.includes("HEALTHY_RESTING_BOOK_RESEARCH") &&
+          states.every(
+            (s) =>
+              s === "STRICT_EXECUTION_FRESH" ||
+              s === "HEALTHY_RESTING_BOOK_RESEARCH",
+          )
+        ) {
+          const research = evaluate(
+            m.pair,
+            a,
+            b,
+            { ...this.config, maxAgeMs: Number.MAX_SAFE_INTEGER },
+            book.receivedMono,
+            book.receivedAt,
+            false,
+          );
+          const rejected = research.filter(
+            (e) =>
+              m.active &&
+              e.bestGross &&
+              e.bestGross.grossProfit > 0 &&
+              !e.reasons.some((r) => r !== "MAPPING_UNVERIFIED"),
+          ).length;
+          if (rejected)
+            this.telemetry.count(
+              "strictBookAgeOnlyRejectedEvaluations",
+              rejected,
+            );
+        }
       }
     }
     this.enqueue("book", { book, evaluations });

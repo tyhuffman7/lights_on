@@ -1,3 +1,4 @@
+import { reviewQueue } from "../lib/research/review.ts";
 import { createServer } from "node:http";
 import { timingSafeEqual } from "node:crypto";
 import { readFileSync } from "node:fs";
@@ -44,6 +45,33 @@ export function dashboardServer(observer: Observer, token: string) {
     res.setHeader("Content-Type", "application/json");
     try {
       const url = new URL(req.url ?? "/", origin);
+      if (req.method === "GET" && url.pathname === "/api/review") {
+        let rows = reviewQueue(
+          observer.registry.list(),
+          observer.recorder.activity,
+        );
+        const filter = url.searchParams.get("filter");
+        if (filter === "raw")
+          rows = rows.filter((r) => (r.activity.count ?? 0) > 0);
+        else if (filter === "sports") rows = rows.filter((r) => r.sports);
+        else if (filter === "non-sports") rows = rows.filter((r) => !r.sports);
+        else if (filter === "high")
+          rows = rows.filter((r) => r.status === "HIGH_PRIORITY_REVIEW");
+        else if (filter === "conflict")
+          rows = rows.filter((r) => r.status === "STRUCTURAL_CONFLICT");
+        else if (filter === "reviewed")
+          rows = rows.filter((r) => r.alreadyReviewed);
+        else
+          rows = rows.filter(
+            (r) => r.active && r.verification === "UNVERIFIED",
+          );
+        const category = url.searchParams.get("category");
+        if (category) rows = rows.filter((r) => r.category === category);
+        res.end(
+          JSON.stringify({ total: rows.length, rows: rows.slice(0, 100) }),
+        );
+        return;
+      }
       if (req.method === "GET" && url.pathname === "/api/health") {
         res.end(JSON.stringify(observer.health()));
         return;

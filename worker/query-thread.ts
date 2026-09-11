@@ -1,3 +1,4 @@
+import { historicalActivity } from "../lib/research/review-history.ts";
 import { parentPort, workerData } from "node:worker_threads";
 import { statSync } from "node:fs";
 import { ResearchStore } from "../lib/research/store.ts";
@@ -12,7 +13,8 @@ const s = new ResearchStore(workerData.path, true),
 try {
   s.db.exec("BEGIN");
   let result: unknown;
-  if (kind === "report") {
+  if (kind === "activity") result = historicalActivity(s);
+  else if (kind === "report") {
     const report = researchReport(s, data.sessionId);
     const size = (path: string) => {
       try {
@@ -29,6 +31,7 @@ try {
     result = {
       ...report,
       database: {
+        ...(telemetry ? JSON.parse(telemetry.body).database : {}),
         bytes: size(workerData.path),
         walBytes: size(workerData.path + "-wal"),
       },

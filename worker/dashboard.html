@@ -101,8 +101,14 @@
         </select></label
       >
       <p id="dashboard-updated">Last dashboard update: not yet</p>
+      <h2>Research Coverage</h2>
+      <pre id="allocation"></pre>
+      <h2>Storage</h2>
+      <pre id="storage-status"></pre>
+      <p id="warnings" role="status"></p>
       <h2>Market discovery</h2>
       <dl id="discovery-metrics"></dl>
+      <h2>Streams</h2>
       <pre id="stream-health"></pre>
     </section>
     <section>
@@ -165,6 +171,25 @@
       <button id="more-states" hidden>Next lifecycle states</button>
     </section>
     <section>
+      <h2>Mappings Needing Review</h2>
+      <label
+        >Filter
+        <select id="review-filter">
+          <option value="">Active unverified</option>
+          <option value="raw">Raw discrepancies seen</option>
+          <option value="sports">Sports</option>
+          <option value="non-sports">Non-sports</option>
+          <option value="high">High priority</option>
+          <option value="conflict">Structural conflicts</option>
+          <option value="reviewed">Already reviewed</option>
+        </select></label
+      >
+      <label
+        >Category
+        <input id="review-category" placeholder="All categories" /></label
+      ><button id="review-refresh">Refresh queue</button>
+      <p id="review-count"></p>
+      <div id="review-queue"></div>
       <h2>Market mapping review</h2>
       <p>
         Text matches are candidates only. Read each venue's settlement rules,
@@ -222,6 +247,75 @@
       div.append(dt, dd);
       $("metrics").append(div);
     }
+    async function refreshReview() {
+      const data = await api(
+        "review?filter=" +
+          encodeURIComponent($("review-filter").value) +
+          "&category=" +
+          encodeURIComponent($("review-category").value),
+      );
+      $("review-count").textContent =
+        data.total +
+        " candidates; showing first 100. Priority is for human rule review only.";
+      $("review-queue").replaceChildren();
+      for (const r of data.rows) {
+        const details = document.createElement("details"),
+          summary = document.createElement("summary");
+        summary.textContent =
+          r.status +
+          " · " +
+          r.score.toFixed(1) +
+          " · " +
+          r.kalshi.title +
+          " / " +
+          r.poly.title;
+        const table = document.createElement("table");
+        const heading = document.createElement("tr");
+        ["Field", "Kalshi", "Polymarket US"].forEach((v) => cell(heading, v));
+        table.append(heading);
+        for (const key of [
+          "title",
+          "yes",
+          "no",
+          "eventDate",
+          "canonical",
+          "settlementSource",
+          "cancellation",
+          "overtime",
+          "retirement",
+          "rules",
+        ]) {
+          const row = document.createElement("tr");
+          cell(row, key);
+          for (const v of [r.kalshi, r.poly])
+            cell(
+              row,
+              typeof v[key] === "object"
+                ? JSON.stringify(v[key])
+                : (v[key] ?? "UNKNOWN"),
+            );
+          table.append(row);
+        }
+        const pre = document.createElement("pre");
+        pre.textContent = JSON.stringify(
+          {
+            id: r.id,
+            relationship: r.relationship,
+            match: r.match,
+            differ: r.differ,
+            unknown: r.unknown,
+            activity: r.activity,
+            discovery: r.discoveryReasoning,
+          },
+          null,
+          2,
+        );
+        details.append(summary, table, pre);
+        $("review-queue").append(details);
+      }
+    }
+    $("review-refresh").onclick = () =>
+      refreshReview().catch((e) => ($("message").textContent = e.message));
     let mappingOffset = 0;
     let reportBusy = false,
       healthBusy = false;
@@ -236,6 +330,8 @@
             (session ? "&session=" + encodeURIComponent(session) : ""),
         );
         report = data.report;
+        if (!$("review-queue").querySelector("details[open]"))
+          await refreshReview();
         showCoverage(data.health);
         $("main").hidden = false;
         $("message").textContent = "";
@@ -246,7 +342,7 @@
           report.dataMode +
           " · " +
           report.bookUpdates +
-          " book updates · " +
+          " processed updates · " +
           data.health.books.filter((b) => b.valid && b.ageMs <= 2000).length +
           " recently updated books";
         $("metrics").replaceChildren();
@@ -285,6 +381,7 @@
             data.health.telemetry.latencyMs.processing ?? null,
           ),
           "Persistence backlog": data.health.persistence.queueDepth,
+          "Persisted book evidence": report.evidenceRecords,
           "Database / WAL bytes": JSON.stringify(report.database),
         }))
           metric(k, String(v));
@@ -504,6 +601,38 @@
       setTimeout(() => URL.revokeObjectURL(url), 30000);
     };
     function showCoverage(h) {
+      const c = h.coverage ?? {};
+      $("allocation").textContent = JSON.stringify(
+        {
+          total: h.mappingTotal,
+          verification: h.mappingCounts,
+          eligible: c.eligible,
+          selected: c.selected,
+          deferred: c.deferred,
+          subscribed: h.subscribed,
+          exploration: c.explorationMappings,
+          nextRotationAt: c.nextRotationAt,
+        },
+        null,
+        2,
+      );
+      $("storage-status").textContent = JSON.stringify(
+        { ...h.storage, database: report?.database },
+        null,
+        2,
+      );
+      const warnings = [];
+      if (h.streams.some((s) => !s.connected))
+        warnings.push("Shard disconnected");
+      if ((h.telemetry.rates.RECONNECT ?? 0) * 3600 > 20)
+        warnings.push("Reconnect rate exceeds 20/hour");
+      if ((report?.database?.growthBytesPerSecond ?? 0) * 86400 > 1e9)
+        warnings.push("Projected database growth exceeds 1 GB/day");
+      if ((h.telemetry.latencyMs.persistenceAck?.p95 ?? 0) > 100)
+        warnings.push("Persistence p95 exceeds 100 ms");
+      if ((h.telemetry.counters.EVENT_LOOP_DELAY ?? 0) > 2)
+        warnings.push("Repeated event-loop recovery");
+      $("warnings").textContent = warnings.join(" · ");
       const d = h.discovery ?? {},
         el = $("discovery-metrics");
       el.replaceChildren();

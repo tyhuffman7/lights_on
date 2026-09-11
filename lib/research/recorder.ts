@@ -15,6 +15,67 @@ export class Recorder {
   config: ResearchConfig;
   sessionId: string;
   books = new Map<string, { book: StreamBook; id: number }>();
+  history = new Map<string, { book: StreamBook; id: number }[]>();
+  captureUntil = new Map<string, number>();
+  retainedKeys: Set<string> | null = null;
+  storage = { processed: 0, persisted: 0, ringRecords: 0, ringBytes: 0 };
+  sizes = new WeakMap<StreamBook, number>();
+  private persistBook(entry: { book: StreamBook; id: number }) {
+    if (entry.id) return;
+    const b = entry.book;
+    const row = this.store.db
+      .prepare(
+        "INSERT INTO book_updates(session_id,venue,market_id,at,mono,body) VALUES(?,?,?,?,?,?)",
+      )
+      .run(
+        this.sessionId,
+        b.venue,
+        b.marketId,
+        b.receivedAt,
+        b.receivedMono,
+        JSON.stringify(b),
+      );
+    entry.id = Number(row.lastInsertRowid);
+    this.storage.persisted++;
+  }
+  private capture(key: string, mono: number) {
+    this.captureUntil.set(
+      key,
+      Math.max(this.captureUntil.get(key) ?? 0, mono + 2500),
+    );
+    for (const entry of this.history.get(key) ?? []) this.persistBook(entry);
+    const latest = this.books.get(key);
+    if (latest) this.persistBook(latest);
+  }
+  private prune(mono: number, onlyKey?: string) {
+    for (const [key, entries] of onlyKey
+      ? [[onlyKey, this.history.get(onlyKey) ?? []] as const]
+      : this.history) {
+      if (
+        this.retainedKeys &&
+        !this.retainedKeys.has(key) &&
+        !(this.index.get(key) ?? []).some(m=>[...this.active.keys()].some(op=>op.startsWith(m.id+':'))) &&
+        (this.captureUntil.get(key) ?? -Infinity) < mono
+      ) {
+        for (const entry of entries) {
+          this.storage.ringRecords--;
+          this.storage.ringBytes -= this.sizes.get(entry.book) ?? 0;
+        }
+        this.history.delete(key);
+        this.books.delete(key);
+        this.captureUntil.delete(key);
+        continue;
+      }
+      // Keep an as-of anchor before the five-second window, including resting books.
+      while (entries.length > 1 && entries[1].book.receivedMono < mono - 5000) {
+        const old = entries.shift()!;
+        this.storage.ringRecords--;
+        this.storage.ringBytes -= this.sizes.get(old.book) ?? 0;
+      }
+      if ((this.captureUntil.get(key) ?? Infinity) < mono)
+        this.captureUntil.delete(key);
+    }
+  }
   active = new Map<
     string,
     { id: string; firstMono: number; lastMono: number; lastWall: number }
@@ -83,19 +144,22 @@ export class Recorder {
     const immutable = structuredClone(book),
       key = `${book.venue}:${book.marketId}`;
     this.store.transaction(() => {
-      const row = this.store.db
-        .prepare(
-          "INSERT INTO book_updates(session_id,venue,market_id,at,mono,body) VALUES(?,?,?,?,?,?)",
-        )
-        .run(
-          this.sessionId,
-          book.venue,
-          book.marketId,
-          book.receivedAt,
-          book.receivedMono,
-          JSON.stringify(immutable),
-        );
-      this.books.set(key, { book: immutable, id: Number(row.lastInsertRowid) });
+      this.storage.processed++;
+      this.prune(book.receivedMono, key);
+      const entry = { book: immutable, id: 0 };
+      const bytes = Buffer.byteLength(JSON.stringify(immutable));
+      this.sizes.set(immutable, bytes);
+      const history = this.history.get(key) ?? [];
+      history.push(entry);
+      this.history.set(key, history);
+      this.storage.ringRecords++;
+      this.storage.ringBytes += bytes;
+      // Never silently drop pre-event evidence under overload. Fail closed and pause.
+      if (history.length > 10000 || this.storage.ringBytes > 128 * 1024 * 1024)
+        throw new Error("Evidence history capacity exceeded");
+      this.books.set(key, entry);
+      if ((this.captureUntil.get(key) ?? -Infinity) >= book.receivedMono)
+        this.persistBook(entry);
       for (const m of this.index.get(key) || [])
         this.observe(
           m,
@@ -107,6 +171,7 @@ export class Recorder {
     });
   }
   tick(wall: number, mono: number, force = false) {
+    this.prune(mono);
     for (const m of this.registry.list()) {
       const a = this.books.get(`kalshi:${m.pair.a.id}`)?.book;
       const b = this.books.get(`poly:${m.pair.b.id}`)?.book;
@@ -158,6 +223,8 @@ export class Recorder {
         m.active;
       if (timer && visible) continue;
       if (!visible && !current) continue;
+      this.capture(`kalshi:${m.pair.a.id}`, mono);
+      this.capture(`poly:${m.pair.b.id}`, mono);
       const opportunity = current ?? {
         id: randomUUID(),
         firstMono: mono,
@@ -232,7 +299,15 @@ export class Recorder {
       }
     }
   }
+  saveStats() {
+    this.store.db
+      .prepare(
+        "INSERT INTO session_stats(session_id,body) VALUES(?,?) ON CONFLICT(session_id) DO UPDATE SET body=excluded.body",
+      )
+      .run(this.sessionId, JSON.stringify(this.storage));
+  }
   stop(wall: number, mono: number) {
+    this.saveStats();
     for (const o of this.active.values())
       this.store.db
         .prepare("UPDATE opportunities SET status='CENSORED' WHERE id=?")

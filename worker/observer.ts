@@ -1,3 +1,6 @@
+import { CapacityScheduler } from "../lib/research/capacity.ts";
+import { ReconciliationScheduler } from "../lib/research/reconciliation.ts";
+import { reviewQueue } from "../lib/research/review.ts";
 import { Worker } from "node:worker_threads";
 import {
   market,
@@ -21,6 +24,12 @@ export class Observer {
   registry: MappingRegistry;
   recorder: LiveRecorder;
   telemetry = new Telemetry();
+  capacityScheduler = new CapacityScheduler();
+  capacity: ReturnType<CapacityScheduler["select"]> | null = null;
+  reconciliationScheduler = new ReconciliationScheduler();
+  reconciliationSuspicious = new Set<string>();
+  snapshotTimers = new Map<string, ReturnType<typeof setTimeout>>();
+  discoveryRestTotals = { kalshi: 0, poly: 0 };
   discoveryStatus: any = null;
   discoveryWorker: Worker | null = null;
   lastDiscoveryAt: number | null = null;
@@ -48,19 +57,32 @@ export class Observer {
       () => this.pause(),
       config.maxPersistencePending,
     );
+    this.recorder.streamHealthy = (venue, id) =>
+      this.streams.some(
+        (s) =>
+          s.options.venue === venue &&
+          s.options.ids.includes(id) &&
+          s.health().connected &&
+          s.health().heartbeatAgeMs < 15000,
+      );
     this.registry.persist = (m, at) => {
       this.recorder.patchMapping(m);
       this.recorder.enqueue("mapping", { m, at });
     };
-    observeRequestTiming((host, ms) =>
+    observeRequestTiming((host, ms) => {
+      this.telemetry.count(
+        `${host.includes("kalshi") ? "kalshi" : "poly"}RestRequests`,
+      );
       this.telemetry.sample(
         `${host.includes("kalshi") ? "kalshi" : "poly"}RestRoundTrip`,
         ms,
-      ),
-    );
+      );
+    });
   }
   async initialize() {
     await this.recorder.ready;
+    if (this.store.path !== ":memory:")
+      this.recorder.activity = await this.recorder.send("activity", {});
     for (const entry of this.config.markets) {
       const a = await market("kalshi", entry.kalshi),
         b = await market("poly", entry.poly);
@@ -126,7 +148,16 @@ export class Observer {
         const mono = performance.now(),
           wall = Date.now();
         if (mono - this.lastTick > 250) {
-          this.streams.forEach((s) => s.recover("EVENT_LOOP_DELAY"));
+          this.telemetry.count("eventLoopDelayEpisodes");
+          this.streams
+            .filter(
+              (s) =>
+                s.health().connected &&
+                [...(this.shardCaches.get(s)?.books.values() ?? [])].some(
+                  (b) => b.valid,
+                ),
+            )
+            .forEach((s) => s.recover("EVENT_LOOP_DELAY"));
         }
         this.lastTick = mono;
         if (this.recorder.failed) {
@@ -139,12 +170,7 @@ export class Observer {
     this.timers.push(
       setInterval(() => void this.metadata(), this.config.metadataIntervalMs),
     );
-    this.timers.push(
-      setInterval(
-        () => void this.reconcile(),
-        this.config.reconciliationIntervalMs,
-      ),
-    );
+    this.timers.push(setInterval(() => void this.reconcile(), 1000));
     this.timers.push(
       setInterval(() => this.recorder.analyze(performance.now()), 5000),
     );
@@ -152,13 +178,15 @@ export class Observer {
       setInterval(() => {
         if (this.nextDiscoveryAt !== null && Date.now() >= this.nextDiscoveryAt)
           void this.discover();
+        if (this.capacity && Date.now() >= this.capacity.nextRotationAt)
+          this.syncSubscriptions();
       }, 1000),
     );
     this.timers.push(
       setInterval(
         () =>
           this.recorder.diagnostic("TELEMETRY", {
-            ...this.health(),
+            ...this.compactHealth(),
             telemetry: this.telemetry.snapshot(true),
           }),
         10000,
@@ -167,6 +195,8 @@ export class Observer {
   }
   pause() {
     this.paused = true;
+    for (const timer of this.snapshotTimers.values()) clearTimeout(timer);
+    this.snapshotTimers.clear();
     this.timers.forEach(clearInterval);
     this.timers = [];
     this.streams.forEach((s) => s.stop());
@@ -176,8 +206,15 @@ export class Observer {
       for (const v of ["kalshi", "poly"] as Venue[]) this.invalid(v, "PAUSED");
   }
   async metadata() {
-    if (this.busyMetadata || this.paused || this.stopped) return;
+    if (this.busyMetadata || this.paused || this.stopped || this.discovering)
+      return;
     this.busyMetadata = true;
+    const fetched = new Map<string, Awaited<ReturnType<typeof market>>>();
+    const get = async (venue: Venue, id: string) => {
+      const key = venue + ":" + id;
+      if (!fetched.has(key)) fetched.set(key, await market(venue, id));
+      return fetched.get(key)!;
+    };
     const subscribed = new Set(
       this.streams.flatMap((s) =>
         s.options.ids.map((id) => s.options.venue + ":" + id),
@@ -194,8 +231,8 @@ export class Observer {
           continue;
         try {
           const fetchedAt = Date.now();
-          const a = await market("kalshi", m.pair.a.id),
-            b = await market("poly", m.pair.b.id);
+          const a = await get("kalshi", m.pair.a.id),
+            b = await get("poly", m.pair.b.id);
           if (this.stopped || this.paused) return;
           this.registry.refresh(m.id, a, b, fetchedAt);
         } catch {
@@ -207,7 +244,7 @@ export class Observer {
       }
       if (!this.stopped) {
         this.recorder.tick(Date.now(), performance.now(), true);
-        this.syncSubscriptions();
+        await this.syncSubscriptions();
       }
     } finally {
       this.busyMetadata = false;
@@ -217,58 +254,117 @@ export class Observer {
     if (this.busyReconcile || this.paused || this.stopped) return;
     this.busyReconcile = true;
     try {
-      for (const m of this.registry.list().filter((m) => m.active))
-        for (const venueMarket of [m.pair.a, m.pair.b]) {
-          const before = this.cache.get(venueMarket.venue, venueMarket.id);
-          if (!before?.valid) continue;
-          try {
-            const snapshot = await restBook(venueMarket);
-            if (this.stopped || this.paused) return;
-            const after = this.cache.get(venueMarket.venue, venueMarket.id);
-            // Only compare if no stream update raced the REST request. The REST snapshot
-            // remains diagnostic evidence; it cannot restore a sequence-valid stream.
-            const rest: StreamBook = {
-              ...snapshot,
-              venue: venueMarket.venue,
-              marketId: venueMarket.id,
-              receivedMono: performance.now(),
-              sequence: null,
-              connection: "RECOVERING",
-              valid: false,
-              source: "rest",
-            };
-            this.recorder.diagnostic("REST_RECONCILIATION", {
-              book: rest,
-              raced: before !== after,
-            });
-            if (before === after) {
-              const top = (ls: { price: number; quantity: number }[]) =>
-                JSON.stringify(
-                  [...ls].sort((a, b) => a.price - b.price).slice(0, 10),
-                );
-              if (
-                top(snapshot.yes) !== top(before.yes) ||
-                top(snapshot.no) !== top(before.no)
-              )
-                this.streams
-                  .find(
-                    (s) =>
-                      s.options.venue === venueMarket.venue &&
-                      s.options.ids.includes(venueMarket.id),
-                  )
-                  ?.recover("RECONCILIATION_MISMATCH");
-            }
-          } catch {
-            if (!this.stopped)
-              this.streams
-                .find(
-                  (s) =>
-                    s.options.venue === venueMarket.venue &&
-                    s.options.ids.includes(venueMarket.id),
-                )
-                ?.recover("RECONCILIATION_FAILED");
-          }
+      const subscribed = new Set(
+        this.streams.flatMap((s) =>
+          s.options.ids.map((id) => s.options.venue + ":" + id),
+        ),
+      );
+      const markets = this.registry
+        .list()
+        .filter((m) => m.active)
+        .flatMap((m) => [m.pair.a, m.pair.b])
+        .filter((m) => subscribed.has(m.venue + ":" + m.id));
+      const selected = this.reconciliationScheduler.take(
+        markets,
+        Date.now(),
+        1,
+        this.config.reconciliationIntervalMs /
+          this.config.reconciliationMaxRequests,
+        this.reconciliationSuspicious,
+      );
+      for (const venueMarket of selected) {
+        this.telemetry.count("reconciliationRequests");
+        const reconciliationStream = this.streams.find(
+          (s) =>
+            s.options.venue === venueMarket.venue &&
+            s.options.ids.includes(venueMarket.id),
+        );
+        if (reconciliationStream) {
+          reconciliationStream.reconciliationRequests++;
+          reconciliationStream.lastReconciliationAt = Date.now();
         }
+        const before = this.cache.get(venueMarket.venue, venueMarket.id);
+        if (!before?.valid) continue;
+        try {
+          const snapshot = await restBook(venueMarket);
+          if (this.stopped || this.paused) return;
+          const after = this.cache.get(venueMarket.venue, venueMarket.id);
+          // Only compare if no stream update raced the REST request. The REST snapshot
+          // remains diagnostic evidence; it cannot restore a sequence-valid stream.
+          const rest: StreamBook = {
+            ...snapshot,
+            venue: venueMarket.venue,
+            marketId: venueMarket.id,
+            receivedMono: performance.now(),
+            sequence: null,
+            connection: "RECOVERING",
+            valid: false,
+            source: "rest",
+          };
+          this.recorder.diagnostic("REST_RECONCILIATION", {
+            venue: venueMarket.venue,
+            marketId: venueMarket.id,
+            raced: before !== after,
+            streamAgeMs: performance.now() - before.receivedMono,
+            restLevels: snapshot.yes.length + snapshot.no.length,
+          });
+          if (before === after) {
+            const top = (ls: { price: number; quantity: number }[]) =>
+              JSON.stringify(
+                [...ls].sort((a, b) => a.price - b.price).slice(0, 10),
+              );
+            if (
+              top(snapshot.yes) !== top(before.yes) ||
+              top(snapshot.no) !== top(before.no)
+            ) {
+              this.reconciliationSuspicious.add(
+                venueMarket.venue + ":" + venueMarket.id,
+              );
+              this.telemetry.count("reconciliationMismatches");
+              const stream = this.streams.find(
+                (s) =>
+                  s.options.venue === venueMarket.venue &&
+                  s.options.ids.includes(venueMarket.id),
+              );
+              const shard = stream ? this.shardCaches.get(stream) : undefined;
+              const sid = shard?.subscriptions.get(venueMarket.id);
+              if (
+                stream &&
+                shard &&
+                venueMarket.venue === "kalshi" &&
+                sid !== undefined
+              ) {
+                shard.quarantine(venueMarket.id);
+                this.invalid("kalshi", "RECONCILIATION_MISMATCH", [
+                  venueMarket.id,
+                ]);
+                if (stream.requestSnapshot(venueMarket.id, sid)) {
+                  const key = "kalshi:" + venueMarket.id;
+                  this.snapshotTimers.set(
+                    key,
+                    setTimeout(() => {
+                      this.snapshotTimers.delete(key);
+                      stream.recover("SNAPSHOT_TIMEOUT");
+                    }, 10000),
+                  );
+                } else stream.recover("RECONCILIATION_MISMATCH");
+              } else stream?.recover("RECONCILIATION_MISMATCH");
+            } else
+              this.reconciliationSuspicious.delete(
+                venueMarket.venue + ":" + venueMarket.id,
+              );
+          }
+        } catch {
+          if (!this.stopped)
+            this.streams
+              .find(
+                (s) =>
+                  s.options.venue === venueMarket.venue &&
+                  s.options.ids.includes(venueMarket.id),
+              )
+              ?.recover("RECONCILIATION_FAILED");
+        }
+      }
     } finally {
       this.busyReconcile = false;
     }
@@ -336,6 +432,8 @@ export class Observer {
         },
         () => this.stopped || this.paused,
       );
+      this.discoveryRestTotals.kalshi += result.restRequests?.kalshi ?? 0;
+      this.discoveryRestTotals.poly += result.restRequests?.poly ?? 0;
       this.discoveryStatus = {
         ...stats,
         matchingMs: result.matchingMs,
@@ -346,7 +444,7 @@ export class Observer {
             : "FAILED",
         finishedAt: Date.now(),
       };
-      this.syncSubscriptions();
+      await this.syncSubscriptions();
       this.recorder.diagnostic("DISCOVERY", this.discoveryStatus);
     } catch {
       if (!this.stopped) {
@@ -366,30 +464,46 @@ export class Observer {
       this.discovering = false;
     }
   }
-  syncSubscriptions() {
+  syncingSubscriptions = false;
+  subscriptionsDirty = false;
+  async syncSubscriptions() {
+    if (this.syncingSubscriptions) {
+      this.subscriptionsDirty = true;
+      return;
+    }
+    this.syncingSubscriptions = true;
+    try {
+      do {
+        this.subscriptionsDirty = false;
+        await this.applySubscriptions();
+      } while (this.subscriptionsDirty && !this.paused && !this.stopped);
+    } catch {
+      this.telemetry.count("SUBSCRIPTION_SYNC_FAILED");
+      this.pause();
+    } finally {
+      this.syncingSubscriptions = false;
+    }
+  }
+  private async applySubscriptions() {
     if (this.paused || this.stopped) return;
+    this.capacity = this.capacityScheduler.select(
+      this.registry.list(),
+      this.config.maxSubscribedMarketsPerVenue ?? 500,
+      this.config.explorationFraction,
+      this.config.explorationRotationMs,
+      Date.now(),
+      this.recorder.activity,
+    );
     for (const venue of ["kalshi", "poly"] as Venue[]) {
-      const mappings = this.registry
-        .list()
-        .filter(
-          (m) =>
-            m.active &&
-            m.pair.a.open &&
-            m.pair.b.open &&
-            [m.pair.a, m.pair.b].every(
-              (x) => Date.parse(x.closeAt) > Date.now(),
-            ),
-        );
-      const desired = [
-        ...new Set(
-          mappings.map((m) => (venue === "kalshi" ? m.pair.a.id : m.pair.b.id)),
-        ),
-      ];
-      const selected = this.config.maxSubscribedMarketsPerVenue
-        ? desired.slice(0, this.config.maxSubscribedMarketsPerVenue)
-        : desired;
+      const selected = this.capacity.subscribed[venue];
+      const desired = new Set(
+        this.registry
+          .list()
+          .filter((m) => m.active)
+          .map((m) => (venue === "kalshi" ? m.pair.a.id : m.pair.b.id)),
+      );
       this.telemetry.counters[`${venue}DeferredMarkets`] =
-        desired.length - selected.length;
+        desired.size - selected.length;
       const old = this.streams.filter((s) => s.options.venue === venue);
       const groups = reconcileGroups(
         old.map((s) => s.options.ids),
@@ -406,6 +520,8 @@ export class Observer {
           this.invalid(venue, "SUBSCRIPTION_CHANGED", s.options.ids);
           this.streams = this.streams.filter((x) => x !== s);
           this.shardCaches.delete(s);
+          await new Promise<void>((resolve) => setImmediate(resolve));
+          if (this.paused || this.stopped) return;
         }
       for (const ids of groups) {
         if (
@@ -421,6 +537,16 @@ export class Observer {
           venue,
           ids,
           headers: () => authHeaders(venue),
+          context: () => ({
+            eventLoopDelayMs: Math.max(
+              0,
+              performance.now() - this.lastTick - 100,
+            ),
+            persistenceBacklog: this.recorder.backlog,
+            restActive: this.busyReconcile,
+            metadataActive: this.busyMetadata,
+            discoveryActive: this.discovering,
+          }),
           onInvalid: (reason) => {
             cache.reset(venue);
             if (!this.recorder.failed) this.invalid(venue, reason, ids);
@@ -439,6 +565,12 @@ export class Observer {
             if (book) {
               if (!ids.includes(book.marketId))
                 throw new Error("Unsubscribed market");
+              const timerKey = venue + ":" + book.marketId;
+              const timer = this.snapshotTimers.get(timerKey);
+              if (timer) {
+                clearTimeout(timer);
+                this.snapshotTimers.delete(timerKey);
+              }
               this.cache.books.set(`${venue}:${book.marketId}`, book);
               if (book.exchangeAt !== null)
                 this.telemetry.sample(
@@ -452,12 +584,46 @@ export class Observer {
         this.streams.push(stream);
         this.shardCaches.set(stream, cache);
         stream.start();
+        await new Promise<void>((resolve) => setImmediate(resolve));
+        if (this.paused || this.stopped) return;
       }
     }
+    const keys = new Set(
+      this.streams.flatMap((s) =>
+        s.options.ids.map((id) => s.options.venue + ":" + id),
+      ),
+    );
+    for (const key of this.cache.books.keys())
+      if (!keys.has(key)) this.cache.books.delete(key);
+    for (const key of this.recorder.books.keys())
+      if (!keys.has(key)) this.recorder.books.delete(key);
+    this.recorder.enqueue("retain", [...keys]);
+  }
+  compactHealth() {
+    const h = this.health();
+    const { books, mappings, coverage, ...compact } = h;
+    const {
+      selectedIds,
+      explorationIds,
+      subscribed,
+      deferredReasons,
+      ...allocation
+    } = coverage ?? ({} as any);
+    return {
+      ...compact,
+      coverage: allocation,
+      bookCounts: {
+        total: books.length,
+        valid: books.filter((b) => b.valid).length,
+      },
+    };
   }
   health() {
     return {
       telemetry: this.telemetry.snapshot(),
+      coverage: this.capacity,
+      syncingSubscriptions: this.syncingSubscriptions,
+      storage: this.recorder.storage,
       persistence: {
         queueDepth: this.recorder.backlog,
         queueBytes: this.recorder.backlogBytes,
@@ -470,6 +636,18 @@ export class Observer {
         nextDiscoveryAt: this.nextDiscoveryAt,
         enabled: this.config.discoveryEnabled,
         running: this.discovering,
+        restRequestsTotal: {
+          kalshi:
+            this.discoveryRestTotals.kalshi +
+            (this.discovering
+              ? (this.discoveryStatus?.restRequests?.kalshi ?? 0)
+              : 0),
+          poly:
+            this.discoveryRestTotals.poly +
+            (this.discovering
+              ? (this.discoveryStatus?.restRequests?.poly ?? 0)
+              : 0),
+        },
       },
       streams: this.streams.map((s) => s.health()),
       subscribed: Object.fromEntries(

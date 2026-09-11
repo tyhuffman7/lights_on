@@ -1,9 +1,16 @@
+import { observeRequestTiming } from "../lib/arb/adapters.ts";
 import { parentPort, workerData } from "node:worker_threads";
 import { catalog } from "./coverage.ts";
 import { discoverCandidates } from "../lib/research/matching.ts";
+const requests: Record<string, number> = { kalshi: 0, poly: 0 };
+observeRequestTiming((host) => {
+  requests[host.includes("kalshi") ? "kalshi" : "poly"]++;
+});
 try {
   const data = await catalog(undefined, undefined, (progress) =>
-    parentPort!.postMessage({ progress }),
+    parentPort!.postMessage({
+      progress: { ...progress, restRequests: { ...requests } },
+    }),
   );
   parentPort!.postMessage({ progress: { phase: "matching" } });
   const started = performance.now(),
@@ -21,6 +28,7 @@ try {
     data,
     matched: { ...matched, catalogCounts },
     matchingMs: performance.now() - started,
+    restRequests: requests,
   });
 } catch {
   parentPort!.postMessage({ error: "DISCOVERY_FAILED" });

@@ -210,7 +210,7 @@ test("Observer isolates identical subscription IDs and sequence recovery to thei
     for (const id of ["one", "two"]) o.registry.add(pair(id));
     o.recorder.reindex();
     o.paused = false;
-    o.syncSubscriptions();
+    await o.syncSubscriptions();
     assert.equal(o.streams.length, 4);
     const streams = o.streams.filter((s) => s.options.venue === "kalshi");
     const at = Date.now(),
@@ -238,7 +238,7 @@ test("Observer isolates identical subscription IDs and sequence recovery to thei
     assert.equal(o.cache.get("kalshi", streams[1].options.ids[0])?.valid, true);
     o.registry.deactivate("one", "fixture removal");
     o.recorder.reindex();
-    o.syncSubscriptions();
+    await o.syncSubscriptions();
     assert.equal(o.streams.length, 2);
     assert.ok(o.streams.includes(streams[1]));
   } finally {
@@ -329,7 +329,8 @@ test("Recovery followed by disconnect persists a single invalidation and overflo
     (o as any).invalid("kalshi", "TEST_RECOVERY", ["one"]);
     (o as any).invalid("kalshi", "DISCONNECTED", ["one"]);
     await o.recorder.send("barrier", {});
-    assert.equal(s.rows("book_updates").length, 3);
+    assert.equal(o.recorder.storage.processed, 3);
+    assert.equal(s.rows("book_updates").length, 0); // no opportunity window needs these books
     assert.equal(o.recorder.books.get("kalshi:two")?.valid, true);
     o.recorder.maxPending = 1;
     assert.doesNotThrow(() => (o as any).invalid("kalshi", "TEST_OVERFLOW"));

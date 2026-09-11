@@ -1,4 +1,5 @@
 import WebSocket from "ws";
+import { createHash } from "node:crypto";
 import { createPrivateKey, sign, constants } from "node:crypto";
 import { readFileSync } from "node:fs";
 import type { Venue } from "../lib/arb/types.ts";
@@ -92,6 +93,7 @@ type Options = {
   onMessage: (message: Record<string, any>, wall: number, mono: number) => void;
   onInvalid: (reason: string) => void;
   onDiagnostic: (kind: string, body: unknown) => void;
+  context?: () => Record<string, unknown>;
   retryMs?: number;
   heartbeatMs?: number;
   heartbeatTimeoutMs?: number;
@@ -103,6 +105,22 @@ export class StreamConnection {
   heartbeat: ReturnType<typeof setInterval> | null = null;
   stopped = true;
   attempt = 0;
+  reconnectCount = 0;
+  snapshotRequestId = 10000;
+  reconciliationRequests = 0;
+  lastReconciliationAt: number | null = null;
+  lastDisconnect: Record<string, unknown> | null = null;
+  recoveryReason: string | null = null;
+  get shard() {
+    return (
+      this.options.venue +
+      ":" +
+      createHash("sha256")
+        .update(this.options.ids.join("|"))
+        .digest("hex")
+        .slice(0, 12)
+    );
+  }
   lastPong = 0;
   connectedAt = 0;
   lastMessage = 0;
@@ -111,6 +129,14 @@ export class StreamConnection {
   health() {
     return {
       venue: this.options.venue,
+      shard: this.shard,
+      connectionAgeMs: this.connectedAt
+        ? performance.now() - this.connectedAt
+        : null,
+      reconnectCount: this.reconnectCount,
+      reconciliationRequests: this.reconciliationRequests,
+      lastReconciliationAt: this.lastReconciliationAt,
+      lastDisconnect: this.lastDisconnect,
       markets: this.options.ids.length,
       connected: this.socket?.readyState === WebSocket.OPEN,
       heartbeatAgeMs: performance.now() - this.lastPong,
@@ -141,7 +167,9 @@ export class StreamConnection {
       );
       this.socket = ws;
       ws.on("open", () => {
+        this.recoveryReason = null;
         this.connectedAt = performance.now();
+        this.lastMessage = 0;
         this.lastPong = this.connectedAt;
         for (const m of subscriptions(this.options.venue, this.options.ids))
           ws.send(JSON.stringify(m));
@@ -185,23 +213,49 @@ export class StreamConnection {
           this.recover(reason);
         }
       });
-      ws.on("error", () => {
+      ws.on("error", (error: NodeJS.ErrnoException) => {
         this.options.onDiagnostic("STREAM_ERROR", {
+          shard: this.shard,
+          errorCode: error.code ?? "WS_ERROR",
+          recoveryReason: this.recoveryReason,
           venue: this.options.venue,
         });
       });
-      ws.on("close", () => {
+      ws.on("close", (code, reason) => {
+        this.lastDisconnect = {
+          ...this.health(),
+          lastDisconnect: undefined,
+          ...this.options.context?.(),
+          closeCode: code,
+          closeReason: reason
+            .toString()
+            .replace(/[\r\n]/g, " ")
+            .slice(0, 160),
+          initiator:
+            this.recoveryReason || this.stopped
+              ? "client"
+              : code === 1006
+                ? "unknown"
+                : "venue",
+          recoveryReason:
+            this.recoveryReason ?? (this.stopped ? "STOP" : "REMOTE_CLOSE"),
+        };
+        this.options.onDiagnostic("DISCONNECT_DETAIL", this.lastDisconnect);
         if (this.stopped) return;
         if (this.heartbeat) clearInterval(this.heartbeat);
         this.heartbeat = null;
         this.options.onInvalid("DISCONNECTED");
         if (this.stopped) return;
         if (performance.now() - this.connectedAt > 30000) this.attempt = 0;
-        const delay = Math.min(
-          30000,
-          (this.options.retryMs ?? 500) * 2 ** Math.min(this.attempt++, 6),
-        );
+        const delay =
+          (0.75 + Math.random() * 0.5) *
+          Math.min(
+            30000,
+            (this.options.retryMs ?? 500) * 2 ** Math.min(this.attempt++, 6),
+          );
+        this.reconnectCount++;
         this.options.onDiagnostic("RECONNECT", {
+          shard: this.shard,
           venue: this.options.venue,
           delayMs: delay,
         });
@@ -215,7 +269,37 @@ export class StreamConnection {
       this.retry = setTimeout(() => this.connect(), 30000);
     }
   }
+  requestSnapshot(marketId: string, sid: number) {
+    if (
+      this.options.venue !== "kalshi" ||
+      !this.options.ids.includes(marketId) ||
+      this.socket?.readyState !== WebSocket.OPEN
+    )
+      return false;
+    this.options.onDiagnostic("SNAPSHOT_REQUEST", {
+      venue: "kalshi",
+      shard: this.shard,
+      marketId,
+      ...this.options.context?.(),
+    });
+    this.socket.send(
+      JSON.stringify({
+        id: ++this.snapshotRequestId,
+        cmd: "update_subscription",
+        params: { sid, market_tickers: [marketId], action: "get_snapshot" },
+      }),
+    );
+    return true;
+  }
   recover(reason: string) {
+    if (this.stopped || this.recoveryReason) return;
+    this.recoveryReason = reason;
+    this.options.onDiagnostic("RECOVERY_DETAIL", {
+      ...this.health(),
+      ...this.options.context?.(),
+      recoveryReason: reason,
+      initiator: "client",
+    });
     this.options.onInvalid(reason);
     this.socket?.terminate();
   }

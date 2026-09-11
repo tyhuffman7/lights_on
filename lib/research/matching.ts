@@ -1,3 +1,4 @@
+import { catalogEntities } from "./entities.ts";
 import { normalizeText, categoryName, generalHints } from "./identity.ts";
 import type { Market, Pair } from "../arb/types.ts";
 import { equivalent } from "./mappings.ts";
@@ -100,49 +101,17 @@ export function discoverCandidates(
       diagnostics.categories[venue][c] =
         (diagnostics.categories[venue][c] ?? 0) + 1;
     }
-  // Alias collisions are removed, rather than guessing which New York team a
-  // city name denotes. Aliases stay scoped to their competition.
-  const aliases = new Map<string, Set<string>>();
-  for (const m of poly)
-    for (const team of m.identity?.aliases ?? []) {
-      const parts = team.name.split(" ");
-      const names = [...team.aliases, parts.slice(0, -1).join(" ")];
-      if (parts.length > 2)
-        names.push(parts.slice(0, -1).join(" ") + " " + parts.at(-1)![0]);
-      for (const name of names.filter(Boolean)) {
-        const k = (m.identity?.competition ?? "") + ":" + name;
-        const values = aliases.get(k) ?? new Set<string>();
-        values.add(team.name);
-        aliases.set(k, values);
-      }
-    }
-  const canonical = (name: string, league?: string) => {
-    const set = aliases.get((league ?? "") + ":" + normalizeText(name));
-    return set?.size === 1 ? [...set][0] : normalizeText(name);
-  };
+  const entityRegistry = catalogEntities(
+    [...kalshi, ...poly].map((m) => m.identity),
+  );
   const prepare = (markets: StructuredInput[]) =>
     [
       ...new Map(markets.filter((m) => m.open).map((m) => [m.id, m])).values(),
     ].map((m) => {
       const i = m.identity;
-      const identity = i
-        ? {
-            ...i,
-            participants: [
-              ...new Set(
-                i.participants.map((n) => canonical(n, i.competition)),
-              ),
-            ].sort(),
-            participant: i.participant
-              ? canonical(i.participant, i.competition)
-              : undefined,
-            outcome: i.outcome
-              ? canonical(i.outcome, i.competition)
-              : undefined,
-          }
-        : undefined;
+      const identity = i ? entityRegistry.normalize(i) : undefined;
       return {
-        m,
+        m: { ...m, identity },
         structured: fields(m),
         identity,
         hints: generalHints(m),

@@ -21,6 +21,11 @@ const recorder = new Recorder(
   workerData.at,
   workerData.sessionId,
 );
+const initialLogicalBytes =
+  Number((store.db.prepare("PRAGMA page_count").get() as any).page_count) *
+  Number((store.db.prepare("PRAGMA page_size").get() as any).page_size);
+const storageStartedAt = Date.now();
+let storageMetrics: Record<string, number> = {};
 let analysisOffset = 0;
 let lastDatabaseSample: { at: number; bytes: number } | null = null;
 parentPort!.postMessage({ ready: true });
@@ -45,12 +50,33 @@ parentPort!.on("message", (wire) => {
     } else if (m.kind === "index") {
       registry.cache = new Map(m.data.map((x: any) => [x.id, x]));
       recorder.reindex();
-    } else if (m.kind === "book")
+    } else if (m.kind === "retain") recorder.retainedKeys = new Set(m.data);
+    else if (m.kind === "book")
       recorder.update(m.data.book, m.data.evaluations);
     else if (m.kind === "tick")
       recorder.tick(m.data.wall, m.data.mono, m.data.force);
     else if (m.kind === "diagnostic") {
       if (m.data.kind === "TELEMETRY") {
+        recorder.saveStats();
+        const logicalBytes =
+          Number(
+            (store.db.prepare("PRAGMA page_count").get() as any).page_count,
+          ) *
+          Number((store.db.prepare("PRAGMA page_size").get() as any).page_size);
+        const elapsedSeconds = Math.max(
+          1,
+          (Date.now() - storageStartedAt) / 1000,
+        );
+        storageMetrics = {
+          logicalBytes,
+          bytesPerHour:
+            ((logicalBytes - initialLogicalBytes) * 3600) / elapsedSeconds,
+          projectedGBPerDay:
+            ((logicalBytes - initialLogicalBytes) * 86400) /
+            elapsedSeconds /
+            1e9,
+          evidencePerSecond: recorder.storage.persisted / elapsedSeconds,
+        };
         const size = (p: string) => {
           try {
             return statSync(p).size;
@@ -64,11 +90,8 @@ parentPort!.on("message", (wire) => {
         m.data.body.database = {
           bytes,
           walBytes,
-          growthBytesPerSecond:
-            lastDatabaseSample && at > lastDatabaseSample.at
-              ? (bytes + walBytes - lastDatabaseSample.bytes) /
-                ((at - lastDatabaseSample.at) / 1000)
-              : null,
+          ...storageMetrics,
+          growthBytesPerSecond: storageMetrics.bytesPerHour / 3600,
         };
         lastDatabaseSample = { at, bytes: bytes + walBytes };
       }
@@ -146,6 +169,7 @@ parentPort!.on("message", (wire) => {
       result,
       writeMs: performance.now() - started,
       persistedAt: Date.now(),
+      storage: { ...recorder.storage, ...storageMetrics },
     });
     if (m.kind === "stop") parentPort!.close();
   } catch {

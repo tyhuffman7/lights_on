@@ -287,9 +287,30 @@ export function researchReport(s: ResearchStore, sessionId: string) {
     dataMode: session.mode,
     startedAt: session.started_at,
     endedAt: session.ended_at,
-    bookUpdates: s.db
-      .prepare("SELECT COUNT(*) AS n FROM book_updates WHERE session_id=?")
-      .get(sessionId)!.n,
+    bookUpdates: (() => {
+      const exists = s.db
+        .prepare(
+          "SELECT 1 FROM sqlite_master WHERE type='table' AND name='session_stats'",
+        )
+        .get();
+      const row = exists
+        ? (s.db
+            .prepare("SELECT body FROM session_stats WHERE session_id=?")
+            .get(sessionId) as { body: string } | undefined)
+        : undefined;
+      return row
+        ? JSON.parse(row.body).processed
+        : Number(
+            s.db
+              .prepare("SELECT COUNT(*) n FROM book_updates WHERE session_id=?")
+              .get(sessionId)!.n,
+          );
+    })(),
+    evidenceRecords: Number(
+      s.db
+        .prepare("SELECT COUNT(*) n FROM book_updates WHERE session_id=?")
+        .get(sessionId)!.n,
+    ),
     opportunitiesDetected: ops.length,
     ruleVerifiedOpportunities: states.filter((x) =>
       x.states.some((e) => e.verified),

@@ -23,11 +23,16 @@ export async function getJSON(url: string): Promise<Obj> {
     if (slot > Date.now())
       await new Promise((r) => setTimeout(r, slot - Date.now()));
     const requestStarted = performance.now();
-    const response = await fetch(url, {
-      signal: AbortSignal.timeout(12000),
-      headers: { accept: "application/json" },
-      cache: "no-store",
-    });
+    let response: Response;
+    try {
+      response = await fetch(url, {
+        signal: AbortSignal.timeout(12000),
+        headers: { accept: "application/json" },
+        cache: "no-store",
+      });
+    } finally {
+      requestTiming?.(u.hostname, performance.now() - requestStarted);
+    }
     if (response.status === 429 && attempt < 2) {
       const seconds = Number(response.headers.get("Retry-After"));
       await response.body?.cancel();
@@ -50,7 +55,6 @@ export async function getJSON(url: string): Promise<Obj> {
         `${u.hostname}: HTTP ${response.status}${response.status === 429 ? " — rate limited; wait before retrying" : ""}`,
       );
     const data = (await response.json()) as Obj;
-    requestTiming?.(u.hostname, performance.now() - requestStarted);
     if (isCatalog) catalogCache.set(url, { at: Date.now(), data });
     return data;
   }
