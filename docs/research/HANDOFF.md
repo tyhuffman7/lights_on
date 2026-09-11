@@ -1,3 +1,7 @@
+## Telemetry reporting overhead
+
+Numeric typed-array sorting reduces the 16-metric / 10,000-sample synthetic snapshot benchmark median from 32.15ms to 9.67ms (30 iterations each). The quantile regression checks finite values, duplicates, empty/singleton arrays, and preserves source order. See `docs/pilot/telemetry-snapshot-performance.json`. This reduces main-thread reporting work but does not establish the cause or resolution of the prior recovery episode. No fresh live stability run yet. The historical telemetry snapshot just before recovery had zero persistence backlog; recovery itself added invalidation messages. Do not blame the network or metadata refresh solely from their concurrent activity.
+
 ## Acting/interim follow-up
 
 173 tests, TypeScript and build passed. Explicit opposing acting/interim office-service clauses now exclude candidates. See `docs/pilot/REMAINING-RULE-REVIEW.md` for review of the remaining nominee, AOC and artist pairs against public contract PDFs. None approved. The earlier five-pair count below predates this exclusion; regenerated audit reports use current matching. The 299-pair observer is stopped.

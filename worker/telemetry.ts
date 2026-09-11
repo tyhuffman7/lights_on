@@ -1,7 +1,7 @@
 import { platform, arch, cpus } from "node:os";
 import { monitorEventLoopDelay } from "node:perf_hooks";
 export function percentiles(values: number[]) {
-  const a = [...values].sort((x, y) => x - y);
+  const a = Float64Array.from(values).sort();
   const p = (n: number) =>
     a.length ? a[Math.min(a.length - 1, Math.floor((a.length - 1) * n))] : null;
   return { count: a.length, p50: p(0.5), p95: p(0.95), p99: p(0.99) };

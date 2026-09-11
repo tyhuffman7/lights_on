@@ -34,3 +34,24 @@ test("Telemetry measures bounded samples and explicit interval rates with determ
     t.close();
   }
 });
+
+test("Numeric telemetry sorting preserves quantiles and source sample order", () => {
+  let seed = 72;
+  for (const length of [0, 1, 2, 3, 100, 10000]) {
+    const values = Array.from({ length }, () => {
+      seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+      return (seed % 997) / 17;
+    });
+    const original = [...values];
+    const sorted = [...values].sort((a, b) => a - b);
+    const q = (fraction: number) =>
+      length ? sorted[Math.floor((length - 1) * fraction)] : null;
+    assert.deepEqual(percentiles(values), {
+      count: length,
+      p50: q(0.5),
+      p95: q(0.95),
+      p99: q(0.99),
+    });
+    assert.deepEqual(values, original);
+  }
+});

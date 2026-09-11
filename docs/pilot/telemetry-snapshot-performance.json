@@ -1,0 +1,20 @@
+{
+  "kind": "Synthetic telemetry snapshot benchmark",
+  "metrics": 16,
+  "samplesPerMetric": 10000,
+  "iterations": 30,
+  "before": {
+    "p50": 32.150334,
+    "p95": 33.881916,
+    "p99": 34.16,
+    "max": 35.226
+  },
+  "after": {
+    "count": 30,
+    "p50": 9.67183399999999,
+    "p95": 10.072166999999993,
+    "p99": 10.114958000000001,
+    "max": 10.457333000000006
+  },
+  "interpretation": "Sequential local runs, not controlled host isolation. Numeric typed-array sort preserves finite-sample quantiles. Does not establish the cause or resolution of the live delay episode."
+}
