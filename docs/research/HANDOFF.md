@@ -1,6 +1,10 @@
 # Continue Lights On here
 
-Use built-in capabilities/native skills only. Do not use installed skills, including Superpowers, and never brainstorming. No sub-agents unless the user authorizes them. Keep live trading completely disabled. Push tested implementation checkpoints to `tyhuffman7/lights_on` main. HARDENING.md remains the implementation specification.
+Use built-in capabilities/native skills only. Do not use installed skills, including Superpowers, and never brainstorming. No sub-agents unless the user authorizes them. The user subsequently authorized a $100-per-venue pilot and accepted at most $200 total loss; see ../pilot/PILOT.md. Live trading remains technically disabled until the documented launch prerequisites are satisfied. Do not request the same budget authorization again. Push tested implementation checkpoints to `tyhuffman7/lights_on` main. HARDENING.md remains the implementation specification.
+
+## $200 pilot foundation
+
+Read [PILOT.md](../pilot/PILOT.md) before continuing. Preflight sizing and durable intent reservations are implemented with 130 passing tests; there is still no live order transport. The capital-fit audit found 347 fresh positive one-contract scenarios, but zero eligible states. Long settlement horizons are allowed. A paired early-exit quote evaluator now checks actual entry costs, executable bids, fees and reconciled inventory; no order transport or exit reconciliation is connected. The cricket rule review is unresolved. Do not turn the 347 unrestricted positive standalone models into earnings claims. No funding increase, replenishment or withdrawal is authorized.
 
 ## Sustained-research checkpoint (September 11)
 

@@ -23,7 +23,8 @@
     "research:csv": "node --experimental-strip-types worker/export-csv.ts",
     "research:backup": "node --experimental-strip-types worker/backup.ts",
     "research:health": "node --experimental-strip-types worker/health-check.ts",
-    "test:discovery-load": "node --experimental-strip-types worker/coverage-scale.ts"
+    "test:discovery-load": "node --experimental-strip-types worker/coverage-scale.ts",
+    "pilot:audit": "node --experimental-strip-types worker/pilot-audit.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
