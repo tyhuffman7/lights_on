@@ -55,6 +55,8 @@ export function categoryName(s: string) {
         elections: "politics",
         sport: "sports",
         financials: "economics",
+        finance: "economics",
+        macro: "economics",
       } as Record<string, string>
     )[n] ?? n
   );
@@ -489,5 +491,47 @@ export function generalHints(m: {
     years,
     assets,
     district,
+  };
+}
+
+// Ranking identity comes from the payout clause, not the administrative close date.
+// Missing fields remain unknown; these hints can reject candidates, never verify them.
+export function netflixChart(rules: string) {
+  const clause = rules.split(/\n/)[0];
+  if (!/netflix/i.test(clause)) return null;
+  const rank = clause.match(/#(\d+)\b/);
+  const date = clause.match(
+    /chart published on ([A-Za-z]+) (\d{1,2}),? (20\d{2})/i,
+  );
+  const month = date ? months.indexOf(date[1].slice(0, 3).toLowerCase()) : -1;
+  const descriptor = clause
+    .split(/netflix/i)
+    .slice(1)
+    .join("netflix")
+    .split(/chart/i)[0];
+  const region = /\b(?:US|United States)\b/i.test(descriptor)
+    ? "us"
+    : /\bGlobal\b/i.test(descriptor)
+      ? "global"
+      : undefined;
+  const format = /\bMovies?\b/i.test(descriptor)
+    ? "movie"
+    : /\b(?:Shows?|TV)\b/i.test(descriptor)
+      ? "show"
+      : undefined;
+  const language = /non[- ]english/i.test(descriptor)
+    ? "non-english"
+    : /\benglish\b/i.test(descriptor)
+      ? "english"
+      : undefined;
+  return {
+    rank: rank ? Number(rank[1]) : undefined,
+    region,
+    format,
+    language,
+    published:
+      date && month >= 0
+        ? `${date[3]}-${String(month + 1).padStart(2, "0")}-${date[2].padStart(2, "0")}`
+        : undefined,
   };
 }

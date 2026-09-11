@@ -1,5 +1,10 @@
 import { catalogEntities } from "./entities.ts";
-import { normalizeText, categoryName, generalHints } from "./identity.ts";
+import {
+  normalizeText,
+  categoryName,
+  generalHints,
+  netflixChart,
+} from "./identity.ts";
 import type { Market, Pair } from "../arb/types.ts";
 import { equivalent } from "./mappings.ts";
 import type { StructuredMarket } from "./mappings.ts";
@@ -57,13 +62,7 @@ function words(s: string) {
 }
 function fields(m: StructuredInput): Partial<StructuredMarket> {
   return {
-    category:
-      (
-        { entertainment: "culture", elections: "politics" } as Record<
-          string,
-          string
-        >
-      )[m.category.toLowerCase()] ?? m.category.toLowerCase(),
+    category: categoryName(m.category),
     // Administrative closeAt is not a proven resolution deadline.
     // Only explicitly extracted settlement fields may authorize equivalence.
     outcome: m.outcome,
@@ -113,6 +112,7 @@ export function discoverCandidates(
       return {
         m: { ...m, identity },
         structured: fields(m),
+        chart: netflixChart(m.rules),
         identity,
         // Primary payout dates/concepts disambiguate generic titles. Exclude later
         // exception paragraphs and examples; preserve title-based entity/placement.
@@ -213,6 +213,19 @@ export function discoverCandidates(
         diagnostics.rejected[reason]++;
       };
       if (keys.some((k) => sa[k] && sb[k] && sa[k] !== sb[k])) {
+        reject("structuralConflict");
+        continue;
+      }
+      if (
+        left.chart &&
+        right.chart &&
+        (["rank", "region", "format", "language", "published"] as const).some(
+          (k) =>
+            left.chart![k] !== undefined &&
+            right.chart![k] !== undefined &&
+            left.chart![k] !== right.chart![k],
+        )
+      ) {
         reject("structuralConflict");
         continue;
       }

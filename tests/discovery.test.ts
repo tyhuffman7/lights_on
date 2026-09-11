@@ -663,3 +663,65 @@ test("Non-sports generic titles cannot hide different election years or decade a
   });
   assert.equal(matchCandidates([a], [b]).length, 0);
 });
+
+test("Economic category aliases share discovery indexing without granting verification", () => {
+  const a = {
+    ...market("kalshi"),
+    category: "Economics",
+    title: "Will US GDP grow in 2026?",
+    outcome: "Yes",
+    rules: "US GDP grows in 2026",
+  };
+  for (const category of ["macro", "finance", "Financials"]) {
+    const b = {
+      ...market("poly"),
+      category,
+      title: a.title,
+      outcome: a.outcome,
+      rules: a.rules,
+    };
+    const c = matchCandidates([a], [b]);
+    assert.equal(c.length, 1);
+    assert.equal(c[0].status, "UNVERIFIED");
+  }
+});
+
+test("Netflix candidates distinguish chart date, region, rank, format and explicit language", () => {
+  const a = {
+    ...market("kalshi"),
+    category: "Entertainment",
+    title: "Will Example be Top US Netflix Movie on Sep 14, 2026?",
+    outcome: "Example",
+    rules:
+      "If Example is #1 on the Netflix Top 10 US Movie on the chart published on Sep 15, 2026, then the market resolves to Yes.",
+  };
+  const b = {
+    ...market("poly"),
+    category: "culture",
+    title: "Example · Top US Netflix Movie This Week?",
+    outcome: "Yes",
+    rules:
+      "This market will settle to Yes if Example is #1 on the Netflix Top 10 Movies in United States chart published on September 15, 2026.",
+  };
+  assert.equal(matchCandidates([a], [b]).length, 1);
+  for (const rules of [
+    b.rules.replace("#1", "#2"),
+    b.rules.replace("United States", "Global"),
+    b.rules.replace("Movies", "Shows"),
+    b.rules.replace("September 15", "September 22"),
+  ])
+    assert.equal(matchCandidates([a], [{ ...b, rules }]).length, 0);
+  const en = {
+    ...a,
+    rules: a.rules.replace("US Movie", "Global Movies (English)"),
+  };
+  const nonEn = {
+    ...b,
+    rules: b.rules.replace(
+      "Movies in United States",
+      "Global Movies (Non-English)",
+    ),
+  };
+  assert.equal(matchCandidates([en], [nonEn]).length, 0);
+  assert.equal(matchCandidates([a], [b])[0].status, "UNVERIFIED");
+});

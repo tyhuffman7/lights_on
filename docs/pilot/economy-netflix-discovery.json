@@ -1,0 +1,179 @@
+{
+  "diagnostics": {
+    "comparisons": 1888165,
+    "blockedByIndex": 2386336,
+    "comparisonLimitDeferred": 0,
+    "rejected": {
+      "structuralConflict": 36048,
+      "insufficientSimilarity": 9528,
+      "dateMismatch": 28517,
+      "thresholdMismatch": 1813379,
+      "outcomeMismatch": 668,
+      "other": 0
+    },
+    "categories": {
+      "kalshi": {
+        "economics": 14082,
+        "culture": 116,
+        "companies": 3
+      },
+      "poly": {
+        "economics": 255,
+        "culture": 46
+      }
+    }
+  },
+  "candidates": [
+    {
+      "id": "KXMUSKNW-26DEC31-T600::pnwpc-elonmusk-2026-12-31-gt600b",
+      "a": "Will Elon Musk's net worth for December 31, 2026 be above $600 billion?",
+      "b": "Above $600 Billion · Elon Musk Net Worth on December 31?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXMUSKNW-26DEC31-T700::pnwpc-elonmusk-2026-12-31-gt700b",
+      "a": "Will Elon Musk's net worth for December 31, 2026 be above $700 billion?",
+      "b": "Above $700 Billion · Elon Musk Net Worth on December 31?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXMUSKNW-26DEC31-T800::pnwpc-elonmusk-2026-12-31-gt800b",
+      "a": "Will Elon Musk's net worth for December 31, 2026 be above $800 billion?",
+      "b": "Above $800 Billion · Elon Musk Net Worth on December 31?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXMUSKNW-26DEC31-T900::pnwpc-elonmusk-2026-12-31-gt900b",
+      "a": "Will Elon Musk's net worth for December 31, 2026 be above $900 billion?",
+      "b": "Above $900 Billion · Elon Musk Net Worth on December 31?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXU3-26SEP-T3.7::urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "a": "Will the unemployment rate (U-3) be above 3.7% in September?",
+      "b": "Above 3.7% · September Unemployment Rate",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXU3-26SEP-T3.8::urc-usunemp-sa-september-2026-10-02-gt3pt8pct",
+      "a": "Will the unemployment rate (U-3) be above 3.8% in September?",
+      "b": "Above 3.8% · September Unemployment Rate",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXU3-26SEP-T3.9::urc-usunemp-sa-september-2026-10-02-gt3pt9pct",
+      "a": "Will the unemployment rate (U-3) be above 3.9% in September?",
+      "b": "Above 3.9% · September Unemployment Rate",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXU3-26SEP-T4.3::urc-usunemp-sa-september-2026-10-02-gt4pt3pct",
+      "a": "Will the unemployment rate (U-3) be above 4.3% in September?",
+      "b": "Above 4.3% · September Unemployment Rate",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+      "a": "Will the unemployment rate (U-3) be above 4.0% in September?",
+      "b": "Above 4.0% · September Unemployment Rate",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXU3-26SEP-T4.1::urc-usunemp-sa-september-2026-10-02-gt4pt1pct",
+      "a": "Will the unemployment rate (U-3) be above 4.1% in September?",
+      "b": "Above 4.1% · September Unemployment Rate",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXU3-26SEP-T4.2::urc-usunemp-sa-september-2026-10-02-gt4pt2pct",
+      "a": "Will the unemployment rate (U-3) be above 4.2% in September?",
+      "b": "Above 4.2% · September Unemployment Rate",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXU3-26SEP-T4.5::urc-usunemp-sa-september-2026-10-02-gt4pt5pct",
+      "a": "Will the unemployment rate (U-3) be above 4.5% in September?",
+      "b": "Above 4.5% · September Unemployment Rate",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-GRA::ccrc-ntflx-1movglbl-2026-09-15-grathe",
+      "a": "Will Grand Theft Auto VI: An Extended Look be Top Global Netflix Movie on Sep 14, 2026?",
+      "b": "Grand Theft Auto VI: An Extended Look · Top Global Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIE-26SEP14-WHY::ccrc-ntflx-1movus-2026-09-15-whydid",
+      "a": "Will Why Did I Get Married Again? be Top US Netflix Movie on Sep 14, 2026?",
+      "b": "Why Did I Get Married Again? · Top US Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIE-26SEP14-UNT::ccrc-ntflx-1movus-2026-09-15-untray",
+      "a": "Will Untold Raygun: Breaking Badly be Top US Netflix Movie on Sep 14, 2026?",
+      "b": "Untold Raygun: Breaking Badly · Top US Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIE-26SEP14-FAC::ccrc-ntflx-1movus-2026-09-15-facel",
+      "a": "Will Facing El Chapo be Top US Netflix Movie on Sep 14, 2026?",
+      "b": "Facing El Chapo · Top US Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIE-26SEP14-REA::ccrc-ntflx-1movus-2026-09-15-reanot",
+      "a": "Will Ready or Not be Top US Netflix Movie on Sep 14, 2026?",
+      "b": "Ready or Not · Top US Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIE-26SEP14-STR::ccrc-ntflx-1movus-2026-09-15-strout",
+      "a": "Will Straight Outta Compton be Top US Netflix Movie on Sep 14, 2026?",
+      "b": "Straight Outta Compton · Top US Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-ANA::ccrc-ntflx-1movglbl-2026-09-15-anatra",
+      "a": "Will Anacondas: Trail of Blood be Top Global Netflix Movie on Sep 14, 2026?",
+      "b": "Anacondas: Trail of Blood · Top Global Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKSHOW-26SEP14-INS::ccrc-ntflx-1shwus-2026-09-15-insdec",
+      "a": "Will Instadocs: The Decoy Plane be Top US Netflix Show on Sep 14, 2026?",
+      "b": "Instadocs: The Decoy Plane · Top US Netflix Show This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKSHOWGLOBAL-26SEP14-INS::ccrc-ntflx-1shwglbl-2026-09-15-insdec",
+      "a": "Will Instadocs: The Decoy Plane be Top Global Netflix Show on Sep 14, 2026?",
+      "b": "Instadocs: The Decoy Plane · Top Global Netflix Show This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIE-26SEP14-SHA::ccrc-ntflx-1movus-2026-09-15-shatal",
+      "a": "Will Shark Tale be Top US Netflix Movie on Sep 14, 2026?",
+      "b": "Shark Tale · Top US Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-SHR::ccrc-ntflx-1movglbl-2026-09-15-shrek",
+      "a": "Will Shrek be Top Global Netflix Movie on Sep 14, 2026?",
+      "b": "Shrek · Top Global Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-SHR::ccrc-ntflx-1movglbl-2026-09-15-shrek2",
+      "a": "Will Shrek be Top Global Netflix Movie on Sep 14, 2026?",
+      "b": "Shrek 2 · Top Global Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-SHRE::ccrc-ntflx-1movglbl-2026-09-15-shrek",
+      "a": "Will Shrek 2 be Top Global Netflix Movie on Sep 14, 2026?",
+      "b": "Shrek · Top Global Netflix Movie This Week?",
+      "status": "UNVERIFIED"
+    }
+  ],
+  "interpretation": "Filtered catalog candidate discovery; settlement equivalence and profitability not established."
+}

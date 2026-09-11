@@ -1,0 +1,839 @@
+{
+  "timingSummary": {
+    "100/100": {
+      "INSUFFICIENT_EVIDENCE": 1
+    },
+    "100/250": {
+      "INSUFFICIENT_EVIDENCE": 1
+    },
+    "250/100": {
+      "INSUFFICIENT_EVIDENCE": 1
+    },
+    "250/250": {
+      "INSUFFICIENT_EVIDENCE": 1
+    },
+    "500/500": {
+      "INSUFFICIENT_EVIDENCE": 1
+    }
+  },
+  "timingInterpretation": "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
+  "at": "2026-09-11T21:38:34.481Z",
+  "policy": {
+    "capitalPerVenue": 1000000,
+    "totalLossLimit": 2000000,
+    "contractsPerPair": 1,
+    "maxPairDebit": 20000,
+    "maxCommitted": 100000,
+    "reservePerVenue": 100000,
+    "maxDepthFraction": 0.25,
+    "maxBookAgeMs": 2000,
+    "maxMetadataAgeMs": 60000,
+    "maxAccountAgeMs": 5000,
+    "maxPlanAgeMs": 250,
+    "minimumNetProfit": 100,
+    "uncertaintyReserve": 100
+  },
+  "opportunities": 1,
+  "statesAudited": 2,
+  "opportunitiesWithPositiveStandaloneOneContractModel": 1,
+  "freshPositiveStandaloneModels": 1,
+  "positiveEventsStillMatching": 1,
+  "remainingReviewPairs": [
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 1,
+        "at": 1789162410379,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789162410379,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "a": {
+            "id": "KXTOPARTIST-26B-BAD",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "outcome": "bad bunny",
+              "entities": [],
+              "numbers": [],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Who will be the top Spotify artist this year?",
+            "outcome": "Bad Bunny",
+            "opposite": "Bad Bunny",
+            "category": "Entertainment",
+            "rules": "If Bad Bunny is the most streamed Spotify artist in 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf\n\n[{\"name\":\"Spotify\",\"url\":\"https://open.spotify.com/\"}]",
+            "url": "https://kalshi.com/markets/kxtopartist/kxtopartist-26b",
+            "closeAt": "2026-12-31T15:00:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+            "settlement": null,
+            "series": "KXTOPARTIST"
+          },
+          "b": {
+            "id": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "sptfy",
+              "eventAt": "2026-12-02T17:00:00.000Z",
+              "eventDate": "2026-12-02",
+              "participants": [],
+              "marketType": "future",
+              "entities": [],
+              "numbers": [
+                "2026"
+              ],
+              "aliases": [],
+              "eventKey": "spotify top global artist 2026"
+            },
+            "title": "Bad Bunny · Spotify Top Global Artist 2026",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "culture",
+            "rules": "If Bad Bunny is ranked the #1 artist globally on Spotify in 2026, this market will settle to Yes. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists Globally ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.",
+            "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+            "closeAt": "2026-12-16T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 1,
+            "hash": "11f0a38bd4b9d9323f363a6cb30f321a738342cdc5397bdf5ca9f0547d08cb67",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "ruleHashes": [
+            "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+            "11f0a38bd4b9d9323f363a6cb30f321a738342cdc5397bdf5ca9f0547d08cb67"
+          ],
+          "createdAt": 1789162410379,
+          "expiresAt": 1789162410629,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXTOPARTIST-26B-BAD",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 1400,
+              "modeledDebit": 1500,
+              "feeUpper": 100
+            },
+            {
+              "venue": "poly",
+              "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 8200,
+              "modeledDebit": 8300,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8200,
+          "modeledDebit": 8300,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "eligibleStates": 0,
+  "blockersByOpportunity": {
+    "RULE_EQUIVALENCE_UNVERIFIED": 1,
+    "APPROVAL_EVIDENCE_MISSING": 1,
+    "EXECUTION_PROTOCOL_UNVALIDATED": 1,
+    "LIVE_FEE_BOUND_UNVALIDATED": 1,
+    "BOOK_NOT_STRICTLY_FRESH": 1
+  },
+  "freshPositiveModelExamples": [
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 1,
+        "at": 1789162410379,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789162410379,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "a": {
+            "id": "KXTOPARTIST-26B-BAD",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "outcome": "bad bunny",
+              "entities": [],
+              "numbers": [],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Who will be the top Spotify artist this year?",
+            "outcome": "Bad Bunny",
+            "opposite": "Bad Bunny",
+            "category": "Entertainment",
+            "rules": "If Bad Bunny is the most streamed Spotify artist in 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf\n\n[{\"name\":\"Spotify\",\"url\":\"https://open.spotify.com/\"}]",
+            "url": "https://kalshi.com/markets/kxtopartist/kxtopartist-26b",
+            "closeAt": "2026-12-31T15:00:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+            "settlement": null,
+            "series": "KXTOPARTIST"
+          },
+          "b": {
+            "id": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "sptfy",
+              "eventAt": "2026-12-02T17:00:00.000Z",
+              "eventDate": "2026-12-02",
+              "participants": [],
+              "marketType": "future",
+              "entities": [],
+              "numbers": [
+                "2026"
+              ],
+              "aliases": [],
+              "eventKey": "spotify top global artist 2026"
+            },
+            "title": "Bad Bunny · Spotify Top Global Artist 2026",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "culture",
+            "rules": "If Bad Bunny is ranked the #1 artist globally on Spotify in 2026, this market will settle to Yes. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists Globally ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.",
+            "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+            "closeAt": "2026-12-16T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 1,
+            "hash": "11f0a38bd4b9d9323f363a6cb30f321a738342cdc5397bdf5ca9f0547d08cb67",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "ruleHashes": [
+            "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+            "11f0a38bd4b9d9323f363a6cb30f321a738342cdc5397bdf5ca9f0547d08cb67"
+          ],
+          "createdAt": 1789162410379,
+          "expiresAt": 1789162410629,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXTOPARTIST-26B-BAD",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 1400,
+              "modeledDebit": 1500,
+              "feeUpper": 100
+            },
+            {
+              "venue": "poly",
+              "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 8200,
+              "modeledDebit": 8300,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8200,
+          "modeledDebit": 8300,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "topStandaloneModels": [
+    {
+      "timingFromFirstPositiveState": {
+        "stateId": 1,
+        "at": 1789162410379,
+        "scenarios": [
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 100,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 100,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 250,
+            "polyDelayMs": 250,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          },
+          {
+            "kalshiDelayMs": 500,
+            "polyDelayMs": 500,
+            "status": "INSUFFICIENT_EVIDENCE",
+            "legs": [
+              {
+                "venue": "kalshi",
+                "status": "UNOBSERVED",
+                "debit": null
+              },
+              {
+                "venue": "poly",
+                "status": "UNOBSERVED",
+                "debit": null
+              }
+            ],
+            "modeledNet": null,
+            "confirmedFills": 0
+          }
+        ]
+      },
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "orientation": "kalshi_no+pm_us_yes",
+      "title": "Who will be the top Spotify artist this year?",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789162410379,
+      "modeledNetPerOneContractUSD": 0.01,
+      "freshPositiveModelAtRecordedTime": true,
+      "bestFreshModeledNetUSD": 0.01,
+      "reviewEvidence": {
+        "pair": {
+          "id": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "a": {
+            "id": "KXTOPARTIST-26B-BAD",
+            "venue": "kalshi",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "participants": [],
+              "outcome": "bad bunny",
+              "entities": [],
+              "numbers": [],
+              "aliases": []
+            },
+            "exchangeIndex": 0,
+            "title": "Who will be the top Spotify artist this year?",
+            "outcome": "Bad Bunny",
+            "opposite": "Bad Bunny",
+            "category": "Entertainment",
+            "rules": "If Bad Bunny is the most streamed Spotify artist in 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf\n\n[{\"name\":\"Spotify\",\"url\":\"https://open.spotify.com/\"}]",
+            "url": "https://kalshi.com/markets/kxtopartist/kxtopartist-26b",
+            "closeAt": "2026-12-31T15:00:00Z",
+            "open": true,
+            "feeRate": 700,
+            "feeRounding": "ceil",
+            "minQty": 1,
+            "hash": "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+            "settlement": null,
+            "series": "KXTOPARTIST"
+          },
+          "b": {
+            "id": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+            "venue": "poly",
+            "identity": {
+              "sports": false,
+              "general": {},
+              "competition": "sptfy",
+              "eventAt": "2026-12-02T17:00:00.000Z",
+              "eventDate": "2026-12-02",
+              "participants": [],
+              "marketType": "future",
+              "entities": [],
+              "numbers": [
+                "2026"
+              ],
+              "aliases": [],
+              "eventKey": "spotify top global artist 2026"
+            },
+            "title": "Bad Bunny · Spotify Top Global Artist 2026",
+            "outcome": "Yes",
+            "opposite": "No",
+            "category": "culture",
+            "rules": "If Bad Bunny is ranked the #1 artist globally on Spotify in 2026, this market will settle to Yes. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists Globally ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.",
+            "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+            "closeAt": "2026-12-16T23:00:00Z",
+            "open": true,
+            "feeRate": 600,
+            "feeRounding": "even",
+            "minQty": 1,
+            "hash": "11f0a38bd4b9d9323f363a6cb30f321a738342cdc5397bdf5ca9f0547d08cb67",
+            "settlement": null
+          },
+          "inverted": false,
+          "reviewed": false
+        },
+        "preflight": {
+          "mode": "PILOT_PREFLIGHT_ONLY",
+          "eligible": false,
+          "reasons": [
+            "RULE_EQUIVALENCE_UNVERIFIED",
+            "APPROVAL_EVIDENCE_MISSING",
+            "EXECUTION_PROTOCOL_UNVALIDATED",
+            "LIVE_FEE_BOUND_UNVALIDATED"
+          ],
+          "mappingId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "ruleHashes": [
+            "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+            "11f0a38bd4b9d9323f363a6cb30f321a738342cdc5397bdf5ca9f0547d08cb67"
+          ],
+          "createdAt": 1789162410379,
+          "expiresAt": 1789162410629,
+          "quantity": 1,
+          "legs": [
+            {
+              "venue": "kalshi",
+              "marketId": "KXTOPARTIST-26B-BAD",
+              "side": "no",
+              "quantity": 1,
+              "limitPrice": 1400,
+              "modeledDebit": 1500,
+              "feeUpper": 100
+            },
+            {
+              "venue": "poly",
+              "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+              "side": "yes",
+              "quantity": 1,
+              "limitPrice": 8200,
+              "modeledDebit": 8300,
+              "feeUpper": 100
+            }
+          ],
+          "modeledNet": 100,
+          "policy": {
+            "capitalPerVenue": 1000000,
+            "totalLossLimit": 2000000,
+            "contractsPerPair": 1,
+            "maxPairDebit": 20000,
+            "maxCommitted": 100000,
+            "reservePerVenue": 100000,
+            "maxDepthFraction": 0.25,
+            "maxBookAgeMs": 2000,
+            "maxMetadataAgeMs": 60000,
+            "maxAccountAgeMs": 5000,
+            "maxPlanAgeMs": 250,
+            "minimumNetProfit": 100,
+            "uncertaintyReserve": 100
+          },
+          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
+        }
+      },
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXTOPARTIST-26B-BAD",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 8200,
+          "modeledDebit": 8300,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "interpretation": "Historical standalone scenarios using assumed $100 cash per venue, not actual account balances or fills. Fees are model estimates, live fee bounds and execution protocol are unvalidated. Positive model values are not earnings, independent opportunities, or approval; no profit sum or monthly extrapolation is valid. Verification is frozen as observed; every live launch blocker remains enforced."
+}
