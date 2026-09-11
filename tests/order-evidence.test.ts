@@ -111,3 +111,16 @@ test("Kalshi order scope, cumulative cost and full execution agree", () => {
     ]),
   );
 });
+
+test("Budget conversion rounds fractional microdollars up without changing exact evidence", async () => {
+  const { reservationDebit } = await import("../lib/pilot/order-evidence.ts");
+  const evidence = {
+    action: "buy" as const,
+    moneyScale: 1000000 as const,
+    cashFlowMicros: -601,
+  };
+  assert.equal(reservationDebit(evidence), 7);
+  assert.equal(evidence.cashFlowMicros, -601);
+  assert.equal(reservationDebit({ ...evidence, cashFlowMicros: -600 }), 6);
+  assert.throws(() => reservationDebit({ ...evidence, action: "sell" }));
+});

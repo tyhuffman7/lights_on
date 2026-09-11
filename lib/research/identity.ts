@@ -547,3 +547,34 @@ export function netWorthSource(rules: string) {
   const found = sources.filter(([, pattern]) => pattern.test(primary));
   return found.length === 1 ? found[0][0] : undefined;
 }
+
+// Candidate exclusion only: election year is not the announcement deadline.
+// Equal calendar boundaries do not prove equivalent time zones or settlement rules.
+export function announcementDeadline(rules: string): string | undefined {
+  const primary = rules.split(/\n/)[0];
+  if (!/announc/i.test(primary) || !/presiden/i.test(primary)) return undefined;
+  const match = primary.match(
+    /\b(before|by|on or before)\s+(January|Jan|February|Feb|March|Mar|April|Apr|May|June|Jun|July|Jul|August|Aug|September|Sep|Sept|October|Oct|November|Nov|December|Dec)\s+(\d{1,2}),?\s+(20\d{2})\b/i,
+  );
+  if (!match) return undefined;
+  const month = [
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec",
+  ].indexOf(match[2].slice(0, 3).toLowerCase());
+  const date = new Date(Date.UTC(Number(match[4]), month, Number(match[3])));
+  if (date.getUTCMonth() !== month || date.getUTCDate() !== Number(match[3]))
+    return undefined;
+  if (match[1].toLowerCase() === "before")
+    date.setUTCDate(date.getUTCDate() - 1);
+  return date.toISOString().slice(0, 10);
+}

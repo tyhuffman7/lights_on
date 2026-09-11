@@ -168,3 +168,21 @@ export function reconcileOrderEvidence(
       "Order and individual fills agree; no settlement, realized-profit or exchange-revision inference.",
   };
 }
+
+// Reservation accounting uses $0.0001 units. Round debit UP only for that cap;
+// the journal's microdollar cash flow remains authoritative for costs and P&L.
+export function reservationDebit(
+  evidence: Pick<
+    ReturnType<typeof reconcileOrderEvidence>,
+    "action" | "cashFlowMicros" | "moneyScale"
+  >,
+) {
+  if (
+    evidence.action !== "buy" ||
+    evidence.moneyScale !== 1000000 ||
+    !Number.isSafeInteger(evidence.cashFlowMicros) ||
+    evidence.cashFlowMicros > 0
+  )
+    throw Error("Invalid entry reservation evidence");
+  return Number((-BigInt(evidence.cashFlowMicros) + 99n) / 100n);
+}

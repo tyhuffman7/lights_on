@@ -77,19 +77,36 @@ export class FillJournal {
       throw e;
     }
   }
-  totals(venue: Venue, orderId: string) {
-    if (
-      !this.db
-        .prepare("SELECT 1 FROM owned_fill_orders WHERE venue=? AND order_id=?")
-        .get(venue, orderId)
-    )
-      throw Error("Unknown owned order");
+  evidence(venue: Venue, orderId: string) {
+    const owned = this.db
+      .prepare(
+        "SELECT identity FROM owned_fill_orders WHERE venue=? AND order_id=?",
+      )
+      .get(venue, orderId) as { identity: string } | undefined;
+    if (!owned) throw Error("Unknown owned order");
+    const expected: ExpectedFill = JSON.parse(owned.identity);
     const rows = this.db
       .prepare(
         "SELECT body FROM owned_fill_evidence WHERE venue=? AND order_id=? ORDER BY fill_id",
       )
-      .all(venue, orderId) as any[];
-    return uniqueFillTotals(rows.map((r) => JSON.parse(r.body)));
+      .all(venue, orderId) as { body: string }[];
+    const fills = rows.map(
+      (r) => JSON.parse(r.body) as ReturnType<typeof polyFill>,
+    );
+    for (const f of fills)
+      if (
+        f.venue !== venue ||
+        f.orderId !== expected.orderId ||
+        f.marketId !== expected.marketId ||
+        f.side !== expected.side ||
+        f.action !== expected.action
+      )
+        throw Error("Persisted fill identity mismatch");
+    uniqueFillTotals(fills); // Includes unit-version and conflicting duplicate checks.
+    return fills;
+  }
+  totals(venue: Venue, orderId: string) {
+    return uniqueFillTotals(this.evidence(venue, orderId));
   }
   close() {
     this.db.close();

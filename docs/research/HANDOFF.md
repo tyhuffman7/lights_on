@@ -1,3 +1,13 @@
+## Latest: announcement deadlines and restart evidence
+
+The 299-pair non-sports observer completed its 900 seconds and stopped. Reports: `docs/pilot/live-all-nonsports-current-{audit,health,full-budget-size-audit}.json`. It recorded 42 opportunity intervals / 135 states, 19 positive standalone one-contract modeled occurrences, zero eligible orders. A newly tested announcement-deadline exclusion removes nine positive occurrences: a shared 2028 election year must not conflate an announcement deadline in 2026 with one in 2027. Equal calendar deadline hints remain UNVERIFIED; time zones, party scope and exceptions still require settlement review.
+
+Current matching retains ten positive occurrences across five pairs. At 100/100ms, four have both sides displayed and six insufficient evidence; at 500/500ms, two have both displayed, one only one leg, seven insufficient evidence. These are not confirmed fills. Remaining review pairs: Gavin Newsom and Rahm Emanuel Democratic nomination, Scott Jennings press secretary, AOC announcement by year-end 2026, and You Again album. Full-budget size sweep is hypothetical and cannot be summed as earnings.
+
+The observer recorded one event-loop-delay episode and six reconnects; metadata refresh was active at the event but causation is unproven. Processing p99 6.43ms; receive-to-persistence-ack p99 169.48ms. Targeted tests/light development overlapped; no claim of host isolation. Cloud migration is not provisioned and would require measured comparison.
+
+Persistent fill journal evidence can now be restored and revalidated against the registered order identity. Integration fixtures exercise partial cancellation across a restart, duplicate fills, preserved unmatched inventory, and blocked further entries. Exact microdollar actual evidence is retained; only the budget reservation converts upward to $0.0001 units. Synthetic tests are not venue fills. Live trading remains disabled. Validation: 172 tests passing and TypeScript passed; production build checked at checkpoint.
+
 ## Fee precision follow-up
 
 Current fill and order evidence uses explicit integer microdollars, preserving six-decimal fees and fractional notional. Existing Kalshi/PM-US order checks still reconcile. New published-mechanics rounding simulation documents account precision and fractional rebate-cap sensitivity; the old whole-contract `feeUpper` is not an unconditional live bound. Live fee validation remains off. See PROOF-OF-EDGE.md and `fee-rounding-research.json`. 168 tests and TypeScript pass after these edits; build also passed. Last usage reading was 23% used / 77% remaining. User has returned and authorized retrying the existing signed checkpoint. Verify actual Git state before reporting push completion.

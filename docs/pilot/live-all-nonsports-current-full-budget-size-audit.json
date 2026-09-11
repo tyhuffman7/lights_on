@@ -1,0 +1,3263 @@
+{
+  "at": "2026-09-11T23:27:03.508Z",
+  "mode": "RESEARCH_SIZE_SWEEP",
+  "matchingIntervals": 32,
+  "states": 112,
+  "maximumContracts": 200,
+  "maximumCombinedDebitUSD": 180,
+  "depthFraction": 0.25,
+  "reservePerContractUSD": 0.01,
+  "positivePairSizes": [
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 13,
+      "modeledNet": 3950,
+      "debit": 124750,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 13,
+          "limitPrice": 350,
+          "modeledDebit": 5850,
+          "feeUpper": 1300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 13,
+          "limitPrice": 9100,
+          "modeledDebit": 118900,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 12,
+      "modeledNet": 3600,
+      "debit": 115200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 12,
+          "limitPrice": 350,
+          "modeledDebit": 5400,
+          "feeUpper": 1200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 12,
+          "limitPrice": 9100,
+          "modeledDebit": 109800,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 11,
+      "modeledNet": 3350,
+      "debit": 105550,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 11,
+          "limitPrice": 350,
+          "modeledDebit": 4950,
+          "feeUpper": 1100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 11,
+          "limitPrice": 9100,
+          "modeledDebit": 100600,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 10,
+      "modeledNet": 3000,
+      "debit": 96000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 10,
+          "limitPrice": 350,
+          "modeledDebit": 4500,
+          "feeUpper": 1000
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 10,
+          "limitPrice": 9100,
+          "modeledDebit": 91500,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 9,
+      "modeledNet": 2750,
+      "debit": 86350,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 9,
+          "limitPrice": 350,
+          "modeledDebit": 4050,
+          "feeUpper": 900
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 9,
+          "limitPrice": 9100,
+          "modeledDebit": 82300,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 21,
+      "modeledNet": 2500,
+      "debit": 205400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 21,
+          "limitPrice": 1200,
+          "modeledDebit": 27300,
+          "feeUpper": 2100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 21,
+          "limitPrice": 8400,
+          "modeledDebit": 178100,
+          "feeUpper": 1700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 8,
+      "modeledNet": 2400,
+      "debit": 76800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 8,
+          "limitPrice": 350,
+          "modeledDebit": 3600,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 8,
+          "limitPrice": 9100,
+          "modeledDebit": 73200,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 20,
+      "modeledNet": 2400,
+      "debit": 195600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 20,
+          "limitPrice": 1200,
+          "modeledDebit": 26000,
+          "feeUpper": 2000
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 20,
+          "limitPrice": 8400,
+          "modeledDebit": 169600,
+          "feeUpper": 1600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 19,
+      "modeledNet": 2300,
+      "debit": 185800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 19,
+          "limitPrice": 1200,
+          "modeledDebit": 24700,
+          "feeUpper": 1900
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 19,
+          "limitPrice": 8400,
+          "modeledDebit": 161100,
+          "feeUpper": 1500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 7,
+      "modeledNet": 2150,
+      "debit": 67150,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 7,
+          "limitPrice": 350,
+          "modeledDebit": 3150,
+          "feeUpper": 700
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 7,
+          "limitPrice": 9100,
+          "modeledDebit": 64000,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 18,
+      "modeledNet": 2100,
+      "debit": 176100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 18,
+          "limitPrice": 1200,
+          "modeledDebit": 23400,
+          "feeUpper": 1800
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 18,
+          "limitPrice": 8400,
+          "modeledDebit": 152700,
+          "feeUpper": 1500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 17,
+      "modeledNet": 2000,
+      "debit": 166300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 17,
+          "limitPrice": 1200,
+          "modeledDebit": 22100,
+          "feeUpper": 1700
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 17,
+          "limitPrice": 8400,
+          "modeledDebit": 144200,
+          "feeUpper": 1400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 16,
+      "modeledNet": 1900,
+      "debit": 156500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 16,
+          "limitPrice": 1200,
+          "modeledDebit": 20800,
+          "feeUpper": 1600
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 16,
+          "limitPrice": 8400,
+          "modeledDebit": 135700,
+          "feeUpper": 1300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 6,
+      "modeledNet": 1800,
+      "debit": 57600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 350,
+          "modeledDebit": 2700,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 9100,
+          "modeledDebit": 54900,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 15,
+      "modeledNet": 1800,
+      "debit": 146700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 15,
+          "limitPrice": 1200,
+          "modeledDebit": 19500,
+          "feeUpper": 1500
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 15,
+          "limitPrice": 8400,
+          "modeledDebit": 127200,
+          "feeUpper": 1200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 14,
+      "modeledNet": 1700,
+      "debit": 136900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 14,
+          "limitPrice": 1200,
+          "modeledDebit": 18200,
+          "feeUpper": 1400
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 14,
+          "limitPrice": 8400,
+          "modeledDebit": 118700,
+          "feeUpper": 1100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 13,
+      "modeledNet": 1600,
+      "debit": 127100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 13,
+          "limitPrice": 1200,
+          "modeledDebit": 16900,
+          "feeUpper": 1300
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 13,
+          "limitPrice": 8400,
+          "modeledDebit": 110200,
+          "feeUpper": 1000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 5,
+      "modeledNet": 1550,
+      "debit": 47950,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 350,
+          "modeledDebit": 2250,
+          "feeUpper": 500
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 9100,
+          "modeledDebit": 45700,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 12,
+      "modeledNet": 1400,
+      "debit": 117400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 12,
+          "limitPrice": 1200,
+          "modeledDebit": 15600,
+          "feeUpper": 1200
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 12,
+          "limitPrice": 8400,
+          "modeledDebit": 101800,
+          "feeUpper": 1000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 11,
+      "modeledNet": 1300,
+      "debit": 107600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 11,
+          "limitPrice": 1200,
+          "modeledDebit": 14300,
+          "feeUpper": 1100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 11,
+          "limitPrice": 8400,
+          "modeledDebit": 93300,
+          "feeUpper": 900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 4,
+      "modeledNet": 1200,
+      "debit": 38400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 350,
+          "modeledDebit": 1800,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 9100,
+          "modeledDebit": 36600,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 10,
+      "modeledNet": 1200,
+      "debit": 97800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 10,
+          "limitPrice": 1200,
+          "modeledDebit": 13000,
+          "feeUpper": 1000
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 10,
+          "limitPrice": 8400,
+          "modeledDebit": 84800,
+          "feeUpper": 800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 9,
+      "modeledNet": 1100,
+      "debit": 88000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 9,
+          "limitPrice": 1200,
+          "modeledDebit": 11700,
+          "feeUpper": 900
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 9,
+          "limitPrice": 8400,
+          "modeledDebit": 76300,
+          "feeUpper": 700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168470058,
+      "quantity": 64,
+      "modeledNet": 1000,
+      "debit": 632600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 64,
+          "limitPrice": 1400,
+          "modeledDebit": 96000,
+          "feeUpper": 6400
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 64,
+          "limitPrice": 8300,
+          "modeledDebit": 536600,
+          "feeUpper": 5400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168470058,
+      "quantity": 65,
+      "modeledNet": 1000,
+      "debit": 642500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 65,
+          "limitPrice": 1400,
+          "modeledDebit": 97500,
+          "feeUpper": 6500
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 65,
+          "limitPrice": 8300,
+          "modeledDebit": 545000,
+          "feeUpper": 5500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 8,
+      "modeledNet": 1000,
+      "debit": 78200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 8,
+          "limitPrice": 1200,
+          "modeledDebit": 10400,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 8,
+          "limitPrice": 8400,
+          "modeledDebit": 67800,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 3,
+      "modeledNet": 950,
+      "debit": 28750,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 350,
+          "modeledDebit": 1350,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 9100,
+          "modeledDebit": 27400,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168468510,
+      "quantity": 8,
+      "modeledNet": 900,
+      "debit": 78300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 8,
+          "limitPrice": 1400,
+          "modeledDebit": 12000,
+          "feeUpper": 800
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 8,
+          "limitPrice": 8200,
+          "modeledDebit": 66300,
+          "feeUpper": 700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168470058,
+      "quantity": 58,
+      "modeledNet": 900,
+      "debit": 573300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 58,
+          "limitPrice": 1400,
+          "modeledDebit": 87000,
+          "feeUpper": 5800
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 58,
+          "limitPrice": 8300,
+          "modeledDebit": 486300,
+          "feeUpper": 4900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168470058,
+      "quantity": 59,
+      "modeledNet": 900,
+      "debit": 583200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 59,
+          "limitPrice": 1400,
+          "modeledDebit": 88500,
+          "feeUpper": 5900
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 59,
+          "limitPrice": 8300,
+          "modeledDebit": 494700,
+          "feeUpper": 5000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168470058,
+      "quantity": 60,
+      "modeledNet": 900,
+      "debit": 593100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 60,
+          "limitPrice": 1400,
+          "modeledDebit": 90000,
+          "feeUpper": 6000
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 60,
+          "limitPrice": 8300,
+          "modeledDebit": 503100,
+          "feeUpper": 5100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168470058,
+      "quantity": 61,
+      "modeledNet": 900,
+      "debit": 603000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 61,
+          "limitPrice": 1400,
+          "modeledDebit": 91500,
+          "feeUpper": 6100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 61,
+          "limitPrice": 8300,
+          "modeledDebit": 511500,
+          "feeUpper": 5200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168470058,
+      "quantity": 62,
+      "modeledNet": 900,
+      "debit": 612900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 62,
+          "limitPrice": 1400,
+          "modeledDebit": 93000,
+          "feeUpper": 6200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 62,
+          "limitPrice": 8300,
+          "modeledDebit": 519900,
+          "feeUpper": 5300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168470058,
+      "quantity": 63,
+      "modeledNet": 900,
+      "debit": 622800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 63,
+          "limitPrice": 1400,
+          "modeledDebit": 94500,
+          "feeUpper": 6300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 63,
+          "limitPrice": 8300,
+          "modeledDebit": 528300,
+          "feeUpper": 5400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168147304,
+      "quantity": 7,
+      "modeledNet": 800,
+      "debit": 68500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 7,
+          "limitPrice": 1400,
+          "modeledDebit": 10500,
+          "feeUpper": 700
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 7,
+          "limitPrice": 8200,
+          "modeledDebit": 58000,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 51,
+      "modeledNet": 800,
+      "debit": 504100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 51,
+          "limitPrice": 1400,
+          "modeledDebit": 76500,
+          "feeUpper": 5100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 51,
+          "limitPrice": 8300,
+          "modeledDebit": 427600,
+          "feeUpper": 4300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 52,
+      "modeledNet": 800,
+      "debit": 514000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 52,
+          "limitPrice": 1400,
+          "modeledDebit": 78000,
+          "feeUpper": 5200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 52,
+          "limitPrice": 8300,
+          "modeledDebit": 436000,
+          "feeUpper": 4400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168147304,
+      "quantity": 53,
+      "modeledNet": 800,
+      "debit": 523900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 53,
+          "limitPrice": 1400,
+          "modeledDebit": 79500,
+          "feeUpper": 5300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 53,
+          "limitPrice": 8300,
+          "modeledDebit": 444400,
+          "feeUpper": 4500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168468510,
+      "quantity": 54,
+      "modeledNet": 800,
+      "debit": 533800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 54,
+          "limitPrice": 1400,
+          "modeledDebit": 81000,
+          "feeUpper": 5400
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 54,
+          "limitPrice": 8300,
+          "modeledDebit": 452800,
+          "feeUpper": 4600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168468510,
+      "quantity": 55,
+      "modeledNet": 800,
+      "debit": 543700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 55,
+          "limitPrice": 1400,
+          "modeledDebit": 82500,
+          "feeUpper": 5500
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 55,
+          "limitPrice": 8300,
+          "modeledDebit": 461200,
+          "feeUpper": 4700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168468510,
+      "quantity": 56,
+      "modeledNet": 800,
+      "debit": 553600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 56,
+          "limitPrice": 1400,
+          "modeledDebit": 84000,
+          "feeUpper": 5600
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 56,
+          "limitPrice": 8300,
+          "modeledDebit": 469600,
+          "feeUpper": 4800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168468510,
+      "quantity": 57,
+      "modeledNet": 800,
+      "debit": 563500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 57,
+          "limitPrice": 1400,
+          "modeledDebit": 85500,
+          "feeUpper": 5700
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 57,
+          "limitPrice": 8300,
+          "modeledDebit": 478000,
+          "feeUpper": 4900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 7,
+      "modeledNet": 800,
+      "debit": 68500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 7,
+          "limitPrice": 1200,
+          "modeledDebit": 9100,
+          "feeUpper": 700
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 7,
+          "limitPrice": 8400,
+          "modeledDebit": 59400,
+          "feeUpper": 600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789167949770,
+      "quantity": 6,
+      "modeledNet": 700,
+      "debit": 58700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 1400,
+          "modeledDebit": 9000,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "cranc-uspres28-12-31-2026-aleoca",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 8200,
+          "modeledDebit": 49700,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 6,
+      "modeledNet": 700,
+      "debit": 58700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 1400,
+          "modeledDebit": 9000,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 8200,
+          "modeledDebit": 49700,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 44,
+      "modeledNet": 700,
+      "debit": 434900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 44,
+          "limitPrice": 1400,
+          "modeledDebit": 66000,
+          "feeUpper": 4400
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 44,
+          "limitPrice": 8300,
+          "modeledDebit": 368900,
+          "feeUpper": 3700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 45,
+      "modeledNet": 700,
+      "debit": 444800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 45,
+          "limitPrice": 1400,
+          "modeledDebit": 67500,
+          "feeUpper": 4500
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 45,
+          "limitPrice": 8300,
+          "modeledDebit": 377300,
+          "feeUpper": 3800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 46,
+      "modeledNet": 700,
+      "debit": 454700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 46,
+          "limitPrice": 1400,
+          "modeledDebit": 69000,
+          "feeUpper": 4600
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 46,
+          "limitPrice": 8300,
+          "modeledDebit": 385700,
+          "feeUpper": 3900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 47,
+      "modeledNet": 700,
+      "debit": 464600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 47,
+          "limitPrice": 1400,
+          "modeledDebit": 70500,
+          "feeUpper": 4700
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 47,
+          "limitPrice": 8300,
+          "modeledDebit": 394100,
+          "feeUpper": 4000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 48,
+      "modeledNet": 700,
+      "debit": 474500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 48,
+          "limitPrice": 1400,
+          "modeledDebit": 72000,
+          "feeUpper": 4800
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 48,
+          "limitPrice": 8300,
+          "modeledDebit": 402500,
+          "feeUpper": 4100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 49,
+      "modeledNet": 700,
+      "debit": 484400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 49,
+          "limitPrice": 1400,
+          "modeledDebit": 73500,
+          "feeUpper": 4900
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 49,
+          "limitPrice": 8300,
+          "modeledDebit": 410900,
+          "feeUpper": 4200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 50,
+      "modeledNet": 700,
+      "debit": 494300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 50,
+          "limitPrice": 1400,
+          "modeledDebit": 75000,
+          "feeUpper": 5000
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 50,
+          "limitPrice": 8300,
+          "modeledDebit": 419300,
+          "feeUpper": 4300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 6,
+      "modeledNet": 700,
+      "debit": 58700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 6,
+          "limitPrice": 1200,
+          "modeledDebit": 7800,
+          "feeUpper": 600
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 6,
+          "limitPrice": 8400,
+          "modeledDebit": 50900,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789167949756,
+      "quantity": 2,
+      "modeledNet": 600,
+      "debit": 19200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNEXTPRESSEC-29JAN21-SJEN",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 2000,
+          "modeledDebit": 4400,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "nphc-presssec-repkl-scojen",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 7300,
+          "modeledDebit": 14800,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 2,
+      "modeledNet": 600,
+      "debit": 19200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 350,
+          "modeledDebit": 900,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 9100,
+          "modeledDebit": 18300,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168468510,
+      "quantity": 1,
+      "modeledNet": 600,
+      "debit": 9300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7700,
+          "modeledDebit": 7800,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 5,
+      "modeledNet": 600,
+      "debit": 48900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 1400,
+          "modeledDebit": 7500,
+          "feeUpper": 500
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 8200,
+          "modeledDebit": 41400,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 38,
+      "modeledNet": 600,
+      "debit": 375600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 38,
+          "limitPrice": 1400,
+          "modeledDebit": 57000,
+          "feeUpper": 3800
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 38,
+          "limitPrice": 8300,
+          "modeledDebit": 318600,
+          "feeUpper": 3200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 39,
+      "modeledNet": 600,
+      "debit": 385500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 39,
+          "limitPrice": 1400,
+          "modeledDebit": 58500,
+          "feeUpper": 3900
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 39,
+          "limitPrice": 8300,
+          "modeledDebit": 327000,
+          "feeUpper": 3300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 40,
+      "modeledNet": 600,
+      "debit": 395400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 40,
+          "limitPrice": 1400,
+          "modeledDebit": 60000,
+          "feeUpper": 4000
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 40,
+          "limitPrice": 8300,
+          "modeledDebit": 335400,
+          "feeUpper": 3400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 41,
+      "modeledNet": 600,
+      "debit": 405300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 41,
+          "limitPrice": 1400,
+          "modeledDebit": 61500,
+          "feeUpper": 4100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 41,
+          "limitPrice": 8300,
+          "modeledDebit": 343800,
+          "feeUpper": 3500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 42,
+      "modeledNet": 600,
+      "debit": 415200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 42,
+          "limitPrice": 1400,
+          "modeledDebit": 63000,
+          "feeUpper": 4200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 42,
+          "limitPrice": 8300,
+          "modeledDebit": 352200,
+          "feeUpper": 3600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 43,
+      "modeledNet": 600,
+      "debit": 425100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 43,
+          "limitPrice": 1400,
+          "modeledDebit": 64500,
+          "feeUpper": 4300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 43,
+          "limitPrice": 8300,
+          "modeledDebit": 360600,
+          "feeUpper": 3700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 5,
+      "modeledNet": 600,
+      "debit": 48900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 1200,
+          "modeledDebit": 6500,
+          "feeUpper": 500
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 8400,
+          "modeledDebit": 42400,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789167949770,
+      "quantity": 5,
+      "modeledNet": 500,
+      "debit": 49000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "side": "yes",
+          "quantity": 5,
+          "limitPrice": 1400,
+          "modeledDebit": 7500,
+          "feeUpper": 500
+        },
+        {
+          "venue": "poly",
+          "marketId": "cranc-uspres28-12-31-2026-aleoca",
+          "side": "no",
+          "quantity": 5,
+          "limitPrice": 8200,
+          "modeledDebit": 41500,
+          "feeUpper": 500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 31,
+      "modeledNet": 500,
+      "debit": 306400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 31,
+          "limitPrice": 1400,
+          "modeledDebit": 46500,
+          "feeUpper": 3100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 31,
+          "limitPrice": 8300,
+          "modeledDebit": 259900,
+          "feeUpper": 2600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 32,
+      "modeledNet": 500,
+      "debit": 316300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 32,
+          "limitPrice": 1400,
+          "modeledDebit": 48000,
+          "feeUpper": 3200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 32,
+          "limitPrice": 8300,
+          "modeledDebit": 268300,
+          "feeUpper": 2700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 33,
+      "modeledNet": 500,
+      "debit": 326200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 33,
+          "limitPrice": 1400,
+          "modeledDebit": 49500,
+          "feeUpper": 3300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 33,
+          "limitPrice": 8300,
+          "modeledDebit": 276700,
+          "feeUpper": 2800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 34,
+      "modeledNet": 500,
+      "debit": 336100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 34,
+          "limitPrice": 1400,
+          "modeledDebit": 51000,
+          "feeUpper": 3400
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 34,
+          "limitPrice": 8300,
+          "modeledDebit": 285100,
+          "feeUpper": 2900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 35,
+      "modeledNet": 500,
+      "debit": 346000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 35,
+          "limitPrice": 1400,
+          "modeledDebit": 52500,
+          "feeUpper": 3500
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 35,
+          "limitPrice": 8300,
+          "modeledDebit": 293500,
+          "feeUpper": 3000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 36,
+      "modeledNet": 500,
+      "debit": 355900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 36,
+          "limitPrice": 1400,
+          "modeledDebit": 54000,
+          "feeUpper": 3600
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 36,
+          "limitPrice": 8300,
+          "modeledDebit": 301900,
+          "feeUpper": 3100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 37,
+      "modeledNet": 500,
+      "debit": 365800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 37,
+          "limitPrice": 1400,
+          "modeledDebit": 55500,
+          "feeUpper": 3700
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 37,
+          "limitPrice": 8300,
+          "modeledDebit": 310300,
+          "feeUpper": 3200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 4,
+      "modeledNet": 500,
+      "debit": 39100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1200,
+          "modeledDebit": 5200,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8400,
+          "modeledDebit": 33900,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 23,
+      "modeledNet": 500,
+      "debit": 227200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 23,
+          "limitPrice": 1200,
+          "modeledDebit": 29900,
+          "feeUpper": 2300
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 23,
+          "limitPrice": 8500,
+          "modeledDebit": 197300,
+          "feeUpper": 1800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 24,
+      "modeledNet": 500,
+      "debit": 237100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 24,
+          "limitPrice": 1200,
+          "modeledDebit": 31200,
+          "feeUpper": 2400
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 24,
+          "limitPrice": 8500,
+          "modeledDebit": 205900,
+          "feeUpper": 1900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 25,
+      "modeledNet": 500,
+      "debit": 247000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 25,
+          "limitPrice": 1200,
+          "modeledDebit": 32500,
+          "feeUpper": 2500
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 25,
+          "limitPrice": 8500,
+          "modeledDebit": 214500,
+          "feeUpper": 2000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 26,
+      "modeledNet": 500,
+      "debit": 256900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 26,
+          "limitPrice": 1200,
+          "modeledDebit": 33800,
+          "feeUpper": 2600
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 26,
+          "limitPrice": 8500,
+          "modeledDebit": 223100,
+          "feeUpper": 2100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789167949770,
+      "quantity": 2,
+      "modeledNet": 400,
+      "debit": 19400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1400,
+          "modeledDebit": 3000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "cranc-uspres28-12-31-2026-aleoca",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8100,
+          "modeledDebit": 16400,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789167949770,
+      "quantity": 4,
+      "modeledNet": 400,
+      "debit": 39200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1400,
+          "modeledDebit": 6000,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "cranc-uspres28-12-31-2026-aleoca",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8200,
+          "modeledDebit": 33200,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168468510,
+      "quantity": 2,
+      "modeledNet": 400,
+      "debit": 19400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1400,
+          "modeledDebit": 3000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8100,
+          "modeledDebit": 16400,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 4,
+      "modeledNet": 400,
+      "debit": 39200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 4,
+          "limitPrice": 1400,
+          "modeledDebit": 6000,
+          "feeUpper": 400
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 4,
+          "limitPrice": 8200,
+          "modeledDebit": 33200,
+          "feeUpper": 400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 25,
+      "modeledNet": 400,
+      "debit": 247100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 25,
+          "limitPrice": 1400,
+          "modeledDebit": 37500,
+          "feeUpper": 2500
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 25,
+          "limitPrice": 8300,
+          "modeledDebit": 209600,
+          "feeUpper": 2100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 26,
+      "modeledNet": 400,
+      "debit": 257000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 26,
+          "limitPrice": 1400,
+          "modeledDebit": 39000,
+          "feeUpper": 2600
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 26,
+          "limitPrice": 8300,
+          "modeledDebit": 218000,
+          "feeUpper": 2200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 27,
+      "modeledNet": 400,
+      "debit": 266900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 27,
+          "limitPrice": 1400,
+          "modeledDebit": 40500,
+          "feeUpper": 2700
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 27,
+          "limitPrice": 8300,
+          "modeledDebit": 226400,
+          "feeUpper": 2300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 28,
+      "modeledNet": 400,
+      "debit": 276800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 28,
+          "limitPrice": 1400,
+          "modeledDebit": 42000,
+          "feeUpper": 2800
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 28,
+          "limitPrice": 8300,
+          "modeledDebit": 234800,
+          "feeUpper": 2400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 29,
+      "modeledNet": 400,
+      "debit": 286700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 29,
+          "limitPrice": 1400,
+          "modeledDebit": 43500,
+          "feeUpper": 2900
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 29,
+          "limitPrice": 8300,
+          "modeledDebit": 243200,
+          "feeUpper": 2500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 30,
+      "modeledNet": 400,
+      "debit": 296600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 30,
+          "limitPrice": 1400,
+          "modeledDebit": 45000,
+          "feeUpper": 3000
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 30,
+          "limitPrice": 8300,
+          "modeledDebit": 251600,
+          "feeUpper": 2600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 3,
+      "modeledNet": 400,
+      "debit": 29300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1200,
+          "modeledDebit": 3900,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8400,
+          "modeledDebit": 25400,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 22,
+      "modeledNet": 400,
+      "debit": 217400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 22,
+          "limitPrice": 1200,
+          "modeledDebit": 28600,
+          "feeUpper": 2200
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 22,
+          "limitPrice": 8500,
+          "modeledDebit": 188800,
+          "feeUpper": 1800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168017645,
+      "quantity": 1,
+      "modeledNet": 350,
+      "debit": 9550,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-REMA",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 350,
+          "modeledDebit": 450,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-rahema",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 9100,
+          "modeledDebit": 9100,
+          "feeUpper": 0
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789167949756,
+      "quantity": 1,
+      "modeledNet": 300,
+      "debit": 9600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNEXTPRESSEC-29JAN21-SJEN",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 2000,
+          "modeledDebit": 2200,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "nphc-presssec-repkl-scojen",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 7300,
+          "modeledDebit": 7400,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789167949770,
+      "quantity": 3,
+      "modeledNet": 300,
+      "debit": 29400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1400,
+          "modeledDebit": 4500,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "cranc-uspres28-12-31-2026-aleoca",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8200,
+          "modeledDebit": 24900,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 3,
+      "modeledNet": 300,
+      "debit": 29400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 3,
+          "limitPrice": 1400,
+          "modeledDebit": 4500,
+          "feeUpper": 300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 3,
+          "limitPrice": 8200,
+          "modeledDebit": 24900,
+          "feeUpper": 300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 18,
+      "modeledNet": 300,
+      "debit": 177900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 18,
+          "limitPrice": 1400,
+          "modeledDebit": 27000,
+          "feeUpper": 1800
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 18,
+          "limitPrice": 8300,
+          "modeledDebit": 150900,
+          "feeUpper": 1500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 19,
+      "modeledNet": 300,
+      "debit": 187800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 19,
+          "limitPrice": 1400,
+          "modeledDebit": 28500,
+          "feeUpper": 1900
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 19,
+          "limitPrice": 8300,
+          "modeledDebit": 159300,
+          "feeUpper": 1600
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 20,
+      "modeledNet": 300,
+      "debit": 197700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 20,
+          "limitPrice": 1400,
+          "modeledDebit": 30000,
+          "feeUpper": 2000
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 20,
+          "limitPrice": 8300,
+          "modeledDebit": 167700,
+          "feeUpper": 1700
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 21,
+      "modeledNet": 300,
+      "debit": 207600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 21,
+          "limitPrice": 1400,
+          "modeledDebit": 31500,
+          "feeUpper": 2100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 21,
+          "limitPrice": 8300,
+          "modeledDebit": 176100,
+          "feeUpper": 1800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 22,
+      "modeledNet": 300,
+      "debit": 217500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 22,
+          "limitPrice": 1400,
+          "modeledDebit": 33000,
+          "feeUpper": 2200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 22,
+          "limitPrice": 8300,
+          "modeledDebit": 184500,
+          "feeUpper": 1900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 23,
+      "modeledNet": 300,
+      "debit": 227400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 23,
+          "limitPrice": 1400,
+          "modeledDebit": 34500,
+          "feeUpper": 2300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 23,
+          "limitPrice": 8300,
+          "modeledDebit": 192900,
+          "feeUpper": 2000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 24,
+      "modeledNet": 300,
+      "debit": 237300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 24,
+          "limitPrice": 1400,
+          "modeledDebit": 36000,
+          "feeUpper": 2400
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 24,
+          "limitPrice": 8300,
+          "modeledDebit": 201300,
+          "feeUpper": 2100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789167949770,
+      "quantity": 1,
+      "modeledNet": 200,
+      "debit": 9700,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1400,
+          "modeledDebit": 1500,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "cranc-uspres28-12-31-2026-aleoca",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8100,
+          "modeledDebit": 8200,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 12,
+      "modeledNet": 200,
+      "debit": 118600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 12,
+          "limitPrice": 1400,
+          "modeledDebit": 18000,
+          "feeUpper": 1200
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 12,
+          "limitPrice": 8300,
+          "modeledDebit": 100600,
+          "feeUpper": 1000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 13,
+      "modeledNet": 200,
+      "debit": 128500,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 13,
+          "limitPrice": 1400,
+          "modeledDebit": 19500,
+          "feeUpper": 1300
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 13,
+          "limitPrice": 8300,
+          "modeledDebit": 109000,
+          "feeUpper": 1100
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 14,
+      "modeledNet": 200,
+      "debit": 138400,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 14,
+          "limitPrice": 1400,
+          "modeledDebit": 21000,
+          "feeUpper": 1400
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 14,
+          "limitPrice": 8300,
+          "modeledDebit": 117400,
+          "feeUpper": 1200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 15,
+      "modeledNet": 200,
+      "debit": 148300,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 15,
+          "limitPrice": 1400,
+          "modeledDebit": 22500,
+          "feeUpper": 1500
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 15,
+          "limitPrice": 8300,
+          "modeledDebit": 125800,
+          "feeUpper": 1300
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 16,
+      "modeledNet": 200,
+      "debit": 158200,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 16,
+          "limitPrice": 1400,
+          "modeledDebit": 24000,
+          "feeUpper": 1600
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 16,
+          "limitPrice": 8300,
+          "modeledDebit": 134200,
+          "feeUpper": 1400
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 17,
+      "modeledNet": 200,
+      "debit": 168100,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 17,
+          "limitPrice": 1400,
+          "modeledDebit": 25500,
+          "feeUpper": 1700
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 17,
+          "limitPrice": 8300,
+          "modeledDebit": 142600,
+          "feeUpper": 1500
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 2,
+      "modeledNet": 200,
+      "debit": 19600,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 2,
+          "limitPrice": 1200,
+          "modeledDebit": 2600,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 2,
+          "limitPrice": 8400,
+          "modeledDebit": 17000,
+          "feeUpper": 200
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 9,
+      "modeledNet": 100,
+      "debit": 89000,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 9,
+          "limitPrice": 1400,
+          "modeledDebit": 13500,
+          "feeUpper": 900
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 9,
+          "limitPrice": 8300,
+          "modeledDebit": 75500,
+          "feeUpper": 800
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 10,
+      "modeledNet": 100,
+      "debit": 98900,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 10,
+          "limitPrice": 1400,
+          "modeledDebit": 15000,
+          "feeUpper": 1000
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 10,
+          "limitPrice": 8300,
+          "modeledDebit": 83900,
+          "feeUpper": 900
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168145499,
+      "quantity": 11,
+      "modeledNet": 100,
+      "debit": 108800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXPRESNOMD-28-GN",
+          "side": "yes",
+          "quantity": 11,
+          "limitPrice": 1400,
+          "modeledDebit": 16500,
+          "feeUpper": 1100
+        },
+        {
+          "venue": "poly",
+          "marketId": "enwc-uspres-nom-dem-2028-gavnew",
+          "side": "no",
+          "quantity": 11,
+          "limitPrice": 8300,
+          "modeledDebit": 92300,
+          "feeUpper": 1000
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "orientation": "kalshi_yes+pm_us_no",
+      "at": 1789168590437,
+      "quantity": 1,
+      "modeledNet": 100,
+      "debit": 9800,
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KX1ALBUM-26DEC-YOU",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 1200,
+          "modeledDebit": 1300,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "ccpc-bilbrd-1album-any2026-youaga",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 8400,
+          "modeledDebit": 8500,
+          "feeUpper": 100
+        }
+      ],
+      "eligible": false
+    }
+  ],
+  "submittedOrders": 0,
+  "confirmedFills": 0,
+  "interpretation": "Best observed historical states with assumed funds and both fills; not executable plans, independent earning events, arrival checks, or realized profit. Current matching is required, settlement equivalence remains unverified. Prices and fee estimates are based on recorded depth. Live one-contract pilot limits are unchanged."
+}

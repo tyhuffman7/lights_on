@@ -5,6 +5,7 @@ import {
   generalHints,
   netflixChart,
   netWorthSource,
+  announcementDeadline,
 } from "./identity.ts";
 import type { Market, Pair } from "../arb/types.ts";
 import { equivalent } from "./mappings.ts";
@@ -115,6 +116,7 @@ export function discoverCandidates(
         structured: fields(m),
         chart: netflixChart(m.rules),
         netWorthSource: netWorthSource(m.rules),
+        announcementDeadline: announcementDeadline(m.rules),
         identity,
         // Primary payout dates/concepts disambiguate generic titles. Exclude later
         // exception paragraphs and examples; preserve title-based entity/placement.
@@ -255,6 +257,14 @@ export function discoverCandidates(
       const reasons: string[] = [];
       let generalIdentity = false;
       if (!ia?.sports && !ib?.sports) {
+        if (
+          left.announcementDeadline &&
+          right.announcementDeadline &&
+          left.announcementDeadline !== right.announcementDeadline
+        ) {
+          reject("dateMismatch");
+          continue;
+        }
         const ha = left.hints,
           hb = right.hints;
         if (

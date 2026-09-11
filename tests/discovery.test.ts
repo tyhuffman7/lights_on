@@ -752,3 +752,30 @@ test("Net-worth markets with Forbes versus Bloomberg sources are not paired", ()
   assert.equal(matchCandidates([a], [same]).length, 1);
   assert.equal(matchCandidates([a], [same])[0].status, "UNVERIFIED");
 });
+
+test("Presidential announcement deadlines cannot be conflated with the election year", () => {
+  const a = {
+    ...market("kalshi"),
+    category: "Elections",
+    title: "Who will run for the Democratic presidential nomination in 2028?",
+    outcome: "Jon Ossoff",
+    rules:
+      "If Jon Ossoff announces a presidential campaign to contest the presidential nomination of the Democratic party for the 2028 U.S. presidential election before Jan 1, 2028, then the market resolves to Yes.",
+  };
+  const b = {
+    ...market("poly"),
+    category: "politics",
+    title: "Jon Ossoff · Who Will Announce a Presidential Run in 2026?",
+    outcome: "Yes",
+    rules:
+      "This market will settle to Yes if Jon Ossoff announces they will run for President of the United States in the 2028 United States Presidential election by December 31, 2026, 11:59 PM ET.",
+  };
+  assert.equal(matchCandidates([a], [b]).length, 0);
+  const aligned = {
+    ...b,
+    title: b.title.replace("2026", "2027"),
+    rules: b.rules.replace("2026", "2027"),
+  };
+  assert.equal(matchCandidates([a], [aligned]).length, 1);
+  assert.equal(matchCandidates([a], [aligned])[0].status, "UNVERIFIED");
+});
