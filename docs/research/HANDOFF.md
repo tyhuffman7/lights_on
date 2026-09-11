@@ -2,7 +2,21 @@
 
 Use built-in capabilities/native skills only. Do not use installed skills, including Superpowers, and never brainstorming. No sub-agents unless the user authorizes them. Keep live trading completely disabled. Push tested implementation checkpoints to `tyhuffman7/lights_on` main. HARDENING.md remains the implementation specification.
 
-## Implemented September 11
+## Sustained-research checkpoint (September 11)
+
+The broad-discovery implementation below is historical context. The sustained-research implementation now includes bounded opportunity evidence, scoped canonical entities, assisted review packages, pair-level capacity/exploration, paced venue-fair reconciliation, reader-worker scoring, and detailed recovery diagnostics. See [SUSTAINED-RESEARCH.md](SUSTAINED-RESEARCH.md), [SUSTAINED-VALIDATION.md](SUSTAINED-VALIDATION.md), and [REVIEW-PRIORITIES.md](REVIEW-PRIORITIES.md).
+
+The historical database is preserved locally at `research-data/research.sqlite` (approximately 4.16 GB); do not resume indefinite full-book persistence or delete old evidence. The original 8789 observer was not listening during this work. Bounded validation uses separate ignored databases under `work/sustained/` and ends by stopping streams, draining persistence and closing the session. Verify process state instead of assuming any old observer is running.
+
+Recovery invalidations immediately quarantine in memory; their closing calculations run in the ordered persistence worker to avoid a synchronous full-subscription sizing burst. The longer sample still observed an initial event-loop stall whose source is not established. Preserve that limitation and profile it before claiming uninterrupted multi-day reliability.
+
+A live probe established that Polymarket US rejects a duplicate subscription to an already subscribed slug. Do not implement temporary duplicate subscriptions as snapshot recovery. Kalshi supports `get_snapshot` on its existing subscription. An older REST venue timestamp is separately classified and never used to overwrite a newer stream; strict two-second freshness remains unchanged. Unknown timestamps are not exempted from mismatch checks.
+
+Historical export contains 1,920 raw occurrences, 198 mapping/orientation groups, 40 review candidates and ten side-by-side packages. These are UNVERIFIED research observations, never retroactively verified profit. External contract documents linked in metadata still require inspection. The human approval path refreshes rule hashes immediately before approval.
+
+Completed checkpoints are pushed to GitHub. Credentials and local databases are intentionally excluded. No live order placement was added. Multi-day reliability and verified opportunity economics remain unproven; the bounded validation report defines the measured result and limitations.
+
+## Earlier broad-discovery implementation
 
 Broad persistent discovery includes sports, paginates active catalogs, normalizes team/player aliases, leagues, scheduled dates, periods, lines and outcome concepts, and uses bounded indexes instead of an all-to-all title scan. Candidate generation is separate from settlement proof. Catalog fetch/normalization/matching runs in a worker; registry updates are batched and immediately patch the evaluation/persistence indexes. Previously auto-discovered unverified candidates that cease matching are retired; orientation changes invalidate verification. Dashboard discovery diagnostics, five-second health polling, ten-second report polling and mapping pagination are implemented.
 
@@ -18,7 +32,7 @@ All 89 tests passed, as did TypeScript without incremental cache, production bui
 
 The approximately five-hour pre-final-guard run recorded over 800,000 book records and zero verified opportunities, but also substantial reconciliation, reconnection, event-loop and metadata errors. The final capture had all 1,000 subscribed books valid, but only 9 Kalshi / 114 PM-US books changed within two seconds. Valid-book processing p99 was about 3.50 ms; overall processing including invalidation batches was about 31.92 ms. Event-loop maximum was 4.67 seconds. Do not claim production reliability, profitable arbitrage or full-universe executable coverage. Preserve the failed stage and these limitations when discussing results.
 
-## Current local state
+## Earlier local state (superseded by sustained checkpoint above)
 
 The main observer was restarted with the final code and left running at http://127.0.0.1:8789, using ignored `observer.config.json` and `research-data/research.sqlite`. Verify it is still alive before assuming continued operation. Default capacity is 500 markets per venue, 100 per group. It automatically discovers new candidates; the original two manually configured Emmy pairs remain in the config. Do not delete existing evidence or approve mappings merely to improve counts.
 

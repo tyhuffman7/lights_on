@@ -243,6 +243,23 @@ export class LiveRecorder {
     this.telemetry.sample("processingLag", started - book.receivedMono);
     const key = `${book.venue}:${book.marketId}`;
     this.books.set(key, structuredClone(book));
+    if (!book.valid || book.connection !== "LIVE") {
+      // Quarantine is immediate. The ordered worker computes closing evidence;
+      // recovery must not synchronously size hundreds of unusable books.
+      for (const m of this.index.get(key) ?? []) {
+        for (const side of ["yes", "no"] as const) {
+          const other = m.pair.inverted ? side : side === "yes" ? "no" : "yes";
+          this.rawActive.delete(`${m.id}:kalshi_${side}+pm_us_${other}`);
+        }
+      }
+      this.enqueue("book", { book });
+      this.telemetry.count("bookUpdates");
+      this.telemetry.count("deferredInvalidBookEvaluations");
+      const elapsed = performance.now() - book.receivedMono;
+      this.telemetry.sample("processing", elapsed);
+      this.telemetry.sample("invalidBookProcessing", elapsed);
+      return;
+    }
     const evaluations: Record<string, Evaluation[]> = {};
     for (const m of this.index.get(key) ?? []) {
       const a = this.books.get(`kalshi:${m.pair.a.id}`),

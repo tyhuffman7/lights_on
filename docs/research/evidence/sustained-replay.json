@@ -1,0 +1,8 @@
+{
+  "openingCalculationsReproduced": 136,
+  "stateGrossCalculationsReproduced": 665,
+  "statesWithBothEvidenceReferences": 665,
+  "databaseQuickCheck": "ok",
+  "latencyRows": 0,
+  "interpretation": "Replayed opening and state gross calculations using frozen opportunity metadata and persisted books. All state book references resolve. This audit does not change historical verification or run profit simulations; all eight latency buckets are separately covered by regression fixtures."
+}

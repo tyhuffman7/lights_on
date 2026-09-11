@@ -1,0 +1,3720 @@
+{
+  "startedAt": "2026-09-11T19:44:39.362Z",
+  "elapsedMs": 900429,
+  "sessionId": "bb103562-68a1-4950-880a-848d0d5c3e5a",
+  "coverage": {
+    "eligible": 865,
+    "selected": 536,
+    "deferred": 329,
+    "selectedIds": [
+      "KXUFCFIGHT-26SEP12ALDTAR-ALD::aec-ufc-jjald-regtar-2026-09-12",
+      "KXUFCFIGHT-26SEP12BAHSAL-BAH::aec-ufc-ignbah-mussal-2026-09-12",
+      "KXNCAAFB12QUAL-26-BYU::aqc-cfb-big12-2026-12-04-champq-byu",
+      "KXNCAAFUNDEFEATED-26-ORE::aachc-cfb-undefeated-2026-11-28-ore",
+      "KXNCAAFUNDEFEATED-26-TTU::aachc-cfb-undefeated-2026-11-28-txtech",
+      "KXNCAAFUNDEFEATED-26-UTAH::aachc-cfb-undefeated-2026-11-28-utah",
+      "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "KXNCAAFGAME-26SEP12BRYHAMP-BRY::aec-cfb-bryant-hamp-2026-09-12",
+      "KXNCAAFGAME-26SEP12CHSOCIT-CHSO::aec-cfb-chsou-cita-2026-09-12",
+      "KXNCAAFGAME-26SEP12FURMER-FUR::aec-cfb-furman-merc-2026-09-12",
+      "KXNBAEAST1SEED-26-NYK::aachc-nba-eastseed1-2027-04-11-w-ny",
+      "KXNCAAFGAME-26SEP12DRKEUNI-DRKE::aec-cfb-drake-niowa-2026-09-12",
+      "KXNCAAFGAME-26SEP12IWNAU-IW::aec-cfb-incar-narz-2026-09-12",
+      "KXNCAAFGAME-26SEP19EWUWASH-EWU::aec-cfb-ewash-wash-2026-09-19",
+      "KXNCAAFSECQ-26-TXAM::aqc-cfb-cfp-2026-12-06-playoffq-txam",
+      "KXNCAAFB12QUAL-26-TTU::aqc-cfb-big12-2026-12-04-champq-txtech",
+      "KXNCAAFGAME-26SEP12WMLEH-WM::aec-cfb-wm-lehi-2026-09-12",
+      "KXNCAAFB12QUAL-26-COLO::aqc-cfb-big12-2026-12-04-champq-col",
+      "KXNCAAFB12QUAL-26-WVU::aqc-cfb-big12-2026-12-04-champq-wvir",
+      "KXNCAAFB12QUAL-26-UTAH::aqc-cfb-big12-2026-12-04-champq-utah",
+      "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "KXNCAAFB10QUAL-26-ORE::aqc-cfb-bigten-2026-12-05-champq-ore",
+      "KXNBAWEST1SEED-26-OKC::aachc-nba-westseed1-2027-04-11-w-okc",
+      "KXNCAAFGAME-26SEP12MDCONN-MD::aec-cfb-mary-uconn-2026-09-12",
+      "KXNBAEAST1SEED-26-WAS::aachc-nba-eastseed1-2027-04-11-w-was",
+      "KXNBAEAST1SEED-26-IND::aachc-nba-eastseed1-2027-04-11-w-ind",
+      "KXNBAWEST1SEED-26-MIN::aachc-nba-westseed1-2027-04-11-w-min",
+      "KXNBAWEST1SEED-26-UTA::aachc-nba-westseed1-2027-04-11-w-uta",
+      "KXNCAAFGAME-26SEP19FIUFAU-FIU::aec-cfb-flint-flatl-2026-09-19",
+      "KXNCAAFGAME-26SEP19LTBAY-LT::aec-cfb-loutch-bayl-2026-09-19",
+      "KXNCAAFGAME-26SEP19NCATCAMP-NCAT::aec-cfb-ncat-camp-2026-09-19",
+      "KXNCAAFGAME-26SEP19NCCUWEBB-NCCU::aec-cfb-ncc-gardwb-2026-09-19",
+      "KXNCAAFGAME-26SEP19SELAULM-SELA::aec-cfb-selou-lamon-2026-09-19",
+      "KXNCAAFGAME-26SEP19SUUUST-SUU::aec-cfb-sutah-stmn-2026-09-19",
+      "KXNCAAFGAME-26SEP19URISTON-URI::aec-cfb-ri-stbr-2026-09-19",
+      "KXNCAAFGAME-26SEP19WMURICE-WMU::aec-cfb-wmich-rice-2026-09-19",
+      "KXUFCFIGHT-26SEP12BELSAN-BEL::aec-ufc-youbel-djosan-2026-09-12",
+      "KXUFCFIGHT-26SEP12CORBLA-COR::aec-ufc-walcor-curbla-2026-09-12",
+      "KXUFCFIGHT-26SEP12ELLCHA-ELL::aec-ufc-timell-edgcha-2026-09-12",
+      "KXUFCFIGHT-26SEP12FIOGRA-FIO::aec-ufc-manfio-alegra-2026-09-12",
+      "KXUFCFIGHT-26SEP12KINROS-KIN::aec-ufc-seakin-jesros-2026-09-12",
+      "KXUFCFIGHT-26SEP12KLOGAN-KLO::aec-ufc-draklo-tomgan-2026-09-12",
+      "KXUFCFIGHT-26SEP12MARIGE-MAR::aec-ufc-davmar-danige-2026-09-12",
+      "KXUFCFIGHT-26SEP12MCMRAH-MCM::aec-ufc-tommcm-marrah-2026-09-12",
+      "KXUFCFIGHT-26SEP12MORMORA-MOR::aec-ufc-bramor-josmor-2026-09-12",
+      "KXUFCFIGHT-26SEP19CHIBRI-CHI::aec-ufc-gigchi-joabri-2026-09-19",
+      "KXUFCFIGHT-26SEP19ONEMOU-ONE::aec-ufc-casone-edumou-2026-09-19",
+      "KXUFCFIGHT-26SEP19SHAFER-SHA::aec-ufc-edmsha-brufer-2026-09-19",
+      "KXUFCFIGHT-26SEP19TUIDES-TUI::aec-ufc-taitui-robdes-2026-09-19",
+      "KXNCAAFGAME-26SEP19UNDNEB-UND::aec-cfb-ndak-nebr-2026-09-19",
+      "KXNFLLASTTOLOSE-27-TEN::aachc-nfl-2027-01-10-lastundefeated-ten",
+      "KXNCAAFGAME-26SEP19MEBC-ME::aec-cfb-maine-boscol-2026-09-19",
+      "KXNCAAFB12QUAL-26-UCF::aqc-cfb-big12-2026-12-04-champq-ucf",
+      "KXNCAAFSECQ-26-ARK::aqc-cfb-sec-2026-12-05-champq-ark",
+      "KXNFLLASTTOLOSE-27-KC::aachc-nfl-2027-01-10-lastundefeated-kc",
+      "KXUFCFIGHT-26SEP19GANDIA-GAN::aec-ufc-ryagan-ozzdia-2026-09-19",
+      "KXNCAAFUNDEFEATED-26-ND::aachc-cfb-undefeated-2026-11-28-nd",
+      "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "KXNFLLASTTOLOSE-27-DAL::aachc-nfl-2027-01-10-lastundefeated-dal",
+      "KXNFLLASTTOLOSE-27-MIN::aachc-nfl-2027-01-10-lastundefeated-min",
+      "KXNFLLASTTOLOSE-27-NYG::aachc-nfl-2027-01-10-lastundefeated-nyg",
+      "KXNCAAFACCQUAL-26-SMU::aqc-cfb-cfp-2026-12-06-playoffq-smu",
+      "KXNCAAFGAME-26SEP12UNCOWYO-UNCO::aec-cfb-ncol-wyom-2026-09-12",
+      "KXNCAAFB10QUAL-26-MINN::aqc-cfb-bigten-2026-12-05-champq-minnst",
+      "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "KXNCAAFGAME-26SEP12STETCOOK-STET::aec-cfb-stet-bcook-2026-09-12",
+      "KXNCAAFGAME-26SEP12STNHUNH-STNH::aec-cfb-stnh-nhamp-2026-09-12",
+      "KXNCAAFSECQ-26-ARK::aqc-cfb-cfp-2026-12-06-playoffq-ark",
+      "KXNCAAFACCQUAL-26-LOU::aqc-cfb-cfp-2026-12-06-playoffq-lou",
+      "KXWNBA-26-MIN::tec-wnba-champion-2026-10-31-w-min",
+      "KXNCAAFACCQUAL-26-VT::aqc-cfb-acc-2026-12-05-champq-vtech",
+      "KXNCAAFSECQ-26-TXAM::aqc-cfb-sec-2026-12-05-champq-txam",
+      "KXNCAAFB12QUAL-26-CIN::aqc-cfb-big12-2026-12-04-champq-cin",
+      "KXNFLLASTTOLOSE-27-WAS::aachc-nfl-2027-01-10-lastundefeated-was",
+      "KXNCAAFAACQUAL-26-UNT::aqc-cfb-aac-2026-12-05-champq-ntx",
+      "KXNCAAFACCQUAL-26-GT::aqc-cfb-acc-2026-12-05-champq-gtech",
+      "KXNBAEAST1SEED-26-BOS::aachc-nba-eastseed1-2027-04-11-w-bos",
+      "KXNBAEAST1SEED-26-PHI::aachc-nba-eastseed1-2027-04-11-w-phi",
+      "KXNCAAFAACQUAL-26-FAU::aqc-cfb-aac-2026-12-05-champq-flatl",
+      "KXNCAAFACCQUAL-26-GT::aqc-cfb-cfp-2026-12-06-playoffq-gtech",
+      "KXNCAAFACCQUAL-26-VT::aqc-cfb-cfp-2026-12-06-playoffq-vtech",
+      "KXNCAAFCUSAQUAL-26-FIU::aqc-cfb-cusa-2026-12-04-champq-flint",
+      "KXNCAAFGAME-26SEP19EWUWASH-WASH::aec-cfb-ewash-wash-2026-09-19",
+      "KXNBAWEST1SEED-26-SAS::aachc-nba-westseed1-2027-04-11-w-sa",
+      "KXNFLLASTTOLOSE-27-ARI::aachc-nfl-2027-01-10-lastundefeated-ari",
+      "KXNFLLASTTOLOSE-27-NYJ::aachc-nfl-2027-01-10-lastundefeated-nyj",
+      "KXNCAAFACCQUAL-26-CAL::aqc-cfb-acc-2026-12-05-champq-cah",
+      "KXNCAAFACCQUAL-26-CAL::aqc-cfb-cfp-2026-12-06-playoffq-cah",
+      "KXNCAAFB10QUAL-26-MD::aqc-cfb-bigten-2026-12-05-champq-mary",
+      "KXNBARECORD-27BEST-IND::aachc-nba-2027-04-11-bestrecord-ind",
+      "KXNBARECORD-27BEST-MIN::aachc-nba-2027-04-11-bestrecord-min",
+      "KXNBARECORD-27BEST-NYK::aachc-nba-2027-04-11-bestrecord-ny",
+      "KXNBARECORD-27BEST-OKC::aachc-nba-2027-04-11-bestrecord-okc",
+      "KXNBARECORD-27BEST-UTA::aachc-nba-2027-04-11-bestrecord-uta",
+      "KXNBARECORD-27BEST-WAS::aachc-nba-2027-04-11-bestrecord-was",
+      "KXNCAAFB10QUAL-26-WASH::aqc-cfb-bigten-2026-12-05-champq-wash",
+      "KXNBAWEST1SEED-26-LAL::aachc-nba-westseed1-2027-04-11-w-lal",
+      "KXNCAAFAACQUAL-26-USF::aqc-cfb-aac-2026-12-05-champq-sfl",
+      "KXNCAAFB10QUAL-26-NEB::aqc-cfb-bigten-2026-12-05-champq-nebr",
+      "KXNCAAFB10QUAL-26-WIS::aqc-cfb-bigten-2026-12-05-champq-wisc",
+      "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "KXUFCFIGHT-26SEP19ONEMOU-MOU::aec-ufc-casone-edumou-2026-09-19",
+      "KXNBAEAST1SEED-26-DET::aachc-nba-eastseed1-2027-04-11-w-det",
+      "KXNCAAFB12QUAL-26-BAY::aqc-cfb-big12-2026-12-04-champq-bayl",
+      "KXNBAWEST1SEED-26-SAC::aachc-nba-westseed1-2027-04-11-w-sac",
+      "KXNBAWEST1SEED-26-DAL::aachc-nba-westseed1-2027-04-11-w-dal",
+      "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "KXNBAEAST1SEED-26-BKN::aachc-nba-eastseed1-2027-04-11-w-bkn",
+      "KXNBAEAST1SEED-26-CHI::aachc-nba-eastseed1-2027-04-11-w-chi",
+      "KXNBAEAST1SEED-26-MIL::aachc-nba-eastseed1-2027-04-11-w-mil",
+      "KXNBAWEST1SEED-26-MEM::aachc-nba-westseed1-2027-04-11-w-mem",
+      "KXNBAWEST1SEED-26-NOP::aachc-nba-westseed1-2027-04-11-w-no",
+      "KXNBAWEST1SEED-26-PHX::aachc-nba-westseed1-2027-04-11-w-pho",
+      "KXNBAWEST1SEED-26-GSW::aachc-nba-westseed1-2027-04-11-w-gs",
+      "KXNBAWEST1SEED-26-LAC::aachc-nba-westseed1-2027-04-11-w-lac",
+      "KXNBAEAST1SEED-26-ATL::aachc-nba-eastseed1-2027-04-11-w-atl",
+      "KXNBAEAST1SEED-26-CHA::aachc-nba-eastseed1-2027-04-11-w-cha",
+      "KXNBAEAST1SEED-26-CLE::aachc-nba-eastseed1-2027-04-11-w-cle",
+      "KXNBAEAST1SEED-26-ORL::aachc-nba-eastseed1-2027-04-11-w-orl",
+      "KXNBAEAST1SEED-26-TOR::aachc-nba-eastseed1-2027-04-11-w-tor",
+      "KXNBAWEST1SEED-26-DEN::aachc-nba-westseed1-2027-04-11-w-den",
+      "KXNBAWEST1SEED-26-HOU::aachc-nba-westseed1-2027-04-11-w-hou",
+      "KXNBAWEST1SEED-26-POR::aachc-nba-westseed1-2027-04-11-w-por",
+      "KXNCAAFGAME-26SEP12GASOCLEM-GASO::aec-cfb-gas-clmsn-2026-09-12",
+      "KXNCAAFGAME-26SEP12MRMKME-MRMK::aec-cfb-merri-maine-2026-09-12",
+      "KXNCAAFGAME-26SEP12MRSTLAF-MRST::aec-cfb-mrst-lafay-2026-09-12",
+      "KXNCAAFGAME-26SEP19FIUFAU-FAU::aec-cfb-flint-flatl-2026-09-19",
+      "KXNFLLASTTOLOSE-27-TB::aachc-nfl-2027-01-10-lastundefeated-tb",
+      "KXNCAAFGAME-26SEP12WMLEH-LEH::aec-cfb-wm-lehi-2026-09-12",
+      "KXNFLLASTTOLOSE-27-BAL::aachc-nfl-2027-01-10-lastundefeated-bal",
+      "KXWNBA-26-IND::tec-wnba-champion-2026-10-31-w-ind",
+      "KXNFLLASTTOLOSE-27-PHI::aachc-nfl-2027-01-10-lastundefeated-phi",
+      "KXNFLLASTTOLOSE-27-HOU::aachc-nfl-2027-01-10-lastundefeated-hou",
+      "KXNFLLASTTOLOSE-27-SEA::aachc-nfl-2027-01-10-lastundefeated-sea",
+      "KXNFLLASTTOLOSE-27-JAC::aachc-nfl-2027-01-10-lastundefeated-jax",
+      "KXNFLLASTTOLOSE-27-MIA::aachc-nfl-2027-01-10-lastundefeated-mia",
+      "KXNFLLASTTOLOSE-27-GB::aachc-nfl-2027-01-10-lastundefeated-gb",
+      "KXNFLLASTTOLOSE-27-CLE::aachc-nfl-2027-01-10-lastundefeated-cle",
+      "KXNFLLASTTOLOSE-27-BUF::aachc-nfl-2027-01-10-lastundefeated-buf",
+      "KXNBARECORD-27BEST-SAS::aachc-nba-2027-04-11-bestrecord-sa",
+      "KXWNBA-26-WSH::tec-wnba-champion-2026-10-31-w-wsh",
+      "KXWNBA-26-NY::tec-wnba-champion-2026-10-31-w-ny",
+      "KXNFLLASTTOLOSE-27-SF::aachc-nfl-2027-01-10-lastundefeated-sf",
+      "KXNBARECORD-27BEST-ATL::aachc-nba-2027-04-11-bestrecord-atl",
+      "KXNFLLASTTOLOSE-27-DET::aachc-nfl-2027-01-10-lastundefeated-det",
+      "KXNFLLASTTOLOSE-27-IND::aachc-nfl-2027-01-10-lastundefeated-ind",
+      "KXNFLLASTTOLOSE-27-LAC::aachc-nfl-2027-01-10-lastundefeated-lac",
+      "KXNFLLASTTOLOSE-27-LV::aachc-nfl-2027-01-10-lastundefeated-lv",
+      "KXNFLLASTTOLOSE-27-NO::aachc-nfl-2027-01-10-lastundefeated-no",
+      "KXNFLLASTTOLOSE-27-PIT::aachc-nfl-2027-01-10-lastundefeated-pit",
+      "KXNFLLASTTOLOSE-27-ATL::aachc-nfl-2027-01-10-lastundefeated-atl",
+      "KXNFLLASTTOLOSE-27-CAR::aachc-nfl-2027-01-10-lastundefeated-car",
+      "KXNFLLASTTOLOSE-27-CHI::aachc-nfl-2027-01-10-lastundefeated-chi",
+      "KXNFLLASTTOLOSE-27-CIN::aachc-nfl-2027-01-10-lastundefeated-cin",
+      "KXNFLLASTTOLOSE-27-DEN::aachc-nfl-2027-01-10-lastundefeated-den",
+      "KXNBARECORD-27BEST-BKN::aachc-nba-2027-04-11-bestrecord-bkn",
+      "KXNBARECORD-27BEST-BOS::aachc-nba-2027-04-11-bestrecord-bos",
+      "KXNBARECORD-27BEST-CHA::aachc-nba-2027-04-11-bestrecord-cha",
+      "KXNBARECORD-27BEST-CHI::aachc-nba-2027-04-11-bestrecord-chi",
+      "KXNBARECORD-27BEST-CLE::aachc-nba-2027-04-11-bestrecord-cle",
+      "KXNBARECORD-27BEST-DAL::aachc-nba-2027-04-11-bestrecord-dal",
+      "KXNBARECORD-27BEST-DEN::aachc-nba-2027-04-11-bestrecord-den",
+      "KXNBARECORD-27BEST-DET::aachc-nba-2027-04-11-bestrecord-det",
+      "KXNBARECORD-27BEST-GSW::aachc-nba-2027-04-11-bestrecord-gs",
+      "KXNBARECORD-27BEST-HOU::aachc-nba-2027-04-11-bestrecord-hou",
+      "KXNBARECORD-27BEST-LAC::aachc-nba-2027-04-11-bestrecord-lac",
+      "KXNBARECORD-27BEST-LAL::aachc-nba-2027-04-11-bestrecord-lal",
+      "KXNBARECORD-27BEST-MEM::aachc-nba-2027-04-11-bestrecord-mem",
+      "KXNBARECORD-27BEST-MIA::aachc-nba-2027-04-11-bestrecord-mia",
+      "KXNBARECORD-27BEST-MIL::aachc-nba-2027-04-11-bestrecord-mil",
+      "KXNBARECORD-27BEST-NOP::aachc-nba-2027-04-11-bestrecord-no",
+      "KXNBARECORD-27BEST-ORL::aachc-nba-2027-04-11-bestrecord-orl",
+      "KXNBARECORD-27BEST-PHI::aachc-nba-2027-04-11-bestrecord-phi",
+      "KXNBARECORD-27BEST-PHX::aachc-nba-2027-04-11-bestrecord-pho",
+      "KXNBARECORD-27BEST-POR::aachc-nba-2027-04-11-bestrecord-por",
+      "KXNBARECORD-27BEST-SAC::aachc-nba-2027-04-11-bestrecord-sac",
+      "KXWNBA-26-LV::tec-wnba-champion-2026-10-31-w-lv",
+      "KXNBARECORD-27BEST-TOR::aachc-nba-2027-04-11-bestrecord-tor",
+      "KXNCAAFGAME-26SEP12FURMER-MER::aec-cfb-furman-merc-2026-09-12",
+      "KXNCAAFGAME-26SEP12GASOCLEM-CLEM::aec-cfb-gas-clmsn-2026-09-12",
+      "KXNCAAFGAME-26SEP12IWNAU-NAU::aec-cfb-incar-narz-2026-09-12",
+      "KXNCAAFGAME-26SEP12MDCONN-CONN::aec-cfb-mary-uconn-2026-09-12",
+      "KXNCAAFGAME-26SEP12MRMKME-ME::aec-cfb-merri-maine-2026-09-12",
+      "KXNCAAFGAME-26SEP12MRSTLAF-LAF::aec-cfb-mrst-lafay-2026-09-12",
+      "KXUFCFIGHT-26SEP12ALDTAR-TAR::aec-ufc-jjald-regtar-2026-09-12",
+      "KXUFCFIGHT-26SEP12BAHSAL-SAL::aec-ufc-ignbah-mussal-2026-09-12",
+      "KXUFCFIGHT-26SEP12BELSAN-SAN::aec-ufc-youbel-djosan-2026-09-12",
+      "KXUFCFIGHT-26SEP12CORBLA-BLA::aec-ufc-walcor-curbla-2026-09-12",
+      "KXUFCFIGHT-26SEP12ELLCHA-CHA::aec-ufc-timell-edgcha-2026-09-12",
+      "KXUFCFIGHT-26SEP12FIOGRA-GRA::aec-ufc-manfio-alegra-2026-09-12",
+      "KXUFCFIGHT-26SEP12KINROS-ROS::aec-ufc-seakin-jesros-2026-09-12",
+      "KXUFCFIGHT-26SEP12MARIGE-IGE::aec-ufc-davmar-danige-2026-09-12",
+      "KXUFCFIGHT-26SEP12MCMRAH-RAH::aec-ufc-tommcm-marrah-2026-09-12",
+      "KXUFCFIGHT-26SEP12MORMORA-MORA::aec-ufc-bramor-josmor-2026-09-12",
+      "KXUFCFIGHT-26SEP19CHIBRI-BRI::aec-ufc-gigchi-joabri-2026-09-19",
+      "KXUFCFIGHT-26SEP19SHAFER-FER::aec-ufc-edmsha-brufer-2026-09-19",
+      "KXUFCFIGHT-26SEP19TUIDES-DES::aec-ufc-taitui-robdes-2026-09-19",
+      "KXNCAAMBSECREG-27-FLA::tec-cbb-champ-2027-04-05-w-fl",
+      "KXMLBAL-26-CLE::tec-mlb-alchamp-2026-09-27-cle",
+      "KXWNBA-26-DAL::tec-wnba-champion-2026-10-31-w-dal",
+      "KXWNBA-26-ATL::tec-wnba-champion-2026-10-31-w-atl",
+      "KXNCAAMBACCREG-27-VT::tec-cbb-champ-2027-04-05-w-vtech",
+      "KXNCAAMBSECREG-27-UK::tec-cbb-champ-2027-04-05-w-uk",
+      "KXEPLRELEGATION-27-MCI::tec-epl-title-2027-05-30-w-mnc",
+      "KXNCAAMBACCREG-27-UVA::tec-cbb-champ-2027-04-05-w-vir",
+      "KXNCAAMBACCREG-27-DUKE::tec-cbb-champ-2027-04-05-w-duke",
+      "KXNCAAMBSECREG-27-MIZZ::tec-cbb-champ-2027-04-05-w-missr",
+      "KXNCAAMBSECREG-27-TENN::tec-cbb-champ-2027-04-05-w-tenn",
+      "KXNCAAMBSECREG-27-TXAM::tec-cbb-champ-2027-04-05-w-txam",
+      "KXEPLRELEGATION-27-SUN::aachc-epl-2027-05-30-relegation-sun",
+      "KXNCAAMBSECREG-27-ARK::tec-cbb-champ-2027-04-05-w-ark",
+      "KXNCAAMBSECREG-27-OKLA::tec-cbb-champ-2027-04-05-w-okl",
+      "KXEPLRELEGATION-27-NFO::aachc-epl-2027-05-30-relegation-not",
+      "KXEPLRELEGATION-27-BRE::tec-epl-title-2027-05-30-w-bre",
+      "KXNCAAMBSECREG-27-TEX::tec-cbb-champ-2027-04-05-w-tx",
+      "KXEPLRELEGATION-27-CRY::aachc-epl-2027-05-30-relegation-cry",
+      "KXEPLRELEGATION-27-LEE::tec-epl-title-2027-05-30-w-lee",
+      "KXEPLRELEGATION-27-IPS::tec-epl-title-2027-05-30-w-ips",
+      "KXEPLRELEGATION-27-LFC::aachc-epl-2027-05-30-relegation-liv",
+      "KXEPLRELEGATION-27-LEE::aachc-epl-2027-05-30-relegation-lee",
+      "KXEPLRELEGATION-27-AVL::aachc-epl-2027-05-30-relegation-ast",
+      "KXEPLRELEGATION-27-SUN::tec-epl-title-2027-05-30-w-sun",
+      "KXEPLRELEGATION-27-CFC::tec-epl-title-2027-05-30-w-cfc",
+      "KXEPLRELEGATION-27-EVE::tec-epl-title-2027-05-30-w-eve",
+      "KXEPLRELEGATION-27-HUL::tec-epl-title-2027-05-30-w-hul",
+      "KXEPLRELEGATION-27-FUL::aachc-epl-2027-05-30-relegation-ful",
+      "KXEPLRELEGATION-27-IPS::aachc-epl-2027-05-30-relegation-ips",
+      "KXEPLRELEGATION-27-AVL::tec-epl-title-2027-05-30-w-ast",
+      "KXEPLRELEGATION-27-BOU::tec-epl-title-2027-05-30-w-bor",
+      "KXEPLRELEGATION-27-BRE::aachc-epl-2027-05-30-relegation-bre",
+      "KXEPLRELEGATION-27-MCI::aachc-epl-2027-05-30-relegation-mnc",
+      "KXEPLRELEGATION-27-COV::aachc-epl-2027-05-30-relegation-cov",
+      "KXEPLRELEGATION-27-LFC::tec-epl-title-2027-05-30-w-liv",
+      "KXEPLRELEGATION-27-MUN::tec-epl-title-2027-05-30-w-mnu",
+      "KXMLB-26-CLE::tec-mlb-champ-2026-09-27-cle",
+      "KXNCAAMBACCREG-27-LOU::tec-cbb-champ-2027-04-05-w-lou",
+      "KXEPLRELEGATION-27-ARS::tec-epl-title-2027-05-30-w-ars",
+      "KXEPLRELEGATION-27-NEW::aachc-epl-2027-05-30-relegation-new",
+      "KXEPLRELEGATION-27-FUL::tec-epl-title-2027-05-30-w-ful",
+      "KXEPLRELEGATION-27-HUL::aachc-epl-2027-05-30-relegation-hul",
+      "KXEPLRELEGATION-27-BOU::aachc-epl-2027-05-30-relegation-bor",
+      "KXNCAAMBACCREG-27-STAN::tec-cbb-champ-2027-04-05-w-stan",
+      "KXEPLRELEGATION-27-CRY::tec-epl-title-2027-05-30-w-cry",
+      "KXEPLRELEGATION-27-ARS::aachc-epl-2027-05-30-relegation-ars",
+      "KXEPLRELEGATION-27-NFO::tec-epl-title-2027-05-30-w-not",
+      "KXNCAAMBACCREG-27-PITT::tec-cbb-champ-2027-04-05-w-pitt",
+      "KXEPLRELEGATION-27-COV::tec-epl-title-2027-05-30-w-cov",
+      "KXEPLRELEGATION-27-CFC::aachc-epl-2027-05-30-relegation-cfc",
+      "KXEPLRELEGATION-27-MUN::aachc-epl-2027-05-30-relegation-mnu",
+      "KXEPLRELEGATION-27-NEW::tec-epl-title-2027-05-30-w-new",
+      "KXNCAAMBACCREG-27-BC::tec-cbb-champ-2027-04-05-w-boscol",
+      "KXNCAAMBACCREG-27-SMU::tec-cbb-champ-2027-04-05-w-smu",
+      "KXEPLRELEGATION-27-EVE::aachc-epl-2027-05-30-relegation-eve",
+      "KXNCAAMBACCREG-27-CLEM::tec-cbb-champ-2027-04-05-w-clmsn",
+      "KXNCAAMBACCREG-27-SYR::tec-cbb-champ-2027-04-05-w-syra",
+      "KXNCAAMBSECREG-27-MISS::tec-cbb-champ-2027-04-05-w-miss",
+      "KXNCAAMBSECREG-27-VAN::tec-cbb-champ-2027-04-05-w-vand",
+      "KXNCAAMBSECREG-27-AUB::tec-cbb-champ-2027-04-05-w-aubrn",
+      "KXEPLRELEGATION-27-TOT::tec-epl-title-2027-05-30-w-tot",
+      "KXBIGBROTHER-26DEC31-DEE::rtc-bbus-s28-winner-2026-10-01-deeval",
+      "KXNETFLIXRANKMOVIE-26SEP14-WHY::ccrc-ntflx-1movglbl-2026-09-15-whydid",
+      "KXEPLRELEGATION-27-TOT::aachc-epl-2027-05-30-relegation-tot",
+      "KXLOSEMAJORITY-27JAN01::pvwc-housepopw-2026-11-03-rep",
+      "CONTROLS-2026-R::paccc-usse-midterms-2026-11-03-rep",
+      "KXTRUMPMEETM-26OCT01-XJIN::pintc-meet-trump-2026-12-31-xijin",
+      "KXTRUMPMEETM-26OCT01-DROD::pintc-meet-trump-2026-12-31-delrod",
+      "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-ANA::ccrc-ntflx-1movglbl-2026-09-15-anatra",
+      "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-GRA::ccrc-ntflx-1movglbl-2026-09-15-grathe",
+      "KXNETFLIXRANKSHOW-26SEP14-INS::ccrc-ntflx-1shwus-2026-09-15-insdec",
+      "KXNETFLIXRANKSHOWGLOBAL-26SEP14-INS::ccrc-ntflx-1shwus-2026-09-15-insdec",
+      "KXNETFLIXRANKMOVIE-26SEP14-WHY::ccrc-ntflx-1movus-2026-09-15-whydid",
+      "KXEMMYCSERIES-26SEP14-HAC::tac-emmys-cs-2026-09-14-hacks",
+      "KXNETFLIXRANKMOVIE-26SEP14-UNT::ccrc-ntflx-1movus-2026-09-15-untray",
+      "KXEMMYCSERIES-26SEP14-SHR::tac-emmys-cs-2026-09-14-shrink",
+      "KXNETFLIXRANKMOVIE-26SEP14-FAC::ccrc-ntflx-1movus-2026-09-15-facel",
+      "KXNETFLIXRANKMOVIE-26SEP14-REA::ccrc-ntflx-1movus-2026-09-15-reanot",
+      "KXNETFLIXRANKMOVIE-26SEP14-STR::ccrc-ntflx-1movus-2026-09-15-strout",
+      "KXEMMYCSERIES-26SEP14-ABB::tac-emmys-cs-2026-09-14-abbott",
+      "KXNETFLIXRANKMOVIE-26SEP14-SHA::ccrc-ntflx-1movus-2026-09-15-shatal",
+      "KXEMMYCSERIES-26SEP14-ONL::tac-emmys-cs-2026-09-14-onlymu",
+      "KXEMMYDSERIES-26SEP14-PLU::tac-emmys-ds-2026-09-14-plurib",
+      "KXEMMYDSERIES-26SEP14-YOU::tac-emmys-ds-2026-09-14-yourfr",
+      "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-SHR::ccrc-ntflx-1movglbl-2026-09-15-shrek",
+      "KXEMMYCSERIES-26SEP14-NOB::tac-emmys-cs-2026-09-14-nobody",
+      "KXEMMYDSERIES-26SEP14-KNI::tac-emmys-ds-2026-09-14-aknigh",
+      "KXEMMYDSERIES-26SEP14-PAR::tac-emmys-ds-2026-09-14-paradi",
+      "KXEMMYDSERIES-26SEP14-SLO::tac-emmys-ds-2026-09-14-slowho",
+      "KXTRUMPMEETM-26OCT01-EMUS::pintc-meet-trump-2026-12-31-elomus",
+      "KXAGTWINNER-26SEP24-NEN::rtc-agt-s21-win-2026-09-23-nenroy",
+      "KXTRUMPMEETM-26OCT01-KJON::pintc-meet-trump-2026-12-31-kimjon",
+      "CONTROLS-2026-D::paccc-usse-midterms-2026-11-03-dem",
+      "KXAGTWINNER-26SEP24-KAM::rtc-agt-s21-win-2026-09-23-kammar",
+      "KXAGTWINNER-26SEP24-HOL::rtc-agt-s21-win-2026-09-23-holsie",
+      "KXAGTWINNER-26SEP24-HUN::rtc-agt-s21-win-2026-09-23-hunfin",
+      "KXAGTWINNER-26SEP24-ISA::rtc-agt-s21-win-2026-09-23-isaatk",
+      "KXAGTWINNER-26SEP24-JES::rtc-agt-s21-win-2026-09-23-jesjoe",
+      "KXAGTWINNER-26SEP24-LAI::rtc-agt-s21-win-2026-09-23-lainoe",
+      "KXAGTWINNER-26SEP24-LAR::rtc-agt-s21-win-2026-09-23-lard",
+      "KXAGTWINNER-26SEP24-LARU::rtc-agt-s21-win-2026-09-23-laruss",
+      "KXAGTWINNER-26SEP24-LUK::rtc-agt-s21-win-2026-09-23-luktal",
+      "KXAGTWINNER-26SEP24-MAC::rtc-agt-s21-win-2026-09-23-macsol",
+      "KXNETFLIXRANKSHOW-26SEP14-INS::ccrc-ntflx-1shwglbl-2026-09-15-insdec",
+      "KXNETFLIXRANKSHOWGLOBAL-26SEP14-INS::ccrc-ntflx-1shwglbl-2026-09-15-insdec",
+      "KXBIGBROTHER-26DEC31-DRE::rtc-bbus-s28-winner-2026-10-01-drecam",
+      "KXBIGBROTHER-26DEC31-RIC::rtc-bbus-s28-winner-2026-10-01-ricdev",
+      "KXBIGBROTHER-26DEC31-YAS::rtc-bbus-s28-winner-2026-10-01-yaspat",
+      "KXBIGBROTHERRANK-26DEC31R2-BAR::rtc-bbus-s28-2-2026-10-01-barpfe",
+      "KXBIGBROTHERRANK-26DEC31R2-DRE::rtc-bbus-s28-2-2026-10-01-drecam",
+      "KXBIGBROTHERRANK-26DEC31R2-DEE::rtc-bbus-s28-2-2026-10-01-deeval",
+      "KXBIGBROTHER-26DEC31-MEL::rtc-bbus-s28-winner-2026-10-01-melmor",
+      "KXBIGBROTHERRANK-26DEC31R2-RIC::rtc-bbus-s28-2-2026-10-01-ricdev",
+      "KXBIGBROTHER-26DEC31-BAR::rtc-bbus-s28-winner-2026-10-01-barpfe",
+      "KXBIGBROTHERRANK-26DEC31R2-MEL::rtc-bbus-s28-2-2026-10-01-melmor",
+      "KXBIGBROTHERRANK-26DEC31R2-ANG::rtc-bbus-s28-2-2026-10-01-angmur",
+      "KXBIGBROTHERRANK-26DEC31R2-HAL::rtc-bbus-s28-2-2026-10-01-haltho",
+      "KXBIGBROTHERRANK-26DEC31R2-LYR::rtc-bbus-s28-2-2026-10-01-lyrmed",
+      "KXBIGBROTHER-26DEC31-HAL::rtc-bbus-s28-winner-2026-10-01-haltho",
+      "KXBIGBROTHER-26DEC31-MAL::rtc-bbus-s28-winner-2026-10-01-malaur",
+      "KXBIGBROTHER-26DEC31-TAY::rtc-bbus-s28-winner-2026-10-01-taybro",
+      "KXBIGBROTHERRANK-26DEC31R2-LAT::rtc-bbus-s28-2-2026-10-01-latver",
+      "KXBIGBROTHER-26DEC31-ASH::rtc-bbus-s28-winner-2026-10-01-ashtra",
+      "KXBIGBROTHER-26DEC31-CHU::rtc-bbus-s28-winner-2026-10-01-chuany",
+      "KXBIGBROTHER-26DEC31-LYR::rtc-bbus-s28-winner-2026-10-01-lyrmed",
+      "KXBIGBROTHER-26DEC31-ROM::rtc-bbus-s28-winner-2026-10-01-romsey",
+      "KXBIGBROTHERRANK-26DEC31R2-JAS::rtc-bbus-s28-2-2026-10-01-jasde",
+      "KXBIGBROTHERRANK-26DEC31R2-KAM::rtc-bbus-s28-2-2026-10-01-kamkir",
+      "KXBIGBROTHER-26DEC31-ANG::rtc-bbus-s28-winner-2026-10-01-angmur",
+      "KXBIGBROTHER-26DEC31-KAM::rtc-bbus-s28-winner-2026-10-01-kamkir",
+      "KXBIGBROTHER-26DEC31-LAT::rtc-bbus-s28-winner-2026-10-01-latver",
+      "KXBIGBROTHERRANK-26DEC31R2-ASH::rtc-bbus-s28-2-2026-10-01-ashtra",
+      "KXBIGBROTHERRANK-26DEC31R2-CHU::rtc-bbus-s28-2-2026-10-01-chuany",
+      "KXBIGBROTHERRANK-26DEC31R2-MAL::rtc-bbus-s28-2-2026-10-01-malaur",
+      "KXBIGBROTHERRANK-26DEC31R2-ROM::rtc-bbus-s28-2-2026-10-01-romsey",
+      "KXBIGBROTHER-26DEC31-JAS::rtc-bbus-s28-winner-2026-10-01-jasde",
+      "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-SHR::ccrc-ntflx-1movglbl-2026-09-15-shrek2",
+      "KXLOSEMAJORITY-27JAN01::paccc-usho-midterms-2026-11-03-rep",
+      "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-SHRE::ccrc-ntflx-1movglbl-2026-09-15-shrek",
+      "KXISRDEFMIN-30-BNET::mlaec-isrpol-pm-2026-10-27-bennet",
+      "KXNEXTPRESSEC-29JAN21-KDOR::nphc-presssec-repkl-kaedor",
+      "KXNEXTPRESSEC-29JAN21-KLAK::nphc-presssec-repkl-karlak",
+      "KXNEXTPRESSEC-29JAN21-MMAR::nphc-presssec-repkl-marmar",
+      "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
+      "KXNEXTISRAELPM-45JAN01-YLAP::mlaec-isrpol-pm-2026-10-27-yailap",
+      "KXNEXTPRESSEC-29JAN21-HFIE::nphc-presssec-repkl-harfie",
+      "KXNEXTISRAELPM-45JAN01-IBEN::mlaec-isrpol-pm-2026-10-27-itaben",
+      "KXNEXTISRAELPM-45JAN01-NBEN::mlaec-isrpol-pm-2026-10-27-nafben",
+      "KXNEXTPRESSEC-29JAN21-LHUS::nphc-presssec-repkl-lizhus",
+      "KXNEXTPRESSEC-29JAN21-KMIL::nphc-presssec-repkl-katmil",
+      "KXNEXTPRESSEC-29JAN21-MCRO::nphc-presssec-repkl-moncro",
+      "KXNEXTPRESSEC-29JAN21-MBOY::nphc-presssec-repkl-matboy",
+      "KXNEXTPRESSEC-29JAN21-PADA::nphc-presssec-repkl-patada",
+      "KXNEXTPRESSEC-29JAN21-SCHE::nphc-presssec-repkl-steche",
+      "KXNEXTISRAELPM-45JAN01-BGAN::mlaec-isrpol-pm-2026-10-27-bengan",
+      "KXNEXTPRESSEC-29JAN21-AHAB::nphc-presssec-repkl-alihab",
+      "KXNEXTPRESSEC-29JAN21-HGID::nphc-presssec-repkl-hoggid",
+      "KXNEXTPRESSEC-29JAN21-TROG::nphc-presssec-repkl-tayrog",
+      "KXNEXTPRESSEC-29JAN21-AKEL::nphc-presssec-repkl-annkel",
+      "KXNEXTPRESSEC-29JAN21-KDES::nphc-presssec-repkl-kusdes",
+      "KXNEXTPRESSEC-29JAN21-LBIS::nphc-presssec-repkl-laubis",
+      "KXNEXTPRESSEC-29JAN21-TMCL::nphc-presssec-repkl-trimcl",
+      "KXISRDEFMIN-30-ALIE::mlaec-isrpol-pm-2026-10-27-avilie",
+      "KXNEXTISRAELPM-45JAN01-ALIE::mlaec-isrpol-pm-2026-10-27-avilie",
+      "KXNEXTPRESSEC-29JAN21-KMCE::nphc-presssec-repkl-kaymce",
+      "KXNEXTPRESSEC-29JAN21-KPAV::nphc-presssec-repkl-katpav",
+      "KXISRDEFMIN-30-IBEN::mlaec-isrpol-pm-2026-10-27-itaben",
+      "KXISRDEFMIN-30-BGAN::mlaec-isrpol-pm-2026-10-27-bengan",
+      "KXISRDEFMIN-30-NBEN::mlaec-isrpol-pm-2026-10-27-nafben",
+      "KXISRAELPM-26OCT27-YHEN::mlaec-isrpol-pm-2026-10-27-yoahen",
+      "KXTRUMPMOJTABA-26DEC-26SEP::pintc-meet-trump-2026-12-31-mojkha",
+      "GOVPARTYRI-26-R::usgubewc-usgub-ri-2026-11-03-rep",
+      "HOUSEAKAL-26-D::ushrewc-ushr-ak-al-2026-11-03-dem",
+      "HOUSEAKAL-26-R::ushrewc-ushr-ak-al-2026-11-03-rep",
+      "KXARGENTINAPRES-27-AKIC::ewc-pres-arg-2027-10-24-axekic",
+      "KXARGENTINAPRES-27-JMIL::ewc-pres-arg-2027-10-24-javmil",
+      "KXARGENTINAPRES-27-SMAS::ewc-pres-arg-2027-10-24-sermas",
+      "KXARGENTINAPRES-27OCT30-MMAC::ewc-pres-arg-2027-10-24-maumac",
+      "KXFRENCHPRES-27-BRET::ewc-pres-fra-2027-04-11-bruret",
+      "KXFRENCHPRES-27-DLIS::ewc-pres-fra-2027-04-11-davlis",
+      "KXFRENCHPRES-27-DVIL::ewc-pres-fra-2027-04-11-domvil",
+      "KXFRENCHPRES-27-EPHI::ewc-pres-fra-2027-04-11-edophi",
+      "KXFRENCHPRES-27-FHOL::ewc-pres-fra-2027-04-11-frahol",
+      "KXFRENCHPRES-27-GATT::ewc-pres-fra-2027-04-11-gabatt",
+      "KXFRENCHPRES-27-JBAR::ewc-pres-fra-2027-04-11-jorbar",
+      "KXFRENCHPRES-27-JMEL::ewc-pres-fra-2027-04-11-jeamel",
+      "KXFRENCHPRES-27-MLEP::ewc-pres-fra-2027-04-11-marlep",
+      "KXFRENCHPRES-27-SKNA::ewc-pres-fra-2027-04-11-sarkna",
+      "KXFRPSNOM-26OCT01-FHOL::ewc-pres-fra-2027-04-11-frahol",
+      "KXFRPSNOM-26OCT01-RGLU::ewc-pres-fra-2027-04-11-rapglu",
+      "KXGOVWINS-27JAN01-E0::usgovcc-demvrep-2026-11-03-tie",
+      "KXGOVWINS-27JAN01-R-50::usgovcc-demvrep-2026-11-03-dem",
+      "KXGOVWINS-27JAN01-R1::usgovcc-demvrep-2026-11-03-rep",
+      "KXHOUSERACE-AZ03-26-R::ushrewc-ushr-az-03-2026-11-03-rep",
+      "KXHOUSERACE-DEAL-26-D::ushrewc-ushr-de-al-2026-11-03-dem",
+      "KXHOUSERACE-DEAL-26-R::ushrewc-ushr-de-al-2026-11-03-rep",
+      "KXHOUSERACE-FL10-26-R::ushrewc-ushr-fl-10-2026-11-03-rep",
+      "KXHOUSERACE-LA01-26-D::ushrewc-ushr-la-01-2026-11-03-dem",
+      "KXHOUSERACE-LA01-26-R::ushrewc-ushr-la-01-2026-11-03-rep",
+      "KXHOUSERACE-LA02-26-D::ushrewc-ushr-la-02-2026-11-03-dem",
+      "KXHOUSERACE-LA02-26-R::ushrewc-ushr-la-02-2026-11-03-rep",
+      "KXHOUSERACE-LA03-26-D::ushrewc-ushr-la-03-2026-11-03-dem",
+      "KXHOUSERACE-LA03-26-R::ushrewc-ushr-la-03-2026-11-03-rep",
+      "KXHOUSERACE-LA04-26-D::ushrewc-ushr-la-04-2026-11-03-dem",
+      "KXHOUSERACE-LA04-26-R::ushrewc-ushr-la-04-2026-11-03-rep",
+      "KXHOUSERACE-LA05-26-D::ushrewc-ushr-la-05-2026-11-03-dem",
+      "KXHOUSERACE-LA05-26-R::ushrewc-ushr-la-05-2026-11-03-rep",
+      "KXHOUSERACE-LA06-26-D::ushrewc-ushr-la-06-2026-11-03-dem",
+      "KXHOUSERACE-LA06-26-R::ushrewc-ushr-la-06-2026-11-03-rep",
+      "KXHOUSERACE-MA01-26-R::ushrewc-ushr-ma-01-2026-11-03-rep",
+      "KXHOUSERACE-MA02-26-R::ushrewc-ushr-ma-02-2026-11-03-rep",
+      "KXHOUSERACE-MA05-26-R::ushrewc-ushr-ma-05-2026-11-03-rep",
+      "KXHOUSERACE-MA07-26-R::ushrewc-ushr-ma-07-2026-11-03-rep",
+      "KXHOUSERACE-NJ08-26-R::ushrewc-ushr-nj-08-2026-11-03-rep",
+      "KXHOUSERACE-PA03-26-R::ushrewc-ushr-pa-03-2026-11-03-rep",
+      "KXHOUSERACE-WI02-26-R::ushrewc-ushr-wi-02-2026-11-03-rep",
+      "KXMAYORLA-26-KBAS::ewc-usmayor-losang-2026-11-03-karbas",
+      "KXMAYORLA-26-NRAM::ewc-usmayor-losang-2026-11-03-nitram",
+      "KXNCAAFACCQUAL-26-UVA::aqc-cfb-acc-2026-12-05-champq-vir",
+      "KXNCAAFACCQUAL-26-UVA::aqc-cfb-cfp-2026-12-06-playoffq-vir",
+      "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "KXNCAAFB12QUAL-26-KU::aqc-cfb-big12-2026-12-04-champq-kan",
+      "KXNCAAFGAME-26SEP19UNMOKLA-UNM::aec-cfb-nmx-okl-2026-09-19",
+      "KXNCAAFGAME-26SEP19WVUUVA-WVU::aec-cfb-wvir-vir-2026-09-19",
+      "KXNCAAFSECQ-26-OKLA::aqc-cfb-cfp-2026-12-06-playoffq-okl",
+      "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "KXNCAAFUNDEFEATED-26-OKLA::aachc-cfb-undefeated-2026-11-28-okl",
+      "KXOAKLANDMAYOR-26-BGRI::usmayewc-usmayor-oaklan-2026-11-03-bregri",
+      "KXOAKLANDMAYOR-26-BLEE::usmayewc-usmayor-oaklan-2026-11-03-barlee",
+      "KXPRESNOMD-28-AB::enwc-uspres-nom-dem-2028-andbes",
+      "KXPRESNOMD-28-AOC::enwc-uspres-nom-dem-2028-aleocc",
+      "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "KXPRESNOMD-28-JBP::enwc-uspres-nom-dem-2028-jbpri",
+      "KXNCAAFAACQUAL-26-MEM::aqc-cfb-aac-2026-12-05-champq-mphs",
+      "KXNCAAFAACQUAL-26-NAVY::aqc-cfb-aac-2026-12-05-champq-navy",
+      "KXNCAAFAACQUAL-26-RICE::aqc-cfb-aac-2026-12-05-champq-rice",
+      "KXNCAAFAACQUAL-26-TEM::aqc-cfb-aac-2026-12-05-champq-templ",
+      "KXNCAAFAACQUAL-26-TLSA::aqc-cfb-aac-2026-12-05-champq-tulsa",
+      "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "KXNCAAFAACQUAL-26-UAB::aqc-cfb-aac-2026-12-05-champq-uab",
+      "KXNCAAFACCQUAL-26-LOU::aqc-cfb-acc-2026-12-05-champq-lou",
+      "KXNCAAFACCQUAL-26-SMU::aqc-cfb-acc-2026-12-05-champq-smu",
+      "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arzst",
+      "KXNCAAFB12QUAL-26-KU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "KXNCAAFGAME-26SEP12FORCCAR-CCAR::aec-cfb-fordm-coast-2026-09-12",
+      "KXNCAAFGAME-26SEP12FORCCAR-FOR::aec-cfb-fordm-coast-2026-09-12",
+      "KXNCAAFGAME-26SEP12HCMOH-HC::aec-cfb-holy-miaoh-2026-09-12",
+      "KXNCAAFGAME-26SEP12HCMOH-MOH::aec-cfb-holy-miaoh-2026-09-12",
+      "KXNCAAFGAME-26SEP12LTLSU-LSU::aec-cfb-loutch-lsu-2026-09-12",
+      "KXNCAAFGAME-26SEP12LTLSU-LT::aec-cfb-loutch-lsu-2026-09-12",
+      "KXNCAAFGAME-26SEP12MHUUNM-MHU::aec-cfb-mrcy-nmx-2026-09-12",
+      "KXNCAAFGAME-26SEP12MHUUNM-UNM::aec-cfb-mrcy-nmx-2026-09-12",
+      "KXNCAAFGAME-26SEP12MONMWMU-MONM::aec-cfb-monm-wmich-2026-09-12",
+      "KXNCAAFGAME-26SEP12MONMWMU-WMU::aec-cfb-monm-wmich-2026-09-12",
+      "KXNCAAFGAME-26SEP12MTUMRSH-MRSH::aec-cfb-mtnst-marsh-2026-09-12",
+      "KXNCAAFGAME-26SEP12MTUMRSH-MTU::aec-cfb-mtnst-marsh-2026-09-12",
+      "KXNCAAFGAME-26SEP12NAVYFAU-FAU::aec-cfb-navy-flatl-2026-09-12",
+      "KXNCAAFGAME-26SEP12NAVYFAU-NAVY::aec-cfb-navy-flatl-2026-09-12",
+      "KXNCAAFGAME-26SEP12ODUVT-ODU::aec-cfb-old-vtech-2026-09-12",
+      "KXNCAAFGAME-26SEP12ODUVT-VT::aec-cfb-old-vtech-2026-09-12",
+      "KXNCAAFGAME-26SEP12RICEND-ND::aec-cfb-rice-nd-2026-09-12",
+      "KXNCAAFGAME-26SEP12RICEND-RICE::aec-cfb-rice-nd-2026-09-12",
+      "KXNCAAFGAME-26SEP12RMUAKR-AKR::aec-cfb-robms-akron-2026-09-12",
+      "KXNCAAFGAME-26SEP12RMUAKR-RMU::aec-cfb-robms-akron-2026-09-12",
+      "KXNCAAFGAME-26SEP12SAMTNTC-SAM::aec-cfb-samf-tentch-2026-09-12",
+      "KXNCAAFGAME-26SEP12SAMTNTC-TNTC::aec-cfb-samf-tentch-2026-09-12",
+      "KXNCAAFGAME-26SEP12SHUMASS-MASS::aec-cfb-sacred-umass-2026-09-12",
+      "KXNCAAFGAME-26SEP12SHUMASS-SHU::aec-cfb-sacred-umass-2026-09-12",
+      "KXNCAAFGAME-26SEP12STETCOOK-COOK::aec-cfb-stet-bcook-2026-09-12",
+      "KXNCAAFGAME-26SEP12STNHUNH-UNH::aec-cfb-stnh-nhamp-2026-09-12",
+      "KXNCAAFGAME-26SEP12TLSASHSU-SHSU::aec-cfb-tulsa-smho-2026-09-12",
+      "KXNCAAFGAME-26SEP12TLSASHSU-TLSA::aec-cfb-tulsa-smho-2026-09-12",
+      "KXNCAAFGAME-26SEP12UCDSMU-SMU::aec-cfb-ucdv-smu-2026-09-12",
+      "KXNCAAFGAME-26SEP12UCDSMU-UCD::aec-cfb-ucdv-smu-2026-09-12",
+      "KXNCAAFGAME-26SEP12UCFPITT-PITT::aec-cfb-ucf-pitt-2026-09-12",
+      "KXNCAAFGAME-26SEP12UCFPITT-UCF::aec-cfb-ucf-pitt-2026-09-12",
+      "KXNCAAFGAME-26SEP12ULMUAB-UAB::aec-cfb-lamon-uab-2026-09-12",
+      "KXNCAAFGAME-26SEP12ULMUAB-ULM::aec-cfb-lamon-uab-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNASELA-SELA::aec-cfb-nal-selou-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNASELA-UNA::aec-cfb-nal-selou-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNCOWYO-WYO::aec-cfb-ncol-wyom-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNLVUNT-UNLV::aec-cfb-unlv-ntx-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNLVUNT-UNT::aec-cfb-unlv-ntx-2026-09-12",
+      "KXNCAAFGAME-26SEP12USATULN-TULN::aec-cfb-sala-tulane-2026-09-12",
+      "KXNCAAFGAME-26SEP12USATULN-USA::aec-cfb-sala-tulane-2026-09-12",
+      "KXNCAAFGAME-26SEP12USFARMY-ARMY::aec-cfb-sfl-army-2026-09-12",
+      "KXNCAAFGAME-26SEP12USFARMY-USF::aec-cfb-sfl-army-2026-09-12",
+      "KXNCAAFGAME-26SEP12USMAUB-AUB::aec-cfb-soumis-aubrn-2026-09-12",
+      "KXNCAAFGAME-26SEP12USMAUB-USM::aec-cfb-soumis-aubrn-2026-09-12",
+      "KXNCAAFGAME-26SEP12WAKEPUR-PUR::aec-cfb-wake-pur-2026-09-12",
+      "KXNCAAFGAME-26SEP12WAKEPUR-WAKE::aec-cfb-wake-pur-2026-09-12",
+      "KXNCAAFGAME-26SEP12WCUCIN-CIN::aec-cfb-wcar-cin-2026-09-12",
+      "KXNCAAFGAME-26SEP12WCUCIN-WCU::aec-cfb-wcar-cin-2026-09-12",
+      "KXNCAAFGAME-26SEP12WIUWIS-WIS::aec-cfb-will-wisc-2026-09-12",
+      "KXNCAAFGAME-26SEP12WIUWIS-WIU::aec-cfb-will-wisc-2026-09-12",
+      "KXNCAAFGAME-26SEP17SYRPITT-PITT::aec-cfb-syra-pitt-2026-09-17",
+      "KXNCAAFGAME-26SEP17SYRPITT-SYR::aec-cfb-syra-pitt-2026-09-17",
+      "KXNCAAFGAME-26SEP19AKRMINN-AKR::aec-cfb-akron-minnst-2026-09-19",
+      "KXNCAAFGAME-26SEP19AKRMINN-MINN::aec-cfb-akron-minnst-2026-09-19",
+      "KXNCAAFGAME-26SEP19BRWNNHC-BRWN::aec-cfb-brwn-nhc-2026-09-19",
+      "KXNCAAFGAME-26SEP19BRWNNHC-NHC::aec-cfb-brwn-nhc-2026-09-19",
+      "KXNCAAFGAME-26SEP19CONNUSM-CONN::aec-cfb-uconn-soumis-2026-09-19",
+      "KXNCAAFGAME-26SEP19CONNUSM-USM::aec-cfb-uconn-soumis-2026-09-19",
+      "KXNCAAFGAME-26SEP19CORCOLG-COLG::aec-cfb-cor-colg-2026-09-19",
+      "KXNCAAFGAME-26SEP19CORCOLG-COR::aec-cfb-cor-colg-2026-09-19",
+      "KXNCAAFGAME-26SEP19DARTLEH-DART::aec-cfb-dart-lehi-2026-09-19",
+      "KXNCAAFGAME-26SEP19DARTLEH-LEH::aec-cfb-dart-lehi-2026-09-19",
+      "KXNCAAFGAME-26SEP19DAYEKY-DAY::aec-cfb-day-ekent-2026-09-19",
+      "KXNCAAFGAME-26SEP19DAYEKY-EKY::aec-cfb-day-ekent-2026-09-19",
+      "KXNCAAFGAME-26SEP19ECUODU-ECU::aec-cfb-ecar-old-2026-09-19",
+      "KXNCAAFGAME-26SEP19ECUODU-ODU::aec-cfb-ecar-old-2026-09-19",
+      "KXNCAAFGAME-26SEP19EMUWIS-EMU::aec-cfb-emich-wisc-2026-09-19",
+      "KXNCAAFGAME-26SEP19EMUWIS-WIS::aec-cfb-emich-wisc-2026-09-19",
+      "KXNCAAFGAME-26SEP19FORWM-FOR::aec-cfb-fordm-wm-2026-09-19",
+      "KXNCAAFGAME-26SEP19FORWM-WM::aec-cfb-fordm-wm-2026-09-19",
+      "KXNCAAFGAME-26SEP19GTWNRICH-GTWN::aec-cfb-gtwn-rich-2026-09-19",
+      "KXNCAAFGAME-26SEP19GTWNRICH-RICH::aec-cfb-gtwn-rich-2026-09-19",
+      "KXNCAAFGAME-26SEP19HARVUNH-HARV::aec-cfb-harv-nhamp-2026-09-19",
+      "KXNCAAFGAME-26SEP19HARVUNH-UNH::aec-cfb-harv-nhamp-2026-09-19",
+      "KXNCAAFGAME-26SEP19HCUIW-HCU::aec-cfb-houbap-incar-2026-09-19",
+      "KXNCAAFGAME-26SEP19HCUIW-IW::aec-cfb-houbap-incar-2026-09-19",
+      "KXNCAAFGAME-26SEP19LAFCLMB-CLMB::aec-cfb-lafay-clmb-2026-09-19",
+      "KXNCAAFGAME-26SEP19LAFCLMB-LAF::aec-cfb-lafay-clmb-2026-09-19",
+      "KXNCAAFGAME-26SEP19LSUMISS-LSU::aec-cfb-lsu-miss-2026-09-19",
+      "KXNCAAFGAME-26SEP19LSUMISS-MISS::aec-cfb-lsu-miss-2026-09-19",
+      "KXNCAAFGAME-26SEP19LTBAY-BAY::aec-cfb-loutch-bayl-2026-09-19",
+      "KXNCAAFGAME-26SEP19MEBC-BC::aec-cfb-maine-boscol-2026-09-19",
+      "KXNCAAFGAME-26SEP19MERGT-GT::aec-cfb-merc-gtech-2026-09-19",
+      "KXNCAAFGAME-26SEP19MERGT-MER::aec-cfb-merc-gtech-2026-09-19",
+      "KXNCAAFGAME-26SEP19MOHCIN-CIN::aec-cfb-miaoh-cin-2026-09-19",
+      "KXNCAAFGAME-26SEP19MOHCIN-MOH::aec-cfb-miaoh-cin-2026-09-19",
+      "KXNCAAFGAME-26SEP19NCATCAMP-CAMP::aec-cfb-ncat-camp-2026-09-19",
+      "KXNCAAFGAME-26SEP19NCCUWEBB-WEBB::aec-cfb-ncc-gardwb-2026-09-19",
+      "KXNCAAFGAME-26SEP19NEVMTU-MTU::aec-cfb-nevada-mtnst-2026-09-19",
+      "KXNCAAFGAME-26SEP19NEVMTU-NEV::aec-cfb-nevada-mtnst-2026-09-19",
+      "KXNCAAFGAME-26SEP19OHIOUSA-OHIO::aec-cfb-ohio-sala-2026-09-19",
+      "KXNCAAFGAME-26SEP19OHIOUSA-USA::aec-cfb-ohio-sala-2026-09-19",
+      "KXNCAAFSECQ-26-OKLA::aqc-cfb-cfp-2026-12-06-playoffq-okst"
+    ],
+    "explorationIds": [
+      "KXNCAAFAACQUAL-26-MEM::aqc-cfb-aac-2026-12-05-champq-mphs",
+      "KXNCAAFAACQUAL-26-NAVY::aqc-cfb-aac-2026-12-05-champq-navy",
+      "KXNCAAFAACQUAL-26-RICE::aqc-cfb-aac-2026-12-05-champq-rice",
+      "KXNCAAFAACQUAL-26-TEM::aqc-cfb-aac-2026-12-05-champq-templ",
+      "KXNCAAFAACQUAL-26-TLSA::aqc-cfb-aac-2026-12-05-champq-tulsa",
+      "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "KXNCAAFAACQUAL-26-UAB::aqc-cfb-aac-2026-12-05-champq-uab",
+      "KXNCAAFACCQUAL-26-LOU::aqc-cfb-acc-2026-12-05-champq-lou",
+      "KXNCAAFACCQUAL-26-SMU::aqc-cfb-acc-2026-12-05-champq-smu",
+      "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arzst",
+      "KXNCAAFB12QUAL-26-KU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "KXNCAAFGAME-26SEP12FORCCAR-CCAR::aec-cfb-fordm-coast-2026-09-12",
+      "KXNCAAFGAME-26SEP12FORCCAR-FOR::aec-cfb-fordm-coast-2026-09-12",
+      "KXNCAAFGAME-26SEP12HCMOH-HC::aec-cfb-holy-miaoh-2026-09-12",
+      "KXNCAAFGAME-26SEP12HCMOH-MOH::aec-cfb-holy-miaoh-2026-09-12",
+      "KXNCAAFGAME-26SEP12LTLSU-LSU::aec-cfb-loutch-lsu-2026-09-12",
+      "KXNCAAFGAME-26SEP12LTLSU-LT::aec-cfb-loutch-lsu-2026-09-12",
+      "KXNCAAFGAME-26SEP12MHUUNM-MHU::aec-cfb-mrcy-nmx-2026-09-12",
+      "KXNCAAFGAME-26SEP12MHUUNM-UNM::aec-cfb-mrcy-nmx-2026-09-12",
+      "KXNCAAFGAME-26SEP12MONMWMU-MONM::aec-cfb-monm-wmich-2026-09-12",
+      "KXNCAAFGAME-26SEP12MONMWMU-WMU::aec-cfb-monm-wmich-2026-09-12",
+      "KXNCAAFGAME-26SEP12MTUMRSH-MRSH::aec-cfb-mtnst-marsh-2026-09-12",
+      "KXNCAAFGAME-26SEP12MTUMRSH-MTU::aec-cfb-mtnst-marsh-2026-09-12",
+      "KXNCAAFGAME-26SEP12NAVYFAU-FAU::aec-cfb-navy-flatl-2026-09-12",
+      "KXNCAAFGAME-26SEP12NAVYFAU-NAVY::aec-cfb-navy-flatl-2026-09-12",
+      "KXNCAAFGAME-26SEP12ODUVT-ODU::aec-cfb-old-vtech-2026-09-12",
+      "KXNCAAFGAME-26SEP12ODUVT-VT::aec-cfb-old-vtech-2026-09-12",
+      "KXNCAAFGAME-26SEP12RICEND-ND::aec-cfb-rice-nd-2026-09-12",
+      "KXNCAAFGAME-26SEP12RICEND-RICE::aec-cfb-rice-nd-2026-09-12",
+      "KXNCAAFGAME-26SEP12RMUAKR-AKR::aec-cfb-robms-akron-2026-09-12",
+      "KXNCAAFGAME-26SEP12RMUAKR-RMU::aec-cfb-robms-akron-2026-09-12",
+      "KXNCAAFGAME-26SEP12SAMTNTC-SAM::aec-cfb-samf-tentch-2026-09-12",
+      "KXNCAAFGAME-26SEP12SAMTNTC-TNTC::aec-cfb-samf-tentch-2026-09-12",
+      "KXNCAAFGAME-26SEP12SHUMASS-MASS::aec-cfb-sacred-umass-2026-09-12",
+      "KXNCAAFGAME-26SEP12SHUMASS-SHU::aec-cfb-sacred-umass-2026-09-12",
+      "KXNCAAFGAME-26SEP12STETCOOK-COOK::aec-cfb-stet-bcook-2026-09-12",
+      "KXNCAAFGAME-26SEP12STNHUNH-UNH::aec-cfb-stnh-nhamp-2026-09-12",
+      "KXNCAAFGAME-26SEP12TLSASHSU-SHSU::aec-cfb-tulsa-smho-2026-09-12",
+      "KXNCAAFGAME-26SEP12TLSASHSU-TLSA::aec-cfb-tulsa-smho-2026-09-12",
+      "KXNCAAFGAME-26SEP12UCDSMU-SMU::aec-cfb-ucdv-smu-2026-09-12",
+      "KXNCAAFGAME-26SEP12UCDSMU-UCD::aec-cfb-ucdv-smu-2026-09-12",
+      "KXNCAAFGAME-26SEP12UCFPITT-PITT::aec-cfb-ucf-pitt-2026-09-12",
+      "KXNCAAFGAME-26SEP12UCFPITT-UCF::aec-cfb-ucf-pitt-2026-09-12",
+      "KXNCAAFGAME-26SEP12ULMUAB-UAB::aec-cfb-lamon-uab-2026-09-12",
+      "KXNCAAFGAME-26SEP12ULMUAB-ULM::aec-cfb-lamon-uab-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNASELA-SELA::aec-cfb-nal-selou-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNASELA-UNA::aec-cfb-nal-selou-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNCOWYO-WYO::aec-cfb-ncol-wyom-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNLVUNT-UNLV::aec-cfb-unlv-ntx-2026-09-12",
+      "KXNCAAFGAME-26SEP12UNLVUNT-UNT::aec-cfb-unlv-ntx-2026-09-12",
+      "KXNCAAFGAME-26SEP12USATULN-TULN::aec-cfb-sala-tulane-2026-09-12",
+      "KXNCAAFGAME-26SEP12USATULN-USA::aec-cfb-sala-tulane-2026-09-12",
+      "KXNCAAFGAME-26SEP12USFARMY-ARMY::aec-cfb-sfl-army-2026-09-12",
+      "KXNCAAFGAME-26SEP12USFARMY-USF::aec-cfb-sfl-army-2026-09-12",
+      "KXNCAAFGAME-26SEP12USMAUB-AUB::aec-cfb-soumis-aubrn-2026-09-12",
+      "KXNCAAFGAME-26SEP12USMAUB-USM::aec-cfb-soumis-aubrn-2026-09-12",
+      "KXNCAAFGAME-26SEP12WAKEPUR-PUR::aec-cfb-wake-pur-2026-09-12",
+      "KXNCAAFGAME-26SEP12WAKEPUR-WAKE::aec-cfb-wake-pur-2026-09-12",
+      "KXNCAAFGAME-26SEP12WCUCIN-CIN::aec-cfb-wcar-cin-2026-09-12",
+      "KXNCAAFGAME-26SEP12WCUCIN-WCU::aec-cfb-wcar-cin-2026-09-12",
+      "KXNCAAFGAME-26SEP12WIUWIS-WIS::aec-cfb-will-wisc-2026-09-12",
+      "KXNCAAFGAME-26SEP12WIUWIS-WIU::aec-cfb-will-wisc-2026-09-12",
+      "KXNCAAFGAME-26SEP17SYRPITT-PITT::aec-cfb-syra-pitt-2026-09-17",
+      "KXNCAAFGAME-26SEP17SYRPITT-SYR::aec-cfb-syra-pitt-2026-09-17",
+      "KXNCAAFGAME-26SEP19AKRMINN-AKR::aec-cfb-akron-minnst-2026-09-19",
+      "KXNCAAFGAME-26SEP19AKRMINN-MINN::aec-cfb-akron-minnst-2026-09-19",
+      "KXNCAAFGAME-26SEP19BRWNNHC-BRWN::aec-cfb-brwn-nhc-2026-09-19",
+      "KXNCAAFGAME-26SEP19BRWNNHC-NHC::aec-cfb-brwn-nhc-2026-09-19",
+      "KXNCAAFGAME-26SEP19CONNUSM-CONN::aec-cfb-uconn-soumis-2026-09-19",
+      "KXNCAAFGAME-26SEP19CONNUSM-USM::aec-cfb-uconn-soumis-2026-09-19",
+      "KXNCAAFGAME-26SEP19CORCOLG-COLG::aec-cfb-cor-colg-2026-09-19",
+      "KXNCAAFGAME-26SEP19CORCOLG-COR::aec-cfb-cor-colg-2026-09-19",
+      "KXNCAAFGAME-26SEP19DARTLEH-DART::aec-cfb-dart-lehi-2026-09-19",
+      "KXNCAAFGAME-26SEP19DARTLEH-LEH::aec-cfb-dart-lehi-2026-09-19",
+      "KXNCAAFGAME-26SEP19DAYEKY-DAY::aec-cfb-day-ekent-2026-09-19",
+      "KXNCAAFGAME-26SEP19DAYEKY-EKY::aec-cfb-day-ekent-2026-09-19",
+      "KXNCAAFGAME-26SEP19ECUODU-ECU::aec-cfb-ecar-old-2026-09-19",
+      "KXNCAAFGAME-26SEP19ECUODU-ODU::aec-cfb-ecar-old-2026-09-19",
+      "KXNCAAFGAME-26SEP19EMUWIS-EMU::aec-cfb-emich-wisc-2026-09-19",
+      "KXNCAAFGAME-26SEP19EMUWIS-WIS::aec-cfb-emich-wisc-2026-09-19",
+      "KXNCAAFGAME-26SEP19FORWM-FOR::aec-cfb-fordm-wm-2026-09-19",
+      "KXNCAAFGAME-26SEP19FORWM-WM::aec-cfb-fordm-wm-2026-09-19",
+      "KXNCAAFGAME-26SEP19GTWNRICH-GTWN::aec-cfb-gtwn-rich-2026-09-19",
+      "KXNCAAFGAME-26SEP19GTWNRICH-RICH::aec-cfb-gtwn-rich-2026-09-19",
+      "KXNCAAFGAME-26SEP19HARVUNH-HARV::aec-cfb-harv-nhamp-2026-09-19",
+      "KXNCAAFGAME-26SEP19HARVUNH-UNH::aec-cfb-harv-nhamp-2026-09-19",
+      "KXNCAAFGAME-26SEP19HCUIW-HCU::aec-cfb-houbap-incar-2026-09-19",
+      "KXNCAAFGAME-26SEP19HCUIW-IW::aec-cfb-houbap-incar-2026-09-19",
+      "KXNCAAFGAME-26SEP19LAFCLMB-CLMB::aec-cfb-lafay-clmb-2026-09-19",
+      "KXNCAAFGAME-26SEP19LAFCLMB-LAF::aec-cfb-lafay-clmb-2026-09-19",
+      "KXNCAAFGAME-26SEP19LSUMISS-LSU::aec-cfb-lsu-miss-2026-09-19",
+      "KXNCAAFGAME-26SEP19LSUMISS-MISS::aec-cfb-lsu-miss-2026-09-19",
+      "KXNCAAFGAME-26SEP19LTBAY-BAY::aec-cfb-loutch-bayl-2026-09-19",
+      "KXNCAAFGAME-26SEP19MEBC-BC::aec-cfb-maine-boscol-2026-09-19",
+      "KXNCAAFGAME-26SEP19MERGT-GT::aec-cfb-merc-gtech-2026-09-19",
+      "KXNCAAFGAME-26SEP19MERGT-MER::aec-cfb-merc-gtech-2026-09-19",
+      "KXNCAAFGAME-26SEP19MOHCIN-CIN::aec-cfb-miaoh-cin-2026-09-19",
+      "KXNCAAFGAME-26SEP19MOHCIN-MOH::aec-cfb-miaoh-cin-2026-09-19",
+      "KXNCAAFGAME-26SEP19NCATCAMP-CAMP::aec-cfb-ncat-camp-2026-09-19",
+      "KXNCAAFGAME-26SEP19NCCUWEBB-WEBB::aec-cfb-ncc-gardwb-2026-09-19",
+      "KXNCAAFGAME-26SEP19NEVMTU-MTU::aec-cfb-nevada-mtnst-2026-09-19",
+      "KXNCAAFGAME-26SEP19NEVMTU-NEV::aec-cfb-nevada-mtnst-2026-09-19",
+      "KXNCAAFGAME-26SEP19OHIOUSA-OHIO::aec-cfb-ohio-sala-2026-09-19",
+      "KXNCAAFGAME-26SEP19OHIOUSA-USA::aec-cfb-ohio-sala-2026-09-19",
+      "KXNCAAFSECQ-26-OKLA::aqc-cfb-cfp-2026-12-06-playoffq-okst"
+    ],
+    "explorationMappings": 105,
+    "explorationFraction": 0.2,
+    "nextRotationAt": 1789156800000,
+    "subscribed": {
+      "kalshi": [
+        "KXUFCFIGHT-26SEP12ALDTAR-ALD",
+        "KXUFCFIGHT-26SEP12BAHSAL-BAH",
+        "KXNCAAFB12QUAL-26-BYU",
+        "KXNCAAFUNDEFEATED-26-ORE",
+        "KXNCAAFUNDEFEATED-26-TTU",
+        "KXNCAAFUNDEFEATED-26-UTAH",
+        "KXNBAEAST1SEED-26-MIA",
+        "KXNCAAFGAME-26SEP12BRYHAMP-BRY",
+        "KXNCAAFGAME-26SEP12CHSOCIT-CHSO",
+        "KXNCAAFGAME-26SEP12FURMER-FUR",
+        "KXNBAEAST1SEED-26-NYK",
+        "KXNCAAFGAME-26SEP12DRKEUNI-DRKE",
+        "KXNCAAFGAME-26SEP12IWNAU-IW",
+        "KXNCAAFGAME-26SEP19EWUWASH-EWU",
+        "KXNCAAFSECQ-26-TXAM",
+        "KXNCAAFB12QUAL-26-TTU",
+        "KXNCAAFGAME-26SEP12WMLEH-WM",
+        "KXNCAAFB12QUAL-26-COLO",
+        "KXNCAAFB12QUAL-26-WVU",
+        "KXNCAAFB12QUAL-26-UTAH",
+        "KXNCAAFUNDEFEATED-26-LSU",
+        "KXNCAAFB10QUAL-26-ORE",
+        "KXNBAWEST1SEED-26-OKC",
+        "KXNCAAFGAME-26SEP12MDCONN-MD",
+        "KXNBAEAST1SEED-26-WAS",
+        "KXNBAEAST1SEED-26-IND",
+        "KXNBAWEST1SEED-26-MIN",
+        "KXNBAWEST1SEED-26-UTA",
+        "KXNCAAFGAME-26SEP19FIUFAU-FIU",
+        "KXNCAAFGAME-26SEP19LTBAY-LT",
+        "KXNCAAFGAME-26SEP19NCATCAMP-NCAT",
+        "KXNCAAFGAME-26SEP19NCCUWEBB-NCCU",
+        "KXNCAAFGAME-26SEP19SELAULM-SELA",
+        "KXNCAAFGAME-26SEP19SUUUST-SUU",
+        "KXNCAAFGAME-26SEP19URISTON-URI",
+        "KXNCAAFGAME-26SEP19WMURICE-WMU",
+        "KXUFCFIGHT-26SEP12BELSAN-BEL",
+        "KXUFCFIGHT-26SEP12CORBLA-COR",
+        "KXUFCFIGHT-26SEP12ELLCHA-ELL",
+        "KXUFCFIGHT-26SEP12FIOGRA-FIO",
+        "KXUFCFIGHT-26SEP12KINROS-KIN",
+        "KXUFCFIGHT-26SEP12KLOGAN-KLO",
+        "KXUFCFIGHT-26SEP12MARIGE-MAR",
+        "KXUFCFIGHT-26SEP12MCMRAH-MCM",
+        "KXUFCFIGHT-26SEP12MORMORA-MOR",
+        "KXUFCFIGHT-26SEP19CHIBRI-CHI",
+        "KXUFCFIGHT-26SEP19ONEMOU-ONE",
+        "KXUFCFIGHT-26SEP19SHAFER-SHA",
+        "KXUFCFIGHT-26SEP19TUIDES-TUI",
+        "KXNCAAFGAME-26SEP19UNDNEB-UND",
+        "KXNFLLASTTOLOSE-27-TEN",
+        "KXNCAAFGAME-26SEP19MEBC-ME",
+        "KXNCAAFB12QUAL-26-UCF",
+        "KXNCAAFSECQ-26-ARK",
+        "KXNFLLASTTOLOSE-27-KC",
+        "KXUFCFIGHT-26SEP19GANDIA-GAN",
+        "KXNCAAFUNDEFEATED-26-ND",
+        "KXNCAAFCUSAQUAL-26-MTU",
+        "KXNFLLASTTOLOSE-27-DAL",
+        "KXNFLLASTTOLOSE-27-MIN",
+        "KXNFLLASTTOLOSE-27-NYG",
+        "KXNCAAFACCQUAL-26-SMU",
+        "KXNCAAFGAME-26SEP12UNCOWYO-UNCO",
+        "KXNCAAFB10QUAL-26-MINN",
+        "KXNCAAFCUSAQUAL-26-WKU",
+        "KXNCAAFGAME-26SEP12STETCOOK-STET",
+        "KXNCAAFGAME-26SEP12STNHUNH-STNH",
+        "KXNCAAFACCQUAL-26-LOU",
+        "KXWNBA-26-MIN",
+        "KXNCAAFACCQUAL-26-VT",
+        "KXNCAAFB12QUAL-26-CIN",
+        "KXNFLLASTTOLOSE-27-WAS",
+        "KXNCAAFAACQUAL-26-UNT",
+        "KXNCAAFACCQUAL-26-GT",
+        "KXNBAEAST1SEED-26-BOS",
+        "KXNBAEAST1SEED-26-PHI",
+        "KXNCAAFAACQUAL-26-FAU",
+        "KXNCAAFCUSAQUAL-26-FIU",
+        "KXNCAAFGAME-26SEP19EWUWASH-WASH",
+        "KXNBAWEST1SEED-26-SAS",
+        "KXNFLLASTTOLOSE-27-ARI",
+        "KXNFLLASTTOLOSE-27-NYJ",
+        "KXNCAAFACCQUAL-26-CAL",
+        "KXNCAAFB10QUAL-26-MD",
+        "KXNBARECORD-27BEST-IND",
+        "KXNBARECORD-27BEST-MIN",
+        "KXNBARECORD-27BEST-NYK",
+        "KXNBARECORD-27BEST-OKC",
+        "KXNBARECORD-27BEST-UTA",
+        "KXNBARECORD-27BEST-WAS",
+        "KXNCAAFB10QUAL-26-WASH",
+        "KXNBAWEST1SEED-26-LAL",
+        "KXNCAAFAACQUAL-26-USF",
+        "KXNCAAFB10QUAL-26-NEB",
+        "KXNCAAFB10QUAL-26-WIS",
+        "KXNCAAFB12QUAL-26-TCU",
+        "KXUFCFIGHT-26SEP19ONEMOU-MOU",
+        "KXNBAEAST1SEED-26-DET",
+        "KXNCAAFB12QUAL-26-BAY",
+        "KXNBAWEST1SEED-26-SAC",
+        "KXNBAWEST1SEED-26-DAL",
+        "KXWNBA-26-GS",
+        "KXNBAEAST1SEED-26-BKN",
+        "KXNBAEAST1SEED-26-CHI",
+        "KXNBAEAST1SEED-26-MIL",
+        "KXNBAWEST1SEED-26-MEM",
+        "KXNBAWEST1SEED-26-NOP",
+        "KXNBAWEST1SEED-26-PHX",
+        "KXNBAWEST1SEED-26-GSW",
+        "KXNBAWEST1SEED-26-LAC",
+        "KXNBAEAST1SEED-26-ATL",
+        "KXNBAEAST1SEED-26-CHA",
+        "KXNBAEAST1SEED-26-CLE",
+        "KXNBAEAST1SEED-26-ORL",
+        "KXNBAEAST1SEED-26-TOR",
+        "KXNBAWEST1SEED-26-DEN",
+        "KXNBAWEST1SEED-26-HOU",
+        "KXNBAWEST1SEED-26-POR",
+        "KXNCAAFGAME-26SEP12GASOCLEM-GASO",
+        "KXNCAAFGAME-26SEP12MRMKME-MRMK",
+        "KXNCAAFGAME-26SEP12MRSTLAF-MRST",
+        "KXNCAAFGAME-26SEP19FIUFAU-FAU",
+        "KXNFLLASTTOLOSE-27-TB",
+        "KXNCAAFGAME-26SEP12WMLEH-LEH",
+        "KXNFLLASTTOLOSE-27-BAL",
+        "KXWNBA-26-IND",
+        "KXNFLLASTTOLOSE-27-PHI",
+        "KXNFLLASTTOLOSE-27-HOU",
+        "KXNFLLASTTOLOSE-27-SEA",
+        "KXNFLLASTTOLOSE-27-JAC",
+        "KXNFLLASTTOLOSE-27-MIA",
+        "KXNFLLASTTOLOSE-27-GB",
+        "KXNFLLASTTOLOSE-27-CLE",
+        "KXNFLLASTTOLOSE-27-BUF",
+        "KXNBARECORD-27BEST-SAS",
+        "KXWNBA-26-WSH",
+        "KXWNBA-26-NY",
+        "KXNFLLASTTOLOSE-27-SF",
+        "KXNBARECORD-27BEST-ATL",
+        "KXNFLLASTTOLOSE-27-DET",
+        "KXNFLLASTTOLOSE-27-IND",
+        "KXNFLLASTTOLOSE-27-LAC",
+        "KXNFLLASTTOLOSE-27-LV",
+        "KXNFLLASTTOLOSE-27-NO",
+        "KXNFLLASTTOLOSE-27-PIT",
+        "KXNFLLASTTOLOSE-27-ATL",
+        "KXNFLLASTTOLOSE-27-CAR",
+        "KXNFLLASTTOLOSE-27-CHI",
+        "KXNFLLASTTOLOSE-27-CIN",
+        "KXNFLLASTTOLOSE-27-DEN",
+        "KXNBARECORD-27BEST-BKN",
+        "KXNBARECORD-27BEST-BOS",
+        "KXNBARECORD-27BEST-CHA",
+        "KXNBARECORD-27BEST-CHI",
+        "KXNBARECORD-27BEST-CLE",
+        "KXNBARECORD-27BEST-DAL",
+        "KXNBARECORD-27BEST-DEN",
+        "KXNBARECORD-27BEST-DET",
+        "KXNBARECORD-27BEST-GSW",
+        "KXNBARECORD-27BEST-HOU",
+        "KXNBARECORD-27BEST-LAC",
+        "KXNBARECORD-27BEST-LAL",
+        "KXNBARECORD-27BEST-MEM",
+        "KXNBARECORD-27BEST-MIA",
+        "KXNBARECORD-27BEST-MIL",
+        "KXNBARECORD-27BEST-NOP",
+        "KXNBARECORD-27BEST-ORL",
+        "KXNBARECORD-27BEST-PHI",
+        "KXNBARECORD-27BEST-PHX",
+        "KXNBARECORD-27BEST-POR",
+        "KXNBARECORD-27BEST-SAC",
+        "KXWNBA-26-LV",
+        "KXNBARECORD-27BEST-TOR",
+        "KXNCAAFGAME-26SEP12FURMER-MER",
+        "KXNCAAFGAME-26SEP12GASOCLEM-CLEM",
+        "KXNCAAFGAME-26SEP12IWNAU-NAU",
+        "KXNCAAFGAME-26SEP12MDCONN-CONN",
+        "KXNCAAFGAME-26SEP12MRMKME-ME",
+        "KXNCAAFGAME-26SEP12MRSTLAF-LAF",
+        "KXUFCFIGHT-26SEP12ALDTAR-TAR",
+        "KXUFCFIGHT-26SEP12BAHSAL-SAL",
+        "KXUFCFIGHT-26SEP12BELSAN-SAN",
+        "KXUFCFIGHT-26SEP12CORBLA-BLA",
+        "KXUFCFIGHT-26SEP12ELLCHA-CHA",
+        "KXUFCFIGHT-26SEP12FIOGRA-GRA",
+        "KXUFCFIGHT-26SEP12KINROS-ROS",
+        "KXUFCFIGHT-26SEP12MARIGE-IGE",
+        "KXUFCFIGHT-26SEP12MCMRAH-RAH",
+        "KXUFCFIGHT-26SEP12MORMORA-MORA",
+        "KXUFCFIGHT-26SEP19CHIBRI-BRI",
+        "KXUFCFIGHT-26SEP19SHAFER-FER",
+        "KXUFCFIGHT-26SEP19TUIDES-DES",
+        "KXNCAAMBSECREG-27-FLA",
+        "KXMLBAL-26-CLE",
+        "KXWNBA-26-DAL",
+        "KXWNBA-26-ATL",
+        "KXNCAAMBACCREG-27-VT",
+        "KXNCAAMBSECREG-27-UK",
+        "KXEPLRELEGATION-27-MCI",
+        "KXNCAAMBACCREG-27-UVA",
+        "KXNCAAMBACCREG-27-DUKE",
+        "KXNCAAMBSECREG-27-MIZZ",
+        "KXNCAAMBSECREG-27-TENN",
+        "KXNCAAMBSECREG-27-TXAM",
+        "KXEPLRELEGATION-27-SUN",
+        "KXNCAAMBSECREG-27-ARK",
+        "KXNCAAMBSECREG-27-OKLA",
+        "KXEPLRELEGATION-27-NFO",
+        "KXEPLRELEGATION-27-BRE",
+        "KXNCAAMBSECREG-27-TEX",
+        "KXEPLRELEGATION-27-CRY",
+        "KXEPLRELEGATION-27-LEE",
+        "KXEPLRELEGATION-27-IPS",
+        "KXEPLRELEGATION-27-LFC",
+        "KXEPLRELEGATION-27-AVL",
+        "KXEPLRELEGATION-27-CFC",
+        "KXEPLRELEGATION-27-EVE",
+        "KXEPLRELEGATION-27-HUL",
+        "KXEPLRELEGATION-27-FUL",
+        "KXEPLRELEGATION-27-BOU",
+        "KXEPLRELEGATION-27-COV",
+        "KXEPLRELEGATION-27-MUN",
+        "KXMLB-26-CLE",
+        "KXNCAAMBACCREG-27-LOU",
+        "KXEPLRELEGATION-27-ARS",
+        "KXEPLRELEGATION-27-NEW",
+        "KXNCAAMBACCREG-27-STAN",
+        "KXNCAAMBACCREG-27-PITT",
+        "KXNCAAMBACCREG-27-BC",
+        "KXNCAAMBACCREG-27-SMU",
+        "KXNCAAMBACCREG-27-CLEM",
+        "KXNCAAMBACCREG-27-SYR",
+        "KXNCAAMBSECREG-27-MISS",
+        "KXNCAAMBSECREG-27-VAN",
+        "KXNCAAMBSECREG-27-AUB",
+        "KXEPLRELEGATION-27-TOT",
+        "KXBIGBROTHER-26DEC31-DEE",
+        "KXNETFLIXRANKMOVIE-26SEP14-WHY",
+        "KXLOSEMAJORITY-27JAN01",
+        "CONTROLS-2026-R",
+        "KXTRUMPMEETM-26OCT01-XJIN",
+        "KXTRUMPMEETM-26OCT01-DROD",
+        "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-ANA",
+        "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-GRA",
+        "KXNETFLIXRANKSHOW-26SEP14-INS",
+        "KXNETFLIXRANKSHOWGLOBAL-26SEP14-INS",
+        "KXEMMYCSERIES-26SEP14-HAC",
+        "KXNETFLIXRANKMOVIE-26SEP14-UNT",
+        "KXEMMYCSERIES-26SEP14-SHR",
+        "KXNETFLIXRANKMOVIE-26SEP14-FAC",
+        "KXNETFLIXRANKMOVIE-26SEP14-REA",
+        "KXNETFLIXRANKMOVIE-26SEP14-STR",
+        "KXEMMYCSERIES-26SEP14-ABB",
+        "KXNETFLIXRANKMOVIE-26SEP14-SHA",
+        "KXEMMYCSERIES-26SEP14-ONL",
+        "KXEMMYDSERIES-26SEP14-PLU",
+        "KXEMMYDSERIES-26SEP14-YOU",
+        "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-SHR",
+        "KXEMMYCSERIES-26SEP14-NOB",
+        "KXEMMYDSERIES-26SEP14-KNI",
+        "KXEMMYDSERIES-26SEP14-PAR",
+        "KXEMMYDSERIES-26SEP14-SLO",
+        "KXTRUMPMEETM-26OCT01-EMUS",
+        "KXAGTWINNER-26SEP24-NEN",
+        "KXTRUMPMEETM-26OCT01-KJON",
+        "CONTROLS-2026-D",
+        "KXAGTWINNER-26SEP24-KAM",
+        "KXAGTWINNER-26SEP24-HOL",
+        "KXAGTWINNER-26SEP24-HUN",
+        "KXAGTWINNER-26SEP24-ISA",
+        "KXAGTWINNER-26SEP24-JES",
+        "KXAGTWINNER-26SEP24-LAI",
+        "KXAGTWINNER-26SEP24-LAR",
+        "KXAGTWINNER-26SEP24-LARU",
+        "KXAGTWINNER-26SEP24-LUK",
+        "KXAGTWINNER-26SEP24-MAC",
+        "KXBIGBROTHER-26DEC31-DRE",
+        "KXBIGBROTHER-26DEC31-RIC",
+        "KXBIGBROTHER-26DEC31-YAS",
+        "KXBIGBROTHERRANK-26DEC31R2-BAR",
+        "KXBIGBROTHERRANK-26DEC31R2-DRE",
+        "KXBIGBROTHERRANK-26DEC31R2-DEE",
+        "KXBIGBROTHER-26DEC31-MEL",
+        "KXBIGBROTHERRANK-26DEC31R2-RIC",
+        "KXBIGBROTHER-26DEC31-BAR",
+        "KXBIGBROTHERRANK-26DEC31R2-MEL",
+        "KXBIGBROTHERRANK-26DEC31R2-ANG",
+        "KXBIGBROTHERRANK-26DEC31R2-HAL",
+        "KXBIGBROTHERRANK-26DEC31R2-LYR",
+        "KXBIGBROTHER-26DEC31-HAL",
+        "KXBIGBROTHER-26DEC31-MAL",
+        "KXBIGBROTHER-26DEC31-TAY",
+        "KXBIGBROTHERRANK-26DEC31R2-LAT",
+        "KXBIGBROTHER-26DEC31-ASH",
+        "KXBIGBROTHER-26DEC31-CHU",
+        "KXBIGBROTHER-26DEC31-LYR",
+        "KXBIGBROTHER-26DEC31-ROM",
+        "KXBIGBROTHERRANK-26DEC31R2-JAS",
+        "KXBIGBROTHERRANK-26DEC31R2-KAM",
+        "KXBIGBROTHER-26DEC31-ANG",
+        "KXBIGBROTHER-26DEC31-KAM",
+        "KXBIGBROTHER-26DEC31-LAT",
+        "KXBIGBROTHERRANK-26DEC31R2-ASH",
+        "KXBIGBROTHERRANK-26DEC31R2-CHU",
+        "KXBIGBROTHERRANK-26DEC31R2-MAL",
+        "KXBIGBROTHERRANK-26DEC31R2-ROM",
+        "KXBIGBROTHER-26DEC31-JAS",
+        "KXNETFLIXRANKMOVIEGLOBAL-26SEP14-SHRE",
+        "KXISRDEFMIN-30-BNET",
+        "KXNEXTPRESSEC-29JAN21-KDOR",
+        "KXNEXTPRESSEC-29JAN21-KLAK",
+        "KXNEXTPRESSEC-29JAN21-MMAR",
+        "KXNEXTPRESSEC-29JAN21-SJEN",
+        "KXNEXTISRAELPM-45JAN01-YLAP",
+        "KXNEXTPRESSEC-29JAN21-HFIE",
+        "KXNEXTISRAELPM-45JAN01-IBEN",
+        "KXNEXTISRAELPM-45JAN01-NBEN",
+        "KXNEXTPRESSEC-29JAN21-LHUS",
+        "KXNEXTPRESSEC-29JAN21-KMIL",
+        "KXNEXTPRESSEC-29JAN21-MCRO",
+        "KXNEXTPRESSEC-29JAN21-MBOY",
+        "KXNEXTPRESSEC-29JAN21-PADA",
+        "KXNEXTPRESSEC-29JAN21-SCHE",
+        "KXNEXTISRAELPM-45JAN01-BGAN",
+        "KXNEXTPRESSEC-29JAN21-AHAB",
+        "KXNEXTPRESSEC-29JAN21-HGID",
+        "KXNEXTPRESSEC-29JAN21-TROG",
+        "KXNEXTPRESSEC-29JAN21-AKEL",
+        "KXNEXTPRESSEC-29JAN21-KDES",
+        "KXNEXTPRESSEC-29JAN21-LBIS",
+        "KXNEXTPRESSEC-29JAN21-TMCL",
+        "KXISRDEFMIN-30-ALIE",
+        "KXNEXTISRAELPM-45JAN01-ALIE",
+        "KXNEXTPRESSEC-29JAN21-KMCE",
+        "KXNEXTPRESSEC-29JAN21-KPAV",
+        "KXISRDEFMIN-30-IBEN",
+        "KXISRDEFMIN-30-BGAN",
+        "KXISRDEFMIN-30-NBEN",
+        "KXISRAELPM-26OCT27-YHEN",
+        "KXTRUMPMOJTABA-26DEC-26SEP",
+        "GOVPARTYRI-26-R",
+        "HOUSEAKAL-26-D",
+        "HOUSEAKAL-26-R",
+        "KXARGENTINAPRES-27-AKIC",
+        "KXARGENTINAPRES-27-JMIL",
+        "KXARGENTINAPRES-27-SMAS",
+        "KXARGENTINAPRES-27OCT30-MMAC",
+        "KXFRENCHPRES-27-BRET",
+        "KXFRENCHPRES-27-DLIS",
+        "KXFRENCHPRES-27-DVIL",
+        "KXFRENCHPRES-27-EPHI",
+        "KXFRENCHPRES-27-FHOL",
+        "KXFRENCHPRES-27-GATT",
+        "KXFRENCHPRES-27-JBAR",
+        "KXFRENCHPRES-27-JMEL",
+        "KXFRENCHPRES-27-MLEP",
+        "KXFRENCHPRES-27-SKNA",
+        "KXFRPSNOM-26OCT01-FHOL",
+        "KXFRPSNOM-26OCT01-RGLU",
+        "KXGOVWINS-27JAN01-E0",
+        "KXGOVWINS-27JAN01-R-50",
+        "KXGOVWINS-27JAN01-R1",
+        "KXHOUSERACE-AZ03-26-R",
+        "KXHOUSERACE-DEAL-26-D",
+        "KXHOUSERACE-DEAL-26-R",
+        "KXHOUSERACE-FL10-26-R",
+        "KXHOUSERACE-LA01-26-D",
+        "KXHOUSERACE-LA01-26-R",
+        "KXHOUSERACE-LA02-26-D",
+        "KXHOUSERACE-LA02-26-R",
+        "KXHOUSERACE-LA03-26-D",
+        "KXHOUSERACE-LA03-26-R",
+        "KXHOUSERACE-LA04-26-D",
+        "KXHOUSERACE-LA04-26-R",
+        "KXHOUSERACE-LA05-26-D",
+        "KXHOUSERACE-LA05-26-R",
+        "KXHOUSERACE-LA06-26-D",
+        "KXHOUSERACE-LA06-26-R",
+        "KXHOUSERACE-MA01-26-R",
+        "KXHOUSERACE-MA02-26-R",
+        "KXHOUSERACE-MA05-26-R",
+        "KXHOUSERACE-MA07-26-R",
+        "KXHOUSERACE-NJ08-26-R",
+        "KXHOUSERACE-PA03-26-R",
+        "KXHOUSERACE-WI02-26-R",
+        "KXMAYORLA-26-KBAS",
+        "KXMAYORLA-26-NRAM",
+        "KXNCAAFACCQUAL-26-UVA",
+        "KXNCAAFB12QUAL-26-ARIZ",
+        "KXNCAAFB12QUAL-26-KU",
+        "KXNCAAFGAME-26SEP19UNMOKLA-UNM",
+        "KXNCAAFGAME-26SEP19WVUUVA-WVU",
+        "KXNCAAFSECQ-26-OKLA",
+        "KXNCAAFUNDEFEATED-26-OKLA",
+        "KXOAKLANDMAYOR-26-BGRI",
+        "KXOAKLANDMAYOR-26-BLEE",
+        "KXPRESNOMD-28-AB",
+        "KXPRESNOMD-28-AOC",
+        "KXPRESNOMD-28-GN",
+        "KXPRESNOMD-28-JBP",
+        "KXNCAAFAACQUAL-26-MEM",
+        "KXNCAAFAACQUAL-26-NAVY",
+        "KXNCAAFAACQUAL-26-RICE",
+        "KXNCAAFAACQUAL-26-TEM",
+        "KXNCAAFAACQUAL-26-TLSA",
+        "KXNCAAFAACQUAL-26-TULN",
+        "KXNCAAFAACQUAL-26-UAB",
+        "KXNCAAFGAME-26SEP12FORCCAR-CCAR",
+        "KXNCAAFGAME-26SEP12FORCCAR-FOR",
+        "KXNCAAFGAME-26SEP12HCMOH-HC",
+        "KXNCAAFGAME-26SEP12HCMOH-MOH",
+        "KXNCAAFGAME-26SEP12LTLSU-LSU",
+        "KXNCAAFGAME-26SEP12LTLSU-LT",
+        "KXNCAAFGAME-26SEP12MHUUNM-MHU",
+        "KXNCAAFGAME-26SEP12MHUUNM-UNM",
+        "KXNCAAFGAME-26SEP12MONMWMU-MONM",
+        "KXNCAAFGAME-26SEP12MONMWMU-WMU",
+        "KXNCAAFGAME-26SEP12MTUMRSH-MRSH",
+        "KXNCAAFGAME-26SEP12MTUMRSH-MTU",
+        "KXNCAAFGAME-26SEP12NAVYFAU-FAU",
+        "KXNCAAFGAME-26SEP12NAVYFAU-NAVY",
+        "KXNCAAFGAME-26SEP12ODUVT-ODU",
+        "KXNCAAFGAME-26SEP12ODUVT-VT",
+        "KXNCAAFGAME-26SEP12RICEND-ND",
+        "KXNCAAFGAME-26SEP12RICEND-RICE",
+        "KXNCAAFGAME-26SEP12RMUAKR-AKR",
+        "KXNCAAFGAME-26SEP12RMUAKR-RMU",
+        "KXNCAAFGAME-26SEP12SAMTNTC-SAM",
+        "KXNCAAFGAME-26SEP12SAMTNTC-TNTC",
+        "KXNCAAFGAME-26SEP12SHUMASS-MASS",
+        "KXNCAAFGAME-26SEP12SHUMASS-SHU",
+        "KXNCAAFGAME-26SEP12STETCOOK-COOK",
+        "KXNCAAFGAME-26SEP12STNHUNH-UNH",
+        "KXNCAAFGAME-26SEP12TLSASHSU-SHSU",
+        "KXNCAAFGAME-26SEP12TLSASHSU-TLSA",
+        "KXNCAAFGAME-26SEP12UCDSMU-SMU",
+        "KXNCAAFGAME-26SEP12UCDSMU-UCD",
+        "KXNCAAFGAME-26SEP12UCFPITT-PITT",
+        "KXNCAAFGAME-26SEP12UCFPITT-UCF",
+        "KXNCAAFGAME-26SEP12ULMUAB-UAB",
+        "KXNCAAFGAME-26SEP12ULMUAB-ULM",
+        "KXNCAAFGAME-26SEP12UNASELA-SELA",
+        "KXNCAAFGAME-26SEP12UNASELA-UNA",
+        "KXNCAAFGAME-26SEP12UNCOWYO-WYO",
+        "KXNCAAFGAME-26SEP12UNLVUNT-UNLV",
+        "KXNCAAFGAME-26SEP12UNLVUNT-UNT",
+        "KXNCAAFGAME-26SEP12USATULN-TULN",
+        "KXNCAAFGAME-26SEP12USATULN-USA",
+        "KXNCAAFGAME-26SEP12USFARMY-ARMY",
+        "KXNCAAFGAME-26SEP12USFARMY-USF",
+        "KXNCAAFGAME-26SEP12USMAUB-AUB",
+        "KXNCAAFGAME-26SEP12USMAUB-USM",
+        "KXNCAAFGAME-26SEP12WAKEPUR-PUR",
+        "KXNCAAFGAME-26SEP12WAKEPUR-WAKE",
+        "KXNCAAFGAME-26SEP12WCUCIN-CIN",
+        "KXNCAAFGAME-26SEP12WCUCIN-WCU",
+        "KXNCAAFGAME-26SEP12WIUWIS-WIS",
+        "KXNCAAFGAME-26SEP12WIUWIS-WIU",
+        "KXNCAAFGAME-26SEP17SYRPITT-PITT",
+        "KXNCAAFGAME-26SEP17SYRPITT-SYR",
+        "KXNCAAFGAME-26SEP19AKRMINN-AKR",
+        "KXNCAAFGAME-26SEP19AKRMINN-MINN",
+        "KXNCAAFGAME-26SEP19BRWNNHC-BRWN",
+        "KXNCAAFGAME-26SEP19BRWNNHC-NHC",
+        "KXNCAAFGAME-26SEP19CONNUSM-CONN",
+        "KXNCAAFGAME-26SEP19CONNUSM-USM",
+        "KXNCAAFGAME-26SEP19CORCOLG-COLG",
+        "KXNCAAFGAME-26SEP19CORCOLG-COR",
+        "KXNCAAFGAME-26SEP19DARTLEH-DART",
+        "KXNCAAFGAME-26SEP19DARTLEH-LEH",
+        "KXNCAAFGAME-26SEP19DAYEKY-DAY",
+        "KXNCAAFGAME-26SEP19DAYEKY-EKY",
+        "KXNCAAFGAME-26SEP19ECUODU-ECU",
+        "KXNCAAFGAME-26SEP19ECUODU-ODU",
+        "KXNCAAFGAME-26SEP19EMUWIS-EMU",
+        "KXNCAAFGAME-26SEP19EMUWIS-WIS",
+        "KXNCAAFGAME-26SEP19FORWM-FOR",
+        "KXNCAAFGAME-26SEP19FORWM-WM",
+        "KXNCAAFGAME-26SEP19GTWNRICH-GTWN",
+        "KXNCAAFGAME-26SEP19GTWNRICH-RICH",
+        "KXNCAAFGAME-26SEP19HARVUNH-HARV",
+        "KXNCAAFGAME-26SEP19HARVUNH-UNH",
+        "KXNCAAFGAME-26SEP19HCUIW-HCU",
+        "KXNCAAFGAME-26SEP19HCUIW-IW",
+        "KXNCAAFGAME-26SEP19LAFCLMB-CLMB",
+        "KXNCAAFGAME-26SEP19LAFCLMB-LAF",
+        "KXNCAAFGAME-26SEP19LSUMISS-LSU",
+        "KXNCAAFGAME-26SEP19LSUMISS-MISS",
+        "KXNCAAFGAME-26SEP19LTBAY-BAY",
+        "KXNCAAFGAME-26SEP19MEBC-BC",
+        "KXNCAAFGAME-26SEP19MERGT-GT",
+        "KXNCAAFGAME-26SEP19MERGT-MER",
+        "KXNCAAFGAME-26SEP19MOHCIN-CIN",
+        "KXNCAAFGAME-26SEP19MOHCIN-MOH",
+        "KXNCAAFGAME-26SEP19NCATCAMP-CAMP",
+        "KXNCAAFGAME-26SEP19NCCUWEBB-WEBB",
+        "KXNCAAFGAME-26SEP19NEVMTU-MTU",
+        "KXNCAAFGAME-26SEP19NEVMTU-NEV",
+        "KXNCAAFGAME-26SEP19OHIOUSA-OHIO",
+        "KXNCAAFGAME-26SEP19OHIOUSA-USA"
+      ],
+      "poly": [
+        "aec-ufc-jjald-regtar-2026-09-12",
+        "aec-ufc-ignbah-mussal-2026-09-12",
+        "aqc-cfb-big12-2026-12-04-champq-byu",
+        "aachc-cfb-undefeated-2026-11-28-ore",
+        "aachc-cfb-undefeated-2026-11-28-txtech",
+        "aachc-cfb-undefeated-2026-11-28-utah",
+        "aachc-nba-eastseed1-2027-04-11-w-mia",
+        "aec-cfb-bryant-hamp-2026-09-12",
+        "aec-cfb-chsou-cita-2026-09-12",
+        "aec-cfb-furman-merc-2026-09-12",
+        "aachc-nba-eastseed1-2027-04-11-w-ny",
+        "aec-cfb-drake-niowa-2026-09-12",
+        "aec-cfb-incar-narz-2026-09-12",
+        "aec-cfb-ewash-wash-2026-09-19",
+        "aqc-cfb-cfp-2026-12-06-playoffq-txam",
+        "aqc-cfb-big12-2026-12-04-champq-txtech",
+        "aec-cfb-wm-lehi-2026-09-12",
+        "aqc-cfb-big12-2026-12-04-champq-col",
+        "aqc-cfb-big12-2026-12-04-champq-wvir",
+        "aqc-cfb-big12-2026-12-04-champq-utah",
+        "aachc-cfb-undefeated-2026-11-28-lsu",
+        "aqc-cfb-bigten-2026-12-05-champq-ore",
+        "aachc-nba-westseed1-2027-04-11-w-okc",
+        "aec-cfb-mary-uconn-2026-09-12",
+        "aachc-nba-eastseed1-2027-04-11-w-was",
+        "aachc-nba-eastseed1-2027-04-11-w-ind",
+        "aachc-nba-westseed1-2027-04-11-w-min",
+        "aachc-nba-westseed1-2027-04-11-w-uta",
+        "aec-cfb-flint-flatl-2026-09-19",
+        "aec-cfb-loutch-bayl-2026-09-19",
+        "aec-cfb-ncat-camp-2026-09-19",
+        "aec-cfb-ncc-gardwb-2026-09-19",
+        "aec-cfb-selou-lamon-2026-09-19",
+        "aec-cfb-sutah-stmn-2026-09-19",
+        "aec-cfb-ri-stbr-2026-09-19",
+        "aec-cfb-wmich-rice-2026-09-19",
+        "aec-ufc-youbel-djosan-2026-09-12",
+        "aec-ufc-walcor-curbla-2026-09-12",
+        "aec-ufc-timell-edgcha-2026-09-12",
+        "aec-ufc-manfio-alegra-2026-09-12",
+        "aec-ufc-seakin-jesros-2026-09-12",
+        "aec-ufc-draklo-tomgan-2026-09-12",
+        "aec-ufc-davmar-danige-2026-09-12",
+        "aec-ufc-tommcm-marrah-2026-09-12",
+        "aec-ufc-bramor-josmor-2026-09-12",
+        "aec-ufc-gigchi-joabri-2026-09-19",
+        "aec-ufc-casone-edumou-2026-09-19",
+        "aec-ufc-edmsha-brufer-2026-09-19",
+        "aec-ufc-taitui-robdes-2026-09-19",
+        "aec-cfb-ndak-nebr-2026-09-19",
+        "aachc-nfl-2027-01-10-lastundefeated-ten",
+        "aec-cfb-maine-boscol-2026-09-19",
+        "aqc-cfb-big12-2026-12-04-champq-ucf",
+        "aqc-cfb-sec-2026-12-05-champq-ark",
+        "aachc-nfl-2027-01-10-lastundefeated-kc",
+        "aec-ufc-ryagan-ozzdia-2026-09-19",
+        "aachc-cfb-undefeated-2026-11-28-nd",
+        "aqc-cfb-cusa-2026-12-04-champq-mtnst",
+        "aachc-nfl-2027-01-10-lastundefeated-dal",
+        "aachc-nfl-2027-01-10-lastundefeated-min",
+        "aachc-nfl-2027-01-10-lastundefeated-nyg",
+        "aqc-cfb-cfp-2026-12-06-playoffq-smu",
+        "aec-cfb-ncol-wyom-2026-09-12",
+        "aqc-cfb-bigten-2026-12-05-champq-minnst",
+        "aqc-cfb-cusa-2026-12-04-champq-wkent",
+        "aec-cfb-stet-bcook-2026-09-12",
+        "aec-cfb-stnh-nhamp-2026-09-12",
+        "aqc-cfb-cfp-2026-12-06-playoffq-ark",
+        "aqc-cfb-cfp-2026-12-06-playoffq-lou",
+        "tec-wnba-champion-2026-10-31-w-min",
+        "aqc-cfb-acc-2026-12-05-champq-vtech",
+        "aqc-cfb-sec-2026-12-05-champq-txam",
+        "aqc-cfb-big12-2026-12-04-champq-cin",
+        "aachc-nfl-2027-01-10-lastundefeated-was",
+        "aqc-cfb-aac-2026-12-05-champq-ntx",
+        "aqc-cfb-acc-2026-12-05-champq-gtech",
+        "aachc-nba-eastseed1-2027-04-11-w-bos",
+        "aachc-nba-eastseed1-2027-04-11-w-phi",
+        "aqc-cfb-aac-2026-12-05-champq-flatl",
+        "aqc-cfb-cfp-2026-12-06-playoffq-gtech",
+        "aqc-cfb-cfp-2026-12-06-playoffq-vtech",
+        "aqc-cfb-cusa-2026-12-04-champq-flint",
+        "aachc-nba-westseed1-2027-04-11-w-sa",
+        "aachc-nfl-2027-01-10-lastundefeated-ari",
+        "aachc-nfl-2027-01-10-lastundefeated-nyj",
+        "aqc-cfb-acc-2026-12-05-champq-cah",
+        "aqc-cfb-cfp-2026-12-06-playoffq-cah",
+        "aqc-cfb-bigten-2026-12-05-champq-mary",
+        "aachc-nba-2027-04-11-bestrecord-ind",
+        "aachc-nba-2027-04-11-bestrecord-min",
+        "aachc-nba-2027-04-11-bestrecord-ny",
+        "aachc-nba-2027-04-11-bestrecord-okc",
+        "aachc-nba-2027-04-11-bestrecord-uta",
+        "aachc-nba-2027-04-11-bestrecord-was",
+        "aqc-cfb-bigten-2026-12-05-champq-wash",
+        "aachc-nba-westseed1-2027-04-11-w-lal",
+        "aqc-cfb-aac-2026-12-05-champq-sfl",
+        "aqc-cfb-bigten-2026-12-05-champq-nebr",
+        "aqc-cfb-bigten-2026-12-05-champq-wisc",
+        "aqc-cfb-big12-2026-12-04-champq-tcu",
+        "aachc-nba-eastseed1-2027-04-11-w-det",
+        "aqc-cfb-big12-2026-12-04-champq-bayl",
+        "aachc-nba-westseed1-2027-04-11-w-sac",
+        "aachc-nba-westseed1-2027-04-11-w-dal",
+        "tec-wnba-champion-2026-10-31-w-gsv",
+        "aachc-nba-eastseed1-2027-04-11-w-bkn",
+        "aachc-nba-eastseed1-2027-04-11-w-chi",
+        "aachc-nba-eastseed1-2027-04-11-w-mil",
+        "aachc-nba-westseed1-2027-04-11-w-mem",
+        "aachc-nba-westseed1-2027-04-11-w-no",
+        "aachc-nba-westseed1-2027-04-11-w-pho",
+        "aachc-nba-westseed1-2027-04-11-w-gs",
+        "aachc-nba-westseed1-2027-04-11-w-lac",
+        "aachc-nba-eastseed1-2027-04-11-w-atl",
+        "aachc-nba-eastseed1-2027-04-11-w-cha",
+        "aachc-nba-eastseed1-2027-04-11-w-cle",
+        "aachc-nba-eastseed1-2027-04-11-w-orl",
+        "aachc-nba-eastseed1-2027-04-11-w-tor",
+        "aachc-nba-westseed1-2027-04-11-w-den",
+        "aachc-nba-westseed1-2027-04-11-w-hou",
+        "aachc-nba-westseed1-2027-04-11-w-por",
+        "aec-cfb-gas-clmsn-2026-09-12",
+        "aec-cfb-merri-maine-2026-09-12",
+        "aec-cfb-mrst-lafay-2026-09-12",
+        "aachc-nfl-2027-01-10-lastundefeated-tb",
+        "aachc-nfl-2027-01-10-lastundefeated-bal",
+        "tec-wnba-champion-2026-10-31-w-ind",
+        "aachc-nfl-2027-01-10-lastundefeated-phi",
+        "aachc-nfl-2027-01-10-lastundefeated-hou",
+        "aachc-nfl-2027-01-10-lastundefeated-sea",
+        "aachc-nfl-2027-01-10-lastundefeated-jax",
+        "aachc-nfl-2027-01-10-lastundefeated-mia",
+        "aachc-nfl-2027-01-10-lastundefeated-gb",
+        "aachc-nfl-2027-01-10-lastundefeated-cle",
+        "aachc-nfl-2027-01-10-lastundefeated-buf",
+        "aachc-nba-2027-04-11-bestrecord-sa",
+        "tec-wnba-champion-2026-10-31-w-wsh",
+        "tec-wnba-champion-2026-10-31-w-ny",
+        "aachc-nfl-2027-01-10-lastundefeated-sf",
+        "aachc-nba-2027-04-11-bestrecord-atl",
+        "aachc-nfl-2027-01-10-lastundefeated-det",
+        "aachc-nfl-2027-01-10-lastundefeated-ind",
+        "aachc-nfl-2027-01-10-lastundefeated-lac",
+        "aachc-nfl-2027-01-10-lastundefeated-lv",
+        "aachc-nfl-2027-01-10-lastundefeated-no",
+        "aachc-nfl-2027-01-10-lastundefeated-pit",
+        "aachc-nfl-2027-01-10-lastundefeated-atl",
+        "aachc-nfl-2027-01-10-lastundefeated-car",
+        "aachc-nfl-2027-01-10-lastundefeated-chi",
+        "aachc-nfl-2027-01-10-lastundefeated-cin",
+        "aachc-nfl-2027-01-10-lastundefeated-den",
+        "aachc-nba-2027-04-11-bestrecord-bkn",
+        "aachc-nba-2027-04-11-bestrecord-bos",
+        "aachc-nba-2027-04-11-bestrecord-cha",
+        "aachc-nba-2027-04-11-bestrecord-chi",
+        "aachc-nba-2027-04-11-bestrecord-cle",
+        "aachc-nba-2027-04-11-bestrecord-dal",
+        "aachc-nba-2027-04-11-bestrecord-den",
+        "aachc-nba-2027-04-11-bestrecord-det",
+        "aachc-nba-2027-04-11-bestrecord-gs",
+        "aachc-nba-2027-04-11-bestrecord-hou",
+        "aachc-nba-2027-04-11-bestrecord-lac",
+        "aachc-nba-2027-04-11-bestrecord-lal",
+        "aachc-nba-2027-04-11-bestrecord-mem",
+        "aachc-nba-2027-04-11-bestrecord-mia",
+        "aachc-nba-2027-04-11-bestrecord-mil",
+        "aachc-nba-2027-04-11-bestrecord-no",
+        "aachc-nba-2027-04-11-bestrecord-orl",
+        "aachc-nba-2027-04-11-bestrecord-phi",
+        "aachc-nba-2027-04-11-bestrecord-pho",
+        "aachc-nba-2027-04-11-bestrecord-por",
+        "aachc-nba-2027-04-11-bestrecord-sac",
+        "tec-wnba-champion-2026-10-31-w-lv",
+        "aachc-nba-2027-04-11-bestrecord-tor",
+        "tec-cbb-champ-2027-04-05-w-fl",
+        "tec-mlb-alchamp-2026-09-27-cle",
+        "tec-wnba-champion-2026-10-31-w-dal",
+        "tec-wnba-champion-2026-10-31-w-atl",
+        "tec-cbb-champ-2027-04-05-w-vtech",
+        "tec-cbb-champ-2027-04-05-w-uk",
+        "tec-epl-title-2027-05-30-w-mnc",
+        "tec-cbb-champ-2027-04-05-w-vir",
+        "tec-cbb-champ-2027-04-05-w-duke",
+        "tec-cbb-champ-2027-04-05-w-missr",
+        "tec-cbb-champ-2027-04-05-w-tenn",
+        "tec-cbb-champ-2027-04-05-w-txam",
+        "aachc-epl-2027-05-30-relegation-sun",
+        "tec-cbb-champ-2027-04-05-w-ark",
+        "tec-cbb-champ-2027-04-05-w-okl",
+        "aachc-epl-2027-05-30-relegation-not",
+        "tec-epl-title-2027-05-30-w-bre",
+        "tec-cbb-champ-2027-04-05-w-tx",
+        "aachc-epl-2027-05-30-relegation-cry",
+        "tec-epl-title-2027-05-30-w-lee",
+        "tec-epl-title-2027-05-30-w-ips",
+        "aachc-epl-2027-05-30-relegation-liv",
+        "aachc-epl-2027-05-30-relegation-lee",
+        "aachc-epl-2027-05-30-relegation-ast",
+        "tec-epl-title-2027-05-30-w-sun",
+        "tec-epl-title-2027-05-30-w-cfc",
+        "tec-epl-title-2027-05-30-w-eve",
+        "tec-epl-title-2027-05-30-w-hul",
+        "aachc-epl-2027-05-30-relegation-ful",
+        "aachc-epl-2027-05-30-relegation-ips",
+        "tec-epl-title-2027-05-30-w-ast",
+        "tec-epl-title-2027-05-30-w-bor",
+        "aachc-epl-2027-05-30-relegation-bre",
+        "aachc-epl-2027-05-30-relegation-mnc",
+        "aachc-epl-2027-05-30-relegation-cov",
+        "tec-epl-title-2027-05-30-w-liv",
+        "tec-epl-title-2027-05-30-w-mnu",
+        "tec-mlb-champ-2026-09-27-cle",
+        "tec-cbb-champ-2027-04-05-w-lou",
+        "tec-epl-title-2027-05-30-w-ars",
+        "aachc-epl-2027-05-30-relegation-new",
+        "tec-epl-title-2027-05-30-w-ful",
+        "aachc-epl-2027-05-30-relegation-hul",
+        "aachc-epl-2027-05-30-relegation-bor",
+        "tec-cbb-champ-2027-04-05-w-stan",
+        "tec-epl-title-2027-05-30-w-cry",
+        "aachc-epl-2027-05-30-relegation-ars",
+        "tec-epl-title-2027-05-30-w-not",
+        "tec-cbb-champ-2027-04-05-w-pitt",
+        "tec-epl-title-2027-05-30-w-cov",
+        "aachc-epl-2027-05-30-relegation-cfc",
+        "aachc-epl-2027-05-30-relegation-mnu",
+        "tec-epl-title-2027-05-30-w-new",
+        "tec-cbb-champ-2027-04-05-w-boscol",
+        "tec-cbb-champ-2027-04-05-w-smu",
+        "aachc-epl-2027-05-30-relegation-eve",
+        "tec-cbb-champ-2027-04-05-w-clmsn",
+        "tec-cbb-champ-2027-04-05-w-syra",
+        "tec-cbb-champ-2027-04-05-w-miss",
+        "tec-cbb-champ-2027-04-05-w-vand",
+        "tec-cbb-champ-2027-04-05-w-aubrn",
+        "tec-epl-title-2027-05-30-w-tot",
+        "rtc-bbus-s28-winner-2026-10-01-deeval",
+        "ccrc-ntflx-1movglbl-2026-09-15-whydid",
+        "aachc-epl-2027-05-30-relegation-tot",
+        "pvwc-housepopw-2026-11-03-rep",
+        "paccc-usse-midterms-2026-11-03-rep",
+        "pintc-meet-trump-2026-12-31-xijin",
+        "pintc-meet-trump-2026-12-31-delrod",
+        "ccrc-ntflx-1movglbl-2026-09-15-anatra",
+        "ccrc-ntflx-1movglbl-2026-09-15-grathe",
+        "ccrc-ntflx-1shwus-2026-09-15-insdec",
+        "ccrc-ntflx-1movus-2026-09-15-whydid",
+        "tac-emmys-cs-2026-09-14-hacks",
+        "ccrc-ntflx-1movus-2026-09-15-untray",
+        "tac-emmys-cs-2026-09-14-shrink",
+        "ccrc-ntflx-1movus-2026-09-15-facel",
+        "ccrc-ntflx-1movus-2026-09-15-reanot",
+        "ccrc-ntflx-1movus-2026-09-15-strout",
+        "tac-emmys-cs-2026-09-14-abbott",
+        "ccrc-ntflx-1movus-2026-09-15-shatal",
+        "tac-emmys-cs-2026-09-14-onlymu",
+        "tac-emmys-ds-2026-09-14-plurib",
+        "tac-emmys-ds-2026-09-14-yourfr",
+        "ccrc-ntflx-1movglbl-2026-09-15-shrek",
+        "tac-emmys-cs-2026-09-14-nobody",
+        "tac-emmys-ds-2026-09-14-aknigh",
+        "tac-emmys-ds-2026-09-14-paradi",
+        "tac-emmys-ds-2026-09-14-slowho",
+        "pintc-meet-trump-2026-12-31-elomus",
+        "rtc-agt-s21-win-2026-09-23-nenroy",
+        "pintc-meet-trump-2026-12-31-kimjon",
+        "paccc-usse-midterms-2026-11-03-dem",
+        "rtc-agt-s21-win-2026-09-23-kammar",
+        "rtc-agt-s21-win-2026-09-23-holsie",
+        "rtc-agt-s21-win-2026-09-23-hunfin",
+        "rtc-agt-s21-win-2026-09-23-isaatk",
+        "rtc-agt-s21-win-2026-09-23-jesjoe",
+        "rtc-agt-s21-win-2026-09-23-lainoe",
+        "rtc-agt-s21-win-2026-09-23-lard",
+        "rtc-agt-s21-win-2026-09-23-laruss",
+        "rtc-agt-s21-win-2026-09-23-luktal",
+        "rtc-agt-s21-win-2026-09-23-macsol",
+        "ccrc-ntflx-1shwglbl-2026-09-15-insdec",
+        "rtc-bbus-s28-winner-2026-10-01-drecam",
+        "rtc-bbus-s28-winner-2026-10-01-ricdev",
+        "rtc-bbus-s28-winner-2026-10-01-yaspat",
+        "rtc-bbus-s28-2-2026-10-01-barpfe",
+        "rtc-bbus-s28-2-2026-10-01-drecam",
+        "rtc-bbus-s28-2-2026-10-01-deeval",
+        "rtc-bbus-s28-winner-2026-10-01-melmor",
+        "rtc-bbus-s28-2-2026-10-01-ricdev",
+        "rtc-bbus-s28-winner-2026-10-01-barpfe",
+        "rtc-bbus-s28-2-2026-10-01-melmor",
+        "rtc-bbus-s28-2-2026-10-01-angmur",
+        "rtc-bbus-s28-2-2026-10-01-haltho",
+        "rtc-bbus-s28-2-2026-10-01-lyrmed",
+        "rtc-bbus-s28-winner-2026-10-01-haltho",
+        "rtc-bbus-s28-winner-2026-10-01-malaur",
+        "rtc-bbus-s28-winner-2026-10-01-taybro",
+        "rtc-bbus-s28-2-2026-10-01-latver",
+        "rtc-bbus-s28-winner-2026-10-01-ashtra",
+        "rtc-bbus-s28-winner-2026-10-01-chuany",
+        "rtc-bbus-s28-winner-2026-10-01-lyrmed",
+        "rtc-bbus-s28-winner-2026-10-01-romsey",
+        "rtc-bbus-s28-2-2026-10-01-jasde",
+        "rtc-bbus-s28-2-2026-10-01-kamkir",
+        "rtc-bbus-s28-winner-2026-10-01-angmur",
+        "rtc-bbus-s28-winner-2026-10-01-kamkir",
+        "rtc-bbus-s28-winner-2026-10-01-latver",
+        "rtc-bbus-s28-2-2026-10-01-ashtra",
+        "rtc-bbus-s28-2-2026-10-01-chuany",
+        "rtc-bbus-s28-2-2026-10-01-malaur",
+        "rtc-bbus-s28-2-2026-10-01-romsey",
+        "rtc-bbus-s28-winner-2026-10-01-jasde",
+        "ccrc-ntflx-1movglbl-2026-09-15-shrek2",
+        "paccc-usho-midterms-2026-11-03-rep",
+        "mlaec-isrpol-pm-2026-10-27-bennet",
+        "nphc-presssec-repkl-kaedor",
+        "nphc-presssec-repkl-karlak",
+        "nphc-presssec-repkl-marmar",
+        "nphc-presssec-repkl-scojen",
+        "mlaec-isrpol-pm-2026-10-27-yailap",
+        "nphc-presssec-repkl-harfie",
+        "mlaec-isrpol-pm-2026-10-27-itaben",
+        "mlaec-isrpol-pm-2026-10-27-nafben",
+        "nphc-presssec-repkl-lizhus",
+        "nphc-presssec-repkl-katmil",
+        "nphc-presssec-repkl-moncro",
+        "nphc-presssec-repkl-matboy",
+        "nphc-presssec-repkl-patada",
+        "nphc-presssec-repkl-steche",
+        "mlaec-isrpol-pm-2026-10-27-bengan",
+        "nphc-presssec-repkl-alihab",
+        "nphc-presssec-repkl-hoggid",
+        "nphc-presssec-repkl-tayrog",
+        "nphc-presssec-repkl-annkel",
+        "nphc-presssec-repkl-kusdes",
+        "nphc-presssec-repkl-laubis",
+        "nphc-presssec-repkl-trimcl",
+        "mlaec-isrpol-pm-2026-10-27-avilie",
+        "nphc-presssec-repkl-kaymce",
+        "nphc-presssec-repkl-katpav",
+        "mlaec-isrpol-pm-2026-10-27-yoahen",
+        "pintc-meet-trump-2026-12-31-mojkha",
+        "usgubewc-usgub-ri-2026-11-03-rep",
+        "ushrewc-ushr-ak-al-2026-11-03-dem",
+        "ushrewc-ushr-ak-al-2026-11-03-rep",
+        "ewc-pres-arg-2027-10-24-axekic",
+        "ewc-pres-arg-2027-10-24-javmil",
+        "ewc-pres-arg-2027-10-24-sermas",
+        "ewc-pres-arg-2027-10-24-maumac",
+        "ewc-pres-fra-2027-04-11-bruret",
+        "ewc-pres-fra-2027-04-11-davlis",
+        "ewc-pres-fra-2027-04-11-domvil",
+        "ewc-pres-fra-2027-04-11-edophi",
+        "ewc-pres-fra-2027-04-11-frahol",
+        "ewc-pres-fra-2027-04-11-gabatt",
+        "ewc-pres-fra-2027-04-11-jorbar",
+        "ewc-pres-fra-2027-04-11-jeamel",
+        "ewc-pres-fra-2027-04-11-marlep",
+        "ewc-pres-fra-2027-04-11-sarkna",
+        "ewc-pres-fra-2027-04-11-rapglu",
+        "usgovcc-demvrep-2026-11-03-tie",
+        "usgovcc-demvrep-2026-11-03-dem",
+        "usgovcc-demvrep-2026-11-03-rep",
+        "ushrewc-ushr-az-03-2026-11-03-rep",
+        "ushrewc-ushr-de-al-2026-11-03-dem",
+        "ushrewc-ushr-de-al-2026-11-03-rep",
+        "ushrewc-ushr-fl-10-2026-11-03-rep",
+        "ushrewc-ushr-la-01-2026-11-03-dem",
+        "ushrewc-ushr-la-01-2026-11-03-rep",
+        "ushrewc-ushr-la-02-2026-11-03-dem",
+        "ushrewc-ushr-la-02-2026-11-03-rep",
+        "ushrewc-ushr-la-03-2026-11-03-dem",
+        "ushrewc-ushr-la-03-2026-11-03-rep",
+        "ushrewc-ushr-la-04-2026-11-03-dem",
+        "ushrewc-ushr-la-04-2026-11-03-rep",
+        "ushrewc-ushr-la-05-2026-11-03-dem",
+        "ushrewc-ushr-la-05-2026-11-03-rep",
+        "ushrewc-ushr-la-06-2026-11-03-dem",
+        "ushrewc-ushr-la-06-2026-11-03-rep",
+        "ushrewc-ushr-ma-01-2026-11-03-rep",
+        "ushrewc-ushr-ma-02-2026-11-03-rep",
+        "ushrewc-ushr-ma-05-2026-11-03-rep",
+        "ushrewc-ushr-ma-07-2026-11-03-rep",
+        "ushrewc-ushr-nj-08-2026-11-03-rep",
+        "ushrewc-ushr-pa-03-2026-11-03-rep",
+        "ushrewc-ushr-wi-02-2026-11-03-rep",
+        "ewc-usmayor-losang-2026-11-03-karbas",
+        "ewc-usmayor-losang-2026-11-03-nitram",
+        "aqc-cfb-acc-2026-12-05-champq-vir",
+        "aqc-cfb-cfp-2026-12-06-playoffq-vir",
+        "aqc-cfb-big12-2026-12-04-champq-arz",
+        "aqc-cfb-big12-2026-12-04-champq-kan",
+        "aec-cfb-nmx-okl-2026-09-19",
+        "aec-cfb-wvir-vir-2026-09-19",
+        "aqc-cfb-cfp-2026-12-06-playoffq-okl",
+        "aqc-cfb-sec-2026-12-05-champq-okl",
+        "aachc-cfb-undefeated-2026-11-28-okl",
+        "usmayewc-usmayor-oaklan-2026-11-03-bregri",
+        "usmayewc-usmayor-oaklan-2026-11-03-barlee",
+        "enwc-uspres-nom-dem-2028-andbes",
+        "enwc-uspres-nom-dem-2028-aleocc",
+        "enwc-uspres-nom-dem-2028-gavnew",
+        "enwc-uspres-nom-dem-2028-jbpri",
+        "aqc-cfb-aac-2026-12-05-champq-mphs",
+        "aqc-cfb-aac-2026-12-05-champq-navy",
+        "aqc-cfb-aac-2026-12-05-champq-rice",
+        "aqc-cfb-aac-2026-12-05-champq-templ",
+        "aqc-cfb-aac-2026-12-05-champq-tulsa",
+        "aqc-cfb-aac-2026-12-05-champq-tulane",
+        "aqc-cfb-aac-2026-12-05-champq-uab",
+        "aqc-cfb-acc-2026-12-05-champq-lou",
+        "aqc-cfb-acc-2026-12-05-champq-smu",
+        "aqc-cfb-big12-2026-12-04-champq-arzst",
+        "aqc-cfb-big12-2026-12-04-champq-kanst",
+        "aec-cfb-fordm-coast-2026-09-12",
+        "aec-cfb-holy-miaoh-2026-09-12",
+        "aec-cfb-loutch-lsu-2026-09-12",
+        "aec-cfb-mrcy-nmx-2026-09-12",
+        "aec-cfb-monm-wmich-2026-09-12",
+        "aec-cfb-mtnst-marsh-2026-09-12",
+        "aec-cfb-navy-flatl-2026-09-12",
+        "aec-cfb-old-vtech-2026-09-12",
+        "aec-cfb-rice-nd-2026-09-12",
+        "aec-cfb-robms-akron-2026-09-12",
+        "aec-cfb-samf-tentch-2026-09-12",
+        "aec-cfb-sacred-umass-2026-09-12",
+        "aec-cfb-tulsa-smho-2026-09-12",
+        "aec-cfb-ucdv-smu-2026-09-12",
+        "aec-cfb-ucf-pitt-2026-09-12",
+        "aec-cfb-lamon-uab-2026-09-12",
+        "aec-cfb-nal-selou-2026-09-12",
+        "aec-cfb-unlv-ntx-2026-09-12",
+        "aec-cfb-sala-tulane-2026-09-12",
+        "aec-cfb-sfl-army-2026-09-12",
+        "aec-cfb-soumis-aubrn-2026-09-12",
+        "aec-cfb-wake-pur-2026-09-12",
+        "aec-cfb-wcar-cin-2026-09-12",
+        "aec-cfb-will-wisc-2026-09-12",
+        "aec-cfb-syra-pitt-2026-09-17",
+        "aec-cfb-akron-minnst-2026-09-19",
+        "aec-cfb-brwn-nhc-2026-09-19",
+        "aec-cfb-uconn-soumis-2026-09-19",
+        "aec-cfb-cor-colg-2026-09-19",
+        "aec-cfb-dart-lehi-2026-09-19",
+        "aec-cfb-day-ekent-2026-09-19",
+        "aec-cfb-ecar-old-2026-09-19",
+        "aec-cfb-emich-wisc-2026-09-19",
+        "aec-cfb-fordm-wm-2026-09-19",
+        "aec-cfb-gtwn-rich-2026-09-19",
+        "aec-cfb-harv-nhamp-2026-09-19",
+        "aec-cfb-houbap-incar-2026-09-19",
+        "aec-cfb-lafay-clmb-2026-09-19",
+        "aec-cfb-lsu-miss-2026-09-19",
+        "aec-cfb-merc-gtech-2026-09-19",
+        "aec-cfb-miaoh-cin-2026-09-19",
+        "aec-cfb-nevada-mtnst-2026-09-19",
+        "aec-cfb-ohio-sala-2026-09-19",
+        "aqc-cfb-cfp-2026-12-06-playoffq-okst"
+      ]
+    },
+    "utilization": {
+      "kalshi": 1,
+      "poly": 0.91
+    },
+    "deferredReasons": [
+      {
+        "id": "KXEMMYCSACTO-26SEP14-MIC::tac-emmys-smcs-2026-09-14-michae",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-ECU::tec-cfb-aacchamp-2026-12-05-w-ecar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-FAU::tec-cfb-aacchamp-2026-12-05-w-flatl",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-UNT::tec-cfb-aacchamp-2026-12-05-w-ntx",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-USF::tec-cfb-aacchamp-2026-12-05-w-sfl",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-ARMY::tec-cfb-aacchamp-2026-12-05-w-army",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-CHAR::tec-cfb-aacchamp-2026-12-05-w-charlt",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-MEM::tec-cfb-aacchamp-2026-12-05-w-mphs",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-NAVY::tec-cfb-aacchamp-2026-12-05-w-navy",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-RICE::tec-cfb-aacchamp-2026-12-05-w-rice",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-TEM::tec-cfb-aacchamp-2026-12-05-w-templ",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-TLSA::tec-cfb-aacchamp-2026-12-05-w-tulsa",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-TULN::tec-cfb-aacchamp-2026-12-05-w-tulane",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-UAB::tec-cfb-aacchamp-2026-12-05-w-uab",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAAC-26-UTSA::tec-cfb-aacchamp-2026-12-05-w-utsa",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFCUSA-26-FIU::tec-cfb-cusachamp-2026-12-04-w-flint",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFCUSA-26-MTU::tec-cfb-cusachamp-2026-12-04-w-mtnst",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFCUSA-26-SHSU::tec-cfb-cusachamp-2026-12-04-w-smho",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFCUSA-26-WKU::tec-cfb-cusachamp-2026-12-04-w-wkent",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWC-26-AFA::tec-cfb-mwcchamp-2026-12-04-w-airf",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWC-26-NIU::tec-cfb-mwcchamp-2026-12-04-w-nill",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWC-26-UNM::tec-cfb-mwcchamp-2026-12-04-w-nmx",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-CCAR::tec-cfb-sbeltchamp-2026-12-04-w-coast",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-GASO::tec-cfb-sbeltchamp-2026-12-04-w-gas",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-JMU::tec-cfb-sbeltchamp-2026-12-04-w-jmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-LT::tec-cfb-sbeltchamp-2026-12-04-w-loutch",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-ODU::tec-cfb-sbeltchamp-2026-12-04-w-old",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-ULM::tec-cfb-sbeltchamp-2026-12-04-w-lamon",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-USA::tec-cfb-sbeltchamp-2026-12-04-w-sala",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-USM::tec-cfb-sbeltchamp-2026-12-04-w-soumis",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFUNDEFEATED-26-MISS::aachc-cfb-undefeated-2026-11-28-miss",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFUNDEFEATED-26-TXAM::aachc-cfb-undefeated-2026-11-28-txam",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFUNDEFEATED-26-USF::aachc-cfb-undefeated-2026-11-28-sfl",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFCUSA-26-LIB::tec-cfb-cusachamp-2026-12-04-w-librty",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWC-26-NEV::tec-cfb-mwcchamp-2026-12-04-w-nevada",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWC-26-UNLV::tec-cfb-mwcchamp-2026-12-04-w-unlv",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWC-26-UTEP::tec-cfb-mwcchamp-2026-12-04-w-utep",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWC-26-WYO::tec-cfb-mwcchamp-2026-12-04-w-wyom",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-MRSH::tec-cfb-sbeltchamp-2026-12-04-w-marsh",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELT-26-TROY::tec-cfb-sbeltchamp-2026-12-04-w-troy",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFUNDEFEATED-26-ARMY::aachc-cfb-undefeated-2026-11-28-army",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFUNDEFEATED-26-BYU::aachc-cfb-undefeated-2026-11-28-byu",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFUNDEFEATED-26-NAVY::aachc-cfb-undefeated-2026-11-28-navy",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFUNDEFEATED-26-USC::aachc-cfb-undefeated-2026-11-28-usc",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFUNDEFEATED-26-UVA::aachc-cfb-undefeated-2026-11-28-vir",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAACQUAL-26-ECU::aqc-cfb-aac-2026-12-05-champq-ecar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAACQUAL-26-ARMY::aqc-cfb-aac-2026-12-05-champq-army",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAACQUAL-26-CHAR::aqc-cfb-aac-2026-12-05-champq-charlt",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFAACQUAL-26-UTSA::aqc-cfb-aac-2026-12-05-champq-utsa",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFCUSAQUAL-26-SHSU::aqc-cfb-cusa-2026-12-04-champq-smho",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-CCAR::aqc-cfb-sbelt-2026-12-04-champq-coast",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-GASO::aqc-cfb-sbelt-2026-12-04-champq-gas",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-JMU::aqc-cfb-sbelt-2026-12-04-champq-jmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-LT::aqc-cfb-sbelt-2026-12-04-champq-loutch",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-ODU::aqc-cfb-sbelt-2026-12-04-champq-old",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-ULM::aqc-cfb-sbelt-2026-12-04-champq-lamon",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-USA::aqc-cfb-sbelt-2026-12-04-champq-sala",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-USM::aqc-cfb-sbelt-2026-12-04-champq-soumis",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFB10QUAL-26-PUR::aqc-cfb-bigten-2026-12-05-champq-pur",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFB10QUAL-26-RUTG::aqc-cfb-bigten-2026-12-05-champq-rutger",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFB10QUAL-26-UCLA::aqc-cfb-bigten-2026-12-05-champq-ucla",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFB10QUAL-26-USC::aqc-cfb-bigten-2026-12-05-champq-usc",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFCUSAQUAL-26-LIB::aqc-cfb-cusa-2026-12-04-champq-librty",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-MRSH::aqc-cfb-sbelt-2026-12-04-champq-marsh",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSBELTQUAL-26-TROY::aqc-cfb-sbelt-2026-12-04-champq-troy",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-MISS::aqc-cfb-sec-2026-12-05-champq-miss",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWCQUAL-26-AFA::aqc-cfb-mwc-2026-12-04-champq-airf",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWCQUAL-26-NIU::aqc-cfb-mwc-2026-12-04-champq-nill",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWCQUAL-26-UNM::aqc-cfb-mwc-2026-12-04-champq-nmx",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWCQUAL-26-UNLV::aqc-cfb-mwc-2026-12-04-champq-unlv",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWCQUAL-26-UTEP::aqc-cfb-mwc-2026-12-04-champq-utep",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMWCQUAL-26-WYO::aqc-cfb-mwc-2026-12-04-champq-wyom",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-AUB::aqc-cfb-sec-2026-12-05-champq-aubrn",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-LSU::aqc-cfb-sec-2026-12-05-champq-lsu",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-MIZZ::aqc-cfb-sec-2026-12-05-champq-missr",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-VAN::aqc-cfb-sec-2026-12-05-champq-vand",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-MISS::aqc-cfb-cfp-2026-12-06-playoffq-miss",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-BC::aqc-cfb-acc-2026-12-05-champq-boscol",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-WAKE::aqc-cfb-acc-2026-12-05-champq-wake",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMAC-26-BGSU::tec-cfb-macchamp-2026-12-05-w-bowlgr",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMAC-26-CMU::tec-cfb-macchamp-2026-12-05-w-cmich",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMAC-26-EMU::tec-cfb-macchamp-2026-12-05-w-emich",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMAC-26-WMU::tec-cfb-macchamp-2026-12-05-w-wmich",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-AUB::aqc-cfb-cfp-2026-12-06-playoffq-aubrn",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-LSU::aqc-cfb-cfp-2026-12-06-playoffq-lsu",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-MIZZ::aqc-cfb-cfp-2026-12-06-playoffq-missr",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFSECQ-26-VAN::aqc-cfb-cfp-2026-12-06-playoffq-vand",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-CLEM::aqc-cfb-acc-2026-12-05-champq-clmsn",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-CLEM::aqc-cfb-cfp-2026-12-06-playoffq-clmsn",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-DUKE::aqc-cfb-acc-2026-12-05-champq-duke",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-PITT::aqc-cfb-acc-2026-12-05-champq-pitt",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-PITT::aqc-cfb-cfp-2026-12-06-playoffq-pitt",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-STAN::aqc-cfb-acc-2026-12-05-champq-stan",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFACCQUAL-26-SYR::aqc-cfb-acc-2026-12-05-champq-syra",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMAC-26-AKR::tec-cfb-macchamp-2026-12-05-w-akron",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMAC-26-OHIO::tec-cfb-macchamp-2026-12-05-w-ohio",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFMAC-26-TOL::tec-cfb-macchamp-2026-12-05-w-toledo",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19SUUUST-UST::aec-cfb-sutah-stmn-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12BGSUNEB-BGSU::aec-cfb-bowlgr-nebr-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19SELAULM-ULM::aec-cfb-selou-lamon-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19SHUELON-SHU::aec-cfb-sacred-elon-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19VTMD-VT::aec-cfb-vtech-mary-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19WYOCMU-CMU::aec-cfb-wyom-cmich-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19YALEHC-HC::aec-cfb-yale-holy-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19PEAYUWFL-PEAY::aec-cfb-ausp-uwfl-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19PEAYUWFL-UWFL::aec-cfb-ausp-uwfl-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19PREWCU-WCU::aec-cfb-presb-wcar-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19URISTON-STON::aec-cfb-ri-stbr-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP11VILLLOU-VILL::aec-cfb-vill-lou-2026-09-11",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP11RUTGBC-RUTG::aec-cfb-rutger-boscol-2026-09-11",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12ARIZBYU-ARIZ::aec-cfb-arz-byu-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12BUCKVMI-BUCK::aec-cfb-buck-vamil-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12BUFFFIU-BUFF::aec-cfb-buf-flint-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12CHARMISS-CHAR::aec-cfb-charlt-miss-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12CHATEKY-CHAT::aec-cfb-chat-ekent-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12COLGCMU-COLG::aec-cfb-colg-cmich-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12ELONURI-ELON::aec-cfb-elon-ri-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19PENNBUCK-BUCK::aec-cfb-penn-buck-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19PENNBUCK-PENN::aec-cfb-penn-buck-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19PRINBRY-BRY::aec-cfb-prnce-bryant-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19PRINBRY-PRIN::aec-cfb-prnce-bryant-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19SMULOU-LOU::aec-cfb-smu-lou-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19SMULOU-SMU::aec-cfb-smu-lou-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19STANDUKE-DUKE::aec-cfb-stan-duke-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19STANDUKE-STAN::aec-cfb-stan-duke-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19STNHMASS-STNH::aec-cfb-stnh-umass-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19TEMTOL-TEM::aec-cfb-templ-toledo-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19TEMTOL-TOL::aec-cfb-templ-toledo-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19TROYMIZZ-MIZZ::aec-cfb-troy-missr-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19TROYMIZZ-TROY::aec-cfb-troy-missr-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19USCRUTG-RUTG::aec-cfb-usc-rutger-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19USCRUTG-USC::aec-cfb-usc-rutger-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19VILLLIU-LIU::aec-cfb-vill-liub-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19VILLLIU-VILL::aec-cfb-vill-liub-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19VMIDAV-DAV::aec-cfb-vamil-dav-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19VMIDAV-VMI::aec-cfb-vamil-dav-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19WAGCAL-CAL::aec-cfb-wag-cah-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19WAGCAL-WAG::aec-cfb-wag-cah-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19WOFCHAT-CHAT::aec-cfb-woff-chat-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19WOFCHAT-WOF::aec-cfb-woff-chat-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19WVUUVA-UVA::aec-cfb-wvir-vir-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12CALSYR-CAL::aec-cfb-cah-syra-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19SHUELON-ELON::aec-cfb-sacred-elon-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19STNHMASS-MASS::aec-cfb-stnh-umass-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19UNMOKLA-OKLA::aec-cfb-nmx-okl-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19VTMD-MD::aec-cfb-vtech-mary-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19WMURICE-RICE::aec-cfb-wmich-rice-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19WYOCMU-WYO::aec-cfb-wyom-cmich-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19YALEHC-YALE::aec-cfb-yale-holy-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19PREWCU-PRE::aec-cfb-presb-wcar-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP19UNDNEB-NEB::aec-cfb-ndak-nebr-2026-09-19",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP11RUTGBC-BC::aec-cfb-rutger-boscol-2026-09-11",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP11VILLLOU-LOU::aec-cfb-vill-lou-2026-09-11",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12ARIZBYU-BYU::aec-cfb-arz-byu-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12BGSUNEB-NEB::aec-cfb-bowlgr-nebr-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12BRYHAMP-HAMP::aec-cfb-bryant-hamp-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12BUCKVMI-VMI::aec-cfb-buck-vamil-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12BUFFFIU-FIU::aec-cfb-buf-flint-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12CALSYR-SYR::aec-cfb-cah-syra-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12CHARMISS-MISS::aec-cfb-charlt-miss-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12CHATEKY-EKY::aec-cfb-chat-ekent-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12CHSOCIT-CIT::aec-cfb-chsou-cita-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12COLGCMU-CMU::aec-cfb-colg-cmich-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12DRKEUNI-UNI::aec-cfb-drake-niowa-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-MOH::tpoyc-2026-mohgha",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-POP::tpoyc-2026-popleo",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-JOSS::enwc-uspres-nom-dem-2028-jonoss",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-JS::enwc-uspres-nom-dem-2028-jossha",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-JSTE::enwc-uspres-nom-dem-2028-jonste",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-JTAL::enwc-uspres-nom-dem-2028-jamtal",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-KH::enwc-uspres-nom-dem-2028-kamhar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-MK::enwc-uspres-nom-dem-2028-markel",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-MO::enwc-uspres-nom-dem-2028-micoba",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-PB::enwc-uspres-nom-dem-2028-petbut",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-RKHA::enwc-uspres-nom-dem-2028-rokha",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-SAS::enwc-uspres-nom-dem-2028-stasmi",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESNOMD-28-WM::enwc-uspres-nom-dem-2028-wesmoo",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-ALY::tpoyc-2026-alyliu",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-BAD::tpoyc-2026-badbun",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-BEN::tpoyc-2026-bennet",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-CHR::tpoyc-2026-chrkoc",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-DAR::tpoyc-2026-daramo",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-DT::tpoyc-2026-dontru",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-EM::tpoyc-2026-elomus",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-JER::tpoyc-2026-jerhan",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-JP::tpoyc-2026-jerpow",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-LIO::tpoyc-2026-liomes",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-MAR::tpoyc-2026-marrub",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-MOJ::tpoyc-2026-mojkha",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-REI::tpoyc-2026-reiwis",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-SA::tpoyc-2026-samalt",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-SHE::tpoyc-2026-shesha",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-TS::tpoyc-2026-tayswi",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-VIC::tpoyc-2026-vicglo",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-XIJ::tpoyc-2026-xijin",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-ZOH::tpoyc-2026-zohmam",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-VS26SEP14-LAS::tac-emmys-vs-2026-09-14-lastwe",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-GPT::tpoyc-2026-chatgp",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-VS26SEP14-LAT::tac-emmys-vs-2026-09-14-thelat",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-VS26SEP14-JIM::tac-emmys-vs-2026-09-14-jimmyk",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-VS26SEP14-SAT::tac-emmys-vs-2026-09-14-saturd",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-VS26SEP14-DAI::tac-emmys-vs-2026-09-14-thedai",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-JAS::rtc-bbus-s28-3-2026-10-01-jasde",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMYLSERIES-26SEP14-ALL::tac-emmys-ls-2026-09-14-allher",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMYLSERIES-26SEP14-DTF::tac-emmys-ls-2026-09-14-dtfstl",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIME-26-PET::tpoyc-2026-petmag",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R2-TAY::rtc-bbus-s28-2-2026-10-01-taybro",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R2-YAS::rtc-bbus-s28-2-2026-10-01-yaspat",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-ANG::rtc-bbus-s28-3-2026-10-01-angmur",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-ASH::rtc-bbus-s28-3-2026-10-01-ashtra",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-BAR::rtc-bbus-s28-3-2026-10-01-barpfe",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-CHU::rtc-bbus-s28-3-2026-10-01-chuany",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-DEE::rtc-bbus-s28-3-2026-10-01-deeval",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-DRE::rtc-bbus-s28-3-2026-10-01-drecam",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-HAL::rtc-bbus-s28-3-2026-10-01-haltho",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-KAM::rtc-bbus-s28-3-2026-10-01-kamkir",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-LAT::rtc-bbus-s28-3-2026-10-01-latver",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-LYR::rtc-bbus-s28-3-2026-10-01-lyrmed",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-MAL::rtc-bbus-s28-3-2026-10-01-malaur",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-MEL::rtc-bbus-s28-3-2026-10-01-melmor",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-RIC::rtc-bbus-s28-3-2026-10-01-ricdev",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-ROM::rtc-bbus-s28-3-2026-10-01-romsey",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-TAY::rtc-bbus-s28-3-2026-10-01-taybro",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-YAS::rtc-bbus-s28-3-2026-10-01-yaspat",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-RCP26SEP14-DAN::tac-emmys-rs-2026-09-14-dancin",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-RCP26SEP14-TOP::tac-emmys-rs-2026-09-14-topche",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMYLSERIES-26SEP14-BEE::tac-emmys-ls-2026-09-14-beef",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-RCP26SEP14-SUR::tac-emmys-rs-2026-09-14-surviv",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXRANKLIST1SONG-26SEP26-HAT::ccpc-bilbrd-1song-any-sep2026-hatmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-KAN::ccpc-bilbrd-1album-any2026-kanwes",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-LAN::ccpc-bilbrd-1album-any2026-lanrey",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-MEG::ccpc-bilbrd-1album-any2026-megsta",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-UZI::ccpc-bilbrd-1album-any2026-lilver",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXRANKLIST1SONG-26SEP26-HAT::ccrc-bilbrd-1song-2026-09-19-hatmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPSONG-26SEP19-HAT::ccrc-bilbrd-1song-2026-09-19-hatmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-ALE::ccpc-bilbrd-1album-any2026-alewar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-BAB::ccpc-bilbrd-1album-any2026-lilbab",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-BEN::ccpc-bilbrd-1album-any2026-benboo",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-BIL::ccpc-bilbrd-1album-any2026-bileil",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-CHAP::ccpc-bilbrd-1album-any2026-charoa",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-CUA::ccpc-bilbrd-1album-any2026-dualip",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-FRA::ccpc-bilbrd-1album-any2026-fraoce",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-JUS::ccpc-bilbrd-1album-any2026-jusbie",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-LAD::ccpc-bilbrd-1album-any2026-ladgag",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-LOL::ccpc-bilbrd-1album-any2026-lolyou",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-NIC::ccpc-bilbrd-1album-any2026-nicmin",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-OLI::ccpc-bilbrd-1album-any2026-olidea",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-POS::ccpc-bilbrd-1album-any2026-posmal",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-RUA::ccpc-bilbrd-1album-any2026-rauale",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-SAB::ccpc-bilbrd-1album-any2026-sabcar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-SAM::ccpc-bilbrd-1album-any2026-samsmi",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-SEL::ccpc-bilbrd-1album-any2026-selgom",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-TAT::ccpc-bilbrd-1album-any2026-tatmcr",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-THU::ccpc-bilbrd-1album-any2026-youthu",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-TRA::ccpc-bilbrd-1album-any2026-trasco",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-WAY::ccpc-bilbrd-1album-any2026-lilway",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-XCX::ccpc-bilbrd-1album-any2026-chaxcx",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-AOCA::ewc-usp-2028-11-07-aleocc",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-JPRI::ewc-usp-2028-11-07-jbpri",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "SENATEAK-26-D::ewc-usse-ak-2026-11-03-dem",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "SENATEAK-26-R::ewc-usse-ak-2026-11-03-rep",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "SENATEAK-28-D::ewc-usse-ak-2026-11-03-dem",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "SENATEAK-28-R::ewc-usse-ak-2026-11-03-rep",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "SENATEDE-26-D::ussewc-usse-de-2026-11-03-dem",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "SENATEDE-26-R::ussewc-usse-de-2026-11-03-rep",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPARTIST-26B-BRU::ccrc-sptfy-1-artst-glbl-yr-2026-brumar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPARTIST-26B-CHA::ccrc-sptfy-1-artst-glbl-yr-2026-charoa",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPARTIST-26B-KEN::ccrc-sptfy-1-artst-glbl-yr-2026-kenlam",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPARTIST-26B-MOR::ccrc-sptfy-1-artst-glbl-yr-2026-morwal",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPARTIST-26B-TAY::ccrc-sptfy-1-artst-glbl-yr-2026-tayswi",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPSONG-26SEP19-ICA::ccrc-bilbrd-1song-2026-09-19-canlov",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPSONG-26SEP26-HAT::ccrc-bilbrd-1song-2026-09-19-hatmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-COL::ccpc-bilbrd-1album-any2026-coldpl",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-DOE::ccpc-bilbrd-1album-any2026-doechi",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-EMI::ccpc-bilbrd-1album-any2026-eminem",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-NF::ccpc-bilbrd-1album-any2026-nf",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-RIH::ccpc-bilbrd-1album-any2026-rihann",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-SOM::ccpc-bilbrd-1album-any2026-sombr",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-SZA::ccpc-bilbrd-1album-any2026-sza",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-ABES::ewc-usp-2028-11-07-andbes",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-GNEWS::ewc-usp-2028-11-07-gavnew",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-GYOU::ewc-usp-2028-11-07-gleyou",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-JOSS::ewc-usp-2028-11-07-jonoss",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-JSHA::ewc-usp-2028-11-07-jossha",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-JTAL::ewc-usp-2028-11-07-jamtal",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-KHAR::ewc-usp-2028-11-07-kamhar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-MKEL::ewc-usp-2028-11-07-markel",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-MRUB::ewc-usp-2028-11-07-marrub",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-PBUT::ewc-usp-2028-11-07-petbut",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-RDES::ewc-usp-2028-11-07-rondes",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-REMA::ewc-usp-2028-11-07-rahema",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-RKHA::ewc-usp-2028-11-07-rokha",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-SSMI::ewc-usp-2028-11-07-stasmi",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-TCAR::ewc-usp-2028-11-07-tuccar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-TGAB::ewc-usp-2028-11-07-tulgab",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-TMAS::ewc-usp-2028-11-07-thomas",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-VRAM::ewc-usp-2028-11-07-vivram",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXPRESPERSON-28-WMOO::ewc-usp-2028-11-07-wesmoo",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KX1ALBUM-26DEC-BEY::ccpc-bilbrd-1album-any2026-beyonc",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPARTIST-26B-DRA::ccrc-sptfy-1-artst-glbl-yr-2026-drake",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXEMMY-OWCS26SEP14-HAC::tac-emmys-wcs-2026-09-14-luciaa",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIMEDECADE20S-30-EMUS::tpoyc-2026-elomus",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIMEDECADE20S-30-SALT::tpoyc-2026-samalt",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIMEDECADE20S-30-TAY::tpoyc-2026-tayswi",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTIMEDECADE20S-30-XJIN::tpoyc-2026-xijin",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXTOPARTIST-26B-BEY::ccrc-sptfy-1-artst-glbl-yr-2026-beyonc",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXMUSICREPORT-TOPDIGSALE27DEC31-HAT::ccpc-bilbrd-1song-any-sep2026-hatmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXMUSICREPORT-TOPRADIO27DEC31-HAT::ccpc-bilbrd-1song-any-sep2026-hatmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXMUSICREPORT-TOPSTREAM27DEC31-HAT::ccpc-bilbrd-1song-any-sep2026-hatmad",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP24LIBCCAR-CCAR::aec-cfb-librty-coast-2026-09-24",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP24LIBCCAR-LIB::aec-cfb-librty-coast-2026-09-24",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12NCATNCCU-NCAT::aec-cfb-ncat-ncc-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXNCAAFGAME-26SEP12NCATNCCU-NCCU::aec-cfb-ncat-ncc-2026-09-12",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-NYJ::rtc-agt-s21-win-2026-09-23-nyjmus",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-OLI::rtc-agt-s21-win-2026-09-23-olibef",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-PYN::rtc-agt-s21-win-2026-09-23-pynbea",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-ROY::rtc-agt-s21-win-2026-09-23-roylas",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-TRA::rtc-agt-s21-win-2026-09-23-tragar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-TYR::rtc-agt-s21-win-2026-09-23-tyrmar",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-VER::rtc-agt-s21-win-2026-09-23-vergor",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-YOU::rtc-agt-s21-win-2026-09-23-youstr",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-UNI::rtc-agt-s21-win-2026-09-23-unitre",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      },
+      {
+        "id": "KXAGTWINNER-26SEP24-RUB::rtc-agt-s21-win-2026-09-23-rubrol",
+        "reason": "PAIR_CAPACITY_OR_EXPLORATION_ROTATION"
+      }
+    ]
+  },
+  "discovery": {
+    "candidates": 920,
+    "sportsCandidates": 570,
+    "nonSportsCandidates": 350,
+    "kalshi": 133887,
+    "poly": 104713,
+    "complete": true,
+    "errors": [],
+    "added": 0,
+    "refreshed": 1009,
+    "comparisons": 20039119,
+    "blockedByIndex": 13972589943,
+    "comparisonLimitDeferred": 846708097,
+    "rejected": {
+      "structuralConflict": 10284646,
+      "insufficientSimilarity": 1761522,
+      "dateMismatch": 430608,
+      "thresholdMismatch": 6170486,
+      "outcomeMismatch": 1390937,
+      "other": 0
+    },
+    "categories": {
+      "kalshi": {
+        "sports": 81921,
+        "economics": 11369,
+        "commodities": 1172,
+        "climate and weather": 1263,
+        "culture": 9080,
+        "mentions": 904,
+        "science and technology": 989,
+        "politics": 23352,
+        "crypto": 3344,
+        "ai": 4,
+        "business": 1,
+        "companies": 395,
+        "unknown": 88,
+        "social": 2,
+        "world": 3
+      },
+      "poly": {
+        "sports": 97357,
+        "politics": 6288,
+        "culture": 731,
+        "finance": 77,
+        "technology": 62,
+        "macro": 68,
+        "geopolitics": 9,
+        "crypto": 54,
+        "science": 7,
+        "climate": 60
+      }
+    },
+    "matchingMs": 33026.140167000005,
+    "status": "SUCCESS",
+    "finishedAt": 1789156528915,
+    "lastDiscoveryAt": 1789156529186,
+    "nextDiscoveryAt": 1789156829186,
+    "enabled": true,
+    "running": false,
+    "restRequestsTotal": {
+      "kalshi": 270,
+      "poly": 419
+    }
+  },
+  "storage": {
+    "processed": 45858,
+    "persisted": 1494,
+    "ringRecords": 1210,
+    "ringBytes": 2306128,
+    "logicalBytes": 25513984,
+    "bytesPerHour": 69169302.38305186,
+    "projectedGBPerDay": 1.6656554455709445,
+    "evidencePerSecond": 1.6501075546619188,
+    "initialBytes": 8409088,
+    "finalBytes": 25767936,
+    "growthBytesPerHour": 69402310.23212269,
+    "reductionVsApproximate318GBPerHour": 45.819800369241094
+  },
+  "performance": {
+    "bookUpdatesPerSecond": 50.92905714942544,
+    "validMessagesPerSecond": 47.892726689167056,
+    "evaluationsPerSecond": 124.54063563034954,
+    "latencyMs": {
+      "persistenceAck": {
+        "count": 10000,
+        "p50": 1.1093330000294372,
+        "p95": 148.3102090000175,
+        "p99": 276.12725000001956
+      },
+      "persistenceWrite": {
+        "count": 10000,
+        "p50": 0.10862499999348074,
+        "p95": 1.4126669999677688,
+        "p99": 4.623625000007451
+      },
+      "capacityWorkerRoundTrip": {
+        "count": 5,
+        "p50": 270.1061669999035,
+        "p95": 326.60112500000105,
+        "p99": 326.60112500000105
+      },
+      "processingLag": {
+        "count": 10000,
+        "p50": 0.10725000000093132,
+        "p95": 11.109500000020489,
+        "p99": 34.980709000024945
+      },
+      "evaluation": {
+        "count": 10000,
+        "p50": 0.6766249999636784,
+        "p95": 2.9387499999720603,
+        "p99": 5.0837919999612495
+      },
+      "processing": {
+        "count": 10000,
+        "p50": 0.9124999999767169,
+        "p95": 11.318417000002228,
+        "p99": 35.59516700007953
+      },
+      "validBookProcessing": {
+        "count": 10000,
+        "p50": 0.8489999999292195,
+        "p95": 3.6092089999001473,
+        "p99": 5.759290999965742
+      },
+      "polyExchangeToReceive": {
+        "count": 10000,
+        "p50": 23,
+        "p95": 40254,
+        "p99": 2012108
+      },
+      "receiveToPersistenceAck": {
+        "count": 10000,
+        "p50": 2.2134579999838024,
+        "p95": 175.99491699994542,
+        "p99": 320.63937500002794
+      },
+      "kalshiExchangeToReceive": {
+        "count": 10000,
+        "p50": -65,
+        "p95": 13,
+        "p99": 136
+      },
+      "polyRestRoundTrip": {
+        "count": 950,
+        "p50": 199.05133300001035,
+        "p95": 343.5123329999915,
+        "p99": 496.5340000000033
+      },
+      "kalshiRestRoundTrip": {
+        "count": 1846,
+        "p50": 170.47341700003017,
+        "p95": 245.532583000022,
+        "p99": 500.38854100000026
+      },
+      "invalidBookProcessing": {
+        "count": 2754,
+        "p50": 12.451957999990555,
+        "p95": 45.1234580000164,
+        "p99": 61.55087500001537
+      }
+    },
+    "eventLoopMs": {
+      "p50": 11.034623,
+      "p95": 13.099007,
+      "p99": 16.891903,
+      "max": 629.669887
+    },
+    "persistence": {
+      "queueDepth": 0,
+      "queueBytes": 0,
+      "lastAckAt": 1789156779388,
+      "failed": false
+    },
+    "host": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M1 Pro",
+      "runtime": "v25.8.1"
+    }
+  },
+  "stability": {
+    "diagnosticCounts": {
+      "CONNECTED": 39,
+      "DISCONNECTED": 10,
+      "DISCONNECT_DETAIL": 29,
+      "DISCOVERY": 2,
+      "EVENT_LOOP_DELAY": 10,
+      "PAUSED": 2,
+      "RECONCILIATION_OLDER_REST": 98,
+      "RECONNECT": 10,
+      "RECOVERY_DETAIL": 10,
+      "REST_RECONCILIATION": 410,
+      "STOP": 1,
+      "SUBSCRIPTION_CHANGED": 19,
+      "TELEMETRY": 89
+    },
+    "reconnectsPerHour": 39.980942417447686,
+    "disconnectsPerHour": 115.94473301059828,
+    "subscriptionChangesPerHour": 75.96379059315059,
+    "reconciliationMismatchesPerHour": 0,
+    "streamErrorsPerHour": 0,
+    "reconciliationRequestsPerHour": 1647.2148275988445,
+    "observerRestRequestsPerHour": 11178.671499918371,
+    "catalogRestRequestsPerHour": 2754.6869325621456,
+    "olderRestSnapshots": 98,
+    "eventLoopDelayEpisodes": 2,
+    "shardSamples": [
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:ad968c2c9222",
+        "observations": 16,
+        "connectedObservations": 16,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:9b926daeb643",
+        "observations": 2,
+        "connectedObservations": 2,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:d71db996d8a3",
+        "observations": 2,
+        "connectedObservations": 2,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:00e1ad1f7f92",
+        "observations": 16,
+        "connectedObservations": 16,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:a9c542a0bdee",
+        "observations": 16,
+        "connectedObservations": 16,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:aeb8baafe4ae",
+        "observations": 16,
+        "connectedObservations": 16,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:3b9be2553630",
+        "observations": 2,
+        "connectedObservations": 2,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:f4e1dfc849d1",
+        "observations": 2,
+        "connectedObservations": 2,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:75ee1e604f20",
+        "observations": 56,
+        "connectedObservations": 56,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:8af0695c7020",
+        "observations": 2,
+        "connectedObservations": 2,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:89d73ee4ef10",
+        "observations": 14,
+        "connectedObservations": 14,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:462663b73300",
+        "observations": 14,
+        "connectedObservations": 14,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:057e4dc07d9e",
+        "observations": 14,
+        "connectedObservations": 14,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:7e3a7117dba9",
+        "observations": 14,
+        "connectedObservations": 14,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:a06439f27298",
+        "observations": 54,
+        "connectedObservations": 54,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:7dd0306d026f",
+        "observations": 40,
+        "connectedObservations": 40,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:56603609b389",
+        "observations": 40,
+        "connectedObservations": 40,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:4e5e8f35f28b",
+        "observations": 74,
+        "connectedObservations": 74,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:d4a2d2bb60e8",
+        "observations": 74,
+        "connectedObservations": 74,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:14357ef44bde",
+        "observations": 40,
+        "connectedObservations": 40,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:8bcba5fd833a",
+        "observations": 74,
+        "connectedObservations": 74,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:9d7f6ea14f93",
+        "observations": 74,
+        "connectedObservations": 73,
+        "connectedSampleFraction": 0.9864864864864865
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:b60921dbdebb",
+        "observations": 40,
+        "connectedObservations": 40,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:65b44fb8f028",
+        "observations": 34,
+        "connectedObservations": 34,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:196e73e5e497",
+        "observations": 34,
+        "connectedObservations": 34,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:bf4ab2162567",
+        "observations": 34,
+        "connectedObservations": 34,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:b6a49e50bf61",
+        "observations": 34,
+        "connectedObservations": 34,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:7f79c6a37f0d",
+        "observations": 34,
+        "connectedObservations": 34,
+        "connectedSampleFraction": 1
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:2211c9980bf5",
+        "observations": 34,
+        "connectedObservations": 34,
+        "connectedSampleFraction": 1
+      }
+    ],
+    "finalShards": [
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:4e5e8f35f28b",
+        "connectionAgeMs": 114449.046125,
+        "reconnectCount": 1,
+        "reconciliationRequests": 0,
+        "lastReconciliationAt": null,
+        "lastDisconnect": {
+          "venue": "kalshi",
+          "shard": "kalshi:4e5e8f35f28b",
+          "connectionAgeMs": 614209.818166,
+          "reconnectCount": 0,
+          "reconciliationRequests": 0,
+          "lastReconciliationAt": null,
+          "markets": 100,
+          "connected": false,
+          "heartbeatAgeMs": 3921.9594590000343,
+          "lastMessageAgeMs": 1425.907583000022,
+          "rttMs": 165.9637909999583,
+          "eventLoopDelayMs": 227.25008400005754,
+          "persistenceBacklog": 27,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4280.801875000005,
+        "lastMessageAgeMs": 829.7723330000881,
+        "rttMs": 153.20491600001696
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:d4a2d2bb60e8",
+        "connectionAgeMs": 114448.94000000006,
+        "reconnectCount": 1,
+        "reconciliationRequests": 74,
+        "lastReconciliationAt": 1789156774641,
+        "lastDisconnect": {
+          "venue": "kalshi",
+          "shard": "kalshi:d4a2d2bb60e8",
+          "connectionAgeMs": 614209.409375,
+          "reconnectCount": 0,
+          "reconciliationRequests": 49,
+          "lastReconciliationAt": 1789156659099,
+          "markets": 100,
+          "connected": false,
+          "heartbeatAgeMs": 3914.9632499999134,
+          "lastMessageAgeMs": 2548.110708000022,
+          "rttMs": 172.58558300009463,
+          "eventLoopDelayMs": 227.0207090000622,
+          "persistenceBacklog": 24,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4280.812666999991,
+        "lastMessageAgeMs": 832.1247079999885,
+        "rttMs": 153.03591600002255
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:8bcba5fd833a",
+        "connectionAgeMs": 114613.73912500008,
+        "reconnectCount": 1,
+        "reconciliationRequests": 64,
+        "lastReconciliationAt": 1789156432853,
+        "lastDisconnect": {
+          "venue": "poly",
+          "shard": "poly:8bcba5fd833a",
+          "connectionAgeMs": 614127.7964999999,
+          "reconnectCount": 0,
+          "reconciliationRequests": 64,
+          "lastReconciliationAt": 1789156432853,
+          "markets": 100,
+          "connected": false,
+          "heartbeatAgeMs": 3814.076250000042,
+          "lastMessageAgeMs": 1731.5144169999985,
+          "rttMs": 154.1148749999702,
+          "eventLoopDelayMs": 226.80241700005718,
+          "persistenceBacklog": 21,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4397.49916700006,
+        "lastMessageAgeMs": 1790.4918750000652,
+        "rttMs": 194.64587499992922
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:9d7f6ea14f93",
+        "connectionAgeMs": 114725.09849999996,
+        "reconnectCount": 1,
+        "reconciliationRequests": 77,
+        "lastReconciliationAt": 1789156766637,
+        "lastDisconnect": {
+          "venue": "poly",
+          "shard": "poly:9d7f6ea14f93",
+          "connectionAgeMs": 614034.2225830001,
+          "reconnectCount": 0,
+          "reconciliationRequests": 57,
+          "lastReconciliationAt": 1789156639089,
+          "markets": 100,
+          "connected": false,
+          "heartbeatAgeMs": 3759.3087499999674,
+          "lastMessageAgeMs": 973.8045840000268,
+          "rttMs": 159.60183299996424,
+          "eventLoopDelayMs": 226.54345900006592,
+          "persistenceBacklog": 18,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4517.89620800002,
+        "lastMessageAgeMs": 159.14716599998064,
+        "rttMs": 174.07037500001024
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:65b44fb8f028",
+        "connectionAgeMs": 114449.27587500005,
+        "reconnectCount": 1,
+        "reconciliationRequests": 8,
+        "lastReconciliationAt": 1789156477886,
+        "lastDisconnect": {
+          "venue": "kalshi",
+          "shard": "kalshi:65b44fb8f028",
+          "connectionAgeMs": 217692.73774999997,
+          "reconnectCount": 0,
+          "reconciliationRequests": 8,
+          "lastReconciliationAt": 1789156477886,
+          "markets": 100,
+          "connected": false,
+          "heartbeatAgeMs": 2499.2519999999786,
+          "lastMessageAgeMs": 3552.1856670000125,
+          "rttMs": 149.72470799996518,
+          "eventLoopDelayMs": 226.27512500004377,
+          "persistenceBacklog": 15,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4280.836459000013,
+        "lastMessageAgeMs": 1059.0204999999842,
+        "rttMs": 155.75400000007357
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:196e73e5e497",
+        "connectionAgeMs": 114448.78616699995,
+        "reconnectCount": 1,
+        "reconciliationRequests": 10,
+        "lastReconciliationAt": 1789156724607,
+        "lastDisconnect": {
+          "venue": "kalshi",
+          "shard": "kalshi:196e73e5e497",
+          "connectionAgeMs": 217692.285792,
+          "reconnectCount": 0,
+          "reconciliationRequests": 9,
+          "lastReconciliationAt": 1789156534912,
+          "markets": 100,
+          "connected": false,
+          "heartbeatAgeMs": 2491.850625000079,
+          "lastMessageAgeMs": 1426.9147919999668,
+          "rttMs": 156.24083399993833,
+          "eventLoopDelayMs": 225.92008399998304,
+          "persistenceBacklog": 12,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4274.389582999982,
+        "lastMessageAgeMs": 703.407833000063,
+        "rttMs": 159.39370900008362
+      },
+      {
+        "venue": "kalshi",
+        "shard": "kalshi:bf4ab2162567",
+        "connectionAgeMs": 114448.87524999992,
+        "reconnectCount": 1,
+        "reconciliationRequests": 0,
+        "lastReconciliationAt": null,
+        "lastDisconnect": {
+          "venue": "kalshi",
+          "shard": "kalshi:bf4ab2162567",
+          "connectionAgeMs": 217692.13962500007,
+          "reconnectCount": 0,
+          "reconciliationRequests": 0,
+          "lastReconciliationAt": null,
+          "markets": 100,
+          "connected": false,
+          "heartbeatAgeMs": 2512.02804200002,
+          "lastMessageAgeMs": 1005.0992079999996,
+          "rttMs": 153.60258299997076,
+          "eventLoopDelayMs": 225.33270899998024,
+          "persistenceBacklog": 9,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4274.316499999957,
+        "lastMessageAgeMs": 90.05883399990853,
+        "rttMs": 159.50566700007766
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:b6a49e50bf61",
+        "connectionAgeMs": 114614.16766699997,
+        "reconnectCount": 1,
+        "reconciliationRequests": 2,
+        "lastReconciliationAt": 1789156776647,
+        "lastDisconnect": {
+          "venue": "poly",
+          "shard": "poly:b6a49e50bf61",
+          "connectionAgeMs": 217631.99837499997,
+          "reconnectCount": 0,
+          "reconciliationRequests": 0,
+          "lastReconciliationAt": null,
+          "markets": 100,
+          "connected": false,
+          "heartbeatAgeMs": 2388.0692920000292,
+          "lastMessageAgeMs": 1070.0017919999082,
+          "rttMs": 208.38745799998287,
+          "eventLoopDelayMs": 225.06858399999328,
+          "persistenceBacklog": 6,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4397.729625000036,
+        "lastMessageAgeMs": 165.2204170000041,
+        "rttMs": 194.57320800004527
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:7f79c6a37f0d",
+        "connectionAgeMs": 114613.87208300002,
+        "reconnectCount": 1,
+        "reconciliationRequests": 0,
+        "lastReconciliationAt": null,
+        "lastDisconnect": {
+          "venue": "poly",
+          "shard": "poly:7f79c6a37f0d",
+          "connectionAgeMs": 217621.36720899993,
+          "reconnectCount": 0,
+          "reconciliationRequests": 0,
+          "lastReconciliationAt": null,
+          "markets": 95,
+          "connected": false,
+          "heartbeatAgeMs": 2387.7530829999596,
+          "lastMessageAgeMs": 2387.745416999911,
+          "rttMs": 208.28545800002757,
+          "eventLoopDelayMs": 224.76616700005252,
+          "persistenceBacklog": 3,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 95,
+        "connected": true,
+        "heartbeatAgeMs": 4397.649957999936,
+        "lastMessageAgeMs": 4019.3340420000022,
+        "rttMs": 194.5248750000028
+      },
+      {
+        "venue": "poly",
+        "shard": "poly:2211c9980bf5",
+        "connectionAgeMs": 114613.21333299996,
+        "reconnectCount": 1,
+        "reconciliationRequests": 24,
+        "lastReconciliationAt": 1789156678552,
+        "lastDisconnect": {
+          "venue": "poly",
+          "shard": "poly:2211c9980bf5",
+          "connectionAgeMs": 217613.873167,
+          "reconnectCount": 0,
+          "reconciliationRequests": 20,
+          "lastReconciliationAt": 1789156662101,
+          "markets": 60,
+          "connected": false,
+          "heartbeatAgeMs": 2387.0286250000354,
+          "lastMessageAgeMs": 324.7880839999998,
+          "rttMs": 200.12170799996238,
+          "eventLoopDelayMs": 224.22720900003333,
+          "persistenceBacklog": 0,
+          "restActive": true,
+          "metadataActive": true,
+          "discoveryActive": false,
+          "closeCode": 1006,
+          "closeReason": "",
+          "initiator": "client",
+          "recoveryReason": "EVENT_LOOP_DELAY"
+        },
+        "markets": 60,
+        "connected": true,
+        "heartbeatAgeMs": 4397.579792000004,
+        "lastMessageAgeMs": 196.41995899996255,
+        "rttMs": 186.60191600001417
+      }
+    ]
+  },
+  "opportunities": {
+    "raw": 136,
+    "verificationAtObservation": {
+      "UNVERIFIED": 136
+    }
+  },
+  "freshnessCounters": {
+    "STRICT_EXECUTION_FRESH": 61659,
+    "EXCHANGE_TIMESTAMP_OLD": 2879,
+    "HEALTHY_RESTING_BOOK_RESEARCH": 42082,
+    "strictBookAgeOnlyRejectedEvaluations": 8090,
+    "CONNECTION_UNHEALTHY": 5520
+  },
+  "interpretation": "Bounded authenticated PAPER_RESEARCH. No orders or approvals. Connected fractions use ten-second samples, not exact uptime. Latency percentiles use bounded recent samples. Storage uses logical SQLite allocation; 3.18 GB/hour is approximate prior user baseline. A short run cannot establish multi-day reliability; zero verified opportunities is not evidence of profitable equivalence."
+}

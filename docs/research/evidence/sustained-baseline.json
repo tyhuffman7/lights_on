@@ -1,0 +1,126 @@
+{
+  "session": {
+    "id": "c1ce4d7a-0d33-413d-92ef-6126abb33e0a",
+    "started_at": 1789125896107,
+    "ended_at": null
+  },
+  "observedEndAt": 1789132585002,
+  "observedHours": 1.8580263888888888,
+  "diagnosticCounts": {
+    "CONNECTED": 1278,
+    "DISCONNECTED": 1314,
+    "DISCOVERY": 15,
+    "EVENT_LOOP_DELAY": 810,
+    "PAUSED": 4,
+    "RECONCILIATION_MISMATCH": 921,
+    "RECONNECT": 1314,
+    "REST_RECONCILIATION": 9529,
+    "STREAM_ERROR": 55,
+    "SUBSCRIPTION_CHANGED": 12,
+    "TELEMETRY": 667
+  },
+  "perObservedHour": {
+    "DISCONNECTED": 707.2020116925142,
+    "RECONNECT": 707.2020116925142,
+    "RECONCILIATION_MISMATCH": 495.68725477078056,
+    "REST_RECONCILIATION": 5128.560098491605,
+    "STREAM_ERROR": 29.60130185927571
+  },
+  "telemetry": {
+    "counters": {
+      "kalshiDeferredMarkets": 413,
+      "polyDeferredMarkets": 284,
+      "CONNECTED": 1273,
+      "messages": 416567,
+      "bookUpdates": 542400,
+      "evaluations": 1356034,
+      "EVENT_LOOP_DELAY": 810,
+      "DISCONNECTED": 1310,
+      "RECONNECT": 1310,
+      "RECONCILIATION_MISMATCH": 917,
+      "SUBSCRIPTION_CHANGED": 12,
+      "STREAM_ERROR": 55
+    },
+    "latencyMs": {
+      "kalshiRestRoundTrip": {
+        "count": 10000,
+        "p50": 162.83708299975842,
+        "p95": 230.53912500012666,
+        "p99": 342.99300000071526
+      },
+      "polyRestRoundTrip": {
+        "count": 10000,
+        "p50": 184.43733299989253,
+        "p95": 290.57795799989253,
+        "p99": 448.18445899989456
+      },
+      "persistenceAck": {
+        "count": 10000,
+        "p50": 2.266375000588596,
+        "p95": 39.47920800000429,
+        "p99": 89.12600000016391
+      },
+      "persistenceWrite": {
+        "count": 10000,
+        "p50": 0.33141699992120266,
+        "p95": 2.066999999806285,
+        "p99": 5.807541999965906
+      },
+      "polyExchangeToReceive": {
+        "count": 10000,
+        "p50": 612,
+        "p95": 500834,
+        "p99": 9417932
+      },
+      "processingLag": {
+        "count": 10000,
+        "p50": 0.08399999979883432,
+        "p95": 34.22729100007564,
+        "p99": 54.76241699978709
+      },
+      "evaluation": {
+        "count": 10000,
+        "p50": 0.8394170003011823,
+        "p95": 2.2938339998945594,
+        "p99": 3.8258750000968575
+      },
+      "processing": {
+        "count": 10000,
+        "p50": 1.0747079998254776,
+        "p95": 34.65112499985844,
+        "p99": 55.283332999795675
+      },
+      "validBookProcessing": {
+        "count": 10000,
+        "p50": 0.9495419999584556,
+        "p95": 2.5856659999117255,
+        "p99": 4.385665999725461
+      },
+      "receiveToPersistenceAck": {
+        "count": 10000,
+        "p50": 3.809000000357628,
+        "p95": 61.871291999705136,
+        "p99": 71.4217910002917
+      },
+      "kalshiExchangeToReceive": {
+        "count": 10000,
+        "p50": -4,
+        "p95": 76,
+        "p99": 120
+      },
+      "invalidBookProcessing": {
+        "count": 10000,
+        "p50": 24.319041999988258,
+        "p95": 60.53195900004357,
+        "p99": 88.33074999973178
+      }
+    },
+    "eventLoopMs": {
+      "p50": 11.362303,
+      "p95": 13.811711,
+      "p99": 19.070975,
+      "max": 4672.454655
+    }
+  },
+  "caveats": "Last preserved a058f1d session has no clean end time and includes pauses. Denominator is start through last diagnostic, not exact active stream time. Original total REST request attempts were not instrumented. Old DISCONNECTED semantics differ from new detailed close events."
+}

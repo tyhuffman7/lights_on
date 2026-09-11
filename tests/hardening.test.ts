@@ -341,3 +341,47 @@ test("Recovery followed by disconnect persists a single invalidation and overflo
     s.close();
   }
 });
+
+test("Recovery quarantines immediately and offloads closing calculations without losing evidence", async () => {
+  const s = db(),
+    r = new MappingRegistry(s),
+    p = pair(),
+    t = new Telemetry();
+  r.add(p);
+  const rec = new LiveRecorder(s.path, r, config, t, () => {});
+  try {
+    await rec.ready;
+    rec.reindex();
+    rec.update(book("kalshi", p.a.id));
+    rec.update(book("poly", p.b.id));
+    await rec.report();
+    const evaluated = t.counters.evaluations;
+    rec.update({
+      ...book("kalshi", p.a.id),
+      valid: false,
+      connection: "DISCONNECTED",
+    });
+    assert.equal(rec.books.get(`kalshi:${p.a.id}`).valid, false);
+    assert.equal(t.counters.evaluations, evaluated);
+    assert.equal(t.counters.deferredInvalidBookEvaluations, 1);
+    await rec.report();
+    const op = s.db.prepare("SELECT * FROM opportunities LIMIT 1").get();
+    assert.equal(op.status, "CENSORED");
+    const state = s.db
+      .prepare(
+        "SELECT * FROM opportunity_states WHERE opportunity_id=? ORDER BY id DESC LIMIT 1",
+      )
+      .get(op.id);
+    const evidence = JSON.parse(
+      s.db
+        .prepare("SELECT body FROM book_updates WHERE id=?")
+        .get(state.a_book_id).body,
+    );
+    assert.equal(evidence.valid, false);
+    assert.ok(JSON.parse(state.body).reasons.includes("BOOK_STALE"));
+  } finally {
+    await rec.stop(Date.now(), performance.now());
+    t.close();
+    s.close();
+  }
+});

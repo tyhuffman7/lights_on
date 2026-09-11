@@ -1,0 +1,154 @@
+{
+  "tests": 115,
+  "typecheck": "passed",
+  "build": "passed; existing route-classification notice",
+  "detector": "passed",
+  "load": [
+    {
+      "mappings": 30,
+      "rate": 199.3495782838362,
+      "processing": {
+        "count": 1197,
+        "p50": 0.411750000000211,
+        "p95": 1.9033750000000964,
+        "p99": 3.8460419999998976
+      },
+      "persistence": {
+        "count": 1255,
+        "p50": 1.3318749999998545,
+        "p95": 3.974666999999954,
+        "p99": 7.568500000000313
+      },
+      "stopReason": null
+    },
+    {
+      "mappings": 100,
+      "rate": 398.9427628820938,
+      "processing": {
+        "count": 2398,
+        "p50": 0.2899589999997261,
+        "p95": 0.4827500000001237,
+        "p99": 0.6351660000000265
+      },
+      "persistence": {
+        "count": 2457,
+        "p50": 2.5325840000004973,
+        "p95": 4.681624999999258,
+        "p99": 8.638082999999824
+      },
+      "stopReason": null
+    },
+    {
+      "mappings": 250,
+      "rate": 797.0250495044329,
+      "processing": {
+        "count": 4794,
+        "p50": 0.251749999999447,
+        "p95": 0.41287500000180444,
+        "p99": 0.4998749999995198
+      },
+      "persistence": {
+        "count": 4852,
+        "p50": 5.125374999999622,
+        "p95": 9.341749999999593,
+        "p99": 26.10699999999997
+      },
+      "stopReason": null
+    },
+    {
+      "mappings": 500,
+      "rate": 995.707874141192,
+      "processing": {
+        "count": 5975,
+        "p50": 0.2474999999976717,
+        "p95": 0.41587499999877764,
+        "p99": 0.5209159999976691
+      },
+      "persistence": {
+        "count": 6032,
+        "p50": 6.879209000002447,
+        "p95": 17.051250000000437,
+        "p99": 41.18079200000284
+      },
+      "stopReason": null
+    }
+  ],
+  "discoveryLoad": [
+    {
+      "passed": true,
+      "cycles": 9,
+      "throughput": 997.2835921982199,
+      "latency": {
+        "processingLag": {
+          "count": 10000,
+          "p50": 0.014833000000180618,
+          "p95": 0.04241600000023027,
+          "p99": 0.07070799999928568
+        },
+        "evaluation": {
+          "count": 10000,
+          "p50": 0.230167000000165,
+          "p95": 0.3429999999998472,
+          "p99": 0.542833999999857
+        },
+        "processing": {
+          "count": 10000,
+          "p50": 0.245082999999795,
+          "p95": 0.38850000000002183,
+          "p99": 0.5939170000001468
+        },
+        "validBookProcessing": {
+          "count": 10000,
+          "p50": 0.245082999999795,
+          "p95": 0.38850000000002183,
+          "p99": 0.5939170000001468
+        },
+        "persistenceAck": {
+          "count": 10000,
+          "p50": 14.283040999998775,
+          "p95": 46.9994999999999,
+          "p99": 114.8060000000005
+        },
+        "persistenceWrite": {
+          "count": 10000,
+          "p50": 0.27312499999970896,
+          "p95": 0.6671249999999418,
+          "p99": 1.8025829999996859
+        },
+        "receiveToPersistenceAck": {
+          "count": 10000,
+          "p50": 14.563250000001062,
+          "p95": 46.83770799999911,
+          "p99": 114.80454100000043
+        }
+      },
+      "eventLoop": {
+        "p50": 23.412735,
+        "p95": 33.177599,
+        "p99": 35.094527,
+        "max": 74.907647
+      }
+    }
+  ],
+  "dashboardSmoke": {
+    "at": "2026-09-11T19:50:21.087Z",
+    "pageStatus": 200,
+    "scriptSyntax": "passed",
+    "unauthenticatedReview": 403,
+    "authenticatedReview": 200,
+    "reviewKeys": [
+      "counts",
+      "total",
+      "rows"
+    ],
+    "queueCount": null
+  },
+  "limitations": "Dashboard endpoints and script syntax checked; visual browser interaction not rerun.",
+  "concurrentLiveLoadAttempt": {
+    "passed": false,
+    "stage": 250,
+    "persistenceP99Ms": 286.78008299999783,
+    "reason": "PERSISTENCE_P99_OVER_250MS",
+    "interpretation": "Concurrent real observer and synthetic stress exceeded the guard; isolated rerun passed all stages."
+  }
+}

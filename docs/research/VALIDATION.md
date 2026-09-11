@@ -1,4 +1,12 @@
-# Validation — September 10, 2026
+# Validation
+
+## Sustained-research implementation — September 11, 2026
+
+115 regression tests, TypeScript without incremental cache, randomized detector equivalence, 30/100/250/500 mapping load, concurrent discovery load and production build passed. The build retains its existing route-classification notice. New evidence tests reconstruct all eight latency buckets for both first-leg scenarios and preserve unknown coverage after a crash. Strict freshness, frozen historical verification and human rule-hash approval remain unchanged.
+
+The authenticated dashboard and review endpoints passed script-syntax/access checks; a new visual browser pass was not performed. [SUSTAINED-VALIDATION.md](SUSTAINED-VALIDATION.md) contains the actual bounded live comparison, including storage, throughput, recovery, REST load and coverage. [REVIEW-PRIORITIES.md](REVIEW-PRIORITIES.md) and its JSON contain the historical review deliverables. Synthetic success alone does not establish sustained reliability.
+
+## Earlier validation — September 10, 2026
 
 ## Architecture and completion status
 
