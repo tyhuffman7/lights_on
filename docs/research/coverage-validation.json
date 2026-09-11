@@ -1,0 +1,1086 @@
+{
+  "at": "2026-09-11T11:27:48.499Z",
+  "sessionId": "c1ce4d7a-0d33-413d-92ef-6126abb33e0a",
+  "discovery": {
+    "candidates": 1010,
+    "sportsCandidates": 660,
+    "nonSportsCandidates": 350,
+    "kalshi": 124238,
+    "poly": 105873,
+    "complete": true,
+    "errors": [],
+    "added": 0,
+    "refreshed": 1342,
+    "comparisons": 19594259,
+    "blockedByIndex": 13106035663,
+    "comparisonLimitDeferred": 822711289,
+    "rejected": {
+      "structuralConflict": 10083721,
+      "insufficientSimilarity": 1843290,
+      "dateMismatch": 401689,
+      "thresholdMismatch": 5964448,
+      "outcomeMismatch": 1300101,
+      "other": 0
+    },
+    "categories": {
+      "kalshi": {
+        "sports": 78873,
+        "commodities": 1354,
+        "climate and weather": 978,
+        "economics": 14009,
+        "politics": 14382,
+        "mentions": 972,
+        "culture": 8853,
+        "science and technology": 980,
+        "crypto": 3344,
+        "ai": 4,
+        "business": 1,
+        "companies": 395,
+        "unknown": 88,
+        "social": 2,
+        "world": 3
+      },
+      "poly": {
+        "sports": 98496,
+        "politics": 6288,
+        "culture": 735,
+        "finance": 77,
+        "technology": 62,
+        "macro": 85,
+        "geopolitics": 9,
+        "crypto": 54,
+        "science": 7,
+        "climate": 60
+      }
+    },
+    "matchingMs": 29579.129125000007,
+    "status": "SUCCESS",
+    "finishedAt": 1789126060207,
+    "lastDiscoveryAt": 1789126060386,
+    "nextDiscoveryAt": 1789126360386,
+    "enabled": true,
+    "running": false
+  },
+  "subscribed": {
+    "kalshi": 500,
+    "poly": 500
+  },
+  "mappingCounts": {
+    "UNVERIFIED": 1292,
+    "INVALIDATED": 50
+  },
+  "activeMappingCounts": {
+    "UNVERIFIED": 994
+  },
+  "activeSports": 691,
+  "activeNonSports": 303,
+  "streams": [
+    {
+      "venue": "kalshi",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 1175.197833000013,
+      "lastMessageAgeMs": 8705.056041000003,
+      "rttMs": 167.93554199999198
+    },
+    {
+      "venue": "poly",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 1126.0020000000077,
+      "lastMessageAgeMs": 745.3859170000069,
+      "rttMs": 233.08233399997698
+    },
+    {
+      "venue": "kalshi",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 2372.6297920000216,
+      "lastMessageAgeMs": 2695.6187910000153,
+      "rttMs": 165.82454099997994
+    },
+    {
+      "venue": "kalshi",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 2372.606749999977,
+      "lastMessageAgeMs": 7010.120083999995,
+      "rttMs": 165.83408300002338
+    },
+    {
+      "venue": "kalshi",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 2375.0997079999943,
+      "lastMessageAgeMs": 177.20612499999697,
+      "rttMs": 163.37570800000685
+    },
+    {
+      "venue": "kalshi",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 2375.5375829999975,
+      "lastMessageAgeMs": 41.58874999999534,
+      "rttMs": 163.05449999999837
+    },
+    {
+      "venue": "poly",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 2418.921708000009,
+      "lastMessageAgeMs": 176.65950000000885,
+      "rttMs": 162.64466699998593
+    },
+    {
+      "venue": "poly",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 2430.0150840000133,
+      "lastMessageAgeMs": 144.35337500000605,
+      "rttMs": 151.71100000001024
+    },
+    {
+      "venue": "poly",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 2410.8535000000265,
+      "lastMessageAgeMs": 237.05595900001936,
+      "rttMs": 150.9725829999952
+    },
+    {
+      "venue": "poly",
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 2430.0696670000034,
+      "lastMessageAgeMs": 1206.7211249999818,
+      "rttMs": 151.47870799998054
+    }
+  ],
+  "bookHealth": [
+    {
+      "venue": "kalshi",
+      "known": 673,
+      "valid": 500,
+      "freshWithin2s": 9
+    },
+    {
+      "venue": "poly",
+      "known": 625,
+      "valid": 500,
+      "freshWithin2s": 114
+    }
+  ],
+  "persistence": {
+    "queueDepth": 0,
+    "queueBytes": 0,
+    "lastAckAt": 1789126068392,
+    "failed": false
+  },
+  "telemetry": {
+    "at": 1789126068413,
+    "host": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M1 Pro",
+      "runtime": "v25.8.1"
+    },
+    "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+    "interval": {
+      "startMono": 164540.13,
+      "endMono": 172532.317625,
+      "durationMs": 7992.187624999991
+    },
+    "intervalRates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 1.1260996891323618,
+      "messages": 153.52492428504533,
+      "bookUpdates": 165.53665430245718,
+      "evaluations": 370.3616755368657,
+      "EVENT_LOOP_DELAY": 0,
+      "DISCONNECTED": 0.12512218768137354,
+      "RECONNECT": 0.12512218768137354,
+      "RECONCILIATION_MISMATCH": 0.12512218768137354,
+      "SUBSCRIPTION_CHANGED": 0
+    },
+    "uptimeMs": 172369.062875,
+    "counters": {
+      "kalshiDeferredMarkets": 420,
+      "polyDeferredMarkets": 290,
+      "CONNECTED": 64,
+      "messages": 11693,
+      "bookUpdates": 17064,
+      "evaluations": 40608,
+      "EVENT_LOOP_DELAY": 70,
+      "DISCONNECTED": 47,
+      "RECONNECT": 47,
+      "RECONCILIATION_MISMATCH": 7,
+      "SUBSCRIPTION_CHANGED": 8
+    },
+    "rates": {
+      "kalshiDeferredMarkets": 2.4366321484533393,
+      "polyDeferredMarkets": 1.6824364834558772,
+      "CONNECTED": 0.37129632738336604,
+      "messages": 67.83699931396404,
+      "bookUpdates": 98.99688328858997,
+      "evaluations": 235.58751972474573,
+      "EVENT_LOOP_DELAY": 0.4061053580755566,
+      "DISCONNECTED": 0.27267074042215944,
+      "RECONNECT": 0.27267074042215944,
+      "RECONCILIATION_MISMATCH": 0.04061053580755566,
+      "SUBSCRIPTION_CHANGED": 0.046412040922920755
+    },
+    "latencyMs": {
+      "kalshiRestRoundTrip": {
+        "count": 326,
+        "p50": 156.34520899999188,
+        "p95": 195.79416700001457,
+        "p99": 534.5997500000012
+      },
+      "polyRestRoundTrip": {
+        "count": 160,
+        "p50": 176.7182080000057,
+        "p95": 308.8101669999887,
+        "p99": 370.56258399999933
+      },
+      "persistenceAck": {
+        "count": 10000,
+        "p50": 6.783500000019558,
+        "p95": 187.54041700001108,
+        "p99": 246.06595799999195
+      },
+      "persistenceWrite": {
+        "count": 10000,
+        "p50": 0.1397080000024289,
+        "p95": 0.8826669999980368,
+        "p99": 3.087874999997439
+      },
+      "polyExchangeToReceive": {
+        "count": 7547,
+        "p50": 89,
+        "p95": 3405740,
+        "p99": 3801286
+      },
+      "processingLag": {
+        "count": 10000,
+        "p50": 0.0705420000012964,
+        "p95": 23.41079200000968,
+        "p99": 31.600917000003392
+      },
+      "evaluation": {
+        "count": 10000,
+        "p50": 0.19987500002025627,
+        "p95": 0.8063750000001164,
+        "p99": 1.6113750000076834
+      },
+      "processing": {
+        "count": 10000,
+        "p50": 0.5287919999973383,
+        "p95": 23.574167000013404,
+        "p99": 31.921415999997407
+      },
+      "validBookProcessing": {
+        "count": 10000,
+        "p50": 0.3187079999988782,
+        "p95": 1.2894999999989523,
+        "p99": 3.4984160000021802
+      },
+      "receiveToPersistenceAck": {
+        "count": 10000,
+        "p50": 17.11854100000346,
+        "p95": 208.46745799999917,
+        "p99": 257.5352500000008
+      },
+      "kalshiExchangeToReceive": {
+        "count": 1217,
+        "p50": -83,
+        "p95": -12,
+        "p99": 152
+      },
+      "invalidBookProcessing": {
+        "count": 5400,
+        "p50": 12.155416000001424,
+        "p95": 30.234708000003593,
+        "p99": 35.64870900000096
+      }
+    },
+    "eventLoopMs": {
+      "p50": 11.796479,
+      "p95": 13.688831,
+      "p99": 16.826367,
+      "max": 4672.454655
+    },
+    "cpuPercent": 41.24837532565834,
+    "memory": {
+      "rss": 450576384,
+      "heapTotal": 185581568,
+      "heapUsed": 109055816,
+      "external": 11447674,
+      "arrayBuffers": 1826885
+    },
+    "sampleLimit": 10000
+  },
+  "diagnostics": [
+    {
+      "kind": "CONNECTED",
+      "count": 64
+    },
+    {
+      "kind": "DISCONNECTED",
+      "count": 47
+    },
+    {
+      "kind": "DISCOVERY",
+      "count": 1
+    },
+    {
+      "kind": "EVENT_LOOP_DELAY",
+      "count": 70
+    },
+    {
+      "kind": "RECONCILIATION_MISMATCH",
+      "count": 7
+    },
+    {
+      "kind": "RECONNECT",
+      "count": 47
+    },
+    {
+      "kind": "REST_RECONCILIATION",
+      "count": 83
+    },
+    {
+      "kind": "SUBSCRIPTION_CHANGED",
+      "count": 8
+    },
+    {
+      "kind": "TELEMETRY",
+      "count": 16
+    }
+  ],
+  "bookRecords": [
+    {
+      "venue": "kalshi",
+      "count": 6556
+    },
+    {
+      "venue": "poly",
+      "count": 10571
+    }
+  ],
+  "scope": "Complete pagination of active-filtered Polymarket US markets and open non-MVE Kalshi markets. Moving catalogs, not an atomic all-market census. Fetched counts include markets later rejected by tradability and identity guards.",
+  "autoVerifiedMappings": 0,
+  "examples": [
+    {
+      "id": "KXNFLGAME-26SEP13NYJTEN-NYJ::aec-nfl-nyj-ten-2026-09-13",
+      "kalshiTitle": "New York J vs Tennessee Pro Football game: New York J wins?",
+      "polymarketUsTitle": "Who will win in the upcoming football event New York Jets vs Tennessee Titans scheduled for September 13, 2026 at 5:00 PM UTC?",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same competition/event participants, date and market type; settlement equivalence still unproven",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 6; Jaccard 0.261"
+      ],
+      "inspection": "NFL, Jets/Titans, September 13, full-game winner; Jets outcome aligned.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXNFLGAME-26SEP13NYJTEN-TEN::aec-nfl-nyj-ten-2026-09-13",
+      "kalshiTitle": "New York J vs Tennessee Pro Football game: Tennessee wins?",
+      "polymarketUsTitle": "Who will win in the upcoming football event New York Jets vs Tennessee Titans scheduled for September 13, 2026 at 5:00 PM UTC?",
+      "inverted": true,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same competition/event participants, date and market type; settlement equivalence still unproven",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 6; Jaccard 0.261"
+      ],
+      "inspection": "Same NFL event; Tennessee versus Jets long side explicitly marked inverted.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXNCAAFGAME-26SEP19LSUMISS-LSU::aec-cfb-lsu-miss-2026-09-19",
+      "kalshiTitle": "Will LSU win the LSU vs Ole Miss college football game?",
+      "polymarketUsTitle": "Who will win in the upcoming football event LSU vs Ole Miss scheduled for September 19, 2026 at 11:30 PM UTC?",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same competition/event participants, date and market type; settlement equivalence still unproven",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 5; Jaccard 0.250"
+      ],
+      "inspection": "College football, LSU/Ole Miss, September 19, LSU winner.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXNFLGAME-26SEP13MIALV-LV::aec-nfl-mia-lv-2026-09-13",
+      "kalshiTitle": "Miami vs Las Vegas Pro Football game: Las Vegas wins?",
+      "polymarketUsTitle": "Who will win in the upcoming football event Miami Dolphins vs Las Vegas Raiders scheduled for September 13, 2026 at 8:25 PM UTC?",
+      "inverted": true,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same competition/event participants, date and market type; settlement equivalence still unproven",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 5; Jaccard 0.227"
+      ],
+      "inspection": "NFL, Miami/Las Vegas, September 13, Las Vegas winner; inspect orientation.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXNCAAFAAC-26-ECU::tec-cfb-aacchamp-2026-12-05-w-ecar",
+      "kalshiTitle": "Will East Carolina win the College Football American Athletic Conference Championship?",
+      "polymarketUsTitle": "East Carolina · American Athletic Conference Football Championship Winner",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same participant and named futures event; exceptional settlement still requires review",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 6; Jaccard 0.750"
+      ],
+      "inspection": "East Carolina, American Athletic Conference championship winner; qualification is a different outcome. Season/void terms still need review.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXNBARECORD-27BEST-DET::aachc-nba-2027-04-11-bestrecord-det",
+      "kalshiTitle": "Will Detroit have the best regular season record in the 2026-27 season?",
+      "polymarketUsTitle": "Detroit · NBA Best Regular Season Record",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same participant and named futures event; exceptional settlement still requires review",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 5; Jaccard 0.500"
+      ],
+      "inspection": "Detroit, NBA best regular-season record; season and tie treatment remain unverified.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXAGTWINNER-26SEP24-MAR::rtc-agt-s21-win-2026-09-23-maria",
+      "kalshiTitle": "Will Maria win America's Got Talent Season 21?",
+      "polymarketUsTitle": "Maria · America's Got Talent Season 21: Winner",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same named outcome/entity in compatible event context; review settlement terms",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 7; Jaccard 0.875"
+      ],
+      "inspection": "Maria, America’s Got Talent season 21 winner; same named contest and outcome.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXBIGBROTHER-26DEC31-JAS::rtc-bbus-s28-winner-2026-10-01-jasde",
+      "kalshiTitle": "Will Jason De Puy win Big Brother Season 28?",
+      "polymarketUsTitle": "Jason De Puy · Big Brother Season 28 Winner",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same named outcome/entity in compatible event context; review settlement terms",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 7; Jaccard 0.875"
+      ],
+      "inspection": "Jason De Puy, Big Brother season 28 winner; same named contest and outcome.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXTIME-26-REI::tpoyc-2026-reiwis",
+      "kalshiTitle": "Will Reid Wiseman be Time Person of the Year in 2026?",
+      "polymarketUsTitle": "Reid Wiseman · TIME Person of the Year 2026",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same named outcome/entity in compatible event context; review settlement terms",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 6; Jaccard 0.857"
+      ],
+      "inspection": "Reid Wiseman, TIME Person of the Year 2026; same named award/year/outcome.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "HOUSEAKAL-26-D::ushrewc-ushr-ak-al-2026-11-03-dem",
+      "kalshiTitle": "Will Democratic win the House race for AK-AL?",
+      "polymarketUsTitle": "Democratic Party · AK-AL House Election Winner",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same named outcome/entity in compatible event context; review settlement terms",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 5; Jaccard 0.625"
+      ],
+      "inspection": "Democratic Party, Alaska at-large House election winner; district and party aligned.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXPRESNOMD-28-AOC::enwc-uspres-nom-dem-2028-aleocc",
+      "kalshiTitle": "Will Alexandria Ocasio-Cortez be the Democratic Presidential nominee in 2028?",
+      "polymarketUsTitle": "Alexandria Ocasio-Cortez · 2028 Democratic Presidential Nominee",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same named outcome/entity in compatible event context; review settlement terms",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 7; Jaccard 0.875"
+      ],
+      "inspection": "Alexandria Ocasio-Cortez, 2028 Democratic presidential nomination; distinct from election victory.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    },
+    {
+      "id": "KXFRENCHPRES-27-DVIL::ewc-pres-fra-2027-04-11-domvil",
+      "kalshiTitle": "Will Dominique de Villepin win the 2027 French presidential election?",
+      "polymarketUsTitle": "Dominique de Villepin · 2027 French Presidential Election Winner",
+      "inverted": false,
+      "status": "UNVERIFIED",
+      "matchReasons": [
+        "Same named outcome/entity in compatible event context; review settlement terms",
+        "Full structured settlement equivalence not proven; manual review required",
+        "Indexed text overlap 7; Jaccard 0.875"
+      ],
+      "inspection": "Dominique de Villepin, 2027 French presidential election winner; candidacy is a different outcome.",
+      "verdict": "No obvious event/outcome identity conflict in this manual sample; settlement equivalence NOT verified."
+    }
+  ],
+  "reportSummary": {
+    "sessionId": "c1ce4d7a-0d33-413d-92ef-6126abb33e0a",
+    "bookUpdates": 17129,
+    "opportunitiesDetected": 43,
+    "rawDiscrepancyCount": 43,
+    "ruleVerifiedOpportunities": 0,
+    "grossArbCount": 0,
+    "feePositiveArbCount": 0,
+    "theoreticalProfit": 0,
+    "database": {
+      "bytes": 2419843072,
+      "walBytes": 4152992,
+      "growthBytesPerSecond": null
+    }
+  },
+  "earlierFailedStage": {
+    "sessionId": "7f1deec6-b533-449c-a3d1-ae2865e7f404",
+    "outcome": "Persistence fail-closed triggered during repeated event-loop recovery; unhandled invalidation throw terminated observer. Retained failed stage before duplicate-invalidation and incremental-index fix.",
+    "lastTelemetry": {
+      "at": 1789106465170,
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "runtime": "v25.8.1"
+      },
+      "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+      "interval": {
+        "startMono": 190258.677208,
+        "endMono": 200262.798041,
+        "durationMs": 10004.120832999994
+      },
+      "intervalRates": {
+        "kalshiDeferredMarkets": 0,
+        "polyDeferredMarkets": 0,
+        "CONNECTED": 0.09995880864426987,
+        "messages": 33.1863244698976,
+        "bookUpdates": 73.16984792760555,
+        "evaluations": 180.92544364612846,
+        "EVENT_LOOP_DELAY": 0,
+        "DISCONNECTED": 0.19991761728853974,
+        "RECONNECT": 0.19991761728853974,
+        "RECONCILIATION_MISMATCH": 0.19991761728853974
+      },
+      "uptimeMs": 200090.60654100002,
+      "counters": {
+        "kalshiDeferredMarkets": 798,
+        "polyDeferredMarkets": 641,
+        "CONNECTED": 24,
+        "messages": 3488,
+        "bookUpdates": 5400,
+        "evaluations": 10570,
+        "EVENT_LOOP_DELAY": 10,
+        "DISCONNECTED": 15,
+        "RECONNECT": 15,
+        "RECONCILIATION_MISMATCH": 5
+      },
+      "rates": {
+        "kalshiDeferredMarkets": 3.988193218038369,
+        "polyDeferredMarkets": 3.203548687672424,
+        "CONNECTED": 0.11994566069288327,
+        "messages": 17.432102687365703,
+        "bookUpdates": 26.987773655898735,
+        "evaluations": 52.82606806349067,
+        "EVENT_LOOP_DELAY": 0.049977358622034694,
+        "DISCONNECTED": 0.07496603793305205,
+        "RECONNECT": 0.07496603793305205,
+        "RECONCILIATION_MISMATCH": 0.024988679311017347
+      },
+      "latencyMs": {
+        "persistenceAck": {
+          "count": 9230,
+          "p50": 2.763208999997005,
+          "p95": 55.47808299999451,
+          "p99": 91.27066700000432
+        },
+        "persistenceWrite": {
+          "count": 9230,
+          "p50": 0.14537500002188608,
+          "p95": 0.9992500000225846,
+          "p99": 3.5965000000142027
+        },
+        "processingLag": {
+          "count": 5400,
+          "p50": 0.09924999999930151,
+          "p95": 33.733749999984866,
+          "p99": 55.1148749999993
+        },
+        "evaluation": {
+          "count": 5400,
+          "p50": 0.2778330000001006,
+          "p95": 1.5576249999867287,
+          "p99": 3.518292000022484
+        },
+        "processing": {
+          "count": 5400,
+          "p50": 0.676500000001397,
+          "p95": 33.90754200000083,
+          "p99": 57.058041000011144
+        },
+        "receiveToPersistenceAck": {
+          "count": 5400,
+          "p50": 7.0537919999915175,
+          "p95": 78.2275410000002,
+          "p99": 109.14279199999874
+        },
+        "polyExchangeToReceive": {
+          "count": 2347,
+          "p50": 262,
+          "p95": 326378,
+          "p99": 32370918
+        },
+        "kalshiExchangeToReceive": {
+          "count": 415,
+          "p50": 73,
+          "p95": 144,
+          "p99": 163
+        },
+        "kalshiRestRoundTrip": {
+          "count": 66,
+          "p50": 166.39208299998427,
+          "p95": 245.53491700001177,
+          "p99": 487.01249999998254
+        },
+        "polyRestRoundTrip": {
+          "count": 32,
+          "p50": 183.41520799999125,
+          "p95": 328.58608299997286,
+          "p99": 386.42170900001656
+        }
+      },
+      "eventLoopMs": {
+        "p50": 11.042815,
+        "p95": 12.173311,
+        "p99": 14.049279,
+        "max": 504.102911
+      },
+      "cpuPercent": 30.123618515619476,
+      "memory": {
+        "rss": 412745728,
+        "heapTotal": 196853760,
+        "heapUsed": 89259760,
+        "external": 10967135,
+        "arrayBuffers": 1218124
+      },
+      "sampleLimit": 10000
+    }
+  },
+  "longerPreFinalGuardRun": {
+    "at": "2026-09-11T11:23:22.730Z",
+    "sessionId": "47784617-ecad-4609-ae16-2015913eef06",
+    "discovery": {
+      "candidates": 1290,
+      "sportsCandidates": 940,
+      "nonSportsCandidates": 350,
+      "kalshi": 124245,
+      "poly": 105884,
+      "complete": true,
+      "errors": [],
+      "added": 0,
+      "refreshed": 1342,
+      "comparisons": 19594554,
+      "blockedByIndex": 13108139457,
+      "comparisonLimitDeferred": 822863112,
+      "rejected": {
+        "structuralConflict": 9671395,
+        "insufficientSimilarity": 2235137,
+        "dateMismatch": 401695,
+        "thresholdMismatch": 5966402,
+        "outcomeMismatch": 1318635,
+        "other": 0
+      },
+      "categories": {
+        "kalshi": {
+          "sports": 78880,
+          "commodities": 1354,
+          "climate and weather": 978,
+          "economics": 14009,
+          "politics": 14382,
+          "mentions": 972,
+          "culture": 8853,
+          "science and technology": 980,
+          "crypto": 3344,
+          "ai": 4,
+          "business": 1,
+          "companies": 395,
+          "unknown": 88,
+          "social": 2,
+          "world": 3
+        },
+        "poly": {
+          "sports": 98507,
+          "politics": 6288,
+          "culture": 735,
+          "finance": 77,
+          "technology": 62,
+          "macro": 85,
+          "geopolitics": 9,
+          "crypto": 54,
+          "science": 7,
+          "climate": 60
+        }
+      },
+      "matchingMs": 27103.66116600111,
+      "status": "SUCCESS",
+      "finishedAt": 1789125713025,
+      "lastDiscoveryAt": 1789125713027,
+      "nextDiscoveryAt": 1789126013027,
+      "enabled": true,
+      "running": false
+    },
+    "subscribed": {
+      "kalshi": 500,
+      "poly": 500
+    },
+    "mappingCounts": {
+      "UNVERIFIED": 1292,
+      "INVALIDATED": 50
+    },
+    "activeMappingCounts": {
+      "UNVERIFIED": 1241
+    },
+    "activeSports": 938,
+    "activeNonSports": 303,
+    "streams": [
+      {
+        "venue": "kalshi",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 636.3322080001235,
+        "lastMessageAgeMs": 2092.064500000328,
+        "rttMs": 164.59583299979568
+      },
+      {
+        "venue": "kalshi",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 636.3114160001278,
+        "lastMessageAgeMs": 346.6865830011666,
+        "rttMs": 164.55579200014472
+      },
+      {
+        "venue": "kalshi",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 636.3537910021842,
+        "lastMessageAgeMs": 6680.171624999493,
+        "rttMs": 164.65154200047255
+      },
+      {
+        "venue": "kalshi",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 636.3804999999702,
+        "lastMessageAgeMs": 8673.69841599837,
+        "rttMs": 164.74762499704957
+      },
+      {
+        "venue": "kalshi",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 636.4122080020607,
+        "lastMessageAgeMs": 276.9195839986205,
+        "rttMs": 165.3654169999063
+      },
+      {
+        "venue": "poly",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 5522.236917000264,
+        "lastMessageAgeMs": 5293.839207999408,
+        "rttMs": 212.44970799982548
+      },
+      {
+        "venue": "poly",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 1226.3094579987228,
+        "lastMessageAgeMs": 817.8196659982204,
+        "rttMs": 250.179500002414
+      },
+      {
+        "venue": "poly",
+        "markets": 100,
+        "connected": false,
+        "heartbeatAgeMs": 7987.557082999498,
+        "lastMessageAgeMs": 6761.617417000234,
+        "rttMs": 149.22504200041294
+      },
+      {
+        "venue": "poly",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 4791.497333001345,
+        "lastMessageAgeMs": 75.01908300071955,
+        "rttMs": 141.8495839983225
+      },
+      {
+        "venue": "poly",
+        "markets": 100,
+        "connected": true,
+        "heartbeatAgeMs": 1117.3842500001192,
+        "lastMessageAgeMs": 255.085791002959,
+        "rttMs": 145.24137499928474
+      }
+    ],
+    "bookHealth": [
+      {
+        "venue": "kalshi",
+        "known": 1060,
+        "valid": 500,
+        "freshWithin2s": 3
+      },
+      {
+        "venue": "poly",
+        "known": 942,
+        "valid": 400,
+        "freshWithin2s": 18
+      }
+    ],
+    "persistence": {
+      "queueDepth": 0,
+      "queueBytes": 0,
+      "lastAckAt": 1789125802613,
+      "failed": false
+    },
+    "telemetry": {
+      "at": 1789125802631,
+      "host": {
+        "platform": "darwin",
+        "arch": "arm64",
+        "cpu": "Apple M1 Pro",
+        "runtime": "v25.8.1"
+      },
+      "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+      "interval": {
+        "startMono": 18465768.061416,
+        "endMono": 18473516.633625,
+        "durationMs": 7748.5722090005875
+      },
+      "intervalRates": {
+        "kalshiDeferredMarkets": 0,
+        "polyDeferredMarkets": 0,
+        "CONNECTED": 0,
+        "messages": 41.94321111475046,
+        "bookUpdates": 54.848814534673686,
+        "evaluations": 144.2846462347416,
+        "RECONCILIATION_MISMATCH": 0.1290560341992322,
+        "DISCONNECTED": 0.1290560341992322,
+        "RECONNECT": 0.1290560341992322,
+        "EVENT_LOOP_DELAY": 0,
+        "STREAM_ERROR": 0,
+        "METADATA_UNAVAILABLE": 0,
+        "SUBSCRIPTION_CHANGED": 0
+      },
+      "uptimeMs": 18473356.299292002,
+      "counters": {
+        "kalshiDeferredMarkets": 593,
+        "polyDeferredMarkets": 415,
+        "CONNECTED": 2815,
+        "messages": 550002,
+        "bookUpdates": 801053,
+        "evaluations": 1948514,
+        "RECONCILIATION_MISMATCH": 2247,
+        "DISCONNECTED": 2758,
+        "RECONNECT": 2758,
+        "EVENT_LOOP_DELAY": 839,
+        "STREAM_ERROR": 75,
+        "METADATA_UNAVAILABLE": 11690,
+        "SUBSCRIPTION_CHANGED": 132
+      },
+      "rates": {
+        "kalshiDeferredMarkets": 0.032100284885574745,
+        "polyDeferredMarkets": 0.02246478621840391,
+        "CONNECTED": 0.15238162218025783,
+        "messages": 29.772716505288162,
+        "bookUpdates": 43.36261299906291,
+        "evaluations": 105.47698904473994,
+        "RECONCILIATION_MISMATCH": 0.12163463766928574,
+        "DISCONNECTED": 0.1492960973261638,
+        "RECONNECT": 0.1492960973261638,
+        "EVENT_LOOP_DELAY": 0.04541676057166477,
+        "STREAM_ERROR": 0.0040599011238079356,
+        "METADATA_UNAVAILABLE": 0.6328032551641969,
+        "SUBSCRIPTION_CHANGED": 0.007145425977901966
+      },
+      "latencyMs": {
+        "kalshiRestRoundTrip": {
+          "count": 10000,
+          "p50": 155.91216700151563,
+          "p95": 189.9657079987228,
+          "p99": 271.71866700053215
+        },
+        "polyRestRoundTrip": {
+          "count": 10000,
+          "p50": 176.8041669987142,
+          "p95": 233.365582998842,
+          "p99": 363.4407080002129
+        },
+        "persistenceAck": {
+          "count": 10000,
+          "p50": 2.1898749992251396,
+          "p95": 31.766499999910593,
+          "p99": 65.73833300173283
+        },
+        "persistenceWrite": {
+          "count": 10000,
+          "p50": 0.3832090012729168,
+          "p95": 2.9026250019669533,
+          "p99": 6.7537919990718365
+        },
+        "polyExchangeToReceive": {
+          "count": 10000,
+          "p50": 13561,
+          "p95": 1515243,
+          "p99": 3346658
+        },
+        "processingLag": {
+          "count": 10000,
+          "p50": 0.11354099959135056,
+          "p95": 30.694416999816895,
+          "p99": 41.904500000178814
+        },
+        "evaluation": {
+          "count": 10000,
+          "p50": 0.36024999991059303,
+          "p95": 1.8211669996380806,
+          "p99": 3.6195000000298023
+        },
+        "processing": {
+          "count": 10000,
+          "p50": 0.8756249994039536,
+          "p95": 31.009041998535395,
+          "p99": 42.30595800280571
+        },
+        "validBookProcessing": {
+          "count": 10000,
+          "p50": 0.5439999997615814,
+          "p95": 2.554457999765873,
+          "p99": 4.672000002115965
+        },
+        "receiveToPersistenceAck": {
+          "count": 10000,
+          "p50": 3.3457500003278255,
+          "p95": 49.78287499770522,
+          "p99": 67.13899999856949
+        },
+        "kalshiExchangeToReceive": {
+          "count": 10000,
+          "p50": -57,
+          "p95": -34,
+          "p99": 21
+        },
+        "invalidBookProcessing": {
+          "count": 10000,
+          "p50": 16.676084000617266,
+          "p95": 40.296416997909546,
+          "p99": 51.39795799925923
+        }
+      },
+      "eventLoopMs": {
+        "p50": 11.640831,
+        "p95": 13.230079,
+        "p99": 17.154047,
+        "max": 1673.527295
+      },
+      "cpuPercent": 23.724758186837825,
+      "memory": {
+        "rss": 413810688,
+        "heapTotal": 185581568,
+        "heapUsed": 48924760,
+        "external": 11195686,
+        "arrayBuffers": 657303
+      },
+      "sampleLimit": 10000
+    },
+    "diagnostics": [
+      {
+        "kind": "CONNECTED",
+        "count": 2815
+      },
+      {
+        "kind": "DISCONNECTED",
+        "count": 2758
+      },
+      {
+        "kind": "DISCOVERY",
+        "count": 44
+      },
+      {
+        "kind": "EVENT_LOOP_DELAY",
+        "count": 839
+      },
+      {
+        "kind": "METADATA_UNAVAILABLE",
+        "count": 11690
+      },
+      {
+        "kind": "RECONCILIATION_MISMATCH",
+        "count": 2247
+      },
+      {
+        "kind": "RECONNECT",
+        "count": 2758
+      },
+      {
+        "kind": "REST_RECONCILIATION",
+        "count": 25147
+      },
+      {
+        "kind": "STREAM_ERROR",
+        "count": 75
+      },
+      {
+        "kind": "SUBSCRIPTION_CHANGED",
+        "count": 132
+      },
+      {
+        "kind": "TELEMETRY",
+        "count": 1846
+      }
+    ],
+    "bookRecords": [
+      {
+        "venue": "kalshi",
+        "count": 208887
+      },
+      {
+        "venue": "poly",
+        "count": 592211
+      }
+    ]
+  },
+  "limitations": [
+    "Candidates are not settlement-equivalent hedges. Manual sampling is not a measured whole-universe precision/recall audit.",
+    "Most subscribed books were not changed within the conservative two-second freshness window. Connected and valid do not mean fresh.",
+    "REST/stream snapshots are non-atomic. Frequent reconciliation recoveries restrict useful observation.",
+    "The longer run recorded event-loop recoveries and stream/metadata failures. No sustained verified-arbitrage or profitability claim.",
+    "The default per-venue cap is 500 unique subscriptions; catalog coverage is much broader.",
+    "Historical rejected/invalidated candidates remain in the registry for audit; latest cycle candidate count differs from cumulative registry and active counts.",
+    "Exchange-to-receive differences can be negative; clocks are not synchronized measurements of one-way latency.",
+    "Live trading remains completely disabled."
+  ]
+}

@@ -1,6 +1,6 @@
 # Pre-observation hardening
 
-Status: hardening code implemented and locally validated September 10, 2026. This remains the controlling specification. Evidence is in SCALE-VALIDATION.md, scale-validation.json, scale-soak.json and hardening-live-validation.json. The full research phase remains open: sustained verified-market observation and actual Linux reboot validation have not been completed.
+Status: hardening code implemented September 10; broad-discovery implementation and live validation added September 11, 2026. This remains the controlling specification. Evidence is in SCALE-VALIDATION.md, scale-validation.json, scale-soak.json and hardening-live-validation.json. The full research phase remains open: sustained verified-market observation and actual Linux reboot validation have not been completed.
 
 Use built-in capabilities and native skills only; do not use user-installed skills, including Superpowers. Never use brainstorming. Work inline in tested sections and push completed checkpoints to GitHub. No live trading, account mutations, paid infrastructure provisioning, or full-universe subscription is required by this plan.
 
@@ -10,7 +10,7 @@ Continuously discover and observe as much of the safely matchable Kalshi × Poly
 
 Keep one persistent Node service with durable SQLite on macOS or inexpensive Linux. SQLite remains the canonical research record unless measurements demonstrate a reason to change it. Do not introduce Supabase, PostgreSQL, Redis, Kafka, Kubernetes, or comparable infrastructure without that evidence.
 
-The current baseline is authenticated stream acceptance, 56 passing tests, short live samples, two UNVERIFIED configured pairs, and a stopped observer. No safe scale envelope or verified-market profitability finding exists yet. Existing reports, loopback controls, mapping history and service template are foundations, not proof that the additions below are complete.
+The pre-implementation baseline was authenticated stream acceptance, 56 passing tests, short live samples, two UNVERIFIED configured pairs, and a stopped observer. No safe scale envelope or verified-market profitability finding exists yet. Existing reports, loopback controls, mapping history and service template are foundations, not proof that the additions below are complete.
 
 ## Checkpoint 1 — Metric eligibility and evidence labels
 
@@ -93,3 +93,11 @@ Orientation/identity/settlement changes invalidate verification and active lifec
 Synthetic stages and a 30-second report-contention run pass up to 500 mappings. Actual verified-market stages remain unchecked because no justified equivalent mappings are available. The two live smoke mappings remain UNVERIFIED. Linux service restart/reboot is documented but not tested on an actual Linux host; local lease, interrupted-session censorship and fresh-snapshot behavior have regression coverage. External health check and backup integrity were exercised locally.
 
 The actual authenticated dashboard was exercised for labels, both-first-venue reporting and recorded-state/mapping-history drilldown without JavaScript errors. JSON/CSV routes and access restrictions pass automated tests; CLI CSV was parsed. The embedded browser did not deliver its download event, so native save-dialog completion is not claimed. Deployment and execution-boundary instructions reflect the implemented system; no host was provisioned and live trading remains disabled.
+
+## September 11 broad-discovery implementation
+
+The persistent catalog no longer excludes sports or Kalshi exchange-index 3. It paginates PM-US at 500 records/page and Kalshi non-MVE markets at 1,000 records/page. Structured sports identity and bounded indexes admit low-title-overlap candidates, while explicit competition, period, line, jurisdiction, rank and outcome-stage guards reject known conflicts. Discovery/normalization/matching runs in a separate worker. Registry updates flush in bounded batches and patch evaluation/persistence indexes immediately. Rediscovered orientation changes invalidate verification; unverified auto-discovered candidates that stop matching are retired without erasing history.
+
+The dashboard now shows discovery progress/results and category/rejection/capacity counts, polls health every five seconds and reports every ten seconds, and paginates mappings. Recovery/socket-close duplicate invalidations and a failure-path throw found during the first live run were fixed with regression coverage. Both valid-book and invalid-book processing distributions are retained. No eligibility gate was weakened and no trading client was added.
+
+See COVERAGE-VALIDATION.md, coverage-validation.json and coverage-performance.json. The final recorded cycle found 1,010 candidates (660 sports / 350 non-sports), zero auto-verifications, and subscribed to 500 markets per venue. All 89 tests, TypeScript, build, randomized detector-equivalence and load checks passed. Twelve public catalog examples were manually inspected for identity conflicts; none was approved as settlement-equivalent. A prior approximately five-hour run and the earlier failed stage are retained, including reconciliation/reconnect activity, event-loop stalls and metadata failures. These findings do not close the sustained verified-observation or unattended-reliability gates above.

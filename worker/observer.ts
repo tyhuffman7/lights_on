@@ -1,3 +1,4 @@
+import { Worker } from "node:worker_threads";
 import {
   market,
   book as restBook,
@@ -9,7 +10,7 @@ import { BookCache } from "../lib/research/books.ts";
 import { MappingRegistry } from "../lib/research/mappings.ts";
 import { LiveRecorder } from "./live-recorder.ts";
 import { Telemetry } from "./telemetry.ts";
-import { catalog, applyCatalog, reconcileGroups } from "./coverage.ts";
+import { applyCatalogAsync, reconcileGroups } from "./coverage.ts";
 import type { ResearchStore } from "../lib/research/store.ts";
 import { analyzeLatency } from "../lib/research/latency.ts";
 import { StreamConnection, authHeaders } from "./streams.ts";
@@ -20,7 +21,10 @@ export class Observer {
   registry: MappingRegistry;
   recorder: LiveRecorder;
   telemetry = new Telemetry();
-  discoveryStatus: unknown = null;
+  discoveryStatus: any = null;
+  discoveryWorker: Worker | null = null;
+  lastDiscoveryAt: number | null = null;
+  nextDiscoveryAt: number | null = null;
   discovering = false;
   abort = new AbortController();
   shardCaches = new Map<StreamConnection, BookCache>();
@@ -44,8 +48,10 @@ export class Observer {
       () => this.pause(),
       config.maxPersistencePending,
     );
-    this.registry.persist = (m, at) =>
+    this.registry.persist = (m, at) => {
+      this.recorder.patchMapping(m);
       this.recorder.enqueue("mapping", { m, at });
+    };
     observeRequestTiming((host, ms) =>
       this.telemetry.sample(
         `${host.includes("kalshi") ? "kalshi" : "poly"}RestRoundTrip`,
@@ -74,27 +80,37 @@ export class Observer {
   }
   private invalid(venue: Venue, reason: string, ids?: string[]) {
     if (this.stopped) return;
+    const selected = ids ? new Set(ids) : null;
+    const affected = (b: StreamBook) =>
+      b.venue === venue && (!selected || selected.has(b.marketId));
+    // A recovery and its ensuing socket close must invalidate each live book once.
+    // Use recorder copies: resetting a shard mutates its shared cache objects first.
+    const changed = [...this.recorder.books.values()].filter(
+      (b) => affected(b) && b.valid,
+    );
     if (!ids) this.cache.reset(venue);
     const wall = Date.now(),
       mono = performance.now();
     for (const b of this.cache.books.values())
-      if (b.venue === venue && (!ids || ids.includes(b.marketId)))
+      if (affected(b))
         this.cache.books.set(`${b.venue}:${b.marketId}`, {
           ...b,
           valid: false,
           connection: "DISCONNECTED",
         });
-    for (const b of this.cache.books.values())
-      if (b.venue === venue && (!ids || ids.includes(b.marketId)))
-        this.recorder.update({
-          ...b,
-          valid: false,
-          connection: "DISCONNECTED",
-          receivedAt: wall,
-          receivedMono: mono,
-        });
+    for (const b of changed) {
+      if (this.recorder.failed) break; // queue failure already pauses every stream
+      this.recorder.update({
+        ...b,
+        valid: false,
+        connection: "DISCONNECTED",
+        receivedAt: wall,
+        receivedMono: mono,
+      });
+    }
     this.telemetry.count(reason);
-    this.recorder.diagnostic(reason, { venue, markets: ids?.length });
+    if (!this.recorder.failed)
+      this.recorder.diagnostic(reason, { venue, markets: ids?.length });
   }
   resume() {
     if (this.stopped || !this.paused) return;
@@ -133,7 +149,10 @@ export class Observer {
       setInterval(() => this.recorder.analyze(performance.now()), 5000),
     );
     this.timers.push(
-      setInterval(() => void this.discover(), this.config.discoveryIntervalMs),
+      setInterval(() => {
+        if (this.nextDiscoveryAt !== null && Date.now() >= this.nextDiscoveryAt)
+          void this.discover();
+      }, 1000),
     );
     this.timers.push(
       setInterval(
@@ -159,9 +178,20 @@ export class Observer {
   async metadata() {
     if (this.busyMetadata || this.paused || this.stopped) return;
     this.busyMetadata = true;
+    const subscribed = new Set(
+      this.streams.flatMap((s) =>
+        s.options.ids.map((id) => s.options.venue + ":" + id),
+      ),
+    );
     try {
       for (const m of this.registry.list()) {
         if (!m.active && m.reason !== "METADATA_UNAVAILABLE") continue;
+        if (
+          m.active &&
+          !subscribed.has("kalshi:" + m.pair.a.id) &&
+          !subscribed.has("poly:" + m.pair.b.id)
+        )
+          continue;
         try {
           const fetchedAt = Date.now();
           const a = await market("kalshi", m.pair.a.id),
@@ -171,13 +201,11 @@ export class Observer {
         } catch {
           if (this.stopped) return;
           this.registry.deactivate(m.id, "METADATA_UNAVAILABLE");
-          this.recorder.reindex();
           this.invalid("kalshi", "METADATA_UNAVAILABLE", [m.pair.a.id]);
           this.invalid("poly", "METADATA_UNAVAILABLE", [m.pair.b.id]);
         }
       }
       if (!this.stopped) {
-        this.recorder.reindex();
         this.recorder.tick(Date.now(), performance.now(), true);
         this.syncSubscriptions();
       }
@@ -249,6 +277,7 @@ export class Observer {
     this.pause();
     this.stopped = true;
     this.abort.abort();
+    await this.discoveryWorker?.terminate();
     observeRequestTiming(null);
     this.telemetry.close();
     await this.recorder.stop(Date.now(), performance.now());
@@ -263,15 +292,77 @@ export class Observer {
       return;
     this.discovering = true;
     try {
-      const data = await catalog(undefined, this.abort.signal);
+      this.discoveryStatus = {
+        status: "RUNNING",
+        startedAt: Date.now(),
+        phase: "catalog",
+        kalshi: 0,
+        poly: 0,
+      };
+      const worker = new Worker(
+        new URL("./discovery-thread.ts", import.meta.url),
+        {
+          execArgv: ["--experimental-strip-types"],
+          workerData: {
+            existing: this.registry
+              .list()
+              .flatMap((m) => ["kalshi:" + m.pair.a.id, "poly:" + m.pair.b.id]),
+          },
+        },
+      );
+      this.discoveryWorker = worker;
+      const result: any = await new Promise((resolve, reject) => {
+        worker.on("message", (m) => {
+          if (m.progress)
+            this.discoveryStatus = { ...this.discoveryStatus, ...m.progress };
+          else if (m.done) resolve(m);
+          else if (m.error) reject(new Error("Discovery failed"));
+        });
+        worker.once("error", () =>
+          reject(new Error("Discovery worker failed")),
+        );
+        worker.once("exit", () => reject(new Error("Discovery worker exited")));
+      });
       if (this.stopped || this.paused) return;
-      this.discoveryStatus = applyCatalog(this.registry, data);
-      this.recorder.reindex();
+      this.discoveryStatus.phase = "registry";
+      const stats = await applyCatalogAsync(
+        this.registry,
+        result.data,
+        result.matched,
+        () => {
+          if (this.stopped || this.paused)
+            throw new Error("Discovery interrupted");
+          return this.recorder.send("barrier", {});
+        },
+        () => this.stopped || this.paused,
+      );
+      this.discoveryStatus = {
+        ...stats,
+        matchingMs: result.matchingMs,
+        status: stats.complete
+          ? "SUCCESS"
+          : stats.kalshi || stats.poly
+            ? "PARTIAL"
+            : "FAILED",
+        finishedAt: Date.now(),
+      };
       this.syncSubscriptions();
       this.recorder.diagnostic("DISCOVERY", this.discoveryStatus);
     } catch {
-      this.recorder.diagnostic("DISCOVERY_FAILED", {});
+      if (!this.stopped) {
+        this.discoveryStatus = {
+          ...this.discoveryStatus,
+          status: "FAILED",
+          errors: ["DISCOVERY_FAILED"],
+        };
+        this.recorder.diagnostic("DISCOVERY_FAILED", {});
+      }
     } finally {
+      await this.discoveryWorker?.terminate();
+      this.discoveryWorker = null;
+      this.lastDiscoveryAt = Date.now();
+      this.nextDiscoveryAt =
+        this.lastDiscoveryAt + this.config.discoveryIntervalMs;
       this.discovering = false;
     }
   }
@@ -373,7 +464,13 @@ export class Observer {
         lastAckAt: this.recorder.lastAckAt,
         failed: this.recorder.failed,
       },
-      discovery: this.discoveryStatus,
+      discovery: {
+        ...this.discoveryStatus,
+        lastDiscoveryAt: this.lastDiscoveryAt,
+        nextDiscoveryAt: this.nextDiscoveryAt,
+        enabled: this.config.discoveryEnabled,
+        running: this.discovering,
+      },
       streams: this.streams.map((s) => s.health()),
       subscribed: Object.fromEntries(
         ["kalshi", "poly"].map((v) => [
@@ -386,12 +483,22 @@ export class Observer {
       mode: "PAPER_RESEARCH",
       paused: this.paused,
       sessionId: this.recorder.sessionId,
-      mappings: this.registry.list().map((m) => ({
-        id: m.id,
-        status: m.status,
-        active: m.active,
-        reason: m.reason,
-      })),
+      mappingTotal: this.registry.cache.size,
+      mappingCounts: this.registry
+        .list()
+        .reduce((counts: Record<string, number>, m) => {
+          counts[m.status] = (counts[m.status] ?? 0) + 1;
+          return counts;
+        }, {}),
+      mappings: this.registry
+        .list()
+        .slice(0, 100)
+        .map((m) => ({
+          id: m.id,
+          status: m.status,
+          active: m.active,
+          reason: m.reason,
+        })),
       books: [...this.cache.books.values()].map((b) => ({
         venue: b.venue,
         marketId: b.marketId,

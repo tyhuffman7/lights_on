@@ -100,6 +100,9 @@
           <option value="">Current session</option>
         </select></label
       >
+      <p id="dashboard-updated">Last dashboard update: not yet</p>
+      <h2>Market discovery</h2>
+      <dl id="discovery-metrics"></dl>
       <pre id="stream-health"></pre>
     </section>
     <section>
@@ -167,6 +170,9 @@
         Text matches are candidates only. Read each venue's settlement rules,
         outcomes, dates, resolution source and void treatment before approval.
       </p>
+      <p id="mapping-page"></p>
+      <button id="mapping-prev">Previous mappings</button
+      ><button id="mapping-next">Next mappings</button>
       <div id="mappings"></div>
     </section>
     <details>
@@ -216,13 +222,21 @@
       div.append(dt, dd);
       $("metrics").append(div);
     }
+    let mappingOffset = 0;
+    let reportBusy = false,
+      healthBusy = false;
     async function refresh() {
+      if (reportBusy) return;
+      reportBusy = true;
       try {
         const session = $("session").value;
         const data = await api(
-          "state" + (session ? "?session=" + encodeURIComponent(session) : ""),
+          "state?mappingOffset=" +
+            mappingOffset +
+            (session ? "&session=" + encodeURIComponent(session) : ""),
         );
         report = data.report;
+        showCoverage(data.health);
         $("main").hidden = false;
         $("message").textContent = "";
         $("health").textContent = data.health.paused
@@ -265,13 +279,8 @@
             data.health.telemetry.uptimeMs / 1000
           ).toFixed(0),
           "Subscribed Kalshi / PM-US": JSON.stringify(data.health.subscribed),
-          "Candidate mappings": data.mappings.length,
-          "Verification counts": JSON.stringify(
-            data.mappings.reduce(
-              (a, m) => ((a[m.status] = (a[m.status] ?? 0) + 1), a),
-              {},
-            ),
-          ),
+          "Candidate mappings": data.mappingTotal,
+          "Verification counts": JSON.stringify(data.health.mappingCounts),
           "Processing p50/p95/p99 (ms)": JSON.stringify(
             data.health.telemetry.latencyMs.processing ?? null,
           ),
@@ -298,10 +307,12 @@
           ["$" + d, b.entries, money(b.profit)].forEach((x) => cell(row, x));
           $("capital").append(row);
         }
+        $("mapping-page").textContent =
+          `Showing ${mappingOffset + 1}–${mappingOffset + data.mappings.length} of ${data.mappingTotal} mappings`;
         $("mappings").replaceChildren();
         if (!data.mappings.length)
           $("mappings").textContent =
-            "No mappings yet. Add exact market IDs to observer.config.json and restart the observer.";
+            "No candidates yet. Check discovery status and catalog progress above.";
         for (const m of data.mappings) {
           const details = document.createElement("details"),
             title = document.createElement("summary"),
@@ -386,6 +397,8 @@
         await loadOpportunities();
       } catch (e) {
         $("message").textContent = e.message;
+      } finally {
+        reportBusy = false;
       }
     }
     let offset = 0,
@@ -489,6 +502,108 @@
       a.click();
       a.remove();
       setTimeout(() => URL.revokeObjectURL(url), 30000);
+    };
+    function showCoverage(h) {
+      const d = h.discovery ?? {},
+        el = $("discovery-metrics");
+      el.replaceChildren();
+      const add = (name, value) => {
+        const dt = document.createElement("dt"),
+          dd = document.createElement("dd");
+        dt.textContent = name;
+        dd.textContent =
+          typeof value === "object"
+            ? JSON.stringify(value)
+            : String(value ?? "Unavailable");
+        el.append(dt, dd);
+      };
+      add(
+        "DISCOVERY STATUS",
+        d.enabled === false ? "DISABLED" : (d.status ?? "NOT STARTED"),
+      );
+      add(
+        "LAST DISCOVERY AT",
+        d.lastDiscoveryAt
+          ? new Date(d.lastDiscoveryAt).toLocaleString()
+          : "Not completed yet",
+      );
+      add(
+        "NEXT DISCOVERY IN",
+        h.paused
+          ? "Paused"
+          : d.running
+            ? "Current cycle running"
+            : d.nextDiscoveryAt
+              ? Math.max(
+                  0,
+                  Math.ceil((d.nextDiscoveryAt - Date.now()) / 1000),
+                ) + " seconds"
+              : "Not scheduled",
+      );
+      add("Kalshi markets fetched", d.kalshi ?? 0);
+      add("PM-US markets fetched", d.poly ?? 0);
+      add("Kalshi categories", d.categories?.kalshi ?? {});
+      add("PM-US categories", d.categories?.poly ?? {});
+      add("Candidate comparisons", d.comparisons ?? 0);
+      for (const [key, label] of Object.entries({
+        structuralConflict: "Structural conflict",
+        insufficientSimilarity: "Insufficient similarity",
+        dateMismatch: "Date mismatch",
+        thresholdMismatch: "Threshold mismatch",
+        outcomeMismatch: "Outcome mismatch",
+        other: "Other rejection",
+      }))
+        add(label, d.rejected?.[key] ?? 0);
+      add(
+        "Posting/choice deferrals (may repeat)",
+        d.comparisonLimitDeferred ?? 0,
+      );
+      add("Candidates found", d.candidates ?? 0);
+      add("Sports / non-sports candidates", {
+        sports: d.sportsCandidates ?? 0,
+        nonSports: d.nonSportsCandidates ?? 0,
+      });
+      add("Mappings added", d.added ?? 0);
+      add("Existing mappings refreshed", d.refreshed ?? 0);
+      add("Markets subscribed", h.subscribed);
+      add("Markets deferred by capacity", {
+        kalshi: h.telemetry.counters.kalshiDeferredMarkets ?? 0,
+        poly: h.telemetry.counters.polyDeferredMarkets ?? 0,
+      });
+      add("Catalog/API errors", d.errors ?? []);
+      $("dashboard-updated").textContent =
+        "Last dashboard update: " + new Date().toLocaleTimeString();
+      $("health").textContent = h.paused
+        ? "Observation paused"
+        : "Observer running";
+    }
+    async function refreshHealth() {
+      if (healthBusy || document.hidden || !$("token").value) return;
+      healthBusy = true;
+      try {
+        showCoverage(await api("health"));
+      } catch (e) {
+        $("message").textContent = e.message;
+      } finally {
+        healthBusy = false;
+      }
+    }
+    setInterval(refreshHealth, 5000);
+    setInterval(() => {
+      if (
+        !document.hidden &&
+        $("token").value &&
+        !$("mappings").querySelector("details[open]")
+      )
+        void refresh();
+    }, 10000);
+    $("mapping-prev").onclick = () => {
+      mappingOffset = Math.max(0, mappingOffset - 100);
+      refresh();
+    };
+    $("mapping-next").onclick = () => {
+      mappingOffset += 100;
+      refresh();
     };
     $("connect").onclick = refresh;
     $("refresh").onclick = refresh;

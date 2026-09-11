@@ -44,32 +44,40 @@ export class Recorder {
       .run(this.sessionId, at, mode, JSON.stringify(config));
     this.reindex();
   }
-  reindex() {
-    for (const m of this.registry.list()) {
-      const version = JSON.stringify([
-        m.pair.inverted,
-        m.pair.a.hash,
-        m.pair.b.hash,
-        m.status,
-        m.active,
-      ]);
-      const old = this.mappingVersions.get(m.id);
-      if (old && old !== version)
-        for (const [key, op] of this.active)
-          if (key.startsWith(`${m.id}:`)) {
-            this.store.db
-              .prepare("UPDATE opportunities SET status='CENSORED' WHERE id=?")
-              .run(op.id);
-            this.active.delete(key);
-          }
-      this.mappingVersions.set(m.id, version);
+  patchMapping(m: Mapping, previous?: Mapping) {
+    const version = JSON.stringify([
+      m.pair.inverted,
+      m.pair.a.hash,
+      m.pair.b.hash,
+      m.status,
+      m.active,
+    ]);
+    const old = this.mappingVersions.get(m.id);
+    if (old && old !== version)
+      for (const [key, op] of this.active)
+        if (key.startsWith(`${m.id}:`)) {
+          this.store.db
+            .prepare("UPDATE opportunities SET status='CENSORED' WHERE id=?")
+            .run(op.id);
+          this.active.delete(key);
+        }
+    this.mappingVersions.set(m.id, version);
+    const keys = new Set(
+      [previous?.pair.a, previous?.pair.b, m.pair.a, m.pair.b]
+        .filter(Boolean)
+        .map((market) => `${market!.venue}:${market!.id}`),
+    );
+    for (const key of keys) {
+      const entries = (this.index.get(key) ?? []).filter((x) => x.id !== m.id);
+      if ([m.pair.a, m.pair.b].some((x) => `${x.venue}:${x.id}` === key))
+        entries.push(m);
+      if (entries.length) this.index.set(key, entries);
+      else this.index.delete(key);
     }
+  }
+  reindex() {
     this.index.clear();
-    for (const m of this.registry.list())
-      for (const market of [m.pair.a, m.pair.b]) {
-        const key = `${market.venue}:${market.id}`;
-        this.index.set(key, [...(this.index.get(key) || []), m]);
-      }
+    for (const m of this.registry.list()) this.patchMapping(m);
   }
   update(book: StreamBook, prepared?: Record<string, Evaluation[]>) {
     const immutable = structuredClone(book),

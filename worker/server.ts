@@ -55,7 +55,19 @@ export function dashboardServer(observer: Observer, token: string) {
             report: await observer.recorder.report(
               url.searchParams.get("session") ?? undefined,
             ),
-            mappings: observer.registry.list(),
+            mappings: observer.registry
+              .list()
+              .slice(
+                Math.max(
+                  0,
+                  Number(url.searchParams.get("mappingOffset") ?? 0) || 0,
+                ),
+                Math.max(
+                  0,
+                  Number(url.searchParams.get("mappingOffset") ?? 0) || 0,
+                ) + 100,
+              ),
+            mappingTotal: observer.registry.cache.size,
           }),
         );
         return;

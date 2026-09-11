@@ -190,6 +190,21 @@ export class LiveRecorder {
       this.onFailure();
     });
   }
+  patchMapping(m: Mapping) {
+    const previous = this.registry.get(m.id);
+    const keys = new Set(
+      [previous?.pair.a, previous?.pair.b, m.pair.a, m.pair.b]
+        .filter(Boolean)
+        .map((market) => `${market!.venue}:${market!.id}`),
+    );
+    for (const key of keys) {
+      const entries = (this.index.get(key) ?? []).filter((x) => x.id !== m.id);
+      if ([m.pair.a, m.pair.b].some((x) => `${x.venue}:${x.id}` === key))
+        entries.push(m);
+      if (entries.length) this.index.set(key, entries);
+      else this.index.delete(key);
+    }
+  }
   reindex() {
     this.index.clear();
     const ms = this.registry.list();
@@ -229,7 +244,12 @@ export class LiveRecorder {
     this.enqueue("book", { book, evaluations });
     this.telemetry.count("bookUpdates");
     this.telemetry.sample("evaluation", performance.now() - started);
-    this.telemetry.sample("processing", performance.now() - book.receivedMono);
+    const processingMs = performance.now() - book.receivedMono;
+    this.telemetry.sample("processing", processingMs);
+    this.telemetry.sample(
+      book.valid ? "validBookProcessing" : "invalidBookProcessing",
+      processingMs,
+    );
   }
   tick(wall: number, mono: number, force = false) {
     this.enqueue("tick", { wall, mono, force });

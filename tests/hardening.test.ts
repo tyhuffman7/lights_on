@@ -126,7 +126,7 @@ test("Catalog follows PM offsets and Kalshi cursors without the old sample caps"
     if (url.includes("polymarket")) {
       pm++;
       return {
-        markets: Array.from({ length: pm < 5 ? 100 : 0 }, (_, i) => ({
+        markets: Array.from({ length: pm < 5 ? 500 : 0 }, (_, i) => ({
           slug: `page${pm}-${i}`,
           category: "sports",
         })),
@@ -278,4 +278,65 @@ test("Late metadata cannot overwrite a newer orientation or settlement review", 
   assert.equal(r.get(p.id)?.pair.inverted, true);
   assert.equal(r.get(p.id)?.status, "INVALIDATED");
   s.close();
+});
+
+test("Incremental metadata invalidation reaches evaluation and persistence before the next book", async () => {
+  const { Observer } = await import("../worker/observer.ts");
+  const { configSchema } = await import("../worker/config.ts");
+  const s = db(),
+    o = new Observer(s, configSchema.parse({ discoveryEnabled: false }));
+  try {
+    await o.recorder.ready;
+    const p = pair("incremental");
+    o.registry.add(p);
+    o.registry.verify(p.id, "MANUAL_VERIFIED", "Synthetic fixture only");
+    o.recorder.update(book("kalshi", p.a.id));
+    o.recorder.update(book("poly", p.b.id));
+    await o.recorder.send("barrier", {});
+    assert.ok(s.rows("opportunities").some((row) => row.status === "OPEN"));
+    o.registry.refresh(p.id, { ...p.a, hash: "changed" }, p.b);
+    assert.equal(
+      o.recorder.index.get("kalshi:" + p.a.id)?.[0].status,
+      "INVALIDATED",
+    );
+    await o.recorder.send("barrier", {});
+    assert.equal(
+      s.rows("opportunities").filter((row) => row.status === "OPEN").length,
+      0,
+    );
+    o.recorder.update(book("poly", p.b.id));
+    await o.recorder.send("barrier", {});
+    assert.equal(o.registry.get(p.id)?.status, "INVALIDATED");
+  } finally {
+    await o.stop();
+    s.close();
+  }
+});
+
+test("Recovery followed by disconnect persists a single invalidation and overflow pauses without throwing", async () => {
+  const { Observer } = await import("../worker/observer.ts");
+  const { configSchema } = await import("../worker/config.ts");
+  const s = db(),
+    o = new Observer(s, configSchema.parse({ discoveryEnabled: false }));
+  try {
+    await o.recorder.ready;
+    for (const id of ["one", "two"]) {
+      const b = book("kalshi", id);
+      o.cache.books.set("kalshi:" + id, b);
+      o.recorder.update(b);
+    }
+    await o.recorder.send("barrier", {});
+    (o as any).invalid("kalshi", "TEST_RECOVERY", ["one"]);
+    (o as any).invalid("kalshi", "DISCONNECTED", ["one"]);
+    await o.recorder.send("barrier", {});
+    assert.equal(s.rows("book_updates").length, 3);
+    assert.equal(o.recorder.books.get("kalshi:two")?.valid, true);
+    o.recorder.maxPending = 1;
+    assert.doesNotThrow(() => (o as any).invalid("kalshi", "TEST_OVERFLOW"));
+    assert.equal(o.recorder.failed, true);
+    assert.equal(o.paused, true);
+  } finally {
+    await o.stop();
+    s.close();
+  }
 });

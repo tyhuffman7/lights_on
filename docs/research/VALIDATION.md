@@ -99,3 +99,7 @@ Sustained throughput, real opportunity frequency/duration/profit, and uninterrup
 - `worker/streams.ts`
 
 Additional credential-validation checkpoint files: `docs/research/authenticated-stream-validation.json`, `docs/research/sample-live-report.json`, and `tests/fixtures/research/authenticated-books-2026-09-10.json`.
+
+## September 11 coverage implementation
+
+See [COVERAGE-VALIDATION.md](COVERAGE-VALIDATION.md) for current code, live catalog/category counts, twelve inspected examples, failed/longer-run evidence and performance limits. Full suite: 89 passing tests. TypeScript without incremental cache, production build, 5,000 randomized detector comparisons plus regressions, 30/100/250/500 mapping load and concurrent 25,000-market-per-venue discovery load all passed. Browser inspection confirmed diagnostics, mapping pagination and automatic timestamps after fixing a script parse error. No live trading or automatic settlement verification was introduced.

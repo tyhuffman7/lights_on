@@ -1,3 +1,4 @@
+import { identity } from "../research/identity.ts";
 import type { Book, Market, Level, Venue, Pair } from "./types.ts";
 import { USD } from "./core.ts";
 import { matchCandidates } from "../research/matching.ts";
@@ -100,6 +101,8 @@ export async function normalizeKalshi(
   return {
     id,
     venue: "kalshi",
+    identity: identity("kalshi", m, series),
+    exchangeIndex: m.exchange_index ?? 0,
     title: String(m.title || id),
     outcome: m.yes_sub_title || "Yes",
     opposite: m.no_sub_title || "No",
@@ -112,7 +115,7 @@ export async function normalizeKalshi(
       m.market_type === "binary" &&
       !m.is_provisional &&
       m.notional_value_dollars === "1.0000" &&
-      (m.exchange_index ?? 0) === 0,
+      !m.mve_collection_ticker,
     feeRate: rate,
     feeRounding: "ceil",
     minQty: 1,
@@ -149,6 +152,7 @@ export async function normalizePoly(m: Obj, published?: Obj): Promise<Market> {
   return {
     id,
     venue: "poly",
+    identity: identity("poly", m),
     title:
       m.question && m.question !== title ? `${title} · ${m.question}` : title,
     outcome: long?.description || "Unknown long",
@@ -296,6 +300,7 @@ export async function discover(): Promise<Discovery> {
         endDateMax: end,
       });
       for (const c of [
+        "sports",
         "politics",
         "crypto",
         "economics",
@@ -310,9 +315,7 @@ export async function discover(): Promise<Discovery> {
       pc += (d.markets || []).length;
       pm.push(
         ...(await Promise.all(
-          (d.markets || [])
-            .filter((m: Obj) => !/sport/i.test(m.category || ""))
-            .map((m: Obj) => normalizePoly(m)),
+          (d.markets || []).map((m: Obj) => normalizePoly(m)),
         )),
       );
       if ((d.markets || []).length < 100) break;
@@ -320,9 +323,10 @@ export async function discover(): Promise<Discovery> {
   } catch (e) {
     errors.push(e instanceof Error ? e.message : String(e));
   }
-  // Find relevant series first: unfiltered market listings are dominated by sports and distant events.
+  // Bounded interactive preview; the persistent observer uses the full paginated catalog.
   const catalogs = await Promise.allSettled(
     [
+      "Sports",
       "Politics",
       "Elections",
       "Economics",

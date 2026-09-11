@@ -40,6 +40,8 @@ parentPort!.on("message", (wire) => {
           .prepare("INSERT INTO mapping_history(pair_id,at,body) VALUES(?,?,?)")
           .run(m.data.m.id, m.data.at, JSON.stringify(m.data.m));
       });
+      recorder.patchMapping(m.data.m, registry.get(m.data.m.id));
+      registry.cache.set(m.data.m.id, m.data.m);
     } else if (m.kind === "index") {
       registry.cache = new Map(m.data.map((x: any) => [x.id, x]));
       recorder.reindex();
