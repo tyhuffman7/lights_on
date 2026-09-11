@@ -301,3 +301,52 @@ test("Early exit rejects fee-negative crossing, stale inventory and partial or u
   y.inventory[0].reconciledAt = now - 6000;
   assert.ok(pilotExitQuote(y).reasons.includes("INVENTORY_STALE"));
 });
+
+import { arrivalEvidence } from "../lib/pilot/timing.ts";
+test("Delayed arrival retains original limits and distinguishes one-leg exposure", () => {
+  const x = fixture(),
+    plan = pilotPreflight(x);
+  const arrivals = [
+    { book: x.a, wall: now + 100, mono: 200, covered: true },
+    { book: x.b, wall: now + 250, mono: 350, covered: true },
+  ] as any;
+  assert.equal(
+    arrivalEvidence(x.mapping.pair, plan, arrivals).status,
+    "BOTH_DISPLAYED_AVAILABLE",
+  );
+  assert.equal(
+    arrivalEvidence(x.mapping.pair, plan, arrivals).confirmedFills,
+    0,
+  );
+  x.b[plan.legs[1].side] = [{ price: 9999, quantity: 100 }];
+  assert.equal(
+    arrivalEvidence(x.mapping.pair, plan, arrivals).status,
+    "ONE_LEG_ONLY",
+  );
+  arrivals[1].covered = false;
+  assert.equal(
+    arrivalEvidence(x.mapping.pair, plan, arrivals).status,
+    "INSUFFICIENT_EVIDENCE",
+  );
+});
+test("Delayed arrival does not treat stale books or vanished buffered depth as fills", () => {
+  const x = fixture(),
+    plan = pilotPreflight(x);
+  const arrivals = [
+    { book: x.a, wall: now + 2100, mono: 2200, covered: true },
+    { book: x.b, wall: now + 2100, mono: 2200, covered: true },
+  ] as any;
+  assert.equal(
+    arrivalEvidence(x.mapping.pair, plan, arrivals).status,
+    "INSUFFICIENT_EVIDENCE",
+  );
+  arrivals.forEach((a: any) => {
+    a.wall = now + 100;
+    a.mono = 200;
+  });
+  x.a[plan.legs[0].side] = [{ price: plan.legs[0].limitPrice, quantity: 3 }];
+  assert.equal(
+    arrivalEvidence(x.mapping.pair, plan, arrivals).status,
+    "ONE_LEG_ONLY",
+  );
+});

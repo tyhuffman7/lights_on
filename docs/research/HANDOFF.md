@@ -2,6 +2,10 @@
 
 Use built-in capabilities/native skills only. Do not use installed skills, including Superpowers, and never brainstorming. No sub-agents unless the user authorizes them. The user subsequently authorized a $100-per-venue pilot and accepted at most $200 total loss; see ../pilot/PILOT.md. Live trading remains technically disabled until the documented launch prerequisites are satisfied. Do not request the same budget authorization again. Push tested implementation checkpoints to `tyhuffman7/lights_on` main. HARDENING.md remains the implementation specification.
 
+## Proof-of-edge investigation (latest)
+
+Read [PROOF-OF-EDGE.md](../pilot/PROOF-OF-EDGE.md). Matching now rejects relegation/title, conference/national-event, election-year and decade/year conflicts. Explicit NFL yardage clauses normalize integer alternate lines without equating different players, games, statistics or thresholds. The full catalog remains broad. Fixed-limit arrival replay is hypothetical, never fills. A bounded 378-pair all-category sample and 100-pair alternate-line sample are finished and stopped; databases are under ignored work/proof. The Spotify Bad Bunny pair had a $0.02 modeled one-contract edge surviving a 500ms display check, but remains unapproved. Israel government-formation rules conflict; sports cancellation and reversal provisions remain unresolved. Live execution, fees, profitability and stability are still unproven. No orders were sent.
+
 ## $200 pilot foundation
 
 Read [PILOT.md](../pilot/PILOT.md) before continuing. Preflight sizing and durable intent reservations are implemented with 130 passing tests; there is still no live order transport. The capital-fit audit found 347 fresh positive one-contract scenarios, but zero eligible states. Long settlement horizons are allowed. A paired early-exit quote evaluator now checks actual entry costs, executable bids, fees and reconciled inventory; no order transport or exit reconciliation is connected. The cricket rule review is unresolved. Do not turn the 347 unrestricted positive standalone models into earnings claims. No funding increase, replenishment or withdrawal is authorized.

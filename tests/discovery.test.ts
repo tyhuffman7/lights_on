@@ -4,7 +4,11 @@ import {
   discoverCandidates,
   matchCandidates,
 } from "../lib/research/matching.ts";
-import { scheduledTime, type Identity } from "../lib/research/identity.ts";
+import {
+  scheduledTime,
+  identity as extractIdentity,
+  type Identity,
+} from "../lib/research/identity.ts";
 import { market } from "./research-fixture.ts";
 import { ResearchStore } from "../lib/research/store.ts";
 import { MappingRegistry } from "../lib/research/mappings.ts";
@@ -521,4 +525,141 @@ test("Sports futures distinguish qualification, championship, seeding and compet
     ).length,
     0,
   );
+});
+
+test("Relegation and promotion cannot match a league champion despite shared team and league", () => {
+  const future = (venue: "kalshi" | "poly", title: string) =>
+    m(
+      venue,
+      {
+        participants: ["coventry city"],
+        outcome: "coventry city",
+        competition: "epl",
+        marketType: "future",
+        eventKey: title,
+      },
+      title,
+    );
+  for (const action of ["relegated", "promoted"]) {
+    const a = future(
+      "kalshi",
+      `Will Coventry City be ${action} from English Premier League in 2026-27 Season?`,
+    );
+    const b = future("poly", "Coventry City English Premier League Champion");
+    assert.equal(matchCandidates([a], [b]).length, 0);
+    assert.equal(matchCandidates([b], [a]).length, 0);
+  }
+  assert.equal(
+    matchCandidates(
+      [future("kalshi", "Coventry City relegated English Premier League")],
+      [future("poly", "Coventry City English Premier League Relegation")],
+    ).length,
+    1,
+  );
+});
+
+test("Futures primary payout distinguishes playoff qualification and regular-season titles", () => {
+  const a = m(
+    "kalshi",
+    {
+      marketType: "future",
+      eventKey: "College Football Championship Qualifiers",
+    },
+    "Texas College Football Qualifiers",
+  );
+  const b = m("poly", { ...a.identity }, "Texas College Football Qualifiers");
+  a.rules = "If Texas qualifies for the SEC Championship Game, then Yes.";
+  b.rules =
+    "This market settles Yes if Texas advances to the College Football Playoff.";
+  assert.equal(matchCandidates([a], [b]).length, 0);
+  a.rules = "If Texas is the conference regular season champion, then Yes.";
+  b.rules = "If Texas wins the NCAA Tournament, then Yes.";
+  assert.equal(matchCandidates([a], [b]).length, 0);
+  a.rules = b.rules =
+    "If Texas goes undefeated in the regular season, then Yes.\nExcludes College Football Playoff games.";
+  assert.equal(matchCandidates([a], [b]).length, 1);
+});
+
+test("Matching alternate NFL yard lines normalize integer thresholds without mixing stats or players", () => {
+  const make = (
+    venue: "kalshi" | "poly",
+    minimum = 60,
+    stat = "receiving",
+    player = "Rome Odunze",
+    date = "Sep 13, 2026",
+  ) => {
+    const rules =
+      venue === "kalshi"
+        ? `If ${player} records ${minimum}+ ${stat} yards in the Chicago vs Carolina Pro Football game originally scheduled for ${date}, then Yes.`
+        : `This market will settle to Yes if ${player} records at least ${minimum} ${stat} yards in the Chicago vs Carolina professional football game scheduled for ${date}.`;
+    const raw: any = {
+      title: `${player}: ${minimum}+ ${stat} yards`,
+      rules_primary: rules,
+      description: rules,
+      category: "sports",
+      ticker: "KXNFLRECYDS-26",
+      slug: "astatc-nfl-chi-car-2026-09-13",
+      yes_sub_title: `${player}: ${minimum}+`,
+      floor_strike: minimum - 0.5,
+      line: venue === "poly" ? minimum : undefined,
+    };
+    return {
+      ...market(venue),
+      title: raw.title,
+      rules,
+      category: "sports",
+      identity: extractIdentity(venue, raw),
+    };
+  };
+  const a = make("kalshi"),
+    b = make("poly");
+  assert.equal(a.identity.line, 59.5);
+  assert.equal(b.identity.line, 59.5);
+  assert.equal(a.identity.participant, "rome odunze");
+  assert.equal(matchCandidates([a], [b]).length, 1);
+  assert.equal(matchCandidates([a], [b])[0].status, "UNVERIFIED");
+  for (const other of [
+    make("poly", 50),
+    make("poly", 60, "rushing"),
+    make("poly", 60, "receiving", "DJ Moore"),
+    make("poly", 60, "receiving", "Rome Odunze", "Sep 14, 2026"),
+  ]) {
+    // Use explicit scheduled dates for the Polymarket fixture, as the venue does.
+    if (other.rules.includes("Sep 14")) other.identity.eventDate = "2026-09-14";
+    assert.equal(matchCandidates([a], [other]).length, 0);
+  }
+  const combined = make("poly", 60, "rushing and receiving");
+  assert.equal(matchCandidates([a], [combined]).length, 0);
+});
+
+test("Non-sports generic titles cannot hide different election years or decade awards", () => {
+  const a = {
+    ...market("kalshi"),
+    title: "Will Republicans win the Senate race in Alaska?",
+    category: "politics",
+    outcome: "Republican",
+    rules:
+      "If a Republican is sworn in for the term beginning in 2029, then Yes.",
+  };
+  const b = {
+    ...market("poly"),
+    title: "Republican Party Alaska Senate Election Winner",
+    category: "politics",
+    outcome: "Republican",
+    rules: "Yes if a Republican wins the 2026 midterm election.",
+  };
+  assert.equal(matchCandidates([a], [b]).length, 0);
+  Object.assign(a, {
+    title: "Who will TIME name Person of the Decade?",
+    category: "culture",
+    outcome: "Sam Altman",
+    rules: "If Sam Altman is Person of the Decade for the 2020s, then Yes.",
+  });
+  Object.assign(b, {
+    title: "Sam Altman TIME Person of the Year",
+    category: "culture",
+    outcome: "Sam Altman",
+    rules: "If Sam Altman is Person of the Year in 2026, then Yes.",
+  });
+  assert.equal(matchCandidates([a], [b]).length, 0);
 });

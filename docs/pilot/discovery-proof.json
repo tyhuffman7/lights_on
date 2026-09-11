@@ -1,0 +1,63 @@
+{
+  "at": "2026-09-11T21:04:26.827Z",
+  "catalogRecords": {
+    "kalshi": 136079,
+    "polymarketUS": 105672
+  },
+  "catalogComplete": true,
+  "earlierDiscoveryCandidates": 863,
+  "currentChecksRetained": 755,
+  "retainedNonSports": 242,
+  "explicitNFLYardageCandidates": 953,
+  "alternateLineExamples": [
+    {
+      "id": "KXNFLRECYDS-26SEP13NODET-DETASTBROWN14-100::astatc-nfl-no-det-2026-09-13-recyd-amobro-gte100",
+      "question": "Amon-Ra St. Brown: 100+ receiving yards",
+      "threshold": 99.5,
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNFLRECYDS-26SEP13NODET-DETASTBROWN14-110::astatc-nfl-no-det-2026-09-13-recyd-amobro-gte110",
+      "question": "Amon-Ra St. Brown: 110+ receiving yards",
+      "threshold": 109.5,
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNFLRECYDS-26SEP13NODET-DETASTBROWN14-120::astatc-nfl-no-det-2026-09-13-recyd-amobro-gte120",
+      "question": "Amon-Ra St. Brown: 120+ receiving yards",
+      "threshold": 119.5,
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNFLRECYDS-26SEP13NODET-DETASTBROWN14-130::astatc-nfl-no-det-2026-09-13-recyd-amobro-gte130",
+      "question": "Amon-Ra St. Brown: 130+ receiving yards",
+      "threshold": 129.5,
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNFLRECYDS-26SEP13NODET-DETASTBROWN14-140::astatc-nfl-no-det-2026-09-13-recyd-amobro-gte140",
+      "question": "Amon-Ra St. Brown: 140+ receiving yards",
+      "threshold": 139.5,
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNFLRECYDS-26SEP13NODET-DETASTBROWN14-150::astatc-nfl-no-det-2026-09-13-recyd-amobro-gte150",
+      "question": "Amon-Ra St. Brown: 150+ receiving yards",
+      "threshold": 149.5,
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNFLRECYDS-26SEP13NODET-DETASTBROWN14-50::astatc-nfl-no-det-2026-09-13-recyd-amobro-gte50",
+      "question": "Amon-Ra St. Brown: 50+ receiving yards",
+      "threshold": 49.5,
+      "status": "UNVERIFIED"
+    },
+    {
+      "id": "KXNFLRECYDS-26SEP13NODET-DETASTBROWN14-60::astatc-nfl-no-det-2026-09-13-recyd-amobro-gte60",
+      "question": "Amon-Ra St. Brown: 60+ receiving yards",
+      "threshold": 59.5,
+      "status": "UNVERIFIED"
+    }
+  ],
+  "interpretation": "Current checks applied to an earlier discovery snapshot, plus separately extracted NFL yardage candidates. Not a fresh exhaustive rematch after every code change; not verified or tradeable counts."
+}

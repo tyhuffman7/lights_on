@@ -1,0 +1,796 @@
+{
+  "timingSummary": {},
+  "timingInterpretation": "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
+  "at": "2026-09-11T21:06:14.463Z",
+  "policy": {
+    "capitalPerVenue": 1000000,
+    "totalLossLimit": 2000000,
+    "contractsPerPair": 1,
+    "maxPairDebit": 20000,
+    "maxCommitted": 100000,
+    "reservePerVenue": 100000,
+    "maxDepthFraction": 0.25,
+    "maxBookAgeMs": 2000,
+    "maxMetadataAgeMs": 60000,
+    "maxAccountAgeMs": 5000,
+    "maxPlanAgeMs": 250,
+    "minimumNetProfit": 100,
+    "uncertaintyReserve": 100
+  },
+  "opportunities": 18,
+  "statesAudited": 62,
+  "opportunitiesWithPositiveStandaloneOneContractModel": 0,
+  "freshPositiveStandaloneModels": 0,
+  "positiveEventsStillMatching": 0,
+  "remainingReviewPairs": [],
+  "eligibleStates": 0,
+  "blockersByOpportunity": {
+    "RULE_EQUIVALENCE_UNVERIFIED": 18,
+    "APPROVAL_EVIDENCE_MISSING": 18,
+    "EXECUTION_PROTOCOL_UNVALIDATED": 18,
+    "LIVE_FEE_BOUND_UNVALIDATED": 18,
+    "CATEGORY_NOT_EXECUTION_SUPPORTED": 18,
+    "NO_MODELED_NET_EDGE": 18,
+    "BOOK_NOT_STRICTLY_FRESH": 18
+  },
+  "freshPositiveModelExamples": [],
+  "topStandaloneModels": [
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150::astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Jordan Love: 150+ passing yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160596564,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 9100,
+          "modeledDebit": 9200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 800,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150::astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Jordan Love: 150+ passing yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160606093,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 9100,
+          "modeledDebit": 9200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 800,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150::astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Jordan Love: 150+ passing yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160616256,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 9100,
+          "modeledDebit": 9200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 800,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150::astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Jordan Love: 150+ passing yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160617756,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 9100,
+          "modeledDebit": 9200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 800,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150::astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Jordan Love: 150+ passing yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160643121,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 9100,
+          "modeledDebit": 9200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 800,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150::astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Jordan Love: 150+ passing yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160664937,
+      "modeledNetPerOneContractUSD": -0.01,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 9100,
+          "modeledDebit": 9200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 800,
+          "modeledDebit": 800,
+          "feeUpper": 0
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13BUFHOU-BUFJCOOK4-15::astatc-nfl-buf-hou-2026-09-13-recyd-jamcoo-gte15",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "James Cook III: 15+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160606243,
+      "modeledNetPerOneContractUSD": -0.02,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13BUFHOU-BUFJCOOK4-15",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6400,
+          "modeledDebit": 6600,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-buf-hou-2026-09-13-recyd-jamcoo-gte15",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3400,
+          "modeledDebit": 3500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13BUFHOU-BUFJCOOK4-15::astatc-nfl-buf-hou-2026-09-13-recyd-jamcoo-gte15",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "James Cook III: 15+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160710759,
+      "modeledNetPerOneContractUSD": -0.02,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13BUFHOU-BUFJCOOK4-15",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6400,
+          "modeledDebit": 6600,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-buf-hou-2026-09-13-recyd-jamcoo-gte15",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3400,
+          "modeledDebit": 3500,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXNFLPASSYDS-26SEP13CLEJAC-CLEDWATSON4-150::astatc-nfl-cle-jax-2026-09-13-pyd-deswat-gte150",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Deshaun Watson: 150+ passing yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160606277,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLPASSYDS-26SEP13CLEJAC-CLEDWATSON4-150",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6800,
+          "modeledDebit": 7000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-cle-jax-2026-09-13-pyd-deswat-gte150",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3100,
+          "modeledDebit": 3200,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13ARILAC-ARIMHARRISON18-25::astatc-nfl-ari-lac-2026-09-13-recyd-marhar-gte25",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Marvin Harrison Jr.: 25+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160652481,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13ARILAC-ARIMHARRISON18-25",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7800,
+          "modeledDebit": 8000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-ari-lac-2026-09-13-recyd-marhar-gte25",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2100,
+          "modeledDebit": 2200,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13ARILAC-ARIMHARRISON18-25::astatc-nfl-ari-lac-2026-09-13-recyd-marhar-gte25",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Marvin Harrison Jr.: 25+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160671226,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13ARILAC-ARIMHARRISON18-25",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7800,
+          "modeledDebit": 8000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-ari-lac-2026-09-13-recyd-marhar-gte25",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2100,
+          "modeledDebit": 2200,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13ARILAC-ARIMHARRISON18-25::astatc-nfl-ari-lac-2026-09-13-recyd-marhar-gte25",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Marvin Harrison Jr.: 25+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160677291,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13ARILAC-ARIMHARRISON18-25",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7800,
+          "modeledDebit": 8000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-ari-lac-2026-09-13-recyd-marhar-gte25",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2100,
+          "modeledDebit": 2200,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13CLEJAC-JACBTHOMAS7-25::astatc-nfl-cle-jax-2026-09-13-recyd-britho-gte25",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Brian Thomas Jr.: 25+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160700584,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13CLEJAC-JACBTHOMAS7-25",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6700,
+          "modeledDebit": 6900,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-cle-jax-2026-09-13-recyd-britho-gte25",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3200,
+          "modeledDebit": 3300,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13CLEJAC-JACBTHOMAS7-25::astatc-nfl-cle-jax-2026-09-13-recyd-britho-gte25",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Brian Thomas Jr.: 25+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160710277,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13CLEJAC-JACBTHOMAS7-25",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6700,
+          "modeledDebit": 6900,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-cle-jax-2026-09-13-recyd-britho-gte25",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3200,
+          "modeledDebit": 3300,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13ARILAC-ARIMHARRISON18-25::astatc-nfl-ari-lac-2026-09-13-recyd-marhar-gte25",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Marvin Harrison Jr.: 25+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160711073,
+      "modeledNetPerOneContractUSD": -0.03,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13ARILAC-ARIMHARRISON18-25",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 7800,
+          "modeledDebit": 8000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-ari-lac-2026-09-13-recyd-marhar-gte25",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 2100,
+          "modeledDebit": 2200,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXNFLRECYDS-26SEP13ATLPIT-ATLBROBINSON7-25::astatc-nfl-atl-pit-2026-09-13-recyd-bijrob-gte25",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Bijan Robinson: 25+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160605614,
+      "modeledNetPerOneContractUSD": -0.04,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13ATLPIT-ATLBROBINSON7-25",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6700,
+          "modeledDebit": 6900,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-atl-pit-2026-09-13-recyd-bijrob-gte25",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3300,
+          "modeledDebit": 3400,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": false,
+      "mappingId": "KXNFLRECYDS-26SEP13CLEJAC-JACBTHOMAS7-25::astatc-nfl-cle-jax-2026-09-13-recyd-britho-gte25",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Brian Thomas Jr.: 25+ receiving yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160698643,
+      "modeledNetPerOneContractUSD": -0.04,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLRECYDS-26SEP13CLEJAC-JACBTHOMAS7-25",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 6800,
+          "modeledDebit": 7000,
+          "feeUpper": 200
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-cle-jax-2026-09-13-recyd-britho-gte25",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 3200,
+          "modeledDebit": 3300,
+          "feeUpper": 100
+        }
+      ]
+    },
+    {
+      "timingFromFirstPositiveState": null,
+      "matchesCurrentDiscovery": true,
+      "mappingId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150::astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+      "orientation": "kalshi_yes+pm_us_no",
+      "title": "Jordan Love: 150+ passing yards",
+      "verificationAtObservation": "UNVERIFIED",
+      "firstSeenAt": 1789160562206,
+      "modeledNetPerOneContractUSD": -0.12,
+      "freshPositiveModelAtRecordedTime": false,
+      "bestFreshModeledNetUSD": null,
+      "reviewEvidence": null,
+      "blockers": [
+        "RULE_EQUIVALENCE_UNVERIFIED",
+        "APPROVAL_EVIDENCE_MISSING",
+        "EXECUTION_PROTOCOL_UNVALIDATED",
+        "LIVE_FEE_BOUND_UNVALIDATED",
+        "CATEGORY_NOT_EXECUTION_SUPPORTED",
+        "NO_MODELED_NET_EDGE",
+        "BOOK_NOT_STRICTLY_FRESH"
+      ],
+      "legs": [
+        {
+          "venue": "kalshi",
+          "marketId": "KXNFLPASSYDS-26SEP13GBMIN-GBJLOVE10-150",
+          "side": "yes",
+          "quantity": 1,
+          "limitPrice": 9100,
+          "modeledDebit": 9200,
+          "feeUpper": 100
+        },
+        {
+          "venue": "poly",
+          "marketId": "astatc-nfl-gb-min-2026-09-13-pyd-jorlov-gte150",
+          "side": "no",
+          "quantity": 1,
+          "limitPrice": 1800,
+          "modeledDebit": 1900,
+          "feeUpper": 100
+        }
+      ]
+    }
+  ],
+  "interpretation": "Historical standalone scenarios using assumed $100 cash per venue, not actual account balances or fills. Fees are model estimates, live fee bounds and execution protocol are unvalidated. Positive model values are not earnings, independent opportunities, or approval; no profit sum or monthly extrapolation is valid. Verification is frozen as observed; every live launch blocker remains enforced."
+}

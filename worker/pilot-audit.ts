@@ -2,6 +2,8 @@
 import { writeFileSync } from "node:fs";
 import { ResearchStore } from "../lib/research/store.ts";
 import { pilotPolicy, pilotPreflight } from "../lib/pilot/preflight.ts";
+import { arrivalEvidence } from "../lib/pilot/timing.ts";
+import { matchCandidates } from "../lib/research/matching.ts";
 const [source, output] = process.argv.slice(2);
 if (!source || !output)
   throw new Error("Usage: pilot-audit.ts SOURCE_DB OUTPUT_JSON");
@@ -18,7 +20,8 @@ try {
     .iterate() as Iterable<any>) {
     const meta = JSON.parse(op.body);
     let best: any = null,
-      bestFresh: any = null;
+      bestFresh: any = null,
+      firstFresh: any = null;
     const reasons = new Set<string>();
     for (const row of store.db
       .prepare(
@@ -90,6 +93,17 @@ try {
       )
         bestFresh = result;
       if (
+        !firstFresh &&
+        result.modeledNet !== null &&
+        result.reasons.every((r) => launchOnly.includes(r))
+      )
+        firstFresh = {
+          plan: result,
+          mono: row.mono,
+          wall: row.at,
+          stateId: row.id,
+        };
+      if (
         result.modeledNet !== null &&
         (best === null || result.modeledNet > best.modeledNet)
       )
@@ -98,7 +112,50 @@ try {
     for (const r of reasons) blockers[r] = (blockers[r] ?? 0) + 1;
     if (best?.modeledNet >= pilotPolicy.minimumNetProfit) positive++;
     if (bestFresh) freshPositive++;
+    const timing = firstFresh
+      ? [
+          [100, 100],
+          [100, 250],
+          [250, 100],
+          [250, 250],
+          [500, 500],
+        ].map(([ka, po]) => {
+          const arrivals = [meta.pair.a, meta.pair.b].map(
+            (market: any, i: number) => {
+              const delay = i === 0 ? ka : po,
+                mono = firstFresh.mono + delay;
+              const row = store.db
+                .prepare(
+                  "SELECT body FROM book_updates WHERE session_id=? AND venue=? AND market_id=? AND mono<=? ORDER BY mono DESC,id DESC LIMIT 1",
+                )
+                .get(op.session_id, market.venue, market.id, mono) as any;
+              return {
+                book: row ? JSON.parse(row.body) : undefined,
+                wall: firstFresh.wall + delay,
+                mono,
+                covered: op.last_mono >= mono,
+              };
+            },
+          );
+          return {
+            kalshiDelayMs: ka,
+            polyDelayMs: po,
+            ...arrivalEvidence(meta.pair, firstFresh.plan, arrivals as any),
+          };
+        })
+      : [];
     candidates.push({
+      timingFromFirstPositiveState: firstFresh
+        ? {
+            stateId: firstFresh.stateId,
+            at: firstFresh.wall,
+            scenarios: timing,
+          }
+        : null,
+      matchesCurrentDiscovery: matchCandidates(
+        [meta.pair.a],
+        [meta.pair.b],
+      ).some((c) => c.pair.inverted === meta.pair.inverted),
       mappingId: op.pair_id,
       orientation: op.orientation,
       title: meta.pair.a.title,
@@ -115,13 +172,37 @@ try {
       legs: best?.legs ?? [],
     });
   }
+  const timingSummary: Record<string, Record<string, number>> = {};
+  for (const c of candidates.filter((c) => c.matchesCurrentDiscovery))
+    for (const t of c.timingFromFirstPositiveState?.scenarios ?? []) {
+      const key = `${t.kalshiDelayMs}/${t.polyDelayMs}`;
+      timingSummary[key] ??= {};
+      timingSummary[key][t.status] = (timingSummary[key][t.status] ?? 0) + 1;
+    }
   const report = {
+    timingSummary,
+    timingInterpretation:
+      "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
     at: new Date().toISOString(),
     policy: pilotPolicy,
     opportunities: candidates.length,
     statesAudited: states,
     opportunitiesWithPositiveStandaloneOneContractModel: positive,
     freshPositiveStandaloneModels: freshPositive,
+    positiveEventsStillMatching: candidates.filter(
+      (c) => c.freshPositiveModelAtRecordedTime && c.matchesCurrentDiscovery,
+    ).length,
+    remainingReviewPairs: [
+      ...new Map(
+        candidates
+          .filter(
+            (c) =>
+              c.freshPositiveModelAtRecordedTime && c.matchesCurrentDiscovery,
+          )
+          .sort((a, b) => a.bestFreshModeledNetUSD - b.bestFreshModeledNetUSD)
+          .map((c) => [c.mappingId, c]),
+      ).values(),
+    ].sort((a, b) => b.bestFreshModeledNetUSD - a.bestFreshModeledNetUSD),
     eligibleStates: eligible,
     blockersByOpportunity: blockers,
     freshPositiveModelExamples: candidates

@@ -1,0 +1,33 @@
+{
+  "retrievedDate": "2026-09-11",
+  "sources": [
+    {
+      "url": "https://assets.kalshi.com/contract_terms/EMMYS.pdf",
+      "sha256": "64d971ba1bfb6db789da42113761a23d187dada6ea31f77965229f92509a14ca"
+    },
+    {
+      "url": "https://assets.kalshi.com/contract_terms/FOOTBALLENTITYSTAT.pdf",
+      "sha256": "667ec1a9b87681a4f26225ad2bbcd0a90b7032a6843a48a493ba5d77669e99fe"
+    },
+    {
+      "url": "https://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf",
+      "sha256": "146a07f48325b0ec14ca993c9f3e6ebd8bee26f143cf3cd125053f721696bf7c"
+    },
+    {
+      "url": "https://assets.kalshi.com/contract_terms/NCAAFUNDEFEATED.pdf",
+      "sha256": "dd0366242b056d8ec33a3cb24e6462439b77cb589410dad1aa64c3e92e88aecb"
+    },
+    {
+      "url": "https://assets.kalshi.com/contract_terms/NEWACHIEVEMENT.pdf",
+      "sha256": "403112e02b14f45a0ec2d4544f6f6c9600e0aaa70ea69a7707a3c0c8b3f8b3e2"
+    },
+    {
+      "url": "https://assets.kalshi.com/contract_terms/NFLLASTUNDEFEATEDTEAM.pdf",
+      "sha256": "78394cab838d9f2e102095c9e3cfe37468c757b90158f8675153ca2bea79ad5a"
+    },
+    {
+      "url": "https://assets.kalshi.com/contract_terms/TOPARTIST.pdf",
+      "sha256": "8f09e4acf1811aa52c3ef55b72ecd0be050ec8add731689d01a3edce6f8f741e"
+    }
+  ]
+}

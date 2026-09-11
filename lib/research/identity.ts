@@ -113,6 +113,23 @@ function type(text: string) {
   if (/moneyline|winner|wins?\b|game|match/i.test(text)) return "winner";
   return undefined;
 }
+// Explicit integer-yard payout clauses only; alternative thresholds stay separate.
+// This extracts candidate identity, never approval of cancellation/stat-correction rules.
+export function footballYardProp(rules: string) {
+  const m = rules.match(
+    /\bif (.+?) records (?:(at least) )?(\d+)(\+)? (rushing and receiving|passing|rushing|receiving) yards(?: combined)? in the (.+?) (?:vs\.?|versus) (.+?) (?:pro football|professional football) game (?:originally )?scheduled for/i,
+  );
+  if (!m || (!m[2] && !m[4])) return null;
+  const minimum = Number(m[3]);
+  if (!Number.isSafeInteger(minimum) || minimum < 1 || minimum > 1000)
+    return null;
+  return {
+    player: normalizeText(m[1]),
+    line: minimum - 0.5,
+    statistic: normalizeText(m[5] + " yards"),
+    participants: [normalizeText(m[6]), normalizeText(m[7])],
+  };
+}
 export function identity(
   venue: "kalshi" | "poly",
   m: Record<string, any>,
@@ -182,6 +199,17 @@ export function identity(
         : threshold
           ? Number(threshold[1])
           : undefined;
+  const yardProp =
+    sports && marketType === "prop" ? footballYardProp(rules) : null;
+  // Do not accept contradictory structured thresholds.
+  const compatibleYardProp =
+    yardProp &&
+    (line === undefined ||
+      line === yardProp.line ||
+      (venue === "poly" && line === yardProp.line + 0.5))
+      ? yardProp
+      : null;
+  if (compatibleYardProp) participants = compatibleYardProp.participants;
   const periodMatch = (text + " " + rules.slice(0, 250)).match(
     /\b(first half|second half|1st half|2nd half|first quarter|first inning|first set|set \d|game \d|period \d)\b/i,
   );
@@ -269,9 +297,11 @@ export function identity(
           ? teamName(teams.find((t: any) => t.ordering === "away") ?? {})
           : undefined,
       ) || undefined,
-    participant: participants.length === 1 ? participants[0] : undefined,
+    participant:
+      compatibleYardProp?.player ??
+      (participants.length === 1 ? participants[0] : undefined),
     marketType,
-    line,
+    line: compatibleYardProp?.line ?? line,
     period:
       segmentPeriod ??
       (periodMatch
@@ -282,11 +312,14 @@ export function identity(
         : sports
           ? "full event"
           : undefined),
-    propType: marketType === "prop" ? normalizeText(rawType) : undefined,
+    propType:
+      compatibleYardProp?.statistic ??
+      (marketType === "prop" ? normalizeText(rawType) : undefined),
     outcome:
-      chosen && !["yes", "no", "unknown long"].includes(chosen)
+      compatibleYardProp?.player ??
+      (chosen && !["yes", "no", "unknown long"].includes(chosen)
         ? chosen
-        : undefined,
+        : undefined),
     entities: [],
     numbers: [...text.matchAll(/\b\d+(?:\.\d+)?\b/g)].map((x) => x[0]),
     units: text
@@ -329,7 +362,10 @@ export function generalHints(m: {
     .replace(/ethereum/g, "eth")
     .replace(/bitcoin/g, "btc")
     .replace(/\beliminat(?:e|ed|ing)\b/g, "elimination")
-    .replace(/\bqualifiers?\b/g, "qualify");
+    .replace(/\bqualifiers?\b/g, "qualify")
+    .replace(/\bplayoffs?\b/g, "playoffs")
+    .replace(/\brelegat(?:e|ed|ion)\b/g, "relegation")
+    .replace(/\bpromot(?:e|ed|ion)\b/g, "promotion");
   let location = jurisdictions.find((j) =>
     (" " + text + " ").includes(" " + normalizeText(j) + " "),
   );
@@ -405,6 +441,10 @@ export function generalHints(m: {
     "state senate",
     "qualify",
     "undefeated",
+    "regular season champion",
+    "person of the decade",
+    "relegation",
+    "promotion",
     "playoffs",
     "finals",
     "quarterfinal",

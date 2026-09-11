@@ -2,7 +2,7 @@
 
 Mapping: `KXCPLMATCH-26SEP122000JAMBAR-JAM::aec-cplcr-bra-jka-2026-09-13`.
 
-The historical one-contract model had a $0.01 net margin after modeled fees and the pilot uncertainty reserve. That is a counterfactual calculation, not an approved opportunity or a current quote. Full frozen venue metadata is in [historical-audit.json](historical-audit.json), under `nearTermModels`.
+The historical one-contract model had a $0.01 net margin after modeled fees and the pilot uncertainty reserve. That is a counterfactual calculation, not an approved opportunity or a current quote. The original historical database retains the frozen venue metadata. The current capped audit examples do not necessarily include this event.
 
 Kalshi's September 12, 8 PM EDT start corresponds to September 13 UTC; the date labels alone are not necessarily a conflict. Both available rule sets include the official match winner, Super Overs, and 50-cent treatment for several no-result/cancellation cases.
 

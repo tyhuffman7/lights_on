@@ -1,0 +1,240 @@
+[
+  {
+    "at": 1789160626839,
+    "pair": {
+      "id": "KXNCAAFUNDEFEATED-26-LSU::aachc-cfb-undefeated-2026-11-28-lsu",
+      "a": {
+        "id": "KXNCAAFUNDEFEATED-26-LSU",
+        "venue": "kalshi",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "participants": [],
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "lsu",
+          "entities": [],
+          "numbers": [
+            "2026"
+          ],
+          "aliases": [],
+          "eventKey": "undefeated in college football regular season"
+        },
+        "exchangeIndex": 0,
+        "title": "Will LSU go undefeated in the 2026 College Football regular season?",
+        "outcome": "LSU",
+        "opposite": "LSU",
+        "category": "Sports",
+        "rules": "If LSU goes undefeated in the 2026 College Football regular season, then the market resolves to Yes.\n\nThis market considers regular season games only, it does not consider any Conference Championship Games, Bowl Games, or College Football Playoff games. \n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFUNDEFEATED.pdf\n\n[{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"}]",
+        "url": "https://kalshi.com/markets/kxncaafundefeated/kxncaafundefeated-26",
+        "closeAt": "2026-12-14T15:00:00Z",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "af2ea0cebcb780e8cc1162c21f0097e8d4b332a95a1c2496faacc10092c2506f",
+        "settlement": null,
+        "series": "KXNCAAFUNDEFEATED"
+      },
+      "b": {
+        "id": "aachc-cfb-undefeated-2026-11-28-lsu",
+        "venue": "poly",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-08-29T16:00:00.000Z",
+          "eventDate": "2026-08-29",
+          "participants": [
+            "lsu"
+          ],
+          "participant": "lsu",
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "lsu",
+          "entities": [],
+          "numbers": [],
+          "aliases": [
+            {
+              "name": "lsu",
+              "venue": "poly",
+              "venueId": "1253",
+              "aliases": [
+                "tigers",
+                "tigers",
+                "lsu",
+                "lsu",
+                "lsu"
+              ]
+            },
+            {
+              "name": "lsu",
+              "venue": "poly",
+              "venueId": "1253",
+              "aliases": [
+                "tigers",
+                "tigers",
+                "lsu",
+                "lsu",
+                "lsu"
+              ]
+            }
+          ],
+          "eventKey": "college football undefeated regular season"
+        },
+        "title": "LSU · College Football Undefeated Regular Season",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "sports",
+        "rules": "This market will settle to Yes if LSU goes undefeated in the 2026 College Football regular season. Outcome sourced from the relevant governing body.",
+        "url": "https://polymarket.us/event/aachc-cfb-undefeated-2026-11-28-lsu",
+        "closeAt": "2026-12-12T23:00:00Z",
+        "open": true,
+        "feeRate": 600,
+        "feeRounding": "even",
+        "minQty": 0.01,
+        "hash": "7ef57e8245ea0cd969a9d2b82dccac14973ec6e5e0c20d2c8a2ea47bc4e8d611",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": false
+    }
+  },
+  {
+    "at": 1789160627344,
+    "pair": {
+      "id": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+      "a": {
+        "id": "KXTOPARTIST-26B-BAD",
+        "venue": "kalshi",
+        "identity": {
+          "sports": false,
+          "general": {},
+          "participants": [],
+          "outcome": "bad bunny",
+          "entities": [],
+          "numbers": [],
+          "aliases": []
+        },
+        "exchangeIndex": 0,
+        "title": "Who will be the top Spotify artist this year?",
+        "outcome": "Bad Bunny",
+        "opposite": "Bad Bunny",
+        "category": "Entertainment",
+        "rules": "If Bad Bunny is the most streamed Spotify artist in 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf\n\n[{\"name\":\"Spotify\",\"url\":\"https://open.spotify.com/\"}]",
+        "url": "https://kalshi.com/markets/kxtopartist/kxtopartist-26b",
+        "closeAt": "2026-12-31T15:00:00Z",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+        "settlement": null,
+        "series": "KXTOPARTIST"
+      },
+      "b": {
+        "id": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+        "venue": "poly",
+        "identity": {
+          "sports": false,
+          "general": {},
+          "competition": "sptfy",
+          "eventAt": "2026-12-02T17:00:00.000Z",
+          "eventDate": "2026-12-02",
+          "participants": [],
+          "marketType": "future",
+          "entities": [],
+          "numbers": [
+            "2026"
+          ],
+          "aliases": [],
+          "eventKey": "spotify top global artist 2026"
+        },
+        "title": "Bad Bunny · Spotify Top Global Artist 2026",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "culture",
+        "rules": "If Bad Bunny is ranked the #1 artist globally on Spotify in 2026, this market will settle to Yes. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists Globally ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.",
+        "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+        "closeAt": "2026-12-16T23:00:00Z",
+        "open": true,
+        "feeRate": 600,
+        "feeRounding": "even",
+        "minQty": 1,
+        "hash": "11f0a38bd4b9d9323f363a6cb30f321a738342cdc5397bdf5ca9f0547d08cb67",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": false
+    }
+  },
+  {
+    "at": 1789160627900,
+    "pair": {
+      "id": "KXISRAELPM-26OCT27-BNET::mlaec-isrpol-pm-2026-10-27-bennet",
+      "a": {
+        "id": "KXISRAELPM-26OCT27-BNET",
+        "venue": "kalshi",
+        "identity": {
+          "sports": false,
+          "general": {},
+          "participants": [],
+          "outcome": "benjamin netanyahu",
+          "entities": [],
+          "numbers": [
+            "2026"
+          ],
+          "aliases": []
+        },
+        "exchangeIndex": 0,
+        "title": "Will Benjamin Netanyahu become Prime Minister of Israel following the 2026 Israeli legislative election?",
+        "outcome": "Benjamin Netanyahu",
+        "opposite": "Benjamin Netanyahu",
+        "category": "Elections",
+        "rules": "If Benjamin Netanyahu becomes Prime Minister of Israel as a result of government formation following the 2026 Israeli legislative election and meets all constitutional requirements before Oct 27, 2027, then the market resolves to Yes.\n\nThe market resolves to the first person who, as a result of government formation following the election, is formally appointed, sworn in, or invested as Prime Minister according to the country's constitutional procedures, commands the confidence of the parliament/legislature, and exercises the full powers of the office (not serving in a caretaker/acting capacity from the previous government).\n\nIf no government forms by Oct 27, 2027, the Contract resolves to \"No one\" if that is an option and No for all other strikes. If new elections are called before government formation, the Contract resolves to \"No one\" immediately and No for all other strikes.\n\nhttps://assets.kalshi.com/contract_terms/GOVHEAD.pdf\n\n[{\"name\":\"parliament or legislature of <country>\",\"url\":\"https://www.parliament.go.ke/\"},{\"name\":\"official government gazette or equivalent official publication of <country>\",\"url\":\"https://kalshi.com/\"},{\"name\":\"office of the head of state of <country>\",\"url\":\"https://kalshi.com/\"},{\"name\":\"major national news outlets of <country>\",\"url\":\"https://kalshi.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://ft.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"official government websites of <country>\",\"url\":\"https://kalshi.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com\"},{\"name\":\"The Guardian\",\"url\":\"https://www.theguardian.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com\"}]",
+        "url": "https://kalshi.com/markets/kxisraelpm/kxisraelpm-26oct27",
+        "closeAt": "2027-10-27T14:00:00Z",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "557d2af87f304d8ecdb868acc54c0560f10dca90186d2df199c35628d186c306",
+        "settlement": null,
+        "series": "KXISRAELPM"
+      },
+      "b": {
+        "id": "mlaec-isrpol-pm-2026-10-27-bennet",
+        "venue": "poly",
+        "identity": {
+          "sports": false,
+          "general": {},
+          "competition": "isrpol",
+          "eventAt": "2026-10-27T16:00:00.000Z",
+          "eventDate": "2026-10-27",
+          "participants": [],
+          "marketType": "future",
+          "entities": [],
+          "numbers": [],
+          "aliases": [],
+          "eventKey": "prime minister of israel after the next election"
+        },
+        "title": "Benjamin Netanyahu · Prime Minister of Israel After the Next Election",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "politics",
+        "rules": "This market will settle to Yes if Benjamin Netanyahu is the first individual to formally assume the office of Prime Minister of Israel as part of government formation following the next Israeli Parliamentary election. Outcome sourced from the Government of Israel.\n\nAny acting, interim, or caretaker Prime Minister will not count toward the settlement of this market. If the next Israeli parliamentary election takes place, and a new election is called prior to any individual formally assuming the office of Prime Minister of Israel, this market will settle based on the next individual to assume the office as part of government formation following the new election.",
+        "url": "https://polymarket.us/event/mlaec-isrpol-pm-2026-10-27-bennet",
+        "closeAt": "2026-11-10T23:00:00Z",
+        "open": true,
+        "feeRate": 600,
+        "feeRounding": "even",
+        "minQty": 0.01,
+        "hash": "110d01cd609374b0b8803a2852e9a52c7879c0d6f23b211ba5de1dc2fc6f26e1",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": false
+    }
+  }
+]

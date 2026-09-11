@@ -1,0 +1,1615 @@
+[
+  {
+    "at": 1789159870333,
+    "pair": {
+      "id": "KXNFLLASTTOLOSE-27-MIA::aachc-nfl-2027-01-10-lastundefeated-mia",
+      "a": {
+        "id": "KXNFLLASTTOLOSE-27-MIA",
+        "venue": "kalshi",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "nfl",
+          "participants": [],
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "miami",
+          "entities": [],
+          "numbers": [
+            "2026",
+            "27"
+          ],
+          "aliases": [],
+          "eventKey": "pro football last undefeated team"
+        },
+        "exchangeIndex": 0,
+        "title": "Will Miami be the last undefeated team in the 2026-27 Pro Football regular season?",
+        "outcome": "Miami",
+        "opposite": "Miami",
+        "category": "Sports",
+        "rules": "If Miami is the last remaining undefeated team in the 2026-27 Pro Football regular season, then the market resolves to Yes.\n\nNote: This market resolves based on the team that stays undefeated the longest, measured by the week of their first loss (not exact date/time). A tie (game result) does not count as a loss. Therefore, a team with a tie on its record is still considered undefeated if they have not lost yet.\nSame-Week Losses: If the last remaining undefeated teams lose in the same week of the season, they are considered tied for the purposes of this market, even if one lost on Thursday and the other Sunday of that week.\nBye Weeks: A team on a bye-week is treated as still undefeated that week; if the other last undefeated team loses that same week, the team on a bye wins, regardless of what happens the following week.\nMultiple Teams Go Undefeated: If multiple teams finish the 2026-27 Pro Football regular season undefeated, then they are considered tied for the purposes of this market.\nTie Resolution: If multiple teams are tied for the last undefeated team, “Yes” positions will pay $1/N (rounded down to the nearest cent), where N is the number of tied teams, and “No” positions will pay 1 minus the \"Yes\" payout.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NFLLASTUNDEFEATEDTEAM.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+        "url": "https://kalshi.com/markets/kxnfllasttolose/kxnfllasttolose-27",
+        "closeAt": "2027-01-11T15:00:00Z",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "5001cac09e44de620ed340539bac7c6317e99f4c8d36e46912aabbe35e77766b",
+        "settlement": null,
+        "series": "KXNFLLASTTOLOSE"
+      },
+      "b": {
+        "id": "aachc-nfl-2027-01-10-lastundefeated-mia",
+        "venue": "poly",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "nfl",
+          "eventAt": "2026-09-10T00:00:00.000Z",
+          "eventDate": "2026-09-10",
+          "participants": [
+            "miami"
+          ],
+          "participant": "miami",
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "miami",
+          "entities": [],
+          "numbers": [],
+          "aliases": [
+            {
+              "name": "miami",
+              "venue": "poly",
+              "venueId": "67",
+              "aliases": [
+                "miami dolphins",
+                "dolphins",
+                "miami",
+                "mia",
+                "mia"
+              ]
+            },
+            {
+              "name": "miami",
+              "venue": "poly",
+              "venueId": "67",
+              "aliases": [
+                "miami dolphins",
+                "dolphins",
+                "miami",
+                "mia",
+                "mia"
+              ]
+            }
+          ],
+          "eventKey": "nfl last undefeated team"
+        },
+        "title": "Miami · NFL Last Undefeated Team",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "sports",
+        "rules": "This market will settle to Yes if the Miami Dolphins are the last remaining team without a loss in the 2026 Pro Football regular season. If two or more teams record their first loss in the same week and no other team remains without a loss, or if two or more teams finish the regular season without a loss, each such team's market will settle at $1.00 divided by the number of tied teams. Outcome sourced from the relevant governing body.",
+        "url": "https://polymarket.us/event/aachc-nfl-2027-01-10-lastundefeated-mia",
+        "closeAt": "2027-01-24T23:00:00Z",
+        "open": true,
+        "feeRate": 600,
+        "feeRounding": "even",
+        "minQty": 0.01,
+        "hash": "8281e91a08f86b4267ec7f439c79b63f87164e4517947f9df447d93cf722382c",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": false
+    },
+    "bookSnapshot": [
+      {
+        "yes": [
+          {
+            "price": 9900,
+            "quantity": 500
+          },
+          {
+            "price": 9800,
+            "quantity": 400
+          },
+          {
+            "price": 9700,
+            "quantity": 182
+          },
+          {
+            "price": 9600,
+            "quantity": 43
+          },
+          {
+            "price": 8500,
+            "quantity": 300
+          },
+          {
+            "price": 8400,
+            "quantity": 5000
+          },
+          {
+            "price": 1600,
+            "quantity": 100
+          },
+          {
+            "price": 1400,
+            "quantity": 33
+          },
+          {
+            "price": 200,
+            "quantity": 40
+          },
+          {
+            "price": 100,
+            "quantity": 24497.14
+          }
+        ],
+        "no": [],
+        "yesBids": [],
+        "noBids": [
+          {
+            "price": 100,
+            "quantity": 500
+          },
+          {
+            "price": 200,
+            "quantity": 400
+          },
+          {
+            "price": 300,
+            "quantity": 182
+          },
+          {
+            "price": 400,
+            "quantity": 43
+          },
+          {
+            "price": 1500,
+            "quantity": 300
+          },
+          {
+            "price": 1600,
+            "quantity": 5000
+          },
+          {
+            "price": 8400,
+            "quantity": 100
+          },
+          {
+            "price": 8600,
+            "quantity": 33
+          },
+          {
+            "price": 9800,
+            "quantity": 40
+          },
+          {
+            "price": 9900,
+            "quantity": 24497.14
+          }
+        ],
+        "receivedAt": 1789159870303,
+        "exchangeAt": null,
+        "open": true
+      },
+      {
+        "yes": [
+          {
+            "price": 200,
+            "quantity": 8.4
+          },
+          {
+            "price": 1300,
+            "quantity": 20.7
+          },
+          {
+            "price": 1700,
+            "quantity": 2.23
+          },
+          {
+            "price": 3000,
+            "quantity": 10.83
+          },
+          {
+            "price": 3200,
+            "quantity": 1
+          },
+          {
+            "price": 3300,
+            "quantity": 5
+          },
+          {
+            "price": 8500,
+            "quantity": 100
+          },
+          {
+            "price": 9000,
+            "quantity": 300
+          },
+          {
+            "price": 9900,
+            "quantity": 43050
+          }
+        ],
+        "no": [
+          {
+            "price": 9900,
+            "quantity": 2480.4
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 100,
+            "quantity": 2480.4
+          }
+        ],
+        "noBids": [
+          {
+            "price": 9800,
+            "quantity": 8.4
+          },
+          {
+            "price": 8700,
+            "quantity": 20.7
+          },
+          {
+            "price": 8300,
+            "quantity": 2.23
+          },
+          {
+            "price": 7000,
+            "quantity": 10.83
+          },
+          {
+            "price": 6800,
+            "quantity": 1
+          },
+          {
+            "price": 6700,
+            "quantity": 5
+          },
+          {
+            "price": 1500,
+            "quantity": 100
+          },
+          {
+            "price": 1000,
+            "quantity": 300
+          },
+          {
+            "price": 100,
+            "quantity": 43050
+          }
+        ],
+        "receivedAt": 1789159870333,
+        "exchangeAt": 1789159844651,
+        "open": true
+      }
+    ]
+  },
+  {
+    "at": 1789159871235,
+    "pair": {
+      "id": "KXNCAAFSECQ-26-ARK::aqc-cfb-sec-2026-12-05-champq-ark",
+      "a": {
+        "id": "KXNCAAFSECQ-26-ARK",
+        "venue": "kalshi",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "participants": [],
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "arkansas",
+          "entities": [],
+          "numbers": [],
+          "aliases": [],
+          "eventKey": "college football sec championship qualifiers"
+        },
+        "exchangeIndex": 0,
+        "title": "Will Arkansas qualify for the College Football SEC Championship Game?",
+        "outcome": "Arkansas",
+        "opposite": "Arkansas",
+        "category": "Sports",
+        "rules": "If Arkansas qualifies for the 2026 College Football SEC Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NEWACHIEVEMENT.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+        "url": "https://kalshi.com/markets/kxncaafsecq/kxncaafsecq-26",
+        "closeAt": "2026-12-06T04:00:00Z",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "2a062d79381b85f1d223a481b0c14270d186e5b2389e768089e101eedf826085",
+        "settlement": null,
+        "series": "KXNCAAFSECQ"
+      },
+      "b": {
+        "id": "aqc-cfb-sec-2026-12-05-champq-ark",
+        "venue": "poly",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-08-29T16:00:00.000Z",
+          "eventDate": "2026-08-29",
+          "participants": [
+            "arkansas"
+          ],
+          "participant": "arkansas",
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "arkansas",
+          "entities": [],
+          "numbers": [],
+          "aliases": [
+            {
+              "name": "arkansas",
+              "venue": "poly",
+              "venueId": "1260",
+              "aliases": [
+                "razorbacks",
+                "razorbacks",
+                "arkansas",
+                "ark",
+                "ark"
+              ]
+            },
+            {
+              "name": "arkansas",
+              "venue": "poly",
+              "venueId": "1260",
+              "aliases": [
+                "razorbacks",
+                "razorbacks",
+                "arkansas",
+                "ark",
+                "ark"
+              ]
+            }
+          ],
+          "eventKey": "sec football championship game qualifiers"
+        },
+        "title": "Arkansas · SEC Football Championship Game Qualifiers",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "sports",
+        "rules": "This market will settle to Yes if Arkansas qualifies for the 2026 SEC Football Championship Game scheduled for December 5, 2026. Outcome sourced from SEC.",
+        "url": "https://polymarket.us/event/aqc-cfb-sec-2026-12-05-champq-ark",
+        "closeAt": "2026-12-19T23:00:00Z",
+        "open": true,
+        "feeRate": 600,
+        "feeRounding": "even",
+        "minQty": 0.01,
+        "hash": "1f67f3c9a0b2107a68d8d560f8747f199d1f4e7f80962aae13e85c4bd70a70eb",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": false
+    },
+    "bookSnapshot": [
+      {
+        "yes": [
+          {
+            "price": 9900,
+            "quantity": 200
+          },
+          {
+            "price": 9400,
+            "quantity": 200
+          },
+          {
+            "price": 8900,
+            "quantity": 200
+          },
+          {
+            "price": 8400,
+            "quantity": 200
+          },
+          {
+            "price": 7900,
+            "quantity": 200
+          },
+          {
+            "price": 7400,
+            "quantity": 200
+          },
+          {
+            "price": 6900,
+            "quantity": 200
+          },
+          {
+            "price": 6400,
+            "quantity": 200
+          },
+          {
+            "price": 5900,
+            "quantity": 200
+          },
+          {
+            "price": 5400,
+            "quantity": 200
+          },
+          {
+            "price": 4900,
+            "quantity": 200
+          },
+          {
+            "price": 4400,
+            "quantity": 200
+          },
+          {
+            "price": 4300,
+            "quantity": 52
+          },
+          {
+            "price": 2300,
+            "quantity": 90
+          },
+          {
+            "price": 800,
+            "quantity": 250
+          }
+        ],
+        "no": [],
+        "yesBids": [],
+        "noBids": [
+          {
+            "price": 100,
+            "quantity": 200
+          },
+          {
+            "price": 600,
+            "quantity": 200
+          },
+          {
+            "price": 1100,
+            "quantity": 200
+          },
+          {
+            "price": 1600,
+            "quantity": 200
+          },
+          {
+            "price": 2100,
+            "quantity": 200
+          },
+          {
+            "price": 2600,
+            "quantity": 200
+          },
+          {
+            "price": 3100,
+            "quantity": 200
+          },
+          {
+            "price": 3600,
+            "quantity": 200
+          },
+          {
+            "price": 4100,
+            "quantity": 200
+          },
+          {
+            "price": 4600,
+            "quantity": 200
+          },
+          {
+            "price": 5100,
+            "quantity": 200
+          },
+          {
+            "price": 5600,
+            "quantity": 200
+          },
+          {
+            "price": 5700,
+            "quantity": 52
+          },
+          {
+            "price": 7700,
+            "quantity": 90
+          },
+          {
+            "price": 9200,
+            "quantity": 250
+          }
+        ],
+        "receivedAt": 1789159871235,
+        "exchangeAt": null,
+        "open": true
+      },
+      {
+        "yes": [
+          {
+            "price": 400,
+            "quantity": 172.53
+          },
+          {
+            "price": 1900,
+            "quantity": 126.93
+          },
+          {
+            "price": 4300,
+            "quantity": 58
+          },
+          {
+            "price": 4400,
+            "quantity": 483
+          },
+          {
+            "price": 6900,
+            "quantity": 6976
+          },
+          {
+            "price": 7000,
+            "quantity": 500
+          },
+          {
+            "price": 8500,
+            "quantity": 500
+          },
+          {
+            "price": 9000,
+            "quantity": 500
+          },
+          {
+            "price": 9900,
+            "quantity": 27999
+          }
+        ],
+        "no": [
+          {
+            "price": 9700,
+            "quantity": 1.1
+          },
+          {
+            "price": 9900,
+            "quantity": 172245.82
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 300,
+            "quantity": 1.1
+          },
+          {
+            "price": 100,
+            "quantity": 172245.82
+          }
+        ],
+        "noBids": [
+          {
+            "price": 9600,
+            "quantity": 172.53
+          },
+          {
+            "price": 8100,
+            "quantity": 126.93
+          },
+          {
+            "price": 5700,
+            "quantity": 58
+          },
+          {
+            "price": 5600,
+            "quantity": 483
+          },
+          {
+            "price": 3100,
+            "quantity": 6976
+          },
+          {
+            "price": 3000,
+            "quantity": 500
+          },
+          {
+            "price": 1500,
+            "quantity": 500
+          },
+          {
+            "price": 1000,
+            "quantity": 500
+          },
+          {
+            "price": 100,
+            "quantity": 27999
+          }
+        ],
+        "receivedAt": 1789159871189,
+        "exchangeAt": 1789158332621,
+        "open": true
+      }
+    ]
+  },
+  {
+    "at": 1789159872104,
+    "pair": {
+      "id": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+      "a": {
+        "id": "KXNCAAFUNDEFEATED-26-TEX",
+        "venue": "kalshi",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "participants": [],
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "texas",
+          "entities": [],
+          "numbers": [
+            "2026"
+          ],
+          "aliases": [],
+          "eventKey": "undefeated in college football regular season"
+        },
+        "exchangeIndex": 0,
+        "title": "Will Texas go undefeated in the 2026 College Football regular season?",
+        "outcome": "Texas",
+        "opposite": "Texas",
+        "category": "Sports",
+        "rules": "If Texas goes undefeated in the 2026 College Football regular season, then the market resolves to Yes.\n\nThis market considers regular season games only, it does not consider any Conference Championship Games, Bowl Games, or College Football Playoff games. \n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFUNDEFEATED.pdf\n\n[{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"}]",
+        "url": "https://kalshi.com/markets/kxncaafundefeated/kxncaafundefeated-26",
+        "closeAt": "2026-12-14T15:00:00Z",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "655c072d6be8535e9451c9789a213510b568ebb265cb53eda610c4842d81f151",
+        "settlement": null,
+        "series": "KXNCAAFUNDEFEATED"
+      },
+      "b": {
+        "id": "aachc-cfb-undefeated-2026-11-28-tx",
+        "venue": "poly",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-08-29T16:00:00.000Z",
+          "eventDate": "2026-08-29",
+          "participants": [
+            "texas"
+          ],
+          "participant": "texas",
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "texas",
+          "entities": [],
+          "numbers": [],
+          "aliases": [
+            {
+              "name": "texas",
+              "venue": "poly",
+              "venueId": "1140",
+              "aliases": [
+                "longhorns",
+                "longhorns",
+                "texas",
+                "tx",
+                "tex"
+              ]
+            },
+            {
+              "name": "texas",
+              "venue": "poly",
+              "venueId": "1140",
+              "aliases": [
+                "longhorns",
+                "longhorns",
+                "texas",
+                "tx",
+                "tex"
+              ]
+            }
+          ],
+          "eventKey": "college football undefeated regular season"
+        },
+        "title": "Texas · College Football Undefeated Regular Season",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "sports",
+        "rules": "This market will settle to Yes if Texas goes undefeated in the 2026 College Football regular season. Outcome sourced from the relevant governing body.",
+        "url": "https://polymarket.us/event/aachc-cfb-undefeated-2026-11-28-tx",
+        "closeAt": "2026-12-12T23:00:00Z",
+        "open": true,
+        "feeRate": 600,
+        "feeRounding": "even",
+        "minQty": 0.01,
+        "hash": "f6ed9ea7fcb1d21bea7276422d313abf0d7ab6e74bedfd3bc12f0a5b931d222e",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": false
+    },
+    "bookSnapshot": [
+      {
+        "yes": [
+          {
+            "price": 9500,
+            "quantity": 451467
+          },
+          {
+            "price": 9100,
+            "quantity": 88967
+          },
+          {
+            "price": 9000,
+            "quantity": 500
+          },
+          {
+            "price": 8400,
+            "quantity": 205331
+          },
+          {
+            "price": 8000,
+            "quantity": 500
+          },
+          {
+            "price": 7400,
+            "quantity": 15054
+          },
+          {
+            "price": 7000,
+            "quantity": 500
+          },
+          {
+            "price": 6700,
+            "quantity": 7694
+          },
+          {
+            "price": 6000,
+            "quantity": 294215
+          },
+          {
+            "price": 5800,
+            "quantity": 1236.56
+          },
+          {
+            "price": 5600,
+            "quantity": 3200
+          },
+          {
+            "price": 4800,
+            "quantity": 146615
+          },
+          {
+            "price": 4300,
+            "quantity": 621
+          },
+          {
+            "price": 3500,
+            "quantity": 63862
+          },
+          {
+            "price": 3400,
+            "quantity": 10000
+          },
+          {
+            "price": 3300,
+            "quantity": 20
+          },
+          {
+            "price": 2700,
+            "quantity": 94
+          },
+          {
+            "price": 2600,
+            "quantity": 45.47
+          },
+          {
+            "price": 2500,
+            "quantity": 343.33
+          },
+          {
+            "price": 1700,
+            "quantity": 50
+          },
+          {
+            "price": 1600,
+            "quantity": 91.95
+          },
+          {
+            "price": 1500,
+            "quantity": 92.3
+          },
+          {
+            "price": 1400,
+            "quantity": 2.73
+          },
+          {
+            "price": 1200,
+            "quantity": 5045.07
+          },
+          {
+            "price": 1100,
+            "quantity": 117
+          }
+        ],
+        "no": [
+          {
+            "price": 9900,
+            "quantity": 296.13
+          },
+          {
+            "price": 9600,
+            "quantity": 50
+          },
+          {
+            "price": 9500,
+            "quantity": 104.29
+          },
+          {
+            "price": 9400,
+            "quantity": 11.6
+          },
+          {
+            "price": 9300,
+            "quantity": 30
+          },
+          {
+            "price": 9200,
+            "quantity": 52.92
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 100,
+            "quantity": 296.13
+          },
+          {
+            "price": 400,
+            "quantity": 50
+          },
+          {
+            "price": 500,
+            "quantity": 104.29
+          },
+          {
+            "price": 600,
+            "quantity": 11.6
+          },
+          {
+            "price": 700,
+            "quantity": 30
+          },
+          {
+            "price": 800,
+            "quantity": 52.92
+          }
+        ],
+        "noBids": [
+          {
+            "price": 500,
+            "quantity": 451467
+          },
+          {
+            "price": 900,
+            "quantity": 88967
+          },
+          {
+            "price": 1000,
+            "quantity": 500
+          },
+          {
+            "price": 1600,
+            "quantity": 205331
+          },
+          {
+            "price": 2000,
+            "quantity": 500
+          },
+          {
+            "price": 2600,
+            "quantity": 15054
+          },
+          {
+            "price": 3000,
+            "quantity": 500
+          },
+          {
+            "price": 3300,
+            "quantity": 7694
+          },
+          {
+            "price": 4000,
+            "quantity": 294215
+          },
+          {
+            "price": 4200,
+            "quantity": 1236.56
+          },
+          {
+            "price": 4400,
+            "quantity": 3200
+          },
+          {
+            "price": 5200,
+            "quantity": 146615
+          },
+          {
+            "price": 5700,
+            "quantity": 621
+          },
+          {
+            "price": 6500,
+            "quantity": 63862
+          },
+          {
+            "price": 6600,
+            "quantity": 10000
+          },
+          {
+            "price": 6700,
+            "quantity": 20
+          },
+          {
+            "price": 7300,
+            "quantity": 94
+          },
+          {
+            "price": 7400,
+            "quantity": 45.47
+          },
+          {
+            "price": 7500,
+            "quantity": 343.33
+          },
+          {
+            "price": 8300,
+            "quantity": 50
+          },
+          {
+            "price": 8400,
+            "quantity": 91.95
+          },
+          {
+            "price": 8500,
+            "quantity": 92.3
+          },
+          {
+            "price": 8600,
+            "quantity": 2.73
+          },
+          {
+            "price": 8800,
+            "quantity": 5045.07
+          },
+          {
+            "price": 8900,
+            "quantity": 117
+          }
+        ],
+        "receivedAt": 1789159872104,
+        "exchangeAt": null,
+        "open": true
+      },
+      {
+        "yes": [
+          {
+            "price": 1500,
+            "quantity": 25.1
+          },
+          {
+            "price": 1600,
+            "quantity": 13.39
+          },
+          {
+            "price": 4900,
+            "quantity": 25
+          },
+          {
+            "price": 6900,
+            "quantity": 40
+          },
+          {
+            "price": 7000,
+            "quantity": 500
+          },
+          {
+            "price": 8500,
+            "quantity": 500
+          },
+          {
+            "price": 9000,
+            "quantity": 500
+          },
+          {
+            "price": 9900,
+            "quantity": 3500
+          }
+        ],
+        "no": [
+          {
+            "price": 8600,
+            "quantity": 1.99
+          },
+          {
+            "price": 9400,
+            "quantity": 9460.77
+          },
+          {
+            "price": 9900,
+            "quantity": 2500
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 1400,
+            "quantity": 1.99
+          },
+          {
+            "price": 600,
+            "quantity": 9460.77
+          },
+          {
+            "price": 100,
+            "quantity": 2500
+          }
+        ],
+        "noBids": [
+          {
+            "price": 8500,
+            "quantity": 25.1
+          },
+          {
+            "price": 8400,
+            "quantity": 13.39
+          },
+          {
+            "price": 5100,
+            "quantity": 25
+          },
+          {
+            "price": 3100,
+            "quantity": 40
+          },
+          {
+            "price": 3000,
+            "quantity": 500
+          },
+          {
+            "price": 1500,
+            "quantity": 500
+          },
+          {
+            "price": 1000,
+            "quantity": 500
+          },
+          {
+            "price": 100,
+            "quantity": 3500
+          }
+        ],
+        "receivedAt": 1789159872083,
+        "exchangeAt": 1789159753274,
+        "open": true
+      }
+    ]
+  },
+  {
+    "at": 1789159873017,
+    "pair": {
+      "id": "KXNCAAFB12QUAL-26-BYU::aqc-cfb-big12-2026-12-04-champq-byu",
+      "a": {
+        "id": "KXNCAAFB12QUAL-26-BYU",
+        "venue": "kalshi",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "participants": [],
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "byu",
+          "entities": [],
+          "numbers": [
+            "12"
+          ],
+          "aliases": [],
+          "eventKey": "college football big 12 championship qualifiers"
+        },
+        "exchangeIndex": 0,
+        "title": "Will BYU qualify for the College Football Big 12 Championship Game?",
+        "outcome": "BYU",
+        "opposite": "BYU",
+        "category": "Sports",
+        "rules": "If BYU qualifies for the 2026 College Football Big 12 Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+        "url": "https://kalshi.com/markets/kxncaafb12qual/kxncaafb12qual-26",
+        "closeAt": "2026-12-13T15:00:00Z",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "3ae63d5dac0d27d7754fa53662599aec1e9f28f527915f07d9ad0df421ffceb7",
+        "settlement": null,
+        "series": "KXNCAAFB12QUAL"
+      },
+      "b": {
+        "id": "aqc-cfb-big12-2026-12-04-champq-byu",
+        "venue": "poly",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-08-24T19:00:00.000Z",
+          "eventDate": "2026-08-24",
+          "participants": [
+            "byu"
+          ],
+          "participant": "byu",
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "byu",
+          "entities": [],
+          "numbers": [
+            "12"
+          ],
+          "aliases": [
+            {
+              "name": "byu",
+              "venue": "poly",
+              "venueId": "1308",
+              "aliases": [
+                "cougars",
+                "cougars",
+                "byu",
+                "byu",
+                "byu"
+              ]
+            },
+            {
+              "name": "byu",
+              "venue": "poly",
+              "venueId": "1308",
+              "aliases": [
+                "cougars",
+                "cougars",
+                "byu",
+                "byu",
+                "byu"
+              ]
+            }
+          ],
+          "eventKey": "big 12 football championship game qualifiers"
+        },
+        "title": "BYU · Big 12 Football Championship Game Qualifiers",
+        "outcome": "Yes",
+        "opposite": "No",
+        "category": "sports",
+        "rules": "This market will settle to Yes if BYU qualifies for the 2026 Big 12 Football Championship Game scheduled for December 4, 2026. Outcome sourced from Big 12.",
+        "url": "https://polymarket.us/event/aqc-cfb-big12-2026-12-04-champq-byu",
+        "closeAt": "2026-12-18T23:00:00Z",
+        "open": true,
+        "feeRate": 600,
+        "feeRounding": "even",
+        "minQty": 0.01,
+        "hash": "c745af463c715781bbdaf614aa3df9debe1d5ec9a6870676384bbe78973d1f92",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": false
+    },
+    "bookSnapshot": [
+      {
+        "yes": [
+          {
+            "price": 9900,
+            "quantity": 1050
+          },
+          {
+            "price": 9800,
+            "quantity": 1090
+          },
+          {
+            "price": 9700,
+            "quantity": 730
+          },
+          {
+            "price": 9400,
+            "quantity": 200
+          },
+          {
+            "price": 9300,
+            "quantity": 1
+          },
+          {
+            "price": 9100,
+            "quantity": 1484.87
+          },
+          {
+            "price": 8900,
+            "quantity": 200
+          },
+          {
+            "price": 8400,
+            "quantity": 200
+          },
+          {
+            "price": 7900,
+            "quantity": 200
+          },
+          {
+            "price": 7800,
+            "quantity": 757
+          },
+          {
+            "price": 7400,
+            "quantity": 200
+          },
+          {
+            "price": 7300,
+            "quantity": 101
+          },
+          {
+            "price": 7200,
+            "quantity": 380
+          },
+          {
+            "price": 7100,
+            "quantity": 49
+          },
+          {
+            "price": 6900,
+            "quantity": 200
+          },
+          {
+            "price": 6800,
+            "quantity": 94
+          },
+          {
+            "price": 6400,
+            "quantity": 200
+          },
+          {
+            "price": 5900,
+            "quantity": 200
+          },
+          {
+            "price": 5800,
+            "quantity": 34.97
+          },
+          {
+            "price": 5600,
+            "quantity": 90
+          },
+          {
+            "price": 5500,
+            "quantity": 104.31
+          },
+          {
+            "price": 5400,
+            "quantity": 200
+          },
+          {
+            "price": 5300,
+            "quantity": 63.4
+          },
+          {
+            "price": 4900,
+            "quantity": 111.16
+          },
+          {
+            "price": 4100,
+            "quantity": 250
+          }
+        ],
+        "no": [
+          {
+            "price": 9600,
+            "quantity": 477
+          },
+          {
+            "price": 9500,
+            "quantity": 58
+          },
+          {
+            "price": 9200,
+            "quantity": 11
+          },
+          {
+            "price": 9000,
+            "quantity": 147
+          },
+          {
+            "price": 8600,
+            "quantity": 76
+          },
+          {
+            "price": 8100,
+            "quantity": 90
+          },
+          {
+            "price": 7300,
+            "quantity": 55
+          },
+          {
+            "price": 7200,
+            "quantity": 381.09
+          },
+          {
+            "price": 7000,
+            "quantity": 178
+          },
+          {
+            "price": 6900,
+            "quantity": 133.98
+          },
+          {
+            "price": 6700,
+            "quantity": 5
+          },
+          {
+            "price": 6600,
+            "quantity": 59.2
+          },
+          {
+            "price": 6300,
+            "quantity": 15
+          },
+          {
+            "price": 6200,
+            "quantity": 19.92
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 400,
+            "quantity": 477
+          },
+          {
+            "price": 500,
+            "quantity": 58
+          },
+          {
+            "price": 800,
+            "quantity": 11
+          },
+          {
+            "price": 1000,
+            "quantity": 147
+          },
+          {
+            "price": 1400,
+            "quantity": 76
+          },
+          {
+            "price": 1900,
+            "quantity": 90
+          },
+          {
+            "price": 2700,
+            "quantity": 55
+          },
+          {
+            "price": 2800,
+            "quantity": 381.09
+          },
+          {
+            "price": 3000,
+            "quantity": 178
+          },
+          {
+            "price": 3100,
+            "quantity": 133.98
+          },
+          {
+            "price": 3300,
+            "quantity": 5
+          },
+          {
+            "price": 3400,
+            "quantity": 59.2
+          },
+          {
+            "price": 3700,
+            "quantity": 15
+          },
+          {
+            "price": 3800,
+            "quantity": 19.92
+          }
+        ],
+        "noBids": [
+          {
+            "price": 100,
+            "quantity": 1050
+          },
+          {
+            "price": 200,
+            "quantity": 1090
+          },
+          {
+            "price": 300,
+            "quantity": 730
+          },
+          {
+            "price": 600,
+            "quantity": 200
+          },
+          {
+            "price": 700,
+            "quantity": 1
+          },
+          {
+            "price": 900,
+            "quantity": 1484.87
+          },
+          {
+            "price": 1100,
+            "quantity": 200
+          },
+          {
+            "price": 1600,
+            "quantity": 200
+          },
+          {
+            "price": 2100,
+            "quantity": 200
+          },
+          {
+            "price": 2200,
+            "quantity": 757
+          },
+          {
+            "price": 2600,
+            "quantity": 200
+          },
+          {
+            "price": 2700,
+            "quantity": 101
+          },
+          {
+            "price": 2800,
+            "quantity": 380
+          },
+          {
+            "price": 2900,
+            "quantity": 49
+          },
+          {
+            "price": 3100,
+            "quantity": 200
+          },
+          {
+            "price": 3200,
+            "quantity": 94
+          },
+          {
+            "price": 3600,
+            "quantity": 200
+          },
+          {
+            "price": 4100,
+            "quantity": 200
+          },
+          {
+            "price": 4200,
+            "quantity": 34.97
+          },
+          {
+            "price": 4400,
+            "quantity": 90
+          },
+          {
+            "price": 4500,
+            "quantity": 104.31
+          },
+          {
+            "price": 4600,
+            "quantity": 200
+          },
+          {
+            "price": 4700,
+            "quantity": 63.4
+          },
+          {
+            "price": 5100,
+            "quantity": 111.16
+          },
+          {
+            "price": 5900,
+            "quantity": 250
+          }
+        ],
+        "receivedAt": 1789159873017,
+        "exchangeAt": null,
+        "open": true
+      },
+      {
+        "yes": [
+          {
+            "price": 4600,
+            "quantity": 1697.36
+          },
+          {
+            "price": 5400,
+            "quantity": 245
+          },
+          {
+            "price": 6900,
+            "quantity": 7121
+          },
+          {
+            "price": 7000,
+            "quantity": 500
+          },
+          {
+            "price": 8500,
+            "quantity": 500
+          },
+          {
+            "price": 9000,
+            "quantity": 500
+          },
+          {
+            "price": 9900,
+            "quantity": 27999
+          }
+        ],
+        "no": [
+          {
+            "price": 5500,
+            "quantity": 9.87
+          },
+          {
+            "price": 9800,
+            "quantity": 7040
+          },
+          {
+            "price": 9900,
+            "quantity": 27500
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 4500,
+            "quantity": 9.87
+          },
+          {
+            "price": 200,
+            "quantity": 7040
+          },
+          {
+            "price": 100,
+            "quantity": 27500
+          }
+        ],
+        "noBids": [
+          {
+            "price": 5400,
+            "quantity": 1697.36
+          },
+          {
+            "price": 4600,
+            "quantity": 245
+          },
+          {
+            "price": 3100,
+            "quantity": 7121
+          },
+          {
+            "price": 3000,
+            "quantity": 500
+          },
+          {
+            "price": 1500,
+            "quantity": 500
+          },
+          {
+            "price": 1000,
+            "quantity": 500
+          },
+          {
+            "price": 100,
+            "quantity": 27999
+          }
+        ],
+        "receivedAt": 1789159872943,
+        "exchangeAt": 1789159784069,
+        "open": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,280 @@
+{
+  "startedAt": 1789160534901,
+  "endedAt": 1789160715124,
+  "pairCount": 100,
+  "scope": {
+    "Sports": 100
+  },
+  "telemetry": {
+    "at": 1789160715008,
+    "host": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "cpu": "Apple M1 Pro",
+      "runtime": "v25.8.1"
+    },
+    "clockUncertainty": "Unknown wall-clock offset; exchange-to-receive is not one-way latency; monotonic values are process-local",
+    "interval": {
+      "startMono": 170440.943083,
+      "endMono": 180413.849375,
+      "durationMs": 9972.906292
+    },
+    "intervalRates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0,
+      "messages": 14.639664278919108,
+      "bookUpdates": 14.639664278919108,
+      "evaluations": 29.279328557838216,
+      "STRICT_EXECUTION_FRESH": 16.04346770292505,
+      "EXCHANGE_TIMESTAMP_OLD": 0.10027167314328156,
+      "reconciliationRequests": 0.5013583657164078,
+      "kalshiRestRequests": 0.3008150194298447,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 13.135589181769884,
+      "polyRestRequests": 0.20054334628656312,
+      "reconciliationOlderRestSnapshots": 0.20054334628656312,
+      "strictBookAgeOnlyRejectedEvaluations": 3.108421867441728,
+      "eventLoopDelayEpisodes": 0,
+      "RECOVERY_DETAIL": 0,
+      "deferredInvalidBookEvaluations": 0,
+      "EVENT_LOOP_DELAY": 0,
+      "DISCONNECT_DETAIL": 0,
+      "DISCONNECTED": 0,
+      "RECONNECT": 0,
+      "CONNECTION_UNHEALTHY": 0
+    },
+    "uptimeMs": 180110.876875,
+    "counters": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 4,
+      "messages": 3129,
+      "bookUpdates": 3327,
+      "evaluations": 6044,
+      "STRICT_EXECUTION_FRESH": 3443,
+      "EXCHANGE_TIMESTAMP_OLD": 433,
+      "reconciliationRequests": 85,
+      "kalshiRestRequests": 243,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 2068,
+      "polyRestRequests": 141,
+      "reconciliationOlderRestSnapshots": 28,
+      "strictBookAgeOnlyRejectedEvaluations": 285,
+      "eventLoopDelayEpisodes": 1,
+      "RECOVERY_DETAIL": 2,
+      "deferredInvalidBookEvaluations": 200,
+      "EVENT_LOOP_DELAY": 2,
+      "DISCONNECT_DETAIL": 2,
+      "DISCONNECTED": 2,
+      "RECONNECT": 2,
+      "CONNECTION_UNHEALTHY": 100
+    },
+    "rates": {
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 0.022208542145825363,
+      "messages": 17.37263209357189,
+      "bookUpdates": 18.471954929790247,
+      "evaluations": 33.55710718234213,
+      "STRICT_EXECUTION_FRESH": 19.116002652019183,
+      "EXCHANGE_TIMESTAMP_OLD": 2.4040746872855956,
+      "reconciliationRequests": 0.471931520598789,
+      "kalshiRestRequests": 1.349168935358891,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 11.481816289391714,
+      "polyRestRequests": 0.7828511106403441,
+      "reconciliationOlderRestSnapshots": 0.15545979502077756,
+      "strictBookAgeOnlyRejectedEvaluations": 1.5823586278900572,
+      "eventLoopDelayEpisodes": 0.005552135536456341,
+      "RECOVERY_DETAIL": 0.011104271072912682,
+      "deferredInvalidBookEvaluations": 1.1104271072912681,
+      "EVENT_LOOP_DELAY": 0.011104271072912682,
+      "DISCONNECT_DETAIL": 0.011104271072912682,
+      "DISCONNECTED": 0.011104271072912682,
+      "RECONNECT": 0.011104271072912682,
+      "CONNECTION_UNHEALTHY": 0.5552135536456341
+    },
+    "latencyMs": {
+      "persistenceAck": {
+        "count": 5391,
+        "p50": 0.4497080000001006,
+        "p95": 17.37895899999421,
+        "p99": 88.75404099999287
+      },
+      "persistenceWrite": {
+        "count": 5391,
+        "p50": 0.12970899998617824,
+        "p95": 0.7407079999975394,
+        "p99": 2.7437079999945126
+      },
+      "capacityWorkerRoundTrip": {
+        "count": 2,
+        "p50": 75.23316699999998,
+        "p95": 75.23316699999998,
+        "p99": 75.23316699999998
+      },
+      "polyExchangeToReceive": {
+        "count": 1307,
+        "p50": 84,
+        "p95": 43919,
+        "p99": 81840
+      },
+      "processingLag": {
+        "count": 3327,
+        "p50": 0.09375,
+        "p95": 2.151832999996259,
+        "p99": 5.797208000003593
+      },
+      "evaluation": {
+        "count": 3127,
+        "p50": 0.4898749999993015,
+        "p95": 2.9585840000072494,
+        "p99": 4.626166999994894
+      },
+      "processing": {
+        "count": 3327,
+        "p50": 0.5983340000020689,
+        "p95": 4.252124999999069,
+        "p99": 6.333041999998386
+      },
+      "validBookProcessing": {
+        "count": 3127,
+        "p50": 0.5743749999965075,
+        "p95": 3.4277500000002874,
+        "p99": 5.126833999995142
+      },
+      "receiveToPersistenceAck": {
+        "count": 3327,
+        "p50": 1.399583000005805,
+        "p95": 34.41083300000173,
+        "p99": 100.37074999998731
+      },
+      "kalshiExchangeToReceive": {
+        "count": 1620,
+        "p50": -103,
+        "p95": -30,
+        "p99": -11
+      },
+      "kalshiRestRoundTrip": {
+        "count": 243,
+        "p50": 172.36887500001467,
+        "p95": 247.89283300000534,
+        "p99": 637.1893330000021
+      },
+      "polyRestRoundTrip": {
+        "count": 141,
+        "p50": 198.73562500000116,
+        "p95": 291.5377499999995,
+        "p99": 372.48112499999115
+      },
+      "invalidBookProcessing": {
+        "count": 200,
+        "p50": 3.3933749999996508,
+        "p95": 7.179833000001963,
+        "p99": 7.8802080000023125
+      }
+    },
+    "eventLoopMs": {
+      "p50": 11.051007,
+      "p95": 13.361151,
+      "p99": 16.162815,
+      "max": 280.756223
+    },
+    "cpuPercent": 4.137007786137903,
+    "memory": {
+      "rss": 232062976,
+      "heapTotal": 138395648,
+      "heapUsed": 28675664,
+      "external": 10654222,
+      "arrayBuffers": 651455
+    },
+    "sampleLimit": 10000
+  },
+  "storage": {
+    "processed": 3327,
+    "persisted": 148,
+    "ringRecords": 275,
+    "ringBytes": 420036,
+    "logicalBytes": 2072576,
+    "bytesPerHour": 24013799.67194031,
+    "projectedGBPerDay": 0.5763311921265675,
+    "evidencePerSecond": 0.646712642056311
+  },
+  "persistence": {
+    "queueDepth": 0,
+    "queueBytes": 0,
+    "lastAckAt": 1789160714940,
+    "failed": false
+  },
+  "streams": [
+    {
+      "venue": "kalshi",
+      "shard": "kalshi:68188801fbef",
+      "connectionAgeMs": 110894.82245800001,
+      "reconnectCount": 1,
+      "reconciliationRequests": 43,
+      "lastReconciliationAt": 1789160713211,
+      "lastDisconnect": {
+        "venue": "kalshi",
+        "shard": "kalshi:68188801fbef",
+        "connectionAgeMs": 67277.59908300001,
+        "reconnectCount": 0,
+        "reconciliationRequests": 17,
+        "lastReconciliationAt": 1789160601098,
+        "markets": 100,
+        "connected": false,
+        "heartbeatAgeMs": 2079.122166999994,
+        "lastMessageAgeMs": 327.48354200000176,
+        "rttMs": 168.9805420000048,
+        "eventLoopDelayMs": 0,
+        "persistenceBacklog": 196,
+        "restActive": false,
+        "metadataActive": true,
+        "discoveryActive": false,
+        "closeCode": 1006,
+        "closeReason": "",
+        "initiator": "client",
+        "recoveryReason": "EVENT_LOOP_DELAY"
+      },
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 647.8762500000012,
+      "lastMessageAgeMs": 386.60812499999884,
+      "rttMs": 214.04529200002435
+    },
+    {
+      "venue": "poly",
+      "shard": "poly:3abae988ba0d",
+      "connectionAgeMs": 110989.53949999998,
+      "reconnectCount": 1,
+      "reconciliationRequests": 42,
+      "lastReconciliationAt": 1789160711203,
+      "lastDisconnect": {
+        "venue": "poly",
+        "shard": "poly:3abae988ba0d",
+        "connectionAgeMs": 67341.698042,
+        "reconnectCount": 0,
+        "reconciliationRequests": 16,
+        "lastReconciliationAt": 1789160599097,
+        "markets": 100,
+        "connected": false,
+        "heartbeatAgeMs": 2077.7916660000046,
+        "lastMessageAgeMs": 346.8610420000041,
+        "rttMs": 176.59695900000224,
+        "eventLoopDelayMs": 0,
+        "persistenceBacklog": 193,
+        "restActive": false,
+        "metadataActive": true,
+        "discoveryActive": false,
+        "closeCode": 1006,
+        "closeReason": "",
+        "initiator": "client",
+        "recoveryReason": "EVENT_LOOP_DELAY"
+      },
+      "markets": 100,
+      "connected": true,
+      "heartbeatAgeMs": 793.1454170000216,
+      "lastMessageAgeMs": 268.3680830000085,
+      "rttMs": 180.362999999983
+    }
+  ],
+  "interpretation": "Shortlist research only; no approval, orders or fills. Short sample cannot establish opportunity frequency or future income."
+}

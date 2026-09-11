@@ -114,7 +114,20 @@ export function discoverCandidates(
         m: { ...m, identity },
         structured: fields(m),
         identity,
-        hints: generalHints(m),
+        // Primary payout dates/concepts disambiguate generic titles. Exclude later
+        // exception paragraphs and examples; preserve title-based entity/placement.
+        hints: (() => {
+          const title = generalHints(m);
+          const primary = generalHints({
+            ...m,
+            title: m.rules.split(/\n|[.!?](?:\s|$)/)[0],
+          });
+          return {
+            ...title,
+            years: [...new Set([...title.years, ...primary.years])],
+            concepts: [...new Set([...title.concepts, ...primary.concepts])],
+          };
+        })(),
         tokens: words(
           m.title + " " + m.outcome + " " + (identity?.outcome ?? ""),
         ),
@@ -401,6 +414,9 @@ export function discoverCandidates(
             "qualify",
             "seed",
             "undefeated",
+            "regular season champion",
+            "relegation",
+            "promotion",
             "playoffs",
             "finals",
             "leader",

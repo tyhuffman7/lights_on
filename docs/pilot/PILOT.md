@@ -1,5 +1,7 @@
 # $200 pilot: authorization, implementation and launch status
 
+Latest evidence: [PROOF-OF-EDGE.md](PROOF-OF-EDGE.md). No profitability or execution proof; both new bounded live samples are complete.
+
 The user authorized a pilot with $100 on Kalshi and $100 on Polymarket US and accepted a maximum loss of the full $200. Larger funding is not authorized. Account funding has not been verified. The objective is to establish actual fills and realized net results before scaling; there is no earnings promise.
 
 This checkpoint implements preflight checks, a durable intent-ledger foundation and a historical capital-fit audit. It does **not** implement live exchange order submission or an automatic execution loop. Research mode remains unable to place orders. Budget authorization is recorded so it does not need to be requested again; factual launch prerequisites still apply.
@@ -23,9 +25,9 @@ The first-stage ledger deliberately has no automatic inventory-release or bankro
 
 The read-only audit inspected 1,920 historical opportunities and 10,399 saved states with assumed standalone $100-per-venue accounts. 347 events had a positive one-contract model with fresh saved books. These are hypothetical scenarios, not realized profit. The user has removed the initial horizon restriction. All 1,920 were unverified sports observations; **zero states were launch-eligible**.
 
-[Historical audit JSON](historical-audit.json) includes the single near-term event's frozen rules, books-derived plan and blockers. Each scenario starts with hypothetical full funding, so events cannot be summed into a monthly profit forecast. Repeated states and overlapping opportunities are not independent earning opportunities. Blocker counts are per opportunity with at least one affected state, so they overlap.
+[Historical audit JSON](historical-audit.json) includes selected frozen rules, books-derived plans, blockers and timing scenarios. Each scenario starts with hypothetical full funding, so events cannot be summed into a monthly profit forecast. Repeated states and overlapping opportunities are not independent earning opportunities. Blocker counts are per opportunity with at least one affected state, so they overlap.
 
-The sole near-term model is Jamaica Kingsmen versus Barbados Royals cricket. [Its rule review](CRICKET-REVIEW.md) remains unresolved; it has not been approved. The leading NFL review candidate also has a substantive 48-hour versus two-week postponement difference. Identity agreement does not establish settlement equivalence.
+An earlier near-term example is Jamaica Kingsmen versus Barbados Royals cricket. [Its rule review](CRICKET-REVIEW.md) remains unresolved; it has not been approved. The leading NFL review candidate also has a substantive 48-hour versus two-week postponement difference. Identity agreement does not establish settlement equivalence.
 
 Reproduce the historical audit without credentials or network access:
 
@@ -39,11 +41,11 @@ Kalshi's [current V2 create-order specification](https://docs.kalshi.com/api-ref
 
 The [Polymarket US order overview](https://docs.polymarket.us/api-reference/orders/overview) distinguishes order acknowledgments, partial fills, fills, and cancellations; includes IOC/FOK; and requires an automatic-order indicator for automated activity. Its NO exposure and price representation require explicit translation tests. Do not copy a generic YES/NO price directly into an order request without validating those semantics.
 
-No exchange write endpoint was called. Remaining launch work is concrete: establish a genuinely eligible short-dated pair with reviewed rules, support its actual fee/tick/quantity regime, implement and test authoritative order/fill/balance adapters and paired recovery, resolve sustained-observer stalls, and collect a realistic fill simulation before any live pilot entry. The accepted loss budget does not remove those implementation requirements.
+No exchange write endpoint was called. Remaining launch work is concrete: establish a genuinely eligible pair with reviewed rules, support its actual fee/tick/quantity regime, implement and test authoritative order/fill/balance adapters and paired recovery, resolve sustained-observer stalls, and collect a realistic fill simulation before any live pilot entry. The accepted loss budget does not remove those implementation requirements.
 
 ## Validation
 
-130 tests pass, including 15 pilot regressions covering two-leg depth, worst-price plans, unverified and unsupported markets, stale clocks/accounts/metadata, fixed funding authority, restart recovery, unknown submissions, acknowledgment-versus-fill, duplicate/conflicting evidence, partial cancellation, persistent halt, atomic pair reservations and long-dated eligibility. TypeScript and production build pass; the existing route-classification notice remains. Tests use synthetic fills; they do not prove venue execution reliability.
+The prior foundation checkpoint had 130 passing tests, including 15 pilot regressions covering two-leg depth, worst-price plans, unverified and unsupported markets, stale clocks/accounts/metadata, fixed funding authority, restart recovery, unknown submissions, acknowledgment-versus-fill, duplicate/conflicting evidence, partial cancellation, persistent halt, atomic pair reservations and long-dated eligibility. TypeScript and production build pass; the existing route-classification notice remains. Tests use synthetic fills; they do not prove venue execution reliability.
 
 ## Entry and early exit
 
