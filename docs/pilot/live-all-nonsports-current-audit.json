@@ -1,23 +1,23 @@
 {
   "timingSummary": {
     "100/100": {
-      "INSUFFICIENT_EVIDENCE": 6,
+      "INSUFFICIENT_EVIDENCE": 5,
       "BOTH_DISPLAYED_AVAILABLE": 4
     },
     "100/250": {
-      "INSUFFICIENT_EVIDENCE": 7,
+      "INSUFFICIENT_EVIDENCE": 6,
       "BOTH_DISPLAYED_AVAILABLE": 3
     },
     "250/100": {
-      "INSUFFICIENT_EVIDENCE": 7,
+      "INSUFFICIENT_EVIDENCE": 6,
       "BOTH_DISPLAYED_AVAILABLE": 3
     },
     "250/250": {
-      "INSUFFICIENT_EVIDENCE": 7,
+      "INSUFFICIENT_EVIDENCE": 6,
       "BOTH_DISPLAYED_AVAILABLE": 3
     },
     "500/500": {
-      "INSUFFICIENT_EVIDENCE": 7,
+      "INSUFFICIENT_EVIDENCE": 6,
       "BOTH_DISPLAYED_AVAILABLE": 2,
       "ONE_LEG_ONLY": 1
     }
@@ -54,7 +54,7 @@
         }
       ],
       "skipped": {
-        "INSUFFICIENT_TWO_LEG_DISPLAY": 6,
+        "INSUFFICIENT_TWO_LEG_DISPLAY": 5,
         "INVENTORY_ALREADY_HELD": 3
       },
       "cash": {
@@ -98,7 +98,7 @@
         }
       ],
       "skipped": {
-        "INSUFFICIENT_TWO_LEG_DISPLAY": 7,
+        "INSUFFICIENT_TWO_LEG_DISPLAY": 6,
         "INVENTORY_ALREADY_HELD": 2
       },
       "cash": {
@@ -142,7 +142,7 @@
         }
       ],
       "skipped": {
-        "INSUFFICIENT_TWO_LEG_DISPLAY": 7,
+        "INSUFFICIENT_TWO_LEG_DISPLAY": 6,
         "INVENTORY_ALREADY_HELD": 2
       },
       "cash": {
@@ -186,7 +186,7 @@
         }
       ],
       "skipped": {
-        "INSUFFICIENT_TWO_LEG_DISPLAY": 7,
+        "INSUFFICIENT_TWO_LEG_DISPLAY": 6,
         "INVENTORY_ALREADY_HELD": 2
       },
       "cash": {
@@ -230,7 +230,7 @@
         }
       ],
       "skipped": {
-        "INSUFFICIENT_TWO_LEG_DISPLAY": 8,
+        "INSUFFICIENT_TWO_LEG_DISPLAY": 7,
         "INVENTORY_ALREADY_HELD": 1
       },
       "cash": {
@@ -245,7 +245,7 @@
     }
   },
   "timingInterpretation": "Fixed limits at the first positive state, not the best later quote. Delay is hypothetical send-to-arrival time. Cases beyond the recorded opportunity interval are censored. Displayed depth after a 75% haircut is not a fill or queue-position guarantee. All candidates remain unverified; results are not live-eligible or earnings.",
-  "at": "2026-09-11T23:27:03.020Z",
+  "at": "2026-09-11T23:30:50.350Z",
   "policy": {
     "capitalPerVenue": 1000000,
     "totalLossLimit": 2000000,
@@ -265,7 +265,7 @@
   "statesAudited": 135,
   "opportunitiesWithPositiveStandaloneOneContractModel": 19,
   "freshPositiveStandaloneModels": 19,
-  "positiveEventsStillMatching": 10,
+  "positiveEventsStillMatching": 9,
   "remainingReviewPairs": [
     {
       "timingFromFirstPositiveState": {
@@ -832,285 +832,6 @@
           "limitPrice": 9100,
           "modeledDebit": 9100,
           "feeUpper": 0
-        }
-      ]
-    },
-    {
-      "timingFromFirstPositiveState": {
-        "stateId": 2,
-        "limitLegs": [
-          {
-            "venue": "kalshi",
-            "marketId": "KXNEXTPRESSEC-29JAN21-SJEN",
-            "side": "yes",
-            "quantity": 1,
-            "limitPrice": 2000,
-            "modeledDebit": 2200,
-            "feeUpper": 200
-          },
-          {
-            "venue": "poly",
-            "marketId": "nphc-presssec-repkl-scojen",
-            "side": "no",
-            "quantity": 1,
-            "limitPrice": 7300,
-            "modeledDebit": 7400,
-            "feeUpper": 100
-          }
-        ],
-        "at": 1789167949756,
-        "scenarios": [
-          {
-            "kalshiDelayMs": 100,
-            "polyDelayMs": 100,
-            "status": "INSUFFICIENT_EVIDENCE",
-            "legs": [
-              {
-                "venue": "kalshi",
-                "status": "UNOBSERVED",
-                "debit": null
-              },
-              {
-                "venue": "poly",
-                "status": "UNOBSERVED",
-                "debit": null
-              }
-            ],
-            "modeledNet": null,
-            "confirmedFills": 0
-          },
-          {
-            "kalshiDelayMs": 100,
-            "polyDelayMs": 250,
-            "status": "INSUFFICIENT_EVIDENCE",
-            "legs": [
-              {
-                "venue": "kalshi",
-                "status": "UNOBSERVED",
-                "debit": null
-              },
-              {
-                "venue": "poly",
-                "status": "UNOBSERVED",
-                "debit": null
-              }
-            ],
-            "modeledNet": null,
-            "confirmedFills": 0
-          },
-          {
-            "kalshiDelayMs": 250,
-            "polyDelayMs": 100,
-            "status": "INSUFFICIENT_EVIDENCE",
-            "legs": [
-              {
-                "venue": "kalshi",
-                "status": "UNOBSERVED",
-                "debit": null
-              },
-              {
-                "venue": "poly",
-                "status": "UNOBSERVED",
-                "debit": null
-              }
-            ],
-            "modeledNet": null,
-            "confirmedFills": 0
-          },
-          {
-            "kalshiDelayMs": 250,
-            "polyDelayMs": 250,
-            "status": "INSUFFICIENT_EVIDENCE",
-            "legs": [
-              {
-                "venue": "kalshi",
-                "status": "UNOBSERVED",
-                "debit": null
-              },
-              {
-                "venue": "poly",
-                "status": "UNOBSERVED",
-                "debit": null
-              }
-            ],
-            "modeledNet": null,
-            "confirmedFills": 0
-          },
-          {
-            "kalshiDelayMs": 500,
-            "polyDelayMs": 500,
-            "status": "INSUFFICIENT_EVIDENCE",
-            "legs": [
-              {
-                "venue": "kalshi",
-                "status": "UNOBSERVED",
-                "debit": null
-              },
-              {
-                "venue": "poly",
-                "status": "UNOBSERVED",
-                "debit": null
-              }
-            ],
-            "modeledNet": null,
-            "confirmedFills": 0
-          }
-        ]
-      },
-      "matchesCurrentDiscovery": true,
-      "mappingId": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
-      "orientation": "kalshi_yes+pm_us_no",
-      "title": "Will Scott Jennings be the next White House Press Secretary of United States?",
-      "verificationAtObservation": "UNVERIFIED",
-      "firstSeenAt": 1789167949756,
-      "modeledNetPerOneContractUSD": 0.03,
-      "freshPositiveModelAtRecordedTime": true,
-      "bestFreshModeledNetUSD": 0.03,
-      "reviewEvidence": {
-        "pair": {
-          "id": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
-          "a": {
-            "id": "KXNEXTPRESSEC-29JAN21-SJEN",
-            "venue": "kalshi",
-            "identity": {
-              "sports": false,
-              "general": {},
-              "participants": [],
-              "outcome": "scott jennings",
-              "entities": [],
-              "numbers": [],
-              "aliases": []
-            },
-            "exchangeIndex": 0,
-            "title": "Will Scott Jennings be the next White House Press Secretary of United States?",
-            "outcome": "Scott Jennings",
-            "opposite": "Scott Jennings",
-            "category": "Politics",
-            "rules": "If the first new person to become White House Press Secretary after Issuance is Scott Jennings, then the market resolves to Yes.\n\nThe market resolves based on who first begins serving as White House Press Secretary, not who is nominated or announced for the role. Acting or interim service counts. If the person serving as White House Press Secretary at Issuance remains in the position through the expiration date, all markets referring to a person resolve to No, and “No new person” resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/NEXTPM.pdf\n\n[{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"}]",
-            "url": "https://kalshi.com/markets/kxnextpressec/kxnextpressec-29jan21",
-            "closeAt": "2029-01-21T15:00:00Z",
-            "open": true,
-            "feeRate": 700,
-            "feeRounding": "ceil",
-            "minQty": 1,
-            "hash": "3f0164675e9f85a61a0a848a3f4fd13be02c52b033257b2cc79975ff693c12c5",
-            "settlement": null,
-            "series": "KXNEXTPRESSEC"
-          },
-          "b": {
-            "id": "nphc-presssec-repkl-scojen",
-            "venue": "poly",
-            "identity": {
-              "sports": false,
-              "general": {},
-              "competition": "presssec",
-              "eventAt": "2026-08-14T16:16:00.000Z",
-              "eventDate": "2026-08-14",
-              "participants": [],
-              "marketType": "future",
-              "entities": [],
-              "numbers": [],
-              "aliases": [],
-              "eventKey": "next white house press secretary"
-            },
-            "title": "Scott Jennings · Next White House Press Secretary?",
-            "outcome": "Yes",
-            "opposite": "No",
-            "category": "politics",
-            "rules": "This market will settle to Yes if Scott Jennings is the next person to assume the position of White House Press Secretary by December 31, 2027, 11:59 PM ET. Outcome sourced from the White House.\n\nA person will be considered to assume the position of White House Press Secretary when they are appointed to the role by the President. Acting or interim White House Press Secretaries will not qualify.",
-            "url": "https://polymarket.us/event/nphc-presssec-repkl-scojen",
-            "closeAt": "2028-01-14T23:00:00Z",
-            "open": true,
-            "feeRate": 600,
-            "feeRounding": "even",
-            "minQty": 0.01,
-            "hash": "3a3cd8d7073df7aea381be043f51739e2881ffbb556d4687410faa619e29435b",
-            "settlement": null
-          },
-          "inverted": false,
-          "reviewed": false
-        },
-        "preflight": {
-          "mode": "PILOT_PREFLIGHT_ONLY",
-          "eligible": false,
-          "reasons": [
-            "RULE_EQUIVALENCE_UNVERIFIED",
-            "APPROVAL_EVIDENCE_MISSING",
-            "EXECUTION_PROTOCOL_UNVALIDATED",
-            "LIVE_FEE_BOUND_UNVALIDATED"
-          ],
-          "mappingId": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
-          "ruleHashes": [
-            "3f0164675e9f85a61a0a848a3f4fd13be02c52b033257b2cc79975ff693c12c5",
-            "3a3cd8d7073df7aea381be043f51739e2881ffbb556d4687410faa619e29435b"
-          ],
-          "createdAt": 1789167949756,
-          "expiresAt": 1789167950006,
-          "quantity": 1,
-          "legs": [
-            {
-              "venue": "kalshi",
-              "marketId": "KXNEXTPRESSEC-29JAN21-SJEN",
-              "side": "yes",
-              "quantity": 1,
-              "limitPrice": 2000,
-              "modeledDebit": 2200,
-              "feeUpper": 200
-            },
-            {
-              "venue": "poly",
-              "marketId": "nphc-presssec-repkl-scojen",
-              "side": "no",
-              "quantity": 1,
-              "limitPrice": 7300,
-              "modeledDebit": 7400,
-              "feeUpper": 100
-            }
-          ],
-          "modeledNet": 300,
-          "policy": {
-            "capitalPerVenue": 1000000,
-            "totalLossLimit": 2000000,
-            "contractsPerPair": 1,
-            "maxPairDebit": 20000,
-            "maxCommitted": 100000,
-            "reservePerVenue": 100000,
-            "maxDepthFraction": 0.25,
-            "maxBookAgeMs": 2000,
-            "maxMetadataAgeMs": 60000,
-            "maxAccountAgeMs": 5000,
-            "maxPlanAgeMs": 250,
-            "minimumNetProfit": 100,
-            "uncertaintyReserve": 100
-          },
-          "interpretation": "Displayed liquidity and modeled net edge are not confirmed fills or realized profit. This result never submits an order."
-        }
-      },
-      "blockers": [
-        "RULE_EQUIVALENCE_UNVERIFIED",
-        "APPROVAL_EVIDENCE_MISSING",
-        "EXECUTION_PROTOCOL_UNVALIDATED",
-        "LIVE_FEE_BOUND_UNVALIDATED",
-        "BOOK_NOT_STRICTLY_FRESH"
-      ],
-      "legs": [
-        {
-          "venue": "kalshi",
-          "marketId": "KXNEXTPRESSEC-29JAN21-SJEN",
-          "side": "yes",
-          "quantity": 1,
-          "limitPrice": 2000,
-          "modeledDebit": 2200,
-          "feeUpper": 200
-        },
-        {
-          "venue": "poly",
-          "marketId": "nphc-presssec-repkl-scojen",
-          "side": "no",
-          "quantity": 1,
-          "limitPrice": 7300,
-          "modeledDebit": 7400,
-          "feeUpper": 100
         }
       ]
     },
@@ -2100,7 +1821,7 @@
           }
         ]
       },
-      "matchesCurrentDiscovery": true,
+      "matchesCurrentDiscovery": false,
       "mappingId": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
       "orientation": "kalshi_yes+pm_us_no",
       "title": "Will Scott Jennings be the next White House Press Secretary of United States?",
@@ -10342,7 +10063,7 @@
           }
         ]
       },
-      "matchesCurrentDiscovery": true,
+      "matchesCurrentDiscovery": false,
       "mappingId": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
       "orientation": "kalshi_yes+pm_us_no",
       "title": "Will Scott Jennings be the next White House Press Secretary of United States?",

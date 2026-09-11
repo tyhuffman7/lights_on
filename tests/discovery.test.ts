@@ -779,3 +779,29 @@ test("Presidential announcement deadlines cannot be conflated with the election 
   assert.equal(matchCandidates([a], [aligned]).length, 1);
   assert.equal(matchCandidates([a], [aligned])[0].status, "UNVERIFIED");
 });
+
+test("Explicit conflicting acting/interim service rules reject an office pair", () => {
+  const a = {
+    ...market("kalshi"),
+    title: "Who will be the next White House Press Secretary?",
+    outcome: "Scott Jennings",
+    category: "politics",
+    rules:
+      "The first new White House Press Secretary is Scott Jennings. Acting or interim service counts.",
+  };
+  const b = {
+    ...market("poly"),
+    title: "Scott Jennings · Who will be the next White House Press Secretary?",
+    outcome: "Yes",
+    category: "politics",
+    rules:
+      "Scott Jennings is the next White House Press Secretary. Acting or interim White House Press Secretaries will not qualify.",
+  };
+  assert.equal(matchCandidates([a], [b]).length, 0);
+  const aligned = {
+    ...b,
+    rules: b.rules.replace("will not qualify", "will qualify"),
+  };
+  assert.equal(matchCandidates([a], [aligned]).length, 1);
+  assert.equal(matchCandidates([a], [aligned])[0].status, "UNVERIFIED");
+});

@@ -1,8 +1,12 @@
+## Acting/interim follow-up
+
+173 tests, TypeScript and build passed. Explicit opposing acting/interim office-service clauses now exclude candidates. See `docs/pilot/REMAINING-RULE-REVIEW.md` for review of the remaining nominee, AOC and artist pairs against public contract PDFs. None approved. The earlier five-pair count below predates this exclusion; regenerated audit reports use current matching. The 299-pair observer is stopped.
+
 ## Latest: announcement deadlines and restart evidence
 
 The 299-pair non-sports observer completed its 900 seconds and stopped. Reports: `docs/pilot/live-all-nonsports-current-{audit,health,full-budget-size-audit}.json`. It recorded 42 opportunity intervals / 135 states, 19 positive standalone one-contract modeled occurrences, zero eligible orders. A newly tested announcement-deadline exclusion removes nine positive occurrences: a shared 2028 election year must not conflate an announcement deadline in 2026 with one in 2027. Equal calendar deadline hints remain UNVERIFIED; time zones, party scope and exceptions still require settlement review.
 
-Current matching retains ten positive occurrences across five pairs. At 100/100ms, four have both sides displayed and six insufficient evidence; at 500/500ms, two have both displayed, one only one leg, seven insufficient evidence. These are not confirmed fills. Remaining review pairs: Gavin Newsom and Rahm Emanuel Democratic nomination, Scott Jennings press secretary, AOC announcement by year-end 2026, and You Again album. Full-budget size sweep is hypothetical and cannot be summed as earnings.
+Current matching retains ten positive occurrences across five pairs. At 100/100ms, four have both sides displayed and six insufficient evidence; at 500/500ms, two have both displayed, one only one leg, seven insufficient evidence. These are not confirmed fills. Remaining review pairs: Gavin Newsom and Rahm Emanuel Democratic nomination, Scott Jennings press secretary, AOC announcement by year-end 2026, and YoungBoy Never Broke Again number-one album. Full-budget size sweep is hypothetical and cannot be summed as earnings.
 
 The observer recorded one event-loop-delay episode and six reconnects; metadata refresh was active at the event but causation is unproven. Processing p99 6.43ms; receive-to-persistence-ack p99 169.48ms. Targeted tests/light development overlapped; no claim of host isolation. Cloud migration is not provisioned and would require measured comparison.
 

@@ -578,3 +578,21 @@ export function announcementDeadline(rules: string): string | undefined {
     date.setUTCDate(date.getUTCDate() - 1);
   return date.toISOString().slice(0, 10);
 }
+
+// Explicit office-service exceptions only. Unknown or contradictory text is not proof.
+export function interimService(
+  rules: string,
+): "included" | "excluded" | undefined {
+  const clauses =
+    rules.match(
+      /(?:Acting or interim|Interim or acting)(?: service| [A-Za-z ]{1,60})? (?:counts|will count|will qualify|will not qualify|does not count|do not count)\b/gi,
+    ) ?? [];
+  const values = new Set(
+    clauses.map((c) =>
+      /not/.test(c.toLowerCase())
+        ? ("excluded" as const)
+        : ("included" as const),
+    ),
+  );
+  return values.size === 1 ? [...values][0] : undefined;
+}

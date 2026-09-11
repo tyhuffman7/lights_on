@@ -1,8 +1,8 @@
 {
-  "at": "2026-09-11T23:27:03.508Z",
+  "at": "2026-09-11T23:30:50.713Z",
   "mode": "RESEARCH_SIZE_SWEEP",
-  "matchingIntervals": 32,
-  "states": 112,
+  "matchingIntervals": 31,
+  "states": 110,
   "maximumContracts": 200,
   "maximumCombinedDebitUSD": 180,
   "depthFraction": 0.25,
@@ -1546,35 +1546,6 @@
       "eligible": false
     },
     {
-      "pairId": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
-      "orientation": "kalshi_yes+pm_us_no",
-      "at": 1789167949756,
-      "quantity": 2,
-      "modeledNet": 600,
-      "debit": 19200,
-      "legs": [
-        {
-          "venue": "kalshi",
-          "marketId": "KXNEXTPRESSEC-29JAN21-SJEN",
-          "side": "yes",
-          "quantity": 2,
-          "limitPrice": 2000,
-          "modeledDebit": 4400,
-          "feeUpper": 400
-        },
-        {
-          "venue": "poly",
-          "marketId": "nphc-presssec-repkl-scojen",
-          "side": "no",
-          "quantity": 2,
-          "limitPrice": 7300,
-          "modeledDebit": 14800,
-          "feeUpper": 200
-        }
-      ],
-      "eligible": false
-    },
-    {
       "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
       "orientation": "kalshi_yes+pm_us_no",
       "at": 1789168017645,
@@ -2614,35 +2585,6 @@
           "limitPrice": 9100,
           "modeledDebit": 9100,
           "feeUpper": 0
-        }
-      ],
-      "eligible": false
-    },
-    {
-      "pairId": "KXNEXTPRESSEC-29JAN21-SJEN::nphc-presssec-repkl-scojen",
-      "orientation": "kalshi_yes+pm_us_no",
-      "at": 1789167949756,
-      "quantity": 1,
-      "modeledNet": 300,
-      "debit": 9600,
-      "legs": [
-        {
-          "venue": "kalshi",
-          "marketId": "KXNEXTPRESSEC-29JAN21-SJEN",
-          "side": "yes",
-          "quantity": 1,
-          "limitPrice": 2000,
-          "modeledDebit": 2200,
-          "feeUpper": 200
-        },
-        {
-          "venue": "poly",
-          "marketId": "nphc-presssec-repkl-scojen",
-          "side": "no",
-          "quantity": 1,
-          "limitPrice": 7300,
-          "modeledDebit": 7400,
-          "feeUpper": 100
         }
       ],
       "eligible": false
