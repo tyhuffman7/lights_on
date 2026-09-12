@@ -15,7 +15,7 @@ export function assess(pair:Pair,a:Book,b:Book,s:Settings,cash:{kalshi:number;po
  if([pair.a,pair.b].some(m=>!Number.isFinite(m.minQty)||m.minQty<=0))return null;
  const reasons:string[]=[];
  if(!pair.reviewed)reasons.push('Settlement rules need review');
- if([pair.a,pair.b].some(m=>/sport|unknown/i.test(m.category)||!m.category))reasons.push('Category excluded for Ohio research');
+ if([pair.a,pair.b].some(m=>/unknown/i.test(m.category)||!m.category))reasons.push('Unknown or missing market category');
  if(!pair.a.open||!pair.b.open||!a.open||!b.open)reasons.push('Market is not open');
  if([a,b].some(x=>now-x.receivedAt>s.maxAge||x.receivedAt>now+1000)||Math.abs(a.receivedAt-b.receivedAt)>s.maxAge)reasons.push('Stale or unsynchronized order books');
  if([a,b].some(x=>x.exchangeAt!==null && (now-x.exchangeAt>s.maxAge || x.exchangeAt>now+1000)))reasons.push('Exchange timestamp is stale');

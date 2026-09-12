@@ -38,6 +38,7 @@ export class LiveRecorder {
   onFailure: () => void;
   activity: Record<string, ResearchActivity> = {};
   rawActive = new Set<string>();
+  onBook: ((book: StreamBook) => void) | null = null;
   streamHealthy: (venue: string, id: string) => boolean = () => false;
   storage: Record<string, number> = {};
   next = 0;
@@ -344,6 +345,7 @@ export class LiveRecorder {
       }
     }
     this.enqueue("book", { book, evaluations });
+    this.onBook?.(book);
     this.telemetry.count("bookUpdates");
     this.telemetry.sample("evaluation", performance.now() - started);
     const processingMs = performance.now() - book.receivedMono;

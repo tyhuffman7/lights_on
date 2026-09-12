@@ -68,7 +68,7 @@ export function evaluate(
     common.push("BOOK_STALE");
   if (
     [pair.a, pair.b].some(
-      (m) => !m.category || /sport|unknown/i.test(m.category),
+      (m) => !m.category || /unknown/i.test(m.category),
     )
   )
     common.push("CATEGORY_EXCLUDED");

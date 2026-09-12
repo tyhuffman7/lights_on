@@ -32,6 +32,7 @@ export type Market = {
   exchangeIndex?: number;
 };
 export type Pair = {
+  paperApproval?: import("./paper-approval.ts").ConditionalPaperApproval;
   id: string;
   a: Market;
   b: Market;
@@ -73,6 +74,8 @@ export type Quote = {
   receivedAt: number;
 };
 export type Position = {
+  aQuantity?:number; bQuantity?:number; executionModel?:'maker-public-tape';
+  makerEvidence?:{publicTradeIds:string[];initialQueueAhead:number;activeAt:number;expiresAt:number};
   id: string;
   pair: Pair;
   quote: Quote;
@@ -89,6 +92,8 @@ export type Position = {
 };
 export type Log = { id: string; at: number; kind: string; message: string };
 export type State = {
+  makerReserved?:{kalshi:number;poly:number};
+  provenance?: "synthetic";
   startedAt: number | null;
   settings: Settings;
   cash: { kalshi: number; poly: number };

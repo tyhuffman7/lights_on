@@ -61,6 +61,7 @@ export function authHeaders(
 export function subscriptions(
   venue: Venue,
   ids: string[],
+  includeTrades = false,
 ): Record<string, any>[] {
   const messages: Record<string, any>[] = [];
   for (let i = 0; i < ids.length; i += 100) {
@@ -71,7 +72,7 @@ export function subscriptions(
         ? {
             id,
             cmd: "subscribe",
-            params: { channels: ["orderbook_delta"], market_tickers: group },
+            params: { channels: ["orderbook_delta"], market_tickers: group, use_yes_price: false },
           }
         : {
             subscribe: {
@@ -83,6 +84,7 @@ export function subscriptions(
           },
     );
   }
+  if(includeTrades&&venue==="kalshi")for(let i=0;i<ids.length;i+=100)messages.push({id:1000+i/100,cmd:"subscribe",params:{channels:["trade"],market_tickers:ids.slice(i,i+100)}});
   return messages;
 }
 type Options = {
@@ -94,6 +96,7 @@ type Options = {
   onInvalid: (reason: string) => void;
   onDiagnostic: (kind: string, body: unknown) => void;
   context?: () => Record<string, unknown>;
+  includeTrades?: boolean;
   retryMs?: number;
   heartbeatMs?: number;
   heartbeatTimeoutMs?: number;
@@ -175,7 +178,7 @@ export class StreamConnection {
         this.connectedAt = performance.now();
         this.lastMessage = 0;
         this.lastPong = this.connectedAt;
-        for (const m of subscriptions(this.options.venue, this.options.ids))
+        for (const m of subscriptions(this.options.venue, this.options.ids, this.options.includeTrades))
           ws.send(JSON.stringify(m));
         this.options.onDiagnostic("CONNECTED", {
           venue: this.options.venue,

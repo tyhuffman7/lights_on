@@ -1,0 +1,195 @@
+[
+  {
+    "id": "KXNCAAFGAME-26SEP12RICEND-ND::aec-cfb-rice-nd-2026-09-12",
+    "a": {
+      "id": "KXNCAAFGAME-26SEP12RICEND-ND",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventDate": "2026-09-12",
+        "participants": [
+          "rice",
+          "notre dame"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "notre dame",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Notre Dame win the Rice vs Notre Dame college football game?",
+      "outcome": "Notre Dame",
+      "opposite": "Notre Dame",
+      "category": "Sports",
+      "rules": "If Notre Dame wins the Rice vs Notre Dame college football game originally scheduled for Sep 12, 2026, then the market resolves to Yes.\n\nThe following market refers to the team who wins the Rice vs Notre Dame college football game originally scheduled for Sep 12, 2026. If the game is postponed from its originally scheduled date but begins within 48 hours, the market will remain open and resolve based on the official final result. If the game is not started within 48 hours, the market will resolve to the a fair market price.\n\nKalshi is not affiliated,  associated,  authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLGAMEWIN.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafgame/kxncaafgame-26sep12ricend",
+      "closeAt": "2026-09-12T22:30:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "0c89fb9a2b42217b95232e2d3ce90a945488bb69c90c5e1c75ad3596fcf37f61",
+      "settlement": null,
+      "series": "KXNCAAFGAME"
+    },
+    "b": {
+      "id": "aec-cfb-rice-nd-2026-09-12",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-09-12T19:30:00.000Z",
+        "eventDate": "2026-09-12",
+        "participants": [
+          "rice",
+          "notre dame"
+        ],
+        "home": "notre dame",
+        "away": "rice",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "rice",
+        "entities": [],
+        "numbers": [
+          "12",
+          "2026",
+          "7",
+          "30"
+        ],
+        "aliases": [
+          {
+            "name": "rice",
+            "venue": "poly",
+            "venueId": "1169",
+            "aliases": [
+              "owls",
+              "owls",
+              "rice",
+              "rice",
+              "rice"
+            ]
+          },
+          {
+            "name": "notre dame",
+            "venue": "poly",
+            "venueId": "1086",
+            "aliases": [
+              "fighting irish",
+              "fighting irish",
+              "notre dame",
+              "nd",
+              "nd"
+            ]
+          }
+        ]
+      },
+      "title": "Who will win in the upcoming football event Owls vs Fighting Irish scheduled for September 12, 2026 at 7:30 PM UTC?",
+      "outcome": "Owls",
+      "opposite": "Fighting Irish",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Owls vs Fighting Irish College Football game scheduled for Sep 12, 2026. Overtime is included if played. If a tied final score is reported and no official winner is declared, this market will not resolve automatically and will be reviewed against the official governing-body result. If the game is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/aec-cfb-rice-nd-2026-09-12",
+      "closeAt": "2026-09-26T19:30:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "ce0e53b8f3310aceacd06a21031db67a5bcf77b98015d418141e2479ec0a960f",
+      "settlement": null
+    },
+    "inverted": true,
+    "reviewed": false
+  },
+  {
+    "id": "KXNFLPASSYDS-26SEP13BUFHOU-HOUCSTROUD7-150::astatc-nfl-buf-hou-2026-09-13-pyd-cstr-gte150",
+    "a": {
+      "id": "KXNFLPASSYDS-26SEP13BUFHOU-HOUCSTROUD7-150",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "nfl",
+        "eventDate": "2026-09-13",
+        "participants": [
+          "NFL:BUFFALO",
+          "NFL:HOUSTON"
+        ],
+        "participant": "c j stroud",
+        "marketType": "prop",
+        "line": 149.5,
+        "period": "full event",
+        "propType": "passing yards",
+        "outcome": "c j stroud",
+        "entities": [],
+        "numbers": [
+          "150",
+          "150"
+        ],
+        "units": "yards",
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "C.J. Stroud: 150+ passing yards",
+      "outcome": "C.J. Stroud: 150+",
+      "opposite": "C.J. Stroud: 150+",
+      "category": "Sports",
+      "rules": "If C.J. Stroud records 150+ passing yards in the Buffalo vs Houston Pro Football game originally scheduled for Sep 13, 2026, then the market resolves to Yes.\n\nThe following market refers to C.J. Stroud in the Buffalo vs Houston Pro Football game originally scheduled for Sep 13, 2026. If C.J. Stroud is active but never takes a snap, the market settles to the fair market price before game start. Once C.J. Stroud takes at least one snap, even if nullified by penalty, the market settles based on passing yards recorded.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSTAT.pdf\n\n[{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+      "url": "https://kalshi.com/markets/kxnflpassyds/kxnflpassyds-26sep13bufhou",
+      "closeAt": "2026-09-13T20:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "5e1203fa853549536d35e8978b2ddaaeed107a8a4112b465880e2845d3e0d982",
+      "settlement": null,
+      "series": "KXNFLPASSYDS"
+    },
+    "b": {
+      "id": "astatc-nfl-buf-hou-2026-09-13-pyd-cstr-gte150",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "nfl",
+        "eventAt": "2026-09-13T17:00:00.000Z",
+        "eventDate": "2026-09-13",
+        "participants": [
+          "NFL:BUFFALO",
+          "NFL:HOUSTON"
+        ],
+        "participant": "c j stroud",
+        "marketType": "prop",
+        "line": 149.5,
+        "period": "full event",
+        "propType": "passing yards",
+        "outcome": "c j stroud",
+        "entities": [],
+        "numbers": [
+          "150"
+        ],
+        "units": "yards",
+        "aliases": []
+      },
+      "title": "C.J. Stroud \u00b7 Will C.J. Stroud record 150+ passing yards?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if C.J. Stroud records at least 150 passing yards in the Buffalo Bills vs Houston Texans professional football game scheduled for Sep 13, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/astatc-nfl-buf-hou-2026-09-13-pyd-cstr-gte150",
+      "closeAt": "2026-09-27T17:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "9577946ac78ed5e7e16701549b54b9bf122ebefeb8f5b1dcd0a60fd02fbe03fb",
+      "settlement": null
+    },
+    "inverted": false,
+    "reviewed": false
+  }
+]

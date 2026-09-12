@@ -5,7 +5,7 @@ export async function POST(req:Request){try{
  if(x.action==='review'){
   if(x.rulesChecked!==true||x.outcomesChecked!==true||x.voidChecked!==true)throw new Error('Review all settlement conditions first');
   if(x.aHash!==a.hash||x.bHash!==b.hash)throw new Error('Rules changed while you reviewed. Load the pair again.');
-  if([a,b].some(m=>/sport|unknown/i.test(m.category)||!m.rules.trim()))throw new Error('Sports, unknown categories, or missing rules are excluded');
+  if([a,b].some(m=>/unknown/i.test(m.category)||!m.category||!m.rules.trim()))throw new Error('Unknown categories or missing rules are excluded');
   const s=await loadState(uid);
   const reviewed={...pair,reviewed:true,reviewedAt:Date.now(),notes:String(x.notes||'').slice(0,1000)};s.pairs=[reviewed,...s.pairs.filter(p=>p.id!==pair.id)];log(s,'review','Settlement mapping approved for paper research');return reply({pair:reviewed,state:await saveState(uid,s,s.version)});
  }

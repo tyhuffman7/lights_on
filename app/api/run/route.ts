@@ -1,5 +1,5 @@
 import {checkSettlements} from '@/lib/arb/settlement';
-import {freshPair,book,market} from '@/lib/arb/adapters';import {loadState,saveState} from '@/lib/store';import {user,reply,error,sameOrigin} from '@/lib/api';import {assess} from '@/lib/arb/engine';import {totals,log} from '@/lib/arb/ledger';import {executePaper} from '@/lib/arb/execution';
+import {freshPair,book,market} from '@/lib/arb/paper-data';import {loadState,saveState} from '@/lib/store';import {user,reply,error,sameOrigin} from '@/lib/api';import {assess} from '@/lib/arb/engine';import {totals,log} from '@/lib/arb/ledger';import {executePaper} from '@/lib/arb/execution';
 export async function POST(req:Request){try{
  sameOrigin(req);const uid=await user(),body=await req.json() as Record<string,any>;let s=await loadState(uid);const now=Date.now();
  if(now-s.lastRun<30000)throw new Error('The next paper cycle is available 30 seconds after the last one.');
@@ -16,7 +16,7 @@ export async function POST(req:Request){try{
    const [a,b]=await Promise.all([book(p.a),book(p.b)]);
    const horizon=Math.min(s.settings.maxDays,Math.max(0,(s.startedAt!+30*86400000-Date.now())/86400000));
    const limits={...s.settings,maxDays:horizon,maxTrade:Math.max(0,Math.min(s.settings.maxTrade,s.settings.maxCommitted-totals(s).committed))};
-   const q=assess(p,a,b,limits,s.cash);if(!q?.eligible)continue;
+   const q=assess(p,a,b,limits,s.cash);if(!q?.eligible){log(s,'entry rejected',`${p.a.title}: ${q?.reasons.join('; ')||'No fillable quantity: check minimum quantity, fee metadata, depth and available cash'}`);continue;}
    // Deliberately stress the hedge with a 500ms delay. REST depth is indicative, not a real fill.
    await new Promise(r=>setTimeout(r,500));
    const refreshed=await Promise.allSettled([book(p.a),book(p.b)]);

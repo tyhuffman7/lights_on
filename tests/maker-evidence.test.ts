@@ -1,0 +1,20 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {kalshiSellPrint,MakerQueue} from '../lib/arb/maker-evidence.ts';import {subscriptions} from '../worker/streams.ts';
+const msg=()=>({type:'trade',msg:{trade_id:'t',market_ticker:'K',yes_price_dollars:'0.3600',no_price_dollars:'0.6400',count_fp:'2.50',taker_side:'no',taker_outcome_side:'no',taker_book_side:'ask',is_block_trade:false,ts_ms:1100}});
+test('Trade subscription is opt-in and distinct from book subscription',()=>{assert.equal(subscriptions('kalshi',['K']).length,1);const s=subscriptions('kalshi',['K'],true);assert.equal(s.length,2);assert.deepEqual(s[1].params.channels,['trade']);assert.notEqual(s[0].id,s[1].id);assert.equal(subscriptions('poly',['P'],true).length,1);});
+test('Kalshi tape parsing rejects ambiguous or non-book executions',()=>{assert.deepEqual(kalshiSellPrint(msg()),{id:'t',marketId:'K',side:'yes',price:3600,quantity:2.5,at:1100});for(const changes of [{is_block_trade:true},{taker_book_side:'bid'},{taker_side:'yes'},{count_fp:'NaN'},{ts_ms:0},{trade_id:''}]){const m=msg();Object.assign(m.msg,changes);assert.equal(kalshiSellPrint(m),null);}});
+test('Maker queue consumes prints after activation, respects initial queue, partial volume and deduplication',()=>{const q=new MakerQueue('K','yes',3600,2,3,1000,3000),t=kalshiSellPrint(msg())!;assert.equal(q.consume(t,1150),0);assert.equal(q.ahead,.5);assert.equal(q.consume(t,1150),0);assert.equal(q.consume({...t,id:'t2',quantity:1},1200),.5);assert.equal(q.consume({...t,id:'t3',quantity:5},1200),1.5);assert.equal(q.filled,2);});
+test('Old, expired, wrong-side and disconnected evidence cannot fill a resting order',()=>{const q=new MakerQueue('K','yes',3600,1,0,1000,3000),t=kalshiSellPrint(msg())!;for(const changes of [{at:900},{at:3000},{price:3700},{side:'no'},{marketId:'X'}])assert.equal(q.consume({...t,...changes},1200),0);assert.equal(q.consume(t,3000),0);q.invalidate();assert.equal(q.consume(t,1200),0);assert.equal(q.filled,0);});
+
+import {makerPlan} from '../lib/arb/maker-plan.ts';import {pair,book} from './research-fixture.ts';import {initial} from '../lib/arb/ledger.ts';
+test('Maker planner uses a non-crossing resting bid, existing fee/risk checks, and leaves books unchanged',()=>{
+ const p={...pair('p'),reviewed:true},a=book('kalshi','Kp'),b=book('poly','Pp'),s=initial(),before=JSON.stringify({p,a,b,s});
+ const plan=makerPlan(p,a,b,s.settings,s.cash);assert.ok(plan);assert.equal(plan.price,a[plan.quote.aSide==='yes'?'yesBids':'noBids'][0].price);assert.ok(plan.ahead>0);assert.equal(plan.scope,'RESTING_QUOTE_PLAN_ONLY');assert.equal(JSON.stringify({p,a,b,s}),before);
+ assert.equal(makerPlan({...p,reviewed:false},a,b,s.settings,s.cash),null);assert.equal(makerPlan(p,{...a,receivedAt:Date.now()-10000},b,s.settings,s.cash),null);
+});
+
+test('Canonical Kalshi bid means a yes-direction taker and consumes a NO bid in complementary pricing',()=>{const m=msg();m.msg.taker_side=m.msg.taker_outcome_side='yes';m.msg.taker_book_side='bid';m.msg.no_price_dollars='0.3600';const t=kalshiSellPrint(m);assert.equal(t.side,'no');assert.equal(t.price,6400);assert.equal(subscriptions('kalshi',['K'])[0].params.use_yes_price,false);});
+
+test('Maker bid improvement stays inside spread on a whole-cent grid and recalculates profitability',()=>{const p={...pair('p'),reviewed:true},a=book('kalshi','Kp'),b=book('poly','Pp'),s=initial();const q=makerPlan(p,a,b,s.settings,s.cash,Date.now(),true);assert.equal(q.price,3100);assert.equal(q.ahead,0);assert.ok(q.quote.eligible);a.yesBids[0].price=995;a.yes[0].price=2000;const tail=makerPlan(p,a,b,s.settings,s.cash,Date.now(),true);assert.equal(tail.price,1000);assert.equal(tail.price%100,0);});
+
+test('Fractional queue volume accumulates exactly without floating exposure residue',()=>{const q=new MakerQueue('K','yes',3600,1,.01,1000,3000),t=kalshiSellPrint(msg())!;for(let i=0;i<101;i++)q.consume({...t,id:String(i),quantity:.01},1200);assert.equal(q.filled,1);assert.equal(q.ahead,0);});

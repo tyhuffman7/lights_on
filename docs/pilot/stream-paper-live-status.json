@@ -1,0 +1,49 @@
+{
+  "mode": "live-data",
+  "realOrders": 0,
+  "realFills": 0,
+  "pendingHedge": null,
+  "halt": null,
+  "cashUSD": {
+    "kalshi": 50,
+    "polymarketUS": 50
+  },
+  "committedUSD": 0,
+  "realizedPaperProfitUSD": 0,
+  "positions": [],
+  "decisionCounts": {
+    "Settlement mapping unapproved": 11,
+    "Missing, stale, unhealthy or sequence-invalid stream book": 11
+  },
+  "recentDecisions": {
+    "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca": {
+      "at": 1789177140110,
+      "reasons": [
+        "Settlement mapping unapproved",
+        "Missing, stale, unhealthy or sequence-invalid stream book"
+      ]
+    },
+    "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema": {
+      "at": 1789177140110,
+      "reasons": [
+        "Settlement mapping unapproved",
+        "Missing, stale, unhealthy or sequence-invalid stream book"
+      ]
+    },
+    "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew": {
+      "at": 1789177174045,
+      "reasons": [
+        "Settlement mapping unapproved",
+        "Missing, stale, unhealthy or sequence-invalid stream book"
+      ]
+    },
+    "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga": {
+      "at": 1789177191872,
+      "reasons": [
+        "Settlement mapping unapproved",
+        "Missing, stale, unhealthy or sequence-invalid stream book"
+      ]
+    }
+  },
+  "validation": "Actual-market 60-second event-driven worker run; all four pairs unapproved; no paper entries"
+}

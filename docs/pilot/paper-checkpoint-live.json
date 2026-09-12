@@ -1,0 +1,525 @@
+{
+  "provenance": "CURRENT LIVE DATA; UNAPPROVED RESEARCH ONLY",
+  "startedAt": 1789175617196,
+  "requestedStreamSeconds": 60,
+  "approvedPairs": 0,
+  "paperEntries": 0,
+  "realOrders": 0,
+  "realFills": 0,
+  "realizedBotProfit": 0,
+  "ruleBlockers": [
+    "Nomination end-date meaning unresolved (2 pairs)",
+    "AOC legal issuance/start window unresolved",
+    "YoungBoy Never Broke Again issuance, intervening chart history, artist credit and revision/delay clauses unresolved"
+  ],
+  "rawEvidence": "raw-public.json",
+  "normalizedEvidence": "confirmations.json",
+  "strictEvidence": "strict-samples.json",
+  "interpretations": [
+    "REST responses are non-atomic and are not fills.",
+    "Strict stream ages are never rewritten.",
+    "Whole-contract modeled fees are not certified live fractional-fill fee bounds.",
+    "Research one-contract model uses 25% of displayed depth and $0.01 reserve; existing challenge uses its unchanged $0.02 reserve and 30-day horizon."
+  ],
+  "streamStartedAt": 1789175620731,
+  "endedAt": 1789175680749,
+  "elapsedSeconds": 63.553,
+  "sampleCounts": {
+    "total": 472,
+    "strictFresh": 24,
+    "healthy": 472,
+    "validHealthyButNotStrictFresh": 444,
+    "missingBook": 4,
+    "localAgeOnlyBookRejections": 194
+  },
+  "confirmationCounts": {
+    "pairSnapshots": 8,
+    "legSnapshots": 16,
+    "equalDepthWithoutRace": 7,
+    "equalDepthHealthyButStrictStale": 7,
+    "errors": 0,
+    "positiveConditionalModels": 6,
+    "nonpositiveModels": 10,
+    "insufficientDepthOrUnknownFee": 0
+  },
+  "paperRejectionCounts": {
+    "Settlement rules need review": 8,
+    "Exchange timestamp is stale": 8,
+    "Outside settlement horizon": 8,
+    "Net edge below threshold": 4
+  },
+  "health": {
+    "bookUpdates": 21,
+    "reconnects": 0,
+    "eventLoopDelayEpisodes": 0,
+    "eventLoopMaxMs": 49.643519,
+    "persistence": {
+      "queueDepth": 0,
+      "queueBytes": 0,
+      "lastAckAt": 1789175680661,
+      "failed": false
+    },
+    "counters": {
+      "kalshiRestRequests": 31,
+      "polyRestRequests": 26,
+      "kalshiDeferredMarkets": 0,
+      "polyDeferredMarkets": 0,
+      "CONNECTED": 2,
+      "messages": 22,
+      "bookUpdates": 21,
+      "reconciliationRequests": 29,
+      "evaluations": 34,
+      "STRICT_EXECUTION_FRESH": 17,
+      "EXCHANGE_TIMESTAMP_OLD": 4,
+      "HEALTHY_RESTING_BOOK_RESEARCH": 13,
+      "strictBookAgeOnlyRejectedEvaluations": 10,
+      "reconciliationOlderRestSnapshots": 7
+    }
+  },
+  "pairs": [
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "at": 1789175636042,
+      "ruleHashes": {
+        "a": "819dae74fe76364082582bda2ad6985a36a980d5b8612246e0fbd14894f1cc5e",
+        "b": "7913b5345e391e50801ca728ab656d92fb41be4f45e4b1b53ae5a53b52ab9655"
+      },
+      "paperReasons": [
+        "Settlement rules need review",
+        "Exchange timestamp is stale",
+        "Outside settlement horizon",
+        "Net edge below threshold"
+      ],
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "quantity": 1,
+          "netUSD": -0.03
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "quantity": 1,
+          "netUSD": -0.05
+        }
+      ],
+      "confirmations": [
+        {
+          "venue": "kalshi",
+          "requestAt": 1789175635732,
+          "receivedAt": 1789175635926,
+          "restExchangeAt": null,
+          "streamReceivedAt": 1789175621596,
+          "streamExchangeAt": null,
+          "sequence": 3,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        },
+        {
+          "venue": "poly",
+          "requestAt": 1789175635926,
+          "receivedAt": 1789175636041,
+          "restExchangeAt": 1789175405977,
+          "streamReceivedAt": 1789175621785,
+          "streamExchangeAt": 1789175405977,
+          "sequence": null,
+          "equalDepth": true,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        }
+      ]
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "at": 1789175636625,
+      "ruleHashes": {
+        "a": "e63afacc715a0507c9818ae64e23148322042e3da4e69118610e9c6c241e7bbb",
+        "b": "abd0a02cd196a6d201f57158498877f4d90c4eabd784634f32e80ef4a2d029b1"
+      },
+      "paperReasons": [
+        "Settlement rules need review",
+        "Exchange timestamp is stale",
+        "Outside settlement horizon"
+      ],
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "quantity": 1,
+          "netUSD": 0.017
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "quantity": 1,
+          "netUSD": -0.069
+        }
+      ],
+      "confirmations": [
+        {
+          "venue": "kalshi",
+          "requestAt": 1789175636042,
+          "receivedAt": 1789175636506,
+          "restExchangeAt": null,
+          "streamReceivedAt": 1789175621597,
+          "streamExchangeAt": null,
+          "sequence": 4,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        },
+        {
+          "venue": "poly",
+          "requestAt": 1789175636506,
+          "receivedAt": 1789175636625,
+          "restExchangeAt": 1789175131002,
+          "streamReceivedAt": 1789175621786,
+          "streamExchangeAt": 1789175505803,
+          "sequence": null,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        }
+      ]
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "at": 1789175636980,
+      "ruleHashes": {
+        "a": "e06d8bbfc39901f244504263c510f39c00446d11dfe80248a537bbce305f6de6",
+        "b": "3a0064d81d286f3059a954bf94f3bbe7828c2f7f5e01b8a33b27c1a5c111433a"
+      },
+      "paperReasons": [
+        "Settlement rules need review",
+        "Exchange timestamp is stale",
+        "Outside settlement horizon"
+      ],
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "quantity": 1,
+          "netUSD": 0.02
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "quantity": 1,
+          "netUSD": -0.13
+        }
+      ],
+      "confirmations": [
+        {
+          "venue": "kalshi",
+          "requestAt": 1789175636625,
+          "receivedAt": 1789175636790,
+          "restExchangeAt": null,
+          "streamReceivedAt": 1789175621595,
+          "streamExchangeAt": null,
+          "sequence": 2,
+          "equalDepth": true,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        },
+        {
+          "venue": "poly",
+          "requestAt": 1789175636790,
+          "receivedAt": 1789175636980,
+          "restExchangeAt": 1789175061103,
+          "streamReceivedAt": 1789175621783,
+          "streamExchangeAt": 1789175061103,
+          "sequence": null,
+          "equalDepth": true,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        }
+      ]
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "at": 1789175637316,
+      "ruleHashes": {
+        "a": "214ef4b00c4af33872aa7cfe89f0e756b4f672ae097780ec5ccd9a3096c80982",
+        "b": "2cf93857a7ba2cf2f8555bf2e9feee5078e2ec78ffae0a1fe6d5ce93aa7d5e8a"
+      },
+      "paperReasons": [
+        "Settlement rules need review",
+        "Exchange timestamp is stale",
+        "Outside settlement horizon",
+        "Net edge below threshold"
+      ],
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "quantity": 1,
+          "netUSD": 0.01
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "quantity": 1,
+          "netUSD": -0.13
+        }
+      ],
+      "confirmations": [
+        {
+          "venue": "kalshi",
+          "requestAt": 1789175636980,
+          "receivedAt": 1789175637142,
+          "restExchangeAt": null,
+          "streamReceivedAt": 1789175621594,
+          "streamExchangeAt": null,
+          "sequence": 1,
+          "equalDepth": true,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        },
+        {
+          "venue": "poly",
+          "requestAt": 1789175637142,
+          "receivedAt": 1789175637315,
+          "restExchangeAt": 1789175583656,
+          "streamReceivedAt": 1789175632024,
+          "streamExchangeAt": 1789175632086,
+          "sequence": null,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        }
+      ]
+    },
+    {
+      "pairId": "KXPRESNOMD-28-GN::enwc-uspres-nom-dem-2028-gavnew",
+      "at": 1789175666174,
+      "ruleHashes": {
+        "a": "819dae74fe76364082582bda2ad6985a36a980d5b8612246e0fbd14894f1cc5e",
+        "b": "7913b5345e391e50801ca728ab656d92fb41be4f45e4b1b53ae5a53b52ab9655"
+      },
+      "paperReasons": [
+        "Settlement rules need review",
+        "Exchange timestamp is stale",
+        "Outside settlement horizon",
+        "Net edge below threshold"
+      ],
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "quantity": 1,
+          "netUSD": -0.03
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "quantity": 1,
+          "netUSD": -0.05
+        }
+      ],
+      "confirmations": [
+        {
+          "venue": "kalshi",
+          "requestAt": 1789175665733,
+          "receivedAt": 1789175665960,
+          "restExchangeAt": null,
+          "streamReceivedAt": 1789175660577,
+          "streamExchangeAt": 1789175660677,
+          "sequence": 7,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        },
+        {
+          "venue": "poly",
+          "requestAt": 1789175665960,
+          "receivedAt": 1789175666174,
+          "restExchangeAt": 1789175405977,
+          "streamReceivedAt": 1789175621785,
+          "streamExchangeAt": 1789175405977,
+          "sequence": null,
+          "equalDepth": true,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        }
+      ]
+    },
+    {
+      "pairId": "KXPRESNOMD-28-REMA::enwc-uspres-nom-dem-2028-rahema",
+      "at": 1789175666479,
+      "ruleHashes": {
+        "a": "e63afacc715a0507c9818ae64e23148322042e3da4e69118610e9c6c241e7bbb",
+        "b": "abd0a02cd196a6d201f57158498877f4d90c4eabd784634f32e80ef4a2d029b1"
+      },
+      "paperReasons": [
+        "Settlement rules need review",
+        "Exchange timestamp is stale",
+        "Outside settlement horizon"
+      ],
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "quantity": 1,
+          "netUSD": 0.017
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "quantity": 1,
+          "netUSD": -0.069
+        }
+      ],
+      "confirmations": [
+        {
+          "venue": "kalshi",
+          "requestAt": 1789175666174,
+          "receivedAt": 1789175666346,
+          "restExchangeAt": null,
+          "streamReceivedAt": 1789175621597,
+          "streamExchangeAt": null,
+          "sequence": 4,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        },
+        {
+          "venue": "poly",
+          "requestAt": 1789175666346,
+          "receivedAt": 1789175666479,
+          "restExchangeAt": 1789175131002,
+          "streamReceivedAt": 1789175621786,
+          "streamExchangeAt": 1789175505803,
+          "sequence": null,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        }
+      ]
+    },
+    {
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "at": 1789175666865,
+      "ruleHashes": {
+        "a": "e06d8bbfc39901f244504263c510f39c00446d11dfe80248a537bbce305f6de6",
+        "b": "3a0064d81d286f3059a954bf94f3bbe7828c2f7f5e01b8a33b27c1a5c111433a"
+      },
+      "paperReasons": [
+        "Settlement rules need review",
+        "Exchange timestamp is stale",
+        "Outside settlement horizon"
+      ],
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "quantity": 1,
+          "netUSD": 0.02
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "quantity": 1,
+          "netUSD": -0.13
+        }
+      ],
+      "confirmations": [
+        {
+          "venue": "kalshi",
+          "requestAt": 1789175666479,
+          "receivedAt": 1789175666640,
+          "restExchangeAt": null,
+          "streamReceivedAt": 1789175621595,
+          "streamExchangeAt": null,
+          "sequence": 2,
+          "equalDepth": true,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        },
+        {
+          "venue": "poly",
+          "requestAt": 1789175666640,
+          "receivedAt": 1789175666865,
+          "restExchangeAt": 1789175061103,
+          "streamReceivedAt": 1789175657967,
+          "streamExchangeAt": 1789175658004,
+          "sequence": null,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        }
+      ]
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-YOU::ccpc-bilbrd-1album-any2026-youaga",
+      "at": 1789175667211,
+      "ruleHashes": {
+        "a": "214ef4b00c4af33872aa7cfe89f0e756b4f672ae097780ec5ccd9a3096c80982",
+        "b": "2cf93857a7ba2cf2f8555bf2e9feee5078e2ec78ffae0a1fe6d5ce93aa7d5e8a"
+      },
+      "paperReasons": [
+        "Settlement rules need review",
+        "Exchange timestamp is stale",
+        "Outside settlement horizon",
+        "Net edge below threshold"
+      ],
+      "quotes": [
+        {
+          "side": "yes",
+          "other": "no",
+          "quantity": 1,
+          "netUSD": 0.01
+        },
+        {
+          "side": "no",
+          "other": "yes",
+          "quantity": 1,
+          "netUSD": -0.13
+        }
+      ],
+      "confirmations": [
+        {
+          "venue": "kalshi",
+          "requestAt": 1789175666865,
+          "receivedAt": 1789175667028,
+          "restExchangeAt": null,
+          "streamReceivedAt": 1789175621594,
+          "streamExchangeAt": null,
+          "sequence": 1,
+          "equalDepth": true,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        },
+        {
+          "venue": "poly",
+          "requestAt": 1789175667028,
+          "receivedAt": 1789175667211,
+          "restExchangeAt": 1789175583656,
+          "streamReceivedAt": 1789175644327,
+          "streamExchangeAt": 1789175643893,
+          "sequence": null,
+          "equalDepth": false,
+          "raced": false,
+          "strictFresh": false,
+          "streamHealthy": true
+        }
+      ]
+    }
+  ]
+}

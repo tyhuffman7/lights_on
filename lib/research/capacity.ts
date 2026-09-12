@@ -12,14 +12,20 @@ export class CapacityScheduler {
     rotationMs = 900000,
     now = Date.now(),
     activity: Record<string, ResearchActivity> = {},
+    paperPriority: ReadonlySet<string> = new Set(),
+    paperSettlementDeadline: number | null = null,
   ) {
-    const eligible = mappings.filter(
+    const open = mappings.filter(
       (m) =>
         m.active &&
         m.pair.a.open &&
         m.pair.b.open &&
         [m.pair.a, m.pair.b].every((x) => Date.parse(x.closeAt) > now),
     );
+    const eligible = paperSettlementDeadline === null ? open : open.filter(m =>
+      [m.pair.a,m.pair.b].every(x => Date.parse(x.closeAt) <= paperSettlementDeadline));
+    const excludedByPaperHorizon = open.length - eligible.length;
+    const priority = (m: Mapping) => isVerified(m) || paperPriority.has(m.id);
     const epoch = Math.floor(now / rotationMs),
       rotate = epoch !== this.epoch;
     const scores = new Map(
@@ -27,7 +33,7 @@ export class CapacityScheduler {
     );
     const ranked = [...eligible].sort(
       (a, b) =>
-        Number(isVerified(b)) - Number(isVerified(a)) ||
+        Number(priority(b)) - Number(priority(a)) ||
         (Number(this.selected.has(b.id) && !this.exploration.has(b.id)) -
           Number(this.selected.has(a.id) && !this.exploration.has(a.id))) *
           10 ||
@@ -52,13 +58,13 @@ export class CapacityScheduler {
       return true;
     };
     // Verified pairs take precedence; reserve 20% for unbiased rotating exploration when possible.
-    for (const m of ranked.filter(isVerified)) add(m, cap);
+    for (const m of ranked.filter(priority)) add(m, cap);
     const priorityCap = Math.max(1, Math.floor(cap * (1 - fraction)));
     for (const m of ranked)
       if (this.selected.has(m.id) && !this.exploration.has(m.id))
         add(m, priorityCap);
     const categories = new Map<string, Mapping[]>();
-    for (const m of ranked.filter((m) => !isVerified(m))) {
+    for (const m of ranked.filter((m) => !priority(m))) {
       const key = m.pair.a.identity?.competition ?? m.pair.a.category;
       const list = categories.get(key) ?? [];
       list.push(m);
@@ -91,6 +97,8 @@ export class CapacityScheduler {
     this.epoch = epoch;
     return {
       eligible: eligible.length,
+      excludedByPaperHorizon,
+      paperSettlementDeadline,
       selected: selected.size,
       deferred: eligible.length - selected.size,
       selectedIds: [...selected],

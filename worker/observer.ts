@@ -1,3 +1,4 @@
+import { revalidateCandidates } from "./revalidate-candidates.ts";
 import { CapacityScheduler } from "../lib/research/capacity.ts";
 import {
   ReconciliationScheduler,
@@ -27,6 +28,8 @@ export class Observer {
   registry: MappingRegistry;
   recorder: LiveRecorder;
   telemetry = new Telemetry();
+  paperSettlementDeadline: () => number | null = () => null;
+  paperPriorityIds: () => string[] = () => [];
   capacityScheduler = new CapacityScheduler();
   capacity: ReturnType<CapacityScheduler["select"]> | null = null;
   reconciliationScheduler = new ReconciliationScheduler();
@@ -44,6 +47,10 @@ export class Observer {
   streams: StreamConnection[] = [];
   marketStreams = new Map<string, StreamConnection>();
   timers: ReturnType<typeof setInterval>[] = [];
+  paperTradeTape = false;
+  paperTradeSink?: (message:Record<string,any>,wall:number,mono:number)=>void;
+  private paperSnapshotAt=0;
+  private paperSnapshotMarkets=new Map<string,number>();
   paused = true;
   stopped = false;
   busyMetadata = false;
@@ -100,6 +107,9 @@ export class Observer {
           reviewed: false,
         });
     }
+    const rejected = revalidateCandidates(this.registry);
+    this.telemetry.count("startupCandidatesRejected", rejected);
+    await this.recorder.send("barrier", {});
     this.recorder.reindex();
   }
   private invalid(venue: Venue, reason: string, ids?: string[]) {
@@ -374,6 +384,14 @@ export class Observer {
       this.busyReconcile = false;
     }
   }
+  requestPaperSnapshot(id:string){
+    const now=Date.now(),stream=this.marketStreams.get('kalshi:'+id),shard=stream&&this.shardCaches.get(stream);
+    if(this.paused||this.stopped||!stream?.isHealthy()||!shard||now-this.paperSnapshotAt<500||now-(this.paperSnapshotMarkets.get(id)??0)<5000)return false;
+    if(!stream.requestSnapshot(id,shard.subscriptions.get(id)))return false;
+    this.paperSnapshotAt=now;this.paperSnapshotMarkets.delete(id);this.paperSnapshotMarkets.set(id,now);
+    if(this.paperSnapshotMarkets.size>1000)this.paperSnapshotMarkets.delete(this.paperSnapshotMarkets.keys().next().value!);
+    this.telemetry.count('paperSnapshotRequests');return true;
+  }
   private repairBook(venue: Venue, id: string, reason: string) {
     const stream = this.marketStreams.get(venue + ":" + id),
       shard = stream ? this.shardCaches.get(stream) : undefined;
@@ -519,6 +537,8 @@ export class Observer {
         this.config.explorationRotationMs,
         Date.now(),
         this.recorder.activity,
+        new Set(this.paperPriorityIds()),
+        this.paperSettlementDeadline(),
       );
     else {
       this.capacity = await this.recorder.send("capacity", {
@@ -527,6 +547,8 @@ export class Observer {
         rotationMs: this.config.explorationRotationMs,
         now: Date.now(),
         activity: this.recorder.activity,
+        paperSettlementDeadline: this.paperSettlementDeadline(),
+        paperPriorityIds: this.paperPriorityIds(),
         previousSelected: [...this.capacityScheduler.selected],
         previousExploration: [...this.capacityScheduler.exploration],
         previousEpoch: this.capacityScheduler.epoch,
@@ -586,6 +608,7 @@ export class Observer {
           continue;
         const cache = new BookCache();
         const stream = new StreamConnection({
+          includeTrades: this.paperTradeTape,
           venue,
           ids,
           headers: () => authHeaders(venue),
@@ -616,6 +639,11 @@ export class Observer {
           onMessage: (message, wall, mono) => {
             if (this.paused || this.stopped || this.recorder.failed) return;
             this.telemetry.count("messages");
+            if(venue==="kalshi"&&message.type==="trade"){
+              if(!ids.includes(message.msg?.market_ticker))throw new Error("Unsubscribed market");
+              this.telemetry.count("paperTradePrints");
+              this.recorder.diagnostic("PAPER_PUBLIC_TRADE",{venue,wall,mono,message});this.paperTradeSink?.(message,wall,mono);return;
+            }
             const book =
               venue === "kalshi"
                 ? cache.kalshi(message, wall, mono)

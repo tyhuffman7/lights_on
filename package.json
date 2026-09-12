@@ -26,7 +26,12 @@
     "test:discovery-load": "node --experimental-strip-types worker/coverage-scale.ts",
     "pilot:audit": "node --experimental-strip-types worker/pilot-audit.ts",
     "pilot:exit-audit": "node --experimental-strip-types worker/pilot-exit-audit.ts",
-    "pilot:size-audit": "node --experimental-strip-types worker/pilot-size-audit.ts"
+    "pilot:size-audit": "node --experimental-strip-types worker/pilot-size-audit.ts",
+    "paper:demo": "LIGHTS_ON_PAPER_DEMO=1 vinext dev --host 127.0.0.1 --port 5174",
+    "test:paper-http": "node tests/paper-demo/http.mjs",
+    "paper": "node --experimental-strip-types worker/paper-cli.ts",
+    "paper:approve": "node --experimental-strip-types worker/paper-approve.ts",
+    "paper:review": "node --experimental-strip-types worker/paper-review.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

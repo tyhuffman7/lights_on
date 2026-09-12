@@ -31,6 +31,8 @@ try {
       data.rotationMs,
       data.now,
       recordedActivity(data.activity ?? {}, s),
+      new Set(data.paperPriorityIds ?? []),
+      data.paperSettlementDeadline ?? null,
     );
   } else if (kind === "review") {
     let rows = reviewQueue(

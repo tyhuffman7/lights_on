@@ -1,4 +1,4 @@
-import {freshPair,book} from '@/lib/arb/adapters';import {loadState} from '@/lib/store';import {user,reply,error} from '@/lib/api';import {assess} from '@/lib/arb/engine';import {totals} from '@/lib/arb/ledger';
+import {freshPair,book} from '@/lib/arb/paper-data';import {loadState} from '@/lib/store';import {user,reply,error} from '@/lib/api';import {assess} from '@/lib/arb/engine';import {totals} from '@/lib/arb/ledger';
 export async function GET(){try{const s=await loadState(await user());const rows=[];
  for(const saved of s.pairs){try{const p=await freshPair(saved);const [a,b]=await Promise.all([book(p.a),book(p.b)]);const limits={...s.settings,maxTrade:Math.max(0,Math.min(s.settings.maxTrade,s.settings.maxCommitted-totals(s).committed))};const q=assess(p,a,b,limits,s.cash);rows.push({pair:p,quote:q,books:{a,b},error:q?null:'No fillable quantity within cash and depth limits'});}catch(e){rows.push({pair:saved,quote:null,error:e instanceof Error?e.message:String(e)});}}
  return reply({rows,at:Date.now()});}catch(e){return error(e);}}

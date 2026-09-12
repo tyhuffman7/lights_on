@@ -1,4 +1,5 @@
 import vinext from "vinext";
+import {paperDemo} from "./tests/paper-demo/plugin";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
@@ -33,7 +34,8 @@ const localBindingConfig = {
     : [],
 };
 
-export default defineConfig(async () => {
+export default defineConfig(async ({command}) => {
+  const demo = command === "serve" && process.env.LIGHTS_ON_PAPER_DEMO === "1";
   // Use Miniflare's local Request.cf placeholder unless fetching is requested.
   process.env.CLOUDFLARE_CF_FETCH_ENABLED ??= "false";
   process.env.WRANGLER_SEND_METRICS ??= "false";
@@ -55,9 +57,11 @@ export default defineConfig(async () => {
     plugins: [
       vinext(),
       sites(),
+      ...(demo ? [paperDemo()] : []),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,
+        ...(demo ? {persistState: {path: "work/paper-demo/state"}} : {}),
         config: localBindingConfig,
       }),
     ],
