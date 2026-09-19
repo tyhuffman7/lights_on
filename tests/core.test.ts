@@ -15,13 +15,15 @@ test('Polymarket ties round to an even cent', () => {
 test('A gross two-cent gap is rejected after fees and execution reserve', () => {
   assert.ok(calculate(4900, 4900, 10).profit < 0);
 });
-test('A ten-cent gap yields $0.58 net on ten pairs after fees and reserve', () => {
+test('A ten-cent gap yields $0.56 net on ten pairs after fees and reserve', () => {
   const x = calculate(4000, 5000, 10);
   assert.equal(x.cost, 90000);
-  assert.equal(x.fees, 3200);
-  assert.equal(x.profit, 5800);
+  assert.equal(x.fees, 3400);
+  assert.equal(x.profit, 5600);
 });
 test('Invalid prices and quantities never silently produce profit', () => {
   assert.throws(() => calculate(NaN, 5000, 5));
   assert.throws(() => calculate(2000, 5000, -1));
 });
+
+test('Calculator results carry the explicit September schedule',()=>{const q=calculate(2500,2500,1);assert.equal(q.feeRates.poly,695);assert.equal(q.feeVersion,'PM-US-2026-09-17');});

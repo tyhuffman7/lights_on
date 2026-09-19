@@ -1,0 +1,420 @@
+{
+  "kalshi": [
+    {
+      "id": "KXMLBGAME-26SEP142140MIAAZ-MIA",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T01:40:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "miami",
+          "arizona"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "miami",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Miami wins",
+      "outcome": "Miami",
+      "opposite": "Miami",
+      "category": "Sports",
+      "rules": "If Miami wins the Miami vs Arizona professional baseball game originally scheduled for Sep 14, 2026 at 9:40 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the Miami vs Arizona professional baseball game originally scheduled for Sep 14, 2026 at 9:40 PM EDT. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+      "url": "https://kalshi.com/markets/kxmlbgame/kxmlbgame-26sep142140miaaz",
+      "closeAt": "2026-09-15T04:40:00Z",
+      "open": true,
+      "feeRate": 350,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "89fbb8016994fdbe01136ec84114b5b4f66203b05ba3328ddace18f3aa4ef8f4",
+      "settlement": null,
+      "series": "KXMLBGAME"
+    },
+    {
+      "id": "KXMLBGAME-26SEP142140MIAAZ-AZ",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T01:40:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "miami",
+          "arizona"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "arizona",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Arizona wins",
+      "outcome": "Arizona",
+      "opposite": "Arizona",
+      "category": "Sports",
+      "rules": "If Arizona wins the Miami vs Arizona professional baseball game originally scheduled for Sep 14, 2026 at 9:40 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the Miami vs Arizona professional baseball game originally scheduled for Sep 14, 2026 at 9:40 PM EDT. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+      "url": "https://kalshi.com/markets/kxmlbgame/kxmlbgame-26sep142140miaaz",
+      "closeAt": "2026-09-15T04:40:00Z",
+      "open": true,
+      "feeRate": 350,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "eca86034b801bd9dcff04b9b2903ebbd4a28cfa85ad37c71f24738232fcd7eaf",
+      "settlement": null,
+      "series": "KXMLBGAME"
+    },
+    {
+      "id": "KXMLBGAME-26SEP142138SEALAA-SEA",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T01:38:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "seattle",
+          "los angeles a"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "seattle",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Seattle wins",
+      "outcome": "Seattle",
+      "opposite": "Seattle",
+      "category": "Sports",
+      "rules": "If Seattle wins the Seattle vs Los Angeles A professional baseball game originally scheduled for Sep 14, 2026 at 9:38 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the Seattle vs Los Angeles A professional baseball game originally scheduled for Sep 14, 2026 at 9:38 PM EDT. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+      "url": "https://kalshi.com/markets/kxmlbgame/kxmlbgame-26sep142138sealaa",
+      "closeAt": "2026-09-15T04:38:00Z",
+      "open": true,
+      "feeRate": 350,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "4249aa24683cc839d36e0fad1f5ea659c0f07ee667563df9e509ab421d016371",
+      "settlement": null,
+      "series": "KXMLBGAME"
+    },
+    {
+      "id": "KXMLBGAME-26SEP142138SEALAA-LAA",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T01:38:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "seattle",
+          "los angeles a"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "los angeles a",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Los Angeles A wins",
+      "outcome": "Los Angeles A",
+      "opposite": "Los Angeles A",
+      "category": "Sports",
+      "rules": "If Los Angeles A wins the Seattle vs Los Angeles A professional baseball game originally scheduled for Sep 14, 2026 at 9:38 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the Seattle vs Los Angeles A professional baseball game originally scheduled for Sep 14, 2026 at 9:38 PM EDT. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+      "url": "https://kalshi.com/markets/kxmlbgame/kxmlbgame-26sep142138sealaa",
+      "closeAt": "2026-09-15T04:38:00Z",
+      "open": true,
+      "feeRate": 350,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "6da503ea4e6b2ae4a9f32c8b9a4e8ce065a67d1b0271b1a8eac4de77cc20b94d",
+      "settlement": null,
+      "series": "KXMLBGAME"
+    },
+    {
+      "id": "KXMLBGAME-26SEP142040SDCOL-SD",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T00:40:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "san diego",
+          "colorado"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "san diego",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "San Diego wins",
+      "outcome": "San Diego",
+      "opposite": "San Diego",
+      "category": "Sports",
+      "rules": "If San Diego wins the San Diego vs Colorado professional baseball game originally scheduled for Sep 14, 2026 at 8:40 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the San Diego vs Colorado professional baseball game originally scheduled for Sep 14, 2026 at 8:40 PM EDT. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+      "url": "https://kalshi.com/markets/kxmlbgame/kxmlbgame-26sep142040sdcol",
+      "closeAt": "2026-09-15T03:40:00Z",
+      "open": true,
+      "feeRate": 350,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "d2092547c7ecfede590fe1c9e4f0d778b41d4cb68ad51acaae2a355a636dba06",
+      "settlement": null,
+      "series": "KXMLBGAME"
+    },
+    {
+      "id": "KXMLBGAME-26SEP142040SDCOL-COL",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T00:40:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "san diego",
+          "colorado"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "colorado",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Colorado wins",
+      "outcome": "Colorado",
+      "opposite": "Colorado",
+      "category": "Sports",
+      "rules": "If Colorado wins the San Diego vs Colorado professional baseball game originally scheduled for Sep 14, 2026 at 8:40 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the San Diego vs Colorado professional baseball game originally scheduled for Sep 14, 2026 at 8:40 PM EDT. If this game is postponed or delayed, the market will remain open and close after the rescheduled game has finished (within two days). If the game is cancelled or rescheduled to over two days away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+      "url": "https://kalshi.com/markets/kxmlbgame/kxmlbgame-26sep142040sdcol",
+      "closeAt": "2026-09-15T03:40:00Z",
+      "open": true,
+      "feeRate": 350,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "79fd1f1467850b85516faa8efd748169621effc7c9e607eb072f24daaaaba3ae",
+      "settlement": null,
+      "series": "KXMLBGAME"
+    }
+  ],
+  "poly": [
+    {
+      "id": "aec-mlb-mia-az-2026-09-14",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T01:40:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "marlins",
+          "diamondbacks"
+        ],
+        "home": "diamondbacks",
+        "away": "marlins",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "marlins",
+        "entities": [],
+        "numbers": [
+          "15",
+          "2026",
+          "1",
+          "40"
+        ],
+        "aliases": [
+          {
+            "name": "marlins",
+            "venue": "poly",
+            "venueId": "3015",
+            "aliases": [
+              "miami marlins",
+              "miami marlins",
+              "marlins",
+              "mia",
+              "mia"
+            ]
+          },
+          {
+            "name": "diamondbacks",
+            "venue": "poly",
+            "venueId": "3002",
+            "aliases": [
+              "arizona diamondbacks",
+              "arizona diamondbacks",
+              "diamondbacks",
+              "az",
+              "az"
+            ]
+          }
+        ]
+      },
+      "title": "Miami Marlins vs Arizona Diamondbacks \u00b7 Who will win in the upcoming baseball event Miami Marlins vs Arizona Diamondbacks scheduled for September 15, 2026 at 1:40 AM UTC?",
+      "outcome": "Miami Marlins",
+      "opposite": "Arizona Diamondbacks",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Miami Marlins vs Arizona Diamondbacks MLB game scheduled for 2026-09-14 at 9:40PM ET. Extra innings are included if played. If the game is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from MLB.",
+      "url": "https://polymarket.us/event/aec-mlb-mia-az-2026-09-14",
+      "closeAt": "2026-09-29T01:40:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "dfe4627dc608a0159dbeebccb99ac653265e8b03c64dd94feda76aded429b0b7",
+      "settlement": null
+    },
+    {
+      "id": "aec-mlb-sea-laa-2026-09-14",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T01:38:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "mariners",
+          "angels"
+        ],
+        "home": "angels",
+        "away": "mariners",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "mariners",
+        "entities": [],
+        "numbers": [
+          "15",
+          "2026",
+          "1",
+          "38"
+        ],
+        "aliases": [
+          {
+            "name": "mariners",
+            "venue": "poly",
+            "venueId": "3023",
+            "aliases": [
+              "seattle mariners",
+              "seattle mariners",
+              "mariners",
+              "sea",
+              "sea"
+            ]
+          },
+          {
+            "name": "angels",
+            "venue": "poly",
+            "venueId": "3013",
+            "aliases": [
+              "los angeles angels",
+              "los angeles angels",
+              "angels",
+              "laa",
+              "laa"
+            ]
+          }
+        ]
+      },
+      "title": "Seattle Mariners vs Los Angeles Angels \u00b7 Who will win in the upcoming baseball event Seattle Mariners vs Los Angeles Angels scheduled for September 15, 2026 at 1:38 AM UTC?",
+      "outcome": "Seattle Mariners",
+      "opposite": "Los Angeles Angels",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Seattle Mariners vs Los Angeles Angels MLB game scheduled for 2026-09-14 at 9:38PM ET. Extra innings are included if played. If the game is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from MLB.",
+      "url": "https://polymarket.us/event/aec-mlb-sea-laa-2026-09-14",
+      "closeAt": "2026-09-29T01:38:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "af3a515aeb37c61b620f41ae0a1e10adf820e8f46f9faebe14a835f193686bb2",
+      "settlement": null
+    },
+    {
+      "id": "aec-mlb-sd-col-2026-09-14",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-15T00:40:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "padres",
+          "rockies"
+        ],
+        "home": "rockies",
+        "away": "padres",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "padres",
+        "entities": [],
+        "numbers": [
+          "15",
+          "2026",
+          "12",
+          "40"
+        ],
+        "aliases": [
+          {
+            "name": "padres",
+            "venue": "poly",
+            "venueId": "3022",
+            "aliases": [
+              "san diego padres",
+              "san diego padres",
+              "padres",
+              "sd",
+              "sd"
+            ]
+          },
+          {
+            "name": "rockies",
+            "venue": "poly",
+            "venueId": "3008",
+            "aliases": [
+              "colorado rockies",
+              "colorado rockies",
+              "rockies",
+              "col",
+              "col"
+            ]
+          }
+        ]
+      },
+      "title": "San Diego Padres vs Colorado Rockies \u00b7 Who will win in the upcoming baseball event San Diego Padres vs Colorado Rockies scheduled for September 15, 2026 at 12:40 AM UTC?",
+      "outcome": "San Diego Padres",
+      "opposite": "Colorado Rockies",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the San Diego Padres vs Colorado Rockies MLB game scheduled for 2026-09-14 at 8:40PM ET. Extra innings are included if played. If the game is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from MLB.",
+      "url": "https://polymarket.us/event/aec-mlb-sd-col-2026-09-14",
+      "closeAt": "2026-09-29T00:40:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "48737767cbbab81c43826a69bd6785aa547d842f2d5f23546b32f11af6025c31",
+      "settlement": null
+    }
+  ]
+}

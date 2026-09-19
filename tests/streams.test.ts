@@ -90,3 +90,20 @@ test("Live socket consumes frames, invalidates on disconnect and reconnects", as
   assert.ok(updates >= 2);
   assert.ok(invalidations >= 1);
 });
+
+test('Fair dispatch drains a 600-frame burst in order without freshening receipt evidence',async()=>{
+ const server=new WebSocketServer({port:0,host:'127.0.0.1'});await once(server,'listening');const address=server.address();assert(address&&typeof address!=='string');
+ const seen:{id:number;wall:number;mono:number;exchangeAt:number}[]=[],errors:string[]=[];
+ server.on('connection',ws=>ws.once('message',()=>{for(let i=0;i<600;i++)ws.send(JSON.stringify({id:i,exchangeAt:123}));}));
+ const stream=new StreamConnection({venue:'kalshi',ids:['x'],url:`ws://127.0.0.1:${address.port}`,headers:()=>({}),onMessage:(m,wall,mono)=>seen.push({id:m.id,wall,mono,exchangeAt:m.exchangeAt}),onInvalid:r=>errors.push(r),onDiagnostic:()=>{},retryMs:10000});
+ try{stream.start();const deadline=Date.now()+3000;while(seen.length<600&&!errors.length&&Date.now()<deadline)await new Promise(r=>setTimeout(r,5));assert.deepEqual(errors,[]);assert.deepEqual(seen.map(x=>x.id),Array.from({length:600},(_,i)=>i));assert(seen.every(x=>x.exchangeAt===123));assert(new Set(seen.map(x=>x.mono)).size<600);assert((stream.ingress?.maximumDepth??600)<512);
+ }finally{stream.stop();for(const c of server.clients)c.terminate();await new Promise<void>(r=>server.close(()=>r()));}
+});
+
+test('Slow consumer invalidates deferred socket bytes instead of assigning fresh callbacks',async()=>{
+ const server=new WebSocketServer({port:0,host:'127.0.0.1'});await once(server,'listening');const address=server.address();assert(address&&typeof address!=='string');
+ let consumed=0;const errors:string[]=[];server.on('connection',ws=>ws.once('message',()=>{for(let i=0;i<600;i++)ws.send(JSON.stringify({id:i}));}));
+ const stream=new StreamConnection({venue:'kalshi',ids:['x'],url:`ws://127.0.0.1:${address.port}`,headers:()=>({}),onMessage:()=>{if(++consumed===1){const until=performance.now()+2100;while(performance.now()<until){}}},onInvalid:r=>errors.push(r),onDiagnostic:()=>{},retryMs:10000});
+ try{stream.start();const deadline=Date.now()+5000;while(!errors.length&&Date.now()<deadline)await new Promise(r=>setTimeout(r,5));assert(errors.includes('TRANSPORT_BACKLOG_STALE'));assert.equal(consumed,1);
+ }finally{stream.stop();for(const c of server.clients)c.terminate();await new Promise<void>(r=>server.close(()=>r()));}
+});

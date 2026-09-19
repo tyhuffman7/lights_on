@@ -8,6 +8,11 @@ export type Entity = {
 };
 // Reviewed seed identities. Catalog aliases augment candidate identity only, never settlement proof.
 export const entities: Entity[] = [
+  // Exact venue variants corroborated by ATP SR81/SY71 and ITF 800513443 profiles,
+  // plus captured matching Challenger event context (2026-09-15). No bare surnames.
+  {id:'ATP:SR81',scope:'atp',name:'Khumoyun Sultanov',aliases:['Khumoun Sultanov']},
+  {id:'ATP:SY71',scope:'atp',name:'Digvijay Pratap Singh',aliases:['Digvijaypratap Singh']},
+  {id:'ATP:ITF800513443',scope:'atp',name:'Tai Leonard Sach',aliases:['Tai Sach']},
   {
     id: "NFL:CLE",
     scope: "nfl",
@@ -29,13 +34,13 @@ export const entities: Entity[] = [
   {"id": "NFL:CAROLINA", "scope": "nfl", "name": "Carolina Panthers", "aliases": ["Carolina", "Panthers"]},
   {"id": "NFL:CHICAGO", "scope": "nfl", "name": "Chicago Bears", "aliases": ["Chicago", "Bears"]},
   {"id": "NFL:DALLAS", "scope": "nfl", "name": "Dallas Cowboys", "aliases": ["Dallas", "Cowboys"]},
-  {"id": "NFL:DENVER", "scope": "nfl", "name": "Denver Broncos", "aliases": ["Denver", "Broncos"]},
+  {"id": "NFL:DENVER", "scope": "nfl", "name": "Denver Broncos", "aliases": ["Denver", "Broncos", "DEN Broncos"]},
   {"id": "NFL:DETROIT", "scope": "nfl", "name": "Detroit Lions", "aliases": ["Detroit", "Lions"]},
   {"id": "NFL:GREEN_BAY", "scope": "nfl", "name": "Green Bay Packers", "aliases": ["Green Bay", "Packers"]},
   {"id": "NFL:HOUSTON", "scope": "nfl", "name": "Houston Texans", "aliases": ["Houston", "Texans"]},
   {"id": "NFL:INDIANAPOLIS", "scope": "nfl", "name": "Indianapolis Colts", "aliases": ["Indianapolis", "Colts"]},
   {"id": "NFL:JACKSONVILLE", "scope": "nfl", "name": "Jacksonville Jaguars", "aliases": ["Jacksonville", "Jaguars"]},
-  {"id": "NFL:KANSAS_CITY", "scope": "nfl", "name": "Kansas City Chiefs", "aliases": ["Kansas City", "Chiefs"]},
+  {"id": "NFL:KANSAS_CITY", "scope": "nfl", "name": "Kansas City Chiefs", "aliases": ["Kansas City", "Chiefs", "KC Chiefs"]},
   {"id": "NFL:LAS_VEGAS", "scope": "nfl", "name": "Las Vegas Raiders", "aliases": ["Las Vegas", "Raiders"]},
   {"id": "NFL:LOS_ANGELES_C", "scope": "nfl", "name": "Los Angeles Chargers", "aliases": ["Los Angeles C", "Chargers"]},
   {"id": "NFL:LOS_ANGELES_R", "scope": "nfl", "name": "Los Angeles Rams", "aliases": ["Los Angeles R", "Rams"]},
@@ -64,6 +69,39 @@ export const entities: Entity[] = [
     name: "Cleveland Guardians",
     aliases: ["Guardians", "CLE", "Cleveland"],
   },
+  // Captured venue names corroborated by https://www.mlb.com/team (2026-09-15).
+  // City-only aliases stay MLB-scoped; never use ambiguous "Los Angeles".
+  // Remaining current MLB teams: official MLB team directory plus captured Kalshi city/club forms.
+  // Shared-city bare names (Chicago, New York, Los Angeles) intentionally excluded.
+  {"id": "MLB:ATL", "scope": "mlb", "name": "Atlanta Braves", "aliases": ["Atlanta", "Braves", "ATL"]},
+  {"id": "MLB:ATH", "scope": "mlb", "name": "Athletics", "aliases": ["A’s", "A's", "ATH"]},
+  {"id": "MLB:BAL", "scope": "mlb", "name": "Baltimore Orioles", "aliases": ["Baltimore", "Orioles", "BAL"]},
+  {"id": "MLB:BOS", "scope": "mlb", "name": "Boston Red Sox", "aliases": ["Boston", "Red Sox", "BOS"]},
+  {"id": "MLB:CHC", "scope": "mlb", "name": "Chicago Cubs", "aliases": ["Chicago C", "Cubs", "CHC"]},
+  {"id": "MLB:CWS", "scope": "mlb", "name": "Chicago White Sox", "aliases": ["Chicago WS", "White Sox", "CWS"]},
+  {"id": "MLB:CIN", "scope": "mlb", "name": "Cincinnati Reds", "aliases": ["Cincinnati", "Reds", "CIN"]},
+  {"id": "MLB:DET", "scope": "mlb", "name": "Detroit Tigers", "aliases": ["Detroit", "Tigers", "DET"]},
+  {"id": "MLB:HOU", "scope": "mlb", "name": "Houston Astros", "aliases": ["Houston", "Astros", "HOU"]},
+  {"id": "MLB:KC", "scope": "mlb", "name": "Kansas City Royals", "aliases": ["Kansas City", "Royals", "KC"]},
+  {"id": "MLB:LAD", "scope": "mlb", "name": "Los Angeles Dodgers", "aliases": ["Los Angeles D", "Dodgers", "LAD"]},
+  {"id": "MLB:MIL", "scope": "mlb", "name": "Milwaukee Brewers", "aliases": ["Milwaukee", "Brewers", "MIL"]},
+  {"id": "MLB:MIN", "scope": "mlb", "name": "Minnesota Twins", "aliases": ["Minnesota", "Twins", "MIN"]},
+  {"id": "MLB:NYM", "scope": "mlb", "name": "New York Mets", "aliases": ["New York M", "Mets", "NYM"]},
+  {"id": "MLB:NYY", "scope": "mlb", "name": "New York Yankees", "aliases": ["New York Y", "Yankees", "NYY"]},
+  {"id": "MLB:PHI", "scope": "mlb", "name": "Philadelphia Phillies", "aliases": ["Philadelphia", "Phillies", "PHI"]},
+  {"id": "MLB:PIT", "scope": "mlb", "name": "Pittsburgh Pirates", "aliases": ["Pittsburgh", "Pirates", "PIT"]},
+  {"id": "MLB:SF", "scope": "mlb", "name": "San Francisco Giants", "aliases": ["San Francisco", "Giants", "SF"]},
+  {"id": "MLB:STL", "scope": "mlb", "name": "St. Louis Cardinals", "aliases": ["St. Louis", "Cardinals", "STL"]},
+  {"id": "MLB:TB", "scope": "mlb", "name": "Tampa Bay Rays", "aliases": ["Tampa Bay", "Rays", "TB"]},
+  {"id": "MLB:TEX", "scope": "mlb", "name": "Texas Rangers", "aliases": ["Texas", "Rangers", "TEX"]},
+  {"id": "MLB:TOR", "scope": "mlb", "name": "Toronto Blue Jays", "aliases": ["Toronto", "Blue Jays", "TOR"]},
+  {"id": "MLB:WSH", "scope": "mlb", "name": "Washington Nationals", "aliases": ["Washington", "Nationals", "WSH"]},
+  {id:"MLB:MIA",scope:"mlb",name:"Miami Marlins",aliases:["Miami","Marlins","MIA"]},
+  {id:"MLB:AZ",scope:"mlb",name:"Arizona Diamondbacks",aliases:["Arizona","Diamondbacks","AZ"]},
+  {id:"MLB:SEA",scope:"mlb",name:"Seattle Mariners",aliases:["Seattle","Mariners","SEA"]},
+  {id:"MLB:LAA",scope:"mlb",name:"Los Angeles Angels",aliases:["Los Angeles A","Angels","LAA"]},
+  {id:"MLB:SD",scope:"mlb",name:"San Diego Padres",aliases:["San Diego","Padres","SD"]},
+  {id:"MLB:COL",scope:"mlb",name:"Colorado Rockies",aliases:["Colorado","Rockies","COL"]},
   { id: "NCAAF:OHIO", scope: "cfb", name: "Ohio Bobcats", aliases: ["Ohio"] },
   {
     id: "ATP:CARLOS_ALCARAZ",
@@ -192,6 +230,11 @@ export function catalogEntities(identities: (Identity | undefined)[]) {
             : undefined,
         aliases: [
           ...team.aliases,
+          // Derive only a trailing State abbreviation from an authoritative
+          // team name; never rewrite Saint prefixes or names across leagues.
+          ...(parts.at(-1) === "state"
+            ? [parts.slice(0, -1).join(" ") + " st"]
+            : []),
           parts.slice(0, -1).join(" "),
           ...(parts.length > 2
             ? [parts.slice(0, -1).join(" ") + " " + parts.at(-1)![0]]

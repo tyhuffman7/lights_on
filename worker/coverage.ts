@@ -6,12 +6,14 @@ import {
 import { discoverCandidates } from "../lib/research/matching.ts";
 import type { MappingRegistry } from "../lib/research/mappings.ts";
 import type { Market } from "../lib/arb/types.ts";
+import { PolyEventContexts } from '../lib/arb/poly-event-context.ts';
 export async function catalog(
   request = getJSON,
   signal?: AbortSignal,
   progress: (x: any) => void = () => {},
 ) {
   const at = Date.now();
+  const polyContexts = new PolyEventContexts(request);
   const kalshi: Market[] = [],
     poly: Market[] = [],
     errors: string[] = [];
@@ -42,7 +44,7 @@ export async function catalog(
       if (d.markets.length && pages.has(fingerprint))
         throw new Error("Repeated PM page");
       pages.add(fingerprint);
-      for (const m of d.markets) poly.push(await normalizePoly(m));
+      for (const m of d.markets) poly.push(await normalizePoly(await polyContexts.enrich(m)));
       polyPages++;
       reportProgress();
       if (d.markets.length < 500) break;

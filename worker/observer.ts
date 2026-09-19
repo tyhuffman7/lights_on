@@ -48,11 +48,13 @@ export class Observer {
   marketStreams = new Map<string, StreamConnection>();
   timers: ReturnType<typeof setInterval>[] = [];
   paperTradeTape = false;
+  paperFullCapture = false;
   paperTradeSink?: (message:Record<string,any>,wall:number,mono:number)=>void;
   private paperSnapshotAt=0;
   private paperSnapshotMarkets=new Map<string,number>();
   paused = true;
   stopped = false;
+  failureReason: string | null = null;
   busyMetadata = false;
   busyReconcile = false;
   lastTick = performance.now();
@@ -65,7 +67,7 @@ export class Observer {
       this.registry,
       config,
       this.telemetry,
-      () => this.pause(),
+      () => { this.failureReason='PERSISTENCE_FAILED'; this.pause(); },
       config.maxPersistencePending,
     );
     this.recorder.streamHealthy = (venue, id) =>
@@ -205,6 +207,7 @@ export class Observer {
       ),
     );
   }
+  drainIngress(){this.streams.forEach(s=>s.pauseInput());this.streams.forEach(s=>s.drainIngress());}
   pause() {
     this.paused = true;
     for (const timer of this.snapshotTimers.values()) clearTimeout(timer);
@@ -247,7 +250,9 @@ export class Observer {
           const a = await get("kalshi", m.pair.a.id),
             b = await get("poly", m.pair.b.id);
           if (this.stopped || this.paused) return;
+          const applyStarted=performance.now();
           this.registry.refresh(m.id, a, b, fetchedAt);
+          this.telemetry.sample("metadataApply",performance.now()-applyStarted);
         } catch {
           if (this.stopped) return;
           this.registry.deactivate(m.id, "METADATA_UNAVAILABLE");
@@ -520,6 +525,7 @@ export class Observer {
         await this.applySubscriptions();
       } while (this.subscriptionsDirty && !this.paused && !this.stopped);
     } catch {
+      this.failureReason="SUBSCRIPTION_SYNC_FAILED";
       this.telemetry.count("SUBSCRIPTION_SYNC_FAILED");
       this.pause();
     } finally {
@@ -566,6 +572,15 @@ export class Observer {
       performance.now() - selectionStarted,
     );
     if (this.paused || this.stopped || !this.capacity) return;
+    if (this.paperFullCapture) {
+      const approved=new Set(this.paperPriorityIds());
+      const keys=[...new Set(this.capacity.selectedIds.filter(id=>approved.has(id)).flatMap(id=>{
+        const m=this.registry.get(id);return m?[`kalshi:${m.pair.a.id}`,`poly:${m.pair.b.id}`]:[];
+      }))];
+      await this.recorder.send('paperCapture',keys);
+      this.recorder.diagnostic('PAPER_CAPTURE_MODE',{scope:'ALL_NORMALIZED_BOOK_UPDATES_FOR_SELECTED_PAPER_APPROVED_MARKETS',keys});
+      if(this.paused||this.stopped)return;
+    }
     for (const venue of ["kalshi", "poly"] as Venue[]) {
       const selected = this.capacity.subscribed[venue];
       const desired = new Set(

@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import type { Venue } from "../arb/types.ts";
 const endpoints = {
   kalshi: {
+    settlements: "https://external-api.kalshi.com/trade-api/v2/portfolio/settlements?limit=100&subaccount=0",
     fills:
       "https://external-api.kalshi.com/trade-api/v2/portfolio/fills?limit=100",
     balance:
@@ -13,6 +14,7 @@ const endpoints = {
       "https://external-api.kalshi.com/trade-api/v2/portfolio/positions?limit=1000",
   },
   poly: {
+    settlements: "https://api.polymarket.us/v1/portfolio/activities?types=ACTIVITY_TYPE_POSITION_RESOLUTION&limit=100",
     fills:
       "https://api.polymarket.us/v1/portfolio/activities?types=ACTIVITY_TYPE_TRADE&limit=100",
     balance: "https://api.polymarket.us/v1/account/balances",
@@ -40,6 +42,21 @@ export async function readAccount(
   const url = endpoints[venue]?.[operation];
   if (!url) throw Error("Unsupported account read");
   return signedGet(venue, url, options);
+}
+export type HistoryOperation='fills'|'settlements'|'activities'|'deposits'|'withdrawals'|'subaccountTransfers'|'intraAccountTransfers';
+const historyEndpoints:Record<Venue,Partial<Record<HistoryOperation,string>>>={
+ kalshi:{fills:endpoints.kalshi.fills,settlements:endpoints.kalshi.settlements,
+  deposits:'https://external-api.kalshi.com/trade-api/v2/portfolio/deposits?limit=100',
+  withdrawals:'https://external-api.kalshi.com/trade-api/v2/portfolio/withdrawals?limit=100',
+  subaccountTransfers:'https://external-api.kalshi.com/trade-api/v2/portfolio/subaccounts/transfers?limit=100',
+  intraAccountTransfers:'https://external-api.kalshi.com/trade-api/v2/portfolio/intra_exchange_instance_transfers?limit=100'},
+ poly:{fills:endpoints.poly.fills,settlements:endpoints.poly.settlements,activities:'https://api.polymarket.us/v1/portfolio/activities?limit=100'}
+};
+// Cursor data can alter only a query value, never the signed GET destination.
+export async function readHistoryPage(venue:Venue,operation:HistoryOperation,cursor:string,options:ReadOptions={}){
+ if(!Object.hasOwn(historyEndpoints,venue)||!Object.hasOwn(historyEndpoints[venue],operation)||typeof cursor!=='string'||cursor.length>4096)throw Error('Invalid history page');
+ const url=new URL(historyEndpoints[venue][operation]!);if(cursor)url.searchParams.set('cursor',cursor);
+ return signedGet(venue,url.toString(),options);
 }
 export async function readOrder(
   venue: Venue,

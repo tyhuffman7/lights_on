@@ -826,3 +826,22 @@ test("Loss of chamber control before election is not election control", () => {
   assert.equal(matchCandidates([a], [b]).length, 0);
   assert.equal(matchCandidates([{ ...a, rules: b.rules }], [b]).length, 1);
 });
+
+test("House popular vote is neither chamber control nor loss of control", () => {
+  const base = {
+    ...market("kalshi"), category: "Elections",
+    title: "Republican Party House 2026 midterms", outcome: "Republican Party",
+  };
+  const popular = {
+    ...base, venue: "poly" as const,
+    rules: "This market will settle to Yes if the Republican Party receives the most valid votes for U.S. Representative of any party in the 2026 United States Midterm Election. Outcome sourced from the United States Clerk of the House.",
+  };
+  for (const rules of [
+    "If the Republican Party loses majority control of the U.S. House of Representatives after Issuance and before Nov 3, 2026, then the market resolves to Yes.",
+    "This market will settle to Yes if the Republican Party wins control of the United States House of Representatives in the 2026 United States midterm election.",
+  ]) assert.equal(matchCandidates([{ ...base, rules }], [popular]).length, 0);
+  // Same popular-vote predicate remains a candidate, never an automatic approval.
+  const aligned = matchCandidates([{ ...base, rules: popular.rules }], [popular]);
+  assert.equal(aligned.length, 1);
+  assert.equal(aligned[0].status, "UNVERIFIED");
+});

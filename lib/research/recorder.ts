@@ -18,7 +18,8 @@ export class Recorder {
   history = new Map<string, { book: StreamBook; id: number }[]>();
   captureUntil = new Map<string, number>();
   retainedKeys: Set<string> | null = null;
-  storage = { processed: 0, persisted: 0, ringRecords: 0, ringBytes: 0 };
+  paperCaptureKeys = new Set<string>();
+  storage = { processed: 0, persisted: 0, paperCaptured: 0, ringRecords: 0, ringBytes: 0 };
   sizes = new WeakMap<StreamBook, number>();
   private persistBook(entry: { book: StreamBook; id: number }) {
     if (entry.id) return;
@@ -158,7 +159,8 @@ export class Recorder {
       if (history.length > 10000 || this.storage.ringBytes > 128 * 1024 * 1024)
         throw new Error("Evidence history capacity exceeded");
       this.books.set(key, entry);
-      if ((this.captureUntil.get(key) ?? -Infinity) >= book.receivedMono)
+      if (this.paperCaptureKeys.has(key)) this.storage.paperCaptured++;
+      if (this.paperCaptureKeys.has(key) || (this.captureUntil.get(key) ?? -Infinity) >= book.receivedMono)
         this.persistBook(entry);
       for (const m of this.index.get(key) || [])
         this.observe(

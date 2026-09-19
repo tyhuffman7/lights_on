@@ -1,6 +1,8 @@
 import type { Level, Market } from "../arb/types.ts";
 export const GENERAL_KALSHI_RATE = 700;
 export const PM_US_JULY_2026_RATE = 600;
+export const PM_US_SEPTEMBER_2026_RATE = 695;
+export const PM_US_SEPTEMBER_2026_EFFECTIVE_AT = '2026-09-17T04:00:00Z';
 export type FeeSchedule = {
   rate: number;
   rounding: "ceil" | "even";

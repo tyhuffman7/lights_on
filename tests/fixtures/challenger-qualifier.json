@@ -1,0 +1,104 @@
+[
+  {
+    "id": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC",
+    "venue": "kalshi",
+    "identity": {
+      "sports": true,
+      "sport": "tennis",
+      "competition": "atp",
+      "participants": [
+        "mochizuki",
+        "kotov"
+      ],
+      "marketType": "winner",
+      "period": "full event",
+      "outcome": "shintaro mochizuki",
+      "entities": [],
+      "numbers": [],
+      "aliases": []
+    },
+    "exchangeIndex": 3,
+    "title": "Shintaro Mochizuki wins",
+    "outcome": "Shintaro Mochizuki",
+    "opposite": "Shintaro Mochizuki",
+    "category": "Sports",
+    "rules": "If Shintaro Mochizuki wins the Mochizuki vs Kotov professional tennis match in the 2026 ATP Challenger Guangzhou (Huangpu) Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Mochizuki vs Kotov professional tennis match in the 2026 ATP Challenger Guangzhou (Huangpu) Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+    "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15mockot",
+    "closeAt": "2026-09-15T10:30:00Z",
+    "open": true,
+    "feeRate": 700,
+    "feeRounding": "ceil",
+    "minQty": 1,
+    "hash": "e1a9503513701c3130e5f11f0eb66c9d634680ffa74786aba9501843501aae60",
+    "settlement": null,
+    "series": "KXATPCHALLENGERMATCH"
+  },
+  {
+    "id": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-KOT",
+    "venue": "kalshi",
+    "identity": {
+      "sports": true,
+      "sport": "tennis",
+      "competition": "atp",
+      "participants": [
+        "mochizuki",
+        "kotov"
+      ],
+      "marketType": "winner",
+      "period": "full event",
+      "outcome": "pavel kotov",
+      "entities": [],
+      "numbers": [],
+      "aliases": []
+    },
+    "exchangeIndex": 3,
+    "title": "Pavel Kotov wins",
+    "outcome": "Pavel Kotov",
+    "opposite": "Pavel Kotov",
+    "category": "Sports",
+    "rules": "If Pavel Kotov wins the Mochizuki vs Kotov professional tennis match in the 2026 ATP Challenger Guangzhou (Huangpu) Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Mochizuki vs Kotov professional tennis match in the 2026 ATP Challenger Guangzhou (Huangpu) Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+    "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15mockot",
+    "closeAt": "2026-09-15T10:30:00Z",
+    "open": true,
+    "feeRate": 700,
+    "feeRounding": "ceil",
+    "minQty": 1,
+    "hash": "6f91ae25d266ede0394112e6934086d335ec07d44573624995254e3e5eee564a",
+    "settlement": null,
+    "series": "KXATPCHALLENGERMATCH"
+  },
+  {
+    "id": "KXATPCHALLENGERMATCH-26SEP15DELSHI-DEL",
+    "venue": "kalshi",
+    "identity": {
+      "sports": true,
+      "sport": "tennis",
+      "competition": "atp",
+      "participants": [
+        "delaney",
+        "shiraishi"
+      ],
+      "marketType": "winner",
+      "period": "full event",
+      "outcome": "jake delaney",
+      "entities": [],
+      "numbers": [],
+      "aliases": []
+    },
+    "exchangeIndex": 3,
+    "title": "Jake Delaney wins",
+    "outcome": "Jake Delaney",
+    "opposite": "Jake Delaney",
+    "category": "Sports",
+    "rules": "If Jake Delaney wins the Delaney vs Shiraishi professional tennis match in the 2026 ATP Challenger Guangzhou (Huangpu) Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Delaney vs Shiraishi professional tennis match in the 2026 ATP Challenger Guangzhou (Huangpu) Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+    "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15delshi",
+    "closeAt": "2026-09-15T10:30:00Z",
+    "open": true,
+    "feeRate": 700,
+    "feeRounding": "ceil",
+    "minQty": 1,
+    "hash": "81fe28bd4824323be04494f2ce381bdb0a0a0473e1ff35d9c3b7f4fada4001dd",
+    "settlement": null,
+    "series": "KXATPCHALLENGERMATCH"
+  }
+]

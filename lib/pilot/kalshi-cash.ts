@@ -1,0 +1,18 @@
+import {kalshiFill,type ExpectedFill} from './fill-evidence.ts';
+import type {assessKalshiFunding} from './kalshi-funding.ts';
+import type {reconcileKalshiSettlement} from './settlement-evidence.ts';
+import type {Movement} from './cash-conservation.ts';
+type Funding=ReturnType<typeof assessKalshiFunding>;
+export function classifyKalshiCash(input:{fills:unknown[];settlements:unknown[];funding:Funding;priorFunding?:Funding;subaccountTransfers:unknown[];intraAccountTransfers:unknown[]},ownedOrders:Record<string,ExpectedFill>={},expectations:{record:unknown;assessment:ReturnType<typeof reconcileKalshiSettlement>}[]=[]){
+ if(![input.fills,input.settlements,input.subaccountTransfers,input.intraAccountTransfers].every(Array.isArray))throw Error('Complete Kalshi cash histories required');
+ const unresolved=[...input.funding.unresolved],movements=new Map<string,Movement>();
+ if(!input.funding.complete)unresolved.push('INCOMPLETE_FUNDING');
+ if(input.subaccountTransfers.length||input.intraAccountTransfers.length)unresolved.push('TRANSFER_SEMANTICS_REQUIRE_REVIEW');
+ if(input.priorFunding&&!input.priorFunding.complete)unresolved.push('INCOMPLETE_PRIOR_FUNDING');
+ for(const prior of input.priorFunding?.records??[])if(!input.funding.records.some(r=>r.id===prior.id))unresolved.push('FUNDING_HISTORY_REGRESSED');
+ const add=(m:Movement)=>{if(!Number.isFinite(m.earliestAt)||!Number.isFinite(m.latestAt)||m.earliestAt>m.latestAt)throw Error('CASH_EVENT_TIME_UNAVAILABLE');const old=movements.get(m.id);if(old&&JSON.stringify(old)!==JSON.stringify(m))throw Error('CONFLICTING_CASH_EVENT');movements.set(m.id,m);};
+ for(const r of input.funding.records){try{let latest=r.latestAppliedAt;const prior=input.priorFunding?.records.find(p=>p.id===r.id);if(prior){if(prior.expectedDepositMicros!==r.expectedDepositMicros||prior.earliestAppliedAt!==r.earliestAppliedAt)throw Error('FUNDING_CHANGED_SINCE_BASELINE');latest=Math.min(latest,prior.latestAppliedAt);}add({id:'deposit:'+r.id,cashFlowMicros:r.expectedDepositMicros,earliestAt:r.earliestAppliedAt,latestAt:latest,attribution:'UNSCOPED_DEPOSIT'});}catch(e){unresolved.push((e as Error).message);}}
+ for(const raw of input.fills){try{const r=raw as any;if(!r||typeof r.order_id!=='string')throw Error('FILL_IDENTITY_UNAVAILABLE');const owned=Object.hasOwn(ownedOrders,r.order_id)?ownedOrders[r.order_id]:undefined;const fill=kalshiFill(r,owned??{orderId:r.order_id,marketId:r.ticker,side:r.side,action:r.action});const at=typeof r.created_time==='string'?Date.parse(r.created_time):NaN;add({id:'fill:'+fill.fillId,cashFlowMicros:fill.cashFlowMicros,earliestAt:at,latestAt:at,attribution:owned?'OWNED_TRADE':'UNRELATED_TRADE'});}catch(e){unresolved.push((e as Error).message);}}
+ for(const raw of input.settlements){try{const r=raw as any;if(!r||typeof r.ticker!=='string'||!r.ticker||r.exchange_index!==0||!Number.isSafeInteger(r.revenue)||r.revenue<0||!Number.isSafeInteger(r.revenue*10000))throw Error('SETTLEMENT_CASH_SCHEMA_UNAVAILABLE');const matching=expectations.filter(e=>JSON.stringify(e.record)===JSON.stringify(raw));const ownedMarket=Object.values(ownedOrders).some(o=>o.marketId===r.ticker);if(ownedMarket&&(matching.length!==1||!Object.hasOwn(ownedOrders,matching[0].assessment.orderId)||matching[0].assessment.payoutMicros!==r.revenue*10000))throw Error('OWNED_SETTLEMENT_EVIDENCE_REQUIRED');const at=typeof r.settled_time==='string'?Date.parse(r.settled_time):NaN;add({id:'settlement:'+r.ticker,cashFlowMicros:r.revenue*10000,earliestAt:at,latestAt:at,attribution:ownedMarket?'EXPECTED_SETTLEMENT':'UNRELATED_SETTLEMENT'});}catch(e){unresolved.push((e as Error).message);}}
+ return {venue:'kalshi' as const,movements:[...movements.values()],unresolved,complete:unresolved.length===0};
+}

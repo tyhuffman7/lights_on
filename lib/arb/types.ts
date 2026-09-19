@@ -57,6 +57,7 @@ export type Fill = {
   levels: Level[];
 };
 export type Quote = {
+  feeModel?: {version:1;kalshiRate:number;polyRate:number;scope:"ESTIMATE"|"CONSERVATIVE_PAPER_BOUND"};
   pairId: string;
   quantity: number;
   aSide: Side;
@@ -74,8 +75,10 @@ export type Quote = {
   receivedAt: number;
 };
 export type Position = {
+  closedBy?: "early-exit";
+  paperExits?: (import("./paper-exit.ts").ExitLeg & {reason?:'profit-taking'|'unhedged-recovery';requestedAt:number;filledAt:number;scope:"DELAYED_REST_DEPTH_PAPER_NOT_REAL_FILL"|"DELAYED_STREAM_DEPTH_PAPER_NOT_REAL_FILL"})[];
   aQuantity?:number; bQuantity?:number; executionModel?:'maker-public-tape';
-  makerEvidence?:{publicTradeIds:string[];initialQueueAhead:number;activeAt:number;expiresAt:number};
+  makerEvidence?:{clock?:import('./clock-window.ts').ClockWindow;makerFeeProfile?:import('./maker-fees.ts').MakerFeeProfile;publicTradeIds:string[];initialQueueAhead:number;activeAt:number;expiresAt:number};
   id: string;
   pair: Pair;
   quote: Quote;
