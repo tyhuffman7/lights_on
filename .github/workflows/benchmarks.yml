@@ -27,5 +27,6 @@ jobs:
         with:
           name: benchmarks-${{ github.sha }}
           path: .ci/
+          include-hidden-files: true
           retention-days: 7
-          if-no-files-found: warn
+          if-no-files-found: error
