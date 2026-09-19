@@ -34,14 +34,17 @@ export function competitiveMakerPlan(pair:Pair,a:Book,b:Book,settings:Settings,c
 }
 
 // Preserve both economically eligible orientations for activity-aware selection.
-export function competitiveMakerPlans(pair:Pair,a:Book,b:Book,settings:Settings,cash:{kalshi:number;poly:number},now=Date.now(),makerFeeRate?:number){
+export function competitiveMakerPlans(pair:Pair,a:Book,b:Book,settings:Settings,cash:{kalshi:number;poly:number},now=Date.now(),makerFeeRate?:number,score?:(plan:NonNullable<ReturnType<typeof makerPlan>>)=>number){
  return (['yes','no'] as const).flatMap(side=>{
   const scoped={...a,yesBids:side==='yes'?a.yesBids:[],noBids:side==='no'?a.noBids:[]};
   // Keep the join bid even when a more aggressive quote qualifies: activity
   // and queue rank price alternatives, not merely the richest direction.
   const candidates=[makerPlan(pair,scoped,b,settings,cash,now,false,makerFeeRate),makerPlan(pair,scoped,b,settings,cash,now,true,makerFeeRate),competitiveMakerPlan(pair,scoped,b,settings,cash,now,makerFeeRate)];
   const seen=new Set<number>();
-  return candidates.filter((plan):plan is NonNullable<typeof plan>=>{if(!plan||seen.has(plan.price))return false;seen.add(plan.price);return true;});
+  const prices=candidates.filter((plan):plan is NonNullable<typeof plan>=>{if(!plan||seen.has(plan.price))return false;seen.add(plan.price);return true;});
+  // At most six prices, each using the existing <=1000-size enumeration.
+  // Only the best scored eligible size at each price needs to survive.
+  return score?prices.flatMap(plan=>{const ranked=refreshMakerPlan(pair,a,b,settings,cash,plan,now,makerFeeRate,score);return ranked?[ranked]:[];}):prices;
  });
 }
 
@@ -63,4 +66,16 @@ export function makerQuoteDiagnostics(pair:Pair,a:Book,b:Book,settings:Settings,
   const gross=quote.payout-quote.cost,afterFees=gross-quote.fees;
   return {side,quote,gross,afterFees,afterReserve:quote.profit,classification:quote.eligible?'ELIGIBLE':afterFees<=0?'NONPOSITIVE_AFTER_FEES':quote.profit<=0?'RESERVE_ERASES_EDGE':'POSITIVE_BUT_POLICY_REJECTED',belowMinimumProfit:quote.profit<settings.minProfit,belowMinimumRoi:quote.roi<settings.minRoi};
  });
+}
+
+// Revalidate a fixed side/price/quantity; never silently substitute a new size.
+// During initial ranking, score all eligible sizes at that same side and price.
+export function refreshMakerPlan(pair:Pair,a:Book,b:Book,settings:Settings,cash:{kalshi:number;poly:number},selected:NonNullable<ReturnType<typeof makerPlan>>,now=Date.now(),makerFeeRate?:number,score?:(plan:NonNullable<ReturnType<typeof makerPlan>>)=>number):ReturnType<typeof makerPlan>{
+ const side=selected.quote.aSide,price=selected.price,ask=a[side][0];
+ if(!ask||price>=ask.price)return null;
+ if(makerFeeRate!==undefined&&(!Number.isSafeInteger(makerFeeRate)||makerFeeRate<0||makerFeeRate>10000))throw Error('Invalid maker fee');
+ const ahead=(side==='yes'?a.yesBids:a.noBids).filter(l=>l.price>=price).reduce((n,l)=>n+l.quantity,0);
+ const pricedPair=makerFeeRate===undefined?pair:{...pair,a:{...pair.a,feeRate:makerFeeRate}};
+ const quote=assess(pricedPair,{...a,yes:side==='yes'?[{price,quantity:1000}]:[],no:side==='no'?[{price,quantity:1000}]:[]},b,settings,cash,now,makerFillModel,score?{score:quote=>score({...selected,quote,ahead})}:{quantity:selected.quote.quantity});
+ return quote?.eligible?{...selected,quote,ahead}:null;
 }

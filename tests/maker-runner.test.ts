@@ -166,3 +166,21 @@ test('Relevant book events cancel an uneconomic pending quote before activation 
  const runner=new MakerRunner(observer as any,store);clearInterval(runner.timer);
  try{await runner.tick();const o=runner.document.makerOrder!;assert(o);const b={...books.get('poly:'+p.b.id)!,[o.quote.bSide]:[{price:9900,quantity:100}]};books.set('poly:'+p.b.id,b);runner.bookSink(b as any);const scheduled=runner.wakeTimer;runner.bookSink(b as any);assert.equal(runner.wakeTimer,scheduled);await new Promise(resolve=>setImmediate(resolve));await runner.task;assert(o.cancelRequestedAt!==undefined);assert(runner.document.makerOrder,'request is not confirmed cancellation');assert.equal(o.filledA,0);}finally{await runner.stop();store.close();}
 });
+
+for(const invalidated of [false,true])test(`Final reservation refresh ${invalidated?'rejects an invalid exact size':'preserves ranked quantity despite changed depth'}`,async()=>{
+ const store=new PaperStore(join(mkdtempSync(join(tmpdir(),'maker-exact-size-')),'paper.sqlite'));
+ const p={...pair('exact'),reviewed:true};p.a.feeRate=0;p.b.feeRate=695;
+ const m={id:p.id,pair:p,active:true,status:'MANUAL_VERIFIED'};
+ const a={...book('kalshi',p.a.id),source:'stream',yesBids:[{price:4000,quantity:1}],yes:[{price:4100,quantity:10}],noBids:[]};
+ const b={...book('poly',p.b.id),source:'stream',no:[{price:4000,quantity:1},{price:5600,quantity:9}]};
+ const books=new Map([['kalshi:'+p.a.id,a],['poly:'+p.b.id,b]]);let barriers=0;
+ const observer={paused:false,stopped:false,registry:{get:()=>m,list:()=>[m]},recorder:{books,failed:false,streamHealthy:()=>true,send:async()=>{barriers++;b.no=[{price:4000,quantity:invalidated?.5:10}];},diagnostic:()=>{}},capacity:{selectedIds:[p.id]},requestPaperSnapshot:()=>false};
+ const runner=new MakerRunner(observer as any,store,undefined,undefined,true);clearInterval(runner.timer);
+ Object.assign(runner.document.state.settings,{reserve:200,minProfit:1000,minRoi:1,maxTrade:100000});
+ try{
+  const now=Date.now();runner.activity.observe({id:'one-contract',marketId:p.a.id,side:'yes',price:4000,quantity:1,at:now},now);
+  await runner.tick();assert.equal(barriers,1);
+  if(invalidated)assert.equal(runner.document.makerOrder,undefined);
+  else{const order=runner.document.makerOrder!;assert(order);assert.equal(order.quote.aSide,'yes');assert.equal(order.price,4000);assert.equal(order.quote.quantity,1);assert.equal(order.filledA,0);}
+ }finally{await runner.stop();store.close();}
+});

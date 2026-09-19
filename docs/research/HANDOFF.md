@@ -1,19 +1,11 @@
 # Lights On — current checkpoint
 
-## Objective and stop
-Finish the September 19 Astra CI/maker correctness review, report actual commit/CI results and the standalone paper command, then STOP. Recurring automation is PAUSED. Do not start the later multi-hour evidence run or resume autonomous market expansion. Historical instructions to consume a usage/token percentage are INACTIVE; quota consumption is never a work target.
+Updated September 19, 2026. **PAPER ONLY; STOP at this code checkpoint.** No live launch, merge, repository-settings change, or multi-hour observation is authorized. Quota-consumption instructions remain inactive; do not resume automation.
 
-## Safety
-PAPER ONLY. Real orders disabled; NOT pilot-ready. Recorded $100/venue pilot cap is not launch authorization. Conditional sports review is paper-only; live equivalence and current Ohio eligibility remain separate gates. Preserve credentials, .env.research, holdings, ledgers, all existing staged/unstaged/untracked work. Never copy/delete the research database. Exclusive leases, >=8GiB free disk; no tests/builds/replays during collection. No signing bypass/retries, no installed skills/subagents, no unchanged rejected experiments.
+Verified source root: `/Users/tylerhuffman/Documents/code_projects/lights-on`, branch `main` at `b0bccd0`, with existing local work preserved. The registered PR worktree uses `codex/astra-paper-checkpoint`, starting at `547c8b3`. Follow-up updates [draft PR #1](https://github.com/tyhuffman7/lights_on/pull/1).
 
-## Latest market evidence
-Paired settled PAPER profit +$0.282; separate directional recovery +$8.16 is NOT arbitrage profit. Sept15 KBO:90.297s capture/60s warmup,1672 fresh side quotes,0eligible plans/orders/fills. Independent15048affordable sizes:0eligible. Lowerbid3344probes:2hypothetical states $.16 net,0prior activity/0latercontacts,queue151/224. These are historical, not current quotes. No multi-hour trustworthy execution sample yet.
+Completed: activity ranking now considers eligible sizes at each retained side/price; final refresh preserves the exact quantity or rejects it. CI jobs are uniquely named `correctness` and `synthetic-benchmarks`; the checkpoint document and configured AGENTS.md are included. Targeted tests: **45 passed, zero failures**. Prior hosted run **35464542461** passed 429 tests/install/typecheck/build/artifact upload at `547c8b3`; follow-up full CI is **pending**, not yet verified. Do not repeatedly poll.
 
-## Current implementation
-September19 official PMschedule and fresh metadata confirm coefficient695; calculator previously600 corrected/versioned. Existing local baseline already fixed bid fallback, both-side selection, PMorder rounding, hedge viability and cancellation races. This task retains original/next/competitive price candidates, preserves selected price on refresh, coalesces event wakes, and cancels pending quotes when hedge economics fail. Existing lifetime/freshness/profit/reserve unchanged.
+Next step: inspect the follow-up head's hosted correctness result once. Merge and protection changes require Tyler's approval. Hosted manual benchmarks await an approved merge to main. Fresh loss-inclusive multi-hour PAPER evidence requires separate resumption, refreshed watchlist/approvals/fees, exclusive leases and >=8 GiB free disk. Preserve databases, credentials and signing; no tests/builds during collection. Account precision classification and live gates remain unresolved.
 
-## Pending
-Validation and signed CI checkpoint results will be recorded in docs/pilot/ASTRA-CHECKPOINT.md. Account direct-Kalshi versus broker classification unanswered; retain conservative cent precision. No user action needed for bounded code checks. Next task ONLY after user resumes: fresh approvals/activity/fees and standalone multi-hour PAPER evidence; later live recovery work remains separate.
-
-## History
-Full prior notes preserved byte-for-byte in [archive/HANDOFF-through-2026-09-19.md](archive/HANDOFF-through-2026-09-19.md). Old next-actions are superseded by this stopping checkpoint.
+Later supported command, **not run**: `npm run paper -- maker-run work/fee-replay/capture.config.json research-data/paper-bot.sqlite`. The config is stale; see [checkpoint details](../pilot/ASTRA-CHECKPOINT.md) before any use. [Historical notes](archive/HANDOFF-through-2026-09-19.md) are superseded.

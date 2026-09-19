@@ -6,7 +6,7 @@ import {randomUUID} from 'node:crypto';
 import {MakerActivity,makerActivityScore} from '../lib/arb/maker-activity.ts';
 import {MakerQueue,kalshiSellPrint} from '../lib/arb/maker-evidence.ts';
 import {reserveMaker,makerFill,hedgeMaker,closeMaker,makerHedgeViable} from '../lib/arb/maker-ledger.ts';
-import {competitiveMakerPlan as makerPlan,competitiveMakerPlans as makerPlans} from '../lib/arb/maker-plan.ts';import {validPaperApproval} from '../lib/arb/paper-approval.ts';
+import {competitiveMakerPlan as makerPlan,competitiveMakerPlans as makerPlans,refreshMakerPlan} from '../lib/arb/maker-plan.ts';import {validPaperApproval} from '../lib/arb/paper-approval.ts';
 import {isVerified} from '../lib/research/mappings.ts';import {fresh} from '../lib/research/books.ts';
 import {checkSettlements} from '../lib/arb/settlement.ts';import {totals} from '../lib/arb/ledger.ts';
 import type {Observer} from './observer.ts';import type {PaperStore,PaperDocument} from './paper-store.ts';
@@ -137,7 +137,8 @@ export class MakerRunner{
     const m=this.observer.registry.get(id);if(!m||!this.approved(id)||s.positions.some(p=>p.status!=='settled'&&(p.pair.a.id===m.pair.a.id||p.pair.b.id===m.pair.b.id)))continue;
     const a=this.book('kalshi',m.pair.a.id),b=this.book('poly',m.pair.b.id);if(!a&&b)this.observer.requestPaperSnapshot(m.pair.a.id);if(!a||!b)continue;
     const pair={...m.pair,reviewed:true,...(!isVerified(m)?{paperApproval:d.approvals![id]}:{})};
-    const plans=makerPlans(pair,a,b,{...s.settings,maxTrade:Math.max(0,Math.min(s.settings.maxTrade,s.settings.maxCommitted-totals(s).committed)),maxDays:Math.min(s.settings.maxDays,(s.startedAt+30*86400000-now)/86400000)},s.cash,now,this.fee(pair,now)?.rate);
+    const volumes=new Map<string,number>();
+    const plans=makerPlans(pair,a,b,{...s.settings,maxTrade:Math.max(0,Math.min(s.settings.maxTrade,s.settings.maxCommitted-totals(s).committed)),maxDays:Math.min(s.settings.maxDays,(s.startedAt+30*86400000-now)/86400000)},s.cash,now,this.fee(pair,now)?.rate,plan=>{const key=plan.quote.aSide+':'+plan.price;let volume=volumes.get(key);if(volume===undefined){volume=this.activity.volume(pair.a.id,plan.quote.aSide,plan.price,now);volumes.set(key,volume);}return makerActivityScore(volume,plan.ahead,plan.quote.quantity,plan.quote.profit);});
     for(const plan of plans){eligible++;const volume=this.activity.volume(pair.a.id,plan.quote.aSide,plan.price,now),score=makerActivityScore(volume,plan.ahead,plan.quote.quantity,plan.quote.profit);if(volume>0)activeEligible++;
      if(this.requireRecentActivity&&volume<=0){d.counts['Maker candidates without recent executable activity']=(d.counts['Maker candidates without recent executable activity']??0)+1;continue;}
      if(this.requireRecentActivity&&!this.sizeAdmission(pair,plan,now,this.fee(pair,now)?.rate).eligible){d.counts['Maker candidates failing observed-size economics']=(d.counts['Maker candidates failing observed-size economics']??0)+1;continue;}
@@ -153,7 +154,7 @@ export class MakerRunner{
    if(this.stopping||this.observer.paused||!this.approved(bestPair.id)||!m||m.pair.a.hash!==bestPair.a.hash||m.pair.b.hash!==bestPair.b.hash||m.pair.inverted!==bestPair.inverted||!a||!b)return;
    if(this.requireClock&&(!clock||!clockUsable(clock,Date.now(),performance.now())||clock.expiresAt-Date.now()<3000))return;
    const feeProfile=this.fee(bestPair,Date.now());
-   const current=makerPlans(bestPair,a,b,{...s.settings,maxTrade:Math.max(0,Math.min(s.settings.maxTrade,s.settings.maxCommitted-totals(s).committed)),maxDays:Math.min(s.settings.maxDays,((s.startedAt??0)+30*86400000-Date.now())/86400000)},s.cash,Date.now(),feeProfile?.rate).find(plan=>plan.quote.aSide===best!.quote.aSide&&plan.price===best!.price);if(!current)return;
+   const current=refreshMakerPlan(bestPair,a,b,{...s.settings,maxTrade:Math.max(0,Math.min(s.settings.maxTrade,s.settings.maxCommitted-totals(s).committed)),maxDays:Math.min(s.settings.maxDays,((s.startedAt??0)+30*86400000-Date.now())/86400000)},s.cash,best,Date.now(),feeProfile?.rate);if(!current)return;
    const currentVolume=this.activity.volume(bestPair.a.id,current.quote.aSide,current.price,Date.now());
    if(this.requireRecentActivity&&currentVolume<=0){this.observer.recorder.diagnostic('PAPER_MAKER_ADMISSION_REJECTED',{id:bestPair.id,reason:'ACTIVITY_GONE_ON_REFRESH'});return;}
    const sizeAdmission=this.requireRecentActivity?this.sizeAdmission(bestPair,current,Date.now(),feeProfile?.rate):undefined;

@@ -29,3 +29,16 @@ test('Bounded candidate set retains baseline and improved eligible prices for ea
  assert.equal(new Set(plans.map(p=>p.quote.aSide+':'+p.price)).size,plans.length);
  for(const plan of plans){assert(plan.price<a[plan.quote.aSide][0].price);assert(plan.quote.eligible);}
 });
+
+test('Activity ranking retains the smaller higher-score size despite lower total profit',async()=>{
+ const {makerActivityScore}=await import('../lib/arb/maker-activity.ts');
+ const p={...pair('size'),reviewed:true},a=book('kalshi',p.a.id),b=book('poly',p.b.id),s=initialState();p.b.feeRate=695;
+ a.yesBids=[{price:4000,quantity:1}];a.yes=[{price:4100,quantity:10}];a.noBids=[];
+ b.no=[{price:4000,quantity:1},{price:5600,quantity:9}];
+ const settings={...s.settings,reserve:200,minProfit:1000,minRoi:1,maxTrade:100000};
+ const profitOnly=competitiveMakerPlans(p,a,b,settings,s.cash,Date.now(),0)[0];
+ assert.equal(profitOnly.quote.quantity,9);assert.equal(profitOnly.quote.profit,1900);
+ const ranked=competitiveMakerPlans(p,a,b,settings,s.cash,Date.now(),0,plan=>makerActivityScore(1,plan.ahead,plan.quote.quantity,plan.quote.profit));
+ assert.equal(ranked.length,1);assert.equal(ranked[0].price,4000);assert.equal(ranked[0].quote.quantity,1);assert.equal(ranked[0].quote.profit,1600);
+ assert.equal(makerActivityScore(1,1,9,1900),190);assert.equal(makerActivityScore(1,1,1,1600),800);
+});
