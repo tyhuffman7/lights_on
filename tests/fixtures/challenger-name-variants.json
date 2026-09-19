@@ -1,0 +1,594 @@
+{
+  "kalshi": [
+    {
+      "id": "KXATPCHALLENGERMATCH-26SEP15PALBOR-BOR",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "palan",
+          "borisiouk"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "martin borisiouk",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Martin Borisiouk wins",
+      "outcome": "Martin Borisiouk",
+      "opposite": "Martin Borisiouk",
+      "category": "Sports",
+      "rules": "If Martin Borisiouk wins the Palan vs Borisiouk professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Palan vs Borisiouk professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15palbor",
+      "closeAt": "2026-09-15T07:10:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "84cebb712c9413910bef53bda09c939f6f6a3340703fa8592bc09d30e8b9b2b1",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    },
+    {
+      "id": "KXATPCHALLENGERMATCH-26SEP15PALBOR-PAL",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "palan",
+          "borisiouk"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "dominik palan",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Dominik Palan wins",
+      "outcome": "Dominik Palan",
+      "opposite": "Dominik Palan",
+      "category": "Sports",
+      "rules": "If Dominik Palan wins the Palan vs Borisiouk professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Palan vs Borisiouk professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15palbor",
+      "closeAt": "2026-09-15T07:10:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "cb512ce96eaa27c7ded2caa42df82820197a322bbdac4e966c3cc9f804d328b6",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    },
+    {
+      "id": "KXATPCHALLENGERMATCH-26SEP15SULHEC-SUL",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "sultanov",
+          "heck"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "khumoyun sultanov",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Khumoyun Sultanov wins",
+      "outcome": "Khumoyun Sultanov",
+      "opposite": "Khumoyun Sultanov",
+      "category": "Sports",
+      "rules": "If Khumoyun Sultanov wins the Sultanov vs Heck professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Sultanov vs Heck professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15sulhec",
+      "closeAt": "2026-09-15T07:10:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "1a143706fd174b20d75a04b70f99794e98f1027af8d100b34acc17604686f0f6",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    },
+    {
+      "id": "KXATPCHALLENGERMATCH-26SEP15SULHEC-HEC",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "sultanov",
+          "heck"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "hunter heck",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Hunter Heck wins",
+      "outcome": "Hunter Heck",
+      "opposite": "Hunter Heck",
+      "category": "Sports",
+      "rules": "If Hunter Heck wins the Sultanov vs Heck professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Sultanov vs Heck professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15sulhec",
+      "closeAt": "2026-09-15T07:10:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "2cf767b4e1b16afd498ffa9b8de75efdc18c0bf78c92d5d47dc3d2907f868291",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    },
+    {
+      "id": "KXATPCHALLENGERMATCH-26SEP15HEWSIN-SIN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "hewitt",
+          "singh"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "digvijay pratap singh",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Digvijay Pratap Singh wins",
+      "outcome": "Digvijay Pratap Singh",
+      "opposite": "Digvijay Pratap Singh",
+      "category": "Sports",
+      "rules": "If Digvijay Pratap Singh wins the Hewitt vs Singh professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Hewitt vs Singh professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15hewsin",
+      "closeAt": "2026-09-15T07:10:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "04bdaa310192cd7d10b73a2a2ccb5e4736fdb1453d4351736065483bca23d0ca",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    },
+    {
+      "id": "KXATPCHALLENGERMATCH-26SEP15HEWSIN-HEW",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "hewitt",
+          "singh"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "cruz hewitt",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Cruz Hewitt wins",
+      "outcome": "Cruz Hewitt",
+      "opposite": "Cruz Hewitt",
+      "category": "Sports",
+      "rules": "If Cruz Hewitt wins the Hewitt vs Singh professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Hewitt vs Singh professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15hewsin",
+      "closeAt": "2026-09-15T07:10:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "102b71477684975d9b3a40c0e6687f2e0f8551fe037dd63bf73ecb530e35fd65",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    },
+    {
+      "id": "KXATPCHALLENGERMATCH-26SEP15PELSAT-SAT",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "peliwo",
+          "sach"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "tai leonard sach",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Tai Leonard Sach wins",
+      "outcome": "Tai Leonard Sach",
+      "opposite": "Tai Leonard Sach",
+      "category": "Sports",
+      "rules": "If Tai Leonard Sach wins the Peliwo vs Sach professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Peliwo vs Sach professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15pelsat",
+      "closeAt": "2026-09-15T07:10:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "796e63c5dfe4713bd1f8555abb1384d5ccbd90dc1954353411e098c36df5f86e",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    },
+    {
+      "id": "KXATPCHALLENGERMATCH-26SEP15PELSAT-PEL",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "peliwo",
+          "sach"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "filip peliwo",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Filip Peliwo wins",
+      "outcome": "Filip Peliwo",
+      "opposite": "Filip Peliwo",
+      "category": "Sports",
+      "rules": "If Filip Peliwo wins the Peliwo vs Sach professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Peliwo vs Sach professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15pelsat",
+      "closeAt": "2026-09-15T07:10:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "00c5a8230432effd70dadb79b67f8a0604e7be4683f00d158ff94821a8de18d7",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    }
+  ],
+  "poly": [
+    {
+      "id": "aec-atp-cruhew-digsin-2026-09-13",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "https://gateway.polymarket.us/v1/events/slug/atp-cruhew-digsin-2026-09-13"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "eventAt": "2026-09-15T04:50:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "cruz hewitt",
+          "digvijaypratap singh"
+        ],
+        "home": "cruz hewitt",
+        "away": "digvijaypratap singh",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "cruz hewitt",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "cruz hewitt",
+            "venue": "poly",
+            "venueId": "13461",
+            "aliases": [
+              "cruz hewitt",
+              "cruz hewitt",
+              "cruz hewitt",
+              "cruhew",
+              "hewitt"
+            ]
+          },
+          {
+            "name": "digvijaypratap singh",
+            "venue": "poly",
+            "venueId": "5277",
+            "aliases": [
+              "digvijaypratap singh",
+              "digvijaypratap singh",
+              "digvijaypratap singh",
+              "digsin",
+              "singh"
+            ]
+          }
+        ]
+      },
+      "title": "Cruz Hewitt vs Digvijaypratap Singh \u00b7 Cruz Hewitt vs. Digvijaypratap Singh",
+      "outcome": "Cruz Hewitt",
+      "opposite": "Digvijaypratap Singh",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Cruz Hewitt vs Digvijaypratap Singh ATP match scheduled for September 13 at 11:00PM. If the match does not begin due to a walkover, forfeit, injury, or any other cancellation prior to the first point being played, the market will settle to fair market price. If a player retires during the match, the opponent will be recorded as the winner. Outcome sourced from ATP.",
+      "url": "https://polymarket.us/event/aec-atp-cruhew-digsin-2026-09-13",
+      "closeAt": "2026-09-28T03:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "77a7fcfda3c49c6e1d1ed81dd517d57ff2765ff8c8d60ae7d241ac5ceb0f0bad",
+      "settlement": null
+    },
+    {
+      "id": "aec-atp-khusul-hunhec-2026-09-15",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "https://gateway.polymarket.us/v1/events/slug/atp-khusul-hunhec-2026-09-15"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "eventAt": "2026-09-15T05:20:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "khumoun sultanov",
+          "hunter heck"
+        ],
+        "home": "khumoun sultanov",
+        "away": "hunter heck",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "khumoun sultanov",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "khumoun sultanov",
+            "venue": "poly",
+            "venueId": "4979",
+            "aliases": [
+              "khumoun sultanov",
+              "khumoun sultanov",
+              "khumoun sultanov",
+              "khusul",
+              "sultanov"
+            ]
+          },
+          {
+            "name": "hunter heck",
+            "venue": "poly",
+            "venueId": "28404",
+            "aliases": [
+              "hunter heck",
+              "hunter heck",
+              "hunter heck",
+              "hunhec",
+              "heck"
+            ]
+          }
+        ]
+      },
+      "title": "Khumoun Sultanov vs Hunter Heck \u00b7 Khumoun Sultanov vs. Hunter Heck",
+      "outcome": "Khumoun Sultanov",
+      "opposite": "Hunter Heck",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Khumoun Sultanov vs Hunter Heck ATP match scheduled for September 15 at 1:20AM. If the match does not begin due to a walkover, forfeit, injury, or any other cancellation prior to the first point being played, the market will settle to fair market price. If a player retires during the match, the opponent will be recorded as the winner. Outcome sourced from ATP.",
+      "url": "https://polymarket.us/event/aec-atp-khusul-hunhec-2026-09-15",
+      "closeAt": "2026-09-29T05:20:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "67f7c9ea65b912c43b8c440a776e45430f0501c61712223138dfff67facca5df",
+      "settlement": null
+    },
+    {
+      "id": "aec-atp-filpel-taisac-2026-09-15",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "https://gateway.polymarket.us/v1/events/slug/atp-filpel-taisac-2026-09-15"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "eventAt": "2026-09-15T05:50:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "filip peliwo",
+          "tai sach"
+        ],
+        "home": "filip peliwo",
+        "away": "tai sach",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "filip peliwo",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "filip peliwo",
+            "venue": "poly",
+            "venueId": "4836",
+            "aliases": [
+              "filip peliwo",
+              "filip peliwo",
+              "filip peliwo",
+              "filpel",
+              "peliwo"
+            ]
+          },
+          {
+            "name": "tai sach",
+            "venue": "poly",
+            "venueId": "4977",
+            "aliases": [
+              "tai sach",
+              "tai sach",
+              "tai sach",
+              "taisac",
+              "sach"
+            ]
+          }
+        ]
+      },
+      "title": "Filip Peliwo vs Tai Sach \u00b7 Filip Peliwo vs. Tai Sach",
+      "outcome": "Filip Peliwo",
+      "opposite": "Tai Sach",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Filip Peliwo vs Tai Sach ATP match scheduled for September 15 at 2:00AM. If the match does not begin due to a walkover, forfeit, injury, or any other cancellation prior to the first point being played, the market will settle to fair market price. If a player retires during the match, the opponent will be recorded as the winner. Outcome sourced from ATP.",
+      "url": "https://polymarket.us/event/aec-atp-filpel-taisac-2026-09-15",
+      "closeAt": "2026-09-29T06:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "f828ecbac09d8cc4688eafdf3beeae31f11bc094eae7b01496d4d3cf98f20abd",
+      "settlement": null
+    },
+    {
+      "id": "aec-atp-dompal-marbor-2026-09-15",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger phan thiet 4",
+          "round": "round of 32",
+          "source": "https://gateway.polymarket.us/v1/events/slug/atp-dompal-marbor-2026-09-15"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "eventAt": "2026-09-15T04:25:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "dominik palan",
+          "martin borisiouk"
+        ],
+        "home": "dominik palan",
+        "away": "martin borisiouk",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "dominik palan",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "dominik palan",
+            "venue": "poly",
+            "venueId": "5571",
+            "aliases": [
+              "dominik palan",
+              "dominik palan",
+              "dominik palan",
+              "dompal",
+              "palan"
+            ]
+          },
+          {
+            "name": "martin borisiouk",
+            "venue": "poly",
+            "venueId": "31595",
+            "aliases": [
+              "martin borisiouk",
+              "martin borisiouk",
+              "martin borisiouk",
+              "marbor",
+              "borisiouk"
+            ]
+          }
+        ]
+      },
+      "title": "Dominik Palan vs Martin Borisiouk \u00b7 Dominik Palan vs. Martin Borisiouk",
+      "outcome": "Dominik Palan",
+      "opposite": "Martin Borisiouk",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Dominik Palan vs Martin Borisiouk ATP match scheduled for September 15 at 12:40AM. If the match does not begin due to a walkover, forfeit, injury, or any other cancellation prior to the first point being played, the market will settle to fair market price. If a player retires during the match, the opponent will be recorded as the winner. Outcome sourced from ATP.",
+      "url": "https://polymarket.us/event/aec-atp-dompal-marbor-2026-09-15",
+      "closeAt": "2026-09-29T04:40:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "45bb4d92f99179dffb17b7dd70a2d89b14cb1f904e0b68b66e30d48e4c83c3a7",
+      "settlement": null
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { identity } from "../research/identity.ts";
+import { PolyEventContexts } from './poly-event-context.ts';
 import type { Book, Market, Level, Venue, Pair } from "./types.ts";
 import { USD } from "./core.ts";
 import { matchCandidates } from "../research/matching.ts";
@@ -12,6 +13,7 @@ export function observeRequestTiming(fn: typeof requestTiming) {
 }
 const nextRequest = new Map<string, number>();
 const catalogCache = new Map<string, { at: number; data: Obj }>();
+const polyEventContexts = new PolyEventContexts(getJSON);
 export async function getJSON(url: string): Promise<Obj> {
   const u = new URL(url),
     isCatalog = u.pathname.endsWith("/series");
@@ -51,9 +53,9 @@ export async function getJSON(url: string): Promise<Obj> {
       continue;
     }
     if (!response.ok)
-      throw new Error(
+      throw Object.assign(new Error(
         `${u.hostname}: HTTP ${response.status}${response.status === 429 ? " — rate limited; wait before retrying" : ""}`,
-      );
+      ), {status: response.status});
     const data = (await response.json()) as Obj;
     if (isCatalog) catalogCache.set(url, { at: Date.now(), data });
     return data;
@@ -95,9 +97,12 @@ export async function normalizeKalshi(
       ? Math.round(GENERAL_KALSHI_RATE * series.fee_multiplier)
       : null;
   let settlement = null;
-  if (m.status === "settled" && m.settlement_value_dollars !== undefined)
+  // REST calls the terminal paid state finalized; settled is the legacy/event name.
+  // Determined, amended and disputed outcomes are not yet payable.
+  const terminal = m.status === "finalized" || m.status === "settled";
+  if (terminal && m.settlement_value_dollars !== undefined)
     settlement = price(m.settlement_value_dollars);
-  else if (m.status === "settled" && ["yes", "no"].includes(m.result))
+  else if (terminal && ["yes", "no"].includes(m.result))
     settlement = m.result === "yes" ? USD : 0;
   const id = String(m.ticker);
   const closeAt =
@@ -139,13 +144,17 @@ export async function normalizeKalshi(
   };
 }
 export async function normalizePoly(m: Obj, published?: Obj): Promise<Market> {
+  // Event listings decorate totals with a title that the individual endpoint
+  // omits. Use the shared question so refreshing cannot change identity merely
+  // because the same contract came through another endpoint.
+  const total = m.sportsMarketType === 'football_team_full_game_total';
   const sides = m.marketSides || [],
     long = sides.find((x: Obj) => x.long === true),
     short = sides.find((x: Obj) => x.long === false);
   const rules = String(m.description || "");
   const id = String(m.slug),
     closeAt = m.endDate || "";
-  const title = String(m.title || m.question || id);
+  const title = String((total ? m.question : m.title) || m.question || id);
   let settlement = null;
   if (
     m.closed === true &&
@@ -156,7 +165,7 @@ export async function normalizePoly(m: Obj, published?: Obj): Promise<Market> {
   return {
     id,
     venue: "poly",
-    identity: identity("poly", m),
+    identity: identity("poly", total ? {...m,title:undefined} : m),
     title:
       m.question && m.question !== title ? `${title} · ${m.question}` : title,
     outcome: long?.description || "Unknown long",
@@ -199,11 +208,16 @@ export async function market(venue: Venue, id: string): Promise<Market> {
   }
   const data = await getJSON(`${P}/market/slug/${encodeURIComponent(id)}`),
     m = data.market || data;
-  const published =
-    m.closed === true
-      ? await getJSON(`${P}/markets/${encodeURIComponent(id)}/settlement`)
-      : undefined;
-  return normalizePoly(m, published);
+  let published: Obj | undefined;
+  if (m.closed === true) {
+    try { published = await getJSON(`${P}/markets/${encodeURIComponent(id)}/settlement`); }
+    catch (error) {
+      // Closed does not imply a published payout. Only this endpoint's 404
+      // means awaiting settlement; metadata failures and other errors propagate.
+      if ((error as {status?:number})?.status !== 404) throw error;
+    }
+  }
+  return normalizePoly(await polyEventContexts.enrich(m), published);
 }
 function levels(raw: unknown, parse: (v: any) => Level): Level[] {
   if (!Array.isArray(raw)) throw new Error("Order book schema unavailable");

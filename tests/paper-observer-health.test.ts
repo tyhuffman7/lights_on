@@ -1,0 +1,6 @@
+import{test}from'node:test';import assert from'node:assert/strict';import{enforcePaperObserverHealth}from'../worker/paper-observer-health.ts';
+for(const mode of ['persistence','paused','stopped','subscription'])test(`Paper supervisor stops and persists observer failure: ${mode}`,()=>{
+ let flushed=0,stopped=0,paused=0;const bot={failed:false,document:{halt:null as string|null},flush:()=>flushed++},observer={paused:mode==='paused',stopped:mode==='stopped',failureReason:mode==='subscription'?'SUBSCRIPTION_SYNC_FAILED':null,recorder:{failed:mode==='persistence'},pause:()=>paused++};
+ const reason=enforcePaperObserverHealth(bot,observer,()=>stopped++);assert.ok(reason);assert.equal(bot.failed,true);assert.equal(bot.document.halt,reason);assert.equal(flushed,1);assert.equal(stopped,1);assert.equal(paused,1);
+});
+test('Healthy observation and intentional shutdown do not create false execution failures',()=>{const bot={failed:false,document:{halt:null},flush:()=>assert.fail()},observer={paused:false,stopped:false,recorder:{failed:false},pause:()=>assert.fail()};assert.equal(enforcePaperObserverHealth(bot,observer,()=>assert.fail()),null);observer.paused=true;assert.equal(enforcePaperObserverHealth(bot,observer,()=>assert.fail(),true),null);assert.equal(bot.failed,false);});

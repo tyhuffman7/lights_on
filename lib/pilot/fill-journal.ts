@@ -10,8 +10,10 @@ import {
 // account-wide positions and historical trades never establish bot ownership.
 export class FillJournal {
   private db: DatabaseSync;
-  constructor(path: string) {
-    this.db = new DatabaseSync(path);
+  private ownsConnection: boolean;
+  constructor(path: string | DatabaseSync) {
+    this.ownsConnection = typeof path === "string";
+    this.db = typeof path === "string" ? new DatabaseSync(path) : path;
     this.db
       .exec(`PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA busy_timeout=5000;
       CREATE TABLE IF NOT EXISTS owned_fill_orders(venue TEXT NOT NULL, order_id TEXT NOT NULL, identity TEXT NOT NULL, PRIMARY KEY(venue,order_id));
@@ -45,7 +47,7 @@ export class FillJournal {
     if (row.identity !== identity) throw Error("Owned order identity conflict");
   }
   record(venue: Venue, orderId: string, raw: unknown) {
-    this.db.exec("BEGIN IMMEDIATE");
+    this.db.exec("SAVEPOINT fill_journal_record");
     try {
       const row = this.db
         .prepare(
@@ -70,10 +72,10 @@ export class FillJournal {
           .prepare("INSERT INTO owned_fill_evidence VALUES(?,?,?,?)")
           .run(venue, fill.fillId, orderId, body);
       const totals = this.totals(venue, orderId);
-      this.db.exec("COMMIT");
+      this.db.exec("RELEASE fill_journal_record");
       return { inserted: !old, ...totals };
     } catch (e) {
-      this.db.exec("ROLLBACK");
+      this.db.exec("ROLLBACK TO fill_journal_record; RELEASE fill_journal_record");
       throw e;
     }
   }
@@ -109,6 +111,6 @@ export class FillJournal {
     return uniqueFillTotals(this.evidence(venue, orderId));
   }
   close() {
-    this.db.close();
+    if (this.ownsConnection) this.db.close();
   }
 }

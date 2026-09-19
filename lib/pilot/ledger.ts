@@ -47,7 +47,7 @@ export class PilotLedger {
         budget > pilotPolicy.maxPairDebit
       )
         throw new Error("Invalid reservation");
-    this.db.exec("BEGIN IMMEDIATE");
+    this.db.exec("SAVEPOINT pilot_reservation");
     try {
       const old = intents.map((i) => this.get(i.id));
       if (old.some(Boolean)) {
@@ -59,7 +59,7 @@ export class PilotLedger {
           )
         )
           throw new Error("Intent identity conflict");
-        this.db.exec("COMMIT");
+        this.db.exec("RELEASE pilot_reservation");
         return old;
       }
       if (
@@ -105,10 +105,10 @@ export class PilotLedger {
             "INSERT INTO pilot_intents(id,venue,budget,state) VALUES(?,?,?,?)",
           )
           .run(i.id, i.venue, i.budget, "RESERVED");
-      this.db.exec("COMMIT");
+      this.db.exec("RELEASE pilot_reservation");
       return intents.map((i) => this.get(i.id));
     } catch (e) {
-      this.db.exec("ROLLBACK");
+      this.db.exec("ROLLBACK TO pilot_reservation; RELEASE pilot_reservation");
       throw e;
     }
   }

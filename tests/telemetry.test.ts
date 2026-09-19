@@ -25,6 +25,7 @@ test("Telemetry measures bounded samples and explicit interval rates with determ
       p50: 3,
       p95: 4,
       p99: 4,
+      max: 5,
     });
     assert.equal(percentiles([]).p99, null);
     const other = new Telemetry(() => now);
@@ -51,6 +52,7 @@ test("Numeric telemetry sorting preserves quantiles and source sample order", ()
       p50: q(0.5),
       p95: q(0.95),
       p99: q(0.99),
+      max: length ? sorted[length-1] : null,
     });
     assert.deepEqual(values, original);
   }

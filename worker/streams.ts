@@ -1,3 +1,5 @@
+import {TransportArrival,receiverIdle} from './transport-arrival.ts';
+import {FrameQueue,IngressCapacityError} from './frame-queue.ts';
 import WebSocket from "ws";
 import { createHash } from "node:crypto";
 import { createPrivateKey, sign, constants } from "node:crypto";
@@ -62,6 +64,7 @@ export function subscriptions(
   venue: Venue,
   ids: string[],
   includeTrades = false,
+  includePolyTrades = false,
 ): Record<string, any>[] {
   const messages: Record<string, any>[] = [];
   for (let i = 0; i < ids.length; i += 100) {
@@ -85,6 +88,7 @@ export function subscriptions(
     );
   }
   if(includeTrades&&venue==="kalshi")for(let i=0;i<ids.length;i+=100)messages.push({id:1000+i/100,cmd:"subscribe",params:{channels:["trade"],market_tickers:ids.slice(i,i+100)}});
+  if(includePolyTrades&&venue==="poly")for(let i=0;i<ids.length;i+=100)messages.push({subscribe:{requestId:`trades-${i/100+1}`,subscriptionType:"SUBSCRIPTION_TYPE_TRADE",marketSlugs:ids.slice(i,i+100)}});
   return messages;
 }
 type Options = {
@@ -97,12 +101,14 @@ type Options = {
   onDiagnostic: (kind: string, body: unknown) => void;
   context?: () => Record<string, unknown>;
   includeTrades?: boolean;
+  includePolyTrades?: boolean;
   retryMs?: number;
   heartbeatMs?: number;
   heartbeatTimeoutMs?: number;
 };
 export class StreamConnection {
   options: Options;
+  ingress:FrameQueue<{text:string;wall:number;mono:number}>|null=null;
   socket: WebSocket | null = null;
   retry: ReturnType<typeof setTimeout> | null = null;
   heartbeat: ReturnType<typeof setInterval> | null = null;
@@ -144,6 +150,7 @@ export class StreamConnection {
         ? performance.now() - this.lastMessage
         : null,
       rttMs: this.rttMs,
+      ingressDepth:this.ingress?.depth??0,ingressBytes:this.ingress?.bytes??0,ingressMaximumDepth:this.ingress?.maximumDepth??0,
     };
   }
   constructor(options: Options) {
@@ -170,15 +177,29 @@ export class StreamConnection {
           headers: this.options.headers(),
           handshakeTimeout: 15000,
           maxPayload: 16 * 1024 * 1024,
+          allowSynchronousEvents: false,
+          perMessageDeflate: false,
         },
       );
       this.socket = ws;
+      const arrivals=new TransportArrival();
+      const transportFailure=(error:unknown)=>{
+        const reason=error instanceof Error&&/^TRANSPORT_[A-Z_]+$/.test(error.message)?error.message:'TRANSPORT_ARRIVAL_INVALID';
+        this.options.onDiagnostic(reason,{venue:this.options.venue,shard:this.shard});this.recover(reason);
+      };
       ws.on("open", () => {
         this.recoveryReason = null;
+        const internals=ws as unknown as {_socket:import('node:net').Socket;_receiver:unknown};
+        try{receiverIdle(internals._receiver);
+          internals._socket.prependListener('data',(chunk:Buffer)=>{
+            if(this.stopped||this.socket!==ws||this.recoveryReason)return;
+            try{arrivals.observe(chunk.length,receiverIdle(internals._receiver),Date.now(),performance.now());}catch(error){transportFailure(error);}
+          });
+        }catch(error){transportFailure(error);return;}
         this.connectedAt = performance.now();
         this.lastMessage = 0;
         this.lastPong = this.connectedAt;
-        for (const m of subscriptions(this.options.venue, this.options.ids, this.options.includeTrades))
+        for (const m of subscriptions(this.options.venue, this.options.ids, this.options.includeTrades, this.options.includePolyTrades))
           ws.send(JSON.stringify(m));
         this.options.onDiagnostic("CONNECTED", {
           venue: this.options.venue,
@@ -202,12 +223,10 @@ export class StreamConnection {
         this.lastPong = performance.now();
         if (this.pingAt) this.rttMs = this.lastPong - this.pingAt;
       });
-      ws.on("message", (bytes) => {
-        const wall = Date.now(),
-          mono = performance.now();
-        this.lastMessage = mono;
+      const processFrame=({text,wall,mono}:{text:string;wall:number;mono:number})=>{
+        if(this.stopped||this.socket!==ws||this.recoveryReason)return;
         try {
-          const message = JSON.parse(bytes.toString());
+          const message = JSON.parse(text);
           if (message.type === "error" || message.error)
             throw new Error("Venue subscription rejected");
           this.options.onMessage(message, wall, mono);
@@ -246,6 +265,13 @@ export class StreamConnection {
           });
           this.recover(reason);
         }
+      };
+      const ingress=new FrameQueue(processFrame,error=>{const reason=error instanceof IngressCapacityError?'INGRESS_OVERFLOW':'INGRESS_CONSUMER_FAILURE';this.options.onDiagnostic(reason,{venue:this.options.venue,shard:this.shard,...(error instanceof IngressCapacityError?{queue:error.details}:{})});this.recover(reason);});
+      this.ingress=ingress;
+      ws.on("message",bytes=>{
+        if(this.stopped||this.socket!==ws||this.recoveryReason)return;
+        const now=Date.now(),at=performance.now();this.lastMessage=at;
+        try{const {wall,mono}=arrivals.receipt(now,at);const text=bytes.toString();ingress.push({text,wall,mono},Buffer.byteLength(text));}catch(error){transportFailure(error);}
       });
       ws.on("error", (error: NodeJS.ErrnoException) => {
         this.options.onDiagnostic("STREAM_ERROR", {
@@ -256,6 +282,7 @@ export class StreamConnection {
         });
       });
       ws.on("close", (code, reason) => {
+        ingress.close();
         this.lastDisconnect = {
           ...this.health(),
           lastDisconnect: undefined,
@@ -331,6 +358,7 @@ export class StreamConnection {
   recover(reason: string) {
     if (this.stopped || this.recoveryReason) return;
     this.recoveryReason = reason;
+    this.ingress?.close();
     this.options.onDiagnostic("RECOVERY_DETAIL", {
       ...this.health(),
       ...this.options.context?.(),
@@ -340,8 +368,11 @@ export class StreamConnection {
     this.options.onInvalid(reason);
     this.socket?.terminate();
   }
+  pauseInput(){this.socket?.pause();}
+  drainIngress(){this.ingress?.flush();}
   stop() {
     this.stopped = true;
+    this.ingress?.close();
     if (this.retry) clearTimeout(this.retry);
     if (this.heartbeat) clearInterval(this.heartbeat);
     this.retry = null;

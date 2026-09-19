@@ -1,0 +1,214 @@
+[
+  {
+    "id": "KXUFCFIGHT-26SEP12CORBLA-COR::aec-ufc-walcor-curbla-2026-09-12",
+    "a": {
+      "id": "KXUFCFIGHT-26SEP12CORBLA-COR",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "mma",
+        "competition": "ufc",
+        "eventDate": "2026-09-12",
+        "participants": [
+          "cortes acosta",
+          "blaydes"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "waldo cortes acosta",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Waldo Cortes-Acosta wins",
+      "outcome": "Waldo Cortes-Acosta",
+      "opposite": "Waldo Cortes-Acosta",
+      "category": "Sports",
+      "rules": "If Waldo Cortes-Acosta wins the Cortes-Acosta vs Blaydes professional MMA fight originally scheduled for Sep 12, 2026, then the market resolves to Yes.\n\nThe following market refers to the Cortes-Acosta vs Blaydes professional MMA fight originally scheduled for Sep 12, 2026. If this fight is postponed or delayed, the market will remain open and close after the rescheduled fight has finished (within two weeks). If the fight is declared a tie or no contest, the market will resolve to 50/50 for both fighters. If the fight is cancelled or rescheduled to over two weeks away, the market will resolve to a fair price in accordance with the rules.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"DAZN\",\"url\":\"https://www.dazn.com/en-US\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.ufc.com/\"}]",
+      "url": "https://kalshi.com/markets/kxufcfight/kxufcfight-26sep12corbla",
+      "closeAt": "2026-09-13T02:20:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "95faf07f814247290970b38e68c33eaa2b49c738b0e9141bf767e915547d1e82",
+      "settlement": null,
+      "series": "KXUFCFIGHT"
+    },
+    "b": {
+      "id": "aec-ufc-walcor-curbla-2026-09-12",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "mma",
+        "competition": "ufc",
+        "eventAt": "2026-09-12T22:00:00.000Z",
+        "eventDate": "2026-09-12",
+        "participants": [
+          "waldo cortes acosta",
+          "curtis blaydes"
+        ],
+        "home": "waldo cortes acosta",
+        "away": "curtis blaydes",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "waldo cortes acosta",
+        "entities": [],
+        "numbers": [
+          "12",
+          "2026",
+          "9",
+          "20"
+        ],
+        "aliases": [
+          {
+            "name": "waldo cortes acosta",
+            "venue": "poly",
+            "venueId": "2127",
+            "aliases": [
+              "waldo cortes acosta",
+              "waldo cortes acosta",
+              "waldo cortes acosta",
+              "walcor",
+              "cortes acosta"
+            ]
+          },
+          {
+            "name": "curtis blaydes",
+            "venue": "poly",
+            "venueId": "2986",
+            "aliases": [
+              "curtis blaydes",
+              "curtis blaydes",
+              "curtis blaydes",
+              "curbla",
+              "blaydes"
+            ]
+          }
+        ]
+      },
+      "title": "Who will win in the upcoming mma event Waldo Cortes Acosta vs Curtis Blaydes scheduled for September 12, 2026 at 9:20 PM UTC?",
+      "outcome": "Waldo Cortes-Acosta",
+      "opposite": "Curtis Blaydes",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Waldo Cortes Acosta vs Curtis Blaydes UFC fight scheduled for September 12 at 2:00PM ET. If the fight ends in a draw or is declared a no contest, the market will settle to $0.50. If the fight is cancelled before the opening bell, the market will settle to the last fair market price. If the fight is not held within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from UFC.",
+      "url": "https://polymarket.us/event/aec-ufc-walcor-curbla-2026-09-12",
+      "closeAt": "2026-09-26T18:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "33ba3a2d9ea2f1d0151455f641da0af69d6852cdd3f661a60e3692cdc6b5a5ac",
+      "settlement": null
+    },
+    "inverted": false,
+    "reviewed": false
+  },
+  {
+    "id": "KXUFCFIGHT-26SEP12CORBLA-BLA::aec-ufc-walcor-curbla-2026-09-12",
+    "a": {
+      "id": "KXUFCFIGHT-26SEP12CORBLA-BLA",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "mma",
+        "competition": "ufc",
+        "eventDate": "2026-09-12",
+        "participants": [
+          "cortes acosta",
+          "blaydes"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "curtis blaydes",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Curtis Blaydes wins",
+      "outcome": "Curtis Blaydes",
+      "opposite": "Curtis Blaydes",
+      "category": "Sports",
+      "rules": "If Curtis Blaydes wins the Cortes-Acosta vs Blaydes professional MMA fight originally scheduled for Sep 12, 2026, then the market resolves to Yes.\n\nThe following market refers to the Cortes-Acosta vs Blaydes professional MMA fight originally scheduled for Sep 12, 2026. If this fight is postponed or delayed, the market will remain open and close after the rescheduled fight has finished (within two weeks). If the fight is declared a tie or no contest, the market will resolve to 50/50 for both fighters. If the fight is cancelled or rescheduled to over two weeks away, the market will resolve to a fair price in accordance with the rules.\n\nThis market and these products have not been endorsed by Zuffa LLC, d/b/a Ultimate Fighting Championship, UFC. Any references to the \u201cUFC,\u201d or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Zuffa and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"DAZN\",\"url\":\"https://www.dazn.com/en-US\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.ufc.com/\"}]",
+      "url": "https://kalshi.com/markets/kxufcfight/kxufcfight-26sep12corbla",
+      "closeAt": "2026-09-13T02:20:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "874a1e0b147ce6d6565e87f3b0c117de99fc5d6d15b207899db241d4e9c29693",
+      "settlement": null,
+      "series": "KXUFCFIGHT"
+    },
+    "b": {
+      "id": "aec-ufc-walcor-curbla-2026-09-12",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "mma",
+        "competition": "ufc",
+        "eventAt": "2026-09-12T22:00:00.000Z",
+        "eventDate": "2026-09-12",
+        "participants": [
+          "waldo cortes acosta",
+          "curtis blaydes"
+        ],
+        "home": "waldo cortes acosta",
+        "away": "curtis blaydes",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "waldo cortes acosta",
+        "entities": [],
+        "numbers": [
+          "12",
+          "2026",
+          "9",
+          "20"
+        ],
+        "aliases": [
+          {
+            "name": "waldo cortes acosta",
+            "venue": "poly",
+            "venueId": "2127",
+            "aliases": [
+              "waldo cortes acosta",
+              "waldo cortes acosta",
+              "waldo cortes acosta",
+              "walcor",
+              "cortes acosta"
+            ]
+          },
+          {
+            "name": "curtis blaydes",
+            "venue": "poly",
+            "venueId": "2986",
+            "aliases": [
+              "curtis blaydes",
+              "curtis blaydes",
+              "curtis blaydes",
+              "curbla",
+              "blaydes"
+            ]
+          }
+        ]
+      },
+      "title": "Who will win in the upcoming mma event Waldo Cortes Acosta vs Curtis Blaydes scheduled for September 12, 2026 at 9:20 PM UTC?",
+      "outcome": "Waldo Cortes-Acosta",
+      "opposite": "Curtis Blaydes",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Waldo Cortes Acosta vs Curtis Blaydes UFC fight scheduled for September 12 at 2:00PM ET. If the fight ends in a draw or is declared a no contest, the market will settle to $0.50. If the fight is cancelled before the opening bell, the market will settle to the last fair market price. If the fight is not held within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from UFC.",
+      "url": "https://polymarket.us/event/aec-ufc-walcor-curbla-2026-09-12",
+      "closeAt": "2026-09-26T18:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "33ba3a2d9ea2f1d0151455f641da0af69d6852cdd3f661a60e3692cdc6b5a5ac",
+      "settlement": null
+    },
+    "inverted": true,
+    "reviewed": false
+  }
+]

@@ -1,0 +1,137 @@
+{
+  "session": "682818d0-dc72-4873-b34d-30f162950f34",
+  "durationSeconds": 603.038,
+  "orders": 145,
+  "closedOrders": 145,
+  "ordersWithFills": 0,
+  "publicPrints": 477,
+  "capturedMarketKeys": 354,
+  "captureConfigurations": 3,
+  "persistedRowsForCapturedKeys": 22892,
+  "stats": {
+    "processed": 57020,
+    "persisted": 24817,
+    "paperCaptured": 22892,
+    "ringRecords": 2156,
+    "ringBytes": 4480233
+  },
+  "cashUSD": {
+    "kalshi": 50.0,
+    "poly": 50.0
+  },
+  "positions": 0,
+  "pendingOrder": null,
+  "halt": null,
+  "health": {
+    "eventLoopDelayEpisodes": 4,
+    "reconnectsAtLastTelemetry": 27,
+    "maximumEventLoopDelayMs": 2269.118463,
+    "selectionSliceMs": {
+      "count": 3506,
+      "p50": 0.9643330000108108,
+      "p95": 5.569667000003392,
+      "p99": 7.497791000059806
+    }
+  },
+  "replay": {
+    "feeEvidence": {
+      "observedAt": "2026-09-12T14:30:39.722660+00:00",
+      "series": {
+        "KXNCAAFGAME": {
+          "ticker": "KXNCAAFGAME",
+          "fee_type": "quadratic_with_maker_fees",
+          "fee_multiplier": 1,
+          "title": "College Football Game"
+        },
+        "KXNFLRECYDS": {
+          "ticker": "KXNFLRECYDS",
+          "fee_type": "quadratic",
+          "fee_multiplier": 1,
+          "title": "Pro Football Receiving Yards"
+        },
+        "KXNFLPASSYDS": {
+          "ticker": "KXNFLPASSYDS",
+          "fee_type": "quadratic",
+          "fee_multiplier": 1,
+          "title": "Pro Football Passing Yards"
+        }
+      }
+    },
+    "limitations": [
+      "Older sessions used selective retention around taker opportunities; replay conclusions for those sessions are incomplete.",
+      "Research replay uses recorded stream-book flags, not independently reconstructed socket health.",
+      "Published role fees observed now are sensitivity assumptions for earlier sessions, not verified historical fees.",
+      "Candidate strategy is deterministic bounded batches, not the production activity ranking.",
+      "Fractional balance rounding and hidden queue liquidity remain unverified; no replay result is booked into the paper ledger.",
+      "No settlement payouts are fabricated."
+    ],
+    "reports": [
+      {
+        "session": "682818d0-dc72-4873-b34d-30f162950f34",
+        "feeMode": "conservative-taker",
+        "scope": "RESEARCH_REPLAY_NOT_EXECUTION_PROOF",
+        "retention": "FULL_CAPTURE_KEYS_DECLARED",
+        "approvedMappings": 199,
+        "excludedMetadataChanged": 2,
+        "eligibleMappingCount": 199,
+        "counters": {
+          "orders": 179,
+          "ordersWithFills": 0,
+          "matchedOrders": 0,
+          "unmatchedOrders": 0,
+          "printPackets": 477,
+          "futureTimestampAllPrints": 474,
+          "sameMarketPrints": 0,
+          "futureTimestampPrints": 0,
+          "filledQuantity": 0,
+          "feePrecisionUncertainty": false
+        },
+        "positions": 0,
+        "cashUSD": {
+          "kalshi": 50,
+          "poly": 50
+        },
+        "modeledOpenEntryProfitUSD": 0,
+        "realizedProfitUSD": 0,
+        "examples": []
+      },
+      {
+        "session": "682818d0-dc72-4873-b34d-30f162950f34",
+        "feeMode": "published-maker-sensitivity",
+        "scope": "RESEARCH_REPLAY_NOT_EXECUTION_PROOF",
+        "retention": "FULL_CAPTURE_KEYS_DECLARED",
+        "approvedMappings": 199,
+        "excludedMetadataChanged": 2,
+        "eligibleMappingCount": 199,
+        "counters": {
+          "orders": 206,
+          "ordersWithFills": 0,
+          "matchedOrders": 0,
+          "unmatchedOrders": 0,
+          "printPackets": 477,
+          "futureTimestampAllPrints": 474,
+          "sameMarketPrints": 0,
+          "futureTimestampPrints": 0,
+          "filledQuantity": 0,
+          "feePrecisionUncertainty": false
+        },
+        "positions": 0,
+        "cashUSD": {
+          "kalshi": 50,
+          "poly": 50
+        },
+        "modeledOpenEntryProfitUSD": 0,
+        "realizedProfitUSD": 0,
+        "examples": []
+      }
+    ]
+  },
+  "verification": {
+    "tests": 222,
+    "typescript": "passed",
+    "build": "passed",
+    "leasesEmpty": true,
+    "realOrders": 0,
+    "realFills": 0
+  }
+}

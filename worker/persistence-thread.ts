@@ -51,6 +51,7 @@ parentPort!.on("message", (wire) => {
       registry.cache = new Map(m.data.map((x: any) => [x.id, x]));
       recorder.reindex();
     } else if (m.kind === "retain") recorder.retainedKeys = new Set(m.data);
+    else if (m.kind === "paperCapture") recorder.paperCaptureKeys = new Set(m.data);
     else if (m.kind === "book")
       recorder.update(m.data.book, m.data.evaluations);
     else if (m.kind === "tick")

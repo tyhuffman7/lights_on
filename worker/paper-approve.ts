@@ -1,3 +1,4 @@
+import {ruleVerificationForSeries} from '../lib/arb/rule-documents.ts';
 import {existsSync} from 'node:fs';
 import {readConfig,lease} from './config.ts';
 import {ResearchStore} from '../lib/research/store.ts';
@@ -18,6 +19,7 @@ try{
   const m=JSON.parse(String(row.body)) as Mapping;if(!m.active)throw Error('Inactive mapping: '+id);
   const [a,b]=await Promise.all([market('kalshi',m.pair.a.id),market('poly',m.pair.b.id)]);
   if(paperFingerprint({...m.pair,a,b})!==paperFingerprint(m.pair))throw Error('Metadata changed: refresh observer before approval: '+id);
+  const ruleGate=ruleVerificationForSeries(a.series);if(ruleGate){const check=await ruleGate.verifier.refresh();if(!check.ok)throw Error('Rule verification failed: '+JSON.stringify(check));}
   approvals.push(createPaperApproval({...m.pair,a,b},'Explicit conditional-paper risk acceptance via CLI; ordinary-outcome profile checked against current venue metadata. Exceptional-state payouts are not guaranteed complementary.'));
  }
  d.approvals={...d.approvals,...Object.fromEntries(approvals.map(a=>[a.pairId,a]))};paper.save(d);

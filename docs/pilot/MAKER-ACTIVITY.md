@@ -1,3 +1,5 @@
+> Evidence correction (September 12): historical `book_updates` used selective retention around taker opportunities. Historical quote/replay counts are sampled diagnostics, not exhaustive maker opportunity measurements. Actual paper-order/fill counts remain unchanged. The new paper-capture mode retains every normalized update for its declared selected approved market keys.
+
 # Activity-aware maker paper checkpoint
 
 The paper worker now records recent public trading activity while idle and ranks profitable maker candidates using same-market, same-side sell volume at or below the proposed bid. The score accounts for initial visible queue depth and requested quantity. It is a selection heuristic, not a fill probability. Quotes without activity remain the fallback when no active profitable candidate exists.

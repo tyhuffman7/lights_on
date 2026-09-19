@@ -24,6 +24,7 @@
     "research:backup": "node --experimental-strip-types worker/backup.ts",
     "research:health": "node --experimental-strip-types worker/health-check.ts",
     "test:discovery-load": "node --experimental-strip-types worker/coverage-scale.ts",
+    "pilot:reconcile": "node --experimental-strip-types worker/pilot-reconcile.ts",
     "pilot:audit": "node --experimental-strip-types worker/pilot-audit.ts",
     "pilot:exit-audit": "node --experimental-strip-types worker/pilot-exit-audit.ts",
     "pilot:size-audit": "node --experimental-strip-types worker/pilot-size-audit.ts",
@@ -31,7 +32,8 @@
     "test:paper-http": "node tests/paper-demo/http.mjs",
     "paper": "node --experimental-strip-types worker/paper-cli.ts",
     "paper:approve": "node --experimental-strip-types worker/paper-approve.ts",
-    "paper:review": "node --experimental-strip-types worker/paper-review.ts"
+    "paper:review": "node --experimental-strip-types worker/paper-review.ts",
+    "paper:exits": "node --experimental-strip-types worker/paper-exit-cli.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

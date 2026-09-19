@@ -10,9 +10,15 @@ export class MakerActivity {
   this.prune(receivedAt);
   // Small exchange-clock lead is acceptable for ranking only. MakerQueue retains
   // its stricter activation/expiry timestamp checks before crediting any fill.
-  if(trade.at>receivedAt+1000||receivedAt-trade.at>2000||this.prints.has(trade.id))return;
+  if(trade.at>receivedAt+1000||receivedAt-trade.at>2000||this.prints.has(trade.id))return false;
   if(this.prints.size>=10000)this.prints.delete(this.prints.keys().next().value!);
   this.prints.set(trade.id,{trade,receivedAt});
+  return true;
+ }
+ sizes(marketId:string,side:Side,price:number,now:number){
+  this.prune(now);const sizes=new Set<number>();
+  for(const {trade} of this.prints.values())if(trade.marketId===marketId&&trade.side===side&&trade.price<=price)sizes.add(trade.quantity);
+  return [...sizes];
  }
  volume(marketId:string,side:Side,price:number,now:number){
   this.prune(now);let volume=0;

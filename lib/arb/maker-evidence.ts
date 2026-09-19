@@ -1,3 +1,4 @@
+import {localTradeBounds,type ClockWindow} from './clock-window.ts';
 import {quantityUnits} from './fractional.ts';
 import type {Side} from './types.ts';
 export type SellPrint={id:string;marketId:string;side:Side;price:number;quantity:number;at:number};
@@ -15,15 +16,18 @@ export function kalshiSellPrint(message:Record<string,any>):SellPrint|null{
  return {id:String(m.trade_id),marketId:String(m.market_ticker),side,price,quantity,at};
 }
 export class MakerQueue{
+ clock?:ClockWindow;
  seen=new Set<string>();filled=0;invalidated=false;
  marketId:string;side:Side;price:number;quantity:number;ahead:number;activeAt:number;expiresAt:number;
- constructor(marketId:string,side:Side,price:number,quantity:number,ahead:number,activeAt:number,expiresAt:number){
+ constructor(marketId:string,side:Side,price:number,quantity:number,ahead:number,activeAt:number,expiresAt:number,clock?:ClockWindow){
+  this.clock=clock;
   this.marketId=marketId;this.side=side;this.price=price;this.quantity=quantity;this.ahead=ahead;this.activeAt=activeAt;this.expiresAt=expiresAt;
   if(!marketId||!['yes','no'].includes(side)||!Number.isSafeInteger(price)||price<=0||price>=10000||!Number.isFinite(quantity)||quantity<=0||!Number.isFinite(ahead)||ahead<0||expiresAt<=activeAt)throw Error('Invalid maker queue');
  }
  invalidate(){this.invalidated=true;}
- consume(t:SellPrint,receivedAt:number){
-  if(this.invalidated||t.marketId!==this.marketId||t.side!==this.side||t.at<this.activeAt||t.at>=this.expiresAt||receivedAt>=this.expiresAt||t.at>receivedAt||receivedAt-t.at>2000||t.price>this.price||this.seen.has(t.id))return 0;
+ consume(t:SellPrint,receivedAt:number,receivedMono=performance.now()){
+  const bounds=localTradeBounds(t.at,this.clock,receivedAt,receivedMono);
+  if(this.invalidated||t.marketId!==this.marketId||t.side!==this.side||!bounds||bounds[0]<this.activeAt||bounds[1]>=this.expiresAt||receivedAt>=this.expiresAt||bounds[0]>receivedAt||receivedAt-bounds[0]>2000||t.price>this.price||this.seen.has(t.id))return 0;
   if(this.seen.size>=10000){this.invalidate();return 0;}this.seen.add(t.id);
   // Never infer queue progress from cancellations, a touch, or book-size changes.
   // Retain initial visible depth ahead even if a print occurs through our price.

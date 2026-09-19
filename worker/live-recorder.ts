@@ -186,7 +186,9 @@ export class LiveRecorder {
       return Promise.reject(new Error("Persistence backlog limit"));
     }
     const id = ++this.next;
+    const serializationStarted=performance.now();
     const payload = Uint8Array.from(serialize({ id, kind, data }));
+    this.telemetry.sample("persistenceSerialize",performance.now()-serializationStarted);
     if (
       this.backlogBytes + payload.byteLength > 64 * 1024 * 1024 &&
       kind !== "stop"
@@ -347,7 +349,9 @@ export class LiveRecorder {
     this.enqueue("book", { book, evaluations });
     this.onBook?.(book);
     this.telemetry.count("bookUpdates");
-    this.telemetry.sample("evaluation", performance.now() - started);
+    const evaluationMs=performance.now()-started;
+    this.telemetry.sample("evaluation", evaluationMs);
+    if(evaluationMs>25)this.diagnostic("SLOW_BOOK_HANDLER",{venue:book.venue,marketId:book.marketId,ms:evaluationMs,mappings:(this.index.get(key)??[]).length,levels:book.yes.length+book.no.length});
     const processingMs = performance.now() - book.receivedMono;
     this.telemetry.sample("processing", processingMs);
     this.telemetry.sample(

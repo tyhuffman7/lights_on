@@ -1,3 +1,4 @@
+import {sameTennisTournament} from './tennis-tournament.ts';
 import { catalogEntities } from "./entities.ts";
 import {
   normalizeText,
@@ -8,6 +9,8 @@ import {
   announcementDeadline,
   interimService,
   chamberControlEvent,
+  electionStage,
+  meetingPredicate,
 } from "./identity.ts";
 import type { Market, Pair } from "../arb/types.ts";
 import { equivalent } from "./mappings.ts";
@@ -121,6 +124,8 @@ export function discoverCandidates(
         announcementDeadline: announcementDeadline(m.rules),
         interimService: interimService(m.rules),
         chamberControlEvent: chamberControlEvent(m.rules),
+        electionStage: electionStage(m.rules),
+        meeting: meetingPredicate(m.rules),
         identity,
         // Primary payout dates/concepts disambiguate generic titles. Exclude later
         // exception paragraphs and examples; preserve title-based entity/placement.
@@ -285,6 +290,17 @@ export function discoverCandidates(
           reject("structuralConflict");
           continue;
         }
+        if (
+          (left.electionStage && right.electionStage && left.electionStage !== right.electionStage) ||
+          (left.meeting.mode && right.meeting.mode && left.meeting.mode !== right.meeting.mode)
+        ) {
+          reject("structuralConflict");
+          continue;
+        }
+        if (left.meeting.window && right.meeting.window && left.meeting.window !== right.meeting.window) {
+          reject("dateMismatch");
+          continue;
+        }
         const ha = left.hints,
           hb = right.hints;
         if (
@@ -446,6 +462,9 @@ export function discoverCandidates(
             continue;
           }
         }
+        const tc=ia.tennisContext,uc=ib.tennisContext;
+        const challengerContext=a.series==='KXATPCHALLENGERMATCH'&&ia.competition==='atp'&&ib.competition==='atp'&&ia.marketType==='winner'&&ib.marketType==='winner'&&ia.period==='full event'&&ib.period==='full event'&&sameParticipants&&ia.participants.length===2&&!!ia.outcome&&!!ib.outcome&&ia.participants.includes(ia.outcome)&&ib.participants.includes(ib.outcome)&&tc?.source==='kalshi-primary-rules'&&uc?.source==='https://gateway.polymarket.us/v1/events/slug/'+b.id.replace(/^aec-/, '')&&sameTennisTournament(ia,ib,b);
+        if((tc||uc)&&!challengerContext){reject('structuralConflict');continue;}
         sportsIdentity = !!(
           sameParticipants &&
           ia.eventDate &&
@@ -453,7 +472,8 @@ export function discoverCandidates(
           ia.marketType &&
           ia.marketType === ib.marketType
         );
-        if (sportsIdentity)
+        if(challengerContext){if(tc!.tournament!==uc!.tournament)reasons.push('Tournament names corroborated for this match by the September 2026 ATP Guangzhou main draw: https://www.protennislive.com/posting/2026/2937/mds.pdf');sportsIdentity=true;reasons.push('Same ATP Challenger season, tournament, round and two players from primary rules and verified parent event; schedule not inferred');}
+        if (sportsIdentity&&!challengerContext)
           reasons.push(
             "Same competition/event participants, date and market type; settlement equivalence still unproven",
           );

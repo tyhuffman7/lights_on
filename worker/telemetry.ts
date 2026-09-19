@@ -1,10 +1,10 @@
 import { platform, arch, cpus } from "node:os";
-import { monitorEventLoopDelay } from "node:perf_hooks";
+import { monitorEventLoopDelay, PerformanceObserver } from "node:perf_hooks";
 export function percentiles(values: number[]) {
   const a = Float64Array.from(values).sort();
   const p = (n: number) =>
     a.length ? a[Math.min(a.length - 1, Math.floor((a.length - 1) * n))] : null;
-  return { count: a.length, p50: p(0.5), p95: p(0.95), p99: p(0.99) };
+  return { count: a.length, p50: p(0.5), p95: p(0.95), p99: p(0.99), max: a.length ? a[a.length-1] : null };
 }
 export class Telemetry {
   started: number;
@@ -16,10 +16,12 @@ export class Telemetry {
   samples: Record<string, number[]> = {};
   loop = monitorEventLoopDelay({ resolution: 10 });
   cpu = process.cpuUsage();
+  gc = new PerformanceObserver(list=>{for(const entry of list.getEntries())this.sample("gcPause",entry.duration);});
   constructor(now = () => performance.now()) {
     this.now = now;
     this.started = this.windowAt = now();
     this.loop.enable();
+    this.gc.observe({entryTypes:["gc"]});
   }
   count(key: string, n = 1) {
     this.counters[key] = (this.counters[key] ?? 0) + n;
@@ -90,5 +92,6 @@ export class Telemetry {
   }
   close() {
     this.loop.disable();
+    this.gc.disconnect();
   }
 }

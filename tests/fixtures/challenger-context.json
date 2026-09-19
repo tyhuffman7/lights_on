@@ -1,0 +1,416 @@
+{
+  "a": {
+    "id": "KXATPCHALLENGERMATCH-26SEP15SULHEC-HEC",
+    "venue": "kalshi",
+    "identity": {
+      "sports": true,
+      "sport": "tennis",
+      "competition": "atp",
+      "participants": [
+        "sultanov",
+        "heck"
+      ],
+      "marketType": "winner",
+      "period": "full event",
+      "outcome": "hunter heck",
+      "entities": [],
+      "numbers": [],
+      "aliases": []
+    },
+    "exchangeIndex": 3,
+    "title": "Hunter Heck wins",
+    "outcome": "Hunter Heck",
+    "opposite": "Hunter Heck",
+    "category": "Sports",
+    "rules": "If Hunter Heck wins the Sultanov vs Heck professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Sultanov vs Heck professional tennis match in the 2026 ATP Challenger Phan Thiet 4 Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+    "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15sulhec",
+    "closeAt": "2026-09-15T07:10:00Z",
+    "open": true,
+    "feeRate": 700,
+    "feeRounding": "ceil",
+    "minQty": 1,
+    "hash": "2cf767b4e1b16afd498ffa9b8de75efdc18c0bf78c92d5d47dc3d2907f868291",
+    "settlement": null,
+    "series": "KXATPCHALLENGERMATCH"
+  },
+  "event": {
+    "id": "112511",
+    "ticker": "atp-khusul-hunhec-2026-09-15",
+    "slug": "atp-khusul-hunhec-2026-09-15",
+    "title": "Khumoun Sultanov vs. Hunter Heck",
+    "description": "Khumoun Sultanov vs. Hunter Heck",
+    "startDate": "2026-09-15T05:20:00Z",
+    "endDate": "2026-09-15T23:59:00Z",
+    "active": true,
+    "closed": false,
+    "archived": false,
+    "category": "sports",
+    "createdAt": "2026-09-14T13:12:07Z",
+    "updatedAt": "2026-09-15T05:25:13Z",
+    "startTime": "2026-09-15T05:20:00Z",
+    "seriesSlug": "atp-2026",
+    "score": "1-0",
+    "period": "S1",
+    "live": true,
+    "ended": false,
+    "markets": [
+      {
+        "id": "851690",
+        "question": "Khumoun Sultanov vs. Hunter Heck",
+        "slug": "aec-atp-khusul-hunhec-2026-09-15",
+        "endDate": "2026-09-29T05:20:00Z",
+        "category": "sports",
+        "startDate": "2026-09-14T11:45:04Z",
+        "description": "This market will settle to the winner of the Khumoun Sultanov vs Hunter Heck ATP match scheduled for September 15 at 1:20AM. If the match does not begin due to a walkover, forfeit, injury, or any other cancellation prior to the first point being played, the market will settle to fair market price. If a player retires during the match, the opponent will be recorded as the winner. Outcome sourced from ATP.",
+        "active": true,
+        "marketType": "moneyline",
+        "closed": false,
+        "createdAt": "2026-09-14T13:12:07Z",
+        "updatedAt": "2026-09-15T05:25:13Z",
+        "archived": false,
+        "orderPriceMinTickSize": 0.01,
+        "gameStartTime": "2026-09-15T05:20:00Z",
+        "manualActivation": false,
+        "sportsMarketType": "tennis_match_winner",
+        "marketSides": [
+          {
+            "id": "1702868",
+            "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+            "identifier": "aec-atp-khusul-hunhec-2026-09-15",
+            "createdAt": "2026-09-14T13:12:07Z",
+            "updatedAt": "2026-09-14T13:12:07Z",
+            "description": "Khumoun Sultanov",
+            "price": "0.7600",
+            "marketId": 851690,
+            "long": true,
+            "teamId": 4979,
+            "team": {
+              "id": 4979,
+              "name": "Khumoun Sultanov",
+              "abbreviation": "khusul",
+              "league": "atp",
+              "record": "",
+              "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UZB.png",
+              "alias": "Khumoun Sultanov",
+              "safeName": "Khumoun Sultanov",
+              "colorPrimary": "#1EB53A",
+              "ordering": "home",
+              "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UZB.png",
+              "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UZB.png",
+              "displayAbbreviation": "Sultanov",
+              "ranking": "394",
+              "providerIds": [
+                {
+                  "provider": "PROVIDER_ENETPULSE",
+                  "providerId": "446793"
+                }
+              ],
+              "longIconDark": "https://static.polymarket.us/images/teams/tennis/atp/4979.png",
+              "shortIconDark": "https://static.polymarket.us/images/teams/tennis/atp/4979.png",
+              "color": {
+                "light": "#0EAE33",
+                "dark": "#1EB53A"
+              },
+              "imageDisplayType": "IMAGE_DISPLAY_TYPE_HEADSHOT"
+            },
+            "quote": {
+              "value": "0.7700",
+              "currency": "USD"
+            },
+            "tradable": true
+          },
+          {
+            "id": "1702869",
+            "marketSideType": "MARKET_SIDE_TYPE_INSTRUMENT",
+            "identifier": "aec-atp-khusul-hunhec-2026-09-15",
+            "createdAt": "2026-09-14T13:12:07Z",
+            "updatedAt": "2026-09-14T13:12:07Z",
+            "description": "Hunter Heck",
+            "price": "0.7700",
+            "marketId": 851690,
+            "long": false,
+            "teamId": 28404,
+            "team": {
+              "id": 28404,
+              "name": "Hunter Heck",
+              "abbreviation": "hunhec",
+              "league": "atp",
+              "record": "",
+              "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+              "alias": "Hunter Heck",
+              "safeName": "Hunter Heck",
+              "colorPrimary": "#B22234",
+              "ordering": "away",
+              "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+              "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+              "displayAbbreviation": "Heck",
+              "ranking": "622",
+              "providerIds": [
+                {
+                  "provider": "PROVIDER_ENETPULSE",
+                  "providerId": "1288252"
+                }
+              ],
+              "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+              "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+              "color": {
+                "light": "#B22234",
+                "dark": "#B22234"
+              }
+            },
+            "quote": {
+              "value": "0.24",
+              "currency": "USD"
+            },
+            "tradable": true
+          }
+        ],
+        "outcomes": "[\"Hunter Heck\",\"Khumoun Sultanov\"]",
+        "outcomePrices": "[\"0.7600\",\"0.7700\"]",
+        "ep3Status": "OPEN",
+        "status": "MARKET_STATUS_OPEN",
+        "sportsMarketTypeV2": "SPORTS_MARKET_TYPE_MONEYLINE",
+        "hidden": false,
+        "tags": [],
+        "title": "Khumoun Sultanov vs Hunter Heck",
+        "feeCoefficient": 0.06,
+        "bestBidQuote": {
+          "value": "0.7600",
+          "currency": "USD"
+        },
+        "bestAskQuote": {
+          "value": "0.7700",
+          "currency": "USD"
+        },
+        "titleShort": "Sultanov vs Heck",
+        "ep3SyncedAt": "2026-09-15T05:15:16Z",
+        "minimumTradeQty": 0.01,
+        "comboEnabled": true
+      }
+    ],
+    "gameId": 6250622,
+    "sportradarGameId": "sr:match:74683530",
+    "eventState": {
+      "id": 133274226,
+      "gameId": 6250622,
+      "type": "tennis",
+      "createdAt": "2026-09-14T10:00:28.422847Z",
+      "updatedAt": "2026-09-15T05:24:58.165387Z",
+      "score": "1-0",
+      "period": "S1",
+      "live": true,
+      "ended": false,
+      "tennisState": {
+        "tournamentName": "Challenger Phan Thiet 4",
+        "round": "Round of 32",
+        "servingTeamId": 28404
+      },
+      "marketGroupStats": [],
+      "periodScores": [],
+      "eventId": 112511
+    },
+    "participants": [],
+    "hidden": false,
+    "tags": [
+      {
+        "id": "2",
+        "label": "Sports",
+        "slug": "sports",
+        "createdAt": "2025-09-25T16:13:27Z",
+        "updatedAt": "2026-09-15T05:12:25Z",
+        "subtags": [],
+        "hub": null
+      },
+      {
+        "id": "3",
+        "label": "Games",
+        "slug": "games",
+        "createdAt": "2025-09-25T16:13:27Z",
+        "updatedAt": "2026-09-15T05:12:25Z",
+        "subtags": [],
+        "hub": null
+      },
+      {
+        "id": "22",
+        "label": "Tennis",
+        "slug": "tennis",
+        "updatedAt": "2026-09-15T05:12:25Z",
+        "tradable": false,
+        "sport": {
+          "id": 8,
+          "name": "Tennis",
+          "tagId": 22,
+          "createdAt": "2026-03-20T19:11:04Z",
+          "slug": "tennis",
+          "image": "https://static.polymarket.us/images/new-category-icons/Icon-Tennis.png"
+        },
+        "subtags": [],
+        "hub": null
+      },
+      {
+        "id": "23",
+        "label": "ATP",
+        "slug": "atp",
+        "updatedAt": "2026-09-15T05:12:25Z",
+        "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/random-team-images/tennis/APT-NEW.png",
+        "tradable": false,
+        "league": {
+          "id": 12,
+          "name": "ATP",
+          "sportId": 8,
+          "tagId": 23,
+          "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/random-team-images/tennis/APT-NEW.png",
+          "ordering": "home",
+          "activeSeriesId": 16,
+          "isOperational": true,
+          "automaticResolution": false,
+          "createdAt": "2026-03-20T19:11:04Z",
+          "slug": "atp"
+        },
+        "subtags": [],
+        "hub": null
+      },
+      {
+        "id": "1302",
+        "label": "Challenger Phan Thiet 4",
+        "slug": "tennis-challenger-phan-thiet-4",
+        "updatedAt": "2026-09-15T05:12:25Z",
+        "subtags": [],
+        "hub": null
+      }
+    ],
+    "teams": [
+      {
+        "id": 4979,
+        "name": "Khumoun Sultanov",
+        "abbreviation": "khusul",
+        "league": "atp",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UZB.png",
+        "alias": "Khumoun Sultanov",
+        "safeName": "Khumoun Sultanov",
+        "colorPrimary": "#1EB53A",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UZB.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/UZB.png",
+        "displayAbbreviation": "Sultanov",
+        "ranking": "394",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ENETPULSE",
+            "providerId": "446793"
+          }
+        ],
+        "longIconDark": "https://static.polymarket.us/images/teams/tennis/atp/4979.png",
+        "shortIconDark": "https://static.polymarket.us/images/teams/tennis/atp/4979.png",
+        "color": {
+          "light": "#0EAE33",
+          "dark": "#1EB53A"
+        },
+        "imageDisplayType": "IMAGE_DISPLAY_TYPE_HEADSHOT"
+      },
+      {
+        "id": 28404,
+        "name": "Hunter Heck",
+        "abbreviation": "hunhec",
+        "league": "atp",
+        "record": "",
+        "logo": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+        "alias": "Hunter Heck",
+        "safeName": "Hunter Heck",
+        "colorPrimary": "#B22234",
+        "longIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+        "shortIcon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+        "displayAbbreviation": "Heck",
+        "ranking": "622",
+        "providerIds": [
+          {
+            "provider": "PROVIDER_ENETPULSE",
+            "providerId": "1288252"
+          }
+        ],
+        "longIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+        "shortIconDark": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-countries/USA.png",
+        "color": {
+          "light": "#B22234",
+          "dark": "#B22234"
+        }
+      }
+    ],
+    "metadata": {
+      "gameState": {
+        "id": 133274226,
+        "gameId": 6250622,
+        "type": "tennis",
+        "createdAt": "2026-09-14T10:00:28.422847Z",
+        "updatedAt": "2026-09-15T05:24:58.165387Z",
+        "score": "1-0",
+        "period": "S1",
+        "live": true,
+        "ended": false,
+        "tennisState": {
+          "tournamentName": "Challenger Phan Thiet 4",
+          "round": "Round of 32",
+          "servingTeamId": 28404
+        },
+        "marketGroupStats": [],
+        "periodScores": [],
+        "eventId": 0
+      }
+    },
+    "sortType": "price",
+    "marketGroups": [
+      {
+        "id": "PRIMARY",
+        "title": "Primary",
+        "order": 0,
+        "marketIds": [
+          "851690"
+        ],
+        "initialCollapsed": false,
+        "live": false
+      }
+    ],
+    "primaryTag": {
+      "id": "23",
+      "label": "ATP",
+      "slug": "atp",
+      "updatedAt": "2026-09-15T05:12:25Z",
+      "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/random-team-images/tennis/APT-NEW.png",
+      "tradable": false,
+      "league": {
+        "id": 12,
+        "name": "ATP",
+        "sportId": 8,
+        "tagId": 23,
+        "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/random-team-images/tennis/APT-NEW.png",
+        "ordering": "home",
+        "activeSeriesId": 16,
+        "isOperational": true,
+        "automaticResolution": false,
+        "createdAt": "2026-03-20T19:11:04Z",
+        "slug": "atp"
+      },
+      "subtags": [],
+      "hub": null
+    },
+    "secondaryTag": {
+      "id": "1302",
+      "label": "Challenger Phan Thiet 4",
+      "slug": "tennis-challenger-phan-thiet-4",
+      "updatedAt": "2026-09-15T05:12:25Z",
+      "subtags": [],
+      "hub": null
+    },
+    "streamProvider": "sportradar",
+    "streamRequiresAuth": true,
+    "combos": {
+      "enabled": true,
+      "numMarkets": 1,
+      "numSpreadsAndTotalsMarkets": 0
+    },
+    "marketCounts": {
+      "numMarkets": 1,
+      "numSpreadsAndTotalsMarkets": 0
+    }
+  }
+}

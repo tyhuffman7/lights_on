@@ -1,5 +1,6 @@
 // Candidate identity is deliberately separate from settlement-equivalence proof.
 // These public metadata/text hints may block or rank pairs, never verify them.
+const nflGameDateFormatter = new Intl.DateTimeFormat("en-CA", {timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"});
 export type Identity = {
   sports: boolean;
   season?: string;
@@ -19,6 +20,8 @@ export type Identity = {
   eventAt?: string;
   eventDate?: string;
   eventKey?: string;
+  tennisContext?: {tournament:string;round:string;year:string;source:string};
+  eventContext?: { source: string; eventSlug: string; marketId: string };
   participants: string[];
   home?: string;
   away?: string;
@@ -144,6 +147,7 @@ export function identity(
   const sides = m.marketSides ?? [],
     long = sides.find((s: any) => s.long === true);
   const teams = sides.map((s: any) => s.team ?? s.player).filter(Boolean);
+  if (!teams.length && Array.isArray(m.eventTeams)) teams.push(...m.eventTeams);
   if (!teams.length && m.player && typeof m.player === "object")
     teams.push(m.player);
   const teamName = (t: any) => t.safeName || t.name;
@@ -169,12 +173,31 @@ export function identity(
   const marketType = type(rawType + " " + text + " " + (series?.title ?? ""));
   const scheduled = venue === "kalshi" ? scheduledTime(rules) : m.gameStartTime;
   const slugDate = String(m.slug ?? "").match(/\b(20\d\d-\d\d-\d\d)\b/)?.[1];
-  const eventDate = scheduled?.slice(0, 10) ?? slugDate;
+  let eventDate = scheduled?.slice(0, 10) ?? slugDate;
   const eventAt =
     scheduled?.includes("T") && Number.isFinite(Date.parse(scheduled))
       ? new Date(scheduled).toISOString()
       : undefined;
-  const versus =
+  // NFL evening kickoff may be the next UTC day. Use the written game date
+  // only when it agrees with the timestamp's Eastern calendar date. Preserve
+  // eventAt for timestamp comparisons; a contradictory clause is not repaired.
+  const supportedNflGameDate = footballYardProp(rules) || (
+    m.sportsMarketType === "football_team_full_game_winner" &&
+    /^This market will settle to the winner of .+ professional football game scheduled for /i.test(rules)
+  );
+  if (venue === "poly" && competition === "nfl" && eventAt && supportedNflGameDate) {
+    const written = scheduledTime(rules);
+    const eastern = nflGameDateFormatter.format(new Date(eventAt));
+    if (written && written === eastern) eventDate = written;
+  }
+  // League labels delimit team names in these published full-game templates.
+  // Bind the delimiter to the series; never strip a league-like team suffix globally.
+  const regionalBaseball = venue === 'kalshi' && (
+    (competition === 'kbo' && String(m.ticker).startsWith('KXKBOGAME-')) ||
+    (competition === 'npb' && String(m.ticker).startsWith('KXNPBGAME-'))
+  ) ? rules.match(/^If .+? wins the (.+?) vs (.+?) (Korea KBO|Japan NPB) game originally scheduled for /) : null;
+  const regionalTeams = regionalBaseball && regionalBaseball[3] === (competition === 'kbo' ? 'Korea KBO' : 'Japan NPB') ? regionalBaseball : null;
+  const versus = regionalTeams ??
     rules.match(
       /(?:wins? the |following market refers to the )(.+?)\s+(?:vs\.?|versus|at)\s+(.+?)\s+(?:professional|college|men.s|women.s|baseball|football|basketball|hockey|tennis|game|match)/i,
     ) ??
@@ -201,6 +224,14 @@ export function identity(
         : threshold
           ? Number(threshold[1])
           : undefined;
+  const totalRule = venue === 'kalshi' && String(m.ticker).startsWith('KXNCAAFTOTAL-')
+    ? rules.match(/^If the teams collectively score more than (\d+\.5) points in the (.+?) vs (.+?) college football game originally scheduled for /i)
+    : venue === 'poly' && m.sportsMarketType === 'football_team_full_game_total'
+      ? rules.match(/^This market will settle to Yes if .+? and .+? combine for over (\d+\.5) points in the (.+?) vs (.+?) College Football game scheduled for /i)
+      : null;
+  const gameTotal = totalRule && line === Number(totalRule[1]);
+  if (gameTotal && participants.length < 2)
+    participants = [normalizeText(totalRule[2]), normalizeText(totalRule[3])];
   const yardProp =
     sports && marketType === "prop" ? footballYardProp(rules) : null;
   // Do not accept contradictory structured thresholds.
@@ -233,6 +264,8 @@ export function identity(
     : undefined;
   return {
     sports,
+    tennisContext: tennisMatchContext(venue,m,rules),
+    ...(gameTotal && m.eventContext ? { eventContext: m.eventContext } : {}),
     season: m.season ? String(m.season) : undefined,
     sport:
       normalizeText(m.sport) ||
@@ -245,6 +278,8 @@ export function identity(
           wcbb: "basketball",
           wnba: "basketball",
           mlb: "baseball",
+          kbo: "baseball",
+          npb: "baseball",
           nhl: "hockey",
           atp: "tennis",
           wta: "tennis",
@@ -318,13 +353,13 @@ export function identity(
       compatibleYardProp?.statistic ??
       (marketType === "prop" ? normalizeText(rawType) : undefined),
     outcome:
-      compatibleYardProp?.player ??
+      (gameTotal ? 'over' : undefined) ?? compatibleYardProp?.player ??
       (chosen && !["yes", "no", "unknown long"].includes(chosen)
         ? chosen
         : undefined),
     entities: [],
     numbers: [...text.matchAll(/\b\d+(?:\.\d+)?\b/g)].map((x) => x[0]),
-    units: text
+    units: gameTotal ? 'points' : text
       .match(/\b(percent|degrees|dollars|points|runs|yards|goals)\b/i)?.[1]
       .toLowerCase(),
     aliases: teams.map((t: any) => ({
@@ -597,15 +632,59 @@ export function interimService(
   return values.size === 1 ? [...values][0] : undefined;
 }
 
-// Loss of current chamber control is not the result of an upcoming election.
+// Popular votes, election seat control, and loss of current control are distinct
+// payout predicates. These hints exclude conflicts; they never approve a match.
 export function chamberControlEvent(
   rules: string,
-): "loss-during-term" | "election-result" | undefined {
+): "loss-during-term" | "election-result" | "house-popular-vote" | undefined {
   const primary = rules.split(/\n/)[0];
+  if (/most (?:valid )?votes for (?:U\.?S\.?|United States) Representatives?/i.test(primary))
+    return "house-popular-vote";
   if (!/House of Representatives|Senate/i.test(primary)) return undefined;
   if (/loses? (?:majority )?control/i.test(primary) && /before/i.test(primary))
     return "loss-during-term";
   if (/wins? control/i.test(primary) && /election/i.test(primary))
     return "election-result";
   return undefined;
+}
+
+// Explicit primary payout predicates only. These exclusions do not establish
+// settlement equivalence when a clause is missing or uses an unknown template.
+export function electionStage(rules: string): "primary" | "presidential-election" | undefined {
+  const primary = rules.split(/\n/)[0];
+  if (/\bwins? the primary to select\b/i.test(primary)) return "primary";
+  if (/\bwins? the \d{4} [^.\n]*presidential election\b/i.test(primary)) return "presidential-election";
+  return undefined;
+}
+export function meetingPredicate(rules: string) {
+  const primary = rules.split(/\n/)[0];
+  if (!/\bmeets?\b/i.test(primary)) return {};
+  const calls = /\bmeets? \(including phone calls\)/i.test(primary);
+  const inPerson = /\bmeets? in person\b/i.test(primary);
+  const mode = calls ? "calls-included" : inPerson ? "in-person" : undefined;
+  const months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+  const monthIndex = (name: string) => /^(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)$/i.test(name) ? months.indexOf(name.toLowerCase().slice(0,3)) : -1;
+  const monthly = primary.match(/\bin ([A-Za-z]+) (20\d{2})(?=,|\.|$)/i);
+  const issuance = primary.match(/\bbetween Contract Issuance and ([A-Za-z]+) (\d{1,2}), (20\d{2}), 11:59 PM ET/i);
+  let window: string | undefined;
+  if (monthly) {
+    const month = monthIndex(monthly[1]);
+    if (month >= 0) window = `month:${monthly[2]}-${month+1}`;
+  } else if (issuance) {
+    const month = monthIndex(issuance[1]), day = Number(issuance[2]), year = Number(issuance[3]);
+    if (month >= 0 && day >= 1 && day <= new Date(Date.UTC(year, month+1, 0)).getUTCDate())
+      window = `issuance:${year}-${month+1}-${day}:23:59ET`;
+  }
+  return {mode, window};
+}
+
+
+function tennisMatchContext(venue:string,m:Record<string,any>,rules:string):Identity['tennisContext']{
+ if(venue==='kalshi'&&String(m.ticker).startsWith('KXATPCHALLENGERMATCH-')){
+  const r=rules.match(/^If .+ wins the .+ vs .+ professional tennis match in the (20\d\d) ATP (Challenger [A-Za-z0-9 .'-]+?(?: \([A-Za-z0-9 .'-]+\))?) (Round Of (?:128|64|32|16)) after a ball has been played, then the market resolves to Yes\./i);
+  if(r)return {year:r[1],tournament:normalizeText(r[2]),round:normalizeText(r[3]),source:'kalshi-primary-rules'};
+ }
+ const c=m.tennisContext;
+ if(venue==='poly'&&c&&c.source==='https://gateway.polymarket.us/v1/events/slug/'+c.eventSlug&&'aec-'+c.eventSlug===m.slug&&c.marketId===String(m.id))return {year:c.year,tournament:normalizeText(c.tournament),round:normalizeText(c.round),source:c.source};
+ return undefined;
 }

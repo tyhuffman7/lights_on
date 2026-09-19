@@ -53,3 +53,6 @@ next-env.d.ts
 *.sqlite-wal
 /observer.config.json
 /research-data/*.lock
+
+# Local CI logs and compact summaries
+/.ci/

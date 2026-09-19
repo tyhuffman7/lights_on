@@ -1,0 +1,2755 @@
+{
+  "pair": {
+    "id": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC::aec-atp-shimoc-pavkot-2026-09-14",
+    "a": {
+      "id": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger guangzhou huangpu",
+          "round": "round of 32",
+          "source": "kalshi-primary-rules"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "participants": [
+          "ATP:PAVEL_KOTOV",
+          "ATP:SHINTARO_MOCHIZUKI"
+        ],
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "ATP:SHINTARO_MOCHIZUKI",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 3,
+      "title": "Shintaro Mochizuki wins",
+      "outcome": "Shintaro Mochizuki",
+      "opposite": "Shintaro Mochizuki",
+      "category": "Sports",
+      "rules": "If Shintaro Mochizuki wins the Mochizuki vs Kotov professional tennis match in the 2026 ATP Challenger Guangzhou (Huangpu) Round Of 32 after a ball has been played, then the market resolves to Yes.\n\nThe following market refers to the Mochizuki vs Kotov professional tennis match in the 2026 ATP Challenger Guangzhou (Huangpu) Round Of 32 after a ball has been played. If the match does not occur (signaled by a ball being played) due to a player injury, walkover, forfeiture, or any other cancellation (all before the match starts), the market will resolve to a fair price in accordance with the rules. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+      "url": "https://kalshi.com/markets/kxatpchallengermatch/kxatpchallengermatch-26sep15mockot",
+      "closeAt": "2026-09-15T10:30:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "e1a9503513701c3130e5f11f0eb66c9d634680ffa74786aba9501843501aae60",
+      "settlement": null,
+      "series": "KXATPCHALLENGERMATCH"
+    },
+    "b": {
+      "id": "aec-atp-shimoc-pavkot-2026-09-14",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "tennisContext": {
+          "year": "2026",
+          "tournament": "challenger guangzhou",
+          "round": "round of 32",
+          "source": "https://gateway.polymarket.us/v1/events/slug/atp-shimoc-pavkot-2026-09-14"
+        },
+        "sport": "tennis",
+        "competition": "atp",
+        "eventAt": "2026-09-15T07:40:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [
+          "ATP:PAVEL_KOTOV",
+          "ATP:SHINTARO_MOCHIZUKI"
+        ],
+        "home": "ATP:SHINTARO_MOCHIZUKI",
+        "away": "ATP:PAVEL_KOTOV",
+        "marketType": "winner",
+        "period": "full event",
+        "outcome": "ATP:SHINTARO_MOCHIZUKI",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "shintaro mochizuki",
+            "venue": "poly",
+            "venueId": "3205",
+            "aliases": [
+              "shintaro mochizuki",
+              "shintaro mochizuki",
+              "shintaro mochizuki",
+              "shimoc",
+              "mochizuki"
+            ]
+          },
+          {
+            "name": "pavel kotov",
+            "venue": "poly",
+            "venueId": "4817",
+            "aliases": [
+              "pavel kotov",
+              "pavel kotov",
+              "pavel kotov",
+              "pavkot",
+              "kotov"
+            ]
+          }
+        ]
+      },
+      "title": "Shintaro Mochizuki vs. Pavel Kotov",
+      "outcome": "Shintaro Mochizuki",
+      "opposite": "Pavel Kotov",
+      "category": "sports",
+      "rules": "This market will settle to the winner of the Shintaro Mochizuki vs Pavel Kotov ATP match scheduled for September 14 at 4:00AM. If the match does not begin due to a walkover, forfeit, injury, or any other cancellation prior to the first point being played, the market will settle to fair market price. If a player retires during the match, the opponent will be recorded as the winner. Outcome sourced from ATP.",
+      "url": "https://polymarket.us/event/aec-atp-shimoc-pavkot-2026-09-14",
+      "closeAt": "2026-09-28T08:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "e11756a916f5afeb588bc6c3ddccf9755555fc273cf662d9eb73ae883725b3f1",
+      "settlement": null
+    },
+    "inverted": false,
+    "reviewed": false
+  },
+  "first": {
+    "pairId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC::aec-atp-shimoc-pavkot-2026-09-14",
+    "now": 1789462835985,
+    "mono": 30353.551375,
+    "gate": {
+      "eligible": true,
+      "reasons": [],
+      "scope": "PAPER_ECONOMICS_PREFLIGHT_NOT_EXECUTION"
+    },
+    "books": {
+      "a": {
+        "venue": "kalshi",
+        "marketId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC",
+        "yes": [
+          {
+            "price": 2800,
+            "quantity": 49.61
+          },
+          {
+            "price": 2900,
+            "quantity": 197
+          },
+          {
+            "price": 3000,
+            "quantity": 134.28
+          },
+          {
+            "price": 3100,
+            "quantity": 1128.02
+          },
+          {
+            "price": 3200,
+            "quantity": 8045.81
+          },
+          {
+            "price": 3300,
+            "quantity": 3487
+          },
+          {
+            "price": 3400,
+            "quantity": 2331
+          },
+          {
+            "price": 3500,
+            "quantity": 1812
+          },
+          {
+            "price": 3600,
+            "quantity": 1520
+          },
+          {
+            "price": 3700,
+            "quantity": 2703
+          },
+          {
+            "price": 3800,
+            "quantity": 1845
+          },
+          {
+            "price": 3900,
+            "quantity": 1752
+          },
+          {
+            "price": 4000,
+            "quantity": 2329.94
+          },
+          {
+            "price": 4100,
+            "quantity": 1900
+          },
+          {
+            "price": 4200,
+            "quantity": 400
+          },
+          {
+            "price": 4400,
+            "quantity": 1000
+          },
+          {
+            "price": 5500,
+            "quantity": 28.66
+          },
+          {
+            "price": 5800,
+            "quantity": 20
+          },
+          {
+            "price": 6200,
+            "quantity": 153.55
+          },
+          {
+            "price": 6500,
+            "quantity": 4
+          },
+          {
+            "price": 6700,
+            "quantity": 350
+          },
+          {
+            "price": 7000,
+            "quantity": 3.33
+          },
+          {
+            "price": 7100,
+            "quantity": 3.45
+          },
+          {
+            "price": 7200,
+            "quantity": 3.57
+          },
+          {
+            "price": 7300,
+            "quantity": 1503.7
+          },
+          {
+            "price": 7400,
+            "quantity": 1007.12
+          },
+          {
+            "price": 7500,
+            "quantity": 165.2
+          },
+          {
+            "price": 7600,
+            "quantity": 4.17
+          },
+          {
+            "price": 7700,
+            "quantity": 4.35
+          },
+          {
+            "price": 7800,
+            "quantity": 4.55
+          },
+          {
+            "price": 7900,
+            "quantity": 5.76
+          },
+          {
+            "price": 8000,
+            "quantity": 17.5
+          },
+          {
+            "price": 8100,
+            "quantity": 10.53
+          },
+          {
+            "price": 8200,
+            "quantity": 11.11
+          },
+          {
+            "price": 8300,
+            "quantity": 131.76
+          },
+          {
+            "price": 8400,
+            "quantity": 189.5
+          },
+          {
+            "price": 8500,
+            "quantity": 7810.33
+          },
+          {
+            "price": 8600,
+            "quantity": 7874.71
+          },
+          {
+            "price": 8700,
+            "quantity": 38.46
+          },
+          {
+            "price": 8800,
+            "quantity": 41.67
+          },
+          {
+            "price": 8900,
+            "quantity": 55.53
+          },
+          {
+            "price": 9000,
+            "quantity": 899.85
+          },
+          {
+            "price": 9100,
+            "quantity": 123.11
+          },
+          {
+            "price": 9200,
+            "quantity": 179
+          },
+          {
+            "price": 9300,
+            "quantity": 157.86
+          },
+          {
+            "price": 9400,
+            "quantity": 208.13
+          },
+          {
+            "price": 9500,
+            "quantity": 488.52
+          },
+          {
+            "price": 9600,
+            "quantity": 276
+          },
+          {
+            "price": 9700,
+            "quantity": 566.33
+          },
+          {
+            "price": 9800,
+            "quantity": 47244
+          },
+          {
+            "price": 9900,
+            "quantity": 79885.78
+          }
+        ],
+        "no": [
+          {
+            "price": 7700,
+            "quantity": 684
+          },
+          {
+            "price": 7800,
+            "quantity": 6683.65
+          },
+          {
+            "price": 7900,
+            "quantity": 1001
+          },
+          {
+            "price": 8000,
+            "quantity": 1001
+          },
+          {
+            "price": 8100,
+            "quantity": 1336
+          },
+          {
+            "price": 8200,
+            "quantity": 599
+          },
+          {
+            "price": 8300,
+            "quantity": 500
+          },
+          {
+            "price": 8400,
+            "quantity": 3357
+          },
+          {
+            "price": 8500,
+            "quantity": 3937
+          },
+          {
+            "price": 8600,
+            "quantity": 1151
+          },
+          {
+            "price": 8700,
+            "quantity": 576.91
+          },
+          {
+            "price": 8800,
+            "quantity": 42.67
+          },
+          {
+            "price": 8900,
+            "quantity": 47.45
+          },
+          {
+            "price": 9000,
+            "quantity": 125
+          },
+          {
+            "price": 9100,
+            "quantity": 111.11
+          },
+          {
+            "price": 9200,
+            "quantity": 2126
+          },
+          {
+            "price": 9300,
+            "quantity": 144.86
+          },
+          {
+            "price": 9400,
+            "quantity": 403.67
+          },
+          {
+            "price": 9500,
+            "quantity": 482
+          },
+          {
+            "price": 9600,
+            "quantity": 1752
+          },
+          {
+            "price": 9700,
+            "quantity": 334.33
+          },
+          {
+            "price": 9800,
+            "quantity": 9873.1
+          },
+          {
+            "price": 9900,
+            "quantity": 121532
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 2300,
+            "quantity": 684
+          },
+          {
+            "price": 2200,
+            "quantity": 6683.65
+          },
+          {
+            "price": 2100,
+            "quantity": 1001
+          },
+          {
+            "price": 2000,
+            "quantity": 1001
+          },
+          {
+            "price": 1900,
+            "quantity": 1336
+          },
+          {
+            "price": 1800,
+            "quantity": 599
+          },
+          {
+            "price": 1700,
+            "quantity": 500
+          },
+          {
+            "price": 1600,
+            "quantity": 3357
+          },
+          {
+            "price": 1500,
+            "quantity": 3937
+          },
+          {
+            "price": 1400,
+            "quantity": 1151
+          },
+          {
+            "price": 1300,
+            "quantity": 576.91
+          },
+          {
+            "price": 1200,
+            "quantity": 42.67
+          },
+          {
+            "price": 1100,
+            "quantity": 47.45
+          },
+          {
+            "price": 1000,
+            "quantity": 125
+          },
+          {
+            "price": 900,
+            "quantity": 111.11
+          },
+          {
+            "price": 800,
+            "quantity": 2126
+          },
+          {
+            "price": 700,
+            "quantity": 144.86
+          },
+          {
+            "price": 600,
+            "quantity": 403.67
+          },
+          {
+            "price": 500,
+            "quantity": 482
+          },
+          {
+            "price": 400,
+            "quantity": 1752
+          },
+          {
+            "price": 300,
+            "quantity": 334.33
+          },
+          {
+            "price": 200,
+            "quantity": 9873.1
+          },
+          {
+            "price": 100,
+            "quantity": 121532
+          }
+        ],
+        "noBids": [
+          {
+            "price": 7200,
+            "quantity": 49.61
+          },
+          {
+            "price": 7100,
+            "quantity": 197
+          },
+          {
+            "price": 7000,
+            "quantity": 134.28
+          },
+          {
+            "price": 6900,
+            "quantity": 1128.02
+          },
+          {
+            "price": 6800,
+            "quantity": 8045.81
+          },
+          {
+            "price": 6700,
+            "quantity": 3487
+          },
+          {
+            "price": 6600,
+            "quantity": 2331
+          },
+          {
+            "price": 6500,
+            "quantity": 1812
+          },
+          {
+            "price": 6400,
+            "quantity": 1520
+          },
+          {
+            "price": 6300,
+            "quantity": 2703
+          },
+          {
+            "price": 6200,
+            "quantity": 1845
+          },
+          {
+            "price": 6100,
+            "quantity": 1752
+          },
+          {
+            "price": 6000,
+            "quantity": 2329.94
+          },
+          {
+            "price": 5900,
+            "quantity": 1900
+          },
+          {
+            "price": 5800,
+            "quantity": 400
+          },
+          {
+            "price": 5600,
+            "quantity": 1000
+          },
+          {
+            "price": 4500,
+            "quantity": 28.66
+          },
+          {
+            "price": 4200,
+            "quantity": 20
+          },
+          {
+            "price": 3800,
+            "quantity": 153.55
+          },
+          {
+            "price": 3500,
+            "quantity": 4
+          },
+          {
+            "price": 3300,
+            "quantity": 350
+          },
+          {
+            "price": 3000,
+            "quantity": 3.33
+          },
+          {
+            "price": 2900,
+            "quantity": 3.45
+          },
+          {
+            "price": 2800,
+            "quantity": 3.57
+          },
+          {
+            "price": 2700,
+            "quantity": 1503.7
+          },
+          {
+            "price": 2600,
+            "quantity": 1007.12
+          },
+          {
+            "price": 2500,
+            "quantity": 165.2
+          },
+          {
+            "price": 2400,
+            "quantity": 4.17
+          },
+          {
+            "price": 2300,
+            "quantity": 4.35
+          },
+          {
+            "price": 2200,
+            "quantity": 4.55
+          },
+          {
+            "price": 2100,
+            "quantity": 5.76
+          },
+          {
+            "price": 2000,
+            "quantity": 17.5
+          },
+          {
+            "price": 1900,
+            "quantity": 10.53
+          },
+          {
+            "price": 1800,
+            "quantity": 11.11
+          },
+          {
+            "price": 1700,
+            "quantity": 131.76
+          },
+          {
+            "price": 1600,
+            "quantity": 189.5
+          },
+          {
+            "price": 1500,
+            "quantity": 7810.33
+          },
+          {
+            "price": 1400,
+            "quantity": 7874.71
+          },
+          {
+            "price": 1300,
+            "quantity": 38.46
+          },
+          {
+            "price": 1200,
+            "quantity": 41.67
+          },
+          {
+            "price": 1100,
+            "quantity": 55.53
+          },
+          {
+            "price": 1000,
+            "quantity": 899.85
+          },
+          {
+            "price": 900,
+            "quantity": 123.11
+          },
+          {
+            "price": 800,
+            "quantity": 179
+          },
+          {
+            "price": 700,
+            "quantity": 157.86
+          },
+          {
+            "price": 600,
+            "quantity": 208.13
+          },
+          {
+            "price": 500,
+            "quantity": 488.52
+          },
+          {
+            "price": 400,
+            "quantity": 276
+          },
+          {
+            "price": 300,
+            "quantity": 566.33
+          },
+          {
+            "price": 200,
+            "quantity": 47244
+          },
+          {
+            "price": 100,
+            "quantity": 79885.78
+          }
+        ],
+        "receivedAt": 1789462835905,
+        "receivedMono": 30273.031292,
+        "exchangeAt": 1789462835918,
+        "sequence": 4762,
+        "connection": "LIVE",
+        "valid": true,
+        "open": true,
+        "source": "stream"
+      },
+      "b": {
+        "venue": "poly",
+        "marketId": "aec-atp-shimoc-pavkot-2026-09-14",
+        "yes": [
+          {
+            "price": 2900,
+            "quantity": 51
+          },
+          {
+            "price": 3000,
+            "quantity": 46
+          },
+          {
+            "price": 3100,
+            "quantity": 786.32
+          },
+          {
+            "price": 3200,
+            "quantity": 331
+          },
+          {
+            "price": 3400,
+            "quantity": 491.45
+          },
+          {
+            "price": 3500,
+            "quantity": 20234.2
+          },
+          {
+            "price": 3600,
+            "quantity": 24756
+          },
+          {
+            "price": 3700,
+            "quantity": 9481.62
+          },
+          {
+            "price": 4100,
+            "quantity": 8146
+          },
+          {
+            "price": 5300,
+            "quantity": 1000
+          },
+          {
+            "price": 6500,
+            "quantity": 11000
+          },
+          {
+            "price": 6900,
+            "quantity": 11000
+          },
+          {
+            "price": 7000,
+            "quantity": 3.33
+          },
+          {
+            "price": 7100,
+            "quantity": 3.45
+          },
+          {
+            "price": 7200,
+            "quantity": 3.57
+          },
+          {
+            "price": 7300,
+            "quantity": 3.7
+          },
+          {
+            "price": 7400,
+            "quantity": 3.85
+          },
+          {
+            "price": 7500,
+            "quantity": 4
+          },
+          {
+            "price": 7600,
+            "quantity": 4.17
+          },
+          {
+            "price": 7700,
+            "quantity": 4.35
+          },
+          {
+            "price": 7800,
+            "quantity": 4.55
+          },
+          {
+            "price": 7900,
+            "quantity": 4.76
+          },
+          {
+            "price": 8000,
+            "quantity": 10
+          },
+          {
+            "price": 8100,
+            "quantity": 10.53
+          },
+          {
+            "price": 8200,
+            "quantity": 11.11
+          },
+          {
+            "price": 8300,
+            "quantity": 11.76
+          },
+          {
+            "price": 8400,
+            "quantity": 12.5
+          },
+          {
+            "price": 8500,
+            "quantity": 283.33
+          },
+          {
+            "price": 8600,
+            "quantity": 11035.77
+          },
+          {
+            "price": 8700,
+            "quantity": 38.46
+          },
+          {
+            "price": 8800,
+            "quantity": 41.67
+          },
+          {
+            "price": 8900,
+            "quantity": 45.45
+          },
+          {
+            "price": 9000,
+            "quantity": 100
+          },
+          {
+            "price": 9100,
+            "quantity": 111.11
+          },
+          {
+            "price": 9200,
+            "quantity": 125
+          },
+          {
+            "price": 9300,
+            "quantity": 142.86
+          },
+          {
+            "price": 9400,
+            "quantity": 196.67
+          },
+          {
+            "price": 9500,
+            "quantity": 210
+          },
+          {
+            "price": 9600,
+            "quantity": 267.5
+          },
+          {
+            "price": 9700,
+            "quantity": 460
+          },
+          {
+            "price": 9800,
+            "quantity": 700
+          },
+          {
+            "price": 9900,
+            "quantity": 26824
+          }
+        ],
+        "no": [
+          {
+            "price": 7200,
+            "quantity": 21
+          },
+          {
+            "price": 7300,
+            "quantity": 1
+          },
+          {
+            "price": 7500,
+            "quantity": 75.77
+          },
+          {
+            "price": 7600,
+            "quantity": 553
+          },
+          {
+            "price": 7700,
+            "quantity": 579.83
+          },
+          {
+            "price": 7800,
+            "quantity": 531
+          },
+          {
+            "price": 7900,
+            "quantity": 20234
+          },
+          {
+            "price": 8000,
+            "quantity": 2050
+          },
+          {
+            "price": 8100,
+            "quantity": 20268
+          },
+          {
+            "price": 8200,
+            "quantity": 20191.94
+          },
+          {
+            "price": 8500,
+            "quantity": 11000
+          },
+          {
+            "price": 8600,
+            "quantity": 35.71
+          },
+          {
+            "price": 8700,
+            "quantity": 38.46
+          },
+          {
+            "price": 8800,
+            "quantity": 41.67
+          },
+          {
+            "price": 8900,
+            "quantity": 45.45
+          },
+          {
+            "price": 9000,
+            "quantity": 100
+          },
+          {
+            "price": 9100,
+            "quantity": 111.11
+          },
+          {
+            "price": 9200,
+            "quantity": 125
+          },
+          {
+            "price": 9300,
+            "quantity": 142.86
+          },
+          {
+            "price": 9400,
+            "quantity": 196.67
+          },
+          {
+            "price": 9500,
+            "quantity": 210
+          },
+          {
+            "price": 9600,
+            "quantity": 1517.5
+          },
+          {
+            "price": 9700,
+            "quantity": 460
+          },
+          {
+            "price": 9800,
+            "quantity": 703
+          },
+          {
+            "price": 9900,
+            "quantity": 26700
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 2800,
+            "quantity": 21
+          },
+          {
+            "price": 2700,
+            "quantity": 1
+          },
+          {
+            "price": 2500,
+            "quantity": 75.77
+          },
+          {
+            "price": 2400,
+            "quantity": 553
+          },
+          {
+            "price": 2300,
+            "quantity": 579.83
+          },
+          {
+            "price": 2200,
+            "quantity": 531
+          },
+          {
+            "price": 2100,
+            "quantity": 20234
+          },
+          {
+            "price": 2000,
+            "quantity": 2050
+          },
+          {
+            "price": 1900,
+            "quantity": 20268
+          },
+          {
+            "price": 1800,
+            "quantity": 20191.94
+          },
+          {
+            "price": 1500,
+            "quantity": 11000
+          },
+          {
+            "price": 1400,
+            "quantity": 35.71
+          },
+          {
+            "price": 1300,
+            "quantity": 38.46
+          },
+          {
+            "price": 1200,
+            "quantity": 41.67
+          },
+          {
+            "price": 1100,
+            "quantity": 45.45
+          },
+          {
+            "price": 1000,
+            "quantity": 100
+          },
+          {
+            "price": 900,
+            "quantity": 111.11
+          },
+          {
+            "price": 800,
+            "quantity": 125
+          },
+          {
+            "price": 700,
+            "quantity": 142.86
+          },
+          {
+            "price": 600,
+            "quantity": 196.67
+          },
+          {
+            "price": 500,
+            "quantity": 210
+          },
+          {
+            "price": 400,
+            "quantity": 1517.5
+          },
+          {
+            "price": 300,
+            "quantity": 460
+          },
+          {
+            "price": 200,
+            "quantity": 703
+          },
+          {
+            "price": 100,
+            "quantity": 26700
+          }
+        ],
+        "noBids": [
+          {
+            "price": 7100,
+            "quantity": 51
+          },
+          {
+            "price": 7000,
+            "quantity": 46
+          },
+          {
+            "price": 6900,
+            "quantity": 786.32
+          },
+          {
+            "price": 6800,
+            "quantity": 331
+          },
+          {
+            "price": 6600,
+            "quantity": 491.45
+          },
+          {
+            "price": 6500,
+            "quantity": 20234.2
+          },
+          {
+            "price": 6400,
+            "quantity": 24756
+          },
+          {
+            "price": 6300,
+            "quantity": 9481.62
+          },
+          {
+            "price": 5900,
+            "quantity": 8146
+          },
+          {
+            "price": 4700,
+            "quantity": 1000
+          },
+          {
+            "price": 3500,
+            "quantity": 11000
+          },
+          {
+            "price": 3100,
+            "quantity": 11000
+          },
+          {
+            "price": 3000,
+            "quantity": 3.33
+          },
+          {
+            "price": 2900,
+            "quantity": 3.45
+          },
+          {
+            "price": 2800,
+            "quantity": 3.57
+          },
+          {
+            "price": 2700,
+            "quantity": 3.7
+          },
+          {
+            "price": 2600,
+            "quantity": 3.85
+          },
+          {
+            "price": 2500,
+            "quantity": 4
+          },
+          {
+            "price": 2400,
+            "quantity": 4.17
+          },
+          {
+            "price": 2300,
+            "quantity": 4.35
+          },
+          {
+            "price": 2200,
+            "quantity": 4.55
+          },
+          {
+            "price": 2100,
+            "quantity": 4.76
+          },
+          {
+            "price": 2000,
+            "quantity": 10
+          },
+          {
+            "price": 1900,
+            "quantity": 10.53
+          },
+          {
+            "price": 1800,
+            "quantity": 11.11
+          },
+          {
+            "price": 1700,
+            "quantity": 11.76
+          },
+          {
+            "price": 1600,
+            "quantity": 12.5
+          },
+          {
+            "price": 1500,
+            "quantity": 283.33
+          },
+          {
+            "price": 1400,
+            "quantity": 11035.77
+          },
+          {
+            "price": 1300,
+            "quantity": 38.46
+          },
+          {
+            "price": 1200,
+            "quantity": 41.67
+          },
+          {
+            "price": 1100,
+            "quantity": 45.45
+          },
+          {
+            "price": 1000,
+            "quantity": 100
+          },
+          {
+            "price": 900,
+            "quantity": 111.11
+          },
+          {
+            "price": 800,
+            "quantity": 125
+          },
+          {
+            "price": 700,
+            "quantity": 142.86
+          },
+          {
+            "price": 600,
+            "quantity": 196.67
+          },
+          {
+            "price": 500,
+            "quantity": 210
+          },
+          {
+            "price": 400,
+            "quantity": 267.5
+          },
+          {
+            "price": 300,
+            "quantity": 460
+          },
+          {
+            "price": 200,
+            "quantity": 700
+          },
+          {
+            "price": 100,
+            "quantity": 26824
+          }
+        ],
+        "receivedAt": 1789462835864,
+        "receivedMono": 30232.635917,
+        "exchangeAt": 1789462835765,
+        "sequence": null,
+        "connection": "LIVE",
+        "valid": true,
+        "open": true,
+        "source": "stream"
+      }
+    },
+    "diagnostics": [
+      {
+        "side": "yes",
+        "quote": {
+          "pairId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC::aec-atp-shimoc-pavkot-2026-09-14",
+          "quantity": 10,
+          "aSide": "yes",
+          "bSide": "no",
+          "aFill": {
+            "quantity": 10,
+            "cost": 23000,
+            "fees": 0,
+            "levels": [
+              {
+                "price": 2300,
+                "quantity": 10
+              }
+            ]
+          },
+          "bFill": {
+            "quantity": 10,
+            "cost": 72000,
+            "fees": 1200,
+            "levels": [
+              {
+                "price": 7200,
+                "quantity": 10
+              }
+            ]
+          },
+          "cost": 95000,
+          "fees": 1200,
+          "reserve": 2000,
+          "payout": 100000,
+          "profit": 1800,
+          "roi": 1.8329938900203666,
+          "reasons": [],
+          "eligible": true,
+          "receivedAt": 1789462835864
+        },
+        "gross": 5000,
+        "afterFees": 3800,
+        "afterReserve": 1800,
+        "classification": "ELIGIBLE",
+        "belowMinimumProfit": false,
+        "belowMinimumRoi": false
+      },
+      {
+        "side": "no",
+        "quote": {
+          "pairId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC::aec-atp-shimoc-pavkot-2026-09-14",
+          "quantity": 1,
+          "aSide": "no",
+          "bSide": "yes",
+          "aFill": {
+            "quantity": 1,
+            "cost": 7200,
+            "fees": 0,
+            "levels": [
+              {
+                "price": 7200,
+                "quantity": 1
+              }
+            ]
+          },
+          "bFill": {
+            "quantity": 1,
+            "cost": 2900,
+            "fees": 100,
+            "levels": [
+              {
+                "price": 2900,
+                "quantity": 1
+              }
+            ]
+          },
+          "cost": 10100,
+          "fees": 100,
+          "reserve": 200,
+          "payout": 10000,
+          "profit": -400,
+          "roi": -3.8461538461538463,
+          "reasons": [
+            "Net edge below threshold"
+          ],
+          "eligible": false,
+          "receivedAt": 1789462835864
+        },
+        "gross": -100,
+        "afterFees": -200,
+        "afterReserve": -400,
+        "classification": "NONPOSITIVE_AFTER_FEES",
+        "belowMinimumProfit": true,
+        "belowMinimumRoi": true
+      }
+    ],
+    "plans": [
+      {
+        "quote": {
+          "pairId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC::aec-atp-shimoc-pavkot-2026-09-14",
+          "quantity": 10,
+          "aSide": "yes",
+          "bSide": "no",
+          "aFill": {
+            "quantity": 10,
+            "cost": 23000,
+            "fees": 0,
+            "levels": [
+              {
+                "price": 2300,
+                "quantity": 10
+              }
+            ]
+          },
+          "bFill": {
+            "quantity": 10,
+            "cost": 72000,
+            "fees": 1200,
+            "levels": [
+              {
+                "price": 7200,
+                "quantity": 10
+              }
+            ]
+          },
+          "cost": 95000,
+          "fees": 1200,
+          "reserve": 2000,
+          "payout": 100000,
+          "profit": 1800,
+          "roi": 1.8329938900203666,
+          "reasons": [],
+          "eligible": true,
+          "receivedAt": 1789462835864
+        },
+        "price": 2300,
+        "ahead": 684,
+        "scope": "RESTING_QUOTE_PLAN_ONLY",
+        "feeAssumption": "Published Kalshi maker coefficient; cent rounding bound; no rebates assumed",
+        "sizeAdmission": {
+          "eligible": false,
+          "reason": "NO_RECENT_SIZES",
+          "minimumProfit": null,
+          "distinctSizes": 0,
+          "scope": "OBSERVED_SIZE_STRESS_NOT_FILL_PREDICTION"
+        }
+      }
+    ],
+    "appliedRate": 0
+  },
+  "later": {
+    "pairId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC::aec-atp-shimoc-pavkot-2026-09-14",
+    "now": 1789462836187,
+    "mono": 30555.412375,
+    "gate": {
+      "eligible": true,
+      "reasons": [],
+      "scope": "PAPER_ECONOMICS_PREFLIGHT_NOT_EXECUTION"
+    },
+    "books": {
+      "a": {
+        "venue": "kalshi",
+        "marketId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC",
+        "yes": [
+          {
+            "price": 2800,
+            "quantity": 86.61
+          },
+          {
+            "price": 2900,
+            "quantity": 197
+          },
+          {
+            "price": 3000,
+            "quantity": 126.15
+          },
+          {
+            "price": 3100,
+            "quantity": 1227.02
+          },
+          {
+            "price": 3200,
+            "quantity": 8046.81
+          },
+          {
+            "price": 3300,
+            "quantity": 3387
+          },
+          {
+            "price": 3400,
+            "quantity": 2331
+          },
+          {
+            "price": 3500,
+            "quantity": 2062
+          },
+          {
+            "price": 3600,
+            "quantity": 1520
+          },
+          {
+            "price": 3700,
+            "quantity": 2455
+          },
+          {
+            "price": 3800,
+            "quantity": 2170
+          },
+          {
+            "price": 3900,
+            "quantity": 1750
+          },
+          {
+            "price": 4000,
+            "quantity": 2329.94
+          },
+          {
+            "price": 4100,
+            "quantity": 1900
+          },
+          {
+            "price": 4200,
+            "quantity": 400
+          },
+          {
+            "price": 4400,
+            "quantity": 1000
+          },
+          {
+            "price": 5500,
+            "quantity": 28.66
+          },
+          {
+            "price": 5800,
+            "quantity": 20
+          },
+          {
+            "price": 6200,
+            "quantity": 153.55
+          },
+          {
+            "price": 6500,
+            "quantity": 4
+          },
+          {
+            "price": 6700,
+            "quantity": 350
+          },
+          {
+            "price": 7000,
+            "quantity": 3.33
+          },
+          {
+            "price": 7100,
+            "quantity": 3.45
+          },
+          {
+            "price": 7200,
+            "quantity": 3.57
+          },
+          {
+            "price": 7300,
+            "quantity": 1503.7
+          },
+          {
+            "price": 7400,
+            "quantity": 1007.12
+          },
+          {
+            "price": 7500,
+            "quantity": 165.2
+          },
+          {
+            "price": 7600,
+            "quantity": 4.17
+          },
+          {
+            "price": 7700,
+            "quantity": 4.35
+          },
+          {
+            "price": 7800,
+            "quantity": 4.55
+          },
+          {
+            "price": 7900,
+            "quantity": 5.76
+          },
+          {
+            "price": 8000,
+            "quantity": 17.5
+          },
+          {
+            "price": 8100,
+            "quantity": 10.53
+          },
+          {
+            "price": 8200,
+            "quantity": 11.11
+          },
+          {
+            "price": 8300,
+            "quantity": 131.76
+          },
+          {
+            "price": 8400,
+            "quantity": 189.5
+          },
+          {
+            "price": 8500,
+            "quantity": 7810.33
+          },
+          {
+            "price": 8600,
+            "quantity": 7874.71
+          },
+          {
+            "price": 8700,
+            "quantity": 38.46
+          },
+          {
+            "price": 8800,
+            "quantity": 41.67
+          },
+          {
+            "price": 8900,
+            "quantity": 55.53
+          },
+          {
+            "price": 9000,
+            "quantity": 899.85
+          },
+          {
+            "price": 9100,
+            "quantity": 123.11
+          },
+          {
+            "price": 9200,
+            "quantity": 179
+          },
+          {
+            "price": 9300,
+            "quantity": 157.86
+          },
+          {
+            "price": 9400,
+            "quantity": 208.13
+          },
+          {
+            "price": 9500,
+            "quantity": 488.52
+          },
+          {
+            "price": 9600,
+            "quantity": 276
+          },
+          {
+            "price": 9700,
+            "quantity": 566.33
+          },
+          {
+            "price": 9800,
+            "quantity": 47244
+          },
+          {
+            "price": 9900,
+            "quantity": 79885.78
+          }
+        ],
+        "no": [
+          {
+            "price": 7700,
+            "quantity": 339
+          },
+          {
+            "price": 7800,
+            "quantity": 6433.65
+          },
+          {
+            "price": 7900,
+            "quantity": 1251
+          },
+          {
+            "price": 8000,
+            "quantity": 1001
+          },
+          {
+            "price": 8100,
+            "quantity": 1336
+          },
+          {
+            "price": 8200,
+            "quantity": 594
+          },
+          {
+            "price": 8300,
+            "quantity": 500
+          },
+          {
+            "price": 8400,
+            "quantity": 3357
+          },
+          {
+            "price": 8500,
+            "quantity": 3937
+          },
+          {
+            "price": 8600,
+            "quantity": 1151
+          },
+          {
+            "price": 8700,
+            "quantity": 576.91
+          },
+          {
+            "price": 8800,
+            "quantity": 42.67
+          },
+          {
+            "price": 8900,
+            "quantity": 47.45
+          },
+          {
+            "price": 9000,
+            "quantity": 125
+          },
+          {
+            "price": 9100,
+            "quantity": 111.11
+          },
+          {
+            "price": 9200,
+            "quantity": 2126
+          },
+          {
+            "price": 9300,
+            "quantity": 144.86
+          },
+          {
+            "price": 9400,
+            "quantity": 403.67
+          },
+          {
+            "price": 9500,
+            "quantity": 482
+          },
+          {
+            "price": 9600,
+            "quantity": 1752
+          },
+          {
+            "price": 9700,
+            "quantity": 334.33
+          },
+          {
+            "price": 9800,
+            "quantity": 9873.1
+          },
+          {
+            "price": 9900,
+            "quantity": 121532
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 2300,
+            "quantity": 339
+          },
+          {
+            "price": 2200,
+            "quantity": 6433.65
+          },
+          {
+            "price": 2100,
+            "quantity": 1251
+          },
+          {
+            "price": 2000,
+            "quantity": 1001
+          },
+          {
+            "price": 1900,
+            "quantity": 1336
+          },
+          {
+            "price": 1800,
+            "quantity": 594
+          },
+          {
+            "price": 1700,
+            "quantity": 500
+          },
+          {
+            "price": 1600,
+            "quantity": 3357
+          },
+          {
+            "price": 1500,
+            "quantity": 3937
+          },
+          {
+            "price": 1400,
+            "quantity": 1151
+          },
+          {
+            "price": 1300,
+            "quantity": 576.91
+          },
+          {
+            "price": 1200,
+            "quantity": 42.67
+          },
+          {
+            "price": 1100,
+            "quantity": 47.45
+          },
+          {
+            "price": 1000,
+            "quantity": 125
+          },
+          {
+            "price": 900,
+            "quantity": 111.11
+          },
+          {
+            "price": 800,
+            "quantity": 2126
+          },
+          {
+            "price": 700,
+            "quantity": 144.86
+          },
+          {
+            "price": 600,
+            "quantity": 403.67
+          },
+          {
+            "price": 500,
+            "quantity": 482
+          },
+          {
+            "price": 400,
+            "quantity": 1752
+          },
+          {
+            "price": 300,
+            "quantity": 334.33
+          },
+          {
+            "price": 200,
+            "quantity": 9873.1
+          },
+          {
+            "price": 100,
+            "quantity": 121532
+          }
+        ],
+        "noBids": [
+          {
+            "price": 7200,
+            "quantity": 86.61
+          },
+          {
+            "price": 7100,
+            "quantity": 197
+          },
+          {
+            "price": 7000,
+            "quantity": 126.15
+          },
+          {
+            "price": 6900,
+            "quantity": 1227.02
+          },
+          {
+            "price": 6800,
+            "quantity": 8046.81
+          },
+          {
+            "price": 6700,
+            "quantity": 3387
+          },
+          {
+            "price": 6600,
+            "quantity": 2331
+          },
+          {
+            "price": 6500,
+            "quantity": 2062
+          },
+          {
+            "price": 6400,
+            "quantity": 1520
+          },
+          {
+            "price": 6300,
+            "quantity": 2455
+          },
+          {
+            "price": 6200,
+            "quantity": 2170
+          },
+          {
+            "price": 6100,
+            "quantity": 1750
+          },
+          {
+            "price": 6000,
+            "quantity": 2329.94
+          },
+          {
+            "price": 5900,
+            "quantity": 1900
+          },
+          {
+            "price": 5800,
+            "quantity": 400
+          },
+          {
+            "price": 5600,
+            "quantity": 1000
+          },
+          {
+            "price": 4500,
+            "quantity": 28.66
+          },
+          {
+            "price": 4200,
+            "quantity": 20
+          },
+          {
+            "price": 3800,
+            "quantity": 153.55
+          },
+          {
+            "price": 3500,
+            "quantity": 4
+          },
+          {
+            "price": 3300,
+            "quantity": 350
+          },
+          {
+            "price": 3000,
+            "quantity": 3.33
+          },
+          {
+            "price": 2900,
+            "quantity": 3.45
+          },
+          {
+            "price": 2800,
+            "quantity": 3.57
+          },
+          {
+            "price": 2700,
+            "quantity": 1503.7
+          },
+          {
+            "price": 2600,
+            "quantity": 1007.12
+          },
+          {
+            "price": 2500,
+            "quantity": 165.2
+          },
+          {
+            "price": 2400,
+            "quantity": 4.17
+          },
+          {
+            "price": 2300,
+            "quantity": 4.35
+          },
+          {
+            "price": 2200,
+            "quantity": 4.55
+          },
+          {
+            "price": 2100,
+            "quantity": 5.76
+          },
+          {
+            "price": 2000,
+            "quantity": 17.5
+          },
+          {
+            "price": 1900,
+            "quantity": 10.53
+          },
+          {
+            "price": 1800,
+            "quantity": 11.11
+          },
+          {
+            "price": 1700,
+            "quantity": 131.76
+          },
+          {
+            "price": 1600,
+            "quantity": 189.5
+          },
+          {
+            "price": 1500,
+            "quantity": 7810.33
+          },
+          {
+            "price": 1400,
+            "quantity": 7874.71
+          },
+          {
+            "price": 1300,
+            "quantity": 38.46
+          },
+          {
+            "price": 1200,
+            "quantity": 41.67
+          },
+          {
+            "price": 1100,
+            "quantity": 55.53
+          },
+          {
+            "price": 1000,
+            "quantity": 899.85
+          },
+          {
+            "price": 900,
+            "quantity": 123.11
+          },
+          {
+            "price": 800,
+            "quantity": 179
+          },
+          {
+            "price": 700,
+            "quantity": 157.86
+          },
+          {
+            "price": 600,
+            "quantity": 208.13
+          },
+          {
+            "price": 500,
+            "quantity": 488.52
+          },
+          {
+            "price": 400,
+            "quantity": 276
+          },
+          {
+            "price": 300,
+            "quantity": 566.33
+          },
+          {
+            "price": 200,
+            "quantity": 47244
+          },
+          {
+            "price": 100,
+            "quantity": 79885.78
+          }
+        ],
+        "receivedAt": 1789462836088,
+        "receivedMono": 30456.941709,
+        "exchangeAt": 1789462836072,
+        "sequence": 4803,
+        "connection": "LIVE",
+        "valid": true,
+        "open": true,
+        "source": "stream"
+      },
+      "b": {
+        "venue": "poly",
+        "marketId": "aec-atp-shimoc-pavkot-2026-09-14",
+        "yes": [
+          {
+            "price": 2900,
+            "quantity": 51
+          },
+          {
+            "price": 3000,
+            "quantity": 139.91
+          },
+          {
+            "price": 3100,
+            "quantity": 638.92
+          },
+          {
+            "price": 3200,
+            "quantity": 331
+          },
+          {
+            "price": 3400,
+            "quantity": 491.45
+          },
+          {
+            "price": 3500,
+            "quantity": 20234.2
+          },
+          {
+            "price": 3600,
+            "quantity": 24756
+          },
+          {
+            "price": 3700,
+            "quantity": 9481.62
+          },
+          {
+            "price": 4100,
+            "quantity": 8146
+          },
+          {
+            "price": 5300,
+            "quantity": 1000
+          },
+          {
+            "price": 6500,
+            "quantity": 11000
+          },
+          {
+            "price": 6900,
+            "quantity": 11000
+          },
+          {
+            "price": 7000,
+            "quantity": 3.33
+          },
+          {
+            "price": 7100,
+            "quantity": 3.45
+          },
+          {
+            "price": 7200,
+            "quantity": 3.57
+          },
+          {
+            "price": 7300,
+            "quantity": 3.7
+          },
+          {
+            "price": 7400,
+            "quantity": 3.85
+          },
+          {
+            "price": 7500,
+            "quantity": 4
+          },
+          {
+            "price": 7600,
+            "quantity": 4.17
+          },
+          {
+            "price": 7700,
+            "quantity": 4.35
+          },
+          {
+            "price": 7800,
+            "quantity": 4.55
+          },
+          {
+            "price": 7900,
+            "quantity": 4.76
+          },
+          {
+            "price": 8000,
+            "quantity": 10
+          },
+          {
+            "price": 8100,
+            "quantity": 10.53
+          },
+          {
+            "price": 8200,
+            "quantity": 11.11
+          },
+          {
+            "price": 8300,
+            "quantity": 11.76
+          },
+          {
+            "price": 8400,
+            "quantity": 12.5
+          },
+          {
+            "price": 8500,
+            "quantity": 283.33
+          },
+          {
+            "price": 8600,
+            "quantity": 11035.77
+          },
+          {
+            "price": 8700,
+            "quantity": 38.46
+          },
+          {
+            "price": 8800,
+            "quantity": 41.67
+          },
+          {
+            "price": 8900,
+            "quantity": 45.45
+          },
+          {
+            "price": 9000,
+            "quantity": 100
+          },
+          {
+            "price": 9100,
+            "quantity": 111.11
+          },
+          {
+            "price": 9200,
+            "quantity": 125
+          },
+          {
+            "price": 9300,
+            "quantity": 142.86
+          },
+          {
+            "price": 9400,
+            "quantity": 196.67
+          },
+          {
+            "price": 9500,
+            "quantity": 210
+          },
+          {
+            "price": 9600,
+            "quantity": 267.5
+          },
+          {
+            "price": 9700,
+            "quantity": 460
+          },
+          {
+            "price": 9800,
+            "quantity": 700
+          },
+          {
+            "price": 9900,
+            "quantity": 26824
+          }
+        ],
+        "no": [
+          {
+            "price": 7200,
+            "quantity": 1
+          },
+          {
+            "price": 7300,
+            "quantity": 3
+          },
+          {
+            "price": 7400,
+            "quantity": 45
+          },
+          {
+            "price": 7500,
+            "quantity": 50.77
+          },
+          {
+            "price": 7600,
+            "quantity": 30
+          },
+          {
+            "price": 7700,
+            "quantity": 1085.83
+          },
+          {
+            "price": 7800,
+            "quantity": 531
+          },
+          {
+            "price": 7900,
+            "quantity": 20234
+          },
+          {
+            "price": 8000,
+            "quantity": 2050
+          },
+          {
+            "price": 8100,
+            "quantity": 20268
+          },
+          {
+            "price": 8200,
+            "quantity": 20191.94
+          },
+          {
+            "price": 8500,
+            "quantity": 11000
+          },
+          {
+            "price": 8600,
+            "quantity": 35.71
+          },
+          {
+            "price": 8700,
+            "quantity": 38.46
+          },
+          {
+            "price": 8800,
+            "quantity": 41.67
+          },
+          {
+            "price": 8900,
+            "quantity": 45.45
+          },
+          {
+            "price": 9000,
+            "quantity": 100
+          },
+          {
+            "price": 9100,
+            "quantity": 111.11
+          },
+          {
+            "price": 9200,
+            "quantity": 125
+          },
+          {
+            "price": 9300,
+            "quantity": 142.86
+          },
+          {
+            "price": 9400,
+            "quantity": 196.67
+          },
+          {
+            "price": 9500,
+            "quantity": 210
+          },
+          {
+            "price": 9600,
+            "quantity": 1517.5
+          },
+          {
+            "price": 9700,
+            "quantity": 460
+          },
+          {
+            "price": 9800,
+            "quantity": 703
+          },
+          {
+            "price": 9900,
+            "quantity": 26700
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 2800,
+            "quantity": 1
+          },
+          {
+            "price": 2700,
+            "quantity": 3
+          },
+          {
+            "price": 2600,
+            "quantity": 45
+          },
+          {
+            "price": 2500,
+            "quantity": 50.77
+          },
+          {
+            "price": 2400,
+            "quantity": 30
+          },
+          {
+            "price": 2300,
+            "quantity": 1085.83
+          },
+          {
+            "price": 2200,
+            "quantity": 531
+          },
+          {
+            "price": 2100,
+            "quantity": 20234
+          },
+          {
+            "price": 2000,
+            "quantity": 2050
+          },
+          {
+            "price": 1900,
+            "quantity": 20268
+          },
+          {
+            "price": 1800,
+            "quantity": 20191.94
+          },
+          {
+            "price": 1500,
+            "quantity": 11000
+          },
+          {
+            "price": 1400,
+            "quantity": 35.71
+          },
+          {
+            "price": 1300,
+            "quantity": 38.46
+          },
+          {
+            "price": 1200,
+            "quantity": 41.67
+          },
+          {
+            "price": 1100,
+            "quantity": 45.45
+          },
+          {
+            "price": 1000,
+            "quantity": 100
+          },
+          {
+            "price": 900,
+            "quantity": 111.11
+          },
+          {
+            "price": 800,
+            "quantity": 125
+          },
+          {
+            "price": 700,
+            "quantity": 142.86
+          },
+          {
+            "price": 600,
+            "quantity": 196.67
+          },
+          {
+            "price": 500,
+            "quantity": 210
+          },
+          {
+            "price": 400,
+            "quantity": 1517.5
+          },
+          {
+            "price": 300,
+            "quantity": 460
+          },
+          {
+            "price": 200,
+            "quantity": 703
+          },
+          {
+            "price": 100,
+            "quantity": 26700
+          }
+        ],
+        "noBids": [
+          {
+            "price": 7100,
+            "quantity": 51
+          },
+          {
+            "price": 7000,
+            "quantity": 139.91
+          },
+          {
+            "price": 6900,
+            "quantity": 638.92
+          },
+          {
+            "price": 6800,
+            "quantity": 331
+          },
+          {
+            "price": 6600,
+            "quantity": 491.45
+          },
+          {
+            "price": 6500,
+            "quantity": 20234.2
+          },
+          {
+            "price": 6400,
+            "quantity": 24756
+          },
+          {
+            "price": 6300,
+            "quantity": 9481.62
+          },
+          {
+            "price": 5900,
+            "quantity": 8146
+          },
+          {
+            "price": 4700,
+            "quantity": 1000
+          },
+          {
+            "price": 3500,
+            "quantity": 11000
+          },
+          {
+            "price": 3100,
+            "quantity": 11000
+          },
+          {
+            "price": 3000,
+            "quantity": 3.33
+          },
+          {
+            "price": 2900,
+            "quantity": 3.45
+          },
+          {
+            "price": 2800,
+            "quantity": 3.57
+          },
+          {
+            "price": 2700,
+            "quantity": 3.7
+          },
+          {
+            "price": 2600,
+            "quantity": 3.85
+          },
+          {
+            "price": 2500,
+            "quantity": 4
+          },
+          {
+            "price": 2400,
+            "quantity": 4.17
+          },
+          {
+            "price": 2300,
+            "quantity": 4.35
+          },
+          {
+            "price": 2200,
+            "quantity": 4.55
+          },
+          {
+            "price": 2100,
+            "quantity": 4.76
+          },
+          {
+            "price": 2000,
+            "quantity": 10
+          },
+          {
+            "price": 1900,
+            "quantity": 10.53
+          },
+          {
+            "price": 1800,
+            "quantity": 11.11
+          },
+          {
+            "price": 1700,
+            "quantity": 11.76
+          },
+          {
+            "price": 1600,
+            "quantity": 12.5
+          },
+          {
+            "price": 1500,
+            "quantity": 283.33
+          },
+          {
+            "price": 1400,
+            "quantity": 11035.77
+          },
+          {
+            "price": 1300,
+            "quantity": 38.46
+          },
+          {
+            "price": 1200,
+            "quantity": 41.67
+          },
+          {
+            "price": 1100,
+            "quantity": 45.45
+          },
+          {
+            "price": 1000,
+            "quantity": 100
+          },
+          {
+            "price": 900,
+            "quantity": 111.11
+          },
+          {
+            "price": 800,
+            "quantity": 125
+          },
+          {
+            "price": 700,
+            "quantity": 142.86
+          },
+          {
+            "price": 600,
+            "quantity": 196.67
+          },
+          {
+            "price": 500,
+            "quantity": 210
+          },
+          {
+            "price": 400,
+            "quantity": 267.5
+          },
+          {
+            "price": 300,
+            "quantity": 460
+          },
+          {
+            "price": 200,
+            "quantity": 700
+          },
+          {
+            "price": 100,
+            "quantity": 26824
+          }
+        ],
+        "receivedAt": 1789462836145,
+        "receivedMono": 30513.274,
+        "exchangeAt": 1789462836144,
+        "sequence": null,
+        "connection": "LIVE",
+        "valid": true,
+        "open": true,
+        "source": "stream"
+      }
+    },
+    "diagnostics": [
+      {
+        "side": "yes",
+        "quote": {
+          "pairId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC::aec-atp-shimoc-pavkot-2026-09-14",
+          "quantity": 4,
+          "aSide": "yes",
+          "bSide": "no",
+          "aFill": {
+            "quantity": 4,
+            "cost": 9200,
+            "fees": 0,
+            "levels": [
+              {
+                "price": 2300,
+                "quantity": 4
+              }
+            ]
+          },
+          "bFill": {
+            "quantity": 4,
+            "cost": 29100,
+            "fees": 500,
+            "levels": [
+              {
+                "price": 7200,
+                "quantity": 1
+              },
+              {
+                "price": 7300,
+                "quantity": 3
+              }
+            ]
+          },
+          "cost": 38300,
+          "fees": 500,
+          "reserve": 800,
+          "payout": 40000,
+          "profit": 400,
+          "roi": 1.0101010101010102,
+          "reasons": [
+            "Net edge below threshold"
+          ],
+          "eligible": false,
+          "receivedAt": 1789462836088
+        },
+        "gross": 1700,
+        "afterFees": 1200,
+        "afterReserve": 400,
+        "classification": "POSITIVE_BUT_POLICY_REJECTED",
+        "belowMinimumProfit": true,
+        "belowMinimumRoi": false
+      },
+      {
+        "side": "no",
+        "quote": {
+          "pairId": "KXATPCHALLENGERMATCH-26SEP15MOCKOT-MOC::aec-atp-shimoc-pavkot-2026-09-14",
+          "quantity": 1,
+          "aSide": "no",
+          "bSide": "yes",
+          "aFill": {
+            "quantity": 1,
+            "cost": 7200,
+            "fees": 0,
+            "levels": [
+              {
+                "price": 7200,
+                "quantity": 1
+              }
+            ]
+          },
+          "bFill": {
+            "quantity": 1,
+            "cost": 2900,
+            "fees": 100,
+            "levels": [
+              {
+                "price": 2900,
+                "quantity": 1
+              }
+            ]
+          },
+          "cost": 10100,
+          "fees": 100,
+          "reserve": 200,
+          "payout": 10000,
+          "profit": -400,
+          "roi": -3.8461538461538463,
+          "reasons": [
+            "Net edge below threshold"
+          ],
+          "eligible": false,
+          "receivedAt": 1789462836088
+        },
+        "gross": -100,
+        "afterFees": -200,
+        "afterReserve": -400,
+        "classification": "NONPOSITIVE_AFTER_FEES",
+        "belowMinimumProfit": true,
+        "belowMinimumRoi": true
+      }
+    ],
+    "plans": [],
+    "appliedRate": 0
+  },
+  "settings": {
+    "maxTrade": 100000,
+    "maxCommitted": 400000,
+    "minProfit": 1000,
+    "minRoi": 1,
+    "reserve": 200,
+    "maxDays": 30,
+    "maxAge": 2000
+  },
+  "clock": {
+    "minOffsetMs": 1.8929999999999936,
+    "maxOffsetMs": 74.779,
+    "measuredAt": 1789462808680,
+    "measuredMono": 3048.810959,
+    "expiresAt": 1789462868680,
+    "sources": [
+      "time.apple.com",
+      "time.cloudflare.com"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "KXNFLRSHYDS-26SEP13BUFHOU-BUFJCOOK4-100::astatc-nfl-buf-hou-2026-09-13-ryd-jamcoo-gte100",
+  "a": {
+    "id": "KXNFLRSHYDS-26SEP13BUFHOU-BUFJCOOK4-100",
+    "venue": "kalshi",
+    "identity": {
+      "sports": true,
+      "sport": "football",
+      "competition": "nfl",
+      "eventDate": "2026-09-13",
+      "participants": [
+        "buffalo",
+        "houston"
+      ],
+      "participant": "james cook iii",
+      "marketType": "prop",
+      "line": 99.5,
+      "period": "full event",
+      "propType": "rushing yards",
+      "outcome": "james cook iii",
+      "entities": [],
+      "numbers": [
+        "100",
+        "100"
+      ],
+      "units": "yards",
+      "aliases": []
+    },
+    "exchangeIndex": 0,
+    "title": "James Cook III: 100+ rushing yards",
+    "outcome": "James Cook III: 100+",
+    "opposite": "James Cook III: 100+",
+    "category": "Sports",
+    "rules": "If James Cook III records 100+ rushing yards in the Buffalo vs Houston professional football game originally scheduled for Sep 13, 2026, then the market resolves to Yes.\n\nThe following market refers to James Cook III in the Buffalo vs Houston professional football game originally scheduled for Sep 13, 2026. If James Cook III is active but never takes a snap, the market settles to the fair market price before game start. Once James Cook III takes at least one snap, even if nullified by penalty, the market settles based on rushing yards recorded.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSTAT.pdf\n\n[{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+    "url": "https://kalshi.com/markets/kxnflrshyds/kxnflrshyds-26sep13bufhou",
+    "closeAt": "2026-09-13T20:00:00Z",
+    "open": true,
+    "feeRate": 700,
+    "feeRounding": "ceil",
+    "minQty": 1,
+    "hash": "92d521e857c989a66c83a2d7d6b0222282b7fbad5380573d870bb2b98f1dd76f",
+    "settlement": null,
+    "series": "KXNFLRSHYDS"
+  },
+  "b": {
+    "id": "astatc-nfl-buf-hou-2026-09-13-ryd-jamcoo-gte100",
+    "venue": "poly",
+    "identity": {
+      "sports": true,
+      "sport": "football",
+      "competition": "nfl",
+      "eventAt": "2026-09-13T17:00:00.000Z",
+      "eventDate": "2026-09-13",
+      "participants": [
+        "buffalo bills",
+        "houston texans"
+      ],
+      "participant": "james cook iii",
+      "marketType": "prop",
+      "line": 99.5,
+      "period": "full event",
+      "propType": "rushing yards",
+      "outcome": "james cook iii",
+      "entities": [],
+      "numbers": [
+        "100"
+      ],
+      "units": "yards",
+      "aliases": []
+    },
+    "title": "James Cook III \u00b7 Will James Cook III record 100+ rushing yards?",
+    "outcome": "Yes",
+    "opposite": "No",
+    "category": "sports",
+    "rules": "This market will settle to Yes if James Cook III records at least 100 rushing yards in the Buffalo Bills vs Houston Texans professional football game scheduled for Sep 13, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+    "url": "https://polymarket.us/event/astatc-nfl-buf-hou-2026-09-13-ryd-jamcoo-gte100",
+    "closeAt": "2026-09-27T17:00:00Z",
+    "open": true,
+    "feeRate": 600,
+    "feeRounding": "even",
+    "minQty": 0.01,
+    "hash": "343798fa81114635c1f010bc64d096321ff8d2db6fd07e4cb0ec3f2c823a69ab",
+    "settlement": null
+  },
+  "inverted": false,
+  "reviewed": false
+}

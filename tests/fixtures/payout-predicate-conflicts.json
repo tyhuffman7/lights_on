@@ -1,0 +1,271 @@
+[
+  {
+    "id": "KXFRPSNOM-26OCT01-FHOL::ewc-pres-fra-2027-04-11-frahol",
+    "a": {
+      "id": "KXFRPSNOM-26OCT01-FHOL",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "marketType": "winner",
+        "outcome": "francois hollande",
+        "entities": [],
+        "numbers": [
+          "2027"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Fran\u00e7ois Hollande win the primary to select the French p\u00f4le socialiste\u2019s candidate for the 2027 presidential election?",
+      "outcome": "Fran\u00e7ois Hollande",
+      "opposite": "Fran\u00e7ois Hollande",
+      "category": "Elections",
+      "rules": "If Fran\u00e7ois Hollande wins the primary to select the French p\u00f4le socialiste\u2019s candidate for the 2027 presidential election, then the market resolves to Yes.\n\nThis market is eligible for accelerated resolution by a consensus of media calls. See full rules for details.\n\nhttps://assets.kalshi.com/contract_terms/ELECTION.pdf\n\n[{\"name\":\"or equivalent electoral authority of the relevant jurisdiction; the formal proclamation by the head of state or government when constitutionally required; for religious elections\",\"url\":\"https://kalshi.com/\"},{\"name\":\"in hierarchical order: Primary Sources: the official electoral commission\",\"url\":\"https://kalshi.com/\"},{\"name\":\"constitutional court\",\"url\":\"https://kalshi.com/\"}]",
+      "url": "https://kalshi.com/markets/kxfrpsnom/kxfrpsnom-26oct01",
+      "closeAt": "2027-10-01T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "16e1af0400cb82a81c894a75e05ca51ed9e5c8471dc4364bdfc33fed96a7ca1f",
+      "settlement": null,
+      "series": "KXFRPSNOM"
+    },
+    "b": {
+      "id": "ewc-pres-fra-2027-04-11-frahol",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "pres",
+        "eventAt": "2027-04-11T16:00:00.000Z",
+        "eventDate": "2027-04-11",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2027"
+        ],
+        "aliases": [],
+        "eventKey": "2027 french presidential election winner"
+      },
+      "title": "Francois Hollande \u00b7 2027 French Presidential Election Winner",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "If Francois Hollande wins the 2027 French Presidential Election, including any potential runoff, this market will settle to Yes. Outcome verified from relevant government authorities.\n\nIn the event that the 2027 French Presidential Election is rescheduled, this market will settle based on the results of the next French Presidential Election to be held within two years of April 18, 2027.",
+      "url": "https://polymarket.us/event/ewc-pres-fra-2027-04-11-frahol",
+      "closeAt": "2027-04-25T23:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 1,
+      "hash": "ca574c8202d0710497a37ee880d61092faf75907bf17b61327e60ea1797a254f",
+      "settlement": null
+    },
+    "inverted": false,
+    "reviewed": false
+  },
+  {
+    "id": "KXTRUMPMEETM-26OCT01-DROD::pintc-meet-trump-2026-12-31-delrod",
+    "a": {
+      "id": "KXTRUMPMEETM-26OCT01-DROD",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "delcy rodriguez",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Donald Trump meet (including phone calls) Delcy Rodr\u00edguez in Sep 2026?",
+      "outcome": "Delcy Rodr\u00edguez",
+      "opposite": "Delcy Rodr\u00edguez",
+      "category": "Politics",
+      "rules": "If Donald Trump and Delcy Rodr\u00edguez meet (including phone calls) in Sep 2026, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/PERSONMEETING.pdf\n\n[{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"The White House\",\"url\":\"https://www.whitehouse.gov\"},{\"name\":\"Associated Press\",\"url\":\"https://apnews.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"ABC News\",\"url\":\"https://abcnews.go.com/\"},{\"name\":\"New York Times\",\"url\":\"https://www.nytimes.com/\"},{\"name\":\"CNBC\",\"url\":\"https://www.cnbc.com\"},{\"name\":\"POLITICO\",\"url\":\"https://www.politico.com\"},{\"name\":\"NBC\",\"url\":\"https://www.nbcnews.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://www.ft.com\"},{\"name\":\"Bloomberg\",\"url\":\"https://bloomberg.org\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"MSNBC\",\"url\":\"https://www.msnbc.com\"},{\"name\":\"CBS News\",\"url\":\"https://www.cbsnews.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtrumpmeetm/kxtrumpmeetm-26oct01",
+      "closeAt": "2026-10-01T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "6401d8db2c39b131d4e299013f92715f9dc2d0733b603d47875e2ee8f583cf7a",
+      "settlement": null,
+      "series": "KXTRUMPMEETM"
+    },
+    "b": {
+      "id": "pintc-meet-trump-2026-12-31-delrod",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "meet",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "who will trump meet with by the end of 2026"
+      },
+      "title": "Delcy Rodriguez \u00b7 Who will Trump meet with by the end of 2026?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "If Donald Trump meets in person with Delcy Rodriguez between Contract Issuance and December 31, 2026, 11:59 PM ET, this market will settle to Yes. Outcome verified by the listed individuals and major news agencies of record.\n\nAn in-person meeting is defined as any encounter where both individuals are present and interact with each other in person. An exchange of words, handshake, direct conversation, or other clear personal interaction between the named individuals will qualify as a meeting. Merely standing in proximity, making eye contact, or being present in the same room or event without direct interaction will not qualify.",
+      "url": "https://polymarket.us/event/pintc-meet-trump-2026-12-31-delrod",
+      "closeAt": "2027-01-14T23:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 1,
+      "hash": "b5b30c20e293581784eff39e2643d717db93c4dd79b17ec8dcda370bc827c383",
+      "settlement": null
+    },
+    "inverted": false,
+    "reviewed": false
+  },
+  {
+    "id": "KXTRUMPMEETM-26OCT01-EMUS::pintc-meet-trump-2026-12-31-elomus",
+    "a": {
+      "id": "KXTRUMPMEETM-26OCT01-EMUS",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "elon musk",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Donald Trump meet (including phone calls) Elon Musk in Sep 2026?",
+      "outcome": "Elon Musk",
+      "opposite": "Elon Musk",
+      "category": "Politics",
+      "rules": "If Donald Trump and Elon Musk meet (including phone calls) in Sep 2026, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/PERSONMEETING.pdf\n\n[{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"The White House\",\"url\":\"https://www.whitehouse.gov\"},{\"name\":\"Associated Press\",\"url\":\"https://apnews.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"ABC News\",\"url\":\"https://abcnews.go.com/\"},{\"name\":\"New York Times\",\"url\":\"https://www.nytimes.com/\"},{\"name\":\"CNBC\",\"url\":\"https://www.cnbc.com\"},{\"name\":\"POLITICO\",\"url\":\"https://www.politico.com\"},{\"name\":\"NBC\",\"url\":\"https://www.nbcnews.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://www.ft.com\"},{\"name\":\"Bloomberg\",\"url\":\"https://bloomberg.org\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"MSNBC\",\"url\":\"https://www.msnbc.com\"},{\"name\":\"CBS News\",\"url\":\"https://www.cbsnews.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtrumpmeetm/kxtrumpmeetm-26oct01",
+      "closeAt": "2026-10-01T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "0d2d0c784de79c02cecb6a8932bfd4389d3541d9dda3974dea82e56c21cd8453",
+      "settlement": null,
+      "series": "KXTRUMPMEETM"
+    },
+    "b": {
+      "id": "pintc-meet-trump-2026-12-31-elomus",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "meet",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "who will trump meet with by the end of 2026"
+      },
+      "title": "Elon Musk \u00b7 Who will Trump meet with by the end of 2026?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "If Donald Trump meets in person with Elon Musk between Contract Issuance and December 31, 2026, 11:59 PM ET, this market will settle to Yes. Outcome verified by the listed individuals and major news agencies of record.\n\nAn in-person meeting is defined as any encounter where both individuals are present and interact with each other in person. An exchange of words, handshake, direct conversation, or other clear personal interaction between the named individuals will qualify as a meeting. Merely standing in proximity, making eye contact, or being present in the same room or event without direct interaction will not qualify.",
+      "url": "https://polymarket.us/event/pintc-meet-trump-2026-12-31-elomus",
+      "closeAt": "2027-01-14T23:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 1,
+      "hash": "aa9d7463589db1a7cf5782830501a4596777de46ba665cb6caa40bcf563499af",
+      "settlement": null
+    },
+    "inverted": false,
+    "reviewed": false
+  },
+  {
+    "id": "KXTRUMPMEETM-26OCT01-KJON::pintc-meet-trump-2026-12-31-kimjon",
+    "a": {
+      "id": "KXTRUMPMEETM-26OCT01-KJON",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "kim jong un",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Donald Trump meet (including phone calls) Kim Jong Un in Sep 2026?",
+      "outcome": "Kim Jong Un",
+      "opposite": "Kim Jong Un",
+      "category": "Politics",
+      "rules": "If Donald Trump and Kim Jong Un meet (including phone calls) in Sep 2026, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/PERSONMEETING.pdf\n\n[{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"The White House\",\"url\":\"https://www.whitehouse.gov\"},{\"name\":\"Associated Press\",\"url\":\"https://apnews.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"ABC News\",\"url\":\"https://abcnews.go.com/\"},{\"name\":\"New York Times\",\"url\":\"https://www.nytimes.com/\"},{\"name\":\"CNBC\",\"url\":\"https://www.cnbc.com\"},{\"name\":\"POLITICO\",\"url\":\"https://www.politico.com\"},{\"name\":\"NBC\",\"url\":\"https://www.nbcnews.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://www.ft.com\"},{\"name\":\"Bloomberg\",\"url\":\"https://bloomberg.org\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"MSNBC\",\"url\":\"https://www.msnbc.com\"},{\"name\":\"CBS News\",\"url\":\"https://www.cbsnews.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtrumpmeetm/kxtrumpmeetm-26oct01",
+      "closeAt": "2026-10-01T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "00a03e31692c3ea5c1a29a6c30915e9fcb0fe54e391a2bbc25510747bf04740c",
+      "settlement": null,
+      "series": "KXTRUMPMEETM"
+    },
+    "b": {
+      "id": "pintc-meet-trump-2026-12-31-kimjon",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "meet",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "who will trump meet with by the end of 2026"
+      },
+      "title": "Kim Jong Un \u00b7 Who will Trump meet with by the end of 2026?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "If Donald Trump meets in person with Kim Jong Un between Contract Issuance and December 31, 2026, 11:59 PM ET, this market will settle to Yes. Outcome verified by the listed individuals and major news agencies of record.\n\nAn in-person meeting is defined as any encounter where both individuals are present and interact with each other in person. An exchange of words, handshake, direct conversation, or other clear personal interaction between the named individuals will qualify as a meeting. Merely standing in proximity, making eye contact, or being present in the same room or event without direct interaction will not qualify.",
+      "url": "https://polymarket.us/event/pintc-meet-trump-2026-12-31-kimjon",
+      "closeAt": "2027-01-14T23:00:00Z",
+      "open": true,
+      "feeRate": 600,
+      "feeRounding": "even",
+      "minQty": 1,
+      "hash": "fa5d6f85e39135a5936417fea4c86f1ccbdd9d743fa1a5b6687ba06199cd0c09",
+      "settlement": null
+    },
+    "inverted": false,
+    "reviewed": false
+  }
+]
