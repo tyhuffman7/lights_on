@@ -42,6 +42,7 @@ export type Pair = {
   notes?: string;
 };
 export type Settings = {
+  makerRecovery?: 'bounded-v1';
   maxTrade: number;
   maxCommitted: number;
   minProfit: number;
@@ -57,6 +58,7 @@ export type Fill = {
   levels: Level[];
 };
 export type Quote = {
+  makerAllocation?: {policy:'bounded-v1';kalshi:number;poly:number};
   feeModel?: {version:1;kalshiRate:number;polyRate:number;scope:"ESTIMATE"|"CONSERVATIVE_PAPER_BOUND"};
   pairId: string;
   quantity: number;

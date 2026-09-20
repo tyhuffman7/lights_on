@@ -1,6 +1,7 @@
 import type {State,Pair,Quote,Book,Fill,Settings} from './types.ts';
 import {totals,log} from './ledger.ts';
 import {quantityUnits,fractionalCost,fractionalFee,makerFillFee,polyFractionalOrderFee} from './fractional.ts';
+import {makerAllocation} from './maker-allocation.ts';
 export {fractionalCost} from './fractional.ts';
 const SCALE=10000;
 export function fractionalWalk(levels:Book['yes'],quantity:number,rate:number,rounding:'ceil'|'even'='ceil'):Fill|null{
@@ -11,11 +12,13 @@ export function fractionalWalk(levels:Book['yes'],quantity:number,rate:number,ro
  }
  return left?null:{quantity,cost,fees:rounding==='even'?polyFractionalOrderFee(used,rate):fees,levels:used};
 }
-export type MakerOrder={cancelRequestedAt?:number;activationChecked?:boolean;makerFeeProfile?:import('./maker-fees.ts').MakerFeeProfile;clock?:import('./clock-window.ts').ClockWindow;id:string;pair:Pair;quote:Quote;placedAt:number;activeAt:number;expiresAt:number;price:number;
+export type MakerOrder={recovery?:{submittedAt:number;quantity:number;ceiling:number;unwindProceeds:number|null;reason:string;done:boolean};cancelRequestedAt?:number;activationChecked?:boolean;makerFeeProfile?:import('./maker-fees.ts').MakerFeeProfile;clock?:import('./clock-window.ts').ClockWindow;id:string;pair:Pair;quote:Quote;placedAt:number;activeAt:number;expiresAt:number;price:number;
  reservedA:number;reservedB:number;filledA:number;filledB:number;aCost:number;aFees:number;bCost:number;bFees:number;hedgeDue:number|null;tradeIds:string[];initialQueueAhead?:number;bLevels:Fill['levels'];};
 export function reserveMaker(state:State,pair:Pair,quote:Quote,id:string,price:number,now=Date.now()):{state:State;order:MakerOrder}{
  if(state.makerReserved||!quote.eligible||quote.aFill.levels.some(l=>l.price!==price)||state.positions.length>=500||state.positions.some(p=>p.id===id||p.status!=='settled'&&(p.pair.a.id===pair.a.id||p.pair.b.id===pair.b.id)))throw Error('Maker reservation rejected');
- const reservedA=quote.aFill.cost+quote.aFill.fees+Math.ceil(quote.reserve/2),reservedB=quote.bFill.cost+quote.bFill.fees+Math.floor(quote.reserve/2);
+ const allocation=state.settings.makerRecovery?makerAllocation(quote):undefined;
+ if(allocation&&JSON.stringify(allocation)!==JSON.stringify(quote.makerAllocation))throw Error('Maker allocation mismatch');
+ const reservedA=allocation?.kalshi??(quote.aFill.cost+quote.aFill.fees+Math.ceil(quote.reserve/2)),reservedB=allocation?.poly??(quote.bFill.cost+quote.bFill.fees+Math.floor(quote.reserve/2));
  if(reservedA>state.cash.kalshi||reservedB>state.cash.poly||reservedA+reservedB>state.settings.maxTrade||totals(state).committed+reservedA+reservedB>state.settings.maxCommitted)throw Error('Maker bankroll limit');
  const s=structuredClone(state);s.cash.kalshi-=reservedA;s.cash.poly-=reservedB;s.makerReserved={kalshi:reservedA,poly:reservedB};
  return {state:s,order:{id,pair:structuredClone(pair),quote:structuredClone(quote),placedAt:now,activeAt:now+500,expiresAt:now+2000,price,reservedA,reservedB,filledA:0,filledB:0,aCost:0,aFees:0,bCost:0,bFees:0,hedgeDue:null,tradeIds:[],bLevels:[]}};
