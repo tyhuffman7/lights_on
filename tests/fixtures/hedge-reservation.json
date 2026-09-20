@@ -1,0 +1,549 @@
+{
+  "scope": "CAPTURED_INPUT_ARITHMETIC_NOT_OBSERVED_FAILED_CALL",
+  "orderDiagnosticId": 433708,
+  "bookId": 566367,
+  "order": {
+    "id": "48509fdc-0ae3-464e-9c68-4ad6b5e05476",
+    "pair": {
+      "id": "KXNCAAFGAME-26SEP19CCSUMTST-CCSU::aec-cfb-cencon-monst-2026-09-19",
+      "a": {
+        "id": "KXNCAAFGAME-26SEP19CCSUMTST-CCSU",
+        "venue": "kalshi",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventDate": "2026-09-19",
+          "participants": [
+            "central connecticut st",
+            "montana st"
+          ],
+          "marketType": "winner",
+          "period": "full event",
+          "outcome": "central connecticut st",
+          "entities": [],
+          "numbers": [],
+          "aliases": []
+        },
+        "exchangeIndex": 0,
+        "title": "Central Connecticut St. wins",
+        "outcome": "Central Connecticut St.",
+        "opposite": "Central Connecticut St.",
+        "category": "Sports",
+        "rules": "If Central Connecticut St. wins the Central Connecticut St. vs Montana St. college football game originally scheduled for Sep 19, 2026, then the market resolves to Yes.\n\nIf the game is postponed but begins within 48 hours of its originally scheduled start time, the market will remain open and resolve based on the official final result. If the game is cancelled or not started within 48 hours of its originally scheduled start, the market will resolve to a fair price.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLGAMEWIN.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+        "url": "https://kalshi.com/markets/kxncaafgame/kxncaafgame-26sep19ccsumtst",
+        "closeAt": "2026-09-19T22:00:00Z",
+        "open": true,
+        "feeRate": 700,
+        "feeRounding": "ceil",
+        "minQty": 1,
+        "hash": "dc26a287eac2b9e7bde8019cc22ae85d65642b7680a3244156e0c6343398ac10",
+        "settlement": null,
+        "series": "KXNCAAFGAME"
+      },
+      "b": {
+        "id": "aec-cfb-cencon-monst-2026-09-19",
+        "venue": "poly",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-09-19T19:00:00.000Z",
+          "eventDate": "2026-09-19",
+          "participants": [
+            "central connecticut state",
+            "montana state"
+          ],
+          "home": "montana state",
+          "away": "central connecticut state",
+          "marketType": "winner",
+          "period": "full event",
+          "outcome": "central connecticut state",
+          "entities": [],
+          "numbers": [
+            "19",
+            "2026",
+            "7",
+            "00"
+          ],
+          "aliases": [
+            {
+              "name": "central connecticut state",
+              "venue": "poly",
+              "venueId": "1222",
+              "aliases": [
+                "central connecticut state",
+                "blue devils",
+                "central connecticut state",
+                "cencon",
+                "ccsu"
+              ]
+            },
+            {
+              "name": "montana state",
+              "venue": "poly",
+              "venueId": "1110",
+              "aliases": [
+                "montana state",
+                "bobcats",
+                "montana state",
+                "monst",
+                "mtst"
+              ]
+            }
+          ]
+        },
+        "title": "Who will win in the upcoming football event Central Connecticut State vs Montana State scheduled for September 19, 2026 at 7:00 PM UTC?",
+        "outcome": "Blue Devils",
+        "opposite": "Bobcats",
+        "category": "sports",
+        "rules": "This market will settle to the winner of the Central Connecticut State vs Montana State College Football game scheduled for Sep 19, 2026. Overtime is included if played. If a tied final score is reported and no official winner is declared, this market will not resolve automatically and will be reviewed against the official governing-body result. If the game is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+        "url": "https://polymarket.us/event/aec-cfb-cencon-monst-2026-09-19",
+        "closeAt": "2026-10-03T19:00:00Z",
+        "open": true,
+        "feeRate": 695,
+        "feeRounding": "even",
+        "minQty": 0.01,
+        "hash": "d41a985c2bd02ab637ba86df4a095ab56795b090e4030fbcb54bb9bb09035e56",
+        "settlement": null
+      },
+      "inverted": false,
+      "reviewed": true,
+      "paperApproval": {
+        "scope": "conditional-paper-only",
+        "version": 1,
+        "pairId": "KXNCAAFGAME-26SEP19CCSUMTST-CCSU::aec-cfb-cencon-monst-2026-09-19",
+        "fingerprint": "a678b8a0c67c8f8562a4f8f7ce149e8c299224cabdb3c34f2a1371548ea735ac",
+        "approvedAt": 1789850810214,
+        "expiresAt": 1789855200000,
+        "profile": "college-football-full-game",
+        "checks": [
+          "Same two teams, competition, event date and full-game period",
+          "YES/NO orientation agrees with the named team on each venue"
+        ],
+        "risks": [
+          "Postponement: Kalshi uses a 48-hour start window; Polymarket US uses a two-week rescheduling window",
+          "Tie, abandoned-game and result-correction treatments require separate review",
+          "Fair-price cancellation payouts are independently determined and need not hedge"
+        ],
+        "evidence": "User authorized bounded fill-first PAPER experiment on 2026-09-19. Current ordinary-outcome profile/metadata checked; exceptional-state risks remain conditional-paper-only. No real orders."
+      }
+    },
+    "quote": {
+      "feeModel": {
+        "version": 1,
+        "kalshiRate": 175,
+        "polyRate": 695,
+        "scope": "CONSERVATIVE_PAPER_BOUND"
+      },
+      "pairId": "KXNCAAFGAME-26SEP19CCSUMTST-CCSU::aec-cfb-cencon-monst-2026-09-19",
+      "quantity": 10,
+      "aSide": "yes",
+      "bSide": "no",
+      "aFill": {
+        "quantity": 10,
+        "cost": 43000,
+        "fees": 500,
+        "levels": [
+          {
+            "price": 4300,
+            "quantity": 10
+          }
+        ]
+      },
+      "bFill": {
+        "quantity": 10,
+        "cost": 51394,
+        "fees": 1700,
+        "levels": [
+          {
+            "price": 5050,
+            "quantity": 4.04
+          },
+          {
+            "price": 5200,
+            "quantity": 5.96
+          }
+        ]
+      },
+      "cost": 94394,
+      "fees": 2200,
+      "reserve": 2000,
+      "payout": 100000,
+      "profit": 1406,
+      "roi": 1.4260502667505122,
+      "reasons": [],
+      "eligible": true,
+      "receivedAt": 1789852142207
+    },
+    "placedAt": 1789852142254,
+    "activeAt": 1789852142754,
+    "expiresAt": 1789852144254,
+    "price": 4300,
+    "reservedA": 44500,
+    "reservedB": 54094,
+    "filledA": 0,
+    "filledB": 0,
+    "aCost": 0,
+    "aFees": 0,
+    "bCost": 0,
+    "bFees": 0,
+    "hedgeDue": null,
+    "tradeIds": [],
+    "bLevels": [],
+    "initialQueueAhead": 65,
+    "clock": {
+      "minOffsetMs": 28.92199999999999,
+      "maxOffsetMs": 147.634,
+      "measuredAt": 1789852121471,
+      "measuredMono": 1158709.442584,
+      "expiresAt": 1789852181471,
+      "sources": [
+        "time.apple.com",
+        "time.cloudflare.com"
+      ]
+    },
+    "makerFeeProfile": {
+      "series": "KXNCAAFGAME",
+      "feeType": "quadratic_with_maker_fees",
+      "multiplier": 1,
+      "rate": 175,
+      "observedAt": 1789852122480,
+      "expiresAt": 1789852242480,
+      "source": "https://kalshi.com/docs/kalshi-fee-schedule.pdf"
+    }
+  },
+  "book": {
+    "venue": "poly",
+    "marketId": "aec-cfb-cencon-monst-2026-09-19",
+    "yes": [
+      {
+        "price": 5050,
+        "quantity": 37.22
+      },
+      {
+        "price": 5150,
+        "quantity": 32
+      },
+      {
+        "price": 5200,
+        "quantity": 450
+      },
+      {
+        "price": 5250,
+        "quantity": 0.4
+      },
+      {
+        "price": 5400,
+        "quantity": 3.42
+      },
+      {
+        "price": 5550,
+        "quantity": 4654
+      },
+      {
+        "price": 5950,
+        "quantity": 149.27
+      },
+      {
+        "price": 6000,
+        "quantity": 1017
+      },
+      {
+        "price": 6150,
+        "quantity": 7.36
+      },
+      {
+        "price": 6350,
+        "quantity": 11000
+      },
+      {
+        "price": 6400,
+        "quantity": 30
+      },
+      {
+        "price": 6500,
+        "quantity": 15
+      },
+      {
+        "price": 7000,
+        "quantity": 17
+      },
+      {
+        "price": 7500,
+        "quantity": 15
+      },
+      {
+        "price": 8000,
+        "quantity": 17.5
+      },
+      {
+        "price": 8500,
+        "quantity": 15.66
+      },
+      {
+        "price": 9000,
+        "quantity": 18
+      },
+      {
+        "price": 9300,
+        "quantity": 14
+      },
+      {
+        "price": 9400,
+        "quantity": 50
+      },
+      {
+        "price": 9500,
+        "quantity": 81
+      },
+      {
+        "price": 9600,
+        "quantity": 100
+      },
+      {
+        "price": 9700,
+        "quantity": 25
+      },
+      {
+        "price": 9750,
+        "quantity": 25
+      },
+      {
+        "price": 9800,
+        "quantity": 275
+      },
+      {
+        "price": 9850,
+        "quantity": 150
+      },
+      {
+        "price": 9900,
+        "quantity": 832
+      },
+      {
+        "price": 9950,
+        "quantity": 300099
+      }
+    ],
+    "no": [
+      {
+        "price": 5350,
+        "quantity": 10
+      },
+      {
+        "price": 5700,
+        "quantity": 5
+      },
+      {
+        "price": 5750,
+        "quantity": 5
+      },
+      {
+        "price": 5850,
+        "quantity": 3
+      },
+      {
+        "price": 6150,
+        "quantity": 400
+      },
+      {
+        "price": 6400,
+        "quantity": 93.58
+      },
+      {
+        "price": 6650,
+        "quantity": 15
+      },
+      {
+        "price": 8300,
+        "quantity": 1000
+      },
+      {
+        "price": 9350,
+        "quantity": 32
+      },
+      {
+        "price": 9400,
+        "quantity": 45
+      },
+      {
+        "price": 9700,
+        "quantity": 1.7
+      },
+      {
+        "price": 9950,
+        "quantity": 300000
+      }
+    ],
+    "yesBids": [
+      {
+        "price": 4650,
+        "quantity": 10
+      },
+      {
+        "price": 4300,
+        "quantity": 5
+      },
+      {
+        "price": 4250,
+        "quantity": 5
+      },
+      {
+        "price": 4150,
+        "quantity": 3
+      },
+      {
+        "price": 3850,
+        "quantity": 400
+      },
+      {
+        "price": 3600,
+        "quantity": 93.58
+      },
+      {
+        "price": 3350,
+        "quantity": 15
+      },
+      {
+        "price": 1700,
+        "quantity": 1000
+      },
+      {
+        "price": 650,
+        "quantity": 32
+      },
+      {
+        "price": 600,
+        "quantity": 45
+      },
+      {
+        "price": 300,
+        "quantity": 1.7
+      },
+      {
+        "price": 50,
+        "quantity": 300000
+      }
+    ],
+    "noBids": [
+      {
+        "price": 4950,
+        "quantity": 37.22
+      },
+      {
+        "price": 4850,
+        "quantity": 32
+      },
+      {
+        "price": 4800,
+        "quantity": 450
+      },
+      {
+        "price": 4750,
+        "quantity": 0.4
+      },
+      {
+        "price": 4600,
+        "quantity": 3.42
+      },
+      {
+        "price": 4450,
+        "quantity": 4654
+      },
+      {
+        "price": 4050,
+        "quantity": 149.27
+      },
+      {
+        "price": 4000,
+        "quantity": 1017
+      },
+      {
+        "price": 3850,
+        "quantity": 7.36
+      },
+      {
+        "price": 3650,
+        "quantity": 11000
+      },
+      {
+        "price": 3600,
+        "quantity": 30
+      },
+      {
+        "price": 3500,
+        "quantity": 15
+      },
+      {
+        "price": 3000,
+        "quantity": 17
+      },
+      {
+        "price": 2500,
+        "quantity": 15
+      },
+      {
+        "price": 2000,
+        "quantity": 17.5
+      },
+      {
+        "price": 1500,
+        "quantity": 15.66
+      },
+      {
+        "price": 1000,
+        "quantity": 18
+      },
+      {
+        "price": 700,
+        "quantity": 14
+      },
+      {
+        "price": 600,
+        "quantity": 50
+      },
+      {
+        "price": 500,
+        "quantity": 81
+      },
+      {
+        "price": 400,
+        "quantity": 100
+      },
+      {
+        "price": 300,
+        "quantity": 25
+      },
+      {
+        "price": 250,
+        "quantity": 25
+      },
+      {
+        "price": 200,
+        "quantity": 275
+      },
+      {
+        "price": 150,
+        "quantity": 150
+      },
+      {
+        "price": 100,
+        "quantity": 832
+      },
+      {
+        "price": 50,
+        "quantity": 300099
+      }
+    ],
+    "receivedAt": 1789852144280,
+    "receivedMono": 1181518.980709,
+    "exchangeAt": 1789852144283,
+    "sequence": null,
+    "connection": "LIVE",
+    "valid": true,
+    "open": true,
+    "source": "stream"
+  },
+  "hedgeDue": 1789852144340
+}

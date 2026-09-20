@@ -1,4 +1,5 @@
 import {observedSizeAdmission} from '../lib/arb/maker-size-admission.ts';
+import {hedgeBookState,compactHedgeBook,hedgeEconomics} from './hedge-diagnostics.ts';
 import {planExit,applyExitLeg,type ExitPlan} from '../lib/arb/paper-exit.ts';
 import {usableMakerFee,type MakerFeeProfile} from '../lib/arb/maker-fees.ts';
 import {clockUsable,type ClockWindow} from '../lib/arb/clock-window.ts';
@@ -7,7 +8,7 @@ import {MakerActivity,makerActivityScore} from '../lib/arb/maker-activity.ts';
 import {MakerQueue,kalshiSellPrint} from '../lib/arb/maker-evidence.ts';
 import {reserveMaker,makerFill,hedgeMaker,closeMaker,makerHedgeViable} from '../lib/arb/maker-ledger.ts';
 import {competitiveMakerPlan as makerPlan,competitiveMakerPlans as makerPlans,refreshMakerPlan} from '../lib/arb/maker-plan.ts';import {validPaperApproval} from '../lib/arb/paper-approval.ts';
-import {isVerified} from '../lib/research/mappings.ts';import {fresh} from '../lib/research/books.ts';
+import {isVerified} from '../lib/research/mappings.ts';
 import {checkSettlements} from '../lib/arb/settlement.ts';import {totals} from '../lib/arb/ledger.ts';
 import type {Observer} from './observer.ts';import type {PaperStore,PaperDocument} from './paper-store.ts';
 import type {Venue,Market,Pair,Position,Book} from '../lib/arb/types.ts';
@@ -21,6 +22,7 @@ export class MakerRunner{
  wakeTimer:ReturnType<typeof setImmediate>|null=null;
  bookSink:NonNullable<Observer['recorder']['onBook']>;
  queue:MakerQueue|null=null;trades:{message:Record<string,any>;wall:number;mono:number}[]=[];timer:ReturnType<typeof setInterval>;lastAttempt=0;
+ hedgeTiming:{receivedAt:number;receivedMono:number;processedAt:number;processedMono:number}|null=null;
  constructor(observer:Observer,store:PaperStore,clock?:()=>ClockWindow|undefined,fees:()=>Map<string,MakerFeeProfile>=()=>new Map(),requireRecentActivity=false){
   this.fees=fees;this.requireRecentActivity=requireRecentActivity;
   this.clock=clock??(()=>undefined);this.requireClock=!!clock;
@@ -43,7 +45,8 @@ export class MakerRunner{
   return observedSizeAdmission({price:plan.price,quantity:plan.quote.quantity,hedgeLevels:plan.quote.bFill.levels,hedgeStep:pair.b.minQty,makerRate:rate??pair.a.feeRate!,hedgeRate:pair.b.feeRate!,reserve:this.document.state.settings.reserve,sizes:this.activity.sizes(pair.a.id,plan.quote.aSide,plan.price,now)});
  }
  approved(id:string){const m=this.observer.registry.get(id);return !!m&&m.active&&(isVerified(m)||validPaperApproval(this.document.approvals?.[id],m.pair));}
- book(v:Venue,id:string){const b=this.observer.recorder.books.get(v+':'+id);return b?.source==='stream'&&this.observer.recorder.streamHealthy(v,id)&&fresh(b,performance.now(),Date.now(),this.document.state.settings.maxAge)?b:null;}
+ bookState(v:Venue,id:string){const raw=this.observer.recorder.books.get(v+':'+id),healthy=raw?.source==='stream'?this.observer.recorder.streamHealthy(v,id):null;return hedgeBookState(raw,healthy,Date.now(),performance.now(),this.document.state.settings.maxAge);}
+ book(v:Venue,id:string){const view=this.bookState(v,id);return view.usable?view.raw!:null;}
  flush(){const started=performance.now();try{this.store.save(this.document);}catch(e){this.failed=true;throw e;}finally{const ms=performance.now()-started;this.observer.telemetry?.sample('paperLedgerWrite',ms);if(ms>25)this.observer.recorder.diagnostic('PAPER_SLOW_OPERATION',{operation:'ledgerSave',ms});}}
  cancel(reason:string){const o=this.document.makerOrder;if(!o||!this.queue||o.cancelRequestedAt!==undefined)return;
   o.cancelRequestedAt=Date.now();o.expiresAt=Math.min(o.expiresAt,o.cancelRequestedAt+250);this.queue.expiresAt=o.expiresAt;
@@ -109,13 +112,17 @@ export class MakerRunner{
      this.trades=[];const hedgeBook=this.book('poly',o.pair.b.id);if(!hedgeBook||!makerHedgeViable(o,hedgeBook,s.settings))this.cancel('HEDGE_NO_LONGER_VIABLE');return;
     }
     const events=this.trades.splice(0);
-    if(events.length){await this.observer.recorder.send('barrier',{});for(const e of events){const t=kalshiSellPrint(e.message);if(t){if(t.marketId===this.queue.marketId){d.counts['Maker same-market prints']=(d.counts['Maker same-market prints']??0)+1;}const n=this.queue.consume(t,e.wall,e.mono);if(n){o.tradeIds.push(t.id);makerFill(o,n,e.wall);this.observer.recorder.diagnostic('PAPER_MAKER_FILL',{id:o.id,tradeId:t.id,quantity:n,filledA:o.filledA,receivedAt:e.wall,hedgeDue:o.hedgeDue,queueAhead:this.queue.ahead});this.flush();}}}}
-    const m=this.observer.registry.get(o.pair.id),a=this.book('kalshi',o.pair.a.id),b=this.book('poly',o.pair.b.id);
-    const valid=!this.observer.paused&&!this.observer.stopped&&this.approved(o.pair.id)&&m?.pair.a.hash===o.pair.a.hash&&m?.pair.b.hash===o.pair.b.hash&&m?.pair.inverted===o.pair.inverted;
+    if(events.length){await this.observer.recorder.send('barrier',{});for(const e of events){const t=kalshiSellPrint(e.message);if(t){if(t.marketId===this.queue.marketId){d.counts['Maker same-market prints']=(d.counts['Maker same-market prints']??0)+1;}const n=this.queue.consume(t,e.wall,e.mono);if(n){const timing={receivedAt:e.wall,receivedMono:e.mono,processedAt:Date.now(),processedMono:performance.now()};if(o.hedgeDue===null)this.hedgeTiming=timing;o.tradeIds.push(t.id);makerFill(o,n,e.wall);this.observer.recorder.diagnostic('PAPER_MAKER_FILL',{id:o.id,tradeId:t.id,quantity:n,filledA:o.filledA,...timing,hedgeDue:o.hedgeDue,queueAhead:this.queue.ahead});this.flush();}}}}
+    const m=this.observer.registry.get(o.pair.id),av=this.bookState('kalshi',o.pair.a.id),bv=this.bookState('poly',o.pair.b.id),a=av.usable?av.raw!:null,b=bv.usable?bv.raw!:null;
+    const outer={paused:this.observer.paused,stopped:this.observer.stopped,approved:this.approved(o.pair.id),aHashMatches:m?.pair.a.hash===o.pair.a.hash,bHashMatches:m?.pair.b.hash===o.pair.b.hash,inversionMatches:m?.pair.inverted===o.pair.inverted};
+    const valid=!outer.paused&&!outer.stopped&&outer.approved&&outer.aHashMatches&&outer.bHashMatches&&outer.inversionMatches;
     if(!valid||!a||!b||d.halt||o.aCost+o.aFees>o.reservedA)this.cancel('EXECUTION_STATE_INVALID');
     else if(!makerHedgeViable(o,b,s.settings))this.cancel('HEDGE_NO_LONGER_VIABLE');
     const hedgeAt=Date.now(),hedgeDue=o.hedgeDue,priorHedge=o.filledB,priorCost=o.bCost,priorFees=o.bFees;
-    if(valid&&b&&hedgeMaker(o,b,hedgeAt,s.settings.maxAge)){this.observer.recorder.diagnostic('PAPER_MAKER_HEDGE',{id:o.id,at:hedgeAt,hedgeDue,quantity:o.filledB-priorHedge,cost:o.bCost-priorCost,fees:o.bFees-priorFees,book:b,scope:'SIMULATED_DELAYED_HEDGE'});this.flush();}
+    const hedgeMono=performance.now(),exposure=o.filledA-priorHedge;
+    const record=(decision:import('../lib/arb/maker-ledger.ts').HedgeDecision)=>{if(exposure<=0)return;this.observer.recorder.diagnostic('PAPER_MAKER_HEDGE_DECISION',{id:o.id,at:hedgeAt,mono:hedgeMono,fillTiming:this.hedgeTiming,hedgeDue,remaining:decision.remaining,reason:decision.reason,called:valid&&!!b,outer:{...outer,valid,halt:d.halt??null,stopping:this.stopping,recorderFailed:this.observer.recorder.failed,aWithinReservation:o.aCost+o.aFees<=o.reservedA},kalshiBook:compactHedgeBook(av),polyBook:compactHedgeBook(bv),...hedgeEconomics(o,bv,decision),priorPrincipal:priorCost,priorFees,reservedB:o.reservedB,reservePerContract:s.settings.reserve,expiresAt:o.expiresAt,cancelRequestedAt:o.cancelRequestedAt??null,scope:'ACTUAL_PAPER_DECISION_NOT_EXCHANGE_RESPONSE'});};
+    if(!valid||!b)record({reason:!valid?'OUTER_STATE_INVALID':bv.reason??'BOOK_UNUSABLE',remaining:exposure,fill:null});
+    if(valid&&b&&hedgeMaker(o,b,hedgeAt,s.settings.maxAge,record)){this.observer.recorder.diagnostic('PAPER_MAKER_HEDGE',{id:o.id,at:hedgeAt,hedgeDue,quantity:o.filledB-priorHedge,cost:o.bCost-priorCost,fees:o.bFees-priorFees,book:b,scope:'SIMULATED_DELAYED_HEDGE'});this.hedgeTiming=null;this.flush();}
     if(Date.now()>=o.expiresAt&&(o.hedgeDue===null||Date.now()>=o.hedgeDue))this.finish();
     return;
    }
@@ -163,7 +170,7 @@ export class MakerRunner{
    this.queue=new MakerQueue(bestPair.a.id,current.quote.aSide,current.price,current.quote.quantity,current.ahead,reserved.order.activeAt,reserved.order.expiresAt,clock);this.trades=[];this.observer.recorder.diagnostic('PAPER_MAKER_ORDER',{order:reserved.order,initialQueueAhead:current.ahead,recentExecutableSellVolume:currentVolume,sizeAdmission,entryPolicy:this.requireRecentActivity?'RECENT_ACTIVITY_POSITIVE_OBSERVED_SIZES':'QUOTE_ONLY',scope:'SIMULATED_RESTING_ORDER'});d.counts['Maker orders posted']=(d.counts['Maker orders posted']??0)+1;this.flush();
   }finally{this.busy=false;}
  }
- finish(){const d=this.document,o=d.makerOrder;if(!o)return;d.state=closeMaker(d.state,o);this.observer.recorder.diagnostic('PAPER_MAKER_CLOSE',{id:o.id,filledA:o.filledA,filledB:o.filledB,scope:'SIMULATED_RESTING_ORDER'});delete d.makerOrder;this.queue?.invalidate();this.queue=null;this.trades=[];
+ finish(){const d=this.document,o=d.makerOrder;if(!o)return;d.state=closeMaker(d.state,o);this.observer.recorder.diagnostic('PAPER_MAKER_CLOSE',{id:o.id,filledA:o.filledA,filledB:o.filledB,scope:'SIMULATED_RESTING_ORDER'});delete d.makerOrder;this.queue?.invalidate();this.queue=null;this.trades=[];this.hedgeTiming=null;
   d.counts[o.filledA?'Maker orders with fills':'Maker orders cancelled unfilled']=(d.counts[o.filledA?'Maker orders with fills':'Maker orders cancelled unfilled']??0)+1;
   if(d.state.positions.some(p=>p.status==='unmatched'))d.halt='Maker partial fill left unhedged exposure';if(d.state.cash.kalshi<0||d.state.cash.poly<0)d.halt='Maker fragmentation exceeded reserved cash';this.flush();}
  async settle(lookup:(venue:Venue,id:string)=>Promise<Pick<Market,'settlement'>>){if(this.busy||this.stopping||this.document.makerOrder||this.exitOrder||this.failed)return;this.busy=true;this.task=(async()=>{this.document.state=await checkSettlements(this.document.state,lookup);this.flush();})().catch(e=>{this.failed=true;this.document.halt=String(e);}).finally(()=>{this.busy=false;this.task=null;});await this.task;}

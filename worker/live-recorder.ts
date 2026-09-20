@@ -23,6 +23,7 @@ export class LiveRecorder {
   telemetry: Telemetry;
   index = new Map<string, Mapping[]>();
   books = new Map<string, StreamBook>();
+  bookVersion = 0;
   pending = new Map<
     number,
     {
@@ -243,6 +244,7 @@ export class LiveRecorder {
   update(book: StreamBook) {
     if (this.failed) throw new Error("Persistence unavailable");
     const started = performance.now();
+    book = {...book,capture:{sessionId:this.sessionId,version:++this.bookVersion,processedAt:Date.now(),processedMono:started}};
     this.telemetry.sample("processingLag", started - book.receivedMono);
     const key = `${book.venue}:${book.marketId}`;
     this.books.set(key, structuredClone(book));

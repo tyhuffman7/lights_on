@@ -5,11 +5,12 @@ test('Paper capture persists quiet books without a taker opportunity, only for s
  try{
   const a={...book('kalshi','K'),source:'stream'};recorder.update(a);assert.equal(recorder.storage.persisted,0,'default research retention is unchanged');
   recorder.paperCaptureKeys=new Set(['kalshi:K']);
-  recorder.update({...a,receivedMono:a.receivedMono+100,receivedAt:a.receivedAt+100});
+  recorder.update({...a,receivedMono:a.receivedMono+100,receivedAt:a.receivedAt+100,capture:{sessionId:'fixture',version:1,processedAt:a.receivedAt+101,processedMono:a.receivedMono+101}});
   recorder.update({...a,receivedMono:a.receivedMono+200,receivedAt:a.receivedAt+200});
   recorder.update({...a,marketId:'other',receivedMono:a.receivedMono+300});
   assert.equal(recorder.storage.persisted,2,'unchanged levels still retain distinct update timestamps');
   const rows=store.db.prepare('select body from book_updates order by id').all();assert.equal(JSON.parse(String(rows[0].body)).receivedAt,a.receivedAt+100);
+  assert.deepEqual(JSON.parse(String(rows[0].body)).capture,{sessionId:'fixture',version:1,processedAt:a.receivedAt+101,processedMono:a.receivedMono+101});
   recorder.paperCaptureKeys.clear();recorder.update({...a,receivedMono:a.receivedMono+400});assert.equal(recorder.storage.persisted,2);
  }finally{store.close();}
 });

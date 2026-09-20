@@ -1,5 +1,7 @@
 import type { Book, Pair, Side, Fill } from "../arb/types.ts";
 export type StreamBook = Book & {
+  // Identifies the immutable body retained in book_updates; never a receipt-time key.
+  capture?: {sessionId:string;version:number;processedAt:number;processedMono:number};
   venue: "kalshi" | "poly";
   marketId: string;
   receivedMono: number;

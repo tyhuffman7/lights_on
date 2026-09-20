@@ -1,0 +1,2152 @@
+{
+  "scope": "OFFLINE_CONDITIONAL_SCENARIOS_NOT_EXECUTIONS",
+  "units": "USD x 10000; all reported profit includes fees and simulated reserves",
+  "latencyGridMs": [
+    0,
+    100,
+    250,
+    500,
+    750,
+    1000
+  ],
+  "knowledge": "Receipt-index selection; historical processing/health at hypothetical decisions unknown. Newer unusable data never replaced with older data.",
+  "baselineRecorded": {
+    "profit": -5300,
+    "profitBeforeReserves": -3300,
+    "openInventory": 0,
+    "haltPreserved": true
+  },
+  "admission": {
+    "quantity": 9,
+    "kalshi": {
+      "principal": 38700,
+      "fees": 400,
+      "reserve": 900,
+      "debit": 40000
+    },
+    "plannedPoly": {
+      "principal": 46194,
+      "fees": 1600,
+      "reserve": 900,
+      "debit": 48694,
+      "bookId": 565054,
+      "quantity": 9
+    },
+    "plannedConditionalProfit": 1306,
+    "reservedA": 40000,
+    "reservedB": 60000,
+    "totalReserved": 100000,
+    "maxTrade": 100000,
+    "maxCommitted": 400000,
+    "priorCommitted": 0,
+    "cashBefore": {
+      "kalshi": 526096,
+      "poly": 558324
+    },
+    "cashAfterReservation": {
+      "kalshi": 486096,
+      "poly": 498324
+    },
+    "headroom": 11306
+  },
+  "due": {
+    "at": 1789852144340,
+    "polyBook": 566367,
+    "kalshiBook": 566460,
+    "baselineFull": {
+      "q": 10,
+      "a": {
+        "principal": 43000,
+        "fees": 500,
+        "reserve": 1000,
+        "debit": 44500
+      },
+      "b": {
+        "principal": 53500,
+        "fees": 1700,
+        "reserve": 1000,
+        "debit": 56200,
+        "bookId": 566367,
+        "quantity": 10
+      },
+      "feasible": false,
+      "reasons": [
+        "PREALLOCATED_HEDGE_BUDGET",
+        "MAX_TRADE"
+      ],
+      "conditionalProfit": -700,
+      "conditionalProfitBeforeReserves": 1300,
+      "capitalUntilSettlement": 100700
+    },
+    "headroom": {
+      "at": 1789852144340,
+      "choice": "FULL_HEDGE_CONDITIONAL",
+      "hedge": {
+        "q": 9,
+        "a": {
+          "principal": 38700,
+          "fees": 400,
+          "reserve": 900,
+          "debit": 40000
+        },
+        "b": {
+          "principal": 48150,
+          "fees": 1600,
+          "reserve": 900,
+          "debit": 50650,
+          "bookId": 566367,
+          "quantity": 9
+        },
+        "feasible": true,
+        "reasons": [],
+        "conditionalProfit": -650,
+        "conditionalProfitBeforeReserves": 1150,
+        "capitalUntilSettlement": 90650
+      },
+      "unwindQuote": {
+        "gross": 37800,
+        "fees": 1600,
+        "reserve": 900,
+        "proceeds": 35300,
+        "bookId": 566460,
+        "quantity": 9,
+        "limit": 4200
+      },
+      "unwind": null
+    }
+  },
+  "delayedHeadroom500": {
+    "decisionAt": 1789852143895,
+    "arrival": 1789852144395,
+    "intent": {
+      "at": 1789852143895,
+      "choice": "FULL_HEDGE_CONDITIONAL",
+      "hedge": {
+        "q": 9,
+        "a": {
+          "principal": 38700,
+          "fees": 400,
+          "reserve": 900,
+          "debit": 40000
+        },
+        "b": {
+          "principal": 45450,
+          "fees": 1600,
+          "reserve": 900,
+          "debit": 47950,
+          "bookId": 566059,
+          "quantity": 9
+        },
+        "feasible": true,
+        "reasons": [],
+        "conditionalProfit": 2050,
+        "conditionalProfitBeforeReserves": 3850,
+        "capitalUntilSettlement": 87950
+      },
+      "unwindQuote": {
+        "gross": 37800,
+        "fees": 1600,
+        "reserve": 900,
+        "proceeds": 35300,
+        "bookId": 566311,
+        "quantity": 9,
+        "limit": 4200
+      },
+      "unwind": null
+    },
+    "maxDebit": 54700,
+    "choice": "FULL_HEDGE_CONDITIONAL",
+    "fill": {
+      "principal": 48150,
+      "fees": 1600,
+      "reserve": 900,
+      "debit": 50650,
+      "bookId": 566367,
+      "quantity": 9
+    },
+    "conditionalProfit": -650,
+    "capitalUntilSettlement": 90650,
+    "recovery": null
+  },
+  "partialAtDue": {
+    "status": "CONDITIONAL_PAIR_WITH_RESIDUAL_SOLD",
+    "quantity": 9,
+    "quote": {
+      "principal": 48150,
+      "fees": 1600,
+      "reserve": 900,
+      "debit": 50650,
+      "bookId": 566367,
+      "quantity": 9
+    },
+    "arrival": 1789852144840,
+    "fill": {
+      "principal": 50850,
+      "fees": 1500,
+      "reserve": 900,
+      "debit": 53250,
+      "bookId": 566671,
+      "quantity": 9
+    },
+    "residual": 1,
+    "unwind": {
+      "decisionAt": 1789852144840,
+      "arrival": 1789852145340,
+      "intent": {
+        "gross": 4200,
+        "fees": 200,
+        "reserve": 100,
+        "proceeds": 3900,
+        "bookId": 566747,
+        "quantity": 1,
+        "limit": 4200
+      },
+      "fill": {
+        "gross": 4200,
+        "fees": 200,
+        "reserve": 100,
+        "proceeds": 3900,
+        "bookId": 566823,
+        "quantity": 1,
+        "limit": 4200
+      },
+      "status": "SCENARIO_FLAT",
+      "remaining": 0,
+      "profit": -600
+    },
+    "conditionalProfit": -3850,
+    "capitalUntilSettlement": 93850
+  },
+  "unwindAtDue": {
+    "decisionAt": 1789852144340,
+    "arrival": 1789852144840,
+    "intent": {
+      "gross": 42000,
+      "fees": 1800,
+      "reserve": 1000,
+      "proceeds": 39200,
+      "bookId": 566460,
+      "quantity": 10,
+      "limit": 4200
+    },
+    "fill": {
+      "gross": 42000,
+      "fees": 1800,
+      "reserve": 1000,
+      "proceeds": 39200,
+      "bookId": 566747,
+      "quantity": 10,
+      "limit": 4200
+    },
+    "status": "SCENARIO_FLAT",
+    "remaining": 0,
+    "profit": -5300
+  },
+  "latency": [
+    {
+      "ms": 0,
+      "receiptAnchor": {
+        "at": 1789852143895,
+        "polyBook": 566059,
+        "kalshiBook": 566311,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 50644,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 53344,
+            "bookId": 566059,
+            "quantity": 10
+          },
+          "feasible": true,
+          "reasons": [],
+          "conditionalProfit": 2156,
+          "conditionalProfitBeforeReserves": 4156,
+          "capitalUntilSettlement": 97844
+        },
+        "headroom": {
+          "at": 1789852143895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566059,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "processingDiagnosticAnchor": {
+        "at": 1789852143895,
+        "polyBook": 566059,
+        "kalshiBook": 566311,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 50644,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 53344,
+            "bookId": 566059,
+            "quantity": 10
+          },
+          "feasible": true,
+          "reasons": [],
+          "conditionalProfit": 2156,
+          "conditionalProfitBeforeReserves": 4156,
+          "capitalUntilSettlement": 97844
+        },
+        "headroom": {
+          "at": 1789852143895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566059,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "delayedPolicy": {
+        "decisionAt": 1789852143895,
+        "arrival": 1789852143895,
+        "intent": {
+          "at": 1789852143895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566059,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        },
+        "maxDebit": 54700,
+        "choice": "FULL_HEDGE_CONDITIONAL",
+        "fill": {
+          "principal": 45450,
+          "fees": 1600,
+          "reserve": 900,
+          "debit": 47950,
+          "bookId": 566059,
+          "quantity": 9
+        },
+        "conditionalProfit": 2050,
+        "capitalUntilSettlement": 87950,
+        "recovery": null
+      }
+    },
+    {
+      "ms": 100,
+      "receiptAnchor": {
+        "at": 1789852143940,
+        "polyBook": 566140,
+        "kalshiBook": 566311,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 50644,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 53344,
+            "bookId": 566140,
+            "quantity": 10
+          },
+          "feasible": true,
+          "reasons": [],
+          "conditionalProfit": 2156,
+          "conditionalProfitBeforeReserves": 4156,
+          "capitalUntilSettlement": 97844
+        },
+        "headroom": {
+          "at": 1789852143940,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566140,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "processingDiagnosticAnchor": {
+        "at": 1789852143995,
+        "polyBook": 566176,
+        "kalshiBook": 566311,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 50644,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 53344,
+            "bookId": 566176,
+            "quantity": 10
+          },
+          "feasible": true,
+          "reasons": [],
+          "conditionalProfit": 2156,
+          "conditionalProfitBeforeReserves": 4156,
+          "capitalUntilSettlement": 97844
+        },
+        "headroom": {
+          "at": 1789852143995,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566176,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "delayedPolicy": {
+        "decisionAt": 1789852143895,
+        "arrival": 1789852143995,
+        "intent": {
+          "at": 1789852143895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566059,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        },
+        "maxDebit": 54700,
+        "choice": "FULL_HEDGE_CONDITIONAL",
+        "fill": {
+          "principal": 45450,
+          "fees": 1600,
+          "reserve": 900,
+          "debit": 47950,
+          "bookId": 566176,
+          "quantity": 9
+        },
+        "conditionalProfit": 2050,
+        "capitalUntilSettlement": 87950,
+        "recovery": null
+      }
+    },
+    {
+      "ms": 250,
+      "receiptAnchor": {
+        "at": 1789852144090,
+        "polyBook": 566176,
+        "kalshiBook": 566311,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 50644,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 53344,
+            "bookId": 566176,
+            "quantity": 10
+          },
+          "feasible": true,
+          "reasons": [],
+          "conditionalProfit": 2156,
+          "conditionalProfitBeforeReserves": 4156,
+          "capitalUntilSettlement": 97844
+        },
+        "headroom": {
+          "at": 1789852144090,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566176,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "processingDiagnosticAnchor": {
+        "at": 1789852144145,
+        "polyBook": 566237,
+        "kalshiBook": 566311,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 94000,
+            "fees": 400,
+            "reserve": 1000,
+            "debit": 95400,
+            "bookId": 566237,
+            "quantity": 10
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -39900,
+          "conditionalProfitBeforeReserves": -37900,
+          "capitalUntilSettlement": 139900
+        },
+        "headroom": {
+          "at": 1789852144145,
+          "choice": "UNWIND",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 84600,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 85900,
+              "bookId": 566237,
+              "quantity": 9
+            },
+            "feasible": false,
+            "reasons": [
+              "PREALLOCATED_HEDGE_BUDGET",
+              "MAX_TRADE"
+            ],
+            "conditionalProfit": -35900,
+            "conditionalProfitBeforeReserves": -34100,
+            "capitalUntilSettlement": 125900
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": {
+            "decisionAt": 1789852144145,
+            "arrival": 1789852144645,
+            "intent": {
+              "gross": 37800,
+              "fees": 1600,
+              "reserve": 900,
+              "proceeds": 35300,
+              "bookId": 566311,
+              "quantity": 9,
+              "limit": 4200
+            },
+            "fill": {
+              "gross": 37800,
+              "fees": 1600,
+              "reserve": 900,
+              "proceeds": 35300,
+              "bookId": 566460,
+              "quantity": 9,
+              "limit": 4200
+            },
+            "status": "SCENARIO_FLAT",
+            "remaining": 0,
+            "profit": -4700
+          }
+        }
+      },
+      "delayedPolicy": {
+        "decisionAt": 1789852143895,
+        "arrival": 1789852144145,
+        "intent": {
+          "at": 1789852143895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566059,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        },
+        "maxDebit": 54700,
+        "choice": "HEDGE_FAILED_THEN_UNWIND",
+        "fill": null,
+        "conditionalProfit": null,
+        "capitalUntilSettlement": null,
+        "recovery": {
+          "decisionAt": 1789852144145,
+          "arrival": 1789852144645,
+          "intent": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -4700
+        }
+      }
+    },
+    {
+      "ms": 500,
+      "receiptAnchor": {
+        "at": 1789852144340,
+        "polyBook": 566367,
+        "kalshiBook": 566460,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 53500,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 56200,
+            "bookId": 566367,
+            "quantity": 10
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -700,
+          "conditionalProfitBeforeReserves": 1300,
+          "capitalUntilSettlement": 100700
+        },
+        "headroom": {
+          "at": 1789852144340,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 48150,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 50650,
+              "bookId": 566367,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": -650,
+            "conditionalProfitBeforeReserves": 1150,
+            "capitalUntilSettlement": 90650
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "processingDiagnosticAnchor": {
+        "at": 1789852144395,
+        "polyBook": 566367,
+        "kalshiBook": 566460,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 53500,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 56200,
+            "bookId": 566367,
+            "quantity": 10
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -700,
+          "conditionalProfitBeforeReserves": 1300,
+          "capitalUntilSettlement": 100700
+        },
+        "headroom": {
+          "at": 1789852144395,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 48150,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 50650,
+              "bookId": 566367,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": -650,
+            "conditionalProfitBeforeReserves": 1150,
+            "capitalUntilSettlement": 90650
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "delayedPolicy": {
+        "decisionAt": 1789852143895,
+        "arrival": 1789852144395,
+        "intent": {
+          "at": 1789852143895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566059,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        },
+        "maxDebit": 54700,
+        "choice": "FULL_HEDGE_CONDITIONAL",
+        "fill": {
+          "principal": 48150,
+          "fees": 1600,
+          "reserve": 900,
+          "debit": 50650,
+          "bookId": 566367,
+          "quantity": 9
+        },
+        "conditionalProfit": -650,
+        "capitalUntilSettlement": 90650,
+        "recovery": null
+      }
+    },
+    {
+      "ms": 750,
+      "receiptAnchor": {
+        "at": 1789852144590,
+        "polyBook": 566487,
+        "kalshiBook": 566460,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 55000,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 57700,
+            "bookId": 566487,
+            "quantity": 10
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -2200,
+          "conditionalProfitBeforeReserves": -200,
+          "capitalUntilSettlement": 102200
+        },
+        "headroom": {
+          "at": 1789852144590,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 49500,
+              "fees": 1500,
+              "reserve": 900,
+              "debit": 51900,
+              "bookId": 566487,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": -1900,
+            "conditionalProfitBeforeReserves": -100,
+            "capitalUntilSettlement": 91900
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "processingDiagnosticAnchor": {
+        "at": 1789852144645,
+        "polyBook": 566540,
+        "kalshiBook": 566460,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 55000,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 57700,
+            "bookId": 566540,
+            "quantity": 10
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -2200,
+          "conditionalProfitBeforeReserves": -200,
+          "capitalUntilSettlement": 102200
+        },
+        "headroom": {
+          "at": 1789852144645,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 49500,
+              "fees": 1500,
+              "reserve": 900,
+              "debit": 51900,
+              "bookId": 566540,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": -1900,
+            "conditionalProfitBeforeReserves": -100,
+            "capitalUntilSettlement": 91900
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "delayedPolicy": {
+        "decisionAt": 1789852143895,
+        "arrival": 1789852144645,
+        "intent": {
+          "at": 1789852143895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566059,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        },
+        "maxDebit": 54700,
+        "choice": "FULL_HEDGE_CONDITIONAL",
+        "fill": {
+          "principal": 49500,
+          "fees": 1500,
+          "reserve": 900,
+          "debit": 51900,
+          "bookId": 566540,
+          "quantity": 9
+        },
+        "conditionalProfit": -1900,
+        "capitalUntilSettlement": 91900,
+        "recovery": null
+      }
+    },
+    {
+      "ms": 1000,
+      "receiptAnchor": {
+        "at": 1789852144840,
+        "polyBook": 566671,
+        "kalshiBook": 566747,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 56500,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 59200,
+            "bookId": 566671,
+            "quantity": 10
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -3700,
+          "conditionalProfitBeforeReserves": -1700,
+          "capitalUntilSettlement": 103700
+        },
+        "headroom": {
+          "at": 1789852144840,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 50850,
+              "fees": 1500,
+              "reserve": 900,
+              "debit": 53250,
+              "bookId": 566671,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": -3250,
+            "conditionalProfitBeforeReserves": -1450,
+            "capitalUntilSettlement": 93250
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566747,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "processingDiagnosticAnchor": {
+        "at": 1789852144895,
+        "polyBook": 566671,
+        "kalshiBook": 566747,
+        "baselineFull": {
+          "q": 10,
+          "a": {
+            "principal": 43000,
+            "fees": 500,
+            "reserve": 1000,
+            "debit": 44500
+          },
+          "b": {
+            "principal": 56500,
+            "fees": 1700,
+            "reserve": 1000,
+            "debit": 59200,
+            "bookId": 566671,
+            "quantity": 10
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -3700,
+          "conditionalProfitBeforeReserves": -1700,
+          "capitalUntilSettlement": 103700
+        },
+        "headroom": {
+          "at": 1789852144895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 50850,
+              "fees": 1500,
+              "reserve": 900,
+              "debit": 53250,
+              "bookId": 566671,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": -3250,
+            "conditionalProfitBeforeReserves": -1450,
+            "capitalUntilSettlement": 93250
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566747,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        }
+      },
+      "delayedPolicy": {
+        "decisionAt": 1789852143895,
+        "arrival": 1789852144895,
+        "intent": {
+          "at": 1789852143895,
+          "choice": "FULL_HEDGE_CONDITIONAL",
+          "hedge": {
+            "q": 9,
+            "a": {
+              "principal": 38700,
+              "fees": 400,
+              "reserve": 900,
+              "debit": 40000
+            },
+            "b": {
+              "principal": 45450,
+              "fees": 1600,
+              "reserve": 900,
+              "debit": 47950,
+              "bookId": 566059,
+              "quantity": 9
+            },
+            "feasible": true,
+            "reasons": [],
+            "conditionalProfit": 2050,
+            "conditionalProfitBeforeReserves": 3850,
+            "capitalUntilSettlement": 87950
+          },
+          "unwindQuote": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566311,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "unwind": null
+        },
+        "maxDebit": 54700,
+        "choice": "FULL_HEDGE_CONDITIONAL",
+        "fill": {
+          "principal": 50850,
+          "fees": 1500,
+          "reserve": 900,
+          "debit": 53250,
+          "bookId": 566671,
+          "quantity": 9
+        },
+        "conditionalProfit": -3250,
+        "capitalUntilSettlement": 93250,
+        "recovery": null
+      }
+    }
+  ],
+  "adverse": [
+    {
+      "name": "captured-price-0.94",
+      "scope": "SYNTHETIC_ADVERSE_INPUT_NOT_OBSERVED_TRADE",
+      "full10": {
+        "q": 10,
+        "a": {
+          "principal": 43000,
+          "fees": 500,
+          "reserve": 1000,
+          "debit": 44500
+        },
+        "b": {
+          "principal": 94000,
+          "fees": 400,
+          "reserve": 1000,
+          "debit": 95400,
+          "bookId": 566367,
+          "quantity": 10
+        },
+        "feasible": false,
+        "reasons": [
+          "PREALLOCATED_HEDGE_BUDGET",
+          "MAX_TRADE"
+        ],
+        "conditionalProfit": -39900,
+        "conditionalProfitBeforeReserves": -37900,
+        "capitalUntilSettlement": 139900
+      },
+      "policy": {
+        "at": 1789852144340,
+        "choice": "UNWIND",
+        "hedge": {
+          "q": 9,
+          "a": {
+            "principal": 38700,
+            "fees": 400,
+            "reserve": 900,
+            "debit": 40000
+          },
+          "b": {
+            "principal": 84600,
+            "fees": 400,
+            "reserve": 900,
+            "debit": 85900,
+            "bookId": 566367,
+            "quantity": 9
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -35900,
+          "conditionalProfitBeforeReserves": -34100,
+          "capitalUntilSettlement": 125900
+        },
+        "unwindQuote": {
+          "gross": 37800,
+          "fees": 1600,
+          "reserve": 900,
+          "proceeds": 35300,
+          "bookId": 566460,
+          "quantity": 9,
+          "limit": 4200
+        },
+        "unwind": {
+          "decisionAt": 1789852144340,
+          "arrival": 1789852144840,
+          "intent": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -4700
+        }
+      },
+      "partial": {
+        "status": "CONDITIONAL_PAIR_WITH_RESIDUAL_SOLD",
+        "quantity": 6,
+        "quote": {
+          "principal": 56400,
+          "fees": 200,
+          "reserve": 600,
+          "debit": 57200,
+          "bookId": 566367,
+          "quantity": 6
+        },
+        "arrival": 1789852144840,
+        "fill": {
+          "principal": 56400,
+          "fees": 200,
+          "reserve": 600,
+          "debit": 57200,
+          "bookId": 566367,
+          "quantity": 6
+        },
+        "residual": 3,
+        "unwind": {
+          "decisionAt": 1789852144840,
+          "arrival": 1789852145340,
+          "intent": {
+            "gross": 12600,
+            "fees": 600,
+            "reserve": 300,
+            "proceeds": 11700,
+            "bookId": 566460,
+            "quantity": 3,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 12600,
+            "fees": 600,
+            "reserve": 300,
+            "proceeds": 11700,
+            "bookId": 566460,
+            "quantity": 3,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -1700
+        },
+        "conditionalProfit": -25500,
+        "capitalUntilSettlement": 85500
+      }
+    },
+    {
+      "name": "larger-than-due-0.70",
+      "scope": "SYNTHETIC_ADVERSE_INPUT_NOT_OBSERVED_TRADE",
+      "full10": {
+        "q": 10,
+        "a": {
+          "principal": 43000,
+          "fees": 500,
+          "reserve": 1000,
+          "debit": 44500
+        },
+        "b": {
+          "principal": 70000,
+          "fees": 1500,
+          "reserve": 1000,
+          "debit": 72500,
+          "bookId": 566367,
+          "quantity": 10
+        },
+        "feasible": false,
+        "reasons": [
+          "PREALLOCATED_HEDGE_BUDGET",
+          "MAX_TRADE"
+        ],
+        "conditionalProfit": -17000,
+        "conditionalProfitBeforeReserves": -15000,
+        "capitalUntilSettlement": 117000
+      },
+      "policy": {
+        "at": 1789852144340,
+        "choice": "UNWIND",
+        "hedge": {
+          "q": 9,
+          "a": {
+            "principal": 38700,
+            "fees": 400,
+            "reserve": 900,
+            "debit": 40000
+          },
+          "b": {
+            "principal": 63000,
+            "fees": 1300,
+            "reserve": 900,
+            "debit": 65200,
+            "bookId": 566367,
+            "quantity": 9
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -15200,
+          "conditionalProfitBeforeReserves": -13400,
+          "capitalUntilSettlement": 105200
+        },
+        "unwindQuote": {
+          "gross": 37800,
+          "fees": 1600,
+          "reserve": 900,
+          "proceeds": 35300,
+          "bookId": 566460,
+          "quantity": 9,
+          "limit": 4200
+        },
+        "unwind": {
+          "decisionAt": 1789852144340,
+          "arrival": 1789852144840,
+          "intent": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -4700
+        }
+      },
+      "partial": {
+        "status": "CONDITIONAL_PAIR_WITH_RESIDUAL_SOLD",
+        "quantity": 8,
+        "quote": {
+          "principal": 56000,
+          "fees": 1200,
+          "reserve": 800,
+          "debit": 58000,
+          "bookId": 566367,
+          "quantity": 8
+        },
+        "arrival": 1789852144840,
+        "fill": {
+          "principal": 56000,
+          "fees": 1200,
+          "reserve": 800,
+          "debit": 58000,
+          "bookId": 566367,
+          "quantity": 8
+        },
+        "residual": 1,
+        "unwind": {
+          "decisionAt": 1789852144840,
+          "arrival": 1789852145340,
+          "intent": {
+            "gross": 4200,
+            "fees": 200,
+            "reserve": 100,
+            "proceeds": 3900,
+            "bookId": 566460,
+            "quantity": 1,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 4200,
+            "fees": 200,
+            "reserve": 100,
+            "proceeds": 3900,
+            "bookId": 566460,
+            "quantity": 1,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -600
+        },
+        "conditionalProfit": -14100,
+        "capitalUntilSettlement": 94100
+      }
+    },
+    {
+      "name": "extreme-0.99",
+      "scope": "SYNTHETIC_ADVERSE_INPUT_NOT_OBSERVED_TRADE",
+      "full10": {
+        "q": 10,
+        "a": {
+          "principal": 43000,
+          "fees": 500,
+          "reserve": 1000,
+          "debit": 44500
+        },
+        "b": {
+          "principal": 99000,
+          "fees": 100,
+          "reserve": 1000,
+          "debit": 100100,
+          "bookId": 566367,
+          "quantity": 10
+        },
+        "feasible": false,
+        "reasons": [
+          "PREALLOCATED_HEDGE_BUDGET",
+          "MAX_TRADE"
+        ],
+        "conditionalProfit": -44600,
+        "conditionalProfitBeforeReserves": -42600,
+        "capitalUntilSettlement": 144600
+      },
+      "policy": {
+        "at": 1789852144340,
+        "choice": "UNWIND",
+        "hedge": {
+          "q": 9,
+          "a": {
+            "principal": 38700,
+            "fees": 400,
+            "reserve": 900,
+            "debit": 40000
+          },
+          "b": {
+            "principal": 89100,
+            "fees": 100,
+            "reserve": 900,
+            "debit": 90100,
+            "bookId": 566367,
+            "quantity": 9
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -40100,
+          "conditionalProfitBeforeReserves": -38300,
+          "capitalUntilSettlement": 130100
+        },
+        "unwindQuote": {
+          "gross": 37800,
+          "fees": 1600,
+          "reserve": 900,
+          "proceeds": 35300,
+          "bookId": 566460,
+          "quantity": 9,
+          "limit": 4200
+        },
+        "unwind": {
+          "decisionAt": 1789852144340,
+          "arrival": 1789852144840,
+          "intent": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -4700
+        }
+      },
+      "partial": {
+        "status": "CONDITIONAL_PAIR_WITH_RESIDUAL_SOLD",
+        "quantity": 6,
+        "quote": {
+          "principal": 59400,
+          "fees": 0,
+          "reserve": 600,
+          "debit": 60000,
+          "bookId": 566367,
+          "quantity": 6
+        },
+        "arrival": 1789852144840,
+        "fill": {
+          "principal": 59400,
+          "fees": 0,
+          "reserve": 600,
+          "debit": 60000,
+          "bookId": 566367,
+          "quantity": 6
+        },
+        "residual": 3,
+        "unwind": {
+          "decisionAt": 1789852144840,
+          "arrival": 1789852145340,
+          "intent": {
+            "gross": 12600,
+            "fees": 600,
+            "reserve": 300,
+            "proceeds": 11700,
+            "bookId": 566460,
+            "quantity": 3,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 12600,
+            "fees": 600,
+            "reserve": 300,
+            "proceeds": 11700,
+            "bookId": 566460,
+            "quantity": 3,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -1700
+        },
+        "conditionalProfit": -28300,
+        "capitalUntilSettlement": 88300
+      }
+    },
+    {
+      "name": "insufficient-depth",
+      "scope": "SYNTHETIC_ADVERSE_INPUT_NOT_OBSERVED_TRADE",
+      "full10": {
+        "q": 10,
+        "a": {
+          "principal": 43000,
+          "fees": 500,
+          "reserve": 1000,
+          "debit": 44500
+        },
+        "b": null,
+        "feasible": false,
+        "reasons": [
+          "BOOK_OR_FULL_DEPTH_UNAVAILABLE"
+        ],
+        "conditionalProfit": null,
+        "conditionalProfitBeforeReserves": null,
+        "capitalUntilSettlement": null
+      },
+      "policy": {
+        "at": 1789852144340,
+        "choice": "UNWIND",
+        "hedge": {
+          "q": 9,
+          "a": {
+            "principal": 38700,
+            "fees": 400,
+            "reserve": 900,
+            "debit": 40000
+          },
+          "b": null,
+          "feasible": false,
+          "reasons": [
+            "BOOK_OR_FULL_DEPTH_UNAVAILABLE"
+          ],
+          "conditionalProfit": null,
+          "conditionalProfitBeforeReserves": null,
+          "capitalUntilSettlement": null
+        },
+        "unwindQuote": {
+          "gross": 37800,
+          "fees": 1600,
+          "reserve": 900,
+          "proceeds": 35300,
+          "bookId": 566460,
+          "quantity": 9,
+          "limit": 4200
+        },
+        "unwind": {
+          "decisionAt": 1789852144340,
+          "arrival": 1789852144840,
+          "intent": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -4700
+        }
+      },
+      "partial": {
+        "status": "CONDITIONAL_PAIR_WITH_RESIDUAL_SOLD",
+        "quantity": 8,
+        "quote": {
+          "principal": 42800,
+          "fees": 1400,
+          "reserve": 800,
+          "debit": 45000,
+          "bookId": 566367,
+          "quantity": 8
+        },
+        "arrival": 1789852144840,
+        "fill": {
+          "principal": 42800,
+          "fees": 1400,
+          "reserve": 800,
+          "debit": 45000,
+          "bookId": 566367,
+          "quantity": 8
+        },
+        "residual": 1,
+        "unwind": {
+          "decisionAt": 1789852144840,
+          "arrival": 1789852145340,
+          "intent": {
+            "gross": 4200,
+            "fees": 200,
+            "reserve": 100,
+            "proceeds": 3900,
+            "bookId": 566460,
+            "quantity": 1,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 4200,
+            "fees": 200,
+            "reserve": 100,
+            "proceeds": 3900,
+            "bookId": 566460,
+            "quantity": 1,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -600
+        },
+        "conditionalProfit": -1100,
+        "capitalUntilSettlement": 81100
+      }
+    },
+    {
+      "name": "missing-depth",
+      "scope": "SYNTHETIC_ADVERSE_INPUT_NOT_OBSERVED_TRADE",
+      "full10": {
+        "q": 10,
+        "a": {
+          "principal": 43000,
+          "fees": 500,
+          "reserve": 1000,
+          "debit": 44500
+        },
+        "b": null,
+        "feasible": false,
+        "reasons": [
+          "BOOK_OR_FULL_DEPTH_UNAVAILABLE"
+        ],
+        "conditionalProfit": null,
+        "conditionalProfitBeforeReserves": null,
+        "capitalUntilSettlement": null
+      },
+      "policy": {
+        "at": 1789852144340,
+        "choice": "UNWIND",
+        "hedge": {
+          "q": 9,
+          "a": {
+            "principal": 38700,
+            "fees": 400,
+            "reserve": 900,
+            "debit": 40000
+          },
+          "b": null,
+          "feasible": false,
+          "reasons": [
+            "BOOK_OR_FULL_DEPTH_UNAVAILABLE"
+          ],
+          "conditionalProfit": null,
+          "conditionalProfitBeforeReserves": null,
+          "capitalUntilSettlement": null
+        },
+        "unwindQuote": {
+          "gross": 37800,
+          "fees": 1600,
+          "reserve": 900,
+          "proceeds": 35300,
+          "bookId": 566460,
+          "quantity": 9,
+          "limit": 4200
+        },
+        "unwind": {
+          "decisionAt": 1789852144340,
+          "arrival": 1789852144840,
+          "intent": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "fill": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "status": "SCENARIO_FLAT",
+          "remaining": 0,
+          "profit": -4700
+        }
+      },
+      "partial": {
+        "status": "NO_ADMISSIBLE_PARTIAL",
+        "quantity": 0,
+        "profit": null
+      }
+    },
+    {
+      "name": "failed-recovery",
+      "scope": "SYNTHETIC_ADVERSE_INPUT_NOT_OBSERVED_TRADE",
+      "full10": {
+        "q": 10,
+        "a": {
+          "principal": 43000,
+          "fees": 500,
+          "reserve": 1000,
+          "debit": 44500
+        },
+        "b": {
+          "principal": 94000,
+          "fees": 400,
+          "reserve": 1000,
+          "debit": 95400,
+          "bookId": 566367,
+          "quantity": 10
+        },
+        "feasible": false,
+        "reasons": [
+          "PREALLOCATED_HEDGE_BUDGET",
+          "MAX_TRADE"
+        ],
+        "conditionalProfit": -39900,
+        "conditionalProfitBeforeReserves": -37900,
+        "capitalUntilSettlement": 139900
+      },
+      "policy": {
+        "at": 1789852144340,
+        "choice": "UNWIND",
+        "hedge": {
+          "q": 9,
+          "a": {
+            "principal": 38700,
+            "fees": 400,
+            "reserve": 900,
+            "debit": 40000
+          },
+          "b": {
+            "principal": 84600,
+            "fees": 400,
+            "reserve": 900,
+            "debit": 85900,
+            "bookId": 566367,
+            "quantity": 9
+          },
+          "feasible": false,
+          "reasons": [
+            "PREALLOCATED_HEDGE_BUDGET",
+            "MAX_TRADE"
+          ],
+          "conditionalProfit": -35900,
+          "conditionalProfitBeforeReserves": -34100,
+          "capitalUntilSettlement": 125900
+        },
+        "unwindQuote": {
+          "gross": 37800,
+          "fees": 1600,
+          "reserve": 900,
+          "proceeds": 35300,
+          "bookId": 566460,
+          "quantity": 9,
+          "limit": 4200
+        },
+        "unwind": {
+          "decisionAt": 1789852144340,
+          "arrival": 1789852144840,
+          "intent": {
+            "gross": 37800,
+            "fees": 1600,
+            "reserve": 900,
+            "proceeds": 35300,
+            "bookId": 566460,
+            "quantity": 9,
+            "limit": 4200
+          },
+          "fill": null,
+          "status": "UNRESOLVED_EXPOSURE",
+          "remaining": 9,
+          "profit": null
+        }
+      },
+      "partial": {
+        "status": "RESIDUAL_UNRESOLVED",
+        "quantity": 6,
+        "quote": {
+          "principal": 56400,
+          "fees": 200,
+          "reserve": 600,
+          "debit": 57200,
+          "bookId": 566367,
+          "quantity": 6
+        },
+        "arrival": 1789852144840,
+        "fill": {
+          "principal": 56400,
+          "fees": 200,
+          "reserve": 600,
+          "debit": 57200,
+          "bookId": 566367,
+          "quantity": 6
+        },
+        "residual": 3,
+        "unwind": {
+          "decisionAt": 1789852144840,
+          "arrival": 1789852145340,
+          "intent": null,
+          "fill": null,
+          "status": "UNRESOLVED_EXPOSURE",
+          "remaining": 3,
+          "profit": null
+        },
+        "conditionalProfit": null,
+        "capitalUntilSettlement": 97200
+      }
+    }
+  ]
+}

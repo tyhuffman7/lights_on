@@ -40,11 +40,28 @@ export function makerHedgeViable(order:MakerOrder,b:Book,settings:Settings){
  const outlay=a+bDebit+order.quote.reserve,profit=order.quote.quantity*SCALE-outlay;
  return a+Math.ceil(order.quote.reserve/2)<=order.reservedA&&bDebit+Math.floor(order.quote.reserve/2)<=order.reservedB&&profit>=settings.minProfit&&profit/outlay*100>=settings.minRoi;
 }
-export function hedgeMaker(order:MakerOrder,b:Book,now:number,maxAge:number){
+export type HedgeDecision={reason:string;remaining:number;fill:Fill|null};
+// Same gates and precedence as execution. A false decision never mutates the order.
+export function makerHedgeDecision(order:MakerOrder,b:Book,now:number,maxAge:number):HedgeDecision{
  const remaining=(quantityUnits(order.filledA)-quantityUnits(order.filledB))/SCALE;
- if(!remaining||remaining<order.pair.b.minQty||quantityUnits(remaining)%quantityUnits(order.pair.b.minQty)!==0||order.hedgeDue===null||now<order.hedgeDue||!b.open||now-b.receivedAt>maxAge||b.receivedAt>now+1000||(b.exchangeAt!==null&&(now-b.exchangeAt>maxAge||b.exchangeAt>now+1000)))return false;
- const fill=fractionalWalk(b[order.quote.bSide],remaining,order.pair.b.feeRate!,'even');if(!fill||order.bCost+order.bFees+fill.cost+fill.fees>order.reservedB)return false;
- order.bLevels.push(...fill.levels);order.bCost+=fill.cost;order.bFees+=fill.fees;order.filledB=order.filledA;order.hedgeDue=null;return true;
+ const reject=(reason:string):HedgeDecision=>({reason,remaining,fill:null});
+ if(!remaining)return reject('NO_EXPOSURE');
+ if(remaining<order.pair.b.minQty||quantityUnits(remaining)%quantityUnits(order.pair.b.minQty)!==0)return reject('QUANTITY_INVALID');
+ if(order.hedgeDue===null)return reject('DUE_MISSING');
+ if(now<order.hedgeDue)return reject('NOT_YET_DUE');
+ if(!b.open)return reject('BOOK_CLOSED');
+ if(now-b.receivedAt>maxAge)return reject('RECEIPT_STALE');
+ if(b.receivedAt>now+1000)return reject('RECEIPT_FUTURE');
+ if(b.exchangeAt!==null&&now-b.exchangeAt>maxAge)return reject('EXCHANGE_STALE');
+ if(b.exchangeAt!==null&&b.exchangeAt>now+1000)return reject('EXCHANGE_FUTURE');
+ const fill=fractionalWalk(b[order.quote.bSide],remaining,order.pair.b.feeRate!,'even');
+ if(!fill)return reject('INSUFFICIENT_FULL_DEPTH');
+ return {reason:order.bCost+order.bFees+fill.cost+fill.fees>order.reservedB?'RESERVATION_EXCEEDED':'SUCCESS',remaining,fill};
+}
+export function hedgeMaker(order:MakerOrder,b:Book,now:number,maxAge:number,record?:(decision:HedgeDecision)=>void){
+ const decision=makerHedgeDecision(order,b,now,maxAge),fill=decision.fill;
+ if(decision.reason!=='SUCCESS'||!fill){record?.(decision);return false;}
+ order.bLevels.push(...fill.levels);order.bCost+=fill.cost;order.bFees+=fill.fees;order.filledB=order.filledA;order.hedgeDue=null;record?.(decision);return true;
 }
 export function closeMaker(state:State,order:MakerOrder,now=Date.now()):State{
  if(!state.makerReserved||state.makerReserved.kalshi!==order.reservedA||state.makerReserved.poly!==order.reservedB)throw Error('Maker reservation mismatch');
