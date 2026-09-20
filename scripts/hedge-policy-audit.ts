@@ -3,17 +3,17 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
 import {fractionalWalk} from '../lib/arb/maker-ledger.ts';
 import {fractionalCost,makerFillFee} from '../lib/arb/fractional.ts';
-import type {Book} from '../lib/arb/types.ts';
+import type {StreamBook} from '../lib/research/types.ts';
 export const LATENCY_GRID_MS=[0,100,250,500,750,1000] as const;
 const USD=10000;
-export type Row={id:number;at:number;book:Book};
+export type Row={id:number;at:number;book:StreamBook};
 // Receipt-indexed SCENARIO, not proof of historical processing availability.
 // A newer unusable book censors the result; never fall back to an older cheap one.
 export function latest(rows:Row[],venue:string,at:number){
  return rows.filter(r=>r.book.venue===venue&&r.at<=at).sort((a,b)=>b.at-a.at||b.id-a.id)[0]??null;
 }
 function usable(row:Row|null,now:number){
- const b=row?.book as (Book&{valid?:boolean;connection?:string})|undefined;
+ const b=row?.book;
  return !!b&&b.open&&b.valid!==false&&(!b.connection||b.connection==='LIVE')&&now-b.receivedAt<=2000&&b.receivedAt<=now&&b.exchangeAt!==null&&now-b.exchangeAt<=2000&&b.exchangeAt<=now+1000;
 }
 export function entry(q:number){const principal=fractionalCost(q,4300),fees=makerFillFee(q,4300,175),reserve=fractionalCost(q,100);return {principal,fees,reserve,debit:principal+fees+reserve};}
