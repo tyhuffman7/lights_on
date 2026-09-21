@@ -1,3 +1,4 @@
+import {inspectHttp} from './http-confirmation.ts';
 import type {Book,Pair,Side} from '../arb/types.ts';
 import type {StreamBook} from '../research/types.ts';
 import {walk} from '../arb/engine.ts';
@@ -69,17 +70,13 @@ export function quoteCandidate(pair:Pair,a:Book|undefined,b:Book|undefined,aSide
 }
 export type HttpEvidence={url:string;requestAt:number;requestMono:number;responseAt:number;responseMono:number;processedAt:number;processedMono:number;status:number;headers:Record<string,string>;bodySha256:string};
 export function httpConfirmationReasons(e:HttpEvidence){
- const reasons:string[]=[];const h=e.headers,age=h.age===undefined?0:Number(h.age),date=Date.parse(h.date??'');
- if(e.status!==200)reasons.push('HTTP_'+e.status);
- if(e.responseMono-e.requestMono>confirmationPolicy.requestTimeoutMs)reasons.push('CONFIRMATION_RESPONSE_DELAY');
- if(e.processedMono-e.responseMono>confirmationPolicy.maxProcessingDelayMs)reasons.push('CONFIRMATION_PROCESSING_BACKLOG');
- if(Math.abs((e.responseAt-e.requestAt)-(e.responseMono-e.requestMono))>1000)reasons.push('CONFIRMATION_CLOCK_DISCONTINUITY');
- if(!Number.isFinite(age)||age>0||/hit|stale|updating/i.test(h['cf-cache-status']??'')||/\bhit\b/i.test(h['x-cache']??''))reasons.push('CACHED_RESPONSE');
- // Request no-cache alone is not proof that a proxy fetched a current representation.
- const cf=h['cf-cache-status']?.toUpperCase();
- if(!['DYNAMIC','BYPASS','MISS','EXPIRED','REVALIDATED'].includes(cf??'')&&!/no-store|no-cache|private/i.test(h['cache-control']??''))reasons.push('CACHE_PROVENANCE_UNRESOLVED');
- if(!Number.isFinite(date)||date>e.responseAt+1000||e.responseAt-date>2000)reasons.push('HTTP_DATE_NOT_CURRENT');
- return reasons;
+ // Legacy strict HTTP-only caller. The reusable adapter uses independent requested
+ // WS book proof instead; absent optional HTTP headers remain UNKNOWN, never Age=0.
+ const assessment=inspectHttp(e),reasons=[...assessment.transportReasons];
+ if(assessment.cacheEvidence==='CACHED')reasons.push('CACHED_RESPONSE');
+ if(assessment.cacheEvidence==='UNKNOWN')reasons.push('CACHE_PROVENANCE_UNRESOLVED');
+ if(assessment.dateAt===null)reasons.push('HTTP_DATE_NOT_CURRENT');
+ return [...new Set(reasons)];
 }
 export function confirmationResult(original:ReturnType<typeof quoteCandidate>,latest:ReturnType<typeof quoteCandidate>,reasons:string[],window:{startedAt:number;endedAt:number;kalshiSnapshotMono:number;polyResponseMono:number;nowMono:number}){
  const problems=[...reasons,...latest.pricingReasons];

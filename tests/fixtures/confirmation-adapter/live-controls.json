@@ -1,0 +1,1636 @@
+[
+  {
+    "request": {
+      "venue": "kalshi",
+      "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+      "at": 1790021653840,
+      "mono": 62611.806917,
+      "kind": "get_snapshot",
+      "requestId": "10001",
+      "sid": 1,
+      "beforeSequence": 41
+    },
+    "message": {
+      "type": "orderbook_snapshot",
+      "id": 10001,
+      "sid": 1,
+      "seq": 42,
+      "msg": {
+        "market_ticker": "KXMLBGAME-26SEP211835TORBAL-TOR",
+        "market_id": "5a909a9e-3576-4bb4-8524-b689c32e6d2f",
+        "yes_dollars_fp": [
+          [
+            "0.0100",
+            "955807.00"
+          ],
+          [
+            "0.0200",
+            "6066.10"
+          ],
+          [
+            "0.0300",
+            "344.00"
+          ],
+          [
+            "0.0400",
+            "74393.00"
+          ],
+          [
+            "0.0500",
+            "1711.00"
+          ],
+          [
+            "0.0600",
+            "599.00"
+          ],
+          [
+            "0.0700",
+            "42649.00"
+          ],
+          [
+            "0.0800",
+            "44.00"
+          ],
+          [
+            "0.0900",
+            "568.00"
+          ],
+          [
+            "0.1000",
+            "29645.00"
+          ],
+          [
+            "0.1100",
+            "11.00"
+          ],
+          [
+            "0.1200",
+            "60.00"
+          ],
+          [
+            "0.1300",
+            "22809.00"
+          ],
+          [
+            "0.1400",
+            "9.00"
+          ],
+          [
+            "0.1500",
+            "8.00"
+          ],
+          [
+            "0.1600",
+            "18530.00"
+          ],
+          [
+            "0.1700",
+            "7.00"
+          ],
+          [
+            "0.1800",
+            "37.00"
+          ],
+          [
+            "0.1900",
+            "9082.00"
+          ],
+          [
+            "0.2000",
+            "38.00"
+          ],
+          [
+            "0.2100",
+            "1.00"
+          ],
+          [
+            "0.2200",
+            "5700.00"
+          ],
+          [
+            "0.2400",
+            "4001.00"
+          ],
+          [
+            "0.2500",
+            "8422.00"
+          ],
+          [
+            "0.2600",
+            "1.00"
+          ],
+          [
+            "0.2700",
+            "804.00"
+          ],
+          [
+            "0.2800",
+            "6758.00"
+          ],
+          [
+            "0.2900",
+            "851.00"
+          ],
+          [
+            "0.3000",
+            "5759.00"
+          ],
+          [
+            "0.3100",
+            "659.00"
+          ],
+          [
+            "0.3200",
+            "4713.00"
+          ],
+          [
+            "0.3300",
+            "521.00"
+          ],
+          [
+            "0.3400",
+            "452.00"
+          ],
+          [
+            "0.3500",
+            "400.00"
+          ],
+          [
+            "0.3600",
+            "352.00"
+          ],
+          [
+            "0.3700",
+            "312.00"
+          ],
+          [
+            "0.3800",
+            "277.00"
+          ],
+          [
+            "0.3900",
+            "244.00"
+          ],
+          [
+            "0.4000",
+            "7276.00"
+          ],
+          [
+            "0.4100",
+            "23281.00"
+          ],
+          [
+            "0.4200",
+            "179.00"
+          ],
+          [
+            "0.4300",
+            "391.00"
+          ],
+          [
+            "0.4400",
+            "3162.00"
+          ],
+          [
+            "0.4500",
+            "621.00"
+          ],
+          [
+            "0.4600",
+            "27722.36"
+          ],
+          [
+            "0.4700",
+            "56129.89"
+          ],
+          [
+            "0.4800",
+            "93730.68"
+          ],
+          [
+            "0.4900",
+            "66589.47"
+          ],
+          [
+            "0.5000",
+            "144631.54"
+          ]
+        ],
+        "no_dollars_fp": [
+          [
+            "0.0100",
+            "968725.47"
+          ],
+          [
+            "0.0200",
+            "6900.82"
+          ],
+          [
+            "0.0300",
+            "924.00"
+          ],
+          [
+            "0.0400",
+            "72116.82"
+          ],
+          [
+            "0.0500",
+            "465.31"
+          ],
+          [
+            "0.0600",
+            "521.82"
+          ],
+          [
+            "0.0700",
+            "40979.42"
+          ],
+          [
+            "0.0800",
+            "258.02"
+          ],
+          [
+            "0.0900",
+            "22.96"
+          ],
+          [
+            "0.1000",
+            "28755.64"
+          ],
+          [
+            "0.1100",
+            "12.19"
+          ],
+          [
+            "0.1200",
+            "1.00"
+          ],
+          [
+            "0.1300",
+            "22187.83"
+          ],
+          [
+            "0.1400",
+            "11.82"
+          ],
+          [
+            "0.1500",
+            "140.31"
+          ],
+          [
+            "0.1600",
+            "17928.92"
+          ],
+          [
+            "0.1700",
+            "159.27"
+          ],
+          [
+            "0.1800",
+            "166.11"
+          ],
+          [
+            "0.1900",
+            "15290.77"
+          ],
+          [
+            "0.2000",
+            "6046.78"
+          ],
+          [
+            "0.2100",
+            "3.85"
+          ],
+          [
+            "0.2200",
+            "5738.92"
+          ],
+          [
+            "0.2300",
+            "119.89"
+          ],
+          [
+            "0.2400",
+            "32.00"
+          ],
+          [
+            "0.2500",
+            "6586.58"
+          ],
+          [
+            "0.2700",
+            "618.00"
+          ],
+          [
+            "0.2800",
+            "10729.96"
+          ],
+          [
+            "0.2900",
+            "852.00"
+          ],
+          [
+            "0.3000",
+            "748.00"
+          ],
+          [
+            "0.3100",
+            "6436.00"
+          ],
+          [
+            "0.3200",
+            "2572.00"
+          ],
+          [
+            "0.3300",
+            "547.00"
+          ],
+          [
+            "0.3400",
+            "452.00"
+          ],
+          [
+            "0.3500",
+            "399.00"
+          ],
+          [
+            "0.3600",
+            "4352.00"
+          ],
+          [
+            "0.3700",
+            "332.27"
+          ],
+          [
+            "0.3800",
+            "278.96"
+          ],
+          [
+            "0.3900",
+            "244.00"
+          ],
+          [
+            "0.4000",
+            "3226.93"
+          ],
+          [
+            "0.4100",
+            "23431.08"
+          ],
+          [
+            "0.4200",
+            "228.00"
+          ],
+          [
+            "0.4300",
+            "158.00"
+          ],
+          [
+            "0.4400",
+            "3135.00"
+          ],
+          [
+            "0.4500",
+            "1299.54"
+          ],
+          [
+            "0.4600",
+            "139448.00"
+          ],
+          [
+            "0.4700",
+            "223321.87"
+          ],
+          [
+            "0.4800",
+            "561538.10"
+          ],
+          [
+            "0.4900",
+            "1000317.43"
+          ]
+        ]
+      }
+    },
+    "timing": {
+      "messageType": "orderbook_snapshot",
+      "requestId": null,
+      "sid": 1,
+      "transactTime": null,
+      "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+      "sequence": 42,
+      "exchangeAt": null,
+      "receiptAt": 1790021653966,
+      "receiptMono": 62738.352875,
+      "processingAt": 1790021653966,
+      "processingMono": 62738.697584,
+      "lastMarketChangeAt": 1790021646142,
+      "lastContentChangeReceiptAt": 1790021646107,
+      "lastConfirmedSnapshotAt": 1790021653966,
+      "contentSha256": "444c401bace320df17289bc40f71dacf0a6b6d74825571d57184f8759fefadeb",
+      "topYesBid": {
+        "price": 5000,
+        "quantity": 144631.54
+      },
+      "topNoBid": {
+        "price": 4900,
+        "quantity": 1000317.43
+      },
+      "open": true,
+      "valid": true,
+      "faults": []
+    },
+    "http": {
+      "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP211835TORBAL-TOR",
+      "requestAt": 1790021653967,
+      "requestMono": 62739.709542,
+      "responseAt": 1790021654270,
+      "responseMono": 63042.177709,
+      "processedAt": 1790021654270,
+      "processedMono": 63042.264375,
+      "status": 200,
+      "headers": {
+        "date": "Mon, 21 Sep 2026 20:14:14 GMT"
+      },
+      "bodySha256": "b1751b3500ad76b987ecfe12f386aca40976e2b9bdd2f4ccabc69986d800711c"
+    },
+    "restBody": {
+      "market": {
+        "close_time": "2026-09-24T22:35:00Z",
+        "status": "active",
+        "ticker": "KXMLBGAME-26SEP211835TORBAL-TOR"
+      }
+    }
+  },
+  {
+    "request": {
+      "venue": "kalshi",
+      "marketId": "KXU3-26SEP-T3.7",
+      "at": 1790021656273,
+      "mono": 65045.787792,
+      "kind": "get_snapshot",
+      "requestId": "10002",
+      "sid": 1,
+      "beforeSequence": 46
+    },
+    "message": {
+      "type": "orderbook_snapshot",
+      "id": 10002,
+      "sid": 1,
+      "seq": 47,
+      "msg": {
+        "market_ticker": "KXU3-26SEP-T3.7",
+        "market_id": "45812392-8d24-4f15-a622-0acf40e73208",
+        "yes_dollars_fp": [
+          [
+            "0.0100",
+            "201.00"
+          ],
+          [
+            "0.0200",
+            "5000.00"
+          ],
+          [
+            "0.9500",
+            "200.00"
+          ],
+          [
+            "0.9600",
+            "2200.00"
+          ],
+          [
+            "0.9700",
+            "9968.79"
+          ],
+          [
+            "0.9800",
+            "9938.91"
+          ]
+        ]
+      }
+    },
+    "timing": {
+      "messageType": "orderbook_snapshot",
+      "requestId": null,
+      "sid": 1,
+      "transactTime": null,
+      "marketId": "KXU3-26SEP-T3.7",
+      "sequence": 47,
+      "exchangeAt": null,
+      "receiptAt": 1790021656317,
+      "receiptMono": 65089.314584,
+      "processingAt": 1790021656317,
+      "processingMono": 65089.559042,
+      "lastMarketChangeAt": null,
+      "lastContentChangeReceiptAt": 1790021591824,
+      "lastConfirmedSnapshotAt": 1790021656317,
+      "contentSha256": "499553fa0c8d4e9913e852747100024a485ba478f4cadb64f29c3b607e4258cb",
+      "topYesBid": {
+        "price": 9800,
+        "quantity": 9938.91
+      },
+      "topNoBid": null,
+      "open": true,
+      "valid": true,
+      "faults": []
+    },
+    "http": {
+      "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXU3-26SEP-T3.7",
+      "requestAt": 1790021656318,
+      "requestMono": 65090.174709,
+      "responseAt": 1790021656372,
+      "responseMono": 65144.179084,
+      "processedAt": 1790021656372,
+      "processedMono": 65144.226709,
+      "status": 200,
+      "headers": {
+        "date": "Mon, 21 Sep 2026 20:14:16 GMT"
+      },
+      "bodySha256": "5fd20103803fdea94680e4d612f795e1e9ff8c09cd0014bab31a57e8cbea9cd0"
+    },
+    "restBody": {
+      "market": {
+        "close_time": "2026-10-02T12:29:00Z",
+        "status": "active",
+        "ticker": "KXU3-26SEP-T3.7"
+      }
+    }
+  },
+  {
+    "request": {
+      "venue": "poly",
+      "marketId": "aec-mlb-tor-bal-2026-09-21",
+      "at": 1790021658522,
+      "mono": 67293.845167,
+      "kind": "new_subscription",
+      "requestId": "25f2b776-ca9b-4cd9-87a2-58d4c0c0a529:books-1"
+    },
+    "message": {
+      "requestId": "25f2b776-ca9b-4cd9-87a2-58d4c0c0a529:books-1",
+      "subscriptionType": "SUBSCRIPTION_TYPE_MARKET_DATA",
+      "marketData": {
+        "marketSlug": "aec-mlb-tor-bal-2026-09-21",
+        "bids": [
+          {
+            "px": {
+              "value": "0.4950",
+              "currency": "USD"
+            },
+            "qty": "1398809.7800"
+          },
+          {
+            "px": {
+              "value": "0.4900",
+              "currency": "USD"
+            },
+            "qty": "329723.7400"
+          },
+          {
+            "px": {
+              "value": "0.4850",
+              "currency": "USD"
+            },
+            "qty": "114275.5100"
+          },
+          {
+            "px": {
+              "value": "0.4800",
+              "currency": "USD"
+            },
+            "qty": "56878.6600"
+          },
+          {
+            "px": {
+              "value": "0.4750",
+              "currency": "USD"
+            },
+            "qty": "3258.2000"
+          },
+          {
+            "px": {
+              "value": "0.4700",
+              "currency": "USD"
+            },
+            "qty": "3700.1600"
+          },
+          {
+            "px": {
+              "value": "0.4650",
+              "currency": "USD"
+            },
+            "qty": "4315.8600"
+          },
+          {
+            "px": {
+              "value": "0.4600",
+              "currency": "USD"
+            },
+            "qty": "6072.0100"
+          },
+          {
+            "px": {
+              "value": "0.4550",
+              "currency": "USD"
+            },
+            "qty": "7241.0400"
+          },
+          {
+            "px": {
+              "value": "0.4500",
+              "currency": "USD"
+            },
+            "qty": "10966.6500"
+          },
+          {
+            "px": {
+              "value": "0.4450",
+              "currency": "USD"
+            },
+            "qty": "10905.0000"
+          },
+          {
+            "px": {
+              "value": "0.4400",
+              "currency": "USD"
+            },
+            "qty": "13756.4900"
+          },
+          {
+            "px": {
+              "value": "0.4350",
+              "currency": "USD"
+            },
+            "qty": "16667.2800"
+          },
+          {
+            "px": {
+              "value": "0.4300",
+              "currency": "USD"
+            },
+            "qty": "15150.7800"
+          },
+          {
+            "px": {
+              "value": "0.4250",
+              "currency": "USD"
+            },
+            "qty": "125.0000"
+          },
+          {
+            "px": {
+              "value": "0.4150",
+              "currency": "USD"
+            },
+            "qty": "361.4400"
+          },
+          {
+            "px": {
+              "value": "0.4000",
+              "currency": "USD"
+            },
+            "qty": "20.0000"
+          },
+          {
+            "px": {
+              "value": "0.3600",
+              "currency": "USD"
+            },
+            "qty": "50.0000"
+          },
+          {
+            "px": {
+              "value": "0.3450",
+              "currency": "USD"
+            },
+            "qty": "43750.0000"
+          },
+          {
+            "px": {
+              "value": "0.3400",
+              "currency": "USD"
+            },
+            "qty": "250.0000"
+          },
+          {
+            "px": {
+              "value": "0.3000",
+              "currency": "USD"
+            },
+            "qty": "19.1400"
+          },
+          {
+            "px": {
+              "value": "0.2350",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.1350",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.0600",
+              "currency": "USD"
+            },
+            "qty": "30.0000"
+          },
+          {
+            "px": {
+              "value": "0.0500",
+              "currency": "USD"
+            },
+            "qty": "130.0000"
+          },
+          {
+            "px": {
+              "value": "0.0450",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.0400",
+              "currency": "USD"
+            },
+            "qty": "250.0000"
+          },
+          {
+            "px": {
+              "value": "0.0300",
+              "currency": "USD"
+            },
+            "qty": "560.0000"
+          },
+          {
+            "px": {
+              "value": "0.0200",
+              "currency": "USD"
+            },
+            "qty": "6203.0000"
+          },
+          {
+            "px": {
+              "value": "0.0100",
+              "currency": "USD"
+            },
+            "qty": "7433.0000"
+          },
+          {
+            "px": {
+              "value": "0.0050",
+              "currency": "USD"
+            },
+            "qty": "22967.0000"
+          }
+        ],
+        "offers": [
+          {
+            "px": {
+              "value": "0.5000",
+              "currency": "USD"
+            },
+            "qty": "423009.8000"
+          },
+          {
+            "px": {
+              "value": "0.5050",
+              "currency": "USD"
+            },
+            "qty": "429736.4600"
+          },
+          {
+            "px": {
+              "value": "0.5100",
+              "currency": "USD"
+            },
+            "qty": "241740.7300"
+          },
+          {
+            "px": {
+              "value": "0.5150",
+              "currency": "USD"
+            },
+            "qty": "62676.6400"
+          },
+          {
+            "px": {
+              "value": "0.5200",
+              "currency": "USD"
+            },
+            "qty": "82216.3200"
+          },
+          {
+            "px": {
+              "value": "0.5250",
+              "currency": "USD"
+            },
+            "qty": "18443.6300"
+          },
+          {
+            "px": {
+              "value": "0.5300",
+              "currency": "USD"
+            },
+            "qty": "62104.5700"
+          },
+          {
+            "px": {
+              "value": "0.5350",
+              "currency": "USD"
+            },
+            "qty": "11276.9300"
+          },
+          {
+            "px": {
+              "value": "0.5400",
+              "currency": "USD"
+            },
+            "qty": "12040.9500"
+          },
+          {
+            "px": {
+              "value": "0.5450",
+              "currency": "USD"
+            },
+            "qty": "13648.4900"
+          },
+          {
+            "px": {
+              "value": "0.5500",
+              "currency": "USD"
+            },
+            "qty": "14878.0800"
+          },
+          {
+            "px": {
+              "value": "0.5600",
+              "currency": "USD"
+            },
+            "qty": "300.0000"
+          },
+          {
+            "px": {
+              "value": "0.5750",
+              "currency": "USD"
+            },
+            "qty": "357.9400"
+          },
+          {
+            "px": {
+              "value": "0.5850",
+              "currency": "USD"
+            },
+            "qty": "121.0000"
+          },
+          {
+            "px": {
+              "value": "0.6000",
+              "currency": "USD"
+            },
+            "qty": "155.0000"
+          },
+          {
+            "px": {
+              "value": "0.7000",
+              "currency": "USD"
+            },
+            "qty": "250.0000"
+          },
+          {
+            "px": {
+              "value": "0.7250",
+              "currency": "USD"
+            },
+            "qty": "1.1500"
+          },
+          {
+            "px": {
+              "value": "0.7400",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.7500",
+              "currency": "USD"
+            },
+            "qty": "29.3200"
+          },
+          {
+            "px": {
+              "value": "0.8400",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.8450",
+              "currency": "USD"
+            },
+            "qty": "10.0000"
+          },
+          {
+            "px": {
+              "value": "0.8500",
+              "currency": "USD"
+            },
+            "qty": "3.8600"
+          },
+          {
+            "px": {
+              "value": "0.9400",
+              "currency": "USD"
+            },
+            "qty": "30.0000"
+          },
+          {
+            "px": {
+              "value": "0.9500",
+              "currency": "USD"
+            },
+            "qty": "131.0000"
+          },
+          {
+            "px": {
+              "value": "0.9600",
+              "currency": "USD"
+            },
+            "qty": "250.0000"
+          },
+          {
+            "px": {
+              "value": "0.9700",
+              "currency": "USD"
+            },
+            "qty": "555.0000"
+          },
+          {
+            "px": {
+              "value": "0.9800",
+              "currency": "USD"
+            },
+            "qty": "4355.4600"
+          },
+          {
+            "px": {
+              "value": "0.9900",
+              "currency": "USD"
+            },
+            "qty": "7633.0000"
+          },
+          {
+            "px": {
+              "value": "0.9950",
+              "currency": "USD"
+            },
+            "qty": "22967.0000"
+          }
+        ],
+        "state": "MARKET_STATE_OPEN",
+        "transactTime": "2026-09-21T20:14:15.060742869Z"
+      }
+    },
+    "timing": {
+      "messageType": "marketData",
+      "requestId": "25f2b776-ca9b-4cd9-87a2-58d4c0c0a529:books-1",
+      "sid": null,
+      "transactTime": "2026-09-21T20:14:15.060742869Z",
+      "marketId": "aec-mlb-tor-bal-2026-09-21",
+      "sequence": null,
+      "exchangeAt": 1790021655060,
+      "receiptAt": 1790021658577,
+      "receiptMono": 67349.724959,
+      "processingAt": 1790021658578,
+      "processingMono": 67350.593209,
+      "lastMarketChangeAt": 1790021655060,
+      "lastContentChangeReceiptAt": 1790021658577,
+      "lastConfirmedSnapshotAt": null,
+      "contentSha256": "c92957f81df7506787c5b9c732f943f65c17fb946293ba7ffd41296f1c7e3539",
+      "topYesBid": {
+        "price": 4950,
+        "quantity": 1398809.78
+      },
+      "topNoBid": {
+        "price": 5000,
+        "quantity": 423009.8
+      },
+      "open": true,
+      "valid": true,
+      "faults": []
+    },
+    "http": {
+      "url": "https://gateway.polymarket.us/v1/markets/aec-mlb-tor-bal-2026-09-21/book",
+      "requestAt": 1790021658588,
+      "requestMono": 67359.96075,
+      "responseAt": 1790021658863,
+      "responseMono": 67635.067542,
+      "processedAt": 1790021658863,
+      "processedMono": 67635.227959,
+      "status": 200,
+      "headers": {
+        "age": "4",
+        "cache-control": "public, max-age=30",
+        "cf-cache-status": "HIT",
+        "date": "Mon, 21 Sep 2026 20:14:18 GMT",
+        "last-modified": "Mon, 21 Sep 2026 20:14:14 GMT"
+      },
+      "bodySha256": "b86119d359853356ae287c6883fed76800a26202c2fe9150114db718d6333e3f"
+    },
+    "restBody": {
+      "marketData": {
+        "marketSlug": "aec-mlb-tor-bal-2026-09-21",
+        "bids": [
+          {
+            "px": {
+              "value": "0.4950",
+              "currency": "USD"
+            },
+            "qty": "1390103.7200"
+          },
+          {
+            "px": {
+              "value": "0.4900",
+              "currency": "USD"
+            },
+            "qty": "330638.7400"
+          },
+          {
+            "px": {
+              "value": "0.4850",
+              "currency": "USD"
+            },
+            "qty": "114275.5100"
+          },
+          {
+            "px": {
+              "value": "0.4800",
+              "currency": "USD"
+            },
+            "qty": "56878.6600"
+          },
+          {
+            "px": {
+              "value": "0.4750",
+              "currency": "USD"
+            },
+            "qty": "3258.2000"
+          },
+          {
+            "px": {
+              "value": "0.4700",
+              "currency": "USD"
+            },
+            "qty": "3700.1600"
+          },
+          {
+            "px": {
+              "value": "0.4650",
+              "currency": "USD"
+            },
+            "qty": "4315.8600"
+          },
+          {
+            "px": {
+              "value": "0.4600",
+              "currency": "USD"
+            },
+            "qty": "6072.0100"
+          },
+          {
+            "px": {
+              "value": "0.4550",
+              "currency": "USD"
+            },
+            "qty": "7241.0400"
+          },
+          {
+            "px": {
+              "value": "0.4500",
+              "currency": "USD"
+            },
+            "qty": "10966.6500"
+          },
+          {
+            "px": {
+              "value": "0.4450",
+              "currency": "USD"
+            },
+            "qty": "10900.0000"
+          },
+          {
+            "px": {
+              "value": "0.4400",
+              "currency": "USD"
+            },
+            "qty": "13756.4900"
+          },
+          {
+            "px": {
+              "value": "0.4350",
+              "currency": "USD"
+            },
+            "qty": "16672.2800"
+          },
+          {
+            "px": {
+              "value": "0.4300",
+              "currency": "USD"
+            },
+            "qty": "15150.7800"
+          },
+          {
+            "px": {
+              "value": "0.4250",
+              "currency": "USD"
+            },
+            "qty": "125.0000"
+          },
+          {
+            "px": {
+              "value": "0.4150",
+              "currency": "USD"
+            },
+            "qty": "361.4400"
+          },
+          {
+            "px": {
+              "value": "0.4000",
+              "currency": "USD"
+            },
+            "qty": "20.0000"
+          },
+          {
+            "px": {
+              "value": "0.3600",
+              "currency": "USD"
+            },
+            "qty": "50.0000"
+          },
+          {
+            "px": {
+              "value": "0.3400",
+              "currency": "USD"
+            },
+            "qty": "250.0000"
+          },
+          {
+            "px": {
+              "value": "0.3000",
+              "currency": "USD"
+            },
+            "qty": "19.1400"
+          },
+          {
+            "px": {
+              "value": "0.2350",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.1350",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.0600",
+              "currency": "USD"
+            },
+            "qty": "30.0000"
+          },
+          {
+            "px": {
+              "value": "0.0500",
+              "currency": "USD"
+            },
+            "qty": "130.0000"
+          },
+          {
+            "px": {
+              "value": "0.0450",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.0400",
+              "currency": "USD"
+            },
+            "qty": "250.0000"
+          },
+          {
+            "px": {
+              "value": "0.0300",
+              "currency": "USD"
+            },
+            "qty": "560.0000"
+          },
+          {
+            "px": {
+              "value": "0.0200",
+              "currency": "USD"
+            },
+            "qty": "6203.0000"
+          },
+          {
+            "px": {
+              "value": "0.0100",
+              "currency": "USD"
+            },
+            "qty": "7433.0000"
+          },
+          {
+            "px": {
+              "value": "0.0050",
+              "currency": "USD"
+            },
+            "qty": "22967.0000"
+          }
+        ],
+        "offers": [
+          {
+            "px": {
+              "value": "0.5000",
+              "currency": "USD"
+            },
+            "qty": "425842.6700"
+          },
+          {
+            "px": {
+              "value": "0.5050",
+              "currency": "USD"
+            },
+            "qty": "431336.4600"
+          },
+          {
+            "px": {
+              "value": "0.5100",
+              "currency": "USD"
+            },
+            "qty": "241740.7300"
+          },
+          {
+            "px": {
+              "value": "0.5150",
+              "currency": "USD"
+            },
+            "qty": "62676.6400"
+          },
+          {
+            "px": {
+              "value": "0.5200",
+              "currency": "USD"
+            },
+            "qty": "82216.3200"
+          },
+          {
+            "px": {
+              "value": "0.5250",
+              "currency": "USD"
+            },
+            "qty": "18443.6300"
+          },
+          {
+            "px": {
+              "value": "0.5300",
+              "currency": "USD"
+            },
+            "qty": "62104.5700"
+          },
+          {
+            "px": {
+              "value": "0.5350",
+              "currency": "USD"
+            },
+            "qty": "11276.9300"
+          },
+          {
+            "px": {
+              "value": "0.5400",
+              "currency": "USD"
+            },
+            "qty": "12040.9500"
+          },
+          {
+            "px": {
+              "value": "0.5450",
+              "currency": "USD"
+            },
+            "qty": "13648.4900"
+          },
+          {
+            "px": {
+              "value": "0.5500",
+              "currency": "USD"
+            },
+            "qty": "14878.0800"
+          },
+          {
+            "px": {
+              "value": "0.5600",
+              "currency": "USD"
+            },
+            "qty": "300.0000"
+          },
+          {
+            "px": {
+              "value": "0.5650",
+              "currency": "USD"
+            },
+            "qty": "5.0000"
+          },
+          {
+            "px": {
+              "value": "0.5750",
+              "currency": "USD"
+            },
+            "qty": "352.9400"
+          },
+          {
+            "px": {
+              "value": "0.5850",
+              "currency": "USD"
+            },
+            "qty": "121.0000"
+          },
+          {
+            "px": {
+              "value": "0.6000",
+              "currency": "USD"
+            },
+            "qty": "155.0000"
+          },
+          {
+            "px": {
+              "value": "0.7000",
+              "currency": "USD"
+            },
+            "qty": "250.0000"
+          },
+          {
+            "px": {
+              "value": "0.7250",
+              "currency": "USD"
+            },
+            "qty": "1.1500"
+          },
+          {
+            "px": {
+              "value": "0.7400",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.7500",
+              "currency": "USD"
+            },
+            "qty": "29.3200"
+          },
+          {
+            "px": {
+              "value": "0.8400",
+              "currency": "USD"
+            },
+            "qty": "1.0000"
+          },
+          {
+            "px": {
+              "value": "0.8450",
+              "currency": "USD"
+            },
+            "qty": "10.0000"
+          },
+          {
+            "px": {
+              "value": "0.8500",
+              "currency": "USD"
+            },
+            "qty": "3.8600"
+          },
+          {
+            "px": {
+              "value": "0.9400",
+              "currency": "USD"
+            },
+            "qty": "30.0000"
+          },
+          {
+            "px": {
+              "value": "0.9500",
+              "currency": "USD"
+            },
+            "qty": "131.0000"
+          },
+          {
+            "px": {
+              "value": "0.9600",
+              "currency": "USD"
+            },
+            "qty": "250.0000"
+          },
+          {
+            "px": {
+              "value": "0.9700",
+              "currency": "USD"
+            },
+            "qty": "555.0000"
+          },
+          {
+            "px": {
+              "value": "0.9800",
+              "currency": "USD"
+            },
+            "qty": "4355.4600"
+          },
+          {
+            "px": {
+              "value": "0.9900",
+              "currency": "USD"
+            },
+            "qty": "7633.0000"
+          },
+          {
+            "px": {
+              "value": "0.9950",
+              "currency": "USD"
+            },
+            "qty": "22967.0000"
+          }
+        ],
+        "state": "MARKET_STATE_OPEN",
+        "transactTime": "2026-09-21T20:11:45.954399367Z"
+      }
+    }
+  },
+  {
+    "request": {
+      "venue": "poly",
+      "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "at": 1790021661008,
+      "mono": 69780.570875,
+      "kind": "new_subscription",
+      "requestId": "a94fde63-a44a-4030-9c74-ec5af00c591f:books-1"
+    },
+    "message": {
+      "requestId": "a94fde63-a44a-4030-9c74-ec5af00c591f:books-1",
+      "subscriptionType": "SUBSCRIPTION_TYPE_MARKET_DATA",
+      "marketData": {
+        "marketSlug": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "bids": [
+          {
+            "px": {
+              "value": "0.9800",
+              "currency": "USD"
+            },
+            "qty": "836.3300"
+          },
+          {
+            "px": {
+              "value": "0.9000",
+              "currency": "USD"
+            },
+            "qty": "2.8000"
+          },
+          {
+            "px": {
+              "value": "0.8900",
+              "currency": "USD"
+            },
+            "qty": "50.0000"
+          },
+          {
+            "px": {
+              "value": "0.0100",
+              "currency": "USD"
+            },
+            "qty": "4621.0000"
+          }
+        ],
+        "offers": [
+          {
+            "px": {
+              "value": "0.9900",
+              "currency": "USD"
+            },
+            "qty": "32673.9700"
+          }
+        ],
+        "state": "MARKET_STATE_OPEN",
+        "transactTime": "2026-09-21T20:13:54.696427112Z"
+      }
+    },
+    "timing": {
+      "messageType": "marketData",
+      "requestId": "a94fde63-a44a-4030-9c74-ec5af00c591f:books-1",
+      "sid": null,
+      "transactTime": "2026-09-21T20:13:54.696427112Z",
+      "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "sequence": null,
+      "exchangeAt": 1790021634696,
+      "receiptAt": 1790021661058,
+      "receiptMono": 69829.83575,
+      "processingAt": 1790021661058,
+      "processingMono": 69830.033792,
+      "lastMarketChangeAt": 1790021634696,
+      "lastContentChangeReceiptAt": 1790021661058,
+      "lastConfirmedSnapshotAt": null,
+      "contentSha256": "28422143ffec236b680b4ab75f340cc5f23ca88668dc2f9563348c5dbef6b720",
+      "topYesBid": {
+        "price": 9800,
+        "quantity": 836.33
+      },
+      "topNoBid": {
+        "price": 100,
+        "quantity": 32673.97
+      },
+      "open": true,
+      "valid": true,
+      "faults": []
+    },
+    "http": {
+      "url": "https://gateway.polymarket.us/v1/markets/urc-usunemp-sa-september-2026-10-02-gt3pt7pct/book",
+      "requestAt": 1790021661061,
+      "requestMono": 69833.084125,
+      "responseAt": 1790021661112,
+      "responseMono": 69884.130792,
+      "processedAt": 1790021661112,
+      "processedMono": 69884.159167,
+      "status": 200,
+      "headers": {
+        "age": "4",
+        "cache-control": "public, max-age=30",
+        "cf-cache-status": "HIT",
+        "date": "Mon, 21 Sep 2026 20:14:21 GMT",
+        "last-modified": "Mon, 21 Sep 2026 20:14:16 GMT"
+      },
+      "bodySha256": "01f51af5dda50b96af055b16e8705f1b77f3205b206980d9927a2def748252e9"
+    },
+    "restBody": {
+      "marketData": {
+        "marketSlug": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "bids": [
+          {
+            "px": {
+              "value": "0.9800",
+              "currency": "USD"
+            },
+            "qty": "1030.9600"
+          },
+          {
+            "px": {
+              "value": "0.9000",
+              "currency": "USD"
+            },
+            "qty": "2.8000"
+          },
+          {
+            "px": {
+              "value": "0.8900",
+              "currency": "USD"
+            },
+            "qty": "50.0000"
+          },
+          {
+            "px": {
+              "value": "0.0200",
+              "currency": "USD"
+            },
+            "qty": "757.0000"
+          },
+          {
+            "px": {
+              "value": "0.0100",
+              "currency": "USD"
+            },
+            "qty": "27500.0000"
+          }
+        ],
+        "offers": [
+          {
+            "px": {
+              "value": "0.9900",
+              "currency": "USD"
+            },
+            "qty": "32673.9700"
+          }
+        ],
+        "state": "MARKET_STATE_OPEN",
+        "transactTime": "2026-09-21T20:09:00.134263749Z"
+      }
+    }
+  }
+]
