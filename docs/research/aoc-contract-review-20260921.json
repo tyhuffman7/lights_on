@@ -1,0 +1,93 @@
+{
+  "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+  "status": "UNRESOLVED",
+  "reviewCompleted": true,
+  "reviewedAt": "2026-09-21T19:07:38.435Z",
+  "marketHashes": {
+    "kalshi": "e06d8bbfc39901f244504263c510f39c00446d11dfe80248a537bbce305f6de6",
+    "poly": "3a0064d81d286f3059a954bf94f3bbe7828c2f7f5e01b8a33b27c1a5c111433a"
+  },
+  "scope": "ONE_CONCRETE_PAIR; NOT_TRADING_APPROVAL; NO_UNIVERSAL_RULE_PROFILE",
+  "conclusion": "Ordinary public formal announcements substantially overlap, but full settlement equivalence is unresolved. Deadline interpretation, issuance window, source precedence and exceptional payouts prevent an equivalent classification.",
+  "clauses": [
+    {
+      "topic": "Candidate and outcome",
+      "status": "ALIGNED",
+      "kalshi": "rules_primary: Alexandria Ocasio-Cortez running for US President in 2028, including party nomination.",
+      "poly": "description paragraph 1: same candidate, office, election and nomination.",
+      "implication": "YES is the announcement on both venues; Kalshi NO plus PM-US YES is the compared complement."
+    },
+    {
+      "topic": "Announcement definition",
+      "status": "CONDITIONAL",
+      "kalshi": "rules_secondary: public formal campaign announcement by the person or official campaign; filing alone and exploratory statements excluded. RUN.pdf p1 Payout Criterion adds after Issuance.",
+      "poly": "description paragraph 2: unambiguous declaration by candidate or authorized representatives; conditional and exploratory statements excluded; filing not required.",
+      "implication": "Authorized representatives versus official campaign is not exactly the same scope; Kalshi issuance was July 7 while PM listed July 2 and describes announcements in 2026. Treatment of an earlier announcement is not proven identical."
+    },
+    {
+      "topic": "Deadline and timezone",
+      "status": "UNRESOLVED",
+      "kalshi": "rules_primary: before Jan 1, 2027. RUN.pdf p1 Payout Criterion does not specify an intraday cutoff or timezone for this date; Expiration time is 10:00 AM ET. Current metadata close_time is 2027-01-01T15:00:00Z, but expected_expiration_time and expiration_time are 2028-01-01T15:00:00Z.",
+      "poly": "description paragraph 1: by December 31, 2026, 11:59 PM ET; gameStartTime is 2027-01-01T04:59:00Z; endDate is 2027-01-14T23:00:00Z.",
+      "implication": "PM deadline is expressly Eastern Time, with last-minute inclusivity unresolved. Kalshi date-only payout cutoff cannot be replaced by its 10 AM expiration clock. Metadata conflicts with generic latest-expiration terms. Administrative dates do not prove cutoff equivalence."
+    },
+    {
+      "topic": "Resolution sources",
+      "status": "UNRESOLVED",
+      "kalshi": "RUN.pdf p1 Source Agency includes the person plus named news agencies. Current series settlement_sources lists 14 news agencies, omitting the person and several agencies in RUN. rules_secondary requires an announcement reported by a Source Agency.",
+      "poly": "description paragraph 1: public announcements and communications from Alexandria Ocasio-Cortez. Paragraph 2 permits authorized representatives.",
+      "implication": "Primary self-announcement overlaps, but hierarchy between generic terms, current series list and inline terms is unresolved; independent venue determinations need not coincide."
+    },
+    {
+      "topic": "Revisions, missing data, review",
+      "status": "CONDITIONAL",
+      "kalshi": "RUN.pdf p1 Underlying excludes post-expiration revisions; p2 Contingencies delegates outcome review and indeterminate-value payouts to Rulebook 6.3(d)/(b).",
+      "poly": "Exchange Rulebook September 14, 2026 rules 10.3(b), 10.4: expiry can be changed for delayed data/cancellation; discretionary outcome review and obvious-error reversal.",
+      "implication": "No common finality deadline or identical missing-data payout proved."
+    },
+    {
+      "topic": "Death/incapacity exception",
+      "status": "UNRESOLVED",
+      "kalshi": "RUN.pdf contains no matching natural-person price-settlement clause; its general contingency cross-reference remains applicable.",
+      "poly": "Exchange Rulebook 10.5(a)-(f), printed pp80-81: disabling death/incapacity may settle at a pre-event traded price, with alternative timing or outcome review.",
+      "implication": "No proof that Kalshi NO and PM YES still pay one dollar in this exceptional state. Kalshi incorporated rulebook exception text was not fully reconciled; do not infer its treatment from silence."
+    }
+  ],
+  "missingEvidence": [
+    "Kalshi binding interpretation of date-only cutoff and conflicting expiration metadata",
+    "Precedence of Kalshi inline/series/generic source-agency terms",
+    "Equivalent issuance-window and authorized-representative interpretations",
+    "Reconciled Kalshi rulebook exceptional-payout treatment"
+  ],
+  "sources": [
+    {
+      "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXAOCRUN-28-27JAN01",
+      "retrievedAt": 1790017099991
+    },
+    {
+      "url": "https://external-api.kalshi.com/trade-api/v2/series/KXAOCRUN",
+      "retrievedAt": 1790017100243
+    },
+    {
+      "url": "https://gateway.polymarket.us/v1/market/slug/cranc-uspres28-12-31-2026-aleoca",
+      "retrievedAt": 1790017100453
+    },
+    {
+      "url": "https://assets.kalshi.com/contract_terms/RUN.pdf",
+      "sha256": "5c6d4363d0c85fa458cd21f41af8eff86b136e98ed375cb6b929889dd4dab95b",
+      "locators": [
+        "p1 Underlying, Source Agency, Payout Criterion, Expiration Date/time",
+        "p2 Contingencies"
+      ]
+    },
+    {
+      "url": "https://polymarketexchange.com/files/legal/latest/rulebook",
+      "version": "September 14, 2026",
+      "locators": [
+        "10.3(b)",
+        "10.4",
+        "10.5; printed pp80–81"
+      ]
+    }
+  ]
+}

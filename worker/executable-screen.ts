@@ -1,3 +1,4 @@
+import {sourceManifest} from './screen-manifest.ts';
 import {appendFileSync,existsSync,mkdirSync,readFileSync,writeFileSync,renameSync,readdirSync} from 'node:fs';
 import {resolve,relative} from 'node:path';
 import {createHash} from 'node:crypto';
@@ -10,13 +11,7 @@ import {screenPolicy,selectRoutes,screenPair,review,category,labels} from '../li
 import type {Pair,Venue} from '../lib/arb/types.ts';
 const digest=(data:string|Buffer)=>createHash('sha256').update(data).digest('hex');
 const save=(dir:string,name:string,value:unknown)=>{writeFileSync(resolve(dir,name+'.tmp'),JSON.stringify(value,null,2)+'\n');renameSync(resolve(dir,name+'.tmp'),resolve(dir,name));};
-export function sourceManifest(root:string){
- const result:Record<string,string>={};
- const visit=(folder:string)=>{for(const e of readdirSync(folder,{withFileTypes:true})){const p=resolve(folder,e.name);if(e.isDirectory())visit(p);else if(/\.(ts|mjs)$/.test(p))result[relative(root,p)]=digest(readFileSync(p));}};
- for(const d of ['lib','worker'])visit(resolve(root,d));
- for(const p of ['scripts/screen-supervisor.mjs','scripts/executable-screen-launch.mjs'])result[p]=digest(readFileSync(resolve(root,p)));
- return result;
-}
+export {sourceManifest} from './screen-manifest.ts';
 export async function prepare(dir:string,root:string){
  mkdirSync(dir,{recursive:true});
  if(existsSync(resolve(dir,'frozen.json')))throw Error('Frozen screen already exists; use a new directory only with a newly authorized checkpoint');
@@ -103,8 +98,10 @@ export async function observe(dir:string,root:string){
  console.log(JSON.stringify({mode:'live-data',orderDisabled:true,startedAt,routes:frozen.selection.length}));
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
- const [command,path,envFile]=process.argv.slice(2);if(!path||!['prepare','observe'].includes(command))throw Error('Usage: executable-screen.ts prepare|observe OUTPUT_DIRECTORY [ENV_FILE]');
- if(envFile)process.loadEnvFile(envFile);
+ const [command,path,envFile]=process.argv.slice(2);if(!path||!['prepare','observe','confirmation-prepare','confirmation-observe'].includes(command))throw Error('Usage: executable-screen.ts prepare|observe OUTPUT_DIRECTORY [ENV_FILE]');
+ if(envFile&&command!=='confirmation-prepare')process.loadEnvFile(envFile);
  const root=resolve(new URL('..',import.meta.url).pathname);
- if(command==='prepare')await prepare(resolve(path),root);else await observe(resolve(path),root);
+ if(command==='confirmation-prepare'){const {prepareConfirmation}=await import('./candidate-confirmation.ts');await prepareConfirmation(resolve(path),resolve(envFile!),root);}
+ else if(command==='confirmation-observe'){const {runConfirmation}=await import('./candidate-confirmation.ts');await runConfirmation(resolve(path),root);}
+ else if(command==='prepare')await prepare(resolve(path),root);else await observe(resolve(path),root);
 }
