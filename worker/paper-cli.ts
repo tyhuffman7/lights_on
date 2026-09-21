@@ -64,6 +64,7 @@ if(command==='status'){
   bot=command==='maker-run'?new MakerRunner(observer,store,()=>clock,()=>fees,true):attachPaperBot(observer,store,'live-data');
   refreshRules();await ruleTask;timers.push(setInterval(refreshRules,60000));if(!stopping)observer.resume();
   const active=bot;
+  if(active instanceof MakerRunner&&active.document.state.settings.makerRecovery)timers.push(setInterval(()=>{if(!stopping&&active.checkpointComplete()){console.log(JSON.stringify({message:'PAPER_RECOVERY_CHECKPOINT_COMPLETE',checkpoint:active.document.makerRecoveryCheckpoint}));requestStop();}},100));
   const coverage=()=>({conditionalPaperApprovals:observer!.registry.list().filter(m=>m.active&&validPaperApproval(active.document.approvals?.[m.id],m.pair)).length,approvedActiveMappings:observer!.registry.list().filter(isVerified).length,
    selectedPairs:observer!.capacity?.selectedIds.length??0,
    excludedByPaperHorizon:observer!.capacity?.excludedByPaperHorizon??0,
