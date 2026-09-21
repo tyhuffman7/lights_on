@@ -1,0 +1,920 @@
+{
+  "scope": "FOUR_MARKET_ADAPTER_CONTROLS_NO_ECONOMICS",
+  "startedAt": 1790021591520,
+  "endedAt": 1790021661113,
+  "plan": {
+    "version": 1,
+    "maxAttempts": 20,
+    "plannedAttempts": 12,
+    "warmupMs": 60000,
+    "spacingMs": 2000,
+    "hardDeadlineMs": 120000,
+    "ordersEnabled": false,
+    "markets": [
+      {
+        "venue": "kalshi",
+        "role": "active",
+        "id": "KXMLBGAME-26SEP211835TORBAL-TOR"
+      },
+      {
+        "venue": "kalshi",
+        "role": "quiet",
+        "id": "KXU3-26SEP-T3.7"
+      },
+      {
+        "venue": "poly",
+        "role": "active",
+        "id": "aec-mlb-tor-bal-2026-09-21"
+      },
+      {
+        "venue": "poly",
+        "role": "quiet",
+        "id": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct"
+      }
+    ]
+  },
+  "source": {
+    "lib/screen/confirmation.ts": "f5c67722c928a6e170d785bf0d8e13b5abacd1c6685d71c9174e79184ea865c9",
+    "lib/screen/book-confirmation.ts": "4f6a69c6cf4af9cbc1eeff712d019be3c8b5c15c18025d6674a84e52edbd2393",
+    "lib/screen/http-confirmation.ts": "c85069123b498369beae8f98bdc5efad65782f1a1a91ac98a6e2e27cd6e7576b",
+    "worker/book-confirmation-adapter.ts": "eb20181f3a56539ae4105b060468b6d2a16a94f60af3bd90606724781ef2b18e",
+    "worker/confirmation-controls.ts": "3d753c5a0d1ce429478a26c90e6b49ef206418544ba71de1e778ee2c2ce33438",
+    "worker/streams.ts": "9049156cbc16b15f23becd4634b57a48888c329ccc2f23b6ed27794fd6e3cded",
+    "lib/research/books.ts": "d6b434257dd64f775fbbf7f0112a9eef8afa5727f3be7b1f39569b2bd526a84e"
+  },
+  "attempts": [
+    {
+      "number": 1,
+      "venue": "kalshi",
+      "id": "KXMLBGAME-26SEP211835TORBAL-TOR",
+      "method": "INITIAL_STREAM_SUBSCRIPTION",
+      "at": 1790021591524
+    },
+    {
+      "number": 2,
+      "venue": "kalshi",
+      "id": "KXU3-26SEP-T3.7",
+      "method": "INITIAL_STREAM_SUBSCRIPTION",
+      "at": 1790021591524
+    },
+    {
+      "number": 3,
+      "venue": "poly",
+      "id": "aec-mlb-tor-bal-2026-09-21",
+      "method": "INITIAL_STREAM_SUBSCRIPTION",
+      "at": 1790021591524
+    },
+    {
+      "number": 4,
+      "venue": "poly",
+      "id": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "method": "INITIAL_STREAM_SUBSCRIPTION",
+      "at": 1790021591524
+    },
+    {
+      "number": 5,
+      "venue": "kalshi",
+      "id": "KXMLBGAME-26SEP211835TORBAL-TOR",
+      "method": "REQUESTED_WS_SNAPSHOT",
+      "at": 1790021653839
+    },
+    {
+      "number": 6,
+      "venue": "kalshi",
+      "id": "KXMLBGAME-26SEP211835TORBAL-TOR",
+      "method": "PUBLIC_REST_MARKET_STATUS",
+      "at": 1790021653967
+    },
+    {
+      "number": 7,
+      "venue": "kalshi",
+      "id": "KXU3-26SEP-T3.7",
+      "method": "REQUESTED_WS_SNAPSHOT",
+      "at": 1790021656272
+    },
+    {
+      "number": 8,
+      "venue": "kalshi",
+      "id": "KXU3-26SEP-T3.7",
+      "method": "PUBLIC_REST_MARKET_STATUS",
+      "at": 1790021656318
+    },
+    {
+      "number": 9,
+      "venue": "poly",
+      "id": "aec-mlb-tor-bal-2026-09-21",
+      "method": "NEW_CORRELATED_WS_SUBSCRIPTION",
+      "at": 1790021658374
+    },
+    {
+      "number": 10,
+      "venue": "poly",
+      "id": "aec-mlb-tor-bal-2026-09-21",
+      "method": "PUBLIC_REST_BOOK_COMPARISON",
+      "at": 1790021658587
+    },
+    {
+      "number": 11,
+      "venue": "poly",
+      "id": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "method": "NEW_CORRELATED_WS_SUBSCRIPTION",
+      "at": 1790021660866
+    },
+    {
+      "number": 12,
+      "venue": "poly",
+      "id": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "method": "PUBLIC_REST_BOOK_COMPARISON",
+      "at": 1790021661061
+    }
+  ],
+  "attemptCount": 12,
+  "results": [
+    {
+      "venue": "kalshi",
+      "role": "active",
+      "id": "KXMLBGAME-26SEP211835TORBAL-TOR",
+      "request": {
+        "venue": "kalshi",
+        "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+        "at": 1790021653840,
+        "mono": 62611.806917,
+        "kind": "get_snapshot",
+        "requestId": "10001",
+        "sid": 1,
+        "beforeSequence": 41
+      },
+      "bookConfirmed": true,
+      "reasons": [],
+      "proof": "REQUEST_BOUND_WS_BOOK",
+      "response": {
+        "messageType": "orderbook_snapshot",
+        "requestId": null,
+        "sid": 1,
+        "transactTime": null,
+        "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+        "sequence": 42,
+        "exchangeAt": null,
+        "receiptAt": 1790021653966,
+        "receiptMono": 62738.352875,
+        "processingAt": 1790021653966,
+        "processingMono": 62738.697584,
+        "lastMarketChangeAt": 1790021646142,
+        "lastContentChangeReceiptAt": 1790021646107,
+        "lastConfirmedSnapshotAt": 1790021653966,
+        "contentSha256": "444c401bace320df17289bc40f71dacf0a6b6d74825571d57184f8759fefadeb",
+        "topYesBid": {
+          "price": 5000,
+          "quantity": 144631.54
+        },
+        "topNoBid": {
+          "price": 4900,
+          "quantity": 1000317.43
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "selected": {
+        "messageType": "orderbook_snapshot",
+        "requestId": null,
+        "sid": 1,
+        "transactTime": null,
+        "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+        "sequence": 42,
+        "exchangeAt": null,
+        "receiptAt": 1790021653966,
+        "receiptMono": 62738.352875,
+        "processingAt": 1790021653966,
+        "processingMono": 62738.697584,
+        "lastMarketChangeAt": 1790021646142,
+        "lastContentChangeReceiptAt": 1790021646107,
+        "lastConfirmedSnapshotAt": 1790021653966,
+        "contentSha256": "444c401bace320df17289bc40f71dacf0a6b6d74825571d57184f8759fefadeb",
+        "topYesBid": {
+          "price": 5000,
+          "quantity": 144631.54
+        },
+        "topNoBid": {
+          "price": 4900,
+          "quantity": 1000317.43
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "confirmedAt": 1790021653966,
+      "confirmedMono": 62738.352875,
+      "before": {
+        "messageType": "orderbook_delta",
+        "requestId": null,
+        "sid": 1,
+        "transactTime": null,
+        "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+        "sequence": 41,
+        "exchangeAt": 1790021646142,
+        "receiptAt": 1790021646107,
+        "receiptMono": 54879.619167,
+        "processingAt": 1790021646108,
+        "processingMono": 54880.524875,
+        "lastMarketChangeAt": 1790021646142,
+        "lastContentChangeReceiptAt": 1790021646107,
+        "lastConfirmedSnapshotAt": 1790021591824,
+        "contentSha256": "444c401bace320df17289bc40f71dacf0a6b6d74825571d57184f8759fefadeb",
+        "topYesBid": {
+          "price": 5000,
+          "quantity": 144631.54
+        },
+        "topNoBid": {
+          "price": 4900,
+          "quantity": 1000317.43
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "unchanged": true,
+      "health": {
+        "connected": true,
+        "backlog": 0,
+        "clockOkay": true
+      },
+      "marketState": "NOT_PRESENT_IN_KALSHI_BOOK",
+      "activity": {
+        "venue": "kalshi",
+        "role": "active",
+        "id": "KXMLBGAME-26SEP211835TORBAL-TOR",
+        "messages": 40,
+        "depthChanges": 21,
+        "baseline": {
+          "messageType": "orderbook_delta",
+          "requestId": null,
+          "sid": 1,
+          "transactTime": null,
+          "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+          "sequence": 41,
+          "exchangeAt": 1790021646142,
+          "receiptAt": 1790021646107,
+          "receiptMono": 54879.619167,
+          "processingAt": 1790021646108,
+          "processingMono": 54880.524875,
+          "lastMarketChangeAt": 1790021646142,
+          "lastContentChangeReceiptAt": 1790021646107,
+          "lastConfirmedSnapshotAt": 1790021591824,
+          "contentSha256": "444c401bace320df17289bc40f71dacf0a6b6d74825571d57184f8759fefadeb",
+          "topYesBid": {
+            "price": 5000,
+            "quantity": 144631.54
+          },
+          "topNoBid": {
+            "price": 4900,
+            "quantity": 1000317.43
+          },
+          "open": true,
+          "valid": true,
+          "faults": []
+        }
+      },
+      "tradingAuthorized": false,
+      "fillClaim": false,
+      "http": {
+        "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP211835TORBAL-TOR",
+        "requestAt": 1790021653967,
+        "requestMono": 62739.709542,
+        "responseAt": 1790021654270,
+        "responseMono": 63042.177709,
+        "processedAt": 1790021654270,
+        "processedMono": 63042.264375,
+        "status": 200,
+        "headers": {
+          "date": "Mon, 21 Sep 2026 20:14:14 GMT"
+        },
+        "bodySha256": "b1751b3500ad76b987ecfe12f386aca40976e2b9bdd2f4ccabc69986d800711c"
+      },
+      "statusAssessment": {
+        "confirmedOpen": false,
+        "reportedStatus": "active",
+        "closeTime": "2026-09-24T22:35:00Z",
+        "reasons": [
+          "MARKET_STATUS_CURRENTNESS_UNPROVEN"
+        ],
+        "http": {
+          "transportReasons": [],
+          "ageSeconds": null,
+          "dateAt": 1790021654000,
+          "cacheEvidence": "UNKNOWN",
+          "missingOptionalHeaders": [
+            "age",
+            "cache-control",
+            "cf-cache-status",
+            "x-cache",
+            "etag",
+            "last-modified",
+            "via"
+          ],
+          "bookCurrentness": "UNPROVEN_BY_HTTP_ALONE"
+        }
+      }
+    },
+    {
+      "venue": "kalshi",
+      "role": "quiet",
+      "id": "KXU3-26SEP-T3.7",
+      "request": {
+        "venue": "kalshi",
+        "marketId": "KXU3-26SEP-T3.7",
+        "at": 1790021656273,
+        "mono": 65045.787792,
+        "kind": "get_snapshot",
+        "requestId": "10002",
+        "sid": 1,
+        "beforeSequence": 46
+      },
+      "bookConfirmed": true,
+      "reasons": [],
+      "proof": "REQUEST_BOUND_WS_BOOK",
+      "response": {
+        "messageType": "orderbook_snapshot",
+        "requestId": null,
+        "sid": 1,
+        "transactTime": null,
+        "marketId": "KXU3-26SEP-T3.7",
+        "sequence": 47,
+        "exchangeAt": null,
+        "receiptAt": 1790021656317,
+        "receiptMono": 65089.314584,
+        "processingAt": 1790021656317,
+        "processingMono": 65089.559042,
+        "lastMarketChangeAt": null,
+        "lastContentChangeReceiptAt": 1790021591824,
+        "lastConfirmedSnapshotAt": 1790021656317,
+        "contentSha256": "499553fa0c8d4e9913e852747100024a485ba478f4cadb64f29c3b607e4258cb",
+        "topYesBid": {
+          "price": 9800,
+          "quantity": 9938.91
+        },
+        "topNoBid": null,
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "selected": {
+        "messageType": "orderbook_snapshot",
+        "requestId": null,
+        "sid": 1,
+        "transactTime": null,
+        "marketId": "KXU3-26SEP-T3.7",
+        "sequence": 47,
+        "exchangeAt": null,
+        "receiptAt": 1790021656317,
+        "receiptMono": 65089.314584,
+        "processingAt": 1790021656317,
+        "processingMono": 65089.559042,
+        "lastMarketChangeAt": null,
+        "lastContentChangeReceiptAt": 1790021591824,
+        "lastConfirmedSnapshotAt": 1790021656317,
+        "contentSha256": "499553fa0c8d4e9913e852747100024a485ba478f4cadb64f29c3b607e4258cb",
+        "topYesBid": {
+          "price": 9800,
+          "quantity": 9938.91
+        },
+        "topNoBid": null,
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "confirmedAt": 1790021656317,
+      "confirmedMono": 65089.314584,
+      "before": {
+        "messageType": "orderbook_snapshot",
+        "requestId": null,
+        "sid": 1,
+        "transactTime": null,
+        "marketId": "KXU3-26SEP-T3.7",
+        "sequence": 2,
+        "exchangeAt": null,
+        "receiptAt": 1790021591824,
+        "receiptMono": 596.1035,
+        "processingAt": 1790021591825,
+        "processingMono": 597.971167,
+        "lastMarketChangeAt": null,
+        "lastContentChangeReceiptAt": 1790021591824,
+        "lastConfirmedSnapshotAt": 1790021591824,
+        "contentSha256": "499553fa0c8d4e9913e852747100024a485ba478f4cadb64f29c3b607e4258cb",
+        "topYesBid": {
+          "price": 9800,
+          "quantity": 9938.91
+        },
+        "topNoBid": null,
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "unchanged": true,
+      "health": {
+        "connected": true,
+        "backlog": 0,
+        "clockOkay": true
+      },
+      "marketState": "NOT_PRESENT_IN_KALSHI_BOOK",
+      "activity": {
+        "venue": "kalshi",
+        "role": "quiet",
+        "id": "KXU3-26SEP-T3.7",
+        "messages": 1,
+        "depthChanges": 0,
+        "baseline": {
+          "messageType": "orderbook_snapshot",
+          "requestId": null,
+          "sid": 1,
+          "transactTime": null,
+          "marketId": "KXU3-26SEP-T3.7",
+          "sequence": 2,
+          "exchangeAt": null,
+          "receiptAt": 1790021591824,
+          "receiptMono": 596.1035,
+          "processingAt": 1790021591825,
+          "processingMono": 597.971167,
+          "lastMarketChangeAt": null,
+          "lastContentChangeReceiptAt": 1790021591824,
+          "lastConfirmedSnapshotAt": 1790021591824,
+          "contentSha256": "499553fa0c8d4e9913e852747100024a485ba478f4cadb64f29c3b607e4258cb",
+          "topYesBid": {
+            "price": 9800,
+            "quantity": 9938.91
+          },
+          "topNoBid": null,
+          "open": true,
+          "valid": true,
+          "faults": []
+        }
+      },
+      "tradingAuthorized": false,
+      "fillClaim": false,
+      "http": {
+        "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXU3-26SEP-T3.7",
+        "requestAt": 1790021656318,
+        "requestMono": 65090.174709,
+        "responseAt": 1790021656372,
+        "responseMono": 65144.179084,
+        "processedAt": 1790021656372,
+        "processedMono": 65144.226709,
+        "status": 200,
+        "headers": {
+          "date": "Mon, 21 Sep 2026 20:14:16 GMT"
+        },
+        "bodySha256": "5fd20103803fdea94680e4d612f795e1e9ff8c09cd0014bab31a57e8cbea9cd0"
+      },
+      "statusAssessment": {
+        "confirmedOpen": false,
+        "reportedStatus": "active",
+        "closeTime": "2026-10-02T12:29:00Z",
+        "reasons": [
+          "MARKET_STATUS_CURRENTNESS_UNPROVEN"
+        ],
+        "http": {
+          "transportReasons": [],
+          "ageSeconds": null,
+          "dateAt": 1790021656000,
+          "cacheEvidence": "UNKNOWN",
+          "missingOptionalHeaders": [
+            "age",
+            "cache-control",
+            "cf-cache-status",
+            "x-cache",
+            "etag",
+            "last-modified",
+            "via"
+          ],
+          "bookCurrentness": "UNPROVEN_BY_HTTP_ALONE"
+        }
+      }
+    },
+    {
+      "venue": "poly",
+      "role": "active",
+      "id": "aec-mlb-tor-bal-2026-09-21",
+      "request": {
+        "venue": "poly",
+        "marketId": "aec-mlb-tor-bal-2026-09-21",
+        "at": 1790021658522,
+        "mono": 67293.845167,
+        "kind": "new_subscription",
+        "requestId": "25f2b776-ca9b-4cd9-87a2-58d4c0c0a529:books-1"
+      },
+      "bookConfirmed": true,
+      "reasons": [],
+      "proof": "REQUEST_BOUND_WS_BOOK",
+      "response": {
+        "messageType": "marketData",
+        "requestId": "25f2b776-ca9b-4cd9-87a2-58d4c0c0a529:books-1",
+        "sid": null,
+        "transactTime": "2026-09-21T20:14:15.060742869Z",
+        "marketId": "aec-mlb-tor-bal-2026-09-21",
+        "sequence": null,
+        "exchangeAt": 1790021655060,
+        "receiptAt": 1790021658577,
+        "receiptMono": 67349.724959,
+        "processingAt": 1790021658578,
+        "processingMono": 67350.593209,
+        "lastMarketChangeAt": 1790021655060,
+        "lastContentChangeReceiptAt": 1790021658577,
+        "lastConfirmedSnapshotAt": null,
+        "contentSha256": "c92957f81df7506787c5b9c732f943f65c17fb946293ba7ffd41296f1c7e3539",
+        "topYesBid": {
+          "price": 4950,
+          "quantity": 1398809.78
+        },
+        "topNoBid": {
+          "price": 5000,
+          "quantity": 423009.8
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "selected": {
+        "messageType": "marketData",
+        "requestId": "25f2b776-ca9b-4cd9-87a2-58d4c0c0a529:books-1",
+        "sid": null,
+        "transactTime": "2026-09-21T20:14:15.060742869Z",
+        "marketId": "aec-mlb-tor-bal-2026-09-21",
+        "sequence": null,
+        "exchangeAt": 1790021655060,
+        "receiptAt": 1790021658577,
+        "receiptMono": 67349.724959,
+        "processingAt": 1790021658578,
+        "processingMono": 67350.593209,
+        "lastMarketChangeAt": 1790021655060,
+        "lastContentChangeReceiptAt": 1790021658577,
+        "lastConfirmedSnapshotAt": null,
+        "contentSha256": "c92957f81df7506787c5b9c732f943f65c17fb946293ba7ffd41296f1c7e3539",
+        "topYesBid": {
+          "price": 4950,
+          "quantity": 1398809.78
+        },
+        "topNoBid": {
+          "price": 5000,
+          "quantity": 423009.8
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "confirmedAt": 1790021658577,
+      "confirmedMono": 67349.724959,
+      "before": {
+        "messageType": "marketData",
+        "requestId": "37460aca-0e23-45f0-a1c2-3117264042b9:books-1",
+        "sid": null,
+        "transactTime": "2026-09-21T20:14:15.060742869Z",
+        "marketId": "aec-mlb-tor-bal-2026-09-21",
+        "sequence": null,
+        "exchangeAt": 1790021655060,
+        "receiptAt": 1790021655085,
+        "receiptMono": 63856.851334,
+        "processingAt": 1790021655085,
+        "processingMono": 63857.359209,
+        "lastMarketChangeAt": 1790021655060,
+        "lastContentChangeReceiptAt": 1790021655085,
+        "lastConfirmedSnapshotAt": null,
+        "contentSha256": "c92957f81df7506787c5b9c732f943f65c17fb946293ba7ffd41296f1c7e3539",
+        "topYesBid": {
+          "price": 4950,
+          "quantity": 1398809.78
+        },
+        "topNoBid": {
+          "price": 5000,
+          "quantity": 423009.8
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "unchanged": true,
+      "health": {
+        "connected": true,
+        "backlog": 0,
+        "clockOkay": true
+      },
+      "marketState": "OPEN_IN_REQUESTED_BOOK",
+      "activity": {
+        "venue": "poly",
+        "role": "active",
+        "id": "aec-mlb-tor-bal-2026-09-21",
+        "messages": 101,
+        "depthChanges": 90,
+        "baseline": {
+          "messageType": "marketData",
+          "requestId": "37460aca-0e23-45f0-a1c2-3117264042b9:books-1",
+          "sid": null,
+          "transactTime": "2026-09-21T20:14:11.535221130Z",
+          "marketId": "aec-mlb-tor-bal-2026-09-21",
+          "sequence": null,
+          "exchangeAt": 1790021651535,
+          "receiptAt": 1790021651638,
+          "receiptMono": 60409.857834,
+          "processingAt": 1790021651638,
+          "processingMono": 60410.311709,
+          "lastMarketChangeAt": 1790021651535,
+          "lastContentChangeReceiptAt": 1790021651638,
+          "lastConfirmedSnapshotAt": null,
+          "contentSha256": "622e6aba1ae8d1a843e8ff090c9498333f41dba98bd9199d2d75b812af6b1d69",
+          "topYesBid": {
+            "price": 4950,
+            "quantity": 1398809.78
+          },
+          "topNoBid": {
+            "price": 5000,
+            "quantity": 423006.8
+          },
+          "open": true,
+          "valid": true,
+          "faults": []
+        }
+      },
+      "tradingAuthorized": false,
+      "fillClaim": false,
+      "http": {
+        "url": "https://gateway.polymarket.us/v1/markets/aec-mlb-tor-bal-2026-09-21/book",
+        "requestAt": 1790021658588,
+        "requestMono": 67359.96075,
+        "responseAt": 1790021658863,
+        "responseMono": 67635.067542,
+        "processedAt": 1790021658863,
+        "processedMono": 67635.227959,
+        "status": 200,
+        "headers": {
+          "age": "4",
+          "cache-control": "public, max-age=30",
+          "cf-cache-status": "HIT",
+          "date": "Mon, 21 Sep 2026 20:14:18 GMT",
+          "last-modified": "Mon, 21 Sep 2026 20:14:14 GMT"
+        },
+        "bodySha256": "b86119d359853356ae287c6883fed76800a26202c2fe9150114db718d6333e3f"
+      },
+      "rest": {
+        "accepted": false,
+        "reasons": [
+          "REST_OLDER_THAN_STREAM"
+        ],
+        "proof": null,
+        "cache": {
+          "transportReasons": [],
+          "ageSeconds": 4,
+          "dateAt": 1790021658000,
+          "cacheEvidence": "CACHED",
+          "missingOptionalHeaders": [
+            "x-cache",
+            "etag",
+            "via"
+          ],
+          "bookCurrentness": "UNPROVEN_BY_HTTP_ALONE"
+        },
+        "receipt": {
+          "messageType": "marketData",
+          "requestId": null,
+          "sid": null,
+          "transactTime": "2026-09-21T20:11:45.954399367Z",
+          "marketId": "aec-mlb-tor-bal-2026-09-21",
+          "sequence": null,
+          "exchangeAt": 1790021505954,
+          "receiptAt": 1790021658863,
+          "receiptMono": 67635.067542,
+          "processingAt": 1790021658863,
+          "processingMono": 67635.227959,
+          "lastMarketChangeAt": 1790021505954,
+          "lastContentChangeReceiptAt": 1790021658863,
+          "lastConfirmedSnapshotAt": null,
+          "contentSha256": "8c13d048742efac5b5c9434bc0eb000653f9f36ebc8ce9040e1d31adc3d58e7f",
+          "topYesBid": {
+            "price": 4950,
+            "quantity": 1390103.72
+          },
+          "topNoBid": {
+            "price": 5000,
+            "quantity": 425842.67
+          },
+          "open": true,
+          "valid": true,
+          "faults": []
+        }
+      }
+    },
+    {
+      "venue": "poly",
+      "role": "quiet",
+      "id": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "request": {
+        "venue": "poly",
+        "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "at": 1790021661008,
+        "mono": 69780.570875,
+        "kind": "new_subscription",
+        "requestId": "a94fde63-a44a-4030-9c74-ec5af00c591f:books-1"
+      },
+      "bookConfirmed": true,
+      "reasons": [],
+      "proof": "REQUEST_BOUND_WS_BOOK",
+      "response": {
+        "messageType": "marketData",
+        "requestId": "a94fde63-a44a-4030-9c74-ec5af00c591f:books-1",
+        "sid": null,
+        "transactTime": "2026-09-21T20:13:54.696427112Z",
+        "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "sequence": null,
+        "exchangeAt": 1790021634696,
+        "receiptAt": 1790021661058,
+        "receiptMono": 69829.83575,
+        "processingAt": 1790021661058,
+        "processingMono": 69830.033792,
+        "lastMarketChangeAt": 1790021634696,
+        "lastContentChangeReceiptAt": 1790021661058,
+        "lastConfirmedSnapshotAt": null,
+        "contentSha256": "28422143ffec236b680b4ab75f340cc5f23ca88668dc2f9563348c5dbef6b720",
+        "topYesBid": {
+          "price": 9800,
+          "quantity": 836.33
+        },
+        "topNoBid": {
+          "price": 100,
+          "quantity": 32673.97
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "selected": {
+        "messageType": "marketData",
+        "requestId": "a94fde63-a44a-4030-9c74-ec5af00c591f:books-1",
+        "sid": null,
+        "transactTime": "2026-09-21T20:13:54.696427112Z",
+        "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "sequence": null,
+        "exchangeAt": 1790021634696,
+        "receiptAt": 1790021661058,
+        "receiptMono": 69829.83575,
+        "processingAt": 1790021661058,
+        "processingMono": 69830.033792,
+        "lastMarketChangeAt": 1790021634696,
+        "lastContentChangeReceiptAt": 1790021661058,
+        "lastConfirmedSnapshotAt": null,
+        "contentSha256": "28422143ffec236b680b4ab75f340cc5f23ca88668dc2f9563348c5dbef6b720",
+        "topYesBid": {
+          "price": 9800,
+          "quantity": 836.33
+        },
+        "topNoBid": {
+          "price": 100,
+          "quantity": 32673.97
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "confirmedAt": 1790021661058,
+      "confirmedMono": 69829.83575,
+      "before": {
+        "messageType": "marketData",
+        "requestId": "37460aca-0e23-45f0-a1c2-3117264042b9:books-1",
+        "sid": null,
+        "transactTime": "2026-09-21T20:13:54.696427112Z",
+        "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "sequence": null,
+        "exchangeAt": 1790021634696,
+        "receiptAt": 1790021634731,
+        "receiptMono": 43503.73475,
+        "processingAt": 1790021634732,
+        "processingMono": 43503.994167,
+        "lastMarketChangeAt": 1790021634696,
+        "lastContentChangeReceiptAt": 1790021634731,
+        "lastConfirmedSnapshotAt": null,
+        "contentSha256": "28422143ffec236b680b4ab75f340cc5f23ca88668dc2f9563348c5dbef6b720",
+        "topYesBid": {
+          "price": 9800,
+          "quantity": 836.33
+        },
+        "topNoBid": {
+          "price": 100,
+          "quantity": 32673.97
+        },
+        "open": true,
+        "valid": true,
+        "faults": []
+      },
+      "unchanged": true,
+      "health": {
+        "connected": true,
+        "backlog": 0,
+        "clockOkay": true
+      },
+      "marketState": "OPEN_IN_REQUESTED_BOOK",
+      "activity": {
+        "venue": "poly",
+        "role": "quiet",
+        "id": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "messages": 4,
+        "depthChanges": 2,
+        "baseline": {
+          "messageType": "marketData",
+          "requestId": "37460aca-0e23-45f0-a1c2-3117264042b9:books-1",
+          "sid": null,
+          "transactTime": "2026-09-21T20:13:54.696427112Z",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+          "sequence": null,
+          "exchangeAt": 1790021634696,
+          "receiptAt": 1790021634731,
+          "receiptMono": 43503.73475,
+          "processingAt": 1790021634732,
+          "processingMono": 43503.994167,
+          "lastMarketChangeAt": 1790021634696,
+          "lastContentChangeReceiptAt": 1790021634731,
+          "lastConfirmedSnapshotAt": null,
+          "contentSha256": "28422143ffec236b680b4ab75f340cc5f23ca88668dc2f9563348c5dbef6b720",
+          "topYesBid": {
+            "price": 9800,
+            "quantity": 836.33
+          },
+          "topNoBid": {
+            "price": 100,
+            "quantity": 32673.97
+          },
+          "open": true,
+          "valid": true,
+          "faults": []
+        }
+      },
+      "tradingAuthorized": false,
+      "fillClaim": false,
+      "http": {
+        "url": "https://gateway.polymarket.us/v1/markets/urc-usunemp-sa-september-2026-10-02-gt3pt7pct/book",
+        "requestAt": 1790021661061,
+        "requestMono": 69833.084125,
+        "responseAt": 1790021661112,
+        "responseMono": 69884.130792,
+        "processedAt": 1790021661112,
+        "processedMono": 69884.159167,
+        "status": 200,
+        "headers": {
+          "age": "4",
+          "cache-control": "public, max-age=30",
+          "cf-cache-status": "HIT",
+          "date": "Mon, 21 Sep 2026 20:14:21 GMT",
+          "last-modified": "Mon, 21 Sep 2026 20:14:16 GMT"
+        },
+        "bodySha256": "01f51af5dda50b96af055b16e8705f1b77f3205b206980d9927a2def748252e9"
+      },
+      "rest": {
+        "accepted": false,
+        "reasons": [
+          "REST_OLDER_THAN_STREAM"
+        ],
+        "proof": null,
+        "cache": {
+          "transportReasons": [],
+          "ageSeconds": 4,
+          "dateAt": 1790021661000,
+          "cacheEvidence": "CACHED",
+          "missingOptionalHeaders": [
+            "x-cache",
+            "etag",
+            "via"
+          ],
+          "bookCurrentness": "UNPROVEN_BY_HTTP_ALONE"
+        },
+        "receipt": {
+          "messageType": "marketData",
+          "requestId": null,
+          "sid": null,
+          "transactTime": "2026-09-21T20:09:00.134263749Z",
+          "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+          "sequence": null,
+          "exchangeAt": 1790021340134,
+          "receiptAt": 1790021661112,
+          "receiptMono": 69884.130792,
+          "processingAt": 1790021661112,
+          "processingMono": 69884.159167,
+          "lastMarketChangeAt": 1790021340134,
+          "lastContentChangeReceiptAt": 1790021661112,
+          "lastConfirmedSnapshotAt": null,
+          "contentSha256": "fd64d54dd716c05730d821d563f81fb52da8dfa1f9fad492607c4f257b1b9482",
+          "topYesBid": {
+            "price": 9800,
+            "quantity": 1030.96
+          },
+          "topNoBid": {
+            "price": 100,
+            "quantity": 32673.97
+          },
+          "open": true,
+          "valid": true,
+          "faults": []
+        }
+      }
+    }
+  ],
+  "ordersEnabled": false,
+  "fillClaim": false,
+  "rawEvidenceSha256": "425de99960fb5588f0e729ff38c6114b79fe8f40b22163939d01b71b7b93124d",
+  "remainingLimit": 8
+}

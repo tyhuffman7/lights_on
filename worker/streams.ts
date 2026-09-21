@@ -102,6 +102,8 @@ type Options = {
   context?: () => Record<string, unknown>;
   includeTrades?: boolean;
   includePolyTrades?: boolean;
+  subscriptionPrefix?: string;
+  onSubscription?: (message: Record<string, any>, wall: number, mono: number) => void;
   retryMs?: number;
   heartbeatMs?: number;
   heartbeatTimeoutMs?: number;
@@ -199,8 +201,11 @@ export class StreamConnection {
         this.connectedAt = performance.now();
         this.lastMessage = 0;
         this.lastPong = this.connectedAt;
-        for (const m of subscriptions(this.options.venue, this.options.ids, this.options.includeTrades, this.options.includePolyTrades))
+        for (const m of subscriptions(this.options.venue, this.options.ids, this.options.includeTrades, this.options.includePolyTrades)) {
+          if (m.subscribe && this.options.subscriptionPrefix) m.subscribe.requestId = this.options.subscriptionPrefix + m.subscribe.requestId;
+          this.options.onSubscription?.(m,Date.now(),performance.now());
           ws.send(JSON.stringify(m));
+        }
         this.options.onDiagnostic("CONNECTED", {
           venue: this.options.venue,
           markets: this.options.ids.length,

@@ -1,0 +1,1125 @@
+{
+  "sourceCommit": "8447acd0a21feda6f9101c3a0738539a5be731d4",
+  "sourceSha256": "56af6473f7846a906488949bc06a17ef560b6ff2916598db4cf3012bdd7d0d85",
+  "attempts": 52,
+  "reasonCounts": {
+    "CACHED_RESPONSE": 32,
+    "CACHE_PROVENANCE_UNRESOLVED": 51,
+    "REST_OLDER_THAN_ALREADY_OBSERVED_STREAM": 19,
+    "kalshi:INGRESS_BACKLOG": 1,
+    "fetch failed": 1
+  },
+  "exclusiveCombinations": [
+    {
+      "reasons": [
+        "CACHED_RESPONSE",
+        "CACHE_PROVENANCE_UNRESOLVED",
+        "REST_OLDER_THAN_ALREADY_OBSERVED_STREAM"
+      ],
+      "count": 12
+    },
+    {
+      "reasons": [
+        "CACHED_RESPONSE",
+        "CACHE_PROVENANCE_UNRESOLVED"
+      ],
+      "count": 19
+    },
+    {
+      "reasons": [
+        "CACHE_PROVENANCE_UNRESOLVED"
+      ],
+      "count": 12
+    },
+    {
+      "reasons": [
+        "CACHE_PROVENANCE_UNRESOLVED",
+        "REST_OLDER_THAN_ALREADY_OBSERVED_STREAM"
+      ],
+      "count": 7
+    },
+    {
+      "reasons": [
+        "CACHED_RESPONSE",
+        "CACHE_PROVENANCE_UNRESOLVED",
+        "kalshi:INGRESS_BACKLOG"
+      ],
+      "count": 1
+    },
+    {
+      "reasons": [
+        "fetch failed"
+      ],
+      "count": 1
+    }
+  ],
+  "notes": [
+    "Headers are exactly the retained allowlisted response headers; other unretained headers are unknown. Absence is not a synthesized Age=0.",
+    "All 51 CACHE_PROVENANCE_UNRESOLVED results included a Kalshi status response with only Date retained. Twelve failed solely on that missing expected metadata.",
+    "Nineteen REST_OLDER flags compare actual REST transactTime to already observed stream version, not HTTP Date. Cached alone does not prove depth differed.",
+    "These historical failures remain failures; no retrospective successful confirmation is claimed."
+  ],
+  "examples": [
+    {
+      "case": "sole_missing_cache_metadata",
+      "historicalReasons": [
+        "CACHE_PROVENANCE_UNRESOLVED"
+      ],
+      "poly": {
+        "http": {
+          "url": "https://gateway.polymarket.us/v1/markets/cranc-uspres28-12-31-2026-aleoca/book",
+          "requestAt": 1790018748888,
+          "requestMono": 529208.145,
+          "responseAt": 1790018749312,
+          "responseMono": 529632.398,
+          "processedAt": 1790018749312,
+          "processedMono": 529632.428,
+          "status": 200,
+          "headers": {
+            "cache-control": "public, max-age=30",
+            "cf-cache-status": "EXPIRED",
+            "date": "Mon, 21 Sep 2026 19:25:49 GMT",
+            "last-modified": "Mon, 21 Sep 2026 19:25:49 GMT"
+          },
+          "bodySha256": "8e189dc3fe187fd5afc78a1f3ea8a40ee8188e69610c5f383d72f2f62b3d4eea"
+        },
+        "bodyFields": {
+          "marketSlug": "cranc-uspres28-12-31-2026-aleoca",
+          "transactTime": "2026-09-21T19:25:34.462162197Z",
+          "state": "MARKET_STATE_OPEN",
+          "bids": [
+            {
+              "px": {
+                "value": "0.0700",
+                "currency": "USD"
+              },
+              "qty": "11702.2800"
+            },
+            {
+              "px": {
+                "value": "0.0200",
+                "currency": "USD"
+              },
+              "qty": "45.0000"
+            },
+            {
+              "px": {
+                "value": "0.0100",
+                "currency": "USD"
+              },
+              "qty": "2634.6100"
+            }
+          ],
+          "offers": [
+            {
+              "px": {
+                "value": "0.0800",
+                "currency": "USD"
+              },
+              "qty": "150.9700"
+            },
+            {
+              "px": {
+                "value": "0.1500",
+                "currency": "USD"
+              },
+              "qty": "2.7000"
+            },
+            {
+              "px": {
+                "value": "0.1700",
+                "currency": "USD"
+              },
+              "qty": "45.0000"
+            },
+            {
+              "px": {
+                "value": "0.1900",
+                "currency": "USD"
+              },
+              "qty": "9.9900"
+            },
+            {
+              "px": {
+                "value": "0.2000",
+                "currency": "USD"
+              },
+              "qty": "31.2500"
+            },
+            {
+              "px": {
+                "value": "0.2500",
+                "currency": "USD"
+              },
+              "qty": "50.0000"
+            },
+            {
+              "px": {
+                "value": "0.5000",
+                "currency": "USD"
+              },
+              "qty": "25.0000"
+            },
+            {
+              "px": {
+                "value": "0.9900",
+                "currency": "USD"
+              },
+              "qty": "8000.0000"
+            }
+          ]
+        }
+      },
+      "kalshiStatus": {
+        "http": {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXAOCRUN-28-27JAN01",
+          "requestAt": 1790018748894,
+          "requestMono": 529214.214958,
+          "responseAt": 1790018749208,
+          "responseMono": 529527.764958,
+          "processedAt": 1790018749208,
+          "processedMono": 529527.821,
+          "status": 200,
+          "headers": {
+            "date": "Mon, 21 Sep 2026 19:25:49 GMT"
+          },
+          "bodySha256": "2e1752e94482171c1577ae9a48d4b74df650b76c5938f9068d96a7cf15863d04"
+        },
+        "bodyFields": {
+          "ticker": "KXAOCRUN-28-27JAN01",
+          "status": "active",
+          "updated_time": "2026-07-27T16:33:21.308189Z",
+          "close_time": "2027-01-01T15:00:00Z"
+        }
+      },
+      "retainedLatestPolyBook": {
+        "venue": "poly",
+        "marketId": "cranc-uspres28-12-31-2026-aleoca",
+        "yes": [
+          {
+            "price": 800,
+            "quantity": 150.97
+          },
+          {
+            "price": 1500,
+            "quantity": 2.7
+          },
+          {
+            "price": 1700,
+            "quantity": 45
+          },
+          {
+            "price": 1900,
+            "quantity": 9.99
+          },
+          {
+            "price": 2000,
+            "quantity": 31.25
+          },
+          {
+            "price": 2500,
+            "quantity": 50
+          },
+          {
+            "price": 5000,
+            "quantity": 25
+          },
+          {
+            "price": 9900,
+            "quantity": 8000
+          }
+        ],
+        "no": [
+          {
+            "price": 9300,
+            "quantity": 11702.28
+          },
+          {
+            "price": 9800,
+            "quantity": 45
+          },
+          {
+            "price": 9900,
+            "quantity": 2634.61
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 700,
+            "quantity": 11702.28
+          },
+          {
+            "price": 200,
+            "quantity": 45
+          },
+          {
+            "price": 100,
+            "quantity": 2634.61
+          }
+        ],
+        "noBids": [
+          {
+            "price": 9200,
+            "quantity": 150.97
+          },
+          {
+            "price": 8500,
+            "quantity": 2.7
+          },
+          {
+            "price": 8300,
+            "quantity": 45
+          },
+          {
+            "price": 8100,
+            "quantity": 9.99
+          },
+          {
+            "price": 8000,
+            "quantity": 31.25
+          },
+          {
+            "price": 7500,
+            "quantity": 50
+          },
+          {
+            "price": 5000,
+            "quantity": 25
+          },
+          {
+            "price": 100,
+            "quantity": 8000
+          }
+        ],
+        "receivedAt": 1790018749312,
+        "receivedMono": 529632.398,
+        "exchangeAt": 1790018734462,
+        "sequence": null,
+        "connection": "LIVE",
+        "valid": true,
+        "open": true,
+        "source": "rest"
+      },
+      "kalshiSnapshot": {
+        "book": {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "yes": [
+            {
+              "price": 2000,
+              "quantity": 200
+            },
+            {
+              "price": 4300,
+              "quantity": 120
+            },
+            {
+              "price": 4400,
+              "quantity": 500
+            },
+            {
+              "price": 7900,
+              "quantity": 51
+            },
+            {
+              "price": 8000,
+              "quantity": 42
+            },
+            {
+              "price": 8200,
+              "quantity": 2628
+            },
+            {
+              "price": 9400,
+              "quantity": 27.79
+            },
+            {
+              "price": 9600,
+              "quantity": 1.47
+            },
+            {
+              "price": 9900,
+              "quantity": 39.24
+            }
+          ],
+          "no": [
+            {
+              "price": 8900,
+              "quantity": 200
+            }
+          ],
+          "yesBids": [
+            {
+              "price": 1100,
+              "quantity": 200
+            }
+          ],
+          "noBids": [
+            {
+              "price": 8000,
+              "quantity": 200
+            },
+            {
+              "price": 5700,
+              "quantity": 120
+            },
+            {
+              "price": 5600,
+              "quantity": 500
+            },
+            {
+              "price": 2100,
+              "quantity": 51
+            },
+            {
+              "price": 2000,
+              "quantity": 42
+            },
+            {
+              "price": 1800,
+              "quantity": 2628
+            },
+            {
+              "price": 600,
+              "quantity": 27.79
+            },
+            {
+              "price": 400,
+              "quantity": 1.47
+            },
+            {
+              "price": 100,
+              "quantity": 39.24
+            }
+          ],
+          "receivedAt": 1790018749062,
+          "receivedMono": 529382.026083,
+          "exchangeAt": null,
+          "sequence": 5515,
+          "connection": "LIVE",
+          "valid": true,
+          "open": true,
+          "source": "stream"
+        },
+        "processedAt": 1790018749062,
+        "processedMono": 529382.290708
+      }
+    },
+    {
+      "case": "older_cached_rest",
+      "historicalReasons": [
+        "CACHED_RESPONSE",
+        "CACHE_PROVENANCE_UNRESOLVED",
+        "REST_OLDER_THAN_ALREADY_OBSERVED_STREAM"
+      ],
+      "poly": {
+        "http": {
+          "url": "https://gateway.polymarket.us/v1/markets/cranc-uspres28-12-31-2026-aleoca/book",
+          "requestAt": 1790018220493,
+          "requestMono": 744.024875,
+          "responseAt": 1790018220686,
+          "responseMono": 936.64925,
+          "processedAt": 1790018220686,
+          "processedMono": 936.679833,
+          "status": 200,
+          "headers": {
+            "age": "15",
+            "cache-control": "public, max-age=30",
+            "cf-cache-status": "HIT",
+            "date": "Mon, 21 Sep 2026 19:17:00 GMT",
+            "last-modified": "Mon, 21 Sep 2026 19:16:45 GMT"
+          },
+          "bodySha256": "5ff5454b15215420ea78ca59a48c0a7b4684b74290da1519cb56266f66fc2ccb"
+        },
+        "bodyFields": {
+          "marketSlug": "cranc-uspres28-12-31-2026-aleoca",
+          "transactTime": "2026-09-21T19:14:07.760226343Z",
+          "state": "MARKET_STATE_OPEN",
+          "bids": [
+            {
+              "px": {
+                "value": "0.0700",
+                "currency": "USD"
+              },
+              "qty": "10274.2800"
+            },
+            {
+              "px": {
+                "value": "0.0200",
+                "currency": "USD"
+              },
+              "qty": "45.0000"
+            },
+            {
+              "px": {
+                "value": "0.0100",
+                "currency": "USD"
+              },
+              "qty": "2634.6100"
+            }
+          ],
+          "offers": [
+            {
+              "px": {
+                "value": "0.0800",
+                "currency": "USD"
+              },
+              "qty": "150.9700"
+            },
+            {
+              "px": {
+                "value": "0.1500",
+                "currency": "USD"
+              },
+              "qty": "2.7000"
+            },
+            {
+              "px": {
+                "value": "0.1700",
+                "currency": "USD"
+              },
+              "qty": "45.0000"
+            },
+            {
+              "px": {
+                "value": "0.1900",
+                "currency": "USD"
+              },
+              "qty": "9.9900"
+            },
+            {
+              "px": {
+                "value": "0.2000",
+                "currency": "USD"
+              },
+              "qty": "31.2500"
+            },
+            {
+              "px": {
+                "value": "0.2500",
+                "currency": "USD"
+              },
+              "qty": "50.0000"
+            },
+            {
+              "px": {
+                "value": "0.5000",
+                "currency": "USD"
+              },
+              "qty": "25.0000"
+            },
+            {
+              "px": {
+                "value": "0.9900",
+                "currency": "USD"
+              },
+              "qty": "11200.0000"
+            }
+          ]
+        }
+      },
+      "kalshiStatus": {
+        "http": {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXAOCRUN-28-27JAN01",
+          "requestAt": 1790018220511,
+          "requestMono": 761.627833,
+          "responseAt": 1790018220691,
+          "responseMono": 941.6815,
+          "processedAt": 1790018220691,
+          "processedMono": 941.738916,
+          "status": 200,
+          "headers": {
+            "date": "Mon, 21 Sep 2026 19:17:00 GMT"
+          },
+          "bodySha256": "8854e2e93f206856081750f6118c6b7b3d7bc78c8b0e292037741251e393a355"
+        },
+        "bodyFields": {
+          "ticker": "KXAOCRUN-28-27JAN01",
+          "status": "active",
+          "updated_time": "2026-07-27T16:33:21.308189Z",
+          "close_time": "2027-01-01T15:00:00Z"
+        }
+      },
+      "retainedLatestPolyBook": {
+        "venue": "poly",
+        "marketId": "cranc-uspres28-12-31-2026-aleoca",
+        "yes": [
+          {
+            "price": 800,
+            "quantity": 150.97
+          },
+          {
+            "price": 1500,
+            "quantity": 2.7
+          },
+          {
+            "price": 1700,
+            "quantity": 45
+          },
+          {
+            "price": 1900,
+            "quantity": 9.99
+          },
+          {
+            "price": 2000,
+            "quantity": 31.25
+          },
+          {
+            "price": 2500,
+            "quantity": 50
+          },
+          {
+            "price": 5000,
+            "quantity": 25
+          },
+          {
+            "price": 9900,
+            "quantity": 11200
+          }
+        ],
+        "no": [
+          {
+            "price": 9300,
+            "quantity": 4560.28
+          },
+          {
+            "price": 9800,
+            "quantity": 45
+          },
+          {
+            "price": 9900,
+            "quantity": 2634.61
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 700,
+            "quantity": 4560.28
+          },
+          {
+            "price": 200,
+            "quantity": 45
+          },
+          {
+            "price": 100,
+            "quantity": 2634.61
+          }
+        ],
+        "noBids": [
+          {
+            "price": 9200,
+            "quantity": 150.97
+          },
+          {
+            "price": 8500,
+            "quantity": 2.7
+          },
+          {
+            "price": 8300,
+            "quantity": 45
+          },
+          {
+            "price": 8100,
+            "quantity": 9.99
+          },
+          {
+            "price": 8000,
+            "quantity": 31.25
+          },
+          {
+            "price": 7500,
+            "quantity": 50
+          },
+          {
+            "price": 5000,
+            "quantity": 25
+          },
+          {
+            "price": 100,
+            "quantity": 11200
+          }
+        ],
+        "receivedAt": 1790018220331,
+        "receivedMono": 582.459458,
+        "exchangeAt": 1790018192569,
+        "sequence": null,
+        "connection": "LIVE",
+        "valid": true,
+        "open": true,
+        "source": "stream"
+      },
+      "kalshiSnapshot": {
+        "book": {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "yes": [
+            {
+              "price": 1400,
+              "quantity": 210.13
+            },
+            {
+              "price": 2000,
+              "quantity": 200
+            },
+            {
+              "price": 4400,
+              "quantity": 500
+            },
+            {
+              "price": 8000,
+              "quantity": 42
+            },
+            {
+              "price": 8100,
+              "quantity": 60
+            },
+            {
+              "price": 8200,
+              "quantity": 2628
+            },
+            {
+              "price": 9400,
+              "quantity": 27.79
+            },
+            {
+              "price": 9600,
+              "quantity": 1.47
+            },
+            {
+              "price": 9800,
+              "quantity": 52
+            },
+            {
+              "price": 9900,
+              "quantity": 39.24
+            }
+          ],
+          "no": [
+            {
+              "price": 8900,
+              "quantity": 200
+            }
+          ],
+          "yesBids": [
+            {
+              "price": 1100,
+              "quantity": 200
+            }
+          ],
+          "noBids": [
+            {
+              "price": 8600,
+              "quantity": 210.13
+            },
+            {
+              "price": 8000,
+              "quantity": 200
+            },
+            {
+              "price": 5600,
+              "quantity": 500
+            },
+            {
+              "price": 2000,
+              "quantity": 42
+            },
+            {
+              "price": 1900,
+              "quantity": 60
+            },
+            {
+              "price": 1800,
+              "quantity": 2628
+            },
+            {
+              "price": 600,
+              "quantity": 27.79
+            },
+            {
+              "price": 400,
+              "quantity": 1.47
+            },
+            {
+              "price": 200,
+              "quantity": 52
+            },
+            {
+              "price": 100,
+              "quantity": 39.24
+            }
+          ],
+          "receivedAt": 1790018220593,
+          "receivedMono": 844.177333,
+          "exchangeAt": null,
+          "sequence": 59,
+          "connection": "LIVE",
+          "valid": true,
+          "open": true,
+          "source": "stream"
+        },
+        "processedAt": 1790018220593,
+        "processedMono": 844.302041
+      }
+    },
+    {
+      "case": "cached_without_proven_older",
+      "historicalReasons": [
+        "CACHED_RESPONSE",
+        "CACHE_PROVENANCE_UNRESOLVED"
+      ],
+      "poly": {
+        "http": {
+          "url": "https://gateway.polymarket.us/v1/markets/cranc-uspres28-12-31-2026-aleoca/book",
+          "requestAt": 1790018396188,
+          "requestMono": 176504.890291,
+          "responseAt": 1790018396338,
+          "responseMono": 176654.489125,
+          "processedAt": 1790018396338,
+          "processedMono": 176654.545708,
+          "status": 200,
+          "headers": {
+            "age": "14",
+            "cache-control": "public, max-age=30",
+            "cf-cache-status": "HIT",
+            "date": "Mon, 21 Sep 2026 19:19:56 GMT",
+            "last-modified": "Mon, 21 Sep 2026 19:19:42 GMT"
+          },
+          "bodySha256": "35f211a532cf304c86a317a8207bd83a45aa1405c14d54db70aa23c026aee219"
+        },
+        "bodyFields": {
+          "marketSlug": "cranc-uspres28-12-31-2026-aleoca",
+          "transactTime": "2026-09-21T19:17:11.646187500Z",
+          "state": "MARKET_STATE_OPEN",
+          "bids": [
+            {
+              "px": {
+                "value": "0.0700",
+                "currency": "USD"
+              },
+              "qty": "10274.2800"
+            },
+            {
+              "px": {
+                "value": "0.0200",
+                "currency": "USD"
+              },
+              "qty": "45.0000"
+            },
+            {
+              "px": {
+                "value": "0.0100",
+                "currency": "USD"
+              },
+              "qty": "2634.6100"
+            }
+          ],
+          "offers": [
+            {
+              "px": {
+                "value": "0.0800",
+                "currency": "USD"
+              },
+              "qty": "150.9700"
+            },
+            {
+              "px": {
+                "value": "0.1500",
+                "currency": "USD"
+              },
+              "qty": "2.7000"
+            },
+            {
+              "px": {
+                "value": "0.1700",
+                "currency": "USD"
+              },
+              "qty": "45.0000"
+            },
+            {
+              "px": {
+                "value": "0.1900",
+                "currency": "USD"
+              },
+              "qty": "9.9900"
+            },
+            {
+              "px": {
+                "value": "0.2000",
+                "currency": "USD"
+              },
+              "qty": "31.2500"
+            },
+            {
+              "px": {
+                "value": "0.2500",
+                "currency": "USD"
+              },
+              "qty": "50.0000"
+            },
+            {
+              "px": {
+                "value": "0.5000",
+                "currency": "USD"
+              },
+              "qty": "25.0000"
+            },
+            {
+              "px": {
+                "value": "0.9900",
+                "currency": "USD"
+              },
+              "qty": "8000.0000"
+            }
+          ]
+        }
+      },
+      "kalshiStatus": {
+        "http": {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXAOCRUN-28-27JAN01",
+          "requestAt": 1790018396189,
+          "requestMono": 176506.32275,
+          "responseAt": 1790018396374,
+          "responseMono": 176691.21575,
+          "processedAt": 1790018396374,
+          "processedMono": 176691.310791,
+          "status": 200,
+          "headers": {
+            "date": "Mon, 21 Sep 2026 19:19:56 GMT"
+          },
+          "bodySha256": "8854e2e93f206856081750f6118c6b7b3d7bc78c8b0e292037741251e393a355"
+        },
+        "bodyFields": {
+          "ticker": "KXAOCRUN-28-27JAN01",
+          "status": "active",
+          "updated_time": "2026-07-27T16:33:21.308189Z",
+          "close_time": "2027-01-01T15:00:00Z"
+        }
+      },
+      "retainedLatestPolyBook": {
+        "venue": "poly",
+        "marketId": "cranc-uspres28-12-31-2026-aleoca",
+        "yes": [
+          {
+            "price": 800,
+            "quantity": 150.97
+          },
+          {
+            "price": 1500,
+            "quantity": 2.7
+          },
+          {
+            "price": 1700,
+            "quantity": 45
+          },
+          {
+            "price": 1900,
+            "quantity": 9.99
+          },
+          {
+            "price": 2000,
+            "quantity": 31.25
+          },
+          {
+            "price": 2500,
+            "quantity": 50
+          },
+          {
+            "price": 5000,
+            "quantity": 25
+          },
+          {
+            "price": 9900,
+            "quantity": 8000
+          }
+        ],
+        "no": [
+          {
+            "price": 9300,
+            "quantity": 10274.28
+          },
+          {
+            "price": 9800,
+            "quantity": 45
+          },
+          {
+            "price": 9900,
+            "quantity": 2634.61
+          }
+        ],
+        "yesBids": [
+          {
+            "price": 700,
+            "quantity": 10274.28
+          },
+          {
+            "price": 200,
+            "quantity": 45
+          },
+          {
+            "price": 100,
+            "quantity": 2634.61
+          }
+        ],
+        "noBids": [
+          {
+            "price": 9200,
+            "quantity": 150.97
+          },
+          {
+            "price": 8500,
+            "quantity": 2.7
+          },
+          {
+            "price": 8300,
+            "quantity": 45
+          },
+          {
+            "price": 8100,
+            "quantity": 9.99
+          },
+          {
+            "price": 8000,
+            "quantity": 31.25
+          },
+          {
+            "price": 7500,
+            "quantity": 50
+          },
+          {
+            "price": 5000,
+            "quantity": 25
+          },
+          {
+            "price": 100,
+            "quantity": 8000
+          }
+        ],
+        "receivedAt": 1790018396338,
+        "receivedMono": 176654.489125,
+        "exchangeAt": 1790018231646,
+        "sequence": null,
+        "connection": "LIVE",
+        "valid": true,
+        "open": true,
+        "source": "rest"
+      },
+      "kalshiSnapshot": {
+        "book": {
+          "venue": "kalshi",
+          "marketId": "KXAOCRUN-28-27JAN01",
+          "yes": [
+            {
+              "price": 1400,
+              "quantity": 210.13
+            },
+            {
+              "price": 2000,
+              "quantity": 200
+            },
+            {
+              "price": 4400,
+              "quantity": 500
+            },
+            {
+              "price": 8000,
+              "quantity": 42
+            },
+            {
+              "price": 8100,
+              "quantity": 60
+            },
+            {
+              "price": 8200,
+              "quantity": 2628
+            },
+            {
+              "price": 9400,
+              "quantity": 27.79
+            },
+            {
+              "price": 9600,
+              "quantity": 1.47
+            },
+            {
+              "price": 9800,
+              "quantity": 52
+            },
+            {
+              "price": 9900,
+              "quantity": 39.24
+            }
+          ],
+          "no": [
+            {
+              "price": 8900,
+              "quantity": 200
+            }
+          ],
+          "yesBids": [
+            {
+              "price": 1100,
+              "quantity": 200
+            }
+          ],
+          "noBids": [
+            {
+              "price": 8600,
+              "quantity": 210.13
+            },
+            {
+              "price": 8000,
+              "quantity": 200
+            },
+            {
+              "price": 5600,
+              "quantity": 500
+            },
+            {
+              "price": 2000,
+              "quantity": 42
+            },
+            {
+              "price": 1900,
+              "quantity": 60
+            },
+            {
+              "price": 1800,
+              "quantity": 2628
+            },
+            {
+              "price": 600,
+              "quantity": 27.79
+            },
+            {
+              "price": 400,
+              "quantity": 1.47
+            },
+            {
+              "price": 200,
+              "quantity": 52
+            },
+            {
+              "price": 100,
+              "quantity": 39.24
+            }
+          ],
+          "receivedAt": 1790018396235,
+          "receivedMono": 176551.781083,
+          "exchangeAt": null,
+          "sequence": 1679,
+          "connection": "LIVE",
+          "valid": true,
+          "open": true,
+          "source": "stream"
+        },
+        "processedAt": 1790018396235,
+        "processedMono": 176551.932
+      }
+    }
+  ],
+  "depthComparisons": {
+    "older_different_depth": 14,
+    "older_equal_depth": 5,
+    "sole_metadata_equal_depth": 12
+  }
+}
