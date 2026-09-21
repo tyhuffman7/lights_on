@@ -53,3 +53,10 @@ test('coalesced repeated positive observations remain one interval, re-entry and
  intervals.update('key',q,false,now+30);assert.equal(intervals.completed.length,1);
  intervals.update('key',q,true,now+40);assert.equal(intervals.nextId,2);intervals.stop(now+50);assert.equal(intervals.active.size,0);assert.equal(intervals.completed.length,2);
 });
+
+test('existing screen CLI dispatches confirmation preparation without a circular top-level import',async()=>{
+ const {mkdtempSync,mkdirSync,writeFileSync,readFileSync}=await import('node:fs');const {tmpdir}=await import('node:os');const {join,resolve}=await import('node:path');const {spawnSync}=await import('node:child_process');
+ const dir=mkdtempSync(join(tmpdir(),'confirmation-cli-')),baseline=join(dir,'baseline'),output=join(dir,'output');mkdirSync(baseline);writeFileSync(join(baseline,'frozen.json'),JSON.stringify({selection:[]}));
+ const result=spawnSync(process.execPath,['--experimental-strip-types',resolve('worker/executable-screen.ts'),'confirmation-prepare',output,baseline],{encoding:'utf8',timeout:10000});
+ assert.equal(result.status,0,result.stderr);assert.equal(JSON.parse(readFileSync(join(output,'frozen.json'),'utf8')).selection.length,0);
+});
