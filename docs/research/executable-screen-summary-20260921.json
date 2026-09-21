@@ -1,11 +1,11 @@
 {
   "version": 1,
   "scope": "ORDER_DISABLED_PUBLIC_PRICE_COMPARISON_NO_FILL_OR_PROFIT_CLAIM",
-  "completion": "PENDING_COLLECTION",
+  "completion": "COMPLETED_BOUNDED_SCREEN",
   "startedAt": 1790010791434,
-  "observedThrough": 1790010911464,
+  "observedThrough": 1790012591240,
   "deadlineAt": 1790012591228,
-  "durationMs": 120030,
+  "durationMs": 1799806,
   "policy": {
     "version": 1,
     "durationMs": 1800000,
@@ -1169,10 +1169,10 @@
     }
   },
   "observations": {
-    "samples": 119,
-    "rows": 28560,
-    "withEconomics": 26061,
-    "freshTakerTakerObservations": 348,
+    "samples": 1797,
+    "rows": 431280,
+    "withEconomics": 383231,
+    "freshTakerTakerObservations": 5672,
     "uniqueBooksSeen": 107,
     "expectedUniqueBooks": 107,
     "neverReceived": {
@@ -1181,28 +1181,143 @@
     },
     "failures": {},
     "dataRejections": {
-      "KALSHI_EXCHANGE_TIME_UNKNOWN": 16680,
-      "PM_US_EXCHANGE_TIME_STALE": 25348,
-      "ASK_DEPTH_MISSING": 1071,
-      "NO_NONCROSSING_BID_OR_HEDGE_DEPTH": 1428,
-      "KALSHI_RECEIPT_STALE": 25696,
-      "PM_US_RECEIPT_STALE": 24868,
-      "KALSHI_EXCHANGE_TIME_STALE": 9460,
-      "BOOKS_UNSYNCHRONIZED": 16680
+      "KALSHI_EXCHANGE_TIME_UNKNOWN": 107024,
+      "PM_US_EXCHANGE_TIME_STALE": 389140,
+      "ASK_DEPTH_MISSING": 21329,
+      "NO_NONCROSSING_BID_OR_HEDGE_DEPTH": 26720,
+      "KALSHI_RECEIPT_STALE": 396136,
+      "PM_US_RECEIPT_STALE": 387304,
+      "KALSHI_EXCHANGE_TIME_STALE": 289536,
+      "BOOKS_UNSYNCHRONIZED": 349560,
+      "PM_US_BOOK_CLOSED": 10312
     },
     "policyRejections": {
-      "SETTLEMENT_RULES_NEED_REVIEW": 28560,
-      "BELOW_10_CENT_PROFIT_FLOOR": 25228,
-      "BELOW_1_PERCENT_ROI": 25228,
-      "OUTSIDE_SETTLEMENT_HORIZON": 14756,
-      "NO_SIZE_WITHIN_DEPTH_MINIMUM_AND_SMALL_CAPITAL": 2499
+      "SETTLEMENT_RULES_NEED_REVIEW": 431280,
+      "BELOW_10_CENT_PROFIT_FLOOR": 370065,
+      "BELOW_1_PERCENT_ROI": 370065,
+      "OUTSIDE_SETTLEMENT_HORIZON": 222828,
+      "NO_SIZE_WITHIN_DEPTH_MINIMUM_AND_SMALL_CAPITAL": 48049
     }
   },
   "rows": [
     {
       "category": "Economics",
       "route": "TAKER_TAKER",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+        "category": "Economics",
+        "at": 1790012340260,
+        "route": "TAKER_TAKER",
+        "aSide": "no",
+        "bSide": "yes",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "WITHIN_BASELINE_HORIZON",
+          "strategy": "NONSPORTS_OUTSIDE_PRIOR_MAKER_RUN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 9,
+          "kalshi": {
+            "quantity": 9,
+            "cost": 24300,
+            "fees": 1300,
+            "levels": [
+              {
+                "price": 2700,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1800
+          },
+          "poly": {
+            "quantity": 9,
+            "cost": 64800,
+            "fees": 1300,
+            "levels": [
+              {
+                "price": 7200,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1300
+          },
+          "cost": 89100,
+          "feeBound": 3100,
+          "payout": 90000,
+          "exchangeNetUnderFeeBound": -2200,
+          "riskAllowance": 1800,
+          "afterRisk": -4000,
+          "roi": -4.25531914893617,
+          "recoveryReservation": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "reservedCash": 99400,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": true,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
+        ],
+        "proposedBid": null,
+        "queueAhead": null,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790012339502,
+            "exchangeAt": 1790012339531
+          },
+          "poly": {
+            "receivedAt": 1790012339732,
+            "exchangeAt": 1790012339657
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "869df26375064e67791e02b8030722f705236e2ddb796718549ca01f4c5e67d0"
+        },
+        "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+        "kalshiId": "KXU3-26SEP-T4.0",
+        "polyId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct"
+      },
       "strongestDisplayed": {
         "pairId": "KXU3-26SEP-T3.8::urc-usunemp-sa-september-2026-10-02-gt3pt8pct",
         "category": "Economics",
@@ -1331,7 +1446,122 @@
     {
       "category": "Economics",
       "route": "MAKER_TAKER_HYPOTHETICAL",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KXU3-26SEP-T4.0::urc-usunemp-sa-september-2026-10-02-gt4pt0pct",
+        "category": "Economics",
+        "at": 1790012340260,
+        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "aSide": "no",
+        "bSide": "yes",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "WITHIN_BASELINE_HORIZON",
+          "strategy": "NONSPORTS_OUTSIDE_PRIOR_MAKER_RUN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 9,
+          "kalshi": {
+            "quantity": 9,
+            "cost": 23400,
+            "fees": 1300,
+            "levels": [
+              {
+                "price": 2600,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1800
+          },
+          "poly": {
+            "quantity": 9,
+            "cost": 64800,
+            "fees": 1300,
+            "levels": [
+              {
+                "price": 7200,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1300
+          },
+          "cost": 88200,
+          "feeBound": 3100,
+          "payout": 90000,
+          "exchangeNetUnderFeeBound": -1300,
+          "riskAllowance": 1800,
+          "afterRisk": -3100,
+          "roi": -3.329752953813104,
+          "recoveryReservation": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "reservedCash": 98500,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "TAKER_COEFFICIENT_FALLBACK_FOR_PROPOSED_MAKER; NO_REBATES"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": false,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
+          "RESTING_BID_IS_NOT_AVAILABLE_FILL"
+        ],
+        "proposedBid": 2600,
+        "queueAhead": 3100,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790012339502,
+            "exchangeAt": 1790012339531
+          },
+          "poly": {
+            "receivedAt": 1790012339732,
+            "exchangeAt": 1790012339657
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "869df26375064e67791e02b8030722f705236e2ddb796718549ca01f4c5e67d0"
+        },
+        "title": "Will the unemployment rate (U-3) be above 4.0% in September?",
+        "kalshiId": "KXU3-26SEP-T4.0",
+        "polyId": "urc-usunemp-sa-september-2026-10-02-gt4pt0pct"
+      },
       "strongestDisplayed": {
         "pairId": "KXU3-26SEP-T3.8::urc-usunemp-sa-september-2026-10-02-gt3pt8pct",
         "category": "Economics",
@@ -1458,12 +1688,12 @@
       "category": "Elections",
       "route": "TAKER_TAKER",
       "strongestFresh": {
-        "pairId": "CONTROLS-2026-R::paccc-usse-midterms-2026-11-03-rep",
+        "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
         "category": "Elections",
-        "at": 1790010836492,
+        "at": 1790011794558,
         "route": "TAKER_TAKER",
-        "aSide": "yes",
-        "bSide": "no",
+        "aSide": "no",
+        "bSide": "yes",
         "inverted": false,
         "classification": "UNVERIFIED_PRICE_COMPARISON",
         "labels": {
@@ -1485,40 +1715,40 @@
           "quantity": 9,
           "kalshi": {
             "quantity": 9,
-            "cost": 36000,
-            "fees": 1600,
+            "cost": 80100,
+            "fees": 700,
             "levels": [
               {
-                "price": 4000,
+                "price": 8900,
                 "quantity": 9
               }
             ],
-            "feeBound": 1800
+            "feeBound": 900
           },
           "poly": {
             "quantity": 9,
-            "cost": 52830,
-            "fees": 1500,
+            "cost": 7200,
+            "fees": 500,
             "levels": [
               {
-                "price": 5870,
+                "price": 800,
                 "quantity": 9
               }
             ],
-            "feeBound": 1500
+            "feeBound": 500
           },
-          "cost": 88830,
-          "feeBound": 3300,
+          "cost": 87300,
+          "feeBound": 1400,
           "payout": 90000,
-          "exchangeNetUnderFeeBound": -2130,
+          "exchangeNetUnderFeeBound": 1300,
           "riskAllowance": 1800,
-          "afterRisk": -3930,
-          "roi": -4.183966783775152,
+          "afterRisk": -500,
+          "roi": -0.5524861878453038,
           "recoveryReservation": {
             "kalshi": 900,
             "poly": 4500
           },
-          "reservedCash": 99330,
+          "reservedCash": 95900,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -1553,12 +1783,12 @@
         "queueAhead": null,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010836157,
-            "exchangeAt": 1790010836174
+            "receivedAt": 1790011793043,
+            "exchangeAt": 1790011793029
           },
           "poly": {
-            "receivedAt": 1790010834816,
-            "exchangeAt": 1790010834770
+            "receivedAt": 1790011794461,
+            "exchangeAt": 1790011794328
           }
         },
         "feeSources": [
@@ -1568,11 +1798,11 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "9f11ac976c85b85b03843755eb37d6d77c2e24d0585e1c00ced3879ba1c239b4"
+          "bookSha256": "0bb105aa1fff92d099c3df5037a5b66b08e38e30d9be82d9232e6b193aa1e250"
         },
-        "title": "Will Republicans win the U.S. Senate in 2026?",
-        "kalshiId": "CONTROLS-2026-R",
-        "polyId": "paccc-usse-midterms-2026-11-03-rep"
+        "title": "Will Alexandria Ocasio-Cortez announce a run for President of the United States before Jan 1, 2027?",
+        "kalshiId": "KXAOCRUN-28-27JAN01",
+        "polyId": "cranc-uspres28-12-31-2026-aleoca"
       },
       "strongestDisplayed": {
         "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
@@ -1701,12 +1931,12 @@
       "category": "Elections",
       "route": "MAKER_TAKER_HYPOTHETICAL",
       "strongestFresh": {
-        "pairId": "CONTROLS-2026-R::paccc-usse-midterms-2026-11-03-rep",
+        "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
         "category": "Elections",
-        "at": 1790010836492,
+        "at": 1790011794558,
         "route": "MAKER_TAKER_HYPOTHETICAL",
-        "aSide": "yes",
-        "bSide": "no",
+        "aSide": "no",
+        "bSide": "yes",
         "inverted": false,
         "classification": "UNVERIFIED_PRICE_COMPARISON",
         "labels": {
@@ -1720,48 +1950,46 @@
         "dataReasons": [],
         "policyReasons": [
           "SETTLEMENT_RULES_NEED_REVIEW",
-          "OUTSIDE_SETTLEMENT_HORIZON",
-          "BELOW_10_CENT_PROFIT_FLOOR",
-          "BELOW_1_PERCENT_ROI"
+          "OUTSIDE_SETTLEMENT_HORIZON"
         ],
         "economics": {
           "quantity": 9,
           "kalshi": {
             "quantity": 9,
-            "cost": 35100,
-            "fees": 1500,
+            "cost": 77400,
+            "fees": 800,
             "levels": [
               {
-                "price": 3900,
+                "price": 8600,
                 "quantity": 9
               }
             ],
-            "feeBound": 1800
+            "feeBound": 900
           },
           "poly": {
             "quantity": 9,
-            "cost": 52830,
-            "fees": 1500,
+            "cost": 7200,
+            "fees": 500,
             "levels": [
               {
-                "price": 5870,
+                "price": 800,
                 "quantity": 9
               }
             ],
-            "feeBound": 1500
+            "feeBound": 500
           },
-          "cost": 87930,
-          "feeBound": 3300,
+          "cost": 84600,
+          "feeBound": 1400,
           "payout": 90000,
-          "exchangeNetUnderFeeBound": -1230,
+          "exchangeNetUnderFeeBound": 4000,
           "riskAllowance": 1800,
-          "afterRisk": -3030,
-          "roi": -3.2570138664946793,
+          "afterRisk": 2200,
+          "roi": 2.5056947608200453,
           "recoveryReservation": {
             "kalshi": 900,
             "poly": 4500
           },
-          "reservedCash": 98430,
+          "reservedCash": 93200,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -1786,23 +2014,21 @@
         "qualificationReasons": [
           "SETTLEMENT_RULES_NEED_REVIEW",
           "OUTSIDE_SETTLEMENT_HORIZON",
-          "BELOW_10_CENT_PROFIT_FLOOR",
-          "BELOW_1_PERCENT_ROI",
           "ORDER_DISABLED",
           "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
           "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
           "RESTING_BID_IS_NOT_AVAILABLE_FILL"
         ],
-        "proposedBid": 3900,
-        "queueAhead": 11591.17,
+        "proposedBid": 8600,
+        "queueAhead": 210.13,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010836157,
-            "exchangeAt": 1790010836174
+            "receivedAt": 1790011793043,
+            "exchangeAt": 1790011793029
           },
           "poly": {
-            "receivedAt": 1790010834816,
-            "exchangeAt": 1790010834770
+            "receivedAt": 1790011794461,
+            "exchangeAt": 1790011794328
           }
         },
         "feeSources": [
@@ -1812,11 +2038,11 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "9f11ac976c85b85b03843755eb37d6d77c2e24d0585e1c00ced3879ba1c239b4"
+          "bookSha256": "0bb105aa1fff92d099c3df5037a5b66b08e38e30d9be82d9232e6b193aa1e250"
         },
-        "title": "Will Republicans win the U.S. Senate in 2026?",
-        "kalshiId": "CONTROLS-2026-R",
-        "polyId": "paccc-usse-midterms-2026-11-03-rep"
+        "title": "Will Alexandria Ocasio-Cortez announce a run for President of the United States before Jan 1, 2027?",
+        "kalshiId": "KXAOCRUN-28-27JAN01",
+        "polyId": "cranc-uspres28-12-31-2026-aleoca"
       },
       "strongestDisplayed": {
         "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
@@ -1941,7 +2167,123 @@
     {
       "category": "Entertainment",
       "route": "TAKER_TAKER",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KX1ALBUM-26DEC-BAB::ccpc-bilbrd-1album-any2026-lilbab",
+        "category": "Entertainment",
+        "at": 1790011058753,
+        "route": "TAKER_TAKER",
+        "aSide": "no",
+        "bSide": "yes",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "NONSPORTS_OUTSIDE_PRIOR_MAKER_RUN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 9,
+          "kalshi": {
+            "quantity": 9,
+            "cost": 78300,
+            "fees": 800,
+            "levels": [
+              {
+                "price": 8700,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 900
+          },
+          "poly": {
+            "quantity": 9,
+            "cost": 10800,
+            "fees": 700,
+            "levels": [
+              {
+                "price": 1200,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 700
+          },
+          "cost": 89100,
+          "feeBound": 1600,
+          "payout": 90000,
+          "exchangeNetUnderFeeBound": -700,
+          "riskAllowance": 1800,
+          "afterRisk": -2500,
+          "roi": -2.7027027027027026,
+          "recoveryReservation": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "reservedCash": 97900,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": true,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
+        ],
+        "proposedBid": null,
+        "queueAhead": null,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011058412,
+            "exchangeAt": 1790011058425
+          },
+          "poly": {
+            "receivedAt": 1790011058542,
+            "exchangeAt": 1790011058450
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "a106b963f0672d16de7a710ea1821e723f05120b0c7264aad88ba088e15aeecf"
+        },
+        "title": "Will Lil Baby have a #1 album this year?",
+        "kalshiId": "KX1ALBUM-26DEC-BAB",
+        "polyId": "ccpc-bilbrd-1album-any2026-lilbab"
+      },
       "strongestDisplayed": {
         "pairId": "KX1ALBUM-26DEC-BAB::ccpc-bilbrd-1album-any2026-lilbab",
         "category": "Entertainment",
@@ -2072,11 +2414,10 @@
     {
       "category": "Entertainment",
       "route": "MAKER_TAKER_HYPOTHETICAL",
-      "strongestFresh": null,
-      "strongestDisplayed": {
+      "strongestFresh": {
         "pairId": "KX1ALBUM-26DEC-BEY::ccpc-bilbrd-1album-any2026-beyonc",
         "category": "Entertainment",
-        "at": 1790010792451,
+        "at": 1790011477211,
         "route": "MAKER_TAKER_HYPOTHETICAL",
         "aSide": "yes",
         "bSide": "no",
@@ -2090,10 +2431,7 @@
         "settlementBlockers": [
           "No reviewed settlement profile for this contract family"
         ],
-        "dataReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE"
-        ],
+        "dataReasons": [],
         "policyReasons": [
           "SETTLEMENT_RULES_NEED_REVIEW",
           "OUTSIDE_SETTLEMENT_HORIZON"
@@ -2162,8 +2500,6 @@
         "displayedDepthExecutable": false,
         "qualifies": false,
         "qualificationReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE",
           "SETTLEMENT_RULES_NEED_REVIEW",
           "OUTSIDE_SETTLEMENT_HORIZON",
           "ORDER_DISABLED",
@@ -2172,15 +2508,15 @@
           "RESTING_BID_IS_NOT_AVAILABLE_FILL"
         ],
         "proposedBid": 800,
-        "queueAhead": 10,
+        "queueAhead": 10.75,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010791793,
-            "exchangeAt": null
+            "receivedAt": 1790011477136,
+            "exchangeAt": 1790011477149
           },
           "poly": {
-            "receivedAt": 1790010791797,
-            "exchangeAt": 1790010268545
+            "receivedAt": 1790011475908,
+            "exchangeAt": 1790011475894
           }
         },
         "feeSources": [
@@ -2190,7 +2526,132 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "6d00e769f50ee9094fe6acd4b34a92213fc8b2bbae3b8df76389460821da7522"
+          "bookSha256": "58fda56b70b6851af06340a0eb9fcbbde9b4804cba70ab571613c13b2ed35615"
+        },
+        "title": "Will Beyoncé have a #1 album this year?",
+        "kalshiId": "KX1ALBUM-26DEC-BEY",
+        "polyId": "ccpc-bilbrd-1album-any2026-beyonc"
+      },
+      "strongestDisplayed": {
+        "pairId": "KX1ALBUM-26DEC-BEY::ccpc-bilbrd-1album-any2026-beyonc",
+        "category": "Entertainment",
+        "at": 1790011221945,
+        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "aSide": "yes",
+        "bSide": "no",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "NONSPORTS_OUTSIDE_PRIOR_MAKER_RUN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [
+          "PM_US_RECEIPT_STALE",
+          "PM_US_EXCHANGE_TIME_STALE",
+          "BOOKS_UNSYNCHRONIZED"
+        ],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON"
+        ],
+        "economics": {
+          "quantity": 10,
+          "kalshi": {
+            "quantity": 10,
+            "cost": 6000,
+            "fees": 400,
+            "levels": [
+              {
+                "price": 600,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 1000
+          },
+          "poly": {
+            "quantity": 10,
+            "cost": 74600,
+            "fees": 1300,
+            "levels": [
+              {
+                "price": 7100,
+                "quantity": 1
+              },
+              {
+                "price": 7500,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1300
+          },
+          "cost": 80600,
+          "feeBound": 2300,
+          "payout": 100000,
+          "exchangeNetUnderFeeBound": 17100,
+          "riskAllowance": 2000,
+          "afterRisk": 15100,
+          "roi": 17.785630153121318,
+          "recoveryReservation": {
+            "kalshi": 1000,
+            "poly": 5000
+          },
+          "reservedCash": 90900,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "TAKER_COEFFICIENT_FALLBACK_FOR_PROPOSED_MAKER; NO_REBATES"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": false,
+        "qualifies": false,
+        "qualificationReasons": [
+          "PM_US_RECEIPT_STALE",
+          "PM_US_EXCHANGE_TIME_STALE",
+          "BOOKS_UNSYNCHRONIZED",
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
+          "RESTING_BID_IS_NOT_AVAILABLE_FILL"
+        ],
+        "proposedBid": 600,
+        "queueAhead": 10,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011221940,
+            "exchangeAt": 1790011221951
+          },
+          "poly": {
+            "receivedAt": 1790011039814,
+            "exchangeAt": 1790011039752
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "e5ffb27bd76a8d8a12af18a49de0fa97944f8f880cb7c965867058bf0fbd4bca"
         },
         "title": "Will Beyoncé have a #1 album this year?",
         "kalshiId": "KX1ALBUM-26DEC-BEY",
@@ -2935,7 +3396,123 @@
     {
       "category": "Sports/cfb",
       "route": "TAKER_TAKER",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KXNCAAFAAC-26-ECU::tec-cfb-aacchamp-2026-12-05-w-ecar",
+        "category": "Sports/cfb",
+        "at": 1790011173885,
+        "route": "TAKER_TAKER",
+        "aSide": "yes",
+        "bSide": "no",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "PRIOR_EVENT_WINDOW_OR_UNKNOWN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 8,
+          "kalshi": {
+            "quantity": 8,
+            "cost": 1600,
+            "fees": 200,
+            "levels": [
+              {
+                "price": 200,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 800
+          },
+          "poly": {
+            "quantity": 8,
+            "cost": 79200,
+            "fees": 100,
+            "levels": [
+              {
+                "price": 9900,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 100
+          },
+          "cost": 80800,
+          "feeBound": 900,
+          "payout": 80000,
+          "exchangeNetUnderFeeBound": -1700,
+          "riskAllowance": 1600,
+          "afterRisk": -3300,
+          "roi": -3.961584633853541,
+          "recoveryReservation": {
+            "kalshi": 800,
+            "poly": 4000
+          },
+          "reservedCash": 88100,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": true,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
+        ],
+        "proposedBid": null,
+        "queueAhead": null,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011173608,
+            "exchangeAt": 1790011173609
+          },
+          "poly": {
+            "receivedAt": 1790011173469,
+            "exchangeAt": 1790011173366
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "23e56954ed83a14c35ef04b3a1a615573acfac2dfdb3b2e991de7dc821c27821"
+        },
+        "title": "Will East Carolina win the College Football American Athletic Conference Championship?",
+        "kalshiId": "KXNCAAFAAC-26-ECU",
+        "polyId": "tec-cfb-aacchamp-2026-12-05-w-ecar"
+      },
       "strongestDisplayed": {
         "pairId": "KXNCAAFAAC-26-CHAR::tec-cfb-aacchamp-2026-12-05-w-charlt",
         "category": "Sports/cfb",
@@ -3062,7 +3639,124 @@
     {
       "category": "Sports/cfb",
       "route": "MAKER_TAKER_HYPOTHETICAL",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KXNCAAFAAC-26-ECU::tec-cfb-aacchamp-2026-12-05-w-ecar",
+        "category": "Sports/cfb",
+        "at": 1790011173885,
+        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "aSide": "yes",
+        "bSide": "no",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "PRIOR_EVENT_WINDOW_OR_UNKNOWN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 8,
+          "kalshi": {
+            "quantity": 8,
+            "cost": 800,
+            "fees": 100,
+            "levels": [
+              {
+                "price": 100,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 800
+          },
+          "poly": {
+            "quantity": 8,
+            "cost": 79200,
+            "fees": 100,
+            "levels": [
+              {
+                "price": 9900,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 100
+          },
+          "cost": 80000,
+          "feeBound": 900,
+          "payout": 80000,
+          "exchangeNetUnderFeeBound": -900,
+          "riskAllowance": 1600,
+          "afterRisk": -2500,
+          "roi": -3.0303030303030303,
+          "recoveryReservation": {
+            "kalshi": 800,
+            "poly": 4000
+          },
+          "reservedCash": 87300,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "TAKER_COEFFICIENT_FALLBACK_FOR_PROPOSED_MAKER; NO_REBATES"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": false,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
+          "RESTING_BID_IS_NOT_AVAILABLE_FILL"
+        ],
+        "proposedBid": 100,
+        "queueAhead": 3157,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011173608,
+            "exchangeAt": 1790011173609
+          },
+          "poly": {
+            "receivedAt": 1790011173469,
+            "exchangeAt": 1790011173366
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "23e56954ed83a14c35ef04b3a1a615573acfac2dfdb3b2e991de7dc821c27821"
+        },
+        "title": "Will East Carolina win the College Football American Athletic Conference Championship?",
+        "kalshiId": "KXNCAAFAAC-26-ECU",
+        "polyId": "tec-cfb-aacchamp-2026-12-05-w-ecar"
+      },
       "strongestDisplayed": {
         "pairId": "KXNCAAFAAC-26-ARMY::tec-cfb-aacchamp-2026-12-05-w-army",
         "category": "Sports/cfb",
@@ -3190,7 +3884,123 @@
     {
       "category": "Sports/epl",
       "route": "TAKER_TAKER",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KXEPLRELEGATION-27-BOU::aachc-epl-2027-05-30-relegation-bor",
+        "category": "Sports/epl",
+        "at": 1790011103807,
+        "route": "TAKER_TAKER",
+        "aSide": "yes",
+        "bSide": "no",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "PRIOR_EVENT_WINDOW_OR_UNKNOWN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 8,
+          "kalshi": {
+            "quantity": 8,
+            "cost": 8800,
+            "fees": 600,
+            "levels": [
+              {
+                "price": 1100,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 800
+          },
+          "poly": {
+            "quantity": 8,
+            "cost": 71200,
+            "fees": 500,
+            "levels": [
+              {
+                "price": 8900,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 500
+          },
+          "cost": 80000,
+          "feeBound": 1300,
+          "payout": 80000,
+          "exchangeNetUnderFeeBound": -1300,
+          "riskAllowance": 1600,
+          "afterRisk": -2900,
+          "roi": -3.4981905910735827,
+          "recoveryReservation": {
+            "kalshi": 800,
+            "poly": 4000
+          },
+          "reservedCash": 87700,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": true,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
+        ],
+        "proposedBid": null,
+        "queueAhead": null,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011103628,
+            "exchangeAt": 1790011103556
+          },
+          "poly": {
+            "receivedAt": 1790011103392,
+            "exchangeAt": 1790011103350
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "41d848463ff8d85b7507af80f2f1927a718c4ee51e20ade7e930667c5f5dcd43"
+        },
+        "title": "Will Bournemouth be relegated from EPL in 2026-27 Season?",
+        "kalshiId": "KXEPLRELEGATION-27-BOU",
+        "polyId": "aachc-epl-2027-05-30-relegation-bor"
+      },
       "strongestDisplayed": {
         "pairId": "KXEPLRELEGATION-27-ARS::aachc-epl-2027-05-30-relegation-ars",
         "category": "Sports/epl",
@@ -3317,7 +4127,124 @@
     {
       "category": "Sports/epl",
       "route": "MAKER_TAKER_HYPOTHETICAL",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KXEPLRELEGATION-27-BOU::aachc-epl-2027-05-30-relegation-bor",
+        "category": "Sports/epl",
+        "at": 1790011103807,
+        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "aSide": "yes",
+        "bSide": "no",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "PRIOR_EVENT_WINDOW_OR_UNKNOWN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 9,
+          "kalshi": {
+            "quantity": 9,
+            "cost": 6300,
+            "fees": 500,
+            "levels": [
+              {
+                "price": 700,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 900
+          },
+          "poly": {
+            "quantity": 9,
+            "cost": 80100,
+            "fees": 600,
+            "levels": [
+              {
+                "price": 8900,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 600
+          },
+          "cost": 86400,
+          "feeBound": 1500,
+          "payout": 90000,
+          "exchangeNetUnderFeeBound": 2100,
+          "riskAllowance": 1800,
+          "afterRisk": 300,
+          "roi": 0.33444816053511706,
+          "recoveryReservation": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "reservedCash": 95100,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "TAKER_COEFFICIENT_FALLBACK_FOR_PROPOSED_MAKER; NO_REBATES"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": false,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
+          "RESTING_BID_IS_NOT_AVAILABLE_FILL"
+        ],
+        "proposedBid": 700,
+        "queueAhead": 5,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011103628,
+            "exchangeAt": 1790011103556
+          },
+          "poly": {
+            "receivedAt": 1790011103392,
+            "exchangeAt": 1790011103350
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "41d848463ff8d85b7507af80f2f1927a718c4ee51e20ade7e930667c5f5dcd43"
+        },
+        "title": "Will Bournemouth be relegated from EPL in 2026-27 Season?",
+        "kalshiId": "KXEPLRELEGATION-27-BOU",
+        "polyId": "aachc-epl-2027-05-30-relegation-bor"
+      },
       "strongestDisplayed": {
         "pairId": "KXEPLRELEGATION-27-BOU::aachc-epl-2027-05-30-relegation-bor",
         "category": "Sports/epl",
@@ -3446,9 +4373,9 @@
       "category": "Sports/kbo",
       "route": "TAKER_TAKER",
       "strongestFresh": {
-        "pairId": "KXKBOGAME-26SEP230530KIADOO-KIA::aec-kbo-dbo-kti-2026-09-23",
+        "pairId": "KXKBOGAME-26SEP220530LOTHAN-LOT::aec-kbo-hea-lgo-2026-09-22",
         "category": "Sports/kbo",
-        "at": 1790010797453,
+        "at": 1790011362104,
         "route": "TAKER_TAKER",
         "aSide": "yes",
         "bSide": "yes",
@@ -3469,47 +4396,43 @@
           "BELOW_1_PERCENT_ROI"
         ],
         "economics": {
-          "quantity": 7,
+          "quantity": 8,
           "kalshi": {
-            "quantity": 7,
-            "cost": 39000,
-            "fees": 1300,
+            "quantity": 8,
+            "cost": 33600,
+            "fees": 1400,
             "levels": [
               {
-                "price": 5400,
-                "quantity": 1
-              },
+                "price": 4200,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 1600
+          },
+          "poly": {
+            "quantity": 8,
+            "cost": 46400,
+            "fees": 1400,
+            "levels": [
               {
-                "price": 5600,
-                "quantity": 6
+                "price": 5800,
+                "quantity": 8
               }
             ],
             "feeBound": 1400
           },
-          "poly": {
-            "quantity": 7,
-            "cost": 48300,
-            "fees": 1000,
-            "levels": [
-              {
-                "price": 6900,
-                "quantity": 7
-              }
-            ],
-            "feeBound": 1000
-          },
-          "cost": 87300,
-          "feeBound": 2400,
-          "payout": 70000,
-          "exchangeNetUnderFeeBound": -19700,
-          "riskAllowance": 1400,
-          "afterRisk": -21100,
-          "roi": -23.161361141602637,
+          "cost": 80000,
+          "feeBound": 3000,
+          "payout": 80000,
+          "exchangeNetUnderFeeBound": -3000,
+          "riskAllowance": 1600,
+          "afterRisk": -4600,
+          "roi": -5.4373522458628845,
           "recoveryReservation": {
-            "kalshi": 700,
-            "poly": 3500
+            "kalshi": 800,
+            "poly": 4000
           },
-          "reservedCash": 95300,
+          "reservedCash": 89400,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -3543,12 +4466,12 @@
         "queueAhead": null,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010795993,
-            "exchangeAt": 1790010796009
+            "receivedAt": 1790011361295,
+            "exchangeAt": 1790011361306
           },
           "poly": {
-            "receivedAt": 1790010796818,
-            "exchangeAt": 1790010796796
+            "receivedAt": 1790011361307,
+            "exchangeAt": 1790011361258
           }
         },
         "feeSources": [
@@ -3558,141 +4481,17 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "c0d11c7adbc0b288556e809353a2ab9959b9d165670a325145b320602d26d1c4"
+          "bookSha256": "6375c478e06193f1fb1fc83171245050d86cca9425dfe73ec241ea270aa14991"
         },
-        "title": "Kia Tigers wins",
-        "kalshiId": "KXKBOGAME-26SEP230530KIADOO-KIA",
-        "polyId": "aec-kbo-dbo-kti-2026-09-23"
+        "title": "Lotte Giants wins",
+        "kalshiId": "KXKBOGAME-26SEP220530LOTHAN-LOT",
+        "polyId": "aec-kbo-hea-lgo-2026-09-22"
       },
       "strongestDisplayed": {
-        "pairId": "KXKBOGAME-26SEP220530DOOKIW-DOO::aec-kbo-khi-dbo-2026-09-22",
+        "pairId": "KXKBOGAME-26SEP220530LOTHAN-LOT::aec-kbo-hea-lgo-2026-09-22",
         "category": "Sports/kbo",
-        "at": 1790010792451,
+        "at": 1790011362104,
         "route": "TAKER_TAKER",
-        "aSide": "no",
-        "bSide": "no",
-        "inverted": true,
-        "classification": "CONDITIONAL_PAIR",
-        "labels": {
-          "sameDay": "NOT_SAME_DAY",
-          "horizon": "WITHIN_BASELINE_HORIZON",
-          "strategy": "OUTSIDE_PRIOR_EVENT_WINDOW"
-        },
-        "settlementBlockers": [
-          "Ordinary outcome matches, but exceptional payouts are not proven equivalent"
-        ],
-        "dataReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE"
-        ],
-        "policyReasons": [
-          "SETTLEMENT_RULES_NEED_REVIEW",
-          "BELOW_10_CENT_PROFIT_FLOOR",
-          "BELOW_1_PERCENT_ROI"
-        ],
-        "economics": {
-          "quantity": 8,
-          "kalshi": {
-            "quantity": 8,
-            "cost": 25600,
-            "fees": 1300,
-            "levels": [
-              {
-                "price": 3200,
-                "quantity": 8
-              }
-            ],
-            "feeBound": 1600
-          },
-          "poly": {
-            "quantity": 8,
-            "cost": 55200,
-            "fees": 1200,
-            "levels": [
-              {
-                "price": 6900,
-                "quantity": 8
-              }
-            ],
-            "feeBound": 1200
-          },
-          "cost": 80800,
-          "feeBound": 2800,
-          "payout": 80000,
-          "exchangeNetUnderFeeBound": -3600,
-          "riskAllowance": 1600,
-          "afterRisk": -5200,
-          "roi": -6.103286384976526,
-          "recoveryReservation": {
-            "kalshi": 800,
-            "poly": 4000
-          },
-          "reservedCash": 90000,
-          "recoveryIsExpense": false,
-          "feeProvenance": {
-            "kalshi": {
-              "rate": 700,
-              "rounding": "ceil",
-              "aggregation": "level",
-              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
-              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
-            },
-            "poly": {
-              "rate": 695,
-              "rounding": "even",
-              "aggregation": "order",
-              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
-              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
-            },
-            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
-          }
-        },
-        "displayedDepthExecutable": false,
-        "qualifies": false,
-        "qualificationReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE",
-          "SETTLEMENT_RULES_NEED_REVIEW",
-          "BELOW_10_CENT_PROFIT_FLOOR",
-          "BELOW_1_PERCENT_ROI",
-          "ORDER_DISABLED",
-          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
-          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
-        ],
-        "proposedBid": null,
-        "queueAhead": null,
-        "timestamps": {
-          "kalshi": {
-            "receivedAt": 1790010791849,
-            "exchangeAt": null
-          },
-          "poly": {
-            "receivedAt": 1790010791797,
-            "exchangeAt": 1790010783636
-          }
-        },
-        "feeSources": [
-          "https://docs.kalshi.com/getting_started/fee_rounding",
-          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
-          "https://docs.polymarket.us/fees"
-        ],
-        "evidence": {
-          "file": "evidence.ndjson",
-          "bookSha256": "170665889d5a06f2946a1d7154c8a58a4766018776aadcafb06bca3d773f2bd4"
-        },
-        "title": "Doosan Bears wins",
-        "kalshiId": "KXKBOGAME-26SEP220530DOOKIW-DOO",
-        "polyId": "aec-kbo-khi-dbo-2026-09-22"
-      }
-    },
-    {
-      "category": "Sports/kbo",
-      "route": "MAKER_TAKER_HYPOTHETICAL",
-      "strongestFresh": {
-        "pairId": "KXKBOGAME-26SEP230530KIADOO-KIA::aec-kbo-dbo-kti-2026-09-23",
-        "category": "Sports/kbo",
-        "at": 1790010797453,
-        "route": "MAKER_TAKER_HYPOTHETICAL",
         "aSide": "yes",
         "bSide": "yes",
         "inverted": true,
@@ -3715,11 +4514,11 @@
           "quantity": 8,
           "kalshi": {
             "quantity": 8,
-            "cost": 28000,
-            "fees": 1300,
+            "cost": 33600,
+            "fees": 1400,
             "levels": [
               {
-                "price": 3500,
+                "price": 4200,
                 "quantity": 8
               }
             ],
@@ -3727,28 +4526,147 @@
           },
           "poly": {
             "quantity": 8,
-            "cost": 55200,
-            "fees": 1200,
+            "cost": 46400,
+            "fees": 1400,
             "levels": [
               {
-                "price": 6900,
+                "price": 5800,
                 "quantity": 8
               }
             ],
-            "feeBound": 1200
+            "feeBound": 1400
           },
-          "cost": 83200,
-          "feeBound": 2800,
+          "cost": 80000,
+          "feeBound": 3000,
           "payout": 80000,
-          "exchangeNetUnderFeeBound": -6000,
+          "exchangeNetUnderFeeBound": -3000,
           "riskAllowance": 1600,
-          "afterRisk": -7600,
-          "roi": -8.67579908675799,
+          "afterRisk": -4600,
+          "roi": -5.4373522458628845,
           "recoveryReservation": {
             "kalshi": 800,
             "poly": 4000
           },
-          "reservedCash": 92400,
+          "reservedCash": 89400,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": true,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
+        ],
+        "proposedBid": null,
+        "queueAhead": null,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011361295,
+            "exchangeAt": 1790011361306
+          },
+          "poly": {
+            "receivedAt": 1790011361307,
+            "exchangeAt": 1790011361258
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "6375c478e06193f1fb1fc83171245050d86cca9425dfe73ec241ea270aa14991"
+        },
+        "title": "Lotte Giants wins",
+        "kalshiId": "KXKBOGAME-26SEP220530LOTHAN-LOT",
+        "polyId": "aec-kbo-hea-lgo-2026-09-22"
+      }
+    },
+    {
+      "category": "Sports/kbo",
+      "route": "MAKER_TAKER_HYPOTHETICAL",
+      "strongestFresh": {
+        "pairId": "KXKBOGAME-26SEP220530NCDSAM-NCD::aec-kbo-sla-ndc-2026-09-22",
+        "category": "Sports/kbo",
+        "at": 1790010964643,
+        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "aSide": "yes",
+        "bSide": "yes",
+        "inverted": true,
+        "classification": "CONDITIONAL_PAIR",
+        "labels": {
+          "sameDay": "NOT_SAME_DAY",
+          "horizon": "WITHIN_BASELINE_HORIZON",
+          "strategy": "OUTSIDE_PRIOR_EVENT_WINDOW"
+        },
+        "settlementBlockers": [
+          "Ordinary outcome matches, but exceptional payouts are not proven equivalent"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 9,
+          "kalshi": {
+            "quantity": 9,
+            "cost": 30600,
+            "fees": 1500,
+            "levels": [
+              {
+                "price": 3400,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1800
+          },
+          "poly": {
+            "quantity": 9,
+            "cost": 58500,
+            "fees": 1400,
+            "levels": [
+              {
+                "price": 6500,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1400
+          },
+          "cost": 89100,
+          "feeBound": 3200,
+          "payout": 90000,
+          "exchangeNetUnderFeeBound": -2300,
+          "riskAllowance": 1800,
+          "afterRisk": -4100,
+          "roi": -4.357066950053135,
+          "recoveryReservation": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "reservedCash": 99500,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -3779,16 +4697,16 @@
           "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
           "RESTING_BID_IS_NOT_AVAILABLE_FILL"
         ],
-        "proposedBid": 3500,
-        "queueAhead": 46,
+        "proposedBid": 3400,
+        "queueAhead": 316.02,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010795993,
-            "exchangeAt": 1790010796009
+            "receivedAt": 1790010964575,
+            "exchangeAt": 1790010964591
           },
           "poly": {
-            "receivedAt": 1790010796818,
-            "exchangeAt": 1790010796796
+            "receivedAt": 1790010964458,
+            "exchangeAt": 1790010964397
           }
         },
         "feeSources": [
@@ -3798,11 +4716,11 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "c0d11c7adbc0b288556e809353a2ab9959b9d165670a325145b320602d26d1c4"
+          "bookSha256": "3c865067e90ff786f7fb53f77e70c7281ce92442562df38551ad6d1f01d297ea"
         },
-        "title": "Kia Tigers wins",
-        "kalshiId": "KXKBOGAME-26SEP230530KIADOO-KIA",
-        "polyId": "aec-kbo-dbo-kti-2026-09-23"
+        "title": "NC Dinos wins",
+        "kalshiId": "KXKBOGAME-26SEP220530NCDSAM-NCD",
+        "polyId": "aec-kbo-sla-ndc-2026-09-22"
       },
       "strongestDisplayed": {
         "pairId": "KXKBOGAME-26SEP220530DOOKIW-KIW::aec-kbo-khi-dbo-2026-09-22",
@@ -3936,7 +4854,7 @@
       "strongestFresh": {
         "pairId": "KXMLB-26-ATL::tec-mlb-champ-2026-09-27-atl",
         "category": "Sports/mlb",
-        "at": 1790010841497,
+        "at": 1790012559510,
         "route": "TAKER_TAKER",
         "aSide": "yes",
         "bSide": "no",
@@ -3961,11 +4879,11 @@
           "quantity": 8,
           "kalshi": {
             "quantity": 8,
-            "cost": 5440,
+            "cost": 5120,
             "fees": 400,
             "levels": [
               {
-                "price": 680,
+                "price": 640,
                 "quantity": 8
               }
             ],
@@ -3983,18 +4901,18 @@
             ],
             "feeBound": 400
           },
-          "cost": 79840,
+          "cost": 79520,
           "feeBound": 1200,
           "payout": 80000,
-          "exchangeNetUnderFeeBound": -1040,
+          "exchangeNetUnderFeeBound": -720,
           "riskAllowance": 1600,
-          "afterRisk": -2640,
-          "roi": -3.1945788964181996,
+          "afterRisk": -2320,
+          "roi": -2.818270165208941,
           "recoveryReservation": {
             "kalshi": 800,
             "poly": 4000
           },
-          "reservedCash": 87440,
+          "reservedCash": 87120,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -4029,12 +4947,12 @@
         "queueAhead": null,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010840775,
-            "exchangeAt": 1790010840792
+            "receivedAt": 1790012558982,
+            "exchangeAt": 1790012558967
           },
           "poly": {
-            "receivedAt": 1790010841213,
-            "exchangeAt": 1790010841210
+            "receivedAt": 1790012559071,
+            "exchangeAt": 1790012558974
           }
         },
         "feeSources": [
@@ -4044,143 +4962,17 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "7f96f5e923e54473c9bb92418d4d256d95e62810da56a06be29b29c90247e37f"
+          "bookSha256": "88cd43df589199eefd856fa2f4bcbf10ab5f82a791d844839e347e4828e7db3f"
         },
         "title": "Will Atlanta win the 2026 Pro Baseball Championship?",
         "kalshiId": "KXMLB-26-ATL",
         "polyId": "tec-mlb-champ-2026-09-27-atl"
       },
       "strongestDisplayed": {
-        "pairId": "KXMLB-26-AZ::tec-mlb-champ-2026-09-27-az",
-        "category": "Sports/mlb",
-        "at": 1790010792451,
-        "route": "TAKER_TAKER",
-        "aSide": "yes",
-        "bSide": "no",
-        "inverted": false,
-        "classification": "UNVERIFIED_PRICE_COMPARISON",
-        "labels": {
-          "sameDay": "EVENT_DAY_UNKNOWN",
-          "horizon": "OUTSIDE_BASELINE_HORIZON",
-          "strategy": "PRIOR_EVENT_WINDOW_OR_UNKNOWN"
-        },
-        "settlementBlockers": [
-          "No reviewed settlement profile for this contract family"
-        ],
-        "dataReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE"
-        ],
-        "policyReasons": [
-          "SETTLEMENT_RULES_NEED_REVIEW",
-          "OUTSIDE_SETTLEMENT_HORIZON",
-          "BELOW_10_CENT_PROFIT_FLOOR",
-          "BELOW_1_PERCENT_ROI"
-        ],
-        "economics": {
-          "quantity": 8,
-          "kalshi": {
-            "quantity": 8,
-            "cost": 160,
-            "fees": 100,
-            "levels": [
-              {
-                "price": 20,
-                "quantity": 8
-              }
-            ],
-            "feeBound": 800
-          },
-          "poly": {
-            "quantity": 8,
-            "cost": 79920,
-            "fees": 0,
-            "levels": [
-              {
-                "price": 9990,
-                "quantity": 8
-              }
-            ],
-            "feeBound": 0
-          },
-          "cost": 80080,
-          "feeBound": 800,
-          "payout": 80000,
-          "exchangeNetUnderFeeBound": -880,
-          "riskAllowance": 1600,
-          "afterRisk": -2480,
-          "roi": -3.0067895247332688,
-          "recoveryReservation": {
-            "kalshi": 800,
-            "poly": 4000
-          },
-          "reservedCash": 87280,
-          "recoveryIsExpense": false,
-          "feeProvenance": {
-            "kalshi": {
-              "rate": 700,
-              "rounding": "ceil",
-              "aggregation": "level",
-              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
-              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
-            },
-            "poly": {
-              "rate": 695,
-              "rounding": "even",
-              "aggregation": "order",
-              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
-              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
-            },
-            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
-          }
-        },
-        "displayedDepthExecutable": false,
-        "qualifies": false,
-        "qualificationReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE",
-          "SETTLEMENT_RULES_NEED_REVIEW",
-          "OUTSIDE_SETTLEMENT_HORIZON",
-          "BELOW_10_CENT_PROFIT_FLOOR",
-          "BELOW_1_PERCENT_ROI",
-          "ORDER_DISABLED",
-          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
-          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
-        ],
-        "proposedBid": null,
-        "queueAhead": null,
-        "timestamps": {
-          "kalshi": {
-            "receivedAt": 1790010791934,
-            "exchangeAt": null
-          },
-          "poly": {
-            "receivedAt": 1790010791797,
-            "exchangeAt": 1790010784091
-          }
-        },
-        "feeSources": [
-          "https://docs.kalshi.com/getting_started/fee_rounding",
-          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
-          "https://docs.polymarket.us/fees"
-        ],
-        "evidence": {
-          "file": "evidence.ndjson",
-          "bookSha256": "d655277a4787e853db6fc4b253a7a4e5f41fec0185bce37ea547b49956837266"
-        },
-        "title": "Will Arizona win the 2026 Pro Baseball Championship?",
-        "kalshiId": "KXMLB-26-AZ",
-        "polyId": "tec-mlb-champ-2026-09-27-az"
-      }
-    },
-    {
-      "category": "Sports/mlb",
-      "route": "MAKER_TAKER_HYPOTHETICAL",
-      "strongestFresh": {
         "pairId": "KXMLB-26-ATL::tec-mlb-champ-2026-09-27-atl",
         "category": "Sports/mlb",
-        "at": 1790010841497,
-        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "at": 1790012559510,
+        "route": "TAKER_TAKER",
         "aSide": "yes",
         "bSide": "no",
         "inverted": false,
@@ -4245,7 +5037,7 @@
               "rounding": "ceil",
               "aggregation": "level",
               "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
-              "scope": "TAKER_COEFFICIENT_FALLBACK_FOR_PROPOSED_MAKER; NO_REBATES"
+              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
             },
             "poly": {
               "rate": 695,
@@ -4257,7 +5049,7 @@
             "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
           }
         },
-        "displayedDepthExecutable": false,
+        "displayedDepthExecutable": true,
         "qualifies": false,
         "qualificationReasons": [
           "SETTLEMENT_RULES_NEED_REVIEW",
@@ -4266,19 +5058,18 @@
           "BELOW_1_PERCENT_ROI",
           "ORDER_DISABLED",
           "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
-          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
-          "RESTING_BID_IS_NOT_AVAILABLE_FILL"
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
         ],
-        "proposedBid": 640,
-        "queueAhead": 36.48,
+        "proposedBid": null,
+        "queueAhead": null,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010840775,
-            "exchangeAt": 1790010840792
+            "receivedAt": 1790012558982,
+            "exchangeAt": 1790012558967
           },
           "poly": {
-            "receivedAt": 1790010841213,
-            "exchangeAt": 1790010841210
+            "receivedAt": 1790012559071,
+            "exchangeAt": 1790012558974
           }
         },
         "feeSources": [
@@ -4288,16 +5079,20 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "7f96f5e923e54473c9bb92418d4d256d95e62810da56a06be29b29c90247e37f"
+          "bookSha256": "88cd43df589199eefd856fa2f4bcbf10ab5f82a791d844839e347e4828e7db3f"
         },
         "title": "Will Atlanta win the 2026 Pro Baseball Championship?",
         "kalshiId": "KXMLB-26-ATL",
         "polyId": "tec-mlb-champ-2026-09-27-atl"
-      },
-      "strongestDisplayed": {
+      }
+    },
+    {
+      "category": "Sports/mlb",
+      "route": "MAKER_TAKER_HYPOTHETICAL",
+      "strongestFresh": {
         "pairId": "KXMLB-26-ATL::tec-mlb-champ-2026-09-27-atl",
         "category": "Sports/mlb",
-        "at": 1790010793451,
+        "at": 1790012559510,
         "route": "MAKER_TAKER_HYPOTHETICAL",
         "aSide": "yes",
         "bSide": "no",
@@ -4311,9 +5106,7 @@
         "settlementBlockers": [
           "No reviewed settlement profile for this contract family"
         ],
-        "dataReasons": [
-          "PM_US_EXCHANGE_TIME_STALE"
-        ],
+        "dataReasons": [],
         "policyReasons": [
           "SETTLEMENT_RULES_NEED_REVIEW",
           "OUTSIDE_SETTLEMENT_HORIZON",
@@ -4324,11 +5117,11 @@
           "quantity": 8,
           "kalshi": {
             "quantity": 8,
-            "cost": 5120,
+            "cost": 5040,
             "fees": 400,
             "levels": [
               {
-                "price": 640,
+                "price": 630,
                 "quantity": 8
               }
             ],
@@ -4346,18 +5139,18 @@
             ],
             "feeBound": 400
           },
-          "cost": 79520,
+          "cost": 79440,
           "feeBound": 1200,
           "payout": 80000,
-          "exchangeNetUnderFeeBound": -720,
+          "exchangeNetUnderFeeBound": -640,
           "riskAllowance": 1600,
-          "afterRisk": -2320,
-          "roi": -2.818270165208941,
+          "afterRisk": -2240,
+          "roi": -2.7237354085603114,
           "recoveryReservation": {
             "kalshi": 800,
             "poly": 4000
           },
-          "reservedCash": 87120,
+          "reservedCash": 87040,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -4380,7 +5173,6 @@
         "displayedDepthExecutable": false,
         "qualifies": false,
         "qualificationReasons": [
-          "PM_US_EXCHANGE_TIME_STALE",
           "SETTLEMENT_RULES_NEED_REVIEW",
           "OUTSIDE_SETTLEMENT_HORIZON",
           "BELOW_10_CENT_PROFIT_FLOOR",
@@ -4390,16 +5182,16 @@
           "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
           "RESTING_BID_IS_NOT_AVAILABLE_FILL"
         ],
-        "proposedBid": 640,
-        "queueAhead": 36.48,
+        "proposedBid": 630,
+        "queueAhead": 130.52,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010793263,
-            "exchangeAt": 1790010793265
+            "receivedAt": 1790012558982,
+            "exchangeAt": 1790012558967
           },
           "poly": {
-            "receivedAt": 1790010791797,
-            "exchangeAt": 1790010784091
+            "receivedAt": 1790012559071,
+            "exchangeAt": 1790012558974
           }
         },
         "feeSources": [
@@ -4409,7 +5201,132 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "a3efc0ed562a6814ed7394e836eee3cc7d56a80d1068cc05a1f9d7e0a4d472a0"
+          "bookSha256": "88cd43df589199eefd856fa2f4bcbf10ab5f82a791d844839e347e4828e7db3f"
+        },
+        "title": "Will Atlanta win the 2026 Pro Baseball Championship?",
+        "kalshiId": "KXMLB-26-ATL",
+        "polyId": "tec-mlb-champ-2026-09-27-atl"
+      },
+      "strongestDisplayed": {
+        "pairId": "KXMLB-26-ATL::tec-mlb-champ-2026-09-27-atl",
+        "category": "Sports/mlb",
+        "at": 1790012348268,
+        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "aSide": "yes",
+        "bSide": "no",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "PRIOR_EVENT_WINDOW_OR_UNKNOWN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [
+          "PM_US_RECEIPT_STALE",
+          "PM_US_EXCHANGE_TIME_STALE",
+          "BOOKS_UNSYNCHRONIZED"
+        ],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 8,
+          "kalshi": {
+            "quantity": 8,
+            "cost": 5040,
+            "fees": 400,
+            "levels": [
+              {
+                "price": 630,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 800
+          },
+          "poly": {
+            "quantity": 8,
+            "cost": 74400,
+            "fees": 400,
+            "levels": [
+              {
+                "price": 9300,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 400
+          },
+          "cost": 79440,
+          "feeBound": 1200,
+          "payout": 80000,
+          "exchangeNetUnderFeeBound": -640,
+          "riskAllowance": 1600,
+          "afterRisk": -2240,
+          "roi": -2.7237354085603114,
+          "recoveryReservation": {
+            "kalshi": 800,
+            "poly": 4000
+          },
+          "reservedCash": 87040,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "TAKER_COEFFICIENT_FALLBACK_FOR_PROPOSED_MAKER; NO_REBATES"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": false,
+        "qualifies": false,
+        "qualificationReasons": [
+          "PM_US_RECEIPT_STALE",
+          "PM_US_EXCHANGE_TIME_STALE",
+          "BOOKS_UNSYNCHRONIZED",
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
+          "RESTING_BID_IS_NOT_AVAILABLE_FILL"
+        ],
+        "proposedBid": 630,
+        "queueAhead": 130.52,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790012348251,
+            "exchangeAt": 1790012348249
+          },
+          "poly": {
+            "receivedAt": 1790012330847,
+            "exchangeAt": 1790012330709
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "56ac4af483899055b12c1ae5d7660fd2a0c082ac80dd2ed0cf8be36eb9c8048b"
         },
         "title": "Will Atlanta win the 2026 Pro Baseball Championship?",
         "kalshiId": "KXMLB-26-ATL",
@@ -4674,15 +5591,14 @@
     {
       "category": "Sports/npb",
       "route": "TAKER_TAKER",
-      "strongestFresh": null,
-      "strongestDisplayed": {
-        "pairId": "KXNPBGAME-26SEP220500ORICHI-ORI::aec-npb-clm-obr-2026-09-22",
+      "strongestFresh": {
+        "pairId": "KXNPBGAME-26SEP220500HANYAK-YAK::aec-npb-tys-hta-2026-09-22",
         "category": "Sports/npb",
-        "at": 1790010792451,
+        "at": 1790012087971,
         "route": "TAKER_TAKER",
         "aSide": "yes",
-        "bSide": "yes",
-        "inverted": true,
+        "bSide": "no",
+        "inverted": false,
         "classification": "UNVERIFIED_PRICE_COMPARISON",
         "labels": {
           "sameDay": "NOT_SAME_DAY",
@@ -4692,10 +5608,7 @@
         "settlementBlockers": [
           "No reviewed settlement profile for this contract family"
         ],
-        "dataReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE"
-        ],
+        "dataReasons": [],
         "policyReasons": [
           "SETTLEMENT_RULES_NEED_REVIEW",
           "BELOW_10_CENT_PROFIT_FLOOR",
@@ -4705,44 +5618,44 @@
           "quantity": 8,
           "kalshi": {
             "quantity": 8,
-            "cost": 36000,
-            "fees": 1400,
+            "cost": 25200,
+            "fees": 1300,
             "levels": [
               {
-                "price": 4500,
-                "quantity": 8
+                "price": 3100,
+                "quantity": 4
+              },
+              {
+                "price": 3200,
+                "quantity": 4
               }
             ],
             "feeBound": 1600
           },
           "poly": {
             "quantity": 8,
-            "cost": 44500,
-            "fees": 1400,
+            "cost": 55200,
+            "fees": 1200,
             "levels": [
               {
-                "price": 5500,
-                "quantity": 3
-              },
-              {
-                "price": 5600,
-                "quantity": 5
+                "price": 6900,
+                "quantity": 8
               }
             ],
-            "feeBound": 1400
+            "feeBound": 1200
           },
-          "cost": 80500,
-          "feeBound": 3000,
+          "cost": 80400,
+          "feeBound": 2800,
           "payout": 80000,
-          "exchangeNetUnderFeeBound": -3500,
+          "exchangeNetUnderFeeBound": -3200,
           "riskAllowance": 1600,
-          "afterRisk": -5100,
-          "roi": -5.992949471210341,
+          "afterRisk": -4800,
+          "roi": -5.660377358490567,
           "recoveryReservation": {
             "kalshi": 800,
             "poly": 4000
           },
-          "reservedCash": 89900,
+          "reservedCash": 89600,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -4762,11 +5675,9 @@
             "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
           }
         },
-        "displayedDepthExecutable": false,
+        "displayedDepthExecutable": true,
         "qualifies": false,
         "qualificationReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE",
           "SETTLEMENT_RULES_NEED_REVIEW",
           "BELOW_10_CENT_PROFIT_FLOOR",
           "BELOW_1_PERCENT_ROI",
@@ -4778,12 +5689,12 @@
         "queueAhead": null,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010791938,
-            "exchangeAt": null
+            "receivedAt": 1790012087702,
+            "exchangeAt": 1790012087731
           },
           "poly": {
-            "receivedAt": 1790010791797,
-            "exchangeAt": 1790010779741
+            "receivedAt": 1790012087765,
+            "exchangeAt": 1790012087714
           }
         },
         "feeSources": [
@@ -4793,17 +5704,253 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "4e4064458049f87b82651fcb3f4eb944f8fed5998da468e356b606484f8948e5"
+          "bookSha256": "d72fd1f8743599e390c4a88315f4cab83bc4ae50c1279f918c656ba9a5b03a1a"
         },
-        "title": "Orix Buffaloes wins",
-        "kalshiId": "KXNPBGAME-26SEP220500ORICHI-ORI",
-        "polyId": "aec-npb-clm-obr-2026-09-22"
+        "title": "Tokyo Yakult Swallows wins",
+        "kalshiId": "KXNPBGAME-26SEP220500HANYAK-YAK",
+        "polyId": "aec-npb-tys-hta-2026-09-22"
+      },
+      "strongestDisplayed": {
+        "pairId": "KXNPBGAME-26SEP220500HANYAK-YAK::aec-npb-tys-hta-2026-09-22",
+        "category": "Sports/npb",
+        "at": 1790012087971,
+        "route": "TAKER_TAKER",
+        "aSide": "yes",
+        "bSide": "no",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "NOT_SAME_DAY",
+          "horizon": "WITHIN_BASELINE_HORIZON",
+          "strategy": "OUTSIDE_PRIOR_EVENT_WINDOW"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 8,
+          "kalshi": {
+            "quantity": 8,
+            "cost": 25200,
+            "fees": 1300,
+            "levels": [
+              {
+                "price": 3100,
+                "quantity": 4
+              },
+              {
+                "price": 3200,
+                "quantity": 4
+              }
+            ],
+            "feeBound": 1600
+          },
+          "poly": {
+            "quantity": 8,
+            "cost": 55200,
+            "fees": 1200,
+            "levels": [
+              {
+                "price": 6900,
+                "quantity": 8
+              }
+            ],
+            "feeBound": 1200
+          },
+          "cost": 80400,
+          "feeBound": 2800,
+          "payout": 80000,
+          "exchangeNetUnderFeeBound": -3200,
+          "riskAllowance": 1600,
+          "afterRisk": -4800,
+          "roi": -5.660377358490567,
+          "recoveryReservation": {
+            "kalshi": 800,
+            "poly": 4000
+          },
+          "reservedCash": 89600,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": true,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
+        ],
+        "proposedBid": null,
+        "queueAhead": null,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790012087702,
+            "exchangeAt": 1790012087731
+          },
+          "poly": {
+            "receivedAt": 1790012087765,
+            "exchangeAt": 1790012087714
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "d72fd1f8743599e390c4a88315f4cab83bc4ae50c1279f918c656ba9a5b03a1a"
+        },
+        "title": "Tokyo Yakult Swallows wins",
+        "kalshiId": "KXNPBGAME-26SEP220500HANYAK-YAK",
+        "polyId": "aec-npb-tys-hta-2026-09-22"
       }
     },
     {
       "category": "Sports/npb",
       "route": "MAKER_TAKER_HYPOTHETICAL",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KXNPBGAME-26SEP210500SAICHI-CHI::aec-npb-clm-ssl-2026-09-21",
+        "category": "Sports/npb",
+        "at": 1790011110816,
+        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "aSide": "yes",
+        "bSide": "no",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "SAME_DAY",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "OUTSIDE_PRIOR_EVENT_WINDOW"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 9,
+          "kalshi": {
+            "quantity": 9,
+            "cost": 39600,
+            "fees": 1600,
+            "levels": [
+              {
+                "price": 4400,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1800
+          },
+          "poly": {
+            "quantity": 9,
+            "cost": 47700,
+            "fees": 1600,
+            "levels": [
+              {
+                "price": 5300,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 1600
+          },
+          "cost": 87300,
+          "feeBound": 3400,
+          "payout": 90000,
+          "exchangeNetUnderFeeBound": -700,
+          "riskAllowance": 1800,
+          "afterRisk": -2500,
+          "roi": -2.7027027027027026,
+          "recoveryReservation": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "reservedCash": 97900,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "TAKER_COEFFICIENT_FALLBACK_FOR_PROPOSED_MAKER; NO_REBATES"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": false,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
+          "RESTING_BID_IS_NOT_AVAILABLE_FILL"
+        ],
+        "proposedBid": 4400,
+        "queueAhead": 10086.16,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011110729,
+            "exchangeAt": 1790011110743
+          },
+          "poly": {
+            "receivedAt": 1790011110783,
+            "exchangeAt": 1790011110713
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "d8502354b5c09d9f5b3ff15cf1f0a22fd1768b392009e9c5ec9d860cd7941ffa"
+        },
+        "title": "Chiba Lotte Marines wins",
+        "kalshiId": "KXNPBGAME-26SEP210500SAICHI-CHI",
+        "polyId": "aec-npb-clm-ssl-2026-09-21"
+      },
       "strongestDisplayed": {
         "pairId": "KXNPBGAME-26SEP210500SAICHI-CHI::aec-npb-clm-ssl-2026-09-21",
         "category": "Sports/npb",
@@ -5176,10 +6323,10 @@
       "strongestFresh": {
         "pairId": "KXUFCFIGHT-26OCT03MCGNOL-MCG::aec-ufc-coumcg-erinol-2026-10-03",
         "category": "Sports/ufc",
-        "at": 1790010855518,
+        "at": 1790012450398,
         "route": "MAKER_TAKER_HYPOTHETICAL",
-        "aSide": "yes",
-        "bSide": "no",
+        "aSide": "no",
+        "bSide": "yes",
         "inverted": false,
         "classification": "CONDITIONAL_PAIR",
         "labels": {
@@ -5198,11 +6345,11 @@
           "quantity": 10,
           "kalshi": {
             "quantity": 10,
-            "cost": 18000,
-            "fees": 1100,
+            "cost": 24000,
+            "fees": 1300,
             "levels": [
               {
-                "price": 1800,
+                "price": 2400,
                 "quantity": 10
               }
             ],
@@ -5210,28 +6357,28 @@
           },
           "poly": {
             "quantity": 10,
-            "cost": 57000,
+            "cost": 44000,
             "fees": 1700,
             "levels": [
               {
-                "price": 5700,
+                "price": 4400,
                 "quantity": 10
               }
             ],
             "feeBound": 1700
           },
-          "cost": 75000,
+          "cost": 68000,
           "feeBound": 3700,
           "payout": 100000,
-          "exchangeNetUnderFeeBound": 21300,
+          "exchangeNetUnderFeeBound": 28300,
           "riskAllowance": 2000,
-          "afterRisk": 19300,
-          "roi": 23.915737298636927,
+          "afterRisk": 26300,
+          "roi": 35.68521031207598,
           "recoveryReservation": {
             "kalshi": 1000,
             "poly": 5000
           },
-          "reservedCash": 86700,
+          "reservedCash": 79700,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -5260,16 +6407,16 @@
           "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
           "RESTING_BID_IS_NOT_AVAILABLE_FILL"
         ],
-        "proposedBid": 1800,
-        "queueAhead": 118,
+        "proposedBid": 2400,
+        "queueAhead": 72.4,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010854285,
-            "exchangeAt": 1790010853919
+            "receivedAt": 1790012449998,
+            "exchangeAt": 1790012450024
           },
           "poly": {
-            "receivedAt": 1790010854780,
-            "exchangeAt": 1790010854696
+            "receivedAt": 1790012449964,
+            "exchangeAt": 1790012449907
           }
         },
         "feeSources": [
@@ -5279,7 +6426,7 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "4b975084d0889fe30279b84e6e7bcf970d53c2be3b1a595c883366f7543be253"
+          "bookSha256": "40951874d0785a9782b3d703e99909f69289076934e120a22485dd9a7c628564"
         },
         "title": "Court McGee wins",
         "kalshiId": "KXUFCFIGHT-26OCT03MCGNOL-MCG",
@@ -5288,10 +6435,10 @@
       "strongestDisplayed": {
         "pairId": "KXUFCFIGHT-26OCT03MCGNOL-MCG::aec-ufc-coumcg-erinol-2026-10-03",
         "category": "Sports/ufc",
-        "at": 1790010792451,
+        "at": 1790012391336,
         "route": "MAKER_TAKER_HYPOTHETICAL",
-        "aSide": "yes",
-        "bSide": "no",
+        "aSide": "no",
+        "bSide": "yes",
         "inverted": false,
         "classification": "CONDITIONAL_PAIR",
         "labels": {
@@ -5303,7 +6450,9 @@
           "Ordinary outcome matches, but exceptional payouts are not proven equivalent"
         ],
         "dataReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN"
+          "PM_US_RECEIPT_STALE",
+          "PM_US_EXCHANGE_TIME_STALE",
+          "BOOKS_UNSYNCHRONIZED"
         ],
         "policyReasons": [
           "SETTLEMENT_RULES_NEED_REVIEW"
@@ -5312,40 +6461,40 @@
           "quantity": 10,
           "kalshi": {
             "quantity": 10,
-            "cost": 17000,
-            "fees": 1000,
+            "cost": 23000,
+            "fees": 1300,
             "levels": [
               {
-                "price": 1700,
+                "price": 2300,
                 "quantity": 10
               }
             ],
-            "feeBound": 1000
+            "feeBound": 2000
           },
           "poly": {
             "quantity": 10,
-            "cost": 57000,
+            "cost": 44000,
             "fees": 1700,
             "levels": [
               {
-                "price": 5700,
+                "price": 4400,
                 "quantity": 10
               }
             ],
             "feeBound": 1700
           },
-          "cost": 74000,
-          "feeBound": 2700,
+          "cost": 67000,
+          "feeBound": 3700,
           "payout": 100000,
-          "exchangeNetUnderFeeBound": 23300,
+          "exchangeNetUnderFeeBound": 29300,
           "riskAllowance": 2000,
-          "afterRisk": 21300,
-          "roi": 27.064803049555273,
+          "afterRisk": 27300,
+          "roi": 37.551581843191194,
           "recoveryReservation": {
             "kalshi": 1000,
             "poly": 5000
           },
-          "reservedCash": 84700,
+          "reservedCash": 78700,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -5368,23 +6517,25 @@
         "displayedDepthExecutable": false,
         "qualifies": false,
         "qualificationReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
+          "PM_US_RECEIPT_STALE",
+          "PM_US_EXCHANGE_TIME_STALE",
+          "BOOKS_UNSYNCHRONIZED",
           "SETTLEMENT_RULES_NEED_REVIEW",
           "ORDER_DISABLED",
           "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
           "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
           "RESTING_BID_IS_NOT_AVAILABLE_FILL"
         ],
-        "proposedBid": 1700,
-        "queueAhead": 13,
+        "proposedBid": 2300,
+        "queueAhead": 142.4,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010791938,
-            "exchangeAt": null
+            "receivedAt": 1790012390761,
+            "exchangeAt": 1790012390793
           },
           "poly": {
-            "receivedAt": 1790010791797,
-            "exchangeAt": 1790010790565
+            "receivedAt": 1790012341512,
+            "exchangeAt": 1790012341404
           }
         },
         "feeSources": [
@@ -5394,7 +6545,7 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "c26ec8cbb01aba3c4b9f90ad6131d7bcdf73ac83da229b1cbea7b186c8f7b889"
+          "bookSha256": "5b20649eae497b7de7e9fefbbde2be8dbf7fa086c1ac18ee564579d8f42199f6"
         },
         "title": "Court McGee wins",
         "kalshiId": "KXUFCFIGHT-26OCT03MCGNOL-MCG",
@@ -5404,7 +6555,123 @@
     {
       "category": "Sports/wnba",
       "route": "TAKER_TAKER",
-      "strongestFresh": null,
+      "strongestFresh": {
+        "pairId": "KXWNBA-26-ATL::tec-wnba-champion-2026-10-31-w-atl",
+        "category": "Sports/wnba",
+        "at": 1790011756517,
+        "route": "TAKER_TAKER",
+        "aSide": "no",
+        "bSide": "yes",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "PRIOR_EVENT_WINDOW_OR_UNKNOWN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 9,
+          "kalshi": {
+            "quantity": 9,
+            "cost": 81000,
+            "fees": 600,
+            "levels": [
+              {
+                "price": 9000,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 900
+          },
+          "poly": {
+            "quantity": 9,
+            "cost": 8100,
+            "fees": 500,
+            "levels": [
+              {
+                "price": 900,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 500
+          },
+          "cost": 89100,
+          "feeBound": 1400,
+          "payout": 90000,
+          "exchangeNetUnderFeeBound": -500,
+          "riskAllowance": 1800,
+          "afterRisk": -2300,
+          "roi": -2.4918743228602382,
+          "recoveryReservation": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "reservedCash": 97700,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "WHOLE_CONTRACT_FRAGMENTATION_CENT_BOUND"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": true,
+        "qualifies": false,
+        "qualificationReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED"
+        ],
+        "proposedBid": null,
+        "queueAhead": null,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011755091,
+            "exchangeAt": 1790011755106
+          },
+          "poly": {
+            "receivedAt": 1790011755718,
+            "exchangeAt": 1790011755658
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "11ad6b498727a471e16f033dffc3109ecfe66b19f8eba70561e5a1786189f643"
+        },
+        "title": "Will Atlanta win the 2026 Women's Pro Basketball Championship?",
+        "kalshiId": "KXWNBA-26-ATL",
+        "polyId": "tec-wnba-champion-2026-10-31-w-atl"
+      },
       "strongestDisplayed": {
         "pairId": "KXWNBA-26-ATL::tec-wnba-champion-2026-10-31-w-atl",
         "category": "Sports/wnba",
@@ -5531,14 +6798,13 @@
     {
       "category": "Sports/wnba",
       "route": "MAKER_TAKER_HYPOTHETICAL",
-      "strongestFresh": null,
-      "strongestDisplayed": {
-        "pairId": "KXWNBA-26-GS::tec-wnba-champion-2026-10-31-w-gsv",
+      "strongestFresh": {
+        "pairId": "KXWNBA-26-ATL::tec-wnba-champion-2026-10-31-w-atl",
         "category": "Sports/wnba",
-        "at": 1790010792451,
+        "at": 1790011756517,
         "route": "MAKER_TAKER_HYPOTHETICAL",
-        "aSide": "yes",
-        "bSide": "no",
+        "aSide": "no",
+        "bSide": "yes",
         "inverted": false,
         "classification": "UNVERIFIED_PRICE_COMPARISON",
         "labels": {
@@ -5549,10 +6815,7 @@
         "settlementBlockers": [
           "No reviewed settlement profile for this contract family"
         ],
-        "dataReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE"
-        ],
+        "dataReasons": [],
         "policyReasons": [
           "SETTLEMENT_RULES_NEED_REVIEW",
           "OUTSIDE_SETTLEMENT_HORIZON",
@@ -5563,11 +6826,11 @@
           "quantity": 9,
           "kalshi": {
             "quantity": 9,
-            "cost": 9900,
+            "cost": 79200,
             "fees": 700,
             "levels": [
               {
-                "price": 1100,
+                "price": 8800,
                 "quantity": 9
               }
             ],
@@ -5575,28 +6838,28 @@
           },
           "poly": {
             "quantity": 9,
-            "cost": 77400,
-            "fees": 800,
+            "cost": 8100,
+            "fees": 500,
             "levels": [
               {
-                "price": 8600,
+                "price": 900,
                 "quantity": 9
               }
             ],
-            "feeBound": 800
+            "feeBound": 500
           },
           "cost": 87300,
-          "feeBound": 1700,
+          "feeBound": 1400,
           "payout": 90000,
-          "exchangeNetUnderFeeBound": 1000,
+          "exchangeNetUnderFeeBound": 1300,
           "riskAllowance": 1800,
-          "afterRisk": -800,
-          "roi": -0.881057268722467,
+          "afterRisk": -500,
+          "roi": -0.5524861878453038,
           "recoveryReservation": {
             "kalshi": 900,
             "poly": 4500
           },
-          "reservedCash": 96200,
+          "reservedCash": 95900,
           "recoveryIsExpense": false,
           "feeProvenance": {
             "kalshi": {
@@ -5619,8 +6882,6 @@
         "displayedDepthExecutable": false,
         "qualifies": false,
         "qualificationReasons": [
-          "KALSHI_EXCHANGE_TIME_UNKNOWN",
-          "PM_US_EXCHANGE_TIME_STALE",
           "SETTLEMENT_RULES_NEED_REVIEW",
           "OUTSIDE_SETTLEMENT_HORIZON",
           "BELOW_10_CENT_PROFIT_FLOOR",
@@ -5630,16 +6891,16 @@
           "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
           "RESTING_BID_IS_NOT_AVAILABLE_FILL"
         ],
-        "proposedBid": 1100,
-        "queueAhead": 11025.59,
+        "proposedBid": 8800,
+        "queueAhead": 696.84,
         "timestamps": {
           "kalshi": {
-            "receivedAt": 1790010791938,
-            "exchangeAt": null
+            "receivedAt": 1790011755091,
+            "exchangeAt": 1790011755106
           },
           "poly": {
-            "receivedAt": 1790010791797,
-            "exchangeAt": 1790010753929
+            "receivedAt": 1790011755718,
+            "exchangeAt": 1790011755658
           }
         },
         "feeSources": [
@@ -5649,11 +6910,136 @@
         ],
         "evidence": {
           "file": "evidence.ndjson",
-          "bookSha256": "c77d16704c5f5f6ad5d0f10748cbf76e833a244b2a88259e3c736cefabf01b55"
+          "bookSha256": "11ad6b498727a471e16f033dffc3109ecfe66b19f8eba70561e5a1786189f643"
         },
-        "title": "Will Golden State win the 2026 Women's Pro Basketball Championship?",
-        "kalshiId": "KXWNBA-26-GS",
-        "polyId": "tec-wnba-champion-2026-10-31-w-gsv"
+        "title": "Will Atlanta win the 2026 Women's Pro Basketball Championship?",
+        "kalshiId": "KXWNBA-26-ATL",
+        "polyId": "tec-wnba-champion-2026-10-31-w-atl"
+      },
+      "strongestDisplayed": {
+        "pairId": "KXWNBA-26-ATL::tec-wnba-champion-2026-10-31-w-atl",
+        "category": "Sports/wnba",
+        "at": 1790011711468,
+        "route": "MAKER_TAKER_HYPOTHETICAL",
+        "aSide": "no",
+        "bSide": "yes",
+        "inverted": false,
+        "classification": "UNVERIFIED_PRICE_COMPARISON",
+        "labels": {
+          "sameDay": "EVENT_DAY_UNKNOWN",
+          "horizon": "OUTSIDE_BASELINE_HORIZON",
+          "strategy": "PRIOR_EVENT_WINDOW_OR_UNKNOWN"
+        },
+        "settlementBlockers": [
+          "No reviewed settlement profile for this contract family"
+        ],
+        "dataReasons": [
+          "PM_US_RECEIPT_STALE",
+          "PM_US_EXCHANGE_TIME_STALE",
+          "BOOKS_UNSYNCHRONIZED"
+        ],
+        "policyReasons": [
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI"
+        ],
+        "economics": {
+          "quantity": 9,
+          "kalshi": {
+            "quantity": 9,
+            "cost": 79200,
+            "fees": 700,
+            "levels": [
+              {
+                "price": 8800,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 900
+          },
+          "poly": {
+            "quantity": 9,
+            "cost": 8100,
+            "fees": 500,
+            "levels": [
+              {
+                "price": 900,
+                "quantity": 9
+              }
+            ],
+            "feeBound": 500
+          },
+          "cost": 87300,
+          "feeBound": 1400,
+          "payout": 90000,
+          "exchangeNetUnderFeeBound": 1300,
+          "riskAllowance": 1800,
+          "afterRisk": -500,
+          "roi": -0.5524861878453038,
+          "recoveryReservation": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "reservedCash": 95900,
+          "recoveryIsExpense": false,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "TAKER_COEFFICIENT_FALLBACK_FOR_PROPOSED_MAKER; NO_REBATES"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            },
+            "uncertainty": "Kalshi member classification and actual fill fragmentation unknown; whole-contract bound does not bound arbitrary fractional balance rounding. PM ceiling may exceed collected fees."
+          }
+        },
+        "displayedDepthExecutable": false,
+        "qualifies": false,
+        "qualificationReasons": [
+          "PM_US_RECEIPT_STALE",
+          "PM_US_EXCHANGE_TIME_STALE",
+          "BOOKS_UNSYNCHRONIZED",
+          "SETTLEMENT_RULES_NEED_REVIEW",
+          "OUTSIDE_SETTLEMENT_HORIZON",
+          "BELOW_10_CENT_PROFIT_FLOOR",
+          "BELOW_1_PERCENT_ROI",
+          "ORDER_DISABLED",
+          "ACCOUNT_FEE_CLASS_AND_FRAGMENTATION_UNVERIFIED",
+          "OHIO_LIVE_ELIGIBILITY_NOT_REVALIDATED",
+          "RESTING_BID_IS_NOT_AVAILABLE_FILL"
+        ],
+        "proposedBid": 8800,
+        "queueAhead": 585.16,
+        "timestamps": {
+          "kalshi": {
+            "receivedAt": 1790011710731,
+            "exchangeAt": 1790011710742
+          },
+          "poly": {
+            "receivedAt": 1790011660998,
+            "exchangeAt": 1790011660983
+          }
+        },
+        "feeSources": [
+          "https://docs.kalshi.com/getting_started/fee_rounding",
+          "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+          "https://docs.polymarket.us/fees"
+        ],
+        "evidence": {
+          "file": "evidence.ndjson",
+          "bookSha256": "51e266f1284d8226b4fb2255e39369a13deda0232b8936baed838e1f28fa6029"
+        },
+        "title": "Will Atlanta win the 2026 Women's Pro Basketball Championship?",
+        "kalshiId": "KXWNBA-26-ATL",
+        "polyId": "tec-wnba-champion-2026-10-31-w-atl"
       }
     }
   ],

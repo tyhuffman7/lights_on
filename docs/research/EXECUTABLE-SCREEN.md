@@ -49,4 +49,4 @@ To derive a sanitized snapshot once, without polling or restarting:
 node scripts/executable-screen-report.mjs /absolute/output-directory summary.json report.md
 ```
 
-A running or prematurely stopped capture stays explicitly pending/incomplete. The report retains the strongest fresh and strongest displayed row separately for every category and execution route. See [September 21 interim evidence](EXECUTABLE-SCREEN-20260921.md).
+A running or prematurely stopped capture stays explicitly pending/incomplete. The report retains the strongest fresh and strongest displayed row separately for every category and execution route. See [September 21 completed evidence](EXECUTABLE-SCREEN-20260921.md).
