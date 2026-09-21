@@ -42,3 +42,11 @@ The launcher reuses the prior bounded process supervisor, with a generic deadlin
 `coverage.json` explains the observation set; `frozen.json` holds public market metadata, selection and source hashes; `started.json` records freeze hash and deadline; `status.json` records supervisor completion; `summary.json` retains best displayed and independently best fresh rows. `evidence.ndjson` contains hash-addressed book snapshots when a row becomes its route's best result. One-second sampling can miss shorter opportunities and is not a complete tick archive. Rejection counts are repeated observation counts, not unique opportunities. All raw/local records stay outside Git. Only sanitized derived summaries and this implementation are publishable.
 
 The original September 20 21:10–21:30 UTC maker audit is historical evidence. It is not this screen and does not establish that the previously proposed coverage correction ran.
+
+To derive a sanitized snapshot once, without polling or restarting:
+
+```sh
+node scripts/executable-screen-report.mjs /absolute/output-directory summary.json report.md
+```
+
+A running or prematurely stopped capture stays explicitly pending/incomplete. The report retains the strongest fresh and strongest displayed row separately for every category and execution route. See [September 21 interim evidence](EXECUTABLE-SCREEN-20260921.md).

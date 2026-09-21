@@ -1,0 +1,114 @@
+{
+  "scope": "SYNTHETIC_INDEPENDENT_MECHANICS_CHECK_NOT_LIVE_FILL_OR_PROFIT_EVIDENCE",
+  "reviewedCommit": "049cbb15c04e172f358d1113e196a9ff2fa166d8",
+  "runtime": "v22.23.2",
+  "queue": [
+    {
+      "print": {
+        "id": "a",
+        "price": 4200,
+        "quantity": 10,
+        "at": 1100
+      },
+      "modelAhead": 20,
+      "modelFilled": 0,
+      "explicitPriceTimeFilled": 0
+    },
+    {
+      "print": {
+        "id": "b",
+        "price": 4000,
+        "quantity": 10,
+        "at": 1200
+      },
+      "modelAhead": 10,
+      "modelFilled": 0,
+      "explicitPriceTimeFilled": 0
+    },
+    {
+      "print": {
+        "id": "c",
+        "price": 3900,
+        "quantity": 1,
+        "at": 1300
+      },
+      "modelAhead": 9,
+      "modelFilled": 0,
+      "explicitPriceTimeFilled": 1
+    }
+  ],
+  "kalshi": {
+    "units": "microdollars",
+    "productionPerFillConservativeBound": [
+      10000,
+      10000,
+      10000,
+      10000
+    ],
+    "officialNonDirectScenario": [
+      {
+        "tradeFee": 2200,
+        "rounding": 7800,
+        "rebate": 0,
+        "accumulated": 7800,
+        "netFee": 10000
+      },
+      {
+        "tradeFee": 2200,
+        "rounding": 7800,
+        "rebate": 10000,
+        "accumulated": 5600,
+        "netFee": 0
+      },
+      {
+        "tradeFee": 2200,
+        "rounding": 7800,
+        "rebate": 10000,
+        "accumulated": 3400,
+        "netFee": 0
+      },
+      {
+        "tradeFee": 2200,
+        "rounding": 7800,
+        "rebate": 10000,
+        "accumulated": 1200,
+        "netFee": 0
+      }
+    ],
+    "officialDirectScenario": [
+      {
+        "tradeFee": 2200,
+        "rounding": 0,
+        "rebate": 0,
+        "accumulated": 0,
+        "netFee": 2200
+      },
+      {
+        "tradeFee": 2200,
+        "rounding": 0,
+        "rebate": 0,
+        "accumulated": 0,
+        "netFee": 2200
+      },
+      {
+        "tradeFee": 2200,
+        "rounding": 0,
+        "rebate": 0,
+        "accumulated": 0,
+        "netFee": 2200
+      },
+      {
+        "tradeFee": 2200,
+        "rounding": 0,
+        "rebate": 0,
+        "accumulated": 0,
+        "netFee": 2200
+      }
+    ]
+  },
+  "polymarket": {
+    "cumulativeOrderUpperDollars": 0.01,
+    "knownFourFillRoundedCommissionDollars": 0
+  },
+  "limits": "No historical capture was replayed. Historical zero-fill result not overturned. Account precision not identified; both scenarios explicit. Source files verified by Git blob SHA. No code modified in user repository."
+}
