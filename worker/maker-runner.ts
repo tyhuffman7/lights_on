@@ -1,4 +1,6 @@
 import {observedSizeAdmission} from '../lib/arb/maker-size-admission.ts';
+import {submitMakerRecovery,executeMakerRecovery} from '../lib/arb/maker-recovery.ts';
+import {recoveryPolicy} from '../lib/arb/maker-allocation.ts';
 import {hedgeBookState,compactHedgeBook,hedgeEconomics} from './hedge-diagnostics.ts';
 import {planExit,applyExitLeg,type ExitPlan} from '../lib/arb/paper-exit.ts';
 import {usableMakerFee,type MakerFeeProfile} from '../lib/arb/maker-fees.ts';
@@ -29,7 +31,7 @@ export class MakerRunner{
   this.observer=observer;this.store=store;this.document=store.load('live-data');
   const d=this.document;d.executionMode='maker';delete d.diagnostics;
   if(d.pendingId)throw Error('Taker hedge recovery required before maker mode');
-  if(d.makerOrder){d.state=closeMaker(d.state,d.makerOrder);delete d.makerOrder;if(d.state.positions.some(p=>p.status==='unmatched'))d.halt='Maker restart recovered unmatched exposure';}
+  if(d.makerOrder){const o=d.makerOrder;d.state=closeMaker(d.state,o);if(o.quote.makerAllocation&&o.filledA)d.makerRecoveryCheckpoint={positionId:o.id,closedAt:Date.now(),unwindAttempted:false};delete d.makerOrder;if(d.state.positions.some(p=>p.status==='unmatched'))d.halt='Maker restart recovered unmatched exposure';}
   if(d.state.makerReserved)throw Error('Orphaned maker reservation requires reconciliation');
   this.flush();observer.paperSettlementDeadline=()=>Math.min(Date.now()+d.state.settings.maxDays*86400000,(d.state.startedAt??0)+30*86400000);
   observer.paperPriorityIds=()=>{const started=performance.now();const ids=observer.registry.list().filter(m=>this.approved(m.id)).map(m=>m.id);observer.telemetry?.sample('paperApprovalScan',performance.now()-started);return ids;};
@@ -58,9 +60,15 @@ export class MakerRunner{
   if(!m?.open||m.hash!==original.hash||m.feeRate!==original.feeRate||m.minQty!==original.minQty)return null;
   return this.book(key==='a'?'kalshi':'poly',m.id);
  }
+ checkpointComplete(now=Date.now()){
+  const c=this.document.makerRecoveryCheckpoint;if(!c)return false;
+  const p=this.document.state.positions.find(p=>p.id===c.positionId);
+  return !this.exitOrder&&(!p||p.status!=='unmatched'||c.unwindAttempted||now>=c.closedAt+recoveryPolicy.unwindWindowMs);
+ }
  manageExits(now:number){
   const d=this.document;
   if(this.stopping||this.failed||this.observer.paused||this.observer.stopped||this.observer.recorder.failed)return false;
+  if(d.makerRecoveryCheckpoint&&this.checkpointComplete(now))return false;
   if(this.exitOrder){
    const pending=this.exitOrder,leg=pending.plan.legs[pending.index],p=d.state.positions.find(p=>p.id===pending.plan.positionId);
    if(now<pending.plan.requestedAt+500)return true;
@@ -78,6 +86,7 @@ export class MakerRunner{
    if(p.status==='settled')continue;const books:Partial<Record<'a'|'b',Book>>={};
    for(const key of ['a','b'] as const){const b=p[`${key}Payout`]===undefined?this.exitBook(p,key):null;if(b)books[key]=b;}
    const plan=planExit(d.state,p.id,books,now);if(!plan)continue;
+   if(d.makerRecoveryCheckpoint)d.makerRecoveryCheckpoint.unwindAttempted=true;
    this.exitOrder={plan,index:0};this.observer.recorder.diagnostic('PAPER_EXIT_INTENT',{plan,index:0});return true;
   }
   return false;
@@ -120,13 +129,27 @@ export class MakerRunner{
     else if(!makerHedgeViable(o,b,s.settings))this.cancel('HEDGE_NO_LONGER_VIABLE');
     const hedgeAt=Date.now(),hedgeDue=o.hedgeDue,priorHedge=o.filledB,priorCost=o.bCost,priorFees=o.bFees;
     const hedgeMono=performance.now(),exposure=o.filledA-priorHedge;
-    const record=(decision:import('../lib/arb/maker-ledger.ts').HedgeDecision)=>{if(exposure<=0)return;this.observer.recorder.diagnostic('PAPER_MAKER_HEDGE_DECISION',{id:o.id,at:hedgeAt,mono:hedgeMono,fillTiming:this.hedgeTiming,hedgeDue,remaining:decision.remaining,reason:decision.reason,called:valid&&!!b,outer:{...outer,valid,halt:d.halt??null,stopping:this.stopping,recorderFailed:this.observer.recorder.failed,aWithinReservation:o.aCost+o.aFees<=o.reservedA},kalshiBook:compactHedgeBook(av),polyBook:compactHedgeBook(bv),...hedgeEconomics(o,bv,decision),priorPrincipal:priorCost,priorFees,reservedB:o.reservedB,reservePerContract:s.settings.reserve,expiresAt:o.expiresAt,cancelRequestedAt:o.cancelRequestedAt??null,scope:'ACTUAL_PAPER_DECISION_NOT_EXCHANGE_RESPONSE'});};
-    if(!valid||!b)record({reason:!valid?'OUTER_STATE_INVALID':bv.reason??'BOOK_UNUSABLE',remaining:exposure,fill:null});
-    if(valid&&b&&hedgeMaker(o,b,hedgeAt,s.settings.maxAge,record)){this.observer.recorder.diagnostic('PAPER_MAKER_HEDGE',{id:o.id,at:hedgeAt,hedgeDue,quantity:o.filledB-priorHedge,cost:o.bCost-priorCost,fees:o.bFees-priorFees,book:b,scope:'SIMULATED_DELAYED_HEDGE'});this.hedgeTiming=null;this.flush();}
-    if(Date.now()>=o.expiresAt&&(o.hedgeDue===null||Date.now()>=o.hedgeDue))this.finish();
+    const record=(decision:import('../lib/arb/maker-ledger.ts').HedgeDecision)=>{if(exposure<=0)return;this.observer.recorder.diagnostic('PAPER_MAKER_HEDGE_DECISION',{id:o.id,at:hedgeAt,mono:hedgeMono,fillTiming:this.hedgeTiming,hedgeDue:o.recovery?o.recovery.submittedAt+recoveryPolicy.transportMs:hedgeDue,recovery:o.recovery??null,remaining:decision.remaining,reason:decision.reason,called:valid&&!!b,outer:{...outer,valid,halt:d.halt??null,stopping:this.stopping,recorderFailed:this.observer.recorder.failed,aWithinReservation:o.aCost+o.aFees<=o.reservedA},kalshiBook:compactHedgeBook(av),polyBook:compactHedgeBook(bv),...hedgeEconomics(o,bv,decision),priorPrincipal:priorCost,priorFees,reservedB:o.reservedB,reservePerContract:s.settings.reserve,expiresAt:o.expiresAt,cancelRequestedAt:o.cancelRequestedAt??null,scope:'ACTUAL_PAPER_DECISION_NOT_EXCHANGE_RESPONSE'});};
+    if(o.quote.makerAllocation){
+     if(exposure>0){
+      this.cancel('RECOVERY_CANCEL_REMAINDER');
+      if(hedgeAt>=o.expiresAt&&!o.recovery){
+       const intent=submitMakerRecovery(o,s,valid?a:null,hedgeAt);
+       this.observer.recorder.diagnostic('PAPER_MAKER_RECOVERY_INTENT',{id:o.id,...intent,dueAt:o.hedgeDue,kalshiBook:compactHedgeBook(av),polyBook:compactHedgeBook(bv),scope:'FIXED_BUDGET_PAPER_IOC_NOT_EXCHANGE_ORDER'});this.flush();
+      }
+      const decision=executeMakerRecovery(o,s,b,valid&&!this.stopping&&!this.failed&&!this.observer.recorder.failed,hedgeAt);record(decision);
+      if(o.recovery?.done){this.observer.recorder.diagnostic('PAPER_MAKER_RECOVERY_RESULT',{id:o.id,...decision,intent:o.recovery,polyBook:compactHedgeBook(bv)});this.flush();}
+     }
+     if(hedgeAt>=o.expiresAt&&(!exposure||o.recovery?.done))this.finish();
+    }else{
+     if(!valid||!b)record({reason:!valid?'OUTER_STATE_INVALID':bv.reason??'BOOK_UNUSABLE',remaining:exposure,fill:null});
+     if(valid&&b&&hedgeMaker(o,b,hedgeAt,s.settings.maxAge,record)){this.observer.recorder.diagnostic('PAPER_MAKER_HEDGE',{id:o.id,at:hedgeAt,hedgeDue,quantity:o.filledB-priorHedge,cost:o.bCost-priorCost,fees:o.bFees-priorFees,book:b,scope:'SIMULATED_DELAYED_HEDGE'});this.hedgeTiming=null;this.flush();}
+     if(Date.now()>=o.expiresAt&&(o.hedgeDue===null||Date.now()>=o.hedgeDue))this.finish();
+    }
     return;
    }
    if(this.manageExits(Date.now()))return;
+   if(d.makerRecoveryCheckpoint||(s.settings.makerRecovery&&s.positions.length))return;
    if(d.halt||this.observer.paused||this.observer.stopped||this.observer.recorder.failed||s.positions.some(p=>p.status==='unmatched')||!s.startedAt||now>=s.startedAt+30*86400000)return;
    if(s.positions.filter(p=>p.closedAt&&new Date(p.closedAt).toISOString().slice(0,10)===new Date(now).toISOString().slice(0,10)).reduce((n,p)=>n+(p.profit??0),0)<=-50000)return;
    const clock=this.clock();if(this.requireClock&&(!clock||!clockUsable(clock,now,performance.now())||clock.expiresAt-now<3000))return;
@@ -171,6 +194,7 @@ export class MakerRunner{
   }finally{this.busy=false;}
  }
  finish(){const d=this.document,o=d.makerOrder;if(!o)return;d.state=closeMaker(d.state,o);this.observer.recorder.diagnostic('PAPER_MAKER_CLOSE',{id:o.id,filledA:o.filledA,filledB:o.filledB,scope:'SIMULATED_RESTING_ORDER'});delete d.makerOrder;this.queue?.invalidate();this.queue=null;this.trades=[];this.hedgeTiming=null;
+  if(o.quote.makerAllocation&&o.filledA)d.makerRecoveryCheckpoint={positionId:o.id,closedAt:Date.now(),unwindAttempted:false};
   d.counts[o.filledA?'Maker orders with fills':'Maker orders cancelled unfilled']=(d.counts[o.filledA?'Maker orders with fills':'Maker orders cancelled unfilled']??0)+1;
   if(d.state.positions.some(p=>p.status==='unmatched'))d.halt='Maker partial fill left unhedged exposure';if(d.state.cash.kalshi<0||d.state.cash.poly<0)d.halt='Maker fragmentation exceeded reserved cash';this.flush();}
  async settle(lookup:(venue:Venue,id:string)=>Promise<Pick<Market,'settlement'>>){if(this.busy||this.stopping||this.document.makerOrder||this.exitOrder||this.failed)return;this.busy=true;this.task=(async()=>{this.document.state=await checkSettlements(this.document.state,lookup);this.flush();})().catch(e=>{this.failed=true;this.document.halt=String(e);}).finally(()=>{this.busy=false;this.task=null;});await this.task;}

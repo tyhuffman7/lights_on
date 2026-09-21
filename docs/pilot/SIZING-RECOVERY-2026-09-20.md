@@ -1,0 +1,50 @@
+# Sizing and hedge recovery — frozen PAPER checkpoint
+
+Authorized by the September 20 decision-making clarification. This is a single bounded test of the existing maker strategy; real trading remains disabled. Baseline behavior remains available by omitting `settings.makerRecovery`; the original [diagnosis](FILL-FIRST-DIAGNOSIS-2026-09-20.md), **-$0.53** historical result, halted ledger and [offline comparison](HEDGE-POLICY-CHECKPOINT-2026-09-20.md) are preserved. Their earlier requests for approval of routine paper caps/one-contract sizing are superseded, not their recorded results.
+
+## Frozen settings and rationale
+
+Small-capital scenario: **$100 simulated**, $50 per venue, in a new ledger. This is an independently funded simulation, not a reset of historical losses or proof of available real cash. No larger-capital scenario is included. Per-entry maximum reserved cash is **$10** (10% of capital); total commitment **$40** (40%), counting existing positions and pending reservations. The one-filled-order stop limits admitted new commitment to $10. Existing limits remain $0.10 planned net profit, 1% ROI, $0.02 charged reserve per paired contract, 2-second freshness and 30-day maximum horizon. These values are chosen for this test and are not immutable project requirements.
+
+Opt-in policy `bounded-v1` allocates **5¢ extra per planned contract on PM-US** and **1¢ extra per contract on Kalshi**, in addition to actual quoted depth, fees and the existing charged reserve. Five cents is an explicit adverse hedge-price allowance (about 10% of a 50¢ contract), not a volatility estimate or execution guarantee; penny fee headroom absorbs limited fragmentation, not arbitrarily many fractional fills. Actual fragmentation can exceed its reserved allowance; that blocks hedging/new risk and retains the full recorded debit, even if it breaches the planned cap. Sizing enumerates the existing eligible quantities with these allocations included in venue cash and trade limits. It does not blindly subtract a contract. Entry scoring and fee/observed-print-size gates are unchanged. Extra allocation locks cash; unused allocation is refunded and never counted as an expense or profit.
+
+## One recovery path
+
+1. On a modeled public-tape maker fill, cancel the remaining entry with the existing up-to-250 ms cancellation delay. Retain fills racing cancellation. Wait until cancellation is effective before freezing the total exposure.
+2. With a current usable Kalshi sell-depth quote, freeze PM spending at the smaller of the preallocated PM reservation and `conditional paired payout − estimated net Kalshi unwind proceeds`. The comparison includes sell fees/reserve and requires the normal settlement approval. Missing unwind depth gives no hedge authority. This comparison does not price time-to-settlement or guarantee ordinary settlement; a flat unwind avoids those risks.
+3. Wait **500 ms after actual submission processing**, then use only the current usable PM book for one full-exposure attempt. No partial hedge, old-book fallback, relaxed budget, or retry on later cheaper data. Inclusive fees/reserve must fit the frozen ceiling; maker spending must also fit its reservation. This intentionally adds the cancellation wait to the baseline receipt-anchored delay. Public tape is not a private exchange fill notification.
+4. If hedging fails, close the resting order, record unmatched inventory and preserve the halt. Within 2.5 seconds of close, permit at most one separately delayed 500 ms Kalshi unwind intent. Reprice at arrival with the original minimum proceeds/price. A failed sell or unavailable quote leaves inventory and null realized P&L. A successful hedge retains both positions and conditional P&L, not realized profit.
+5. Stop on the first filled-order resolution (paired holdings, completed unwind, failed unwind or unavailable recovery window) or **20 minutes** from worker launch, whichever comes first. No restart, retuning, strategy switch or observer-only continuation. Shutdown can retain unmatched exposure; it never manufactures liquidation.
+
+## Verification and evidence
+
+Local targeted tests cover allocation/venue cash/commitment, exact-size refresh, unchanged baseline, inclusive reserve arithmetic, conditional losses, depth/freshness/state failures, fixed intent/arrival pricing, no cheaper-book retry, cancellation, hedge/unwind outcomes and the one-order stop. Test fixtures are explicitly synthetic; they are not prices or fills observed in the new test.
+
+Run artifacts and frozen source/configuration hashes: [work/sizing-recovery-20260920](../../work/sizing-recovery-20260920). Pre-edit copies and SHA-256 hashes preserve the original local source and handoff. Full tests/typecheck/build belong to GitHub CI; the completed local/run results and remaining CI boundary are recorded below. Prior baseline CI [35535762531](https://github.com/tyhuffman7/lights_on/actions/runs/35535762531) succeeded at `0fec7a55e7bc2778e8c098fb096497ed19ada18e`; that is not verification of this implementation.
+
+
+## Completed bounded run
+
+**2026-09-20T21:10:52.645000+00:00–2026-09-20T21:30:53.456000+00:00**, elapsed **1200.811 seconds**. Supervisor reason `TWENTY_MINUTE_DEADLINE`; worker exit 0, no exit signal/forced kill. Both observer and paper lease tables contain zero owners after shutdown. Frozen source hashes match the executed snapshot. No settings retuning, restart or observer-only continuation occurred.
+
+Fresh catalog preparation found 110,969 Kalshi and 62,773 PM-US records; seven current supported pairs survived screening. All seven passed conditional-paper approvals, fresh paired stream books and clock readiness. These approvals remain conditional, not strict settlement equivalence or Ohio/live-launch approval. The REST screen and 90-second warmup had no eligible plans; the later stream run did admit orders under the same fixed settings.
+
+**Six orders, zero modeled fills, zero positions, $0 realized paper P&L.** Sizes were 7, 4, 7, 6, 5 and 9 contracts. Their respective combined reservations were $7.3150, $4.1400, $7.3008, $6.2600, $5.2000 and $9.4000, including recovery allocation. Five orders activated; one failed activation after cancellation was requested. Four cancellation requests were recorded (three `HEDGE_NO_LONGER_VIABLE`, one `EXECUTION_STATE_INVALID`); the outer-state label alone does not identify the exact unavailable input. All six closed unfilled, with 24 same-market public prints counted. No fill is inferred from quote eligibility or print presence.
+
+Final cash is **$50 Kalshi + $50 PM-US**, with no pending hedge/order, cash reservation, position, commitment or new halt. Every unused reservation was returned. Historical ledger SHA-256 remains `ff1eeed834ec29779f7ce8684426a6f9de7aa7983d96d2b4d3395a02e7dd551e`; its earlier **-$0.53** result and halt are untouched. The new observer contains **281,822** captured book rows and is about 2.09 GB; it is stopped and retained locally.
+
+This exercises small-capital sizing, admission, activation/cancellation and reservation release with genuine captured data. It **does not demonstrate a new hedge recovery fill, policy superiority, or repeatable profit**. Recovery execution outcomes remain synthetic regression evidence. The lack of fills is retained as the result, not grounds to change settings or extend the test.
+
+Evidence: [compact result](sizing-recovery-result-2026-09-20.json), [full result](../../work/sizing-recovery-20260920/result.json), [order-level admission evidence](../../work/sizing-recovery-20260920/admission-evidence.json), [execution/close evidence](../../work/sizing-recovery-20260920/execution-evidence.json), [frozen settings/source](../../work/sizing-recovery-20260920/frozen.json), [launch identity](../../work/sizing-recovery-20260920/launch.json), [supervisor stop](../../work/sizing-recovery-20260920/status.json).
+
+## Original post-run publication boundary (historical)
+
+77 targeted tests passed on Node 22.23.2. A focused 34-test check passed against the frozen isolated source; the stop/launch syntax checks and four supervisor tests passed before paper execution. Full tests/typecheck/build for this revision have **not** run: the new-branch publication request is unanswered, so no push or PR was created. The prior baseline CI success above must not be substituted for new-code CI. No tests/builds or CI polling ran during the 20-minute collection.
+
+Isolated snapshot: `/private/tmp/lights-on-sizing-recovery-20260920`, branch `codex/sizing-recovery-checkpoint`. The main implementation is in local commit `aebb402485fced902461b08d928ddb39ea7a494c`; the executed one-line prompt-stop follow-up remains staged because two attempts through the existing 1Password signer returned `failed to fill whole buffer`. Signing was not disabled. Final evidence/documentation remain local. The launch manifest records HEAD, dirty state and exact source hashes, rather than claiming a clean signed executed HEAD. Original workspace remains on `main`, with its pre-existing staged work preserved.
+
+Checkpoint reached: stop here. If publication is subsequently authorized, sign the prepared follow-up/evidence, publish the isolated branch as a draft based on `codex/hedge-policy-checkpoint`, and run hosted CI. Do not merge or start another experiment as part of that publication step.
+
+## Follow-up audit and publication authorization
+
+The later September 20 instruction authorized signed publication of this implementation, the executed prompt-stop follow-up, related tests/analysis and sanitized PAPER summaries as a draft on a non-main review branch. The [missed-opportunity audit](MISSED-OPPORTUNITY-2026-09-20.md) supersedes the earlier next-step/status above. It distinguishes session-only capture counts from warmup totals and establishes zero qualifying side-specific volume across the five active orders. Fresh-fill recovery remains unproven. No runtime correction, retuning or new run was performed; the short handoff records publication and hosted-CI status.

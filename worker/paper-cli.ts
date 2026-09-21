@@ -16,7 +16,7 @@ import {isVerified} from '../lib/research/mappings.ts';
 import {totals} from '../lib/arb/ledger.ts';
 import {PaperStore,type PaperDocument} from './paper-store.ts';
 import {attachPaperBot} from './paper-bot.ts';
-function summary(d:PaperDocument){return {mode:d.mode,executionMode:d.executionMode??'taker',realOrders:0,realFills:0,pendingHedge:d.pendingId,halt:d.halt,
+function summary(d:PaperDocument){return {mode:d.mode,executionMode:d.executionMode??'taker',realOrders:0,realFills:0,pendingHedge:d.pendingId,halt:d.halt,makerRecoveryCheckpoint:d.makerRecoveryCheckpoint??null,
  makerOrder:d.makerOrder?{id:d.makerOrder.id,event:d.makerOrder.pair.a.title,plannedQuantity:d.makerOrder.quote.quantity,filledA:d.makerOrder.filledA,filledB:d.makerOrder.filledB,reservedUSD:(d.makerOrder.reservedA+d.makerOrder.reservedB)/10000,expiresAt:d.makerOrder.expiresAt}:null,
  cashUSD:{kalshi:d.state.cash.kalshi/10000,polymarketUS:d.state.cash.poly/10000},
  committedUSD:totals(d.state).committed/10000,realizedPaperProfitUSD:totals(d.state).realized/10000,
@@ -64,12 +64,13 @@ if(command==='status'){
   bot=command==='maker-run'?new MakerRunner(observer,store,()=>clock,()=>fees,true):attachPaperBot(observer,store,'live-data');
   refreshRules();await ruleTask;timers.push(setInterval(refreshRules,60000));if(!stopping)observer.resume();
   const active=bot;
+  if(active instanceof MakerRunner&&active.document.state.settings.makerRecovery)timers.push(setInterval(()=>{if(!stopping&&active.checkpointComplete()){console.log(JSON.stringify({message:'PAPER_RECOVERY_CHECKPOINT_COMPLETE',checkpoint:active.document.makerRecoveryCheckpoint}));requestStop();}},100));
   const coverage=()=>({conditionalPaperApprovals:observer!.registry.list().filter(m=>m.active&&validPaperApproval(active.document.approvals?.[m.id],m.pair)).length,approvedActiveMappings:observer!.registry.list().filter(isVerified).length,
    selectedPairs:observer!.capacity?.selectedIds.length??0,
    excludedByPaperHorizon:observer!.capacity?.excludedByPaperHorizon??0,
    startupCandidatesRejected:observer!.telemetry.counters.startupCandidatesRejected??0,
    entryReadiness:observer!.registry.list().some(m=>isVerified(m)||(m.active&&validPaperApproval(active.document.approvals?.[m.id],m.pair)))?'Paper-approved mappings available; check conditionalPaperApprovals and position risk labels; current books and risk checks still required':'No approved settlement mappings: scanning only; paper entries blocked'});
-  timers.push(setInterval(()=>{try{enforcePaperObserverHealth(active,observer!,requestStop,stopping);active.flush();console.log(JSON.stringify({...summary(active.document),...coverage(),observerHealth:{paused:observer!.paused,stopped:observer!.stopped,recorderFailed:observer!.recorder.failed,failureReason:observer!.failureReason}}));if(active.failed){observer?.pause();requestStop();}}catch(e){console.error('Paper persistence failed; stopping',String(e));observer?.pause();requestStop();}},10000));
+  timers.push(setInterval(()=>{try{enforcePaperObserverHealth(active,observer!,requestStop,stopping);active.flush();console.log(JSON.stringify({...summary(active.document),...coverage(),observerHealth:{paused:observer!.paused,stopped:observer!.stopped,recorderFailed:observer!.recorder.failed,failureReason:observer!.failureReason}}));if(active instanceof MakerRunner&&active.checkpointComplete()){console.log(JSON.stringify({message:'PAPER_RECOVERY_CHECKPOINT_COMPLETE',checkpoint:active.document.makerRecoveryCheckpoint}));requestStop();}if(active.failed){observer?.pause();requestStop();}}catch(e){console.error('Paper persistence failed; stopping',String(e));observer?.pause();requestStop();}},10000));
   timers.push(setInterval(()=>void active.settle(market),60000));
   console.log(JSON.stringify({message:'Event-driven PAPER ONLY worker started. Browser not required. No real order transport.',seconds,...summary(active.document),...coverage()}));
   if(seconds!==null)timeout=setTimeout(requestStop,seconds*1000);

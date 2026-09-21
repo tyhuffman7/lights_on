@@ -1,0 +1,745 @@
+{
+  "scope": "STOPPED_CAPTURE_AUDIT_AND_COUNTERFACTUAL_ADMISSION_COMPARISON; NOT ADDITIONAL_TRADES_OR_PROVEN_PROFIT",
+  "units": {
+    "money": "USD x 10000",
+    "quantity": "contracts",
+    "time": "Unix milliseconds; accumulated time is pair-side milliseconds"
+  },
+  "session": {
+    "id": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+    "start": 1789938652833,
+    "end": 1789939852653
+  },
+  "executed": {
+    "head": "aebb402485fced902461b08d928ddb39ea7a494c",
+    "runtime": "v25.8.1",
+    "observerSha256": "bd778fe8e5377f4e0dec7e7a35934b9ff8b714fa9f6c7eebdf8d63d03b06b791",
+    "paperSha256": "871927bb4cf3b6a27efe17d57d6b411eabd01439d4f780bc04c568d42aea2485",
+    "historicalSha256": "ff1eeed834ec29779f7ce8684426a6f9de7aa7983d96d2b4d3395a02e7dd551e"
+  },
+  "executedSourceNote": "Commit aebb402 plus the recorded one-line prompt-stop timer; all 111 frozen source hashes verified. Capture used Node 25.8.1.",
+  "frozen": {
+    "policy": "bounded-v1",
+    "capital": {
+      "kalshi": 500000,
+      "poly": 500000
+    },
+    "settings": {
+      "makerRecovery": "bounded-v1",
+      "maxTrade": 100000,
+      "maxCommitted": 400000,
+      "minProfit": 1000,
+      "minRoi": 1,
+      "reserve": 200,
+      "maxDays": 30,
+      "maxAge": 2000
+    },
+    "durationMs": 1200000
+  },
+  "orders": [
+    {
+      "orderId": "15a4f5d0-f760-4fd1-b329-63b2539d0439",
+      "placementDiagnostic": 74114,
+      "activationDiagnostic": 74118,
+      "closeDiagnostic": 74127,
+      "pairId": "KXMLBGAME-26SEP201510SEACOL-SEA::aec-mlb-sea-col-2026-09-20",
+      "market": "Seattle wins",
+      "side": "no",
+      "quantity": 7,
+      "price": 1000,
+      "placedAt": 1789939059729,
+      "activeAt": 1789939060230,
+      "effectiveEnd": 1789939061309,
+      "closedAt": 1789939061309,
+      "activeDurationMs": 1079,
+      "placementQueue": 1,
+      "activationQueue": 65.53,
+      "finalQueue": 65.53,
+      "cancellation": {
+        "at": 1789939061059,
+        "effectiveAt": 1789939061309,
+        "reason": "EXECUTION_STATE_INVALID"
+      },
+      "rejection": null,
+      "disposition": "CANCELLED_UNFILLED",
+      "stats": {
+        "processedWindowSameMarketPrints": 0,
+        "receiptWindowSameMarketVolume": 0,
+        "receiptWindowSameSideVolume": 0,
+        "receiptWindowPriceQualifiedVolume": 0,
+        "fullyTimeQualifiedVolume": 0,
+        "modeledFill": 0
+      },
+      "rejectedOverlaps": {},
+      "scope": "CAPTURED_TAPE_REPLAY_USING_EXECUTED_QUEUE; NOT NEW FILLS"
+    },
+    {
+      "orderId": "9912ba08-d8ab-4376-ba06-c8897aaaf053",
+      "placementDiagnostic": 86340,
+      "activationDiagnostic": 86346,
+      "closeDiagnostic": 86373,
+      "pairId": "KXMLBGAME-26SEP201607MINLAA-MIN::aec-mlb-min-laa-2026-09-20",
+      "market": "Minnesota wins",
+      "side": "yes",
+      "quantity": 4,
+      "price": 6800,
+      "placedAt": 1789939121865,
+      "activeAt": 1789939122365,
+      "effectiveEnd": 1789939123865,
+      "closedAt": 1789939123867,
+      "activeDurationMs": 1500,
+      "placementQueue": 0,
+      "activationQueue": 0,
+      "finalQueue": 0,
+      "cancellation": null,
+      "rejection": null,
+      "disposition": "EXPIRED_UNFILLED",
+      "stats": {
+        "processedWindowSameMarketPrints": 20,
+        "receiptWindowSameMarketVolume": 211.42000000000002,
+        "receiptWindowSameSideVolume": 0,
+        "receiptWindowPriceQualifiedVolume": 0,
+        "fullyTimeQualifiedVolume": 0,
+        "modeledFill": 0
+      },
+      "rejectedOverlaps": {
+        "OTHER_SIDE": 20,
+        "EXCHANGE_BOUNDS_BEFORE_ACTIVATION": 15
+      },
+      "scope": "CAPTURED_TAPE_REPLAY_USING_EXECUTED_QUEUE; NOT NEW FILLS"
+    },
+    {
+      "orderId": "224e48df-9cee-45f9-a19c-3698f1320e90",
+      "placementDiagnostic": 130134,
+      "activationDiagnostic": null,
+      "closeDiagnostic": 130159,
+      "pairId": "KXMLBGAME-26SEP201510SEACOL-SEA::aec-mlb-sea-col-2026-09-20",
+      "market": "Seattle wins",
+      "side": "no",
+      "quantity": 7,
+      "price": 1200,
+      "placedAt": 1789939377508,
+      "activeAt": null,
+      "effectiveEnd": 1789939377864,
+      "closedAt": 1789939378009,
+      "activeDurationMs": 0,
+      "placementQueue": 0,
+      "activationQueue": null,
+      "finalQueue": null,
+      "cancellation": {
+        "at": 1789939377614,
+        "effectiveAt": 1789939377864,
+        "reason": "HEDGE_NO_LONGER_VIABLE"
+      },
+      "rejection": {
+        "id": "224e48df-9cee-45f9-a19c-3698f1320e90",
+        "bid": 1200,
+        "ask": 1800,
+        "valid": false,
+        "scope": "POST_ONLY_PAPER"
+      },
+      "disposition": "ACTIVATION_REJECTED",
+      "stats": {
+        "processedWindowSameMarketPrints": 0,
+        "receiptWindowSameMarketVolume": 0,
+        "receiptWindowSameSideVolume": 0,
+        "receiptWindowPriceQualifiedVolume": 0,
+        "fullyTimeQualifiedVolume": 0,
+        "modeledFill": 0
+      },
+      "rejectedOverlaps": {},
+      "scope": "CAPTURED_TAPE_REPLAY_USING_EXECUTED_QUEUE; NOT NEW FILLS"
+    },
+    {
+      "orderId": "a01ccf7b-2476-45f1-843a-167e603a09ba",
+      "placementDiagnostic": 216209,
+      "activationDiagnostic": 216218,
+      "closeDiagnostic": 216225,
+      "pairId": "KXMLBGAME-26SEP201610SFLAD-SF::aec-mlb-sf-lad-2026-09-20",
+      "market": "San Francisco wins",
+      "side": "yes",
+      "quantity": 6,
+      "price": 3500,
+      "placedAt": 1789939765586,
+      "activeAt": 1789939766086,
+      "effectiveEnd": 1789939767534,
+      "closedAt": 1789939767534,
+      "activeDurationMs": 1448,
+      "placementQueue": 0,
+      "activationQueue": 34,
+      "finalQueue": 34,
+      "cancellation": {
+        "at": 1789939767284,
+        "effectiveAt": 1789939767534,
+        "reason": "HEDGE_NO_LONGER_VIABLE"
+      },
+      "rejection": null,
+      "disposition": "CANCELLED_UNFILLED",
+      "stats": {
+        "processedWindowSameMarketPrints": 1,
+        "receiptWindowSameMarketVolume": 0.93,
+        "receiptWindowSameSideVolume": 0,
+        "receiptWindowPriceQualifiedVolume": 0,
+        "fullyTimeQualifiedVolume": 0,
+        "modeledFill": 0
+      },
+      "rejectedOverlaps": {
+        "OTHER_SIDE": 1,
+        "EXCHANGE_BOUNDS_BEFORE_ACTIVATION": 1,
+        "PRICE_ABOVE_BID": 1
+      },
+      "scope": "CAPTURED_TAPE_REPLAY_USING_EXECUTED_QUEUE; NOT NEW FILLS"
+    },
+    {
+      "orderId": "ce489cf8-b7ef-403a-8430-845004403518",
+      "placementDiagnostic": 216228,
+      "activationDiagnostic": 216237,
+      "closeDiagnostic": 216242,
+      "pairId": "KXMLBGAME-26SEP201610SFLAD-SF::aec-mlb-sf-lad-2026-09-20",
+      "market": "San Francisco wins",
+      "side": "yes",
+      "quantity": 5,
+      "price": 3500,
+      "placedAt": 1789939767541,
+      "activeAt": 1789939768041,
+      "effectiveEnd": 1789939768467,
+      "closedAt": 1789939768467,
+      "activeDurationMs": 426,
+      "placementQueue": 0,
+      "activationQueue": 28.9,
+      "finalQueue": 28.9,
+      "cancellation": {
+        "at": 1789939768217,
+        "effectiveAt": 1789939768467,
+        "reason": "HEDGE_NO_LONGER_VIABLE"
+      },
+      "rejection": null,
+      "disposition": "CANCELLED_UNFILLED",
+      "stats": {
+        "processedWindowSameMarketPrints": 3,
+        "receiptWindowSameMarketVolume": 0,
+        "receiptWindowSameSideVolume": 0,
+        "receiptWindowPriceQualifiedVolume": 0,
+        "fullyTimeQualifiedVolume": 0,
+        "modeledFill": 0
+      },
+      "rejectedOverlaps": {
+        "OTHER_SIDE": 3,
+        "EXCHANGE_BOUNDS_BEFORE_ACTIVATION": 3,
+        "PRICE_ABOVE_BID": 3
+      },
+      "scope": "CAPTURED_TAPE_REPLAY_USING_EXECUTED_QUEUE; NOT NEW FILLS"
+    },
+    {
+      "orderId": "c916bf60-6064-4759-adb0-f4abb1a5a762",
+      "placementDiagnostic": 216405,
+      "activationDiagnostic": 216407,
+      "closeDiagnostic": 216414,
+      "pairId": "KXMLBGAME-26SEP201610SFLAD-SF::aec-mlb-sf-lad-2026-09-20",
+      "market": "San Francisco wins",
+      "side": "yes",
+      "quantity": 9,
+      "price": 3500,
+      "placedAt": 1789939768738,
+      "activeAt": 1789939769238,
+      "effectiveEnd": 1789939770738,
+      "closedAt": 1789939770776,
+      "activeDurationMs": 1500,
+      "placementQueue": 25,
+      "activationQueue": 57.91,
+      "finalQueue": 57.91,
+      "cancellation": null,
+      "rejection": null,
+      "disposition": "EXPIRED_UNFILLED",
+      "stats": {
+        "processedWindowSameMarketPrints": 0,
+        "receiptWindowSameMarketVolume": 0,
+        "receiptWindowSameSideVolume": 0,
+        "receiptWindowPriceQualifiedVolume": 0,
+        "fullyTimeQualifiedVolume": 0,
+        "modeledFill": 0
+      },
+      "rejectedOverlaps": {},
+      "scope": "CAPTURED_TAPE_REPLAY_USING_EXECUTED_QUEUE; NOT NEW FILLS"
+    }
+  ],
+  "selection": {
+    "events": 228478,
+    "processedSlots": 236628,
+    "zeroProcessed": 0,
+    "emptyEligible": 225999,
+    "eligiblePlans": 3172,
+    "activeEligiblePlans": 795,
+    "inactiveEligiblePlans": 2377,
+    "selectedEvents": 6,
+    "consecutiveIdenticalSummaries": 215065,
+    "globalNonemptyRuns": 257,
+    "processedHistogram": {
+      "1": 220935,
+      "2": 7421,
+      "5": 1,
+      "6": 1,
+      "7": 120
+    },
+    "scope": "Exact logged totals; processed includes early-skipped queue slots; eligible is a retained side/price plan, not every enumerated size. Summary runs are NOT distinct per-pair opportunities.",
+    "observedSizeRejections": 787,
+    "activePlansPassingSizeStress": 8
+  },
+  "replay": {
+    "scope": "Full capture transition audit at join bid per pair/side. Counterfactual admission only, not actual evaluated IDs, submitted orders, fills, or profit. Only noFloor removes the absolute profit floor; positive net/ROI/reserve/headroom/activity/size/data/capital gates remain. Headroom/floor interaction is same-price arithmetic, not a third execution policy.",
+    "primaryHierarchy": [
+      "WORKER_STARTUP",
+      "MARKET_CLOSED",
+      "BOOK_MISSING",
+      "FRESHNESS",
+      "STREAM_HEALTH_UNKNOWN_OR_DOWN",
+      "CLOCK",
+      "APPROVAL_REFRESH",
+      "MAKER_BUSY",
+      "NO_POST_ONLY_DEPTH",
+      "AFTER_FEES_NONPOSITIVE",
+      "RESERVE_ERASES_EDGE",
+      "BASE_CAPITAL",
+      "RECOVERY_HEADROOM",
+      "ROI",
+      "MIN_TOTAL_PROFIT",
+      "ACTIVITY",
+      "SIZE_STRESS",
+      "ADMISSIBLE"
+    ],
+    "primaryMilliseconds": {
+      "WORKER_STARTUP": 58520,
+      "BOOK_MISSING": 12144,
+      "AFTER_FEES_NONPOSITIVE": 10204804,
+      "FRESHNESS": 3582678,
+      "RESERVE_ERASES_EDGE": 1621339,
+      "ROI": 17875,
+      "APPROVAL_REFRESH": 115314,
+      "MIN_TOTAL_PROFIT": 3629,
+      "NO_POST_ONLY_DEPTH": 765678,
+      "RECOVERY_HEADROOM": 178,
+      "ADMISSIBLE": 27,
+      "MAKER_BUSY": 72118,
+      "ACTIVITY": 6312,
+      "STREAM_HEALTH_UNKNOWN_OR_DOWN": 37444,
+      "CLOCK": 297998,
+      "SIZE_STRESS": 1422
+    },
+    "positiveAfterFeePrimaryMilliseconds": {
+      "FRESHNESS": 301003,
+      "RESERVE_ERASES_EDGE": 1621339,
+      "ROI": 17875,
+      "APPROVAL_REFRESH": 16044,
+      "MIN_TOTAL_PROFIT": 3629,
+      "RECOVERY_HEADROOM": 178,
+      "ADMISSIBLE": 27,
+      "MAKER_BUSY": 21231,
+      "ACTIVITY": 6312,
+      "STREAM_HEALTH_UNKNOWN_OR_DOWN": 6291,
+      "CLOCK": 49157,
+      "SIZE_STRESS": 1422
+    },
+    "overlapMilliseconds": {
+      "reserve": 2031654,
+      "roi": 32150,
+      "headroom": 37261,
+      "capital": 41102,
+      "minimumProfit": 19417,
+      "activity": 8512,
+      "sizeStress": 4703
+    },
+    "intervalSummary": {
+      "positiveAfterFees": {
+        "count": 763,
+        "totalMs": 2044508,
+        "maxMs": 140314,
+        "atLeast500ms": 268
+      },
+      "fundedPositive": {
+        "count": 191,
+        "totalMs": 29265,
+        "maxMs": 1776,
+        "atLeast500ms": 21
+      },
+      "admitted": {
+        "count": 6,
+        "totalMs": 27,
+        "maxMs": 7,
+        "atLeast500ms": 0
+      },
+      "noFloorAdmitted": {
+        "count": 22,
+        "totalMs": 964,
+        "maxMs": 808,
+        "atLeast500ms": 1
+      },
+      "floorOnly": {
+        "count": 17,
+        "totalMs": 937,
+        "maxMs": 808,
+        "atLeast500ms": 1
+      },
+      "recoveryFloorInteraction": {
+        "count": 9,
+        "totalMs": 1363,
+        "maxMs": 1055,
+        "atLeast500ms": 1
+      }
+    },
+    "examples": [
+      {
+        "kind": "HEADROOM_FLOOR",
+        "key": "KXMLBGAME-26SEP201510SEACOL-SEA::aec-mlb-sea-col-2026-09-20|no",
+        "at": 1789938976484,
+        "price": 1000,
+        "kalshiBookId": 95625,
+        "polyBookId": 95600,
+        "kalshiCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 62065,
+          "processedAt": 1789938976483,
+          "processedMono": 323815.268416
+        },
+        "polyCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 62040,
+          "processedAt": 1789938976395,
+          "processedMono": 323726.751708
+        },
+        "volume": 11.03,
+        "sizes": [
+          10,
+          0.03,
+          1
+        ],
+        "ahead": 11,
+        "minimumFloorQuantity": 10,
+        "maximumBaseQuantity": 10,
+        "maximumFundedQuantity": 9,
+        "chosen": null,
+        "alternative": {
+          "quantity": 9,
+          "profit": 900,
+          "roi": 1.0101010101010102,
+          "cost": 89100,
+          "allocation": {
+            "policy": "bounded-v1",
+            "kalshi": 10900,
+            "poly": 83600
+          }
+        },
+        "alternativeStress": {
+          "eligible": false,
+          "reason": "NONPOSITIVE_OBSERVED_SIZE",
+          "minimumProfit": -64,
+          "distinctSizes": 3,
+          "scope": "OBSERVED_SIZE_STRESS_NOT_FILL_PREDICTION"
+        }
+      },
+      {
+        "kind": "FLOOR_ONLY",
+        "key": "KXMLBGAME-26SEP201510SEACOL-SEA::aec-mlb-sea-col-2026-09-20|no",
+        "at": 1789938997598,
+        "price": 1000,
+        "kalshiBookId": 98630,
+        "polyBookId": 98591,
+        "kalshiCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 65070,
+          "processedAt": 1789938997597,
+          "processedMono": 344929.162875
+        },
+        "polyCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 65031,
+          "processedAt": 1789938997519,
+          "processedMono": 344851.09775
+        },
+        "volume": 1.1,
+        "sizes": [
+          1.1
+        ],
+        "ahead": 8.9,
+        "minimumFloorQuantity": null,
+        "maximumBaseQuantity": 10,
+        "maximumFundedQuantity": 9,
+        "chosen": null,
+        "alternative": {
+          "quantity": 9,
+          "profit": 900,
+          "roi": 1.0101010101010102,
+          "cost": 89100,
+          "allocation": {
+            "policy": "bounded-v1",
+            "kalshi": 10900,
+            "poly": 83600
+          }
+        },
+        "alternativeStress": {
+          "eligible": true,
+          "reason": "PASS",
+          "minimumProfit": 20,
+          "distinctSizes": 1,
+          "scope": "OBSERVED_SIZE_STRESS_NOT_FILL_PREDICTION"
+        }
+      },
+      {
+        "kind": "HEADROOM_FLOOR",
+        "key": "KXMLBGAME-26SEP201510SEACOL-SEA::aec-mlb-sea-col-2026-09-20|yes",
+        "at": 1789939318797,
+        "price": 8400,
+        "kalshiBookId": 161022,
+        "polyBookId": 160975,
+        "kalshiCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 127462,
+          "processedAt": 1789939318796,
+          "processedMono": 666128.002958
+        },
+        "polyCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 127415,
+          "processedAt": 1789939318709,
+          "processedMono": 666040.858166
+        },
+        "volume": 0,
+        "sizes": [],
+        "ahead": 1,
+        "minimumFloorQuantity": 10,
+        "maximumBaseQuantity": 10,
+        "maximumFundedQuantity": 9,
+        "chosen": null,
+        "alternative": {
+          "quantity": 8,
+          "profit": 900,
+          "roi": 1.1378002528445006,
+          "cost": 79100,
+          "allocation": {
+            "policy": "bounded-v1",
+            "kalshi": 68900,
+            "poly": 15000
+          }
+        },
+        "alternativeStress": {
+          "eligible": false,
+          "reason": "NO_RECENT_SIZES",
+          "minimumProfit": null,
+          "distinctSizes": 0,
+          "scope": "OBSERVED_SIZE_STRESS_NOT_FILL_PREDICTION"
+        }
+      },
+      {
+        "kind": "FLOOR_ONLY",
+        "key": "KXMLBGAME-26SEP201510SEACOL-SEA::aec-mlb-sea-col-2026-09-20|no",
+        "at": 1789939377501,
+        "price": 1300,
+        "kalshiBookId": 173021,
+        "polyBookId": 173000,
+        "kalshiCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 139461,
+          "processedAt": 1789939377500,
+          "processedMono": 724831.902083
+        },
+        "polyCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 139440,
+          "processedAt": 1789939377399,
+          "processedMono": 724731.149125
+        },
+        "volume": 5.63,
+        "sizes": [
+          5.63
+        ],
+        "ahead": 500,
+        "minimumFloorQuantity": null,
+        "maximumBaseQuantity": 9,
+        "maximumFundedQuantity": 9,
+        "chosen": null,
+        "alternative": {
+          "quantity": 4,
+          "profit": 428,
+          "roi": 1.0815728292732234,
+          "cost": 39572,
+          "allocation": {
+            "policy": "bounded-v1",
+            "kalshi": 6100,
+            "poly": 35872
+          }
+        },
+        "alternativeStress": {
+          "eligible": true,
+          "reason": "PASS",
+          "minimumProfit": 428,
+          "distinctSizes": 1,
+          "scope": "OBSERVED_SIZE_STRESS_NOT_FILL_PREDICTION"
+        }
+      },
+      {
+        "kind": "FLOOR_ONLY",
+        "key": "KXMLBGAME-26SEP201610SFLAD-SF::aec-mlb-sf-lad-2026-09-20|no",
+        "at": 1789939721384,
+        "price": 5700,
+        "kalshiBookId": 247356,
+        "polyBookId": 247325,
+        "kalshiCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 213796,
+          "processedAt": 1789939721383,
+          "processedMono": 1068716.280583
+        },
+        "polyCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 213765,
+          "processedAt": 1789939721308,
+          "processedMono": 1068641.802291
+        },
+        "volume": 11,
+        "sizes": [
+          11
+        ],
+        "ahead": 29,
+        "minimumFloorQuantity": 10,
+        "maximumBaseQuantity": 10,
+        "maximumFundedQuantity": 9,
+        "chosen": null,
+        "alternative": {
+          "quantity": 9,
+          "profit": 950,
+          "roi": 1.0668163952835485,
+          "cost": 89050,
+          "allocation": {
+            "policy": "bounded-v1",
+            "kalshi": 53300,
+            "poly": 41150
+          }
+        },
+        "alternativeStress": {
+          "eligible": true,
+          "reason": "PASS",
+          "minimumProfit": 950,
+          "distinctSizes": 1,
+          "scope": "OBSERVED_SIZE_STRESS_NOT_FILL_PREDICTION"
+        }
+      },
+      {
+        "kind": "FLOOR_ONLY",
+        "key": "KXMLBGAME-26SEP201610SFLAD-SF::aec-mlb-sf-lad-2026-09-20|yes",
+        "at": 1789939768522,
+        "price": 3500,
+        "kalshiBookId": 263272,
+        "polyBookId": 263268,
+        "kalshiCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 229712,
+          "processedAt": 1789939768521,
+          "processedMono": 1115854.525833
+        },
+        "polyCapture": {
+          "sessionId": "8b071ad0-4117-4c67-ad50-1639d4d600d5",
+          "version": 229708,
+          "processedAt": 1789939768514,
+          "processedMono": 1115847.265041
+        },
+        "volume": 0.44,
+        "sizes": [
+          0.44
+        ],
+        "ahead": 25,
+        "minimumFloorQuantity": null,
+        "maximumBaseQuantity": 9,
+        "maximumFundedQuantity": 9,
+        "chosen": null,
+        "alternative": {
+          "quantity": 4,
+          "profit": 800,
+          "roi": 2.0408163265306123,
+          "cost": 39200,
+          "allocation": {
+            "policy": "bounded-v1",
+            "kalshi": 14900,
+            "poly": 26700
+          }
+        },
+        "alternativeStress": {
+          "eligible": true,
+          "reason": "PASS",
+          "minimumProfit": 16,
+          "distinctSizes": 1,
+          "scope": "OBSERVED_SIZE_STRESS_NOT_FILL_PREDICTION"
+        }
+      }
+    ],
+    "limitations": [
+      "Selection logs omit rejected pair/price/size IDs; exact per-gate runtime counts cannot be recovered.",
+      "Heartbeat proofs use recorded connections and telemetry; unobserved heartbeats are unknown.",
+      "Book processing-start timestamps and millisecond ties do not establish exact decision availability; interval endpoints carry at least 1 ms uncertainty.",
+      "Opportunity intervals end at actual maker reservations as well as gate failures; their duration is censored, not a natural quote lifetime.",
+      "Join bid is the cheapest retained price: economic rejection there cannot be rescued by a more expensive bid; activity can differ at higher bids.",
+      "Metadata refresh initiation is not fully logged; captured rule refresh windows are excluded, other transient invalidations remain unknown.",
+      "Overlap columns are non-additive and describe recorded-book arithmetic, including non-executable stale snapshots."
+    ]
+  },
+  "coverage": {
+    "catalogs": {
+      "kalshi": 110969,
+      "poly": 62773
+    },
+    "catalogPaginationComplete": true,
+    "matchedPairs": 1105,
+    "matcherComparisonLimitDeferred": 181137986,
+    "conditionalProfiles": 454,
+    "preliminaryEligibleProfiles": 450,
+    "currentWindowMappings": 14,
+    "uniqueCurrentWindowPolyMarkets": 7,
+    "screenedMappings": 7,
+    "preparationPublicTradeRecords": 305,
+    "selectedMappings": 7,
+    "subscribedMarkets": {
+      "kalshi": 7,
+      "poly": 7
+    },
+    "configuredMarketsPerVenueLimit": 30,
+    "limitBinding": false,
+    "runDiscoveryEnabled": false,
+    "pairsWithSomeUsableSimultaneousBooks": 7,
+    "conservativeUsablePairMilliseconds": {
+      "KXMLBGAME-26SEP201610SFLAD-SF::aec-mlb-sf-lad-2026-09-20": 1100404,
+      "KXMLBGAME-26SEP201510SEACOL-SEA::aec-mlb-sea-col-2026-09-20": 1043268,
+      "KXMLBGAME-26SEP201610NYYAZ-NYY::aec-mlb-nyy-az-2026-09-20": 1058804,
+      "KXMLBGAME-26SEP201435TORTEX-TOR::aec-mlb-tor-tex-2026-09-20": 870910,
+      "KXMLBGAME-26SEP201607MINLAA-MIN::aec-mlb-min-laa-2026-09-20": 1070254,
+      "KXMLBGAME-26SEP201610MIASD-MIA::aec-mlb-mia-sd-2026-09-20": 955240,
+      "KXMLBGAME-26SEP201920MILBAL-MIL::aec-mlb-mil-bal-2026-09-20": 454467
+    },
+    "runBookRows": 248262,
+    "runPublicTradeRecords": 2471,
+    "wholeDatabaseIncludingWarmup": {
+      "bookRows": 281822,
+      "publicTradeRecords": 2729
+    },
+    "omittedCurrentWindowKalshiMappings": 7,
+    "outsideWindowEligibleProfiles": 436,
+    "outsideSelectedActivity": "UNKNOWN; alternate Kalshi mappings were removed by Poly-market deduplication before REST activity sampling; other profiles lack contemporaneous captured books/trades"
+  },
+  "clockUnavailable": {
+    "start": 1789939202048,
+    "nextCalibration": 1789939227134
+  },
+  "actualResult": {
+    "posted": 6,
+    "activated": 5,
+    "modeledFills": 0,
+    "activeQuoteMilliseconds": 5953,
+    "qualifyingSameSideVolume": 0,
+    "positions": 0,
+    "realizedPaperProfit": 0,
+    "historicalPaperProfit": -5300,
+    "historicalLedgerUnchanged": true,
+    "freshFillRecovery": "UNPROVEN"
+  },
+  "decision": {
+    "runtimeCorrection": null,
+    "nextExperiment": "One 30-minute order-disabled coverage/activity capture in a current MLB window, maximum 14 Kalshi markets / 7 PM-US markets, sampling both distinct Kalshi outcome mappings per selected event. Preserve frozen economics, timing and queue rules; record deduplicated candidate identities and primary/overlapping gate reasons. Compare the original subset with omitted counterparts in the same capture; hard stop at 30 minutes, no retuning or automatic restart. Not launched."
+  }
+}

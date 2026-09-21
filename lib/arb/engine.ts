@@ -11,7 +11,7 @@ export function walk(levels:Level[],q:number,rate:number,rounding:'ceil'|'even')
  fees=feesForLevels(used,{rate,rounding,aggregation:rounding==='even'?'order':'level',source:'venue metadata'});
  return left ? null : {quantity:q,cost,fees,levels:used};
 }
-export function assess(pair:Pair,a:Book,b:Book,s:Settings,cash:{kalshi:number;poly:number},now=Date.now(),fillModel:(levels:Level[],q:number,rate:number,rounding:'ceil'|'even',venue:Venue)=>Fill|null=walk,selection:{score?:(quote:Quote)=>number;quantity?:number}={}):Quote|null {
+export function assess(pair:Pair,a:Book,b:Book,s:Settings,cash:{kalshi:number;poly:number},now=Date.now(),fillModel:(levels:Level[],q:number,rate:number,rounding:'ceil'|'even',venue:Venue)=>Fill|null=walk,selection:{score?:(quote:Quote)=>number;quantity?:number;admit?:(quote:Quote)=>boolean}={}):Quote|null {
  if([pair.a,pair.b].some(m=>!Number.isFinite(m.minQty)||m.minQty<=0))return null;
  const reasons:string[]=[];
  if(!pair.reviewed)reasons.push('Settlement rules need review');
@@ -36,6 +36,7 @@ export function assess(pair:Pair,a:Book,b:Book,s:Settings,cash:{kalshi:number;po
    const profit=q*USD-total,roi=profit/total*100,why=[...reasons];
    if(profit<s.minProfit||roi<s.minRoi)why.push('Net edge below threshold');
    const x:Quote={feeModel:{version:1,kalshiRate:pair.a.feeRate,polyRate:pair.b.feeRate,scope:fillModel===walk?"ESTIMATE":"CONSERVATIVE_PAPER_BOUND"},pairId:pair.id,quantity:q,aSide,bSide,aFill:af,bFill:bf,cost,fees,reserve,payout:q*USD,profit,roi,reasons:why,eligible:why.length===0,receivedAt:Math.min(a.receivedAt,b.receivedAt)};
+   if(selection.admit&&!selection.admit(x))continue;
    const score=selection.score&&x.eligible?selection.score(x):x.profit;
    if(!best||(x.eligible&&!best.eligible)||(x.eligible===best.eligible&&(score>bestScore||(score===bestScore&&x.profit>best.profit)))){best=x;bestScore=score;}
   }

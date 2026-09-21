@@ -1,0 +1,77 @@
+{
+  "scope": "PUBLIC_STREAM_PAPER_NOT_REAL_FILLS",
+  "units": "USD x 10,000; quantities are contracts; conditional quote profit is not realized",
+  "status": {
+    "phase": "STOPPED",
+    "startedAt": 1789938652645,
+    "deadlineAt": 1789939852645,
+    "endedAt": 1789939853456,
+    "reason": "TWENTY_MINUTE_DEADLINE",
+    "exitCode": 0,
+    "exitSignal": null
+  },
+  "elapsedSeconds": 1200.811,
+  "capital": {
+    "kalshi": 500000,
+    "poly": 500000
+  },
+  "settings": {
+    "makerRecovery": "bounded-v1",
+    "maxTrade": 100000,
+    "maxCommitted": 400000,
+    "minProfit": 1000,
+    "minRoi": 1,
+    "reserve": 200,
+    "maxDays": 30,
+    "maxAge": 2000
+  },
+  "ordersPosted": 6,
+  "fills": 0,
+  "positions": 0,
+  "cash": {
+    "kalshi": 500000,
+    "poly": 500000
+  },
+  "committed": 0,
+  "realizedProfit": 0,
+  "halt": null,
+  "pendingId": null,
+  "makerOrder": null,
+  "makerReserved": null,
+  "quantities": [
+    7,
+    4,
+    7,
+    6,
+    5,
+    9
+  ],
+  "reservations": [
+    73150,
+    41400,
+    73008,
+    62600,
+    52000,
+    94000
+  ],
+  "diagnosticCounts": {
+    "PAPER_CAPTURE_MODE": 24,
+    "PAPER_CLOCK_CALIBRATION": 39,
+    "PAPER_CLOCK_UNAVAILABLE": 1,
+    "PAPER_MAKER_ACTIVATION": 5,
+    "PAPER_MAKER_ACTIVATION_REJECTED": 1,
+    "PAPER_MAKER_CANCEL_REQUEST": 4,
+    "PAPER_MAKER_CLOSE": 6,
+    "PAPER_MAKER_FEE_PROFILES": 20,
+    "PAPER_MAKER_ORDER": 6,
+    "PAPER_MAKER_SELECTION": 228478,
+    "PAPER_PUBLIC_TRADE": 2729,
+    "PAPER_RULE_DOCUMENT_VERIFICATION": 20
+  },
+  "bookRows": 281822,
+  "historicalLedgerUnchanged": true,
+  "historicalLedgerSha256": "ff1eeed834ec29779f7ce8684426a6f9de7aa7983d96d2b4d3395a02e7dd551e",
+  "paperLedgerSha256": "871927bb4cf3b6a27efe17d57d6b411eabd01439d4f780bc04c568d42aea2485",
+  "limits": "No new fill, hedge recovery or realized profitability demonstrated. No post-result retuning or restart. Publication was subsequently authorized; see the missed-opportunity audit and short handoff for current verification status.",
+  "diagnosticAndBookCountScope": "Whole observer database including warmup; see missed-opportunity-summary-2026-09-20.json for session-only counts."
+}

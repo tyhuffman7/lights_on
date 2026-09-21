@@ -5,6 +5,7 @@ import {DatabaseSync} from 'node:sqlite';
 import {initial} from '../lib/arb/ledger.ts';
 import type {State} from '../lib/arb/types.ts';
 export type PaperDocument={state:State;mode:'live-data'|'synthetic';pendingId:string|null;halt:string|null;
+ makerRecoveryCheckpoint?:{positionId:string;closedAt:number;unwindAttempted:boolean};
  approvals?:Record<string,ConditionalPaperApproval>;
  diagnostics?:PaperDiagnostics;
  makerOrder?:MakerOrder;

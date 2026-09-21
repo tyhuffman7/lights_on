@@ -1,5 +1,13 @@
 import {fractionalWalk} from './maker-ledger.ts';import {makerFillFee} from './fractional.ts';
-import {assess} from './engine.ts';import type {Book,Pair,Settings} from './types.ts';
+import {assess as assessBase} from './engine.ts';import type {Book,Pair,Settings} from './types.ts';
+import {makerAllocation} from './maker-allocation.ts';
+function assess(...args:Parameters<typeof assessBase>){
+ const [pair,a,b,settings,cash,now,fillModel,selection={}]=args;
+ return assessBase(pair,a,b,settings,cash,now,fillModel,{...selection,...(settings.makerRecovery?{admit:(quote:import('./types.ts').Quote)=>{
+  const allocation=makerAllocation(quote);quote.makerAllocation=allocation;
+  return allocation.kalshi<=cash.kalshi&&allocation.poly<=cash.poly&&allocation.kalshi+allocation.poly<=settings.maxTrade;
+ }}:{})});
+}
 // Use the execution model's conservative per-level fees when reserving cash.
 // These are modeled upper charges, not a replacement for venue fee metadata.
 const makerFillModel:NonNullable<Parameters<typeof assess>[6]>=(levels,q,rate,_rounding,venue)=>{
