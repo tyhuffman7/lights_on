@@ -103,8 +103,10 @@ export async function observe(dir:string,root:string){
  console.log(JSON.stringify({mode:'live-data',orderDisabled:true,startedAt,routes:frozen.selection.length}));
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
- const [command,path,envFile]=process.argv.slice(2);if(!path||!['prepare','observe'].includes(command))throw Error('Usage: executable-screen.ts prepare|observe OUTPUT_DIRECTORY [ENV_FILE]');
- if(envFile)process.loadEnvFile(envFile);
+ const [command,path,envFile]=process.argv.slice(2);if(!path||!['prepare','observe','confirmation-prepare','confirmation-observe'].includes(command))throw Error('Usage: executable-screen.ts prepare|observe OUTPUT_DIRECTORY [ENV_FILE]');
+ if(envFile&&command!=='confirmation-prepare')process.loadEnvFile(envFile);
  const root=resolve(new URL('..',import.meta.url).pathname);
- if(command==='prepare')await prepare(resolve(path),root);else await observe(resolve(path),root);
+ if(command==='confirmation-prepare'){const {prepareConfirmation}=await import('./candidate-confirmation.ts');await prepareConfirmation(resolve(path),resolve(envFile!),root);}
+ else if(command==='confirmation-observe'){const {runConfirmation}=await import('./candidate-confirmation.ts');await runConfirmation(resolve(path),root);}
+ else if(command==='prepare')await prepare(resolve(path),root);else await observe(resolve(path),root);
 }
