@@ -1,3 +1,4 @@
+import {sourceManifest} from './screen-manifest.ts';
 import {appendFileSync,existsSync,mkdirSync,readFileSync,writeFileSync,renameSync,readdirSync} from 'node:fs';
 import {resolve,relative} from 'node:path';
 import {createHash} from 'node:crypto';
@@ -10,13 +11,7 @@ import {screenPolicy,selectRoutes,screenPair,review,category,labels} from '../li
 import type {Pair,Venue} from '../lib/arb/types.ts';
 const digest=(data:string|Buffer)=>createHash('sha256').update(data).digest('hex');
 const save=(dir:string,name:string,value:unknown)=>{writeFileSync(resolve(dir,name+'.tmp'),JSON.stringify(value,null,2)+'\n');renameSync(resolve(dir,name+'.tmp'),resolve(dir,name));};
-export function sourceManifest(root:string){
- const result:Record<string,string>={};
- const visit=(folder:string)=>{for(const e of readdirSync(folder,{withFileTypes:true})){const p=resolve(folder,e.name);if(e.isDirectory())visit(p);else if(/\.(ts|mjs)$/.test(p))result[relative(root,p)]=digest(readFileSync(p));}};
- for(const d of ['lib','worker'])visit(resolve(root,d));
- for(const p of ['scripts/screen-supervisor.mjs','scripts/executable-screen-launch.mjs'])result[p]=digest(readFileSync(resolve(root,p)));
- return result;
-}
+export {sourceManifest} from './screen-manifest.ts';
 export async function prepare(dir:string,root:string){
  mkdirSync(dir,{recursive:true});
  if(existsSync(resolve(dir,'frozen.json')))throw Error('Frozen screen already exists; use a new directory only with a newly authorized checkpoint');

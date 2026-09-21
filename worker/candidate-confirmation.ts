@@ -5,7 +5,7 @@ import {market} from '../lib/arb/adapters.ts';
 import {matchCandidates} from '../lib/research/matching.ts';
 import {BookCache} from '../lib/research/books.ts';
 import {StreamConnection,authHeaders} from './streams.ts';
-import {sourceManifest} from './executable-screen.ts';
+import {sourceManifest} from './screen-manifest.ts';
 import {category,review} from '../lib/screen/executable.ts';
 import {confirmationPolicy as policy,observeBook,validity,quoteCandidate,httpConfirmationReasons,confirmationResult,latestPolyBook,CandidateIntervals} from '../lib/screen/confirmation.ts';
 import type {EvidenceBook,HttpEvidence} from '../lib/screen/confirmation.ts';
