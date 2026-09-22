@@ -1,0 +1,527 @@
+{
+  "date": "2026-09-22",
+  "mode": "PAPER_ONLY_SHARED_FEED_MARGIN_COMPARISON",
+  "ordersEnabled": false,
+  "alternativeScenariosNeverAdditive": true,
+  "moneyUnits": "1/10000 USD",
+  "startedAt": "2026-09-22T17:52:27.729Z",
+  "endedAt": "2026-09-22T18:52:27.502Z",
+  "elapsedMs": 3599773,
+  "workerStopReason": "EXTERNAL_OR_SUPERVISOR_STOP",
+  "supervisor": {
+    "reason": "BOUNDED_OBSERVATION_DEADLINE",
+    "exitCode": 0,
+    "exitSignal": null
+  },
+  "refreshedComparisons": 34,
+  "blocked": [],
+  "frozenFilesVerified": 133,
+  "originalJournalUnchanged": true,
+  "sourceJournalSha256": "c74c25d5a7a754c9ed38264979cf558d143e25aab73a9edc2d9e31bcc659d67d",
+  "initialCash": {
+    "kalshi": 492300,
+    "poly": 434300
+  },
+  "initialCommitment": 73400,
+  "sharedConfirmationRequests": 1,
+  "distinctMarginSelectionDifferences": [
+    {
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "at": 1790099557442,
+      "baselineReasons": [
+        "NONPOSITIVE_AFTER_RISK"
+      ],
+      "challengerQuantity": 10,
+      "feeBoundSurplus": 1200,
+      "afterRisk": -800,
+      "kind": "DISTINCT_SHARED_FEED_SELECTION_DIFFERENCE_NOT_A_FILL"
+    }
+  ],
+  "additionalChallengerAdmissions": [
+    "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst"
+  ],
+  "scenarios": [
+    {
+      "label": "BASELINE_2C",
+      "admissionMarginPerContract": 200,
+      "newAttempts": 0,
+      "distinctQualifyingCandidates": [],
+      "distinctAdmittedCandidates": [],
+      "confirmationRequests": 0,
+      "confirmations": [],
+      "newPairedCompletions": 0,
+      "modeledFilledLegs": 0,
+      "noFillLegs": 0,
+      "inconclusiveLegs": 0,
+      "recoveryAttempts": 0,
+      "recoveryLoss": 0,
+      "realizedProfit": 0,
+      "totalOpenPairedPositions": 1,
+      "committed": 73400,
+      "freeCash": {
+        "kalshi": 492300,
+        "poly": 434300
+      },
+      "conditionalOrdinaryHoldingSurplus": 2200,
+      "inheritedConditionalSurplus": 2200,
+      "holdings": [
+        {
+          "candidate": "KXDWTSRANK-226DEC31-JSTIL",
+          "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+          "inherited": true,
+          "reservedRisk": 1400,
+          "reservedRecovery": 4200,
+          "held": {
+            "kalshi": 1400,
+            "poly": 4200
+          },
+          "positions": [
+            {
+              "status": "open",
+              "aQuantity": 7,
+              "bQuantity": 7,
+              "aDebit": 6300,
+              "bDebit": 61500,
+              "conditionalOrdinarySurplus": 2200,
+              "realizedProfit": null,
+              "closedBy": null
+            }
+          ]
+        }
+      ],
+      "conservation": {
+        "kalshi": {
+          "free": 492300,
+          "held": 1400,
+          "openDebit": 6300,
+          "realized": 0,
+          "initial": 500000,
+          "verified": true
+        },
+        "poly": {
+          "free": 434300,
+          "held": 4200,
+          "openDebit": 61500,
+          "realized": 0,
+          "initial": 500000,
+          "verified": true
+        }
+      },
+      "rejections": {
+        "NONPOSITIVE_AFTER_RISK": 3519,
+        "OBSERVATION_ONLY": 3134,
+        "UNSUPPORTED_ENTRY_PRICE_GRID": 1163,
+        "WRONG_OR_NONPOSITIVE_ROUTE": 2303,
+        "kalshi_QUANTITY_CONSTRAINT": 1163,
+        "kalshi_PRICE_GRID": 1163,
+        "COMPARISON_ALREADY_ATTEMPTED": 116
+      },
+      "processedComparisonStates": 4061,
+      "observedComparisons": 34,
+      "newModeled": [],
+      "halt": null
+    },
+    {
+      "label": "CHALLENGER_0C",
+      "admissionMarginPerContract": 0,
+      "newAttempts": 1,
+      "distinctQualifyingCandidates": [
+        "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst"
+      ],
+      "distinctAdmittedCandidates": [
+        "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst"
+      ],
+      "confirmationRequests": 1,
+      "confirmations": [
+        {
+          "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+          "at": 1790099559982,
+          "phase": "REQUESTED_BOOK",
+          "bookConfirmed": true,
+          "quantity": 10,
+          "feeBoundSurplus": 1200,
+          "admissionSurplus": 1200,
+          "attempted": null,
+          "reasons": [],
+          "error": null
+        },
+        {
+          "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+          "at": 1790099560492,
+          "phase": "FINAL_ADMISSION",
+          "bookConfirmed": null,
+          "quantity": null,
+          "feeBoundSurplus": null,
+          "admissionSurplus": null,
+          "attempted": true,
+          "reasons": [],
+          "error": null
+        }
+      ],
+      "newPairedCompletions": 1,
+      "modeledFilledLegs": 2,
+      "noFillLegs": 0,
+      "inconclusiveLegs": 0,
+      "recoveryAttempts": 0,
+      "recoveryLoss": 0,
+      "realizedProfit": 0,
+      "totalOpenPairedPositions": 2,
+      "committed": 180200,
+      "freeCash": {
+        "kalshi": 478300,
+        "poly": 341500
+      },
+      "conditionalOrdinaryHoldingSurplus": 3400,
+      "inheritedConditionalSurplus": 2200,
+      "holdings": [
+        {
+          "candidate": "KXDWTSRANK-226DEC31-JSTIL",
+          "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+          "inherited": true,
+          "reservedRisk": 1400,
+          "reservedRecovery": 4200,
+          "held": {
+            "kalshi": 1400,
+            "poly": 4200
+          },
+          "positions": [
+            {
+              "status": "open",
+              "aQuantity": 7,
+              "bQuantity": 7,
+              "aDebit": 6300,
+              "bDebit": 61500,
+              "conditionalOrdinarySurplus": 2200,
+              "realizedProfit": null,
+              "closedBy": null
+            }
+          ]
+        },
+        {
+          "candidate": "KXNCAAFPAC12-26-ORST",
+          "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+          "inherited": false,
+          "reservedRisk": 2000,
+          "reservedRecovery": 6000,
+          "held": {
+            "kalshi": 2000,
+            "poly": 6000
+          },
+          "positions": [
+            {
+              "status": "open",
+              "aQuantity": 10,
+              "bQuantity": 10,
+              "aDebit": 12000,
+              "bDebit": 86800,
+              "conditionalOrdinarySurplus": 1200,
+              "realizedProfit": null,
+              "closedBy": null
+            }
+          ]
+        }
+      ],
+      "conservation": {
+        "kalshi": {
+          "free": 478300,
+          "held": 3400,
+          "openDebit": 18300,
+          "realized": 0,
+          "initial": 500000,
+          "verified": true
+        },
+        "poly": {
+          "free": 341500,
+          "held": 10200,
+          "openDebit": 148300,
+          "realized": 0,
+          "initial": 500000,
+          "verified": true
+        }
+      },
+      "rejections": {
+        "OBSERVATION_ONLY": 3134,
+        "UNSUPPORTED_ENTRY_PRICE_GRID": 1163,
+        "WRONG_OR_NONPOSITIVE_ROUTE": 2092,
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN": 2092,
+        "kalshi_QUANTITY_CONSTRAINT": 1163,
+        "kalshi_PRICE_GRID": 1163,
+        "COMPARISON_ALREADY_ATTEMPTED": 324
+      },
+      "processedComparisonStates": 4061,
+      "observedComparisons": 34,
+      "newModeled": [
+        {
+          "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+          "plans": {
+            "kalshi": {
+              "venue": "kalshi",
+              "marketId": "KXNCAAFPAC12-26-ORST",
+              "side": "yes",
+              "quantity": 10,
+              "ceiling": 1100,
+              "entryBudget": 12000,
+              "recoveryBudget": 1000,
+              "riskCash": 1000,
+              "reserved": 14000,
+              "planned": {
+                "quantity": 10,
+                "cost": 11000,
+                "fees": 1000,
+                "levels": [
+                  {
+                    "price": 1100,
+                    "quantity": 10
+                  }
+                ],
+                "feeBound": 1000
+              },
+              "tick": 100,
+              "tif": "FOK",
+              "submittedAt": 1790099559983,
+              "submittedMono": 12460.669208,
+              "arrivalMono": 12960.669208
+            },
+            "poly": {
+              "venue": "poly",
+              "marketId": "tec-cfb-pac12champ-2026-12-04-w-oregst",
+              "side": "no",
+              "quantity": 10,
+              "ceiling": 8600,
+              "entryBudget": 86800,
+              "recoveryBudget": 5000,
+              "riskCash": 1000,
+              "reserved": 92800,
+              "planned": {
+                "quantity": 10,
+                "cost": 86000,
+                "fees": 800,
+                "levels": [
+                  {
+                    "price": 8600,
+                    "quantity": 10
+                  }
+                ],
+                "feeBound": 800
+              },
+              "tick": 100,
+              "tif": "FOK",
+              "submittedAt": 1790099559983,
+              "submittedMono": 12460.669208,
+              "arrivalMono": 12960.669208
+            }
+          },
+          "legs": {
+            "kalshi": {
+              "outcome": "FILLED",
+              "reasons": [
+                "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+              ],
+              "fill": {
+                "quantity": 10,
+                "cost": 11000,
+                "fees": 1000,
+                "levels": [
+                  {
+                    "price": 1100,
+                    "quantity": 10
+                  }
+                ]
+              },
+              "at": 1790099560482.258
+            },
+            "poly": {
+              "outcome": "FILLED",
+              "reasons": [
+                "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+              ],
+              "fill": {
+                "quantity": 10,
+                "cost": 86000,
+                "fees": 800,
+                "levels": [
+                  {
+                    "price": 8600,
+                    "quantity": 10
+                  }
+                ]
+              },
+              "at": 1790099560482.258
+            }
+          },
+          "recovery": null
+        }
+      ],
+      "halt": null
+    }
+  ],
+  "arrivals": [
+    {
+      "scenario": "CHALLENGER_0C",
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "venue": "kalshi",
+      "modeledArrivalMono": 12960.669208,
+      "processedMono": 12962.1135,
+      "bookReceiptAt": 1790099559480,
+      "bookReceiptMono": 11958.038375,
+      "bookProcessedMono": 11959.027416,
+      "exchangeAt": null,
+      "sequence": 41,
+      "transactTime": null,
+      "requestRoundTripMs": 154.1670840000006,
+      "reasons": []
+    },
+    {
+      "scenario": "CHALLENGER_0C",
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "venue": "poly",
+      "modeledArrivalMono": 12960.669208,
+      "processedMono": 12968.214875,
+      "bookReceiptAt": 1790099559972,
+      "bookReceiptMono": 12449.769416,
+      "bookProcessedMono": 12450.309375,
+      "exchangeAt": 1790099555202,
+      "sequence": null,
+      "transactTime": "2026-09-22T17:52:35.202165413Z",
+      "requestRoundTripMs": 158.45058299999982,
+      "reasons": []
+    }
+  ],
+  "feedEvents": [],
+  "metadata": [
+    {
+      "candidate": "KXNCAAFB12QUAL-26-KSU",
+      "constraints": {
+        "kalshi": {
+          "tick": 100,
+          "minimum": 1
+        },
+        "poly": {
+          "tick": 100,
+          "minimum": 0.01
+        }
+      },
+      "entryReasons": [],
+      "administrativeTimes": {
+        "kalshiClose": "2027-01-10T15:00:00Z",
+        "kalshiExpected": "2026-12-13T15:00:00Z",
+        "kalshiLatest": "2027-01-10T15:00:00Z",
+        "polyEnd": "2026-12-19T04:00:00Z"
+      },
+      "reportedStatus": {
+        "kalshi": "active",
+        "poly": "MARKET_STATUS_OPEN"
+      }
+    },
+    {
+      "candidate": "KXDWTSRANK-226DEC31-JSTIL",
+      "constraints": {
+        "kalshi": {
+          "tick": 100,
+          "minimum": 1
+        },
+        "poly": {
+          "tick": 100,
+          "minimum": 0.01
+        }
+      },
+      "entryReasons": [],
+      "administrativeTimes": {
+        "kalshiClose": "2026-12-31T15:00:00Z",
+        "kalshiExpected": "2026-12-31T15:00:00Z",
+        "kalshiLatest": "2027-01-07T15:00:00Z",
+        "polyEnd": "2026-12-02T04:00:00Z"
+      },
+      "reportedStatus": {
+        "kalshi": "active",
+        "poly": "MARKET_STATUS_OPEN"
+      }
+    },
+    {
+      "candidate": "KXNCAAFPAC12-26-ORST",
+      "constraints": {
+        "kalshi": {
+          "tick": 100,
+          "minimum": 1
+        },
+        "poly": {
+          "tick": 100,
+          "minimum": 0.01
+        }
+      },
+      "entryReasons": [],
+      "administrativeTimes": {
+        "kalshiClose": "2027-01-03T15:00:00Z",
+        "kalshiExpected": "2026-12-06T15:00:00Z",
+        "kalshiLatest": "2027-01-03T15:00:00Z",
+        "polyEnd": "2026-12-19T04:00:00Z"
+      },
+      "reportedStatus": {
+        "kalshi": "active",
+        "poly": "MARKET_STATUS_OPEN"
+      }
+    },
+    {
+      "candidate": "KXNCAAFCUSAQUAL-26-WKU",
+      "constraints": {
+        "kalshi": {
+          "tick": 100,
+          "minimum": 1
+        },
+        "poly": {
+          "tick": 100,
+          "minimum": 0.01
+        }
+      },
+      "entryReasons": [],
+      "administrativeTimes": {
+        "kalshiClose": "2027-01-10T15:00:00Z",
+        "kalshiExpected": "2026-12-13T15:00:00Z",
+        "kalshiLatest": "2027-01-10T15:00:00Z",
+        "polyEnd": "2026-12-19T04:00:00Z"
+      },
+      "reportedStatus": {
+        "kalshi": "active",
+        "poly": "MARKET_STATUS_OPEN"
+      }
+    },
+    {
+      "candidate": "KXMLBAL-26-CWS",
+      "constraints": {
+        "kalshi": {
+          "tick": 100,
+          "minimum": 1
+        },
+        "poly": {
+          "tick": 10,
+          "minimum": 1
+        }
+      },
+      "entryReasons": [],
+      "administrativeTimes": {
+        "kalshiClose": "2028-10-31T04:00:00Z",
+        "kalshiExpected": "2026-11-01T04:00:00Z",
+        "kalshiLatest": "2028-10-31T04:00:00Z",
+        "polyEnd": "2026-11-06T21:20:09Z"
+      },
+      "reportedStatus": {
+        "kalshi": "active",
+        "poly": "MARKET_STATUS_OPEN"
+      }
+    }
+  ],
+  "settlement": "Conditional ordinary-outcome surplus is unrealized, not settled profit; named contract risks persist. More modeled fills do not establish policy superiority.",
+  "verification": {
+    "executedHead": "6e08607dba200066876b2cf3ad0414c951ce31d7",
+    "collectionCi": "https://github.com/tyhuffman7/lights_on/actions/runs/35763162564",
+    "collectionCiTests": 599,
+    "focusedTestsBeforeCollection": 49,
+    "frozenFilesVerifiedBeforeAnyPostSessionSourceEdit": 133,
+    "postSessionGuard": "Restored rejection of zero, negative and fractional reconnect counts in the shared helper; no transport reconnection occurred during collection. This correction was not used to rerun or extend collection.",
+    "focusedTestsAfterGuard": 50,
+    "publishedCodeHead": "6eb687bbe060a0376ec0de06c57a425f3e468846",
+    "publishedCodeCi": "https://github.com/tyhuffman7/lights_on/actions/runs/35770218598",
+    "publishedCodeCiTests": 600,
+    "draftPr": "https://github.com/tyhuffman7/lights_on/pull/11"
+  }
+}
