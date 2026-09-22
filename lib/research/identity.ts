@@ -632,6 +632,63 @@ export function interimService(
   return values.size === 1 ? [...values][0] : undefined;
 }
 
+// Narrow, evidenced payout distinctions. Missing/unrecognized clauses return
+// undefined; these hints may reject contradictions but never prove equivalence.
+export function spotifyGeography(m: {venue: string; series?: string; rules: string}) {
+  const primary = m.rules.split(/\n/)[0];
+  if (/ranked the top artist in the (?:US|United States) on Spotify in 20\d{2}\b/i.test(primary))
+    return "us";
+  if (/most streamed Spotify artist (?:globally|worldwide) in 20\d{2}\b/i.test(primary))
+    return "global";
+  // This specific family is reviewed in depth-discovery/TRIAGE.md. Its
+  // TOPARTIST reference links the global Wrapped report. This is a documented
+  // family interpretation, NOT a global default for unqualified ranking text.
+  if (m.venue === "kalshi" && m.series === "KXTOPARTIST" &&
+      m.rules.includes("https://assets.kalshi.com/contract_terms/TOPARTIST.pdf") &&
+      /^If .+ is the most streamed Spotify artist in 20\d{2}, then the market resolves to Yes\.$/i.test(primary))
+    return "global";
+  return undefined;
+}
+
+export function israeliOffice(rules: string) {
+  const primary = rules.split(/\n/)[0];
+  if (/first Minister of Defense to take office in the first new Israeli government/i.test(primary))
+    return "defense";
+  if (/(?:hold|becomes?|office of) Prime Minister of Israel\b/i.test(primary))
+    return "prime-minister";
+  return undefined;
+}
+
+export function israeliSuccession(rules: string) {
+  const primary = rules.split(/\n/)[0];
+  if (/first new person to hold Prime Minister of Israel after Issuance/i.test(primary))
+    return "next-new-holder";
+  if (/Prime Minister of Israel.*(?:government formation following|following the next Israeli Parliamentary election)/i.test(primary))
+    return "post-election-formation";
+  return undefined;
+}
+
+export function awardCeremony(rules: string) {
+  const primary = rules.split(/\n/)[0];
+  const grammy = /at the \d+(?:st|nd|rd|th) Annual Grammy Awards\b/i.test(primary);
+  const vma = /at the 20\d{2} MTV Video Music Awards\b/i.test(primary);
+  return grammy === vma ? undefined : grammy ? "grammy" : "vma";
+}
+
+export function repeatElectionTreatment(rules: string) {
+  if (!/Prime Minister.*government formation/i.test(rules.split(/\n/)[0])) return undefined;
+  const ends = /If new elections are called before government formation, the Contract resolves to [“"]No one[”"] immediately and No for all other strikes\./i.test(rules);
+  const rolls = /a new election is called prior to any individual formally assuming the office of Prime Minister of (?:Israel|Sweden), this market will settle based on the next individual to assume the office as part of government formation following the new election\./i.test(rules);
+  return ends === rolls ? undefined : ends ? "ends" : "rolls";
+}
+
+export function bestRecordTieTreatment(rules: string) {
+  if (!/best (?:overall )?regular season record/i.test(rules.split(/\n/)[0])) return undefined;
+  const breaks = /official tie-breaking procedures will be applied until a single team remains/i.test(rules);
+  const splits = /If two or more teams tie for the best overall record, each tied team's market will settle at \$1\.00 divided by the number of teams tied\./i.test(rules);
+  return breaks === splits ? undefined : breaks ? "tiebreak-first" : "split-record-ties";
+}
+
 // Popular votes, election seat control, and loss of current control are distinct
 // payout predicates. These hints exclude conflicts; they never approve a match.
 export function chamberControlEvent(

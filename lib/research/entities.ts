@@ -220,6 +220,11 @@ export function catalogEntities(identities: (Identity | undefined)[]) {
           ":" +
           normalizeText(team.name).replaceAll(" ", "_").toUpperCase();
       const parts = normalizeText(team.name).split(" ");
+      // State/St and Tech distinguish colleges, not removable mascots.
+      // Dropping them made Kansas State/Kansas and Virginia Tech/Virginia
+      // share an ID, depending on catalogue order. Keep the State -> St alias.
+      const collegeQualifier = competitionScope(i.competition) === "cfb" &&
+        ["state", "st", "tech"].includes(parts.at(-1) ?? "");
       registry.add({
         id,
         scope: i.competition,
@@ -235,8 +240,8 @@ export function catalogEntities(identities: (Identity | undefined)[]) {
           ...(parts.at(-1) === "state"
             ? [parts.slice(0, -1).join(" ") + " st"]
             : []),
-          parts.slice(0, -1).join(" "),
-          ...(parts.length > 2
+          ...(!collegeQualifier ? [parts.slice(0, -1).join(" ")] : []),
+          ...(parts.length > 2 && !collegeQualifier
             ? [parts.slice(0, -1).join(" ") + " " + parts.at(-1)![0]]
             : []),
         ],
