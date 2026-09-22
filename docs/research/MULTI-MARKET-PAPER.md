@@ -1,0 +1,59 @@
+# Multi-market conditional PAPER milestone — September 22, 2026
+
+The user authorized one connected, bounded multi-market milestone, superseding the earlier KSU-only stop. Live orders remain disabled. The [05:12–05:35 UTC KSU report](KSU-CONDITIONAL-PAPER.md) and its results are preserved; that collection is not rerun or re-audited.
+
+The existing retained shortlist supplies exactly 34 comparisons. Preparation refreshes only their exact metadata and primary document versions; changed identities, material terms, closed markets and unsupported entry constraints block entry while observation-only depth remains visible. There is no broad scan, matching rewrite or additional strategy. Only the five `DEEP` / `CONDITIONAL` rows in [review.json](contract-shortlist/review.json) may execute, in their recorded purchase directions:
+
+| Candidate | Kalshi purchase | PM-US purchase |
+|---|---|---|
+| Kansas State qualification | `KXNCAAFB12QUAL-26-KSU` NO | `aqc-cfb-big12-2026-12-04-champq-kanst` YES |
+| Western Kentucky qualification | `KXNCAAFCUSAQUAL-26-WKU` YES | `aqc-cfb-cusa-2026-12-04-champq-wkent` NO |
+| Julia Stiles runner-up | `KXDWTSRANK-226DEC31-JSTIL` YES | `rtc-dwts-s35-2-2026-11-17-julsti` NO |
+| Oregon State conference title | `KXNCAAFPAC12-26-ORST` YES | `tec-cfb-pac12champ-2026-12-04-w-oregst` NO |
+| White Sox AL pennant | `KXMLBAL-26-CWS` NO | `tec-mlb-alchamp-2026-09-27-cws` YES |
+
+Every candidate retains the risks and payout examples in [review sections Q/R/T](contract-shortlist/REVIEW.md). Qualification cancellation, withdrawal, reinstatement and correction cutoffs can disagree. Julia Stiles also retains shared-rank/Tie-strike, absent-ranking, incapacitation and broadcast-extension risks. The two title markets retain distinct cancellation allocations, postponement windows, withdrawal/forfeit treatment and correction finality. White Sox's specific two-week postponement/fair-price clause remains material. NO+YES pays `1-k+p`; YES+NO pays `1+k-p`, which can be below one. No candidate becomes equivalent or live-approved. The reviewed horizons are permitted without guaranteed settlement or cash-release dates.
+
+The named active-status PAPER assumption admits only the existing two uncertainties: `STATUS_CACHE_CURRENTNESS_UNPROVEN` and `NON_ATOMIC_INITIAL_STATE`. A subscribed lifecycle baseline must still report active. Known closure, cached baseline evidence, contradiction, changed metadata, unhealthy books, clock faults and other status faults block entry. Observed adverse lifecycle/closure evidence is sticky across transport rebuilds. Ohio live eligibility remains unvalidated and live-blocked.
+
+Frozen simulated settings: $100 total / $50 per venue; every legal whole quantity from one through ten; $15 total reservation per entry; $45 commitment; three open paired positions; five entry attempts; one submission/recovery sequence at a time. Only strictly positive economics after existing modeled fees and a separate 2¢ allowance per pair can enter. The separate 10¢ profit and 1% ROI floors are not applied in this opt-in mode. Quantity maximizes positive after-risk surplus among quantities satisfying the limits; ties choose the smaller quantity. Confirmation must preserve the selected quantity.
+
+Reservation precedes both legs and includes principal, fee bounds, risk cash and the existing recovery allocation (1¢ Kalshi / 5¢ PM-US per contract). Those allocations can be insufficient for some recovery fees; recovery then fails closed and inventory remains exposed. Fees retain the whole-contract/cent-fragmentation Kalshi bound and PM-US cumulative-order estimate; they are not observed commissions or a guarantee for arbitrary fractional fragmentation. No fee tuning or larger-capital claim is made.
+
+Streamed relevant book changes drive the existing depth comparison, with a bounded 250 ms coalescing window. Qualifying authorized routes request a sequenced Kalshi snapshot and a correlated PM-US subscription book, paced at least two seconds apart with at most 120 candidate confirmations. Public metadata requests are paced at least 250 ms apart. Quiet books do not become fresh from heartbeats. A confirmation may disappear or fail; only an admitted confirmation immediately reaches automatic paper reservation and independent, price-limited FOK legs with the unchanged 500 ms modeled transport. Arrival receipts, processing availability, versions and health are retained. Requested-book round trips are not measured order latency.
+
+The existing accounting and single delayed recovery are reused. Unknown outcomes keep reservations and possible inventory; no-fill refunds require known evidence. Paired holdings lock invested capital, risk and recovery cash. There is at most one entry attempt per reviewed comparison in this session, so repeated unchanged displayed liquidity cannot generate repeated earnings. Realized recovery loss, hypothetical conditional holding surplus and synthetic test results are separate.
+
+The existing supervisor enforces one original deadline of at most 60 minutes. New entries stop on five attempts, capacity exhaustion, three open pairs, $2 cumulative realized paper loss, or unresolved execution exposure. The loss threshold is a stop trigger, not a guaranteed maximum loss. Up to three individual transport reconnections are allowed within that deadline; entries pause and affected books rebuild first. Exposure halts never clear. No tests/builds run during collection, no automated task or repeated AI market polling is created, and no session extension is permitted.
+
+Verification before collection: 43 focused tests passed, including clearly synthetic favorable cases for all five orientations reaching both modeled legs, positive sub-floor economics, wrong scope/direction, status and confirmation failures, cash/commitment limits, exact quantity, paired capital lockup, five no-fill attempts, uncertain exposure, failed submission, reversed-side recovery, and bounded reconnections. Synthetic test fills are not market-data-based outcomes or realized profit. The White Sox minimum of one and 0.001 price tick are verified separately; unsupported tiered entry grids do not remove observation-only comparisons. Worker import and diff whitespace checks passed. The executed metadata-constraint revision `a55047e` passed its own hosted CI receipt, recorded below.
+
+**Completed market-data PAPER session:** September 22, **15:46:25.917–16:46:25.752 UTC**, 59m 59.835s. The existing supervisor stopped at its original deadline and exited **0**. All **34/34** retained comparisons had matching refreshed identities/terms and received stream observations; the other 29 comparisons remained observation-only. There was **one qualifying candidate, one requested-book confirmation, one automatic entry attempt, two modeled filled legs, zero no-fill or inconclusive legs, zero realized loss, and zero realized profit**. No recovery was needed or attempted. No real order was sent.
+
+**Julia Stiles runner-up** qualified at **15:46:35.798 UTC**, confirmed at **15:46:38.026**, and automatically submitted its modeled legs **2 ms later**. The 2.228-second detection-to-confirmation interval includes the paced metadata refresh and requested-book checks. Both independent legs used the frozen 500 ms delay. Arrival processing was 0.665 ms late on Kalshi and 5.309 ms late on PM-US, within the retained gate, with no arrival-evidence rejection. Requested-book round trips were 145.147 / 256.868 ms; these are not measured order latencies.
+
+| Actual modeled holding | Principal | Modeled entry fees | Reserved risk | Reserved recovery | Total commitment |
+|---|---:|---:|---:|---:|---:|
+| 7 Kalshi YES at 8¢ | $0.56 | $0.07 | $0.07 | $0.07 | $0.77 |
+| 7 PM-US NO at 87¢ | $6.09 | $0.06 | $0.07 | $0.35 | $6.57 |
+| Total, one open paired position | **$6.65** | **$0.13** | **$0.14** | **$0.42** | **$7.34** |
+
+Free simulated cash remains **$49.23 Kalshi / $43.43 PM-US**. The holding has **$0.22 conditional ordinary-outcome surplus after modeled fees**, or **$0.08 after the separate risk allowance**. Neither is realized profit; the pair remains unsettled and CONDITIONAL with Julia Stiles's cancellation, tied-ranking, incapacitation, source/correction and timing risks intact. No holdings or locked capital were cleared at the deadline.
+
+The last streamed comparisons below are **unconfirmed indicative rejection economics**, except that Julia's entry was separately requested-book confirmed as above. Each rejected candidate compared all quantities through ten; the table shows its best after-risk quantity at its last observation, not a fill or a full-session price extremum.
+
+| Candidate | Quantity | Principal | Modeled fee bound | Fee-net surplus | Risk allowance | After risk | Result |
+|---|---:|---:|---:|---:|---:|---:|---|
+| Kansas State | 1 | $0.990 | $0.020 | −$0.010 | $0.020 | **−$0.030** | No positive quantity |
+| Western Kentucky | 1 | $1.220 | $0.030 | −$0.250 | $0.020 | **−$0.270** | No positive quantity |
+| Oregon State | 1 | $0.970 | $0.020 | +$0.010 | $0.020 | **−$0.010** | No positive quantity |
+| White Sox | 1 | $0.988 | $0.010 | +$0.002 | $0.020 | **−$0.018** | No positive quantity |
+| Julia Stiles | 7 | $6.650 | $0.130 | +$0.220 | $0.140 | **+$0.080** | Already attempted; holding retained |
+
+Across **5,866 processed comparison-content states**, overlapping rejection counters were: **5,387** nonpositive after risk; **3,236** observation-only; **2,674** combined nonpositive-fee-net/route guards; **1,118** unsupported entry-grid states (with the same 1,118 Kalshi grid/constraint guard counts); and **109** already-attempted Julia states. These counters are observations/decisions, not unique opportunities or additional attempts. The six tiered-grid comparisons remained observable. No profit-floor, ROI-floor, cash-capacity or exposure-halt relaxation occurred.
+
+PM-US transport was rebuilt twice, at **16:01:15.014** (connection unhealthy before a coded failure was recorded) and **16:34:00.865** (`DISCONNECTED`). Entries paused and affected books rebuilt within the original deadline; the holding and commitment survived both. No exposure halt occurred or was cleared. All **133 frozen files remained unchanged**. Final conservation verified: $92.66 free cash + $6.78 open-position debit + $0.56 risk/recovery reserves = $100 simulated cash.
+
+**Verification and publication:** 43 focused tests passed before collection, including explicitly synthetic positive cases for all five orientations. [Hosted CI 35749248207](https://github.com/tyhuffman7/lights_on/actions/runs/35749248207) passed **593 tests, typecheck and build** for the executed `a55047e` revision. No runtime changes followed that receipt. Signed implementation and sanitized results are published through [non-main draft PR #10](https://github.com/tyhuffman7/lights_on/pull/10). [Sanitized numerical results](multi-paper-results-20260922.json) retain the full quantity comparisons, actual model sequence and arrival evidence. Raw public-market tape, credentials, private account data and databases are excluded. The separate synthetic tests prove the bridge's controlled cases; this session provides market-data-based modeled entry evidence, **not real fills, settled profit, or a recovery demonstration**. The checkpoint is stopped; no extension, restart, merge or further strategy work is scheduled.
+
+Commands (prepared checkout): `node --experimental-strip-types worker/multi-paper.ts prepare OUTPUT_DIRECTORY`; then `node scripts/multi-paper-launch.mjs OUTPUT_DIRECTORY ENV_FILE`. Both preparation and launch are single-use. Never run these against the previous KSU evidence directory. Targeted checks, only before collection or for subsequent scoped fixes: `node --experimental-strip-types --test tests/multi-paper.test.ts tests/ksu-paper.test.ts tests/book-confirmation-adapter.test.ts tests/integrated-confirmation.test.ts`.

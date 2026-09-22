@@ -1,0 +1,5431 @@
+{
+  "scope": "REVIEWED_MULTI_MARKET_CONDITIONAL_PAPER",
+  "moneyScale": 10000,
+  "synthetic": false,
+  "ordersEnabled": false,
+  "liveAdmitted": false,
+  "launch": {
+    "startedAt": "2026-09-22T15:46:25.917Z",
+    "deadlineAt": "2026-09-22T16:46:25.917Z",
+    "completedAt": "2026-09-22T16:46:25.752Z",
+    "elapsedMs": 3599835,
+    "stopReason": "EXTERNAL_OR_SUPERVISOR_STOP",
+    "supervisorReason": "BOUNDED_OBSERVATION_DEADLINE",
+    "exitCode": 0,
+    "exitSignal": null
+  },
+  "policy": {
+    "mode": "REVIEWED_MULTI_MARKET_CONDITIONAL_PAPER",
+    "ordersEnabled": false,
+    "liveAdmitted": false,
+    "capitalPerVenue": 500000,
+    "maxQuantity": 10,
+    "maxReservation": 150000,
+    "maxCommitted": 450000,
+    "maxPositions": 3,
+    "maxAttempts": 5,
+    "maxRealizedLoss": 20000,
+    "durationMs": 3600000,
+    "transportMs": 500,
+    "recoveryDelayMs": 1000,
+    "maxRecoveryAttempts": 1,
+    "riskPerContract": 200,
+    "recoveryPerContract": {
+      "kalshi": 100,
+      "poly": 500
+    },
+    "maxReconnects": 3,
+    "coalesceMs": 250,
+    "requestSpacingMs": 2000,
+    "maxConfirmations": 120,
+    "maxEvidenceBytes": 268435456,
+    "horizon": "REVIEWED_CONTRACT_HORIZONS_NO_GUARANTEED_CASH_RELEASE",
+    "ohioLiveEligibility": "NOT_REVALIDATED_LIVE_BLOCKED",
+    "repeatedLiquidity": "AT_MOST_ONE_ENTRY_ATTEMPT_PER_REVIEWED_COMPARISON",
+    "positiveAfterFeesAndRisk": true
+  },
+  "coverage": {
+    "retainedComparisons": 34,
+    "refreshedValid": 34,
+    "streamObserved": 34,
+    "blocked": []
+  },
+  "qualifyingCandidates": [
+    "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti"
+  ],
+  "automaticCandidates": [
+    "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti"
+  ],
+  "confirmationRequests": 1,
+  "bookConfirmed": 1,
+  "automaticAttempts": 1,
+  "modeledLegOutcomes": {
+    "filled": 2,
+    "noFill": 0,
+    "inconclusive": 0
+  },
+  "accounting": {
+    "cash": {
+      "kalshi": 492300,
+      "poly": 434300
+    },
+    "committed": 73400,
+    "openPairedPositions": 1,
+    "attempts": 1,
+    "realizedPaperLoss": 0,
+    "realizedProfit": 0,
+    "halt": null,
+    "reconnections": 2,
+    "holdings": [
+      {
+        "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "cash": {
+          "kalshi": 492300,
+          "poly": 434300
+        },
+        "reserved": {
+          "kalshi": 1400,
+          "poly": 4200
+        },
+        "entryAttempts": 1,
+        "positions": 1,
+        "residualInventory": {
+          "kalshi": 7,
+          "poly": 7
+        },
+        "unresolvedPossibleInventory": false,
+        "conditionalUnrealizedSurplus": 2200,
+        "separateRiskAllowance": 1400,
+        "recoveryLoss": null,
+        "realizedProfit": null,
+        "classification": "CONDITIONAL",
+        "liveAdmitted": false
+      }
+    ]
+  },
+  "modelSequence": [
+    {
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "plans": {
+        "kalshi": {
+          "venue": "kalshi",
+          "marketId": "KXDWTSRANK-226DEC31-JSTIL",
+          "side": "yes",
+          "quantity": 7,
+          "ceiling": 800,
+          "entryBudget": 6300,
+          "recoveryBudget": 700,
+          "riskCash": 700,
+          "reserved": 7700,
+          "planned": {
+            "quantity": 7,
+            "cost": 5600,
+            "fees": 700,
+            "levels": [
+              {
+                "price": 800,
+                "quantity": 7
+              }
+            ],
+            "feeBound": 700
+          },
+          "tick": 100,
+          "tif": "FOK",
+          "submittedAt": 1790091998028,
+          "submittedMono": 12333.362833,
+          "arrivalMono": 12833.362833
+        },
+        "poly": {
+          "venue": "poly",
+          "marketId": "rtc-dwts-s35-2-2026-11-17-julsti",
+          "side": "no",
+          "quantity": 7,
+          "ceiling": 8700,
+          "entryBudget": 61500,
+          "recoveryBudget": 3500,
+          "riskCash": 700,
+          "reserved": 65700,
+          "planned": {
+            "quantity": 7,
+            "cost": 60900,
+            "fees": 600,
+            "levels": [
+              {
+                "price": 8700,
+                "quantity": 7
+              }
+            ],
+            "feeBound": 600
+          },
+          "tick": 100,
+          "tif": "FOK",
+          "submittedAt": 1790091998028,
+          "submittedMono": 12333.362833,
+          "arrivalMono": 12833.362833
+        }
+      },
+      "legs": {
+        "kalshi": {
+          "outcome": "FILLED",
+          "reasons": [
+            "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+          ],
+          "fill": {
+            "quantity": 7,
+            "cost": 5600,
+            "fees": 700,
+            "levels": [
+              {
+                "price": 800,
+                "quantity": 7
+              }
+            ]
+          },
+          "at": 1790091998526.5403
+        },
+        "poly": {
+          "outcome": "FILLED",
+          "reasons": [
+            "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+          ],
+          "fill": {
+            "quantity": 7,
+            "cost": 60900,
+            "fees": 600,
+            "levels": [
+              {
+                "price": 8700,
+                "quantity": 7
+              }
+            ]
+          },
+          "at": 1790091998526.5403
+        }
+      },
+      "recovery": null
+    }
+  ],
+  "arrivalEvidence": [
+    {
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "venue": "kalshi",
+      "modeledArrivalMono": 12833.362833,
+      "processedMono": 12834.0275,
+      "bookReceiptAt": 1790091997301,
+      "bookReceiptMono": 11606.141,
+      "bookProcessedMono": 11606.4825,
+      "exchangeAt": null,
+      "sequence": 39,
+      "transactTime": null,
+      "requestRoundTripMs": 145.14733399999932,
+      "reasons": []
+    },
+    {
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "venue": "poly",
+      "modeledArrivalMono": 12833.362833,
+      "processedMono": 12838.671916,
+      "bookReceiptAt": 1790091998011,
+      "bookReceiptMono": 12316.65575,
+      "bookProcessedMono": 12317.550458,
+      "exchangeAt": 1790091754743,
+      "sequence": null,
+      "transactTime": "2026-09-22T15:42:34.743485960Z",
+      "requestRoundTripMs": 256.8677090000001,
+      "reasons": []
+    }
+  ],
+  "transportEvents": [
+    {
+      "at": 1790092875014,
+      "venues": [
+        "poly"
+      ],
+      "failures": [],
+      "action": "PAUSE_AND_REBUILD"
+    },
+    {
+      "at": 1790094840865,
+      "venues": [
+        "poly"
+      ],
+      "failures": [
+        "DISCONNECTED"
+      ],
+      "action": "PAUSE_AND_REBUILD"
+    }
+  ],
+  "numericalRejectionCounts": {
+    "NONPOSITIVE_AFTER_RISK": 5387,
+    "OBSERVATION_ONLY": 3236,
+    "UNSUPPORTED_ENTRY_PRICE_GRID": 1118,
+    "WRONG_OR_NONPOSITIVE_ROUTE": 2674,
+    "kalshi_QUANTITY_CONSTRAINT": 1118,
+    "kalshi_PRICE_GRID": 1118,
+    "COMPARISON_ALREADY_ATTEMPTED": 109
+  },
+  "rejectionCountUnit": "One reason per distinct processed comparison-content change or attempted confirmation decision; not unique opportunities or trades",
+  "comparisons": [
+    {
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "lastObservedAt": "2026-09-22T16:45:58.279Z",
+      "contentChanges": 60,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9500,
+          "modeledFeeBound": 400,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 3900,
+            "poly": 6800
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 3500,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 6000,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -100,
+          "reservation": 21300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -200,
+          "reservation": 32000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -400,
+          "reservation": 42800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -500,
+          "reservation": 53500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -700,
+          "reservation": 64300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -900,
+          "reservation": 75100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1000,
+          "reservation": 85800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1800,
+          "reservation": 97200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -2500,
+          "reservation": 108500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXARGENTINAPRES-27-SMAS::ewc-pres-arg-2027-10-24-sermas",
+      "lastObservedAt": "2026-09-22T16:45:26.932Z",
+      "contentChanges": 180,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 10150,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": -250,
+          "riskAllowance": 200,
+          "afterRisk": -450,
+          "totalReservation": 11050,
+          "venueReservation": {
+            "kalshi": 10050,
+            "poly": 1000
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 9750,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 400,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -450,
+          "reservation": 11050,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -1000,
+          "reservation": 22200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -1450,
+          "reservation": 33250,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1900,
+          "reservation": 44300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -2350,
+          "reservation": 55350,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -2900,
+          "reservation": 66500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -3350,
+          "reservation": 77550,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -3800,
+          "reservation": 88600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -4250,
+          "reservation": 99650,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -4800,
+          "reservation": 110800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "lastObservedAt": "2026-09-22T16:45:45.340Z",
+      "contentChanges": 110,
+      "authorized": true,
+      "classification": "CONDITIONAL",
+      "reasons": [
+        "COMPARISON_ALREADY_ATTEMPTED"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 7,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 66500,
+          "modeledFeeBound": 1300,
+          "feeNetSurplus": 2200,
+          "riskAllowance": 1400,
+          "afterRisk": 800,
+          "totalReservation": 73400,
+          "venueReservation": {
+            "kalshi": 7700,
+            "poly": 65700
+          },
+          "recoveryCash": {
+            "kalshi": 700,
+            "poly": 3500
+          },
+          "kalshiLevels": [
+            {
+              "price": 800,
+              "quantity": 7
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8700,
+              "quantity": 7
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": 100,
+          "reservation": 10500,
+          "reasons": [
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": 200,
+          "reservation": 21000,
+          "reasons": [
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": 400,
+          "reservation": 31400,
+          "reasons": [
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": 500,
+          "reservation": 41900,
+          "reasons": [
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": 600,
+          "reservation": 52400,
+          "reasons": [
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": 700,
+          "reservation": 62900,
+          "reasons": [
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": 800,
+          "reservation": 73400,
+          "reasons": [
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -200,
+          "reservation": 85000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1200,
+          "reservation": 96600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -2200,
+          "reservation": 108200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "COMPARISON_ALREADY_ATTEMPTED"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-TOT::aachc-epl-2027-05-30-relegation-tot",
+      "lastObservedAt": "2026-09-22T16:44:56.258Z",
+      "contentChanges": 78,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9900,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": -100,
+          "riskAllowance": 200,
+          "afterRisk": -300,
+          "totalReservation": 10900,
+          "venueReservation": {
+            "kalshi": 2000,
+            "poly": 8900
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 1700,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8200,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -300,
+          "reservation": 10900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -600,
+          "reservation": 21800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -900,
+          "reservation": 32700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1200,
+          "reservation": 43600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -1500,
+          "reservation": 54500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -1800,
+          "reservation": 65400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -2100,
+          "reservation": 76300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -2400,
+          "reservation": 87200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -2700,
+          "reservation": 98100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -3000,
+          "reservation": 109000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXFRENCHPRES-27-MLEP::ewc-pres-fra-2027-04-11-marlep",
+      "lastObservedAt": "2026-09-22T16:46:25.540Z",
+      "contentChanges": 238,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9800,
+          "modeledFeeBound": 400,
+          "feeNetSurplus": -200,
+          "riskAllowance": 200,
+          "afterRisk": -400,
+          "totalReservation": 11000,
+          "venueReservation": {
+            "kalshi": 4700,
+            "poly": 6300
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 4300,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 5500,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -400,
+          "reservation": 11000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -700,
+          "reservation": 21900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -1100,
+          "reservation": 32900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1500,
+          "reservation": 43900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -1900,
+          "reservation": 54900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -2200,
+          "reservation": 65800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -2600,
+          "reservation": 76800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -3000,
+          "reservation": 87800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -3300,
+          "reservation": 98700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -3700,
+          "reservation": 109700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "lastObservedAt": "2026-09-22T16:45:34.908Z",
+      "contentChanges": 2226,
+      "authorized": true,
+      "classification": "CONDITIONAL",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 9880,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": 20,
+          "riskAllowance": 200,
+          "afterRisk": -180,
+          "totalReservation": 10780,
+          "venueReservation": {
+            "kalshi": 9400,
+            "poly": 1380
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 9100,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 780,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -180,
+          "reservation": 10780,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -460,
+          "reservation": 21660,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -640,
+          "reservation": 32440,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -920,
+          "reservation": 43320,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -1100,
+          "reservation": 54100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -1380,
+          "reservation": 64980,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -1560,
+          "reservation": 75760,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1840,
+          "reservation": 86640,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -2020,
+          "reservation": 97420,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -2300,
+          "reservation": 108300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "lastObservedAt": "2026-09-22T16:46:12.141Z",
+      "contentChanges": 78,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9700,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 1100,
+            "poly": 9600
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 800,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8900,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -100,
+          "reservation": 21300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -200,
+          "reservation": 32000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -300,
+          "reservation": 42700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -300,
+          "reservation": 53300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -400,
+          "reservation": 64000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -500,
+          "reservation": 74700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -500,
+          "reservation": 85300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -600,
+          "reservation": 96000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -700,
+          "reservation": 106700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFAAC-26-NAVY::tec-cfb-aacchamp-2026-12-05-w-navy",
+      "lastObservedAt": "2026-09-22T16:45:44.629Z",
+      "contentChanges": 111,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 9,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 86400,
+          "modeledFeeBound": 1400,
+          "feeNetSurplus": 2200,
+          "riskAllowance": 1800,
+          "afterRisk": 400,
+          "totalReservation": 95000,
+          "venueReservation": {
+            "kalshi": 7200,
+            "poly": 87800
+          },
+          "recoveryCash": {
+            "kalshi": 900,
+            "poly": 4500
+          },
+          "kalshiLevels": [
+            {
+              "price": 500,
+              "quantity": 9
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9100,
+              "quantity": 9
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": 0,
+          "reservation": 10600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": 100,
+          "reservation": 21100,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": 100,
+          "reservation": 31700,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": 200,
+          "reservation": 42200,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": 200,
+          "reservation": 52800,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": 300,
+          "reservation": 63300,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": 300,
+          "reservation": 73900,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": 300,
+          "reservation": 84500,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": 400,
+          "reservation": 95000,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": 400,
+          "reservation": 105600,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-ARMY::aqc-cfb-aac-2026-12-05-champq-army",
+      "lastObservedAt": "2026-09-22T16:42:21.968Z",
+      "contentChanges": 74,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 10400,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": -600,
+          "riskAllowance": 200,
+          "afterRisk": -800,
+          "totalReservation": 11400,
+          "venueReservation": {
+            "kalshi": 9300,
+            "poly": 2100
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 9000,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 1400,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -800,
+          "reservation": 11400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -1600,
+          "reservation": 22800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -2400,
+          "reservation": 34200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -3100,
+          "reservation": 45500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -3900,
+          "reservation": 56900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -4700,
+          "reservation": 68300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -5500,
+          "reservation": 79700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -6300,
+          "reservation": 91100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -7100,
+          "reservation": 102500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -7800,
+          "reservation": 113800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "lastObservedAt": "2026-09-22T16:46:12.481Z",
+      "contentChanges": 75,
+      "authorized": true,
+      "classification": "CONDITIONAL",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 9900,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": -100,
+          "riskAllowance": 200,
+          "afterRisk": -300,
+          "totalReservation": 10900,
+          "venueReservation": {
+            "kalshi": 8700,
+            "poly": 2200
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 8400,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 1500,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -300,
+          "reservation": 10900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -600,
+          "reservation": 21800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -900,
+          "reservation": 32700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1200,
+          "reservation": 43600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -1400,
+          "reservation": 54400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -1700,
+          "reservation": 65300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -2000,
+          "reservation": 76200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -2300,
+          "reservation": 87100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -2600,
+          "reservation": 98000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -2900,
+          "reservation": 108900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "lastObservedAt": "2026-09-22T16:45:48.485Z",
+      "contentChanges": 146,
+      "authorized": true,
+      "classification": "CONDITIONAL",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9700,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 1400,
+            "poly": 9300
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 1100,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8600,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -200,
+          "reservation": 21400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -300,
+          "reservation": 32100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -300,
+          "reservation": 42700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -400,
+          "reservation": 53400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -500,
+          "reservation": 64100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -600,
+          "reservation": 74800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -700,
+          "reservation": 85500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -800,
+          "reservation": 96200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -800,
+          "reservation": 106800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "lastObservedAt": "2026-09-22T16:37:57.230Z",
+      "contentChanges": 24,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 9900,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": 0,
+          "riskAllowance": 200,
+          "afterRisk": -200,
+          "totalReservation": 10800,
+          "venueReservation": {
+            "kalshi": 9900,
+            "poly": 900
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 9600,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 300,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -200,
+          "reservation": 10800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -2900,
+          "reservation": 24100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -5500,
+          "reservation": 37300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -8100,
+          "reservation": 50500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -10800,
+          "reservation": 63800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -13400,
+          "reservation": 77000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -16000,
+          "reservation": 90200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -18700,
+          "reservation": 103500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -21300,
+          "reservation": 116700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -23900,
+          "reservation": 129900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "lastObservedAt": "2026-09-22T16:45:11.380Z",
+      "contentChanges": 73,
+      "authorized": true,
+      "classification": "CONDITIONAL",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 12200,
+          "modeledFeeBound": 300,
+          "feeNetSurplus": -2500,
+          "riskAllowance": 200,
+          "afterRisk": -2700,
+          "totalReservation": 13300,
+          "venueReservation": {
+            "kalshi": 4600,
+            "poly": 8700
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 4200,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8000,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -2700,
+          "reservation": 13300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -5400,
+          "reservation": 26600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -8100,
+          "reservation": 39900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -10800,
+          "reservation": 53200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -13600,
+          "reservation": 66600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -16400,
+          "reservation": 80000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -19200,
+          "reservation": 93400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -22000,
+          "reservation": 106800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -24800,
+          "reservation": 120200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -27600,
+          "reservation": 133600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "lastObservedAt": "2026-09-22T16:43:46.673Z",
+      "contentChanges": 81,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 9800,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": 0,
+          "riskAllowance": 200,
+          "afterRisk": -200,
+          "totalReservation": 10800,
+          "venueReservation": {
+            "kalshi": 9200,
+            "poly": 1600
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 8900,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 900,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -200,
+          "reservation": 10800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -300,
+          "reservation": 21500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -500,
+          "reservation": 32300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -600,
+          "reservation": 43000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -800,
+          "reservation": 53800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -900,
+          "reservation": 64500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -1100,
+          "reservation": 75300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1300,
+          "reservation": 86100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1400,
+          "reservation": 96800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1600,
+          "reservation": 107600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFB10QUAL-26-ORE::aqc-cfb-bigten-2026-12-05-champq-ore",
+      "lastObservedAt": "2026-09-22T16:46:03.132Z",
+      "contentChanges": 118,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9700,
+          "modeledFeeBound": 400,
+          "feeNetSurplus": -100,
+          "riskAllowance": 200,
+          "afterRisk": -300,
+          "totalReservation": 10900,
+          "venueReservation": {
+            "kalshi": 3600,
+            "poly": 7300
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 3200,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 6500,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -300,
+          "reservation": 10900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -500,
+          "reservation": 21700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -800,
+          "reservation": 32600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1000,
+          "reservation": 43400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -1300,
+          "reservation": 54300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -1500,
+          "reservation": 65100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -1800,
+          "reservation": 76000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -2100,
+          "reservation": 86900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -2300,
+          "reservation": 97700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -2600,
+          "reservation": 108600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "lastObservedAt": "2026-09-22T16:44:49.071Z",
+      "contentChanges": 178,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 9500,
+          "modeledFeeBound": 300,
+          "feeNetSurplus": 200,
+          "riskAllowance": 200,
+          "afterRisk": 0,
+          "totalReservation": 10600,
+          "venueReservation": {
+            "kalshi": 7800,
+            "poly": 2800
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 7400,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 2100,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": 0,
+          "reservation": 10600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": 0,
+          "reservation": 21200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -100,
+          "reservation": 31900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -300,
+          "reservation": 42700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -400,
+          "reservation": 53400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -500,
+          "reservation": 64100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -600,
+          "reservation": 74800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -700,
+          "reservation": 85500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -800,
+          "reservation": 96200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1000,
+          "reservation": 107000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "lastObservedAt": "2026-09-22T16:43:45.211Z",
+      "contentChanges": 65,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9700,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 1400,
+            "poly": 9300
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 1100,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8600,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -200,
+          "reservation": 21400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -300,
+          "reservation": 32100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -300,
+          "reservation": 42700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -400,
+          "reservation": 53400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -600,
+          "reservation": 64200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -800,
+          "reservation": 75000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1000,
+          "reservation": 85800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1200,
+          "reservation": 96600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1300,
+          "reservation": 107300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-KENN::aqc-cfb-cusa-2026-12-04-champq-kenest",
+      "lastObservedAt": "2026-09-22T16:46:03.814Z",
+      "contentChanges": 164,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9600,
+          "modeledFeeBound": 300,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 2300,
+            "poly": 8400
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 1900,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 7700,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -200,
+          "reservation": 21400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -400,
+          "reservation": 32200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -500,
+          "reservation": 42900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -600,
+          "reservation": 53600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -700,
+          "reservation": 64300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -900,
+          "reservation": 75100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1000,
+          "reservation": 85800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1100,
+          "reservation": 96500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1200,
+          "reservation": 107200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "lastObservedAt": "2026-09-22T16:45:36.192Z",
+      "contentChanges": 71,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 9800,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 9800,
+            "poly": 900
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 9500,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 300,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -200,
+          "reservation": 21400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -400,
+          "reservation": 32200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -500,
+          "reservation": 42900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -600,
+          "reservation": 53600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -700,
+          "reservation": 64300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -800,
+          "reservation": 75000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1000,
+          "reservation": 85800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -4300,
+          "reservation": 99700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -7700,
+          "reservation": 113700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "lastObservedAt": "2026-09-22T16:44:32.823Z",
+      "contentChanges": 107,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9700,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 1400,
+            "poly": 9300
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 1100,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8600,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -200,
+          "reservation": 21400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -300,
+          "reservation": 32100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -300,
+          "reservation": 42700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -400,
+          "reservation": 53400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -600,
+          "reservation": 64200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -800,
+          "reservation": 75000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1000,
+          "reservation": 85800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1200,
+          "reservation": 96600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1300,
+          "reservation": 107300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+      "lastObservedAt": "2026-09-22T16:44:49.844Z",
+      "contentChanges": 36,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 2,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 18800,
+          "modeledFeeBound": 300,
+          "feeNetSurplus": 900,
+          "riskAllowance": 400,
+          "afterRisk": 500,
+          "totalReservation": 20700,
+          "venueReservation": {
+            "kalshi": 17200,
+            "poly": 3500
+          },
+          "recoveryCash": {
+            "kalshi": 200,
+            "poly": 1000
+          },
+          "kalshiLevels": [
+            {
+              "price": 8300,
+              "quantity": 2
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 1100,
+              "quantity": 2
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": 200,
+          "reservation": 10400,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": 500,
+          "reservation": 20700,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": 0,
+          "reservation": 31800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -500,
+          "reservation": 42900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -1000,
+          "reservation": 54000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -1500,
+          "reservation": 65100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -2000,
+          "reservation": 76200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -2900,
+          "reservation": 87700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -3700,
+          "reservation": 99100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -4500,
+          "reservation": 110500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFSBELT-26-TROY::tec-cfb-sbeltchamp-2026-12-04-w-troy",
+      "lastObservedAt": "2026-09-22T16:46:15.777Z",
+      "contentChanges": 166,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9800,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": 0,
+          "riskAllowance": 200,
+          "afterRisk": -200,
+          "totalReservation": 10800,
+          "venueReservation": {
+            "kalshi": 1300,
+            "poly": 9500
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 1000,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8800,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -200,
+          "reservation": 10800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -300,
+          "reservation": 21500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -500,
+          "reservation": 32300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -700,
+          "reservation": 43100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -900,
+          "reservation": 53900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -1000,
+          "reservation": 64600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -1200,
+          "reservation": 75400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1400,
+          "reservation": 86200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1600,
+          "reservation": 97000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1700,
+          "reservation": 107700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-MISS::aqc-cfb-sec-2026-12-05-champq-miss",
+      "lastObservedAt": "2026-09-22T16:42:25.980Z",
+      "contentChanges": 43,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9700,
+          "modeledFeeBound": 300,
+          "feeNetSurplus": 0,
+          "riskAllowance": 200,
+          "afterRisk": -200,
+          "totalReservation": 10800,
+          "venueReservation": {
+            "kalshi": 2900,
+            "poly": 7900
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 2500,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 7200,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -200,
+          "reservation": 10800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -500,
+          "reservation": 21700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -700,
+          "reservation": 32500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1000,
+          "reservation": 43400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -1200,
+          "reservation": 54200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -1500,
+          "reservation": 65100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -1900,
+          "reservation": 76100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -2200,
+          "reservation": 87000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -2600,
+          "reservation": 98000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -2900,
+          "reservation": 108900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-MSST::aqc-cfb-sec-2026-12-05-champq-mspst",
+      "lastObservedAt": "2026-09-22T16:45:35.171Z",
+      "contentChanges": 37,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "economics": {
+          "principal": 10000,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": -100,
+          "riskAllowance": 200,
+          "afterRisk": -300,
+          "totalReservation": 10900,
+          "venueReservation": {
+            "kalshi": 9900,
+            "poly": 1000
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 9600,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 400,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -300,
+          "reservation": 10900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -700,
+          "reservation": 21900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -2200,
+          "reservation": 34000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -3800,
+          "reservation": 46200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -5400,
+          "reservation": 58400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -7000,
+          "reservation": 70600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -8600,
+          "reservation": 82800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -10200,
+          "reservation": 95000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -11800,
+          "reservation": 107200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -13400,
+          "reservation": 119400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "lastObservedAt": "2026-09-22T16:46:24.173Z",
+      "contentChanges": 75,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 10700,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": -800,
+          "riskAllowance": 200,
+          "afterRisk": -1000,
+          "totalReservation": 11600,
+          "venueReservation": {
+            "kalshi": 1300,
+            "poly": 10300
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 1000,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9700,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -1000,
+          "reservation": 11600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -2000,
+          "reservation": 23200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -3100,
+          "reservation": 34900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -4100,
+          "reservation": 46500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -5300,
+          "reservation": 58300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -6500,
+          "reservation": 70100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -7700,
+          "reservation": 81900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -8900,
+          "reservation": 93700,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -10100,
+          "reservation": 105500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -11300,
+          "reservation": 117300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXNEWSOMRUN-28-27JAN01::cranc-uspres28-12-31-2026-gavnew",
+      "lastObservedAt": "2026-09-22T16:45:37.019Z",
+      "contentChanges": 117,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 10000,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": -200,
+          "riskAllowance": 200,
+          "afterRisk": -400,
+          "totalReservation": 11000,
+          "venueReservation": {
+            "kalshi": 1800,
+            "poly": 9200
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 1500,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8500,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -400,
+          "reservation": 11000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -800,
+          "reservation": 22000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -1200,
+          "reservation": 33000,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1700,
+          "reservation": 44100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -2100,
+          "reservation": 55100,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -2600,
+          "reservation": 66200,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -3100,
+          "reservation": 77300,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -3600,
+          "reservation": 88400,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -4100,
+          "reservation": 99500,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -4600,
+          "reservation": 110600,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXPRESNOMD-28-AB::enwc-uspres-nom-dem-2028-andbes",
+      "lastObservedAt": "2026-09-22T16:45:01.426Z",
+      "contentChanges": 102,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 10170,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": -270,
+          "riskAllowance": 200,
+          "afterRisk": -470,
+          "totalReservation": 11070,
+          "venueReservation": {
+            "kalshi": 670,
+            "poly": 10400
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 370,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9800,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -470,
+          "reservation": 11070,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -940,
+          "reservation": 22140,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -1410,
+          "reservation": 33210,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1980,
+          "reservation": 44380,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -2450,
+          "reservation": 55450,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -2920,
+          "reservation": 66520,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -3390,
+          "reservation": 77590,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -3860,
+          "reservation": 88660,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -4330,
+          "reservation": 99730,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -4800,
+          "reservation": 110800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXPRESNOMD-28-KH::enwc-uspres-nom-dem-2028-kamhar",
+      "lastObservedAt": "2026-09-22T16:44:35.913Z",
+      "contentChanges": 192,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 10040,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": -140,
+          "riskAllowance": 200,
+          "afterRisk": -340,
+          "totalReservation": 10940,
+          "venueReservation": {
+            "kalshi": 1040,
+            "poly": 9900
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 740,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9300,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -340,
+          "reservation": 10940,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -780,
+          "reservation": 21980,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -1120,
+          "reservation": 32920,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -1560,
+          "reservation": 43960,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -1900,
+          "reservation": 54900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -2340,
+          "reservation": 65940,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -2680,
+          "reservation": 76880,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -3120,
+          "reservation": 87920,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -3460,
+          "reservation": 98860,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -3900,
+          "reservation": 109900,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXPRESNOMD-28-MK::enwc-uspres-nom-dem-2028-markel",
+      "lastObservedAt": "2026-09-22T16:46:17.457Z",
+      "contentChanges": 289,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "NONPOSITIVE_AFTER_RISK",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9700,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": 200,
+          "riskAllowance": 200,
+          "afterRisk": 0,
+          "totalReservation": 10600,
+          "venueReservation": {
+            "kalshi": 700,
+            "poly": 9900
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 400,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9300,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": 0,
+          "reservation": 10600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -100,
+          "reservation": 21300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -100,
+          "reservation": 31900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -200,
+          "reservation": 42600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -200,
+          "reservation": 53200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -300,
+          "reservation": 63900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -300,
+          "reservation": 74500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -400,
+          "reservation": 85200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -400,
+          "reservation": 95800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -500,
+          "reservation": 106500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "kalshi_QUANTITY_CONSTRAINT",
+            "kalshi_PRICE_GRID",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "lastObservedAt": "2026-09-22T16:43:58.409Z",
+      "contentChanges": 74,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9800,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": 0,
+          "riskAllowance": 200,
+          "afterRisk": -200,
+          "totalReservation": 10800,
+          "venueReservation": {
+            "kalshi": 1100,
+            "poly": 9700
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 800,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9000,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -200,
+          "reservation": 10800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -300,
+          "reservation": 21500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -500,
+          "reservation": 32300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -700,
+          "reservation": 43100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -800,
+          "reservation": 53800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -1000,
+          "reservation": 64600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -1100,
+          "reservation": 75300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1300,
+          "reservation": 86100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1500,
+          "reservation": 96900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1600,
+          "reservation": 107600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "lastObservedAt": "2026-09-22T16:45:43.069Z",
+      "contentChanges": 316,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 10,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 96000,
+          "modeledFeeBound": 1700,
+          "feeNetSurplus": 2300,
+          "riskAllowance": 2000,
+          "afterRisk": 300,
+          "totalReservation": 105700,
+          "venueReservation": {
+            "kalshi": 11000,
+            "poly": 94700
+          },
+          "recoveryCash": {
+            "kalshi": 1000,
+            "poly": 5000
+          },
+          "kalshiLevels": [
+            {
+              "price": 800,
+              "quantity": 10
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8800,
+              "quantity": 10
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": 0,
+          "reservation": 10600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": 100,
+          "reservation": 21100,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": 100,
+          "reservation": 31700,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": 100,
+          "reservation": 42300,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": 100,
+          "reservation": 52900,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": 200,
+          "reservation": 63400,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": 200,
+          "reservation": 74000,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": 200,
+          "reservation": 84600,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": 200,
+          "reservation": 95200,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": 300,
+          "reservation": 105700,
+          "reasons": [
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "lastObservedAt": "2026-09-22T16:45:38.461Z",
+      "contentChanges": 71,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9800,
+          "modeledFeeBound": 200,
+          "feeNetSurplus": 0,
+          "riskAllowance": 200,
+          "afterRisk": -200,
+          "totalReservation": 10800,
+          "venueReservation": {
+            "kalshi": 900,
+            "poly": 9900
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 600,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9200,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -200,
+          "reservation": 10800,
+          "reasons": [
+            "WRONG_OR_NONPOSITIVE_ROUTE",
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -300,
+          "reservation": 21500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -500,
+          "reservation": 32300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -600,
+          "reservation": 43000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -800,
+          "reservation": 53800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -900,
+          "reservation": 64500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -1100,
+          "reservation": 75300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1200,
+          "reservation": 86000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1400,
+          "reservation": 96800,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1500,
+          "reservation": 107500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+      "lastObservedAt": "2026-09-22T16:44:00.989Z",
+      "contentChanges": 43,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9800,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 700,
+            "poly": 10000
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 400,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9400,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -300,
+          "reservation": 21500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -400,
+          "reservation": 32200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -600,
+          "reservation": 43000,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -700,
+          "reservation": 53700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -800,
+          "reservation": 64400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -1000,
+          "reservation": 75200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1100,
+          "reservation": 85900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1300,
+          "reservation": 96700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1400,
+          "reservation": 107400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    },
+    {
+      "pairId": "KXTIME-26-JP::tpoyc-2026-jerpow",
+      "lastObservedAt": "2026-09-22T16:46:10.782Z",
+      "contentChanges": 48,
+      "authorized": false,
+      "classification": "UNRESOLVED",
+      "reasons": [
+        "NONPOSITIVE_AFTER_RISK",
+        "OBSERVATION_ONLY"
+      ],
+      "streamedUnconfirmedQuote": {
+        "quantity": 1,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 9800,
+          "modeledFeeBound": 100,
+          "feeNetSurplus": 100,
+          "riskAllowance": 200,
+          "afterRisk": -100,
+          "totalReservation": 10700,
+          "venueReservation": {
+            "kalshi": 600,
+            "poly": 10100
+          },
+          "recoveryCash": {
+            "kalshi": 100,
+            "poly": 500
+          },
+          "kalshiLevels": [
+            {
+              "price": 300,
+              "quantity": 1
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 9500,
+              "quantity": 1
+            }
+          ]
+        }
+      },
+      "allQuantities": [
+        {
+          "quantity": 1,
+          "afterRisk": -100,
+          "reservation": 10700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 2,
+          "afterRisk": -300,
+          "reservation": 21500,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 3,
+          "afterRisk": -400,
+          "reservation": 32200,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 4,
+          "afterRisk": -500,
+          "reservation": 42900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 5,
+          "afterRisk": -700,
+          "reservation": 53700,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 6,
+          "afterRisk": -800,
+          "reservation": 64400,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 7,
+          "afterRisk": -900,
+          "reservation": 75100,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 8,
+          "afterRisk": -1100,
+          "reservation": 85900,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 9,
+          "afterRisk": -1200,
+          "reservation": 96600,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        },
+        {
+          "quantity": 10,
+          "afterRisk": -1300,
+          "reservation": 107300,
+          "reasons": [
+            "NONPOSITIVE_AFTER_RISK",
+            "OBSERVATION_ONLY"
+          ]
+        }
+      ]
+    }
+  ],
+  "confirmations": [
+    {
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "at": "2026-09-22T15:46:38.026Z",
+      "bookConfirmed": true,
+      "error": null,
+      "reasons": [],
+      "original": {
+        "quantity": 7,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 66500,
+          "modeledFeeBound": 1300,
+          "feeNetSurplus": 2200,
+          "riskAllowance": 1400,
+          "afterRisk": 800,
+          "totalReservation": 73400,
+          "venueReservation": {
+            "kalshi": 7700,
+            "poly": 65700
+          },
+          "recoveryCash": {
+            "kalshi": 700,
+            "poly": 3500
+          },
+          "kalshiLevels": [
+            {
+              "price": 800,
+              "quantity": 7
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8700,
+              "quantity": 7
+            }
+          ]
+        }
+      },
+      "confirmed": {
+        "quantity": 7,
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "economics": {
+          "principal": 66500,
+          "modeledFeeBound": 1300,
+          "feeNetSurplus": 2200,
+          "riskAllowance": 1400,
+          "afterRisk": 800,
+          "totalReservation": 73400,
+          "venueReservation": {
+            "kalshi": 7700,
+            "poly": 65700
+          },
+          "recoveryCash": {
+            "kalshi": 700,
+            "poly": 3500
+          },
+          "kalshiLevels": [
+            {
+              "price": 800,
+              "quantity": 7
+            }
+          ],
+          "polyLevels": [
+            {
+              "price": 8700,
+              "quantity": 7
+            }
+          ]
+        }
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "reasons": [],
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "provenance": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1798729200000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1788369300000,
+            "closeAt": 1798729200000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXDWTSRANK-226DEC31-JSTIL",
+              "requestAt": 1790091995801,
+              "requestMono": 10106.704666,
+              "responseAt": 1790091995933,
+              "responseMono": 10238.064166,
+              "processedAt": 1790091995933,
+              "processedMono": 10238.109208,
+              "status": 200,
+              "headers": {
+                "date": "Tue, 22 Sep 2026 15:46:36 GMT"
+              },
+              "bodySha256": "3b74ca6f99b6eb1d13fad820ec86fa79ad6a2b48adced3cd26d56b446132b3b8"
+            },
+            "beginSerial": 1
+          },
+          "subscription": {
+            "requestedAt": null,
+            "ackAt": 1790091986723,
+            "ackMono": 1028.032291,
+            "sid": 2,
+            "lastSequence": 1
+          },
+          "events": []
+        },
+        "liveAdmitted": false
+      }
+    }
+  ],
+  "verification": {
+    "frozenFiles": 133,
+    "changedFrozenFiles": [],
+    "freezeSha256": "4105ac3849018e9c3e23fa499fb021ad11b74353c4b9d5827d13c16109cb06d7",
+    "primaryDocuments": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf",
+        "sha256": "146a07f48325b0ec14ca993c9f3e6ebd8bee26f143cf3cd125053f721696bf7c",
+        "retrievedAt": 1790091503327
+      },
+      {
+        "url": "https://assets.kalshi.com/contract_terms/NCAAF.pdf",
+        "sha256": "c3b31d2b3f585f04cb60ff0a46f4dd3848988fb3085194a9b36e2be7412fa1f3",
+        "retrievedAt": 1790091503449
+      },
+      {
+        "url": "https://assets.kalshi.com/contract_terms/COMPETITIONREALITYPLACEDWTS.pdf",
+        "sha256": "41c283cffe05a14c6f64ba2861dded1b755339195f56e5b6a14d86f0c7df02d3",
+        "retrievedAt": 1790091503575
+      },
+      {
+        "url": "https://assets.kalshi.com/contract_terms/TITLE.pdf",
+        "sha256": "7014c04719227a84321d3e3d2813b04b57b066b414c30598a475bd5bbff0bcb8",
+        "retrievedAt": 1790091503689
+      },
+      {
+        "url": "https://www.polymarketexchange.com/files/legal/latest/rulebook",
+        "sha256": "e7b7793e75dd61a8adaf807c588e1212cf0600100e5727d7d546ba0a0b7f35e5",
+        "retrievedAt": 1790091507772
+      },
+      {
+        "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AQC%20-%20%282026.03.26%29.pdf",
+        "sha256": "5960588d6a24f1ff1b1636ccfe7d14cb6cd32fc167a0efce39c87830edbe980e",
+        "retrievedAt": 1790091508458
+      },
+      {
+        "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TEC%20-%20%282026.03.26%29.pdf",
+        "sha256": "4253606e50cb6f13660c2ba85ec655b198b938256fd0a3aeff6475edd77fa6e9",
+        "retrievedAt": 1790091509038
+      },
+      {
+        "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20RTC%20-%20%282026.04.03%29.pdf",
+        "sha256": "f052ff3ced0006be4b3cc9bd102b4b19891765c38876dfc237970c30d0c317f6",
+        "retrievedAt": 1790091509634
+      },
+      {
+        "url": "https://docs.kalshi.com/api-reference/orders/create-order-v2.md",
+        "sha256": "1358cd4ef9aeb4d475baadbc79a93d151cd029786183797e230c0258b434527a",
+        "retrievedAt": 1790091510439
+      },
+      {
+        "url": "https://docs.polymarket.us/api-reference/orders/create-order.md",
+        "sha256": "0f7ffdcb944bc4b630177c2dfeeadc58462f55c28722bd1699d7caf4ea39d32d",
+        "retrievedAt": 1790091511359
+      }
+    ],
+    "focusedTests": {
+      "passed": 43,
+      "syntheticPositiveCases": "All five exact orientations reach both independent modeled legs; fabricated favorable test books only"
+    },
+    "ci": {
+      "head": "a55047e426f771f9f1ef0df5660950e276ad7aec",
+      "run": "https://github.com/tyhuffman7/lights_on/actions/runs/35749248207",
+      "testsPassed": 593,
+      "typecheck": "PASSED",
+      "build": "PASSED",
+      "timing": "Before collection; no subsequent runtime changes"
+    },
+    "accountingConservation": {
+      "freeCash": 926600,
+      "openPositionDebit": 67800,
+      "reservedRiskAndRecovery": 5600,
+      "total": 1000000,
+      "matchesInitialSimulatedCash": true
+    }
+  },
+  "interpretation": {
+    "conditionalHoldings": "Unsettled holdings and conditional ordinary-outcome surplus are not realized profit; payout differences remain possible",
+    "fees": "Existing modeled fee bounds, not observed venue commissions",
+    "timing": "500 ms modeled independent leg transport, not measured order latency",
+    "risk": "2-cent per-pair allowance is separate reserved cash, not a fee or guarantee; $2 realized-loss threshold is a stop trigger",
+    "noCapitalRecycling": true,
+    "oneAttemptPerComparison": true
+  },
+  "workflowTiming": {
+    "discoveredAt": "2026-09-22T15:46:35.798Z",
+    "confirmedAt": "2026-09-22T15:46:38.026Z",
+    "submittedAt": "2026-09-22T15:46:38.028Z",
+    "detectionToConfirmedMs": 2228,
+    "confirmationToSubmissionMs": 2,
+    "modeledTransportMs": 500,
+    "orderLatencyMeasured": false
+  },
+  "processedComparisonStates": 5866
+}
