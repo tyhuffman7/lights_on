@@ -9,7 +9,7 @@ export const multiPolicy=Object.freeze({mode:'REVIEWED_MULTI_MARKET_CONDITIONAL_
   riskPerContract:200,recoveryPerContract:{kalshi:100,poly:500},maxReconnects:3,
   coalesceMs:250,requestSpacingMs:2000,maxConfirmations:120,maxEvidenceBytes:256*1024*1024,
   horizon:'REVIEWED_CONTRACT_HORIZONS_NO_GUARANTEED_CASH_RELEASE',ohioLiveEligibility:'NOT_REVALIDATED_LIVE_BLOCKED',
-  repeatedLiquidity:'AT_MOST_ONE_ENTRY_ATTEMPT_PER_REVIEWED_COMPARISON',positiveAfterFeesAndRisk:true} as const);
+  repeatedLiquidity:'AT_MOST_ONE_ENTRY_ATTEMPT_PER_REVIEWED_COMPARISON',additionalAdmissionMarginPerContract:200} as const);
 export type ReviewRow={pairId:string;kalshiId:string;polyId:string;sides:{kalshi:Side;poly:Side};reviewDepth:string;matcherAfter:string;settlementClassification:string;rank:number};
 export const authorizedIds=['KXNCAAFB12QUAL-26-KSU','KXNCAAFCUSAQUAL-26-WKU','KXDWTSRANK-226DEC31-JSTIL','KXNCAAFPAC12-26-ORST','KXMLBAL-26-CWS'] as const;
 export function reviewedRows(review:{rows:ReviewRow[]}){
