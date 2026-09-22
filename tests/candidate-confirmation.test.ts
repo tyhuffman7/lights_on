@@ -33,6 +33,26 @@ test('positive fee-net economics survives disabled authorization, cash-cap and h
  const q=quoteCandidate(pair,book,cheap,'yes',now);assert(q.positiveExchangeNet);assert.equal(q.tradingAuthorization.authorized,false);assert.equal(q.quantity,10);assert(q.additionalPolicyAdmission.blockers.includes('BASELINE_30_DAY_HORIZON'));assert(q.additionalPolicyAdmission.blockers.includes('BASELINE_10_DOLLAR_ENTRY_CAP'));
  assert.equal(q.economics!.afterRisk,q.economics!.feeBoundSurplus-q.economics!.riskAllowance);
 });
+test('all legal sizes use cumulative depth: three contracts profitable while maximum ten loses',()=>{
+ const stepped={...book,yes:[{price:7000,quantity:7},{price:4000,quantity:3}]};
+ const q=quoteCandidate(pair,stepped,cheap,'yes',now),maximum=quoteCandidate(pair,stepped,cheap,'yes',now,10);
+ assert.equal(q.quantity,3);assert(q.positiveExchangeNet);assert(!maximum.positiveExchangeNet);
+ assert.deepEqual(q.quantitySelection.compared.map(x=>x.quantity),[1,2,3,4,5,6,7,8,9,10]);
+ assert.equal(q.economics!.cost,27000);assert.deepEqual(q.economics!.kalshi.levels,[{price:4000,quantity:3}]);
+ assert(q.quantitySelection.compared.every(x=>x.feeBound!==null));
+ const confirm=quoteCandidate(pair,stepped,{...cheap,no:[{price:5000,quantity:2}]},'yes',now+100,q.quantity);
+ assert.equal(confirm.quantity,3);assert.equal(confirm.economics,null);assert(confirm.pricingReasons.includes('FIXED_QUANTITY_DEPTH_UNAVAILABLE'));
+ assert(quoteCandidate(pair,stepped,{...cheap,no:[{price:5000,quantity:2}]},'yes',now+100).positiveExchangeNet);
+ assert.equal(confirmationResult(q,confirm,[],{startedAt:now,endedAt:now+100,kalshiSnapshotMono:1100,polyResponseMono:1100,nowMono:1200}).status,'FAILED');
+});
+test('minimum size, missing/invalid depth and unknown fees cannot be bypassed by quantity enumeration',()=>{
+ const minimum={...pair,a:{...pair.a,minQty:2.2}};
+ const q=quoteCandidate(minimum,{...book,yes:[{price:4000,quantity:2.9}]},cheap,'yes',now);
+ assert.equal(q.economics,null);assert.deepEqual(q.quantitySelection.compared.map(x=>x.quantity),[3,4,5,6,7,8,9,10]);
+ for(const a of [undefined,{...book,yes:[{price:NaN,quantity:10},{price:4000,quantity:-1}]}])assert.equal(quoteCandidate(pair,a,cheap,'yes',now).economics,null);
+ assert.equal(quoteCandidate({...pair,a:{...pair.a,feeRate:null}},book,cheap,'yes',now).economics,null);
+ assert.equal(quoteCandidate({...pair,a:{...pair.a,minQty:NaN}},book,cheap,'yes',now).economics,null);
+});
 test('cached/failed/slow/undated confirmation cannot establish survival; expired origin response allowed with evidence',()=>{
  assert.deepEqual(httpConfirmationReasons(http),[]);
  for(const h of [{...http,status:503},{...http,headers:{...http.headers,'cf-cache-status':'HIT'}},{...http,headers:{...http.headers,age:'5'}},{...http,headers:{}},{...http,responseMono:3000},{...http,processedMono:2000}])assert(httpConfirmationReasons(h).length>0);

@@ -11,6 +11,6 @@ const frozen=JSON.parse(readFileSync(resolve(dir,'frozen.json'),'utf8'));
 const durationMs=frozen.mode==='CONTROL'?30000:1800000;
 if(frozen.policy.durationMs!==durationMs)throw Error('Invalid frozen duration');
 const awake=process.platform==='darwin'?spawn('/usr/bin/caffeinate',['-i','-w',String(process.pid)],{stdio:'ignore'}):null;
-const result=await supervise({command:process.execPath,args:['--experimental-strip-types',resolve(root,'worker/executable-screen.ts'),'confirmation-observe',dir,resolve(envFile)],cwd:root,log:resolve(dir,'worker.log'),status:resolve(dir,'status.json'),durationMs,silenceMs:60000,graceMs:5000,forceMs:5000,minFreeBytes:2*1024**3});
+const result=await supervise({command:process.execPath,args:['--experimental-strip-types',resolve(root,'worker/executable-screen.ts'),frozen.mode==='DISCOVERY'?'discovery-observe':'confirmation-observe',dir,resolve(envFile)],cwd:root,log:resolve(dir,'worker.log'),status:resolve(dir,'status.json'),durationMs,silenceMs:60000,graceMs:5000,forceMs:5000,minFreeBytes:2*1024**3});
 awake?.kill('SIGTERM');
 process.exitCode=result.exitCode??1;
