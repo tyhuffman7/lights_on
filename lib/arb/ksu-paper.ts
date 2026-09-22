@@ -46,7 +46,7 @@ export function contractDifferences(old:Pair,fresh:Pair){
   return differences;
 }
 export type Candidate = ReturnType<typeof quoteCandidate>;
-export type PaperScope={kalshi:string;poly:string;aSide:'yes'|'no';bSide:'yes'|'no';maxReservation:number;positiveOnly:boolean};
+export type PaperScope={kalshi:string;poly:string;aSide:'yes'|'no';bSide:'yes'|'no';maxReservation:number;positiveOnly:boolean;admissionMarginPerContract?:number};
 export function admission(pair:Pair,q:Candidate,status:Status,constraints:Constraints,cash:Record<Venue,number>,scope?:PaperScope){
   const scoped=scope?(pair.a.id===scope.kalshi&&pair.b.id===scope.poly&&pair.a.venue==='kalshi'&&pair.b.venue==='poly'&&!pair.inverted?[]:['OUTSIDE_NAMED_PAIR_SCOPE']):scopeReasons(pair);
   const reasons=[...scoped,...q.pricingReasons,...assumedStatus(status).reasons];
@@ -55,7 +55,11 @@ export function admission(pair:Pair,q:Candidate,status:Status,constraints:Constr
   const e=q.economics;
   if(!e)reasons.push('NO_EXECUTABLE_QUANTITY');
   else {
-    if(scope?.positiveOnly&&e.afterRisk<=0)reasons.push('NONPOSITIVE_AFTER_RISK');
+    if(scope?.positiveOnly){
+      const margin=scope.admissionMarginPerContract??ksuPolicy.riskPerContract;
+      if(!Number.isSafeInteger(margin)||margin<0)reasons.push('INVALID_ADMISSION_MARGIN');
+      if(e.feeBoundSurplus-q.quantity*margin<=0)reasons.push(margin===ksuPolicy.riskPerContract?'NONPOSITIVE_AFTER_RISK':'NONPOSITIVE_AFTER_ADMISSION_MARGIN');
+    }
     if(!scope?.positiveOnly&&e.afterRisk<ksuPolicy.minProfit)reasons.push('BELOW_10_CENT_AFTER_RISK_FLOOR');
     if(!scope?.positiveOnly&&e.afterRisk/(e.cost+e.feeBound+e.riskAllowance)*100<ksuPolicy.minRoi)reasons.push('BELOW_1_PERCENT_ROI');
     if(e.reservedCash>(scope?.maxReservation??ksuPolicy.maxReservation))reasons.push(scope?'ENTRY_RESERVATION_CAP':'TWELVE_DOLLAR_RESERVATION_CAP');
