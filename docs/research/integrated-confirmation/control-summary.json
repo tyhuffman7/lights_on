@@ -1,0 +1,3600 @@
+{
+  "version": 2,
+  "mode": "CONTROL",
+  "status": "COMPLETED_BOUNDED_CONFIRMATION",
+  "startedAt": 1790026151195,
+  "observedThrough": 1790026180969,
+  "deadlineAt": 1790026180959,
+  "policy": {
+    "version": 3,
+    "durationMs": 30000,
+    "maxRoutes": 2,
+    "maxContracts": 10,
+    "coalesceMs": 250,
+    "confirmationMaxAgeMs": 2000,
+    "maxCrossVenueDelayMs": 2000,
+    "maxProcessingDelayMs": 250,
+    "maxClockDriftMs": 1000,
+    "requestTimeoutMs": 1500,
+    "maxAttempts": 2,
+    "globalRequestSpacingMs": 2000,
+    "perCandidateCooldownMs": 35000,
+    "maxIntervals": 2000,
+    "capital": {
+      "kalshi": 500000,
+      "poly": 500000
+    },
+    "riskPerContract": 200,
+    "recoveryPerContract": {
+      "kalshi": 100,
+      "poly": 500
+    },
+    "ordersEnabled": false,
+    "maxEvidenceBytes": 268435456,
+    "statusSpacingMs": 250,
+    "lifecycleEventLimit": 2048,
+    "lifecyclePerMarketLimit": 32
+  },
+  "coverage": {
+    "at": 1790026130815,
+    "selectionMode": "REFRESH_EXISTING_CATEGORY_NEUTRAL_60_ROUTE_SET; NO_PRICE_SELECTION_OR_REPLACEMENT_SEARCH",
+    "baselineRoutes": 58,
+    "mode": "CONTROL",
+    "selected": 2,
+    "errors": [],
+    "subscriptions": {
+      "kalshi": [
+        "KXU3-26SEP-T3.7",
+        "KXMLBGAME-26SEP211835TORBAL-TOR"
+      ],
+      "poly": [
+        "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "aec-mlb-tor-bal-2026-09-21"
+      ]
+    },
+    "categories": {
+      "Economics": 1,
+      "Sports/mlb": 1
+    }
+  },
+  "metrics": {
+    "evaluations": 44,
+    "coalescedUpdates": 24,
+    "distinctCandidateIntervals": 0,
+    "attempts": 2,
+    "confirmationCounts": {
+      "EDGE_SURVIVED": 0,
+      "EDGE_DISAPPEARED": 2,
+      "FAILED": 0
+    },
+    "seenBooks": 4,
+    "expectedBooks": 4,
+    "missingBooks": [],
+    "feedFailures": [],
+    "clockFault": false,
+    "intervalLimitReached": false
+  },
+  "intervals": [],
+  "controlResults": [
+    {
+      "status": "EDGE_DISAPPEARED",
+      "edgeSurvived": false,
+      "reasons": [],
+      "window": {
+        "startedAt": 1790026152618,
+        "endedAt": 1790026152865,
+        "kalshiSnapshotMono": 1712.832708,
+        "polyResponseMono": 1856.876583,
+        "nowMono": 1861.34425
+      },
+      "repriced": {
+        "pairId": "KXU3-26SEP-T3.7::urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "category": "Economics",
+        "at": 1790026152865,
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 10,
+        "positiveExchangeNet": false,
+        "economics": {
+          "quantity": 10,
+          "kalshi": {
+            "quantity": 10,
+            "cost": 2000,
+            "fees": 200,
+            "levels": [
+              {
+                "price": 200,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 1000
+          },
+          "poly": {
+            "quantity": 10,
+            "cost": 99000,
+            "fees": 100,
+            "levels": [
+              {
+                "price": 9900,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 100
+          },
+          "cost": 101000,
+          "feeBound": 1100,
+          "feeBoundSurplus": -2100,
+          "riskAllowance": 2000,
+          "afterRisk": -4100,
+          "recoveryCash": {
+            "kalshi": 1000,
+            "poly": 5000
+          },
+          "reservedCash": 110100,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            }
+          },
+          "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+        },
+        "pricingReasons": [],
+        "additionalPolicyAdmission": {
+          "admitted": false,
+          "blockers": [
+            "BASELINE_10_CENT_PROFIT_FLOOR",
+            "BASELINE_1_PERCENT_ROI",
+            "BASELINE_10_DOLLAR_ENTRY_CAP"
+          ]
+        },
+        "tradingAuthorization": {
+          "authorized": false,
+          "reason": "ORDER_DISABLED",
+          "ohioEligibility": "NOT_REVALIDATED"
+        },
+        "fillClaim": false
+      },
+      "original": {
+        "pairId": "KXU3-26SEP-T3.7::urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+        "category": "Economics",
+        "at": 1790026152617,
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 10,
+        "positiveExchangeNet": false,
+        "economics": {
+          "quantity": 10,
+          "kalshi": {
+            "quantity": 10,
+            "cost": 2000,
+            "fees": 200,
+            "levels": [
+              {
+                "price": 200,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 1000
+          },
+          "poly": {
+            "quantity": 10,
+            "cost": 99000,
+            "fees": 100,
+            "levels": [
+              {
+                "price": 9900,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 100
+          },
+          "cost": 101000,
+          "feeBound": 1100,
+          "feeBoundSurplus": -2100,
+          "riskAllowance": 2000,
+          "afterRisk": -4100,
+          "recoveryCash": {
+            "kalshi": 1000,
+            "poly": 5000
+          },
+          "reservedCash": 110100,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 700,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            }
+          },
+          "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+        },
+        "pricingReasons": [],
+        "additionalPolicyAdmission": {
+          "admitted": false,
+          "blockers": [
+            "BASELINE_10_CENT_PROFIT_FLOOR",
+            "BASELINE_1_PERCENT_ROI",
+            "BASELINE_10_DOLLAR_ENTRY_CAP"
+          ]
+        },
+        "tradingAuthorization": {
+          "authorized": false,
+          "reason": "ORDER_DISABLED",
+          "ohioEligibility": "NOT_REVALIDATED"
+        },
+        "fillClaim": false
+      },
+      "bookConfirmation": {
+        "accepted": true,
+        "reasons": [],
+        "kalshi": {
+          "accepted": true,
+          "reasons": [],
+          "request": {
+            "venue": "kalshi",
+            "marketId": "KXU3-26SEP-T3.7",
+            "at": 1790026152618,
+            "mono": 1614.368708,
+            "kind": "get_snapshot",
+            "requestId": "10001",
+            "sid": 1,
+            "beforeSequence": 4
+          },
+          "response": {
+            "marketId": "KXU3-26SEP-T3.7",
+            "sequence": 5,
+            "exchangeAt": null,
+            "transactTime": null,
+            "requestId": null,
+            "sid": 1,
+            "receivedAt": 1790026152716,
+            "receivedMono": 1712.832708,
+            "processedAt": 1790026152717,
+            "processedMono": 1713.407791,
+            "lastMarketChangeAt": null,
+            "lastContentChangeReceiptAt": 1790026151527,
+            "yes": [
+              {
+                "price": 9900,
+                "quantity": 200
+              }
+            ],
+            "no": [
+              {
+                "price": 200,
+                "quantity": 9938.91
+              },
+              {
+                "price": 300,
+                "quantity": 9968.79
+              },
+              {
+                "price": 500,
+                "quantity": 400
+              },
+              {
+                "price": 9600,
+                "quantity": 5000
+              },
+              {
+                "price": 9700,
+                "quantity": 200
+              }
+            ]
+          },
+          "selected": {
+            "marketId": "KXU3-26SEP-T3.7",
+            "sequence": 5,
+            "exchangeAt": null,
+            "transactTime": null,
+            "requestId": null,
+            "sid": 1,
+            "receivedAt": 1790026152716,
+            "receivedMono": 1712.832708,
+            "processedAt": 1790026152717,
+            "processedMono": 1713.407791,
+            "lastMarketChangeAt": null,
+            "lastContentChangeReceiptAt": 1790026151527,
+            "yes": [
+              {
+                "price": 9900,
+                "quantity": 200
+              }
+            ],
+            "no": [
+              {
+                "price": 200,
+                "quantity": 9938.91
+              },
+              {
+                "price": 300,
+                "quantity": 9968.79
+              },
+              {
+                "price": 500,
+                "quantity": 400
+              },
+              {
+                "price": 9600,
+                "quantity": 5000
+              },
+              {
+                "price": 9700,
+                "quantity": 200
+              }
+            ]
+          },
+          "confirmedAt": 1790026152716,
+          "confirmedMono": 1712.832708,
+          "proof": "REQUEST_BOUND_WS_BOOK"
+        },
+        "poly": {
+          "accepted": true,
+          "reasons": [],
+          "request": {
+            "venue": "poly",
+            "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+            "at": 1790026152817,
+            "mono": 1813.289125,
+            "kind": "new_subscription",
+            "requestId": "694355d8-ce02-4f95-887a-56405cada9d7:books-1"
+          },
+          "response": {
+            "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+            "sequence": null,
+            "exchangeAt": 1790026143532,
+            "transactTime": "2026-09-21T21:29:03.532006818Z",
+            "requestId": "694355d8-ce02-4f95-887a-56405cada9d7:books-1",
+            "sid": null,
+            "receivedAt": 1790026152860,
+            "receivedMono": 1856.876583,
+            "processedAt": 1790026152861,
+            "processedMono": 1857.8895,
+            "lastMarketChangeAt": 1790026143532,
+            "lastContentChangeReceiptAt": 1790026152860,
+            "yes": [
+              {
+                "price": 9900,
+                "quantity": 24380.39
+              }
+            ],
+            "no": [
+              {
+                "price": 200,
+                "quantity": 909.33
+              },
+              {
+                "price": 1000,
+                "quantity": 2.8
+              },
+              {
+                "price": 1100,
+                "quantity": 150
+              },
+              {
+                "price": 9800,
+                "quantity": 727
+              },
+              {
+                "price": 9900,
+                "quantity": 33469.4
+              }
+            ]
+          },
+          "selected": {
+            "marketId": "urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+            "sequence": null,
+            "exchangeAt": 1790026143532,
+            "transactTime": "2026-09-21T21:29:03.532006818Z",
+            "requestId": "694355d8-ce02-4f95-887a-56405cada9d7:books-1",
+            "sid": null,
+            "receivedAt": 1790026152860,
+            "receivedMono": 1856.876583,
+            "processedAt": 1790026152861,
+            "processedMono": 1857.8895,
+            "lastMarketChangeAt": 1790026143532,
+            "lastContentChangeReceiptAt": 1790026152860,
+            "yes": [
+              {
+                "price": 9900,
+                "quantity": 24380.39
+              }
+            ],
+            "no": [
+              {
+                "price": 200,
+                "quantity": 909.33
+              },
+              {
+                "price": 1000,
+                "quantity": 2.8
+              },
+              {
+                "price": 1100,
+                "quantity": 150
+              },
+              {
+                "price": 9800,
+                "quantity": 727
+              },
+              {
+                "price": 9900,
+                "quantity": 33469.4
+              }
+            ]
+          },
+          "confirmedAt": 1790026152860,
+          "confirmedMono": 1856.876583,
+          "proof": "REQUEST_BOUND_WS_BOOK"
+        }
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790944140000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1780768500000,
+            "closeAt": 1790944140000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXU3-26SEP-T3.7",
+              "requestAt": 1790026151531,
+              "requestMono": 528.159083,
+              "responseAt": 1790026151792,
+              "responseMono": 788.975,
+              "processedAt": 1790026151792,
+              "processedMono": 789.054291,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:11 GMT"
+              },
+              "bodySha256": "a6b96f1a702266462bcc3837ecdc26a3b35e1dcc799c2dc6caaa6ee7b4013d05"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "classification": "OPEN_IN_CONFIRMED_BOOK",
+          "admitted": true
+        }
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "priceEconomics": {
+        "positiveExchangeNet": false,
+        "feeBoundSurplus": -2100,
+        "confirmed": true
+      },
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "tradability": {
+        "admitted": false,
+        "reasons": [
+          "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+          "NON_ATOMIC_INITIAL_STATE",
+          "SETTLEMENT_NOT_EQUIVALENT",
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "fillClaim": false
+    },
+    {
+      "status": "EDGE_DISAPPEARED",
+      "edgeSurvived": false,
+      "reasons": [],
+      "window": {
+        "startedAt": 1790026154623,
+        "endedAt": 1790026154936,
+        "kalshiSnapshotMono": 3688.33825,
+        "polyResponseMono": 3916.041458,
+        "nowMono": 3932.202416
+      },
+      "repriced": {
+        "pairId": "KXMLBGAME-26SEP211835TORBAL-TOR::aec-mlb-tor-bal-2026-09-21",
+        "category": "Sports/mlb",
+        "at": 1790026154936,
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 10,
+        "positiveExchangeNet": false,
+        "economics": {
+          "quantity": 10,
+          "kalshi": {
+            "quantity": 10,
+            "cost": 50000,
+            "fees": 900,
+            "levels": [
+              {
+                "price": 5000,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 1000
+          },
+          "poly": {
+            "quantity": 10,
+            "cost": 50000,
+            "fees": 1700,
+            "levels": [
+              {
+                "price": 5000,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 1700
+          },
+          "cost": 100000,
+          "feeBound": 2700,
+          "feeBoundSurplus": -2700,
+          "riskAllowance": 2000,
+          "afterRisk": -4700,
+          "recoveryCash": {
+            "kalshi": 1000,
+            "poly": 5000
+          },
+          "reservedCash": 110700,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 350,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            }
+          },
+          "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+        },
+        "pricingReasons": [],
+        "additionalPolicyAdmission": {
+          "admitted": false,
+          "blockers": [
+            "BASELINE_10_CENT_PROFIT_FLOOR",
+            "BASELINE_1_PERCENT_ROI",
+            "BASELINE_10_DOLLAR_ENTRY_CAP"
+          ]
+        },
+        "tradingAuthorization": {
+          "authorized": false,
+          "reason": "ORDER_DISABLED",
+          "ohioEligibility": "NOT_REVALIDATED"
+        },
+        "fillClaim": false
+      },
+      "original": {
+        "pairId": "KXMLBGAME-26SEP211835TORBAL-TOR::aec-mlb-tor-bal-2026-09-21",
+        "category": "Sports/mlb",
+        "at": 1790026154622,
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 10,
+        "positiveExchangeNet": false,
+        "economics": {
+          "quantity": 10,
+          "kalshi": {
+            "quantity": 10,
+            "cost": 50000,
+            "fees": 900,
+            "levels": [
+              {
+                "price": 5000,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 1000
+          },
+          "poly": {
+            "quantity": 10,
+            "cost": 50000,
+            "fees": 1700,
+            "levels": [
+              {
+                "price": 5000,
+                "quantity": 10
+              }
+            ],
+            "feeBound": 1700
+          },
+          "cost": 100000,
+          "feeBound": 2700,
+          "feeBoundSurplus": -2700,
+          "riskAllowance": 2000,
+          "afterRisk": -4700,
+          "recoveryCash": {
+            "kalshi": 1000,
+            "poly": 5000
+          },
+          "reservedCash": 110700,
+          "feeProvenance": {
+            "kalshi": {
+              "rate": 350,
+              "rounding": "ceil",
+              "aggregation": "level",
+              "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+              "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+            },
+            "poly": {
+              "rate": 695,
+              "rounding": "even",
+              "aggregation": "order",
+              "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+              "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+            }
+          },
+          "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+        },
+        "pricingReasons": [],
+        "additionalPolicyAdmission": {
+          "admitted": false,
+          "blockers": [
+            "BASELINE_10_CENT_PROFIT_FLOOR",
+            "BASELINE_1_PERCENT_ROI",
+            "BASELINE_10_DOLLAR_ENTRY_CAP"
+          ]
+        },
+        "tradingAuthorization": {
+          "authorized": false,
+          "reason": "ORDER_DISABLED",
+          "ohioEligibility": "NOT_REVALIDATED"
+        },
+        "fillClaim": false
+      },
+      "bookConfirmation": {
+        "accepted": true,
+        "reasons": [],
+        "kalshi": {
+          "accepted": true,
+          "reasons": [],
+          "request": {
+            "venue": "kalshi",
+            "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+            "at": 1790026154623,
+            "mono": 3620.121416,
+            "kind": "get_snapshot",
+            "requestId": "10002",
+            "sid": 1,
+            "beforeSequence": 9
+          },
+          "response": {
+            "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+            "sequence": 10,
+            "exchangeAt": null,
+            "transactTime": null,
+            "requestId": null,
+            "sid": 1,
+            "receivedAt": 1790026154692,
+            "receivedMono": 3688.33825,
+            "processedAt": 1790026154692,
+            "processedMono": 3688.928791,
+            "lastMarketChangeAt": 1790026154023,
+            "lastContentChangeReceiptAt": 1790026154017,
+            "yes": [
+              {
+                "price": 5100,
+                "quantity": 949272.34
+              },
+              {
+                "price": 5200,
+                "quantity": 555788.1
+              },
+              {
+                "price": 5300,
+                "quantity": 233634.87
+              },
+              {
+                "price": 5400,
+                "quantity": 147133
+              },
+              {
+                "price": 5500,
+                "quantity": 1304.54
+              },
+              {
+                "price": 5600,
+                "quantity": 135
+              },
+              {
+                "price": 5700,
+                "quantity": 158
+              },
+              {
+                "price": 5800,
+                "quantity": 228
+              },
+              {
+                "price": 5900,
+                "quantity": 23431.08
+              },
+              {
+                "price": 6000,
+                "quantity": 236.55
+              },
+              {
+                "price": 6100,
+                "quantity": 244
+              },
+              {
+                "price": 6200,
+                "quantity": 278.96
+              },
+              {
+                "price": 6300,
+                "quantity": 332.27
+              },
+              {
+                "price": 6400,
+                "quantity": 352
+              },
+              {
+                "price": 6500,
+                "quantity": 400.92
+              },
+              {
+                "price": 6600,
+                "quantity": 452
+              },
+              {
+                "price": 6700,
+                "quantity": 547
+              },
+              {
+                "price": 6800,
+                "quantity": 2571
+              },
+              {
+                "price": 6900,
+                "quantity": 7436
+              },
+              {
+                "price": 7000,
+                "quantity": 757.62
+              },
+              {
+                "price": 7100,
+                "quantity": 852
+              },
+              {
+                "price": 7200,
+                "quantity": 6813.33
+              },
+              {
+                "price": 7300,
+                "quantity": 618
+              },
+              {
+                "price": 7500,
+                "quantity": 6649.21
+              },
+              {
+                "price": 7600,
+                "quantity": 31
+              },
+              {
+                "price": 7700,
+                "quantity": 119.89
+              },
+              {
+                "price": 7800,
+                "quantity": 5796.74
+              },
+              {
+                "price": 7900,
+                "quantity": 3.85
+              },
+              {
+                "price": 8000,
+                "quantity": 2044.41
+              },
+              {
+                "price": 8100,
+                "quantity": 15290.77
+              },
+              {
+                "price": 8200,
+                "quantity": 166.11
+              },
+              {
+                "price": 8300,
+                "quantity": 159.27
+              },
+              {
+                "price": 8400,
+                "quantity": 17928.92
+              },
+              {
+                "price": 8500,
+                "quantity": 140.31
+              },
+              {
+                "price": 8600,
+                "quantity": 11.82
+              },
+              {
+                "price": 8700,
+                "quantity": 22419.15
+              },
+              {
+                "price": 8800,
+                "quantity": 29.91
+              },
+              {
+                "price": 8900,
+                "quantity": 21.82
+              },
+              {
+                "price": 9000,
+                "quantity": 28803.82
+              },
+              {
+                "price": 9100,
+                "quantity": 22.96
+              },
+              {
+                "price": 9200,
+                "quantity": 263.8
+              },
+              {
+                "price": 9300,
+                "quantity": 40998.69
+              },
+              {
+                "price": 9400,
+                "quantity": 589.28
+              },
+              {
+                "price": 9500,
+                "quantity": 465.31
+              },
+              {
+                "price": 9600,
+                "quantity": 72116.82
+              },
+              {
+                "price": 9700,
+                "quantity": 924
+              },
+              {
+                "price": 9800,
+                "quantity": 6920.09
+              },
+              {
+                "price": 9900,
+                "quantity": 968808.88
+              }
+            ],
+            "no": [
+              {
+                "price": 5000,
+                "quantity": 103542.41
+              },
+              {
+                "price": 5100,
+                "quantity": 53791.44
+              },
+              {
+                "price": 5200,
+                "quantity": 89969.36
+              },
+              {
+                "price": 5300,
+                "quantity": 55777.02
+              },
+              {
+                "price": 5400,
+                "quantity": 27742.36
+              },
+              {
+                "price": 5500,
+                "quantity": 621
+              },
+              {
+                "price": 5600,
+                "quantity": 502
+              },
+              {
+                "price": 5700,
+                "quantity": 306
+              },
+              {
+                "price": 5800,
+                "quantity": 264
+              },
+              {
+                "price": 5900,
+                "quantity": 23281
+              },
+              {
+                "price": 6000,
+                "quantity": 281
+              },
+              {
+                "price": 6100,
+                "quantity": 244
+              },
+              {
+                "price": 6200,
+                "quantity": 277
+              },
+              {
+                "price": 6300,
+                "quantity": 312
+              },
+              {
+                "price": 6400,
+                "quantity": 352
+              },
+              {
+                "price": 6500,
+                "quantity": 400
+              },
+              {
+                "price": 6600,
+                "quantity": 452
+              },
+              {
+                "price": 6700,
+                "quantity": 638
+              },
+              {
+                "price": 6800,
+                "quantity": 582
+              },
+              {
+                "price": 6900,
+                "quantity": 659
+              },
+              {
+                "price": 7000,
+                "quantity": 5759
+              },
+              {
+                "price": 7100,
+                "quantity": 851
+              },
+              {
+                "price": 7200,
+                "quantity": 6758
+              },
+              {
+                "price": 7300,
+                "quantity": 804
+              },
+              {
+                "price": 7400,
+                "quantity": 1
+              },
+              {
+                "price": 7500,
+                "quantity": 8422
+              },
+              {
+                "price": 7600,
+                "quantity": 1
+              },
+              {
+                "price": 7800,
+                "quantity": 5700
+              },
+              {
+                "price": 7900,
+                "quantity": 1
+              },
+              {
+                "price": 8000,
+                "quantity": 38
+              },
+              {
+                "price": 8100,
+                "quantity": 9082
+              },
+              {
+                "price": 8200,
+                "quantity": 37.19
+              },
+              {
+                "price": 8300,
+                "quantity": 7
+              },
+              {
+                "price": 8400,
+                "quantity": 18530
+              },
+              {
+                "price": 8500,
+                "quantity": 8
+              },
+              {
+                "price": 8600,
+                "quantity": 9
+              },
+              {
+                "price": 8700,
+                "quantity": 22809
+              },
+              {
+                "price": 8800,
+                "quantity": 60
+              },
+              {
+                "price": 8900,
+                "quantity": 11
+              },
+              {
+                "price": 9000,
+                "quantity": 29645
+              },
+              {
+                "price": 9100,
+                "quantity": 568
+              },
+              {
+                "price": 9200,
+                "quantity": 44
+              },
+              {
+                "price": 9300,
+                "quantity": 42649
+              },
+              {
+                "price": 9400,
+                "quantity": 599
+              },
+              {
+                "price": 9500,
+                "quantity": 1711
+              },
+              {
+                "price": 9600,
+                "quantity": 74393
+              },
+              {
+                "price": 9700,
+                "quantity": 344
+              },
+              {
+                "price": 9800,
+                "quantity": 6066.1
+              },
+              {
+                "price": 9900,
+                "quantity": 955807
+              }
+            ]
+          },
+          "selected": {
+            "marketId": "KXMLBGAME-26SEP211835TORBAL-TOR",
+            "sequence": 10,
+            "exchangeAt": null,
+            "transactTime": null,
+            "requestId": null,
+            "sid": 1,
+            "receivedAt": 1790026154692,
+            "receivedMono": 3688.33825,
+            "processedAt": 1790026154692,
+            "processedMono": 3688.928791,
+            "lastMarketChangeAt": 1790026154023,
+            "lastContentChangeReceiptAt": 1790026154017,
+            "yes": [
+              {
+                "price": 5100,
+                "quantity": 949272.34
+              },
+              {
+                "price": 5200,
+                "quantity": 555788.1
+              },
+              {
+                "price": 5300,
+                "quantity": 233634.87
+              },
+              {
+                "price": 5400,
+                "quantity": 147133
+              },
+              {
+                "price": 5500,
+                "quantity": 1304.54
+              },
+              {
+                "price": 5600,
+                "quantity": 135
+              },
+              {
+                "price": 5700,
+                "quantity": 158
+              },
+              {
+                "price": 5800,
+                "quantity": 228
+              },
+              {
+                "price": 5900,
+                "quantity": 23431.08
+              },
+              {
+                "price": 6000,
+                "quantity": 236.55
+              },
+              {
+                "price": 6100,
+                "quantity": 244
+              },
+              {
+                "price": 6200,
+                "quantity": 278.96
+              },
+              {
+                "price": 6300,
+                "quantity": 332.27
+              },
+              {
+                "price": 6400,
+                "quantity": 352
+              },
+              {
+                "price": 6500,
+                "quantity": 400.92
+              },
+              {
+                "price": 6600,
+                "quantity": 452
+              },
+              {
+                "price": 6700,
+                "quantity": 547
+              },
+              {
+                "price": 6800,
+                "quantity": 2571
+              },
+              {
+                "price": 6900,
+                "quantity": 7436
+              },
+              {
+                "price": 7000,
+                "quantity": 757.62
+              },
+              {
+                "price": 7100,
+                "quantity": 852
+              },
+              {
+                "price": 7200,
+                "quantity": 6813.33
+              },
+              {
+                "price": 7300,
+                "quantity": 618
+              },
+              {
+                "price": 7500,
+                "quantity": 6649.21
+              },
+              {
+                "price": 7600,
+                "quantity": 31
+              },
+              {
+                "price": 7700,
+                "quantity": 119.89
+              },
+              {
+                "price": 7800,
+                "quantity": 5796.74
+              },
+              {
+                "price": 7900,
+                "quantity": 3.85
+              },
+              {
+                "price": 8000,
+                "quantity": 2044.41
+              },
+              {
+                "price": 8100,
+                "quantity": 15290.77
+              },
+              {
+                "price": 8200,
+                "quantity": 166.11
+              },
+              {
+                "price": 8300,
+                "quantity": 159.27
+              },
+              {
+                "price": 8400,
+                "quantity": 17928.92
+              },
+              {
+                "price": 8500,
+                "quantity": 140.31
+              },
+              {
+                "price": 8600,
+                "quantity": 11.82
+              },
+              {
+                "price": 8700,
+                "quantity": 22419.15
+              },
+              {
+                "price": 8800,
+                "quantity": 29.91
+              },
+              {
+                "price": 8900,
+                "quantity": 21.82
+              },
+              {
+                "price": 9000,
+                "quantity": 28803.82
+              },
+              {
+                "price": 9100,
+                "quantity": 22.96
+              },
+              {
+                "price": 9200,
+                "quantity": 263.8
+              },
+              {
+                "price": 9300,
+                "quantity": 40998.69
+              },
+              {
+                "price": 9400,
+                "quantity": 589.28
+              },
+              {
+                "price": 9500,
+                "quantity": 465.31
+              },
+              {
+                "price": 9600,
+                "quantity": 72116.82
+              },
+              {
+                "price": 9700,
+                "quantity": 924
+              },
+              {
+                "price": 9800,
+                "quantity": 6920.09
+              },
+              {
+                "price": 9900,
+                "quantity": 968808.88
+              }
+            ],
+            "no": [
+              {
+                "price": 5000,
+                "quantity": 103542.41
+              },
+              {
+                "price": 5100,
+                "quantity": 53791.44
+              },
+              {
+                "price": 5200,
+                "quantity": 89969.36
+              },
+              {
+                "price": 5300,
+                "quantity": 55777.02
+              },
+              {
+                "price": 5400,
+                "quantity": 27742.36
+              },
+              {
+                "price": 5500,
+                "quantity": 621
+              },
+              {
+                "price": 5600,
+                "quantity": 502
+              },
+              {
+                "price": 5700,
+                "quantity": 306
+              },
+              {
+                "price": 5800,
+                "quantity": 264
+              },
+              {
+                "price": 5900,
+                "quantity": 23281
+              },
+              {
+                "price": 6000,
+                "quantity": 281
+              },
+              {
+                "price": 6100,
+                "quantity": 244
+              },
+              {
+                "price": 6200,
+                "quantity": 277
+              },
+              {
+                "price": 6300,
+                "quantity": 312
+              },
+              {
+                "price": 6400,
+                "quantity": 352
+              },
+              {
+                "price": 6500,
+                "quantity": 400
+              },
+              {
+                "price": 6600,
+                "quantity": 452
+              },
+              {
+                "price": 6700,
+                "quantity": 638
+              },
+              {
+                "price": 6800,
+                "quantity": 582
+              },
+              {
+                "price": 6900,
+                "quantity": 659
+              },
+              {
+                "price": 7000,
+                "quantity": 5759
+              },
+              {
+                "price": 7100,
+                "quantity": 851
+              },
+              {
+                "price": 7200,
+                "quantity": 6758
+              },
+              {
+                "price": 7300,
+                "quantity": 804
+              },
+              {
+                "price": 7400,
+                "quantity": 1
+              },
+              {
+                "price": 7500,
+                "quantity": 8422
+              },
+              {
+                "price": 7600,
+                "quantity": 1
+              },
+              {
+                "price": 7800,
+                "quantity": 5700
+              },
+              {
+                "price": 7900,
+                "quantity": 1
+              },
+              {
+                "price": 8000,
+                "quantity": 38
+              },
+              {
+                "price": 8100,
+                "quantity": 9082
+              },
+              {
+                "price": 8200,
+                "quantity": 37.19
+              },
+              {
+                "price": 8300,
+                "quantity": 7
+              },
+              {
+                "price": 8400,
+                "quantity": 18530
+              },
+              {
+                "price": 8500,
+                "quantity": 8
+              },
+              {
+                "price": 8600,
+                "quantity": 9
+              },
+              {
+                "price": 8700,
+                "quantity": 22809
+              },
+              {
+                "price": 8800,
+                "quantity": 60
+              },
+              {
+                "price": 8900,
+                "quantity": 11
+              },
+              {
+                "price": 9000,
+                "quantity": 29645
+              },
+              {
+                "price": 9100,
+                "quantity": 568
+              },
+              {
+                "price": 9200,
+                "quantity": 44
+              },
+              {
+                "price": 9300,
+                "quantity": 42649
+              },
+              {
+                "price": 9400,
+                "quantity": 599
+              },
+              {
+                "price": 9500,
+                "quantity": 1711
+              },
+              {
+                "price": 9600,
+                "quantity": 74393
+              },
+              {
+                "price": 9700,
+                "quantity": 344
+              },
+              {
+                "price": 9800,
+                "quantity": 6066.1
+              },
+              {
+                "price": 9900,
+                "quantity": 955807
+              }
+            ]
+          },
+          "confirmedAt": 1790026154692,
+          "confirmedMono": 3688.33825,
+          "proof": "REQUEST_BOUND_WS_BOOK"
+        },
+        "poly": {
+          "accepted": true,
+          "reasons": [],
+          "request": {
+            "venue": "poly",
+            "marketId": "aec-mlb-tor-bal-2026-09-21",
+            "at": 1790026154875,
+            "mono": 3871.8495,
+            "kind": "new_subscription",
+            "requestId": "941b45f4-4929-4ca4-a9c5-bfcd2d66b660:books-1"
+          },
+          "response": {
+            "marketId": "aec-mlb-tor-bal-2026-09-21",
+            "sequence": null,
+            "exchangeAt": 1790026153860,
+            "transactTime": "2026-09-21T21:29:13.860274627Z",
+            "requestId": "941b45f4-4929-4ca4-a9c5-bfcd2d66b660:books-1",
+            "sid": null,
+            "receivedAt": 1790026154919,
+            "receivedMono": 3916.041458,
+            "processedAt": 1790026154922,
+            "processedMono": 3918.526541,
+            "lastMarketChangeAt": 1790026153860,
+            "lastContentChangeReceiptAt": 1790026154919,
+            "yes": [
+              {
+                "price": 5000,
+                "quantity": 352943.36
+              },
+              {
+                "price": 5050,
+                "quantity": 431539.83
+              },
+              {
+                "price": 5100,
+                "quantity": 275246.94
+              },
+              {
+                "price": 5150,
+                "quantity": 60270.51
+              },
+              {
+                "price": 5200,
+                "quantity": 84830.88
+              },
+              {
+                "price": 5250,
+                "quantity": 14883.43
+              },
+              {
+                "price": 5300,
+                "quantity": 73697.02
+              },
+              {
+                "price": 5350,
+                "quantity": 7711.76
+              },
+              {
+                "price": 5400,
+                "quantity": 9188.18
+              },
+              {
+                "price": 5450,
+                "quantity": 10790.19
+              },
+              {
+                "price": 5500,
+                "quantity": 14878.08
+              },
+              {
+                "price": 5550,
+                "quantity": 14822.42
+              },
+              {
+                "price": 5600,
+                "quantity": 300
+              },
+              {
+                "price": 5700,
+                "quantity": 5
+              },
+              {
+                "price": 5800,
+                "quantity": 2
+              },
+              {
+                "price": 5850,
+                "quantity": 121
+              },
+              {
+                "price": 5900,
+                "quantity": 24676
+              },
+              {
+                "price": 6000,
+                "quantity": 155
+              },
+              {
+                "price": 7000,
+                "quantity": 250
+              },
+              {
+                "price": 7200,
+                "quantity": 9.66
+              },
+              {
+                "price": 7250,
+                "quantity": 1.15
+              },
+              {
+                "price": 7400,
+                "quantity": 1
+              },
+              {
+                "price": 7500,
+                "quantity": 29.32
+              },
+              {
+                "price": 8400,
+                "quantity": 1
+              },
+              {
+                "price": 8450,
+                "quantity": 10
+              },
+              {
+                "price": 8500,
+                "quantity": 3.86
+              },
+              {
+                "price": 9400,
+                "quantity": 30
+              },
+              {
+                "price": 9500,
+                "quantity": 131
+              },
+              {
+                "price": 9550,
+                "quantity": 12.75
+              },
+              {
+                "price": 9600,
+                "quantity": 250
+              },
+              {
+                "price": 9700,
+                "quantity": 555
+              },
+              {
+                "price": 9800,
+                "quantity": 4355.46
+              },
+              {
+                "price": 9900,
+                "quantity": 7633
+              },
+              {
+                "price": 9950,
+                "quantity": 22967
+              }
+            ],
+            "no": [
+              {
+                "price": 5050,
+                "quantity": 1346479.19
+              },
+              {
+                "price": 5100,
+                "quantity": 326698.63
+              },
+              {
+                "price": 5150,
+                "quantity": 106212.51
+              },
+              {
+                "price": 5200,
+                "quantity": 64751.04
+              },
+              {
+                "price": 5250,
+                "quantity": 6089.15
+              },
+              {
+                "price": 5300,
+                "quantity": 17746.71
+              },
+              {
+                "price": 5350,
+                "quantity": 6765.59
+              },
+              {
+                "price": 5400,
+                "quantity": 8486.25
+              },
+              {
+                "price": 5450,
+                "quantity": 10030.03
+              },
+              {
+                "price": 5500,
+                "quantity": 35642.65
+              },
+              {
+                "price": 5550,
+                "quantity": 10900
+              },
+              {
+                "price": 5600,
+                "quantity": 13761.49
+              },
+              {
+                "price": 5650,
+                "quantity": 16667.28
+              },
+              {
+                "price": 5700,
+                "quantity": 19
+              },
+              {
+                "price": 5750,
+                "quantity": 125
+              },
+              {
+                "price": 5850,
+                "quantity": 2
+              },
+              {
+                "price": 6000,
+                "quantity": 20
+              },
+              {
+                "price": 6400,
+                "quantity": 50
+              },
+              {
+                "price": 6550,
+                "quantity": 250
+              },
+              {
+                "price": 7000,
+                "quantity": 19.14
+              },
+              {
+                "price": 7650,
+                "quantity": 1
+              },
+              {
+                "price": 8650,
+                "quantity": 1
+              },
+              {
+                "price": 9400,
+                "quantity": 30
+              },
+              {
+                "price": 9500,
+                "quantity": 130
+              },
+              {
+                "price": 9550,
+                "quantity": 1
+              },
+              {
+                "price": 9600,
+                "quantity": 250
+              },
+              {
+                "price": 9700,
+                "quantity": 560
+              },
+              {
+                "price": 9800,
+                "quantity": 6203
+              },
+              {
+                "price": 9900,
+                "quantity": 7433
+              },
+              {
+                "price": 9950,
+                "quantity": 22967
+              }
+            ]
+          },
+          "selected": {
+            "marketId": "aec-mlb-tor-bal-2026-09-21",
+            "sequence": null,
+            "exchangeAt": 1790026153860,
+            "transactTime": "2026-09-21T21:29:13.860274627Z",
+            "requestId": "941b45f4-4929-4ca4-a9c5-bfcd2d66b660:books-1",
+            "sid": null,
+            "receivedAt": 1790026154919,
+            "receivedMono": 3916.041458,
+            "processedAt": 1790026154922,
+            "processedMono": 3918.526541,
+            "lastMarketChangeAt": 1790026153860,
+            "lastContentChangeReceiptAt": 1790026154919,
+            "yes": [
+              {
+                "price": 5000,
+                "quantity": 352943.36
+              },
+              {
+                "price": 5050,
+                "quantity": 431539.83
+              },
+              {
+                "price": 5100,
+                "quantity": 275246.94
+              },
+              {
+                "price": 5150,
+                "quantity": 60270.51
+              },
+              {
+                "price": 5200,
+                "quantity": 84830.88
+              },
+              {
+                "price": 5250,
+                "quantity": 14883.43
+              },
+              {
+                "price": 5300,
+                "quantity": 73697.02
+              },
+              {
+                "price": 5350,
+                "quantity": 7711.76
+              },
+              {
+                "price": 5400,
+                "quantity": 9188.18
+              },
+              {
+                "price": 5450,
+                "quantity": 10790.19
+              },
+              {
+                "price": 5500,
+                "quantity": 14878.08
+              },
+              {
+                "price": 5550,
+                "quantity": 14822.42
+              },
+              {
+                "price": 5600,
+                "quantity": 300
+              },
+              {
+                "price": 5700,
+                "quantity": 5
+              },
+              {
+                "price": 5800,
+                "quantity": 2
+              },
+              {
+                "price": 5850,
+                "quantity": 121
+              },
+              {
+                "price": 5900,
+                "quantity": 24676
+              },
+              {
+                "price": 6000,
+                "quantity": 155
+              },
+              {
+                "price": 7000,
+                "quantity": 250
+              },
+              {
+                "price": 7200,
+                "quantity": 9.66
+              },
+              {
+                "price": 7250,
+                "quantity": 1.15
+              },
+              {
+                "price": 7400,
+                "quantity": 1
+              },
+              {
+                "price": 7500,
+                "quantity": 29.32
+              },
+              {
+                "price": 8400,
+                "quantity": 1
+              },
+              {
+                "price": 8450,
+                "quantity": 10
+              },
+              {
+                "price": 8500,
+                "quantity": 3.86
+              },
+              {
+                "price": 9400,
+                "quantity": 30
+              },
+              {
+                "price": 9500,
+                "quantity": 131
+              },
+              {
+                "price": 9550,
+                "quantity": 12.75
+              },
+              {
+                "price": 9600,
+                "quantity": 250
+              },
+              {
+                "price": 9700,
+                "quantity": 555
+              },
+              {
+                "price": 9800,
+                "quantity": 4355.46
+              },
+              {
+                "price": 9900,
+                "quantity": 7633
+              },
+              {
+                "price": 9950,
+                "quantity": 22967
+              }
+            ],
+            "no": [
+              {
+                "price": 5050,
+                "quantity": 1346479.19
+              },
+              {
+                "price": 5100,
+                "quantity": 326698.63
+              },
+              {
+                "price": 5150,
+                "quantity": 106212.51
+              },
+              {
+                "price": 5200,
+                "quantity": 64751.04
+              },
+              {
+                "price": 5250,
+                "quantity": 6089.15
+              },
+              {
+                "price": 5300,
+                "quantity": 17746.71
+              },
+              {
+                "price": 5350,
+                "quantity": 6765.59
+              },
+              {
+                "price": 5400,
+                "quantity": 8486.25
+              },
+              {
+                "price": 5450,
+                "quantity": 10030.03
+              },
+              {
+                "price": 5500,
+                "quantity": 35642.65
+              },
+              {
+                "price": 5550,
+                "quantity": 10900
+              },
+              {
+                "price": 5600,
+                "quantity": 13761.49
+              },
+              {
+                "price": 5650,
+                "quantity": 16667.28
+              },
+              {
+                "price": 5700,
+                "quantity": 19
+              },
+              {
+                "price": 5750,
+                "quantity": 125
+              },
+              {
+                "price": 5850,
+                "quantity": 2
+              },
+              {
+                "price": 6000,
+                "quantity": 20
+              },
+              {
+                "price": 6400,
+                "quantity": 50
+              },
+              {
+                "price": 6550,
+                "quantity": 250
+              },
+              {
+                "price": 7000,
+                "quantity": 19.14
+              },
+              {
+                "price": 7650,
+                "quantity": 1
+              },
+              {
+                "price": 8650,
+                "quantity": 1
+              },
+              {
+                "price": 9400,
+                "quantity": 30
+              },
+              {
+                "price": 9500,
+                "quantity": 130
+              },
+              {
+                "price": 9550,
+                "quantity": 1
+              },
+              {
+                "price": 9600,
+                "quantity": 250
+              },
+              {
+                "price": 9700,
+                "quantity": 560
+              },
+              {
+                "price": 9800,
+                "quantity": 6203
+              },
+              {
+                "price": 9900,
+                "quantity": 7433
+              },
+              {
+                "price": 9950,
+                "quantity": 22967
+              }
+            ]
+          },
+          "confirmedAt": 1790026154919,
+          "confirmedMono": 3916.041458,
+          "proof": "REQUEST_BOUND_WS_BOOK"
+        }
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790289300000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1789772100000,
+            "closeAt": 1790289300000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP211835TORBAL-TOR",
+              "requestAt": 1790026152048,
+              "requestMono": 1044.482958,
+              "responseAt": 1790026152101,
+              "responseMono": 1098.13175,
+              "processedAt": 1790026152102,
+              "processedMono": 1098.223458,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:12 GMT"
+              },
+              "bodySha256": "bf245cf9fcef92c1de7e8a69f85ec6a28d1eccb54a30e4bebb144adff5dabbe8"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "classification": "OPEN_IN_CONFIRMED_BOOK",
+          "admitted": true
+        }
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "priceEconomics": {
+        "positiveExchangeNet": false,
+        "feeBoundSurplus": -2700,
+        "confirmed": true
+      },
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "tradability": {
+        "admitted": false,
+        "reasons": [
+          "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+          "NON_ATOMIC_INITIAL_STATE",
+          "SETTLEMENT_NOT_EQUIVALENT",
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "fillClaim": false
+    }
+  ],
+  "lifecycle": {
+    "subscription": {
+      "requestedAt": 1790026151479,
+      "ackAt": 1790026151527,
+      "sid": 2,
+      "lastSequence": null
+    },
+    "faults": [],
+    "relevantEvents": 0,
+    "ignoredEvents": 0,
+    "limits": {
+      "total": 2048,
+      "perMarket": 32
+    }
+  },
+  "marketStatus": {
+    "KXU3-26SEP-T3.7": {
+      "classification": "UNRESOLVED",
+      "admitted": false,
+      "knownBlocked": false,
+      "reportedStatus": "active",
+      "latestLifecycleEvent": null,
+      "closeAt": 1790944140000,
+      "reasons": [
+        "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+        "NON_ATOMIC_INITIAL_STATE"
+      ],
+      "initializationGuarantee": "NOT_DOCUMENTED",
+      "baseline": {
+        "status": "active",
+        "openAt": 1780768500000,
+        "closeAt": 1790944140000,
+        "http": {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXU3-26SEP-T3.7",
+          "requestAt": 1790026151531,
+          "requestMono": 528.159083,
+          "responseAt": 1790026151792,
+          "responseMono": 788.975,
+          "processedAt": 1790026151792,
+          "processedMono": 789.054291,
+          "status": 200,
+          "headers": {
+            "date": "Mon, 21 Sep 2026 21:29:11 GMT"
+          },
+          "bodySha256": "a6b96f1a702266462bcc3837ecdc26a3b35e1dcc799c2dc6caaa6ee7b4013d05"
+        },
+        "beginSerial": 0
+      },
+      "subscription": {
+        "requestedAt": 1790026151479,
+        "ackAt": 1790026151527,
+        "ackMono": 523.541166,
+        "sid": 2,
+        "lastSequence": null
+      },
+      "events": []
+    },
+    "KXMLBGAME-26SEP211835TORBAL-TOR": {
+      "classification": "UNRESOLVED",
+      "admitted": false,
+      "knownBlocked": false,
+      "reportedStatus": "active",
+      "latestLifecycleEvent": null,
+      "closeAt": 1790289300000,
+      "reasons": [
+        "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+        "NON_ATOMIC_INITIAL_STATE"
+      ],
+      "initializationGuarantee": "NOT_DOCUMENTED",
+      "baseline": {
+        "status": "active",
+        "openAt": 1789772100000,
+        "closeAt": 1790289300000,
+        "http": {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP211835TORBAL-TOR",
+          "requestAt": 1790026152048,
+          "requestMono": 1044.482958,
+          "responseAt": 1790026152101,
+          "responseMono": 1098.13175,
+          "processedAt": 1790026152102,
+          "processedMono": 1098.223458,
+          "status": 200,
+          "headers": {
+            "date": "Mon, 21 Sep 2026 21:29:12 GMT"
+          },
+          "bodySha256": "bf245cf9fcef92c1de7e8a69f85ec6a28d1eccb54a30e4bebb144adff5dabbe8"
+        },
+        "beginSerial": 0
+      },
+      "subscription": {
+        "requestedAt": 1790026151479,
+        "ackAt": 1790026151527,
+        "ackMono": 523.541166,
+        "sid": 2,
+        "lastSequence": null
+      },
+      "events": []
+    }
+  },
+  "resourceStop": null,
+  "logBytes": 65930,
+  "bestDisplayed": [
+    {
+      "pairId": "KXU3-26SEP-T3.7::urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "category": "Economics",
+      "at": 1790026152611,
+      "aSide": "yes",
+      "bSide": "no",
+      "quantity": 10,
+      "positiveExchangeNet": false,
+      "economics": {
+        "quantity": 10,
+        "kalshi": {
+          "quantity": 10,
+          "cost": 99000,
+          "fees": 100,
+          "levels": [
+            {
+              "price": 9900,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1000
+        },
+        "poly": {
+          "quantity": 10,
+          "cost": 2000,
+          "fees": 100,
+          "levels": [
+            {
+              "price": 200,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 100
+        },
+        "cost": 101000,
+        "feeBound": 1100,
+        "feeBoundSurplus": -2100,
+        "riskAllowance": 2000,
+        "afterRisk": -4100,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 110100,
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "pricingReasons": [],
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "dataValidity": {
+        "kalshi": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": false,
+          "timestamps": {
+            "lastMarketChangeAt": null,
+            "messageReceiptAt": 1790026151527,
+            "messageReceiptMono": 523.541166,
+            "processingAvailableAt": 1790026151560,
+            "processingAvailableMono": 556.6225,
+            "lastConfirmedSnapshotAt": 1790026151527,
+            "exchangeTimestamp": null
+          }
+        },
+        "poly": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026143532,
+            "messageReceiptAt": 1790026151525,
+            "messageReceiptMono": 522.095208,
+            "processingAvailableAt": 1790026151529,
+            "processingAvailableMono": 525.389,
+            "lastConfirmedSnapshotAt": null,
+            "exchangeTimestamp": 1790026143532
+          }
+        },
+        "usableForDiscovery": true
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790944140000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1780768500000,
+            "closeAt": 1790944140000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXU3-26SEP-T3.7",
+              "requestAt": 1790026151531,
+              "requestMono": 528.159083,
+              "responseAt": 1790026151792,
+              "responseMono": 788.975,
+              "processedAt": 1790026151792,
+              "processedMono": 789.054291,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:11 GMT"
+              },
+              "bodySha256": "a6b96f1a702266462bcc3837ecdc26a3b35e1dcc799c2dc6caaa6ee7b4013d05"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "reportedOpen": true
+        }
+      },
+      "bookConfirmation": {
+        "status": "NOT_YET_CONFIRMED"
+      },
+      "fillClaim": false
+    },
+    {
+      "pairId": "KXU3-26SEP-T3.7::urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "category": "Economics",
+      "at": 1790026152611,
+      "aSide": "no",
+      "bSide": "yes",
+      "quantity": 10,
+      "positiveExchangeNet": false,
+      "economics": {
+        "quantity": 10,
+        "kalshi": {
+          "quantity": 10,
+          "cost": 2000,
+          "fees": 200,
+          "levels": [
+            {
+              "price": 200,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1000
+        },
+        "poly": {
+          "quantity": 10,
+          "cost": 99000,
+          "fees": 100,
+          "levels": [
+            {
+              "price": 9900,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 100
+        },
+        "cost": 101000,
+        "feeBound": 1100,
+        "feeBoundSurplus": -2100,
+        "riskAllowance": 2000,
+        "afterRisk": -4100,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 110100,
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "pricingReasons": [],
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "dataValidity": {
+        "kalshi": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": false,
+          "timestamps": {
+            "lastMarketChangeAt": null,
+            "messageReceiptAt": 1790026151527,
+            "messageReceiptMono": 523.541166,
+            "processingAvailableAt": 1790026151560,
+            "processingAvailableMono": 556.6225,
+            "lastConfirmedSnapshotAt": 1790026151527,
+            "exchangeTimestamp": null
+          }
+        },
+        "poly": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026143532,
+            "messageReceiptAt": 1790026151525,
+            "messageReceiptMono": 522.095208,
+            "processingAvailableAt": 1790026151529,
+            "processingAvailableMono": 525.389,
+            "lastConfirmedSnapshotAt": null,
+            "exchangeTimestamp": 1790026143532
+          }
+        },
+        "usableForDiscovery": true
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790944140000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1780768500000,
+            "closeAt": 1790944140000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXU3-26SEP-T3.7",
+              "requestAt": 1790026151531,
+              "requestMono": 528.159083,
+              "responseAt": 1790026151792,
+              "responseMono": 788.975,
+              "processedAt": 1790026151792,
+              "processedMono": 789.054291,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:11 GMT"
+              },
+              "bodySha256": "a6b96f1a702266462bcc3837ecdc26a3b35e1dcc799c2dc6caaa6ee7b4013d05"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "reportedOpen": true
+        }
+      },
+      "bookConfirmation": {
+        "status": "NOT_YET_CONFIRMED"
+      },
+      "fillClaim": false
+    },
+    {
+      "pairId": "KXMLBGAME-26SEP211835TORBAL-TOR::aec-mlb-tor-bal-2026-09-21",
+      "category": "Sports/mlb",
+      "at": 1790026152615,
+      "aSide": "yes",
+      "bSide": "no",
+      "quantity": 10,
+      "positiveExchangeNet": false,
+      "economics": {
+        "quantity": 10,
+        "kalshi": {
+          "quantity": 10,
+          "cost": 51000,
+          "fees": 900,
+          "levels": [
+            {
+              "price": 5100,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1000
+        },
+        "poly": {
+          "quantity": 10,
+          "cost": 50500,
+          "fees": 1700,
+          "levels": [
+            {
+              "price": 5050,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1700
+        },
+        "cost": 101500,
+        "feeBound": 2700,
+        "feeBoundSurplus": -4200,
+        "riskAllowance": 2000,
+        "afterRisk": -6200,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 112200,
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 350,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "pricingReasons": [],
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "dataValidity": {
+        "kalshi": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": false,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026152469,
+            "messageReceiptAt": 1790026152473,
+            "messageReceiptMono": 1469.843916,
+            "processingAvailableAt": 1790026152476,
+            "processingAvailableMono": 1472.370833,
+            "lastConfirmedSnapshotAt": 1790026151527,
+            "exchangeTimestamp": 1790026152469
+          }
+        },
+        "poly": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026152557,
+            "messageReceiptAt": 1790026152602,
+            "messageReceiptMono": 1598.524625,
+            "processingAvailableAt": 1790026152603,
+            "processingAvailableMono": 1599.647625,
+            "lastConfirmedSnapshotAt": null,
+            "exchangeTimestamp": 1790026152557
+          }
+        },
+        "usableForDiscovery": true
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790289300000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1789772100000,
+            "closeAt": 1790289300000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP211835TORBAL-TOR",
+              "requestAt": 1790026152048,
+              "requestMono": 1044.482958,
+              "responseAt": 1790026152101,
+              "responseMono": 1098.13175,
+              "processedAt": 1790026152102,
+              "processedMono": 1098.223458,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:12 GMT"
+              },
+              "bodySha256": "bf245cf9fcef92c1de7e8a69f85ec6a28d1eccb54a30e4bebb144adff5dabbe8"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "reportedOpen": true
+        }
+      },
+      "bookConfirmation": {
+        "status": "NOT_YET_CONFIRMED"
+      },
+      "fillClaim": false
+    },
+    {
+      "pairId": "KXMLBGAME-26SEP211835TORBAL-TOR::aec-mlb-tor-bal-2026-09-21",
+      "category": "Sports/mlb",
+      "at": 1790026152615,
+      "aSide": "no",
+      "bSide": "yes",
+      "quantity": 10,
+      "positiveExchangeNet": false,
+      "economics": {
+        "quantity": 10,
+        "kalshi": {
+          "quantity": 10,
+          "cost": 50000,
+          "fees": 900,
+          "levels": [
+            {
+              "price": 5000,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1000
+        },
+        "poly": {
+          "quantity": 10,
+          "cost": 50000,
+          "fees": 1700,
+          "levels": [
+            {
+              "price": 5000,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1700
+        },
+        "cost": 100000,
+        "feeBound": 2700,
+        "feeBoundSurplus": -2700,
+        "riskAllowance": 2000,
+        "afterRisk": -4700,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 110700,
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 350,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "pricingReasons": [],
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "dataValidity": {
+        "kalshi": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": false,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026152469,
+            "messageReceiptAt": 1790026152473,
+            "messageReceiptMono": 1469.843916,
+            "processingAvailableAt": 1790026152476,
+            "processingAvailableMono": 1472.370833,
+            "lastConfirmedSnapshotAt": 1790026151527,
+            "exchangeTimestamp": 1790026152469
+          }
+        },
+        "poly": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026152557,
+            "messageReceiptAt": 1790026152602,
+            "messageReceiptMono": 1598.524625,
+            "processingAvailableAt": 1790026152603,
+            "processingAvailableMono": 1599.647625,
+            "lastConfirmedSnapshotAt": null,
+            "exchangeTimestamp": 1790026152557
+          }
+        },
+        "usableForDiscovery": true
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790289300000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1789772100000,
+            "closeAt": 1790289300000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP211835TORBAL-TOR",
+              "requestAt": 1790026152048,
+              "requestMono": 1044.482958,
+              "responseAt": 1790026152101,
+              "responseMono": 1098.13175,
+              "processedAt": 1790026152102,
+              "processedMono": 1098.223458,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:12 GMT"
+              },
+              "bodySha256": "bf245cf9fcef92c1de7e8a69f85ec6a28d1eccb54a30e4bebb144adff5dabbe8"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "reportedOpen": true
+        }
+      },
+      "bookConfirmation": {
+        "status": "NOT_YET_CONFIRMED"
+      },
+      "fillClaim": false
+    }
+  ],
+  "latestClassification": [
+    {
+      "pairId": "KXU3-26SEP-T3.7::urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "category": "Economics",
+      "at": 1790026152861,
+      "aSide": "yes",
+      "bSide": "no",
+      "quantity": 10,
+      "positiveExchangeNet": false,
+      "economics": {
+        "quantity": 10,
+        "kalshi": {
+          "quantity": 10,
+          "cost": 99000,
+          "fees": 100,
+          "levels": [
+            {
+              "price": 9900,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1000
+        },
+        "poly": {
+          "quantity": 10,
+          "cost": 2000,
+          "fees": 100,
+          "levels": [
+            {
+              "price": 200,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 100
+        },
+        "cost": 101000,
+        "feeBound": 1100,
+        "feeBoundSurplus": -2100,
+        "riskAllowance": 2000,
+        "afterRisk": -4100,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 110100,
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "pricingReasons": [],
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "dataValidity": {
+        "kalshi": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": false,
+          "timestamps": {
+            "lastMarketChangeAt": null,
+            "messageReceiptAt": 1790026152716,
+            "messageReceiptMono": 1712.832708,
+            "processingAvailableAt": 1790026152717,
+            "processingAvailableMono": 1713.407791,
+            "lastConfirmedSnapshotAt": 1790026152716,
+            "exchangeTimestamp": null
+          }
+        },
+        "poly": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026143532,
+            "messageReceiptAt": 1790026151525,
+            "messageReceiptMono": 522.095208,
+            "processingAvailableAt": 1790026151529,
+            "processingAvailableMono": 525.389,
+            "lastConfirmedSnapshotAt": null,
+            "exchangeTimestamp": 1790026143532
+          }
+        },
+        "usableForDiscovery": true
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790944140000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1780768500000,
+            "closeAt": 1790944140000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXU3-26SEP-T3.7",
+              "requestAt": 1790026151531,
+              "requestMono": 528.159083,
+              "responseAt": 1790026151792,
+              "responseMono": 788.975,
+              "processedAt": 1790026151792,
+              "processedMono": 789.054291,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:11 GMT"
+              },
+              "bodySha256": "a6b96f1a702266462bcc3837ecdc26a3b35e1dcc799c2dc6caaa6ee7b4013d05"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "reportedOpen": true
+        }
+      },
+      "bookConfirmation": {
+        "status": "NOT_YET_CONFIRMED"
+      },
+      "fillClaim": false
+    },
+    {
+      "pairId": "KXU3-26SEP-T3.7::urc-usunemp-sa-september-2026-10-02-gt3pt7pct",
+      "category": "Economics",
+      "at": 1790026152861,
+      "aSide": "no",
+      "bSide": "yes",
+      "quantity": 10,
+      "positiveExchangeNet": false,
+      "economics": {
+        "quantity": 10,
+        "kalshi": {
+          "quantity": 10,
+          "cost": 2000,
+          "fees": 200,
+          "levels": [
+            {
+              "price": 200,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1000
+        },
+        "poly": {
+          "quantity": 10,
+          "cost": 99000,
+          "fees": 100,
+          "levels": [
+            {
+              "price": 9900,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 100
+        },
+        "cost": 101000,
+        "feeBound": 1100,
+        "feeBoundSurplus": -2100,
+        "riskAllowance": 2000,
+        "afterRisk": -4100,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 110100,
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "pricingReasons": [],
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "dataValidity": {
+        "kalshi": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": false,
+          "timestamps": {
+            "lastMarketChangeAt": null,
+            "messageReceiptAt": 1790026152716,
+            "messageReceiptMono": 1712.832708,
+            "processingAvailableAt": 1790026152717,
+            "processingAvailableMono": 1713.407791,
+            "lastConfirmedSnapshotAt": 1790026152716,
+            "exchangeTimestamp": null
+          }
+        },
+        "poly": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026143532,
+            "messageReceiptAt": 1790026151525,
+            "messageReceiptMono": 522.095208,
+            "processingAvailableAt": 1790026151529,
+            "processingAvailableMono": 525.389,
+            "lastConfirmedSnapshotAt": null,
+            "exchangeTimestamp": 1790026143532
+          }
+        },
+        "usableForDiscovery": true
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790944140000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1780768500000,
+            "closeAt": 1790944140000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXU3-26SEP-T3.7",
+              "requestAt": 1790026151531,
+              "requestMono": 528.159083,
+              "responseAt": 1790026151792,
+              "responseMono": 788.975,
+              "processedAt": 1790026151792,
+              "processedMono": 789.054291,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:11 GMT"
+              },
+              "bodySha256": "a6b96f1a702266462bcc3837ecdc26a3b35e1dcc799c2dc6caaa6ee7b4013d05"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "reportedOpen": true
+        }
+      },
+      "bookConfirmation": {
+        "status": "NOT_YET_CONFIRMED"
+      },
+      "fillClaim": false
+    },
+    {
+      "pairId": "KXMLBGAME-26SEP211835TORBAL-TOR::aec-mlb-tor-bal-2026-09-21",
+      "category": "Sports/mlb",
+      "at": 1790026180602,
+      "aSide": "yes",
+      "bSide": "no",
+      "quantity": 10,
+      "positiveExchangeNet": false,
+      "economics": {
+        "quantity": 10,
+        "kalshi": {
+          "quantity": 10,
+          "cost": 51000,
+          "fees": 900,
+          "levels": [
+            {
+              "price": 5100,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1000
+        },
+        "poly": {
+          "quantity": 10,
+          "cost": 50500,
+          "fees": 1700,
+          "levels": [
+            {
+              "price": 5050,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1700
+        },
+        "cost": 101500,
+        "feeBound": 2700,
+        "feeBoundSurplus": -4200,
+        "riskAllowance": 2000,
+        "afterRisk": -6200,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 112200,
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 350,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "pricingReasons": [],
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "dataValidity": {
+        "kalshi": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026180409,
+            "messageReceiptAt": 1790026180399,
+            "messageReceiptMono": 29395.759291,
+            "processingAvailableAt": 1790026180399,
+            "processingAvailableMono": 29396.038208,
+            "lastConfirmedSnapshotAt": 1790026154692,
+            "exchangeTimestamp": 1790026180409
+          }
+        },
+        "poly": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026179983,
+            "messageReceiptAt": 1790026180031,
+            "messageReceiptMono": 29027.96725,
+            "processingAvailableAt": 1790026180036,
+            "processingAvailableMono": 29032.709541,
+            "lastConfirmedSnapshotAt": null,
+            "exchangeTimestamp": 1790026179983
+          }
+        },
+        "usableForDiscovery": true
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790289300000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1789772100000,
+            "closeAt": 1790289300000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP211835TORBAL-TOR",
+              "requestAt": 1790026152048,
+              "requestMono": 1044.482958,
+              "responseAt": 1790026152101,
+              "responseMono": 1098.13175,
+              "processedAt": 1790026152102,
+              "processedMono": 1098.223458,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:12 GMT"
+              },
+              "bodySha256": "bf245cf9fcef92c1de7e8a69f85ec6a28d1eccb54a30e4bebb144adff5dabbe8"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "reportedOpen": true
+        }
+      },
+      "bookConfirmation": {
+        "status": "NOT_YET_CONFIRMED"
+      },
+      "fillClaim": false
+    },
+    {
+      "pairId": "KXMLBGAME-26SEP211835TORBAL-TOR::aec-mlb-tor-bal-2026-09-21",
+      "category": "Sports/mlb",
+      "at": 1790026180602,
+      "aSide": "no",
+      "bSide": "yes",
+      "quantity": 10,
+      "positiveExchangeNet": false,
+      "economics": {
+        "quantity": 10,
+        "kalshi": {
+          "quantity": 10,
+          "cost": 50000,
+          "fees": 900,
+          "levels": [
+            {
+              "price": 5000,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1000
+        },
+        "poly": {
+          "quantity": 10,
+          "cost": 50000,
+          "fees": 1700,
+          "levels": [
+            {
+              "price": 5000,
+              "quantity": 10
+            }
+          ],
+          "feeBound": 1700
+        },
+        "cost": 100000,
+        "feeBound": 2700,
+        "feeBoundSurplus": -2700,
+        "riskAllowance": 2000,
+        "afterRisk": -4700,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 110700,
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 350,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "pricingReasons": [],
+      "additionalPolicyAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "tradingAuthorization": {
+        "authorized": false,
+        "reason": "ORDER_DISABLED",
+        "ohioEligibility": "NOT_REVALIDATED"
+      },
+      "dataValidity": {
+        "kalshi": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026180409,
+            "messageReceiptAt": 1790026180399,
+            "messageReceiptMono": 29395.759291,
+            "processingAvailableAt": 1790026180399,
+            "processingAvailableMono": 29396.038208,
+            "lastConfirmedSnapshotAt": 1790026154692,
+            "exchangeTimestamp": 1790026180409
+          }
+        },
+        "poly": {
+          "usableForDiscovery": true,
+          "reasons": [],
+          "confirmationRequired": true,
+          "timestamps": {
+            "lastMarketChangeAt": 1790026179983,
+            "messageReceiptAt": 1790026180031,
+            "messageReceiptMono": 29027.96725,
+            "processingAvailableAt": 1790026180036,
+            "processingAvailableMono": 29032.709541,
+            "lastConfirmedSnapshotAt": null,
+            "exchangeTimestamp": 1790026179983
+          }
+        },
+        "usableForDiscovery": true
+      },
+      "settlementEquivalence": {
+        "status": "UNRESOLVED",
+        "reviewCompleted": false,
+        "reason": "NOT_IN_BOUNDED_CONTRACT_REVIEW"
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "admitted": false,
+          "knownBlocked": false,
+          "reportedStatus": "active",
+          "latestLifecycleEvent": null,
+          "closeAt": 1790289300000,
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ],
+          "initializationGuarantee": "NOT_DOCUMENTED",
+          "baseline": {
+            "status": "active",
+            "openAt": 1789772100000,
+            "closeAt": 1790289300000,
+            "http": {
+              "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP211835TORBAL-TOR",
+              "requestAt": 1790026152048,
+              "requestMono": 1044.482958,
+              "responseAt": 1790026152101,
+              "responseMono": 1098.13175,
+              "processedAt": 1790026152102,
+              "processedMono": 1098.223458,
+              "status": 200,
+              "headers": {
+                "date": "Mon, 21 Sep 2026 21:29:12 GMT"
+              },
+              "bodySha256": "bf245cf9fcef92c1de7e8a69f85ec6a28d1eccb54a30e4bebb144adff5dabbe8"
+            },
+            "beginSerial": 0
+          },
+          "subscription": {
+            "requestedAt": 1790026151479,
+            "ackAt": 1790026151527,
+            "ackMono": 523.541166,
+            "sid": 2,
+            "lastSequence": null
+          },
+          "events": []
+        },
+        "poly": {
+          "reportedOpen": true
+        }
+      },
+      "bookConfirmation": {
+        "status": "NOT_YET_CONFIRMED"
+      },
+      "fillClaim": false
+    }
+  ],
+  "contractReviews": [],
+  "baseline": "September 21 baseline preserved; 2.63% was strict freshness pass rate, not feed uptime.",
+  "ordersEnabled": false,
+  "realFills": 0,
+  "realizedProfit": "NOT_MEASURED",
+  "limitations": [
+    "Observations and snapshot confirmations are not atomic execution or fills.",
+    "Unknown account classification/fragmentation: conservative fee assumptions, not exact billing.",
+    "Only the named AOC pair received bounded clause review; other matches are not proven equivalent.",
+    "Positive interval duration is observation time, not continuous guaranteed tradability."
+  ]
+}

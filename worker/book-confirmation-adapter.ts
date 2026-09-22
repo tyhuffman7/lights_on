@@ -15,14 +15,15 @@ export class ConfirmationFeed{
  stream:StreamConnection;cache=new BookCache();latest=new Map<string,SnapshotReceipt>();
  failures:string[]=[];messages=new Map<string,number>();changes=new Map<string,number>();
  requests=new Map<string,SnapshotRequest>();pending=new Map<string,(receipt:SnapshotReceipt)=>void>();
- wall=Date.now();mono=performance.now();record:RecordEvidence;
- constructor(venue:Venue,ids:string[],record:RecordEvidence=noop){
+ wall=Date.now();mono=performance.now();clockFault=false;record:RecordEvidence;
+ constructor(venue:Venue,ids:string[],record:RecordEvidence=noop,hooks:{onBook?:(r:SnapshotReceipt)=>void;onMessage?:(m:Record<string,any>,at:number,mono:number)=>void;onInvalid?:(reason:string)=>void;extraSubscriptions?:Record<string,any>[]}={}){
   this.record=record;
-  this.stream=new StreamConnection({venue,ids,headers:()=>authHeaders(venue),subscriptionPrefix:randomUUID()+':',
-   onSubscription:(message,at,mono)=>{const requestId=message.subscribe?.requestId??String(message.id);for(const id of ids)this.requests.set(id,{venue,marketId:id,at,mono,kind:'new_subscription',requestId});record('WS_SUBSCRIPTION_REQUEST',{message,at,mono});},
-   onInvalid:reason=>{this.failures.push(reason);this.cache.invalidate(venue);for(const r of this.latest.values())r.e.book.valid=false;record('FEED_INVALID',{venue,reason,at:Date.now()});queueMicrotask(()=>this.stream.stop());},
+  this.stream=new StreamConnection({venue,ids,extraSubscriptions:hooks.extraSubscriptions,headers:()=>authHeaders(venue),subscriptionPrefix:randomUUID()+':',
+   onSubscription:(message,at,mono)=>{const requestId=message.subscribe?.requestId??String(message.id);for(const id of (message.params?.channels?.includes('market_lifecycle_v2')?[]:ids))this.requests.set(id,{venue,marketId:id,at,mono,kind:'new_subscription',requestId});record('WS_SUBSCRIPTION_REQUEST',{message,at,mono});},
+   onInvalid:reason=>{hooks.onInvalid?.(reason);this.failures.push(reason);this.cache.invalidate(venue);for(const r of this.latest.values())r.e.book.valid=false;record('FEED_INVALID',{venue,reason,at:Date.now()});queueMicrotask(()=>this.stream.stop());},
    onDiagnostic:(kind,body)=>{if(kind!=='DISCONNECT_DETAIL')record(kind,body);},
    onMessage:(message,wall,mono)=>{
+    hooks.onMessage?.(message,wall,mono);
     const b=venue==='kalshi'?this.cache.kalshi(message,wall,mono):this.cache.poly(message,wall,mono);if(!b)return;
     if(!ids.includes(b.marketId))throw Error('Unsubscribed market');const previous=this.latest.get(b.marketId);
     const e=observeBook(b,previous?.e,venue==='kalshi'?message.type:'marketData',Date.now(),performance.now());
@@ -35,10 +36,10 @@ export class ConfirmationFeed{
     this.latest.set(b.marketId,receipt);this.messages.set(b.marketId,(this.messages.get(b.marketId)??0)+1);
     if(previous&&e.lastContentChangeReceiptAt!==previous.e.lastContentChangeReceiptAt)this.changes.set(b.marketId,(this.changes.get(b.marketId)??0)+1);
     // Only public book envelopes, never authentication headers or account channels.
-    record('WS_BOOK',{message,receipt});this.pending.get(b.marketId)?.(receipt);
+    record('WS_BOOK',{message,receipt});hooks.onBook?.(receipt);this.pending.get(b.marketId)?.(receipt);
    }});
  }
- health():FeedHealth{return {connected:this.failures.length===0&&this.stream.isHealthy(),backlog:this.stream.ingress?.depth??0,clockOkay:Math.abs((Date.now()-this.wall)-(performance.now()-this.mono))<=1000};}
+ health():FeedHealth{if(Math.abs((Date.now()-this.wall)-(performance.now()-this.mono))>1000)this.clockFault=true;return {connected:this.failures.length===0&&this.stream.isHealthy(),backlog:this.stream.ingress?.depth??0,clockOkay:!this.clockFault};}
  start(){this.stream.start();}
  stop(){this.stream.stop();}
  async ready(ms=5000){const started=performance.now();while(this.latest.size<this.stream.options.ids.length){if(this.failures.length||performance.now()-started>ms)throw Error('CONTROL_FEED_NOT_READY');await new Promise(r=>setTimeout(r,20));}}
