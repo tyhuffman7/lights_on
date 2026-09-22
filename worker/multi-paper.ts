@@ -25,12 +25,22 @@ const read=(root:string,file:string)=>JSON.parse(readFileSync(resolve(root,file)
 export function manifest(root:string){const m=sourceManifest(root);for(const file of ['scripts/multi-paper-launch.mjs','docs/research/contract-shortlist/review.json','docs/research/contract-shortlist/REVIEW.md','docs/research/contract-shortlist/retained-markets.json','docs/research/contract-shortlist/sources.json'])m[file]=sha(readFileSync(resolve(root,file)));return m;}
 let nextHttp=0;
 async function get(url:string,record:RecordEvidence){await sleep(nextHttp-performance.now());nextHttp=performance.now()+250;const r=await publicConfirmationGet(url,record);if(r.evidence.status!==200)throw Error('METADATA_HTTP_'+r.evidence.status);return r;}
-export async function refreshRow(row:ReviewRow,old:Pair,record:RecordEvidence,tracker?:MarketStatusTracker){
+export function entryConstraints(m:any,pm:any,a:Pair['a'],b:Pair['b']){
+  const ranges=m.price_ranges,pt=pm.orderPriceMinTickSize*10000,entryReasons:string[]=[];
+  const linear=m.price_level_structure==='linear_cent'&&ranges?.length===1&&ranges[0].start==='0.0000'&&ranges[0].end==='1.0000'&&ranges[0].step==='0.0100';
+  const polyGrid=Number.isSafeInteger(pt)&&pt>0&&10000%pt===0;
+  if(!linear||!polyGrid)entryReasons.push('UNSUPPORTED_ENTRY_PRICE_GRID');
+  if(a.exchangeIndex!==0||a.feeRate!==700||b.feeRate!==695||![a.minQty,b.minQty].every(q=>Number.isFinite(q)&&q>0&&q<=10))entryReasons.push('UNSUPPORTED_ENTRY_FEE_OR_QUANTITY_MODEL');
+  // A zero tick explicitly marks unsupported entry. Observation still retains its actual streamed depth.
+  const constraints:Constraints={kalshi:{tick:linear?100:0,minimum:a.minQty},poly:{tick:polyGrid?pt:0,minimum:b.minQty}};
+  return {constraints,entryReasons};
+}
+export async function refreshRow(row:ReviewRow,old:Pair,record:RecordEvidence,tracker?:MarketStatusTracker,getPublic=get){
   tracker?.beginBaseline(row.kalshiId);
-  const k=await get(`${K}/markets/${row.kalshiId}`,record),m=k.data.market;
+  const k=await getPublic(`${K}/markets/${row.kalshiId}`,record),m=k.data.market;
   tracker?.applyBaseline(row.kalshiId,m,k.evidence);
   if(m?.ticker!==row.kalshiId||m.event_ticker?.split('-')[0]!==old.a.series)throw Error('EXACT_MARKET_IDENTITY_CHANGED');
-  const s=await get(`${K}/series/${old.a.series}`,record),e=await get(`${K}/events/${m.event_ticker}`,record),p=await get(`${P}/market/slug/${row.polyId}`,record),x=await get(`${K}/exchange/status`,record);
+  const s=await getPublic(`${K}/series/${old.a.series}`,record),e=await getPublic(`${K}/events/${m.event_ticker}`,record),p=await getPublic(`${P}/market/slug/${row.polyId}`,record),x=await getPublic(`${K}/exchange/status`,record);
   const pm=p.data.market??p.data,event=e.data.event;
   if(pm.slug!==row.polyId||s.data.series?.ticker!==old.a.series||event?.event_ticker!==m.event_ticker)throw Error('EXACT_METADATA_IDENTITY_CHANGED');
   const a=await normalizeKalshi(m,s.data.series),b=await normalizePoly(pm);
@@ -38,11 +48,8 @@ export async function refreshRow(row:ReviewRow,old:Pair,record:RecordEvidence,tr
   const differences=contractDifferences(old,pair);if(differences.length)throw Error('MATERIAL_TERMS_CHANGED:'+differences.join(';'));
   if(!a.open||!b.open||pm.ep3Status!=='OPEN'||pm.status!=='MARKET_STATUS_OPEN'||Date.parse(m.close_time)<=Date.now()||x.data.trading_active!==true||x.data.exchange_active!==true)throw Error('KNOWN_CLOSURE_OR_NOT_REPORTED_ACTIVE');
   if(event.fee_type_override!=null||event.fee_multiplier_override!=null||m.fee_waiver_expiration_time)throw Error('FEE_OVERRIDE_REQUIRES_REVIEW');
-  const ranges=m.price_ranges,pt=pm.orderPriceMinTickSize*10000;
-  if(m.price_level_structure!=='linear_cent'||ranges?.length!==1||ranges[0].start!=='0.0000'||ranges[0].end!=='1.0000'||ranges[0].step!=='0.0100'||!Number.isSafeInteger(pt)||pt<=0||10000%pt!==0)throw Error('UNSUPPORTED_PRICE_GRID');
-  if(a.exchangeIndex!==0||a.feeRate!==700||b.feeRate!==695||a.minQty!==1||b.minQty!==0.01)throw Error('FEE_OR_QUANTITY_MODEL_CHANGED');
-  const constraints:Constraints={kalshi:{tick:100,minimum:a.minQty},poly:{tick:pt,minimum:b.minQty}};
-  return {row,pair,constraints,at:Date.now(),http:[k,s,e,p,x].map(v=>v.evidence),administrativeTimes:{kalshiClose:m.close_time,kalshiExpected:m.expected_expiration_time,kalshiLatest:m.latest_expiration_time,polyEnd:pm.endDate},reportedStatus:{kalshi:m.status,poly:pm.status},classification:row.settlementClassification};
+  const {constraints,entryReasons}=entryConstraints(m,pm,a,b);
+  return {row,pair,constraints,entryReasons,at:Date.now(),http:[k,s,e,p,x].map(v=>v.evidence),administrativeTimes:{kalshiClose:m.close_time,kalshiExpected:m.expected_expiration_time,kalshiLatest:m.latest_expiration_time,polyEnd:pm.endDate},reportedStatus:{kalshi:m.status,poly:pm.status},classification:row.settlementClassification};
 }
 type Metadata=Awaited<ReturnType<typeof refreshRow>>;
 export async function prepare(dir:string,root:string){
@@ -156,7 +163,7 @@ export async function observe(dir:string,root:string){
         if(stopped||performance.now()>=deadline||portfolio.stopReason()||!healthy())break;
         const m=metadata.find(m=>m.row.pairId===id)!,a=current('kalshi',m.row.kalshiId),b=current('poly',m.row.polyId),fingerprint=bookFingerprint(a?.e.book,b?.e.book);
         if(fingerprints.get(id)===fingerprint)continue;fingerprints.set(id,fingerprint);
-        const dataReasons=[...validity(a?.e,feeds!.kalshi.health(),Date.now(),performance.now()).reasons,...validity(b?.e,feeds!.poly.health(),Date.now(),performance.now()).reasons,...(blocked.has(id)?[blocked.get(id)!]:[])];
+        const dataReasons=[...m.entryReasons,...validity(a?.e,feeds!.kalshi.health(),Date.now(),performance.now()).reasons,...validity(b?.e,feeds!.poly.health(),Date.now(),performance.now()).reasons,...(blocked.has(id)?[blocked.get(id)!]:[])];
         const comparison=portfolio.select(m.row,m.pair,a?.e.book,b?.e.book,status(m),m.constraints,Date.now());
         const obs={pairId:id,at:Date.now(),sides:m.row.sides,authorized:portfolio.authorized(m.row),classification:m.row.settlementClassification,quote:comparison.best,quantityComparison:comparison.compared,reasons:[...new Set([...dataReasons,...comparison.reasons])],changes:(observations.get(id)?.changes??0)+1};observations.set(id,obs);count(obs.reasons);
         if(!dataReasons.length&&comparison.selected)qualifying.add(id);
@@ -171,7 +178,7 @@ export async function observe(dir:string,root:string){
             if(JSON.stringify(fresh.constraints)!==JSON.stringify(m.constraints)||JSON.stringify(fresh.administrativeTimes)!==JSON.stringify(m.administrativeTimes)){blocked.set(id,'MATERIAL_CONSTRAINTS_OR_TIMES_CHANGED');throw Error('MATERIAL_CONSTRAINTS_OR_TIMES_CHANGED');}
             proofs=await request(m);
             const at=Date.now(),mono=performance.now(),ka=assessSnapshot(proofs.kalshi.request,proofs.kalshi.response,current('kalshi',m.row.kalshiId),feeds!.kalshi.health(),at,mono),pa=assessSnapshot(proofs.poly.request,proofs.poly.response,current('poly',m.row.polyId),feeds!.poly.health(),at,mono);
-            const q=quoteCandidate(m.pair,ka.selected.e.book,pa.selected.e.book,m.row.sides.kalshi,at,original.quantity),reasons=[...ka.reasons,...pa.reasons];
+            const q=quoteCandidate(m.pair,ka.selected.e.book,pa.selected.e.book,m.row.sides.kalshi,at,original.quantity),reasons=[...fresh.entryReasons,...ka.reasons,...pa.reasons];
             if(Math.abs(proofs.kalshi.response.e.book.receivedMono-proofs.poly.response.e.book.receivedMono)>2000)reasons.push('CROSS_VENUE_DELAY');
             confirmations.push({pairId:id,at,original,quote:q,bookConfirmed:ka.accepted&&pa.accepted,reasons,statusAssumption:assumedStatus(status(m))});
             return {quote:q,status:status(m),constraints:fresh.constraints,reasons};

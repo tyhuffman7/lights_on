@@ -2,7 +2,7 @@
 
 The user authorized one connected, bounded multi-market milestone, superseding the earlier KSU-only stop. Live orders remain disabled. The [05:12–05:35 UTC KSU report](KSU-CONDITIONAL-PAPER.md) and its results are preserved; that collection is not rerun or re-audited.
 
-The existing retained shortlist supplies exactly 34 comparisons. Preparation refreshes only their exact metadata and primary document versions; changed identities, material terms, closed markets and unsupported constraints are blocked. There is no broad scan, matching rewrite or additional strategy. Only the five `DEEP` / `CONDITIONAL` rows in [review.json](contract-shortlist/review.json) may execute, in their recorded purchase directions:
+The existing retained shortlist supplies exactly 34 comparisons. Preparation refreshes only their exact metadata and primary document versions; changed identities, material terms, closed markets and unsupported entry constraints block entry while observation-only depth remains visible. There is no broad scan, matching rewrite or additional strategy. Only the five `DEEP` / `CONDITIONAL` rows in [review.json](contract-shortlist/review.json) may execute, in their recorded purchase directions:
 
 | Candidate | Kalshi purchase | PM-US purchase |
 |---|---|---|
@@ -26,7 +26,7 @@ The existing accounting and single delayed recovery are reused. Unknown outcomes
 
 The existing supervisor enforces one original deadline of at most 60 minutes. New entries stop on five attempts, capacity exhaustion, three open pairs, $2 cumulative realized paper loss, or unresolved execution exposure. The loss threshold is a stop trigger, not a guaranteed maximum loss. Up to three individual transport reconnections are allowed within that deadline; entries pause and affected books rebuild first. Exposure halts never clear. No tests/builds run during collection, no automated task or repeated AI market polling is created, and no session extension is permitted.
 
-Verification before collection: 42 focused tests passed, including clearly synthetic favorable cases for all five orientations reaching both modeled legs, positive sub-floor economics, wrong scope/direction, status and confirmation failures, cash/commitment limits, exact quantity, paired capital lockup, five no-fill attempts, uncertain exposure, failed submission, reversed-side recovery, and bounded reconnections. Synthetic test fills are not market-data-based outcomes or realized profit. Worker import and diff whitespace checks passed. Full tests/typecheck/build belong to GitHub CI.
+Verification before collection: 43 focused tests passed, including clearly synthetic favorable cases for all five orientations reaching both modeled legs, positive sub-floor economics, wrong scope/direction, status and confirmation failures, cash/commitment limits, exact quantity, paired capital lockup, five no-fill attempts, uncertain exposure, failed submission, reversed-side recovery, and bounded reconnections. Synthetic test fills are not market-data-based outcomes or realized profit. The White Sox minimum of one and 0.001 price tick are verified separately; unsupported tiered entry grids do not remove observation-only comparisons. Worker import and diff whitespace checks passed. Hosted CI passed implementation `4c58231`; the subsequent metadata-constraint correction requires its own hosted receipt.
 
 Session and publication status: preparation and the supervised session have not yet launched. Final sanitized results and the CI receipt will replace this paragraph at completion.
 

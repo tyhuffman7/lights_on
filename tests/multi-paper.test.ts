@@ -6,6 +6,7 @@ import type {ReviewRow} from '../lib/arb/multi-paper.ts';
 import {modelLeg,accountLeg,recoveryPlan,recover,accounting} from '../lib/arb/ksu-paper.ts';
 import type {Session} from '../lib/arb/ksu-paper.ts';
 import {quoteCandidate} from '../lib/screen/confirmation.ts';
+import {entryConstraints} from '../worker/multi-paper.ts';
 import type {Book,Pair,Venue} from '../lib/arb/types.ts';
 const read=(p:string)=>JSON.parse(readFileSync(new URL(p,import.meta.url),'utf8'));
 const review=read('../docs/research/contract-shortlist/review.json'),retained=read('../docs/research/contract-shortlist/retained-markets.json');
@@ -105,4 +106,12 @@ test('submission exceptions preserve reservations and permanently halt; only one
 test('reconnection budget stays within original deadline and never permits a fourth reconnect',()=>{
   const p=new MultiPaper(review);for(let i=0;i<3;i++)assert.equal(p.reconnect(100,1000),true);assert.equal(p.reconnect(100,1000),false);
   const q=new MultiPaper(review);assert.equal(q.reconnect(1000,1000),false);q.busy=true;assert.equal(q.reconnect(0,1000),false);
+});
+
+test('retained White Sox minimum and mill tick are legal; tiered observation grids do not remove identity-valid comparisons',()=>{
+  const row=rows.authorized.find(r=>r.kalshiId==='KXMLBAL-26-CWS')!,p=pair(row);
+  const m={price_level_structure:'linear_cent',price_ranges:[{start:'0.0000',end:'1.0000',step:'0.0100'}]},pm={orderPriceMinTickSize:0.001};
+  assert.equal(p.b.minQty,1);assert.deepEqual(entryConstraints(m,pm,p.a,p.b),{constraints:{kalshi:{tick:100,minimum:1},poly:{tick:10,minimum:1}},entryReasons:[]});
+  const observation=entryConstraints({...m,price_level_structure:'tapered_deci_cent'},pm,p.a,p.b);
+  assert.deepEqual(observation.entryReasons,['UNSUPPORTED_ENTRY_PRICE_GRID']);assert.equal(observation.constraints.kalshi.tick,0);
 });
