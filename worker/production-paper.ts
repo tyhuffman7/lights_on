@@ -108,7 +108,8 @@ export async function observe(dir:string,root:string){
     const e=assessed.selected.e,b=e.book,result={scenario,pairId:m.row.pairId,venue:v,modeledArrivalMono:due,processedMono:performance.now(),bookReceiptAt:b.receivedAt,bookReceiptMono:b.receivedMono,bookProcessedMono:e.processedMono,exchangeAt:b.exchangeAt,sequence:b.sequence,transactTime:assessed.selected.transactTime??null,requestRoundTripMs:proof.response.e.book.receivedMono-proof.request.mono,reasons};
     record('ARRIVAL_EVIDENCE',{...result,book:b});return {book:b,reasons,wall,receipt:result};
   };
-  const simulate=async(m:Metadata,s:Session,proofs:Proofs,lane:'strategy'|'shadow',attemptId:string)=>{
+  const simulate=async(m:Metadata,s:Session,proofs:Proofs|undefined,lane:'strategy'|'shadow',attemptId:string)=>{
+    if(!proofs)throw Error('MISSING_REQUESTED_CONFIRMATION');
     persist();record('FROZEN_SUBMISSION',{lane,attemptId,pairId:m.row.pairId,plans:s.plan});
     await Promise.all((['kalshi','poly'] as const).map(async v=>{
       const plan=s.plan![v];await sleep(plan.arrivalMono-performance.now());
@@ -149,7 +150,7 @@ export async function observe(dir:string,root:string){
     return [...strategyQueue,...shadowQueue];
   };
   const execute=async(o:Opportunity)=>{
-    const {m,quote:original,lane,signature}=o,id=m.row.pairId,attemptId=lane+':'+id+':'+Date.now();let proofs:Proofs;
+    const {m,quote:original,lane,signature}=o,id=m.row.pairId,attemptId=lane+':'+id+':'+Date.now();let proofs:Proofs|undefined;
     const confirm=async()=>{
       confirmationCycles++;confirmationCounts.set(id,(confirmationCounts.get(id)??0)+1);lastRequest.set(id,performance.now());
       let fresh:Metadata;try{fresh=await refreshRow(m.row,m.pair,record,tracker);}catch(e){blocked.set(id,(e as Error).message);throw e;}
