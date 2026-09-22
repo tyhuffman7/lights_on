@@ -1,0 +1,5882 @@
+{
+  "scope": "PRODUCTION_LIKE_PAPER_SESSION",
+  "moneyScale": 10000,
+  "ordersEnabled": false,
+  "startedAt": 1790106570670,
+  "endedAt": 1790111151360,
+  "deadlineAt": 1790113770670,
+  "durationMs": 4580690,
+  "reason": "RECONNECTION_LIMIT_OR_DEADLINE",
+  "retainedComparisons": 34,
+  "refreshedComparisons": 34,
+  "blocked": [],
+  "sourceJournalSha256": "45a1058025bdef7f87f39481b94667c4c367fa8a127c7d9d5a9ec4a468c8d25a",
+  "initialHoldingsPreserved": true,
+  "cashConserved": true,
+  "policy": {
+    "mode": "PRODUCTION_LIKE_PAPER_SESSION",
+    "ordersEnabled": false,
+    "liveAdmitted": false,
+    "capitalPerVenue": 500000,
+    "maxQuantity": 10,
+    "maxReservation": 150000,
+    "maxCommitted": 450000,
+    "maxPositions": 3,
+    "maxAttempts": 5,
+    "maxRealizedLoss": 20000,
+    "durationMs": 7200000,
+    "transportMs": 500,
+    "recoveryDelayMs": 1000,
+    "maxRecoveryAttempts": 1,
+    "riskPerContract": 200,
+    "recoveryPerContract": {
+      "kalshi": 100,
+      "poly": 500
+    },
+    "maxReconnects": 3,
+    "coalesceMs": 250,
+    "requestSpacingMs": 2000,
+    "maxConfirmations": 120,
+    "maxEvidenceBytes": 268435456,
+    "horizon": "CURRENT_EXPECTED_OR_ADMINISTRATIVE_TIMES_INDICATIVE_ONLY_CASH_RELEASE_UNCERTAIN",
+    "ohioLiveEligibility": "NOT_REVALIDATED_LIVE_BLOCKED",
+    "repeatedLiquidity": "AT_MOST_ONE_ENTRY_ATTEMPT_PER_REVIEWED_COMPARISON",
+    "additionalAdmissionMarginPerContract": 0,
+    "admissionMarginPerContract": 0,
+    "maxShadowAttempts": 20,
+    "maxConfirmationsPerRoute": 4,
+    "routeConfirmationCooldownMs": 60000,
+    "shadowMaterialPrice": 100,
+    "shadowMaterialDepthFraction": 0.25,
+    "shadowMaterialMinimumQuantity": 1,
+    "rankingComparableFraction": 0.1,
+    "ranking": "FEE_NET_DOLLARS_THEN_CAPITAL_EFFICIENCY; SHORTER_HORIZON_WITHIN_10_PERCENT"
+  },
+  "positiveAfterFeeDistinctRoutes": {
+    "strategy": 4,
+    "shadow": 15
+  },
+  "positiveAfterFeeRouteIds": {
+    "strategy": [
+      "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kanst"
+    ],
+    "shadow": [
+      "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "KXTIME-26-JP::tpoyc-2026-jerpow",
+      "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+      "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "KXTIME-26-JAM::tpoyc-2026-jamtal",
+      "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "KXTIME-26-EM::tpoyc-2026-elomus",
+      "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "KXNCAAFB10QUAL-26-ORE::aqc-cfb-bigten-2026-12-05-champq-ore"
+    ]
+  },
+  "confirmationCycles": 21,
+  "requestedConfirmationPairs": 21,
+  "recoveryBookRequests": 0,
+  "successfulPositiveConfirmations": {
+    "shadow": 20,
+    "strategy": 1
+  },
+  "strategyCounts": {
+    "attempts": 1,
+    "distinctRoutes": 1,
+    "pairedModeledFills": 0,
+    "oneLegFailures": 0,
+    "noFills": 0,
+    "inconclusive": 1,
+    "recoveryAttempts": 0,
+    "recoveryOutcomes": {},
+    "recoveryLoss": 0
+  },
+  "shadowCounts": {
+    "attempts": 20,
+    "distinctRoutes": 14,
+    "pairedModeledFills": 20,
+    "oneLegFailures": 0,
+    "noFills": 0,
+    "inconclusive": 0,
+    "recoveryAttempts": 0,
+    "recoveryOutcomes": {},
+    "recoveryLoss": 0
+  },
+  "strategy": {
+    "scenario": {
+      "label": "STRATEGY_ZERO_MARGIN",
+      "admissionMarginPerContract": 0
+    },
+    "inheritedEntries": 2,
+    "newAttempts": 1,
+    "cash": {
+      "kalshi": 468900,
+      "poly": 340120
+    },
+    "committed": 190980,
+    "openPairedPositions": 2,
+    "attempts": 3,
+    "realizedPaperLoss": 0,
+    "realizedProfit": 0,
+    "halt": "UNRESOLVED_EXECUTION_EXPOSURE",
+    "reconnections": 0,
+    "holdings": [
+      {
+        "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "cash": {
+          "kalshi": 468900,
+          "poly": 340120
+        },
+        "reserved": {
+          "kalshi": 1400,
+          "poly": 4200
+        },
+        "entryAttempts": 1,
+        "positions": 1,
+        "residualInventory": {
+          "kalshi": 7,
+          "poly": 7
+        },
+        "unresolvedPossibleInventory": false,
+        "conditionalUnrealizedSurplus": 2200,
+        "separateRiskAllowance": 1400,
+        "recoveryLoss": null,
+        "realizedProfit": null,
+        "classification": "CONDITIONAL",
+        "liveAdmitted": false,
+        "openedAt": 1790091998028,
+        "observedHeldMs": 19153332,
+        "feeNetConditionalSurplus": 2200,
+        "reservedRiskCash": 1400,
+        "analyticalRiskEstimate": 1400,
+        "conditionalSurplusNetOfAnalyticalRisk": 800,
+        "administrativeTimes": {
+          "kalshiClose": "2026-12-31T15:00:00Z",
+          "kalshiExpected": "2026-12-31T15:00:00Z",
+          "kalshiLatest": "2027-01-07T15:00:00Z",
+          "polyEnd": "2026-12-02T04:00:00Z"
+        },
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED"
+      },
+      {
+        "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+        "sides": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "cash": {
+          "kalshi": 468900,
+          "poly": 340120
+        },
+        "reserved": {
+          "kalshi": 2000,
+          "poly": 6000
+        },
+        "entryAttempts": 1,
+        "positions": 1,
+        "residualInventory": {
+          "kalshi": 10,
+          "poly": 10
+        },
+        "unresolvedPossibleInventory": false,
+        "conditionalUnrealizedSurplus": 1200,
+        "separateRiskAllowance": 2000,
+        "recoveryLoss": null,
+        "realizedProfit": null,
+        "classification": "CONDITIONAL",
+        "liveAdmitted": false,
+        "openedAt": 1790099559983,
+        "observedHeldMs": 11591377,
+        "feeNetConditionalSurplus": 1200,
+        "reservedRiskCash": 2000,
+        "analyticalRiskEstimate": 2000,
+        "conditionalSurplusNetOfAnalyticalRisk": -800,
+        "administrativeTimes": {
+          "kalshiClose": "2027-01-03T15:00:00Z",
+          "kalshiExpected": "2026-12-06T15:00:00Z",
+          "kalshiLatest": "2027-01-03T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED"
+      },
+      {
+        "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+        "sides": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "cash": {
+          "kalshi": 468900,
+          "poly": 340120
+        },
+        "reserved": {
+          "kalshi": 9400,
+          "poly": 600
+        },
+        "entryAttempts": 1,
+        "positions": 1,
+        "residualInventory": {
+          "kalshi": 0,
+          "poly": 1
+        },
+        "unresolvedPossibleInventory": true,
+        "conditionalUnrealizedSurplus": null,
+        "separateRiskAllowance": 200,
+        "recoveryLoss": null,
+        "realizedProfit": null,
+        "classification": "CONDITIONAL",
+        "liveAdmitted": false,
+        "openedAt": 1790107099374,
+        "observedHeldMs": 4051986,
+        "feeNetConditionalSurplus": null,
+        "reservedRiskCash": 200,
+        "analyticalRiskEstimate": 200,
+        "conditionalSurplusNetOfAnalyticalRisk": null,
+        "administrativeTimes": {
+          "kalshiClose": "2028-10-31T04:00:00Z",
+          "kalshiExpected": "2026-11-01T04:00:00Z",
+          "kalshiLatest": "2028-10-31T04:00:00Z",
+          "polyEnd": "2026-11-06T21:20:09Z"
+        },
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED"
+      }
+    ]
+  },
+  "strategyEntryStop": "UNRESOLVED_EXECUTION_EXPOSURE",
+  "strategyExecutions": [
+    {
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "plans": {
+        "kalshi": {
+          "venue": "kalshi",
+          "marketId": "KXMLBAL-26-CWS",
+          "side": "no",
+          "quantity": 1,
+          "ceiling": 9100,
+          "entryBudget": 9200,
+          "recoveryBudget": 100,
+          "riskCash": 100,
+          "reserved": 9400,
+          "planned": {
+            "quantity": 1,
+            "cost": 9100,
+            "fees": 100,
+            "levels": [
+              {
+                "price": 9100,
+                "quantity": 1
+              }
+            ],
+            "feeBound": 100
+          },
+          "tick": 100,
+          "tif": "FOK",
+          "submittedAt": 1790107099374,
+          "submittedMono": 528858.074542,
+          "arrivalMono": 529358.074542
+        },
+        "poly": {
+          "venue": "poly",
+          "marketId": "tec-mlb-alchamp-2026-09-27-cws",
+          "side": "yes",
+          "quantity": 1,
+          "ceiling": 780,
+          "entryBudget": 780,
+          "recoveryBudget": 500,
+          "riskCash": 100,
+          "reserved": 1380,
+          "planned": {
+            "quantity": 1,
+            "cost": 780,
+            "fees": 0,
+            "levels": [
+              {
+                "price": 780,
+                "quantity": 1
+              }
+            ],
+            "feeBound": 0
+          },
+          "tick": 10,
+          "tif": "FOK",
+          "submittedAt": 1790107099374,
+          "submittedMono": 528858.074542,
+          "arrivalMono": 529358.074542
+        }
+      },
+      "legs": {
+        "kalshi": {
+          "outcome": "INCONCLUSIVE",
+          "reasons": [
+            "INGRESS_BACKLOG",
+            "LATEST_INGRESS_BACKLOG"
+          ],
+          "fill": null,
+          "at": 1790107099865.0645
+        },
+        "poly": {
+          "outcome": "FILLED",
+          "reasons": [
+            "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+          ],
+          "fill": {
+            "quantity": 1,
+            "cost": 780,
+            "fees": 0,
+            "levels": [
+              {
+                "price": 780,
+                "quantity": 1
+              }
+            ]
+          },
+          "at": 1790107099865.0645
+        }
+      },
+      "executionClass": "INCONCLUSIVE",
+      "recovery": null,
+      "recoveryLoss": null
+    }
+  ],
+  "shadowExecutions": {
+    "mode": "EXECUTION_ONLY_SHADOW",
+    "strategyCashDelta": 0,
+    "strategyInventoryDelta": 0,
+    "settlementAssumption": "NONE",
+    "attempts": [
+      {
+        "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 2300,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-DAR",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 800,
+            "entryBudget": 9000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 11000,
+            "planned": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106583187,
+            "submittedMono": 12678.660208,
+            "arrivalMono": 13178.660208
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-daramo",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 8800,
+            "entryBudget": 88700,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 94700,
+            "planned": {
+              "quantity": 10,
+              "cost": 88000,
+              "fees": 700,
+              "levels": [
+                {
+                  "price": 8800,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 700
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106583187,
+            "submittedMono": 12678.660208,
+            "arrivalMono": 13178.660208
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106583685.6501
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 88000,
+              "fees": 700,
+              "levels": [
+                {
+                  "price": 8800,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106583685.6501
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 1300,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXNBAEAST1SEED-26-MIA",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 800,
+            "entryBudget": 9000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 11000,
+            "planned": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106585830,
+            "submittedMono": 15321.378375,
+            "arrivalMono": 15821.378375
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "aachc-nba-eastseed1-2027-04-11-w-mia",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 8900,
+            "entryBudget": 89700,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 95700,
+            "planned": {
+              "quantity": 10,
+              "cost": 89000,
+              "fees": 700,
+              "levels": [
+                {
+                  "price": 8900,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 700
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106585830,
+            "submittedMono": 15321.378375,
+            "arrivalMono": 15821.378375
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106586328.3684
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 89000,
+              "fees": 700,
+              "levels": [
+                {
+                  "price": 8900,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106586328.3684
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+        "route": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "quantity": 2,
+        "feeNetDisplayedSpread": 900,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXNCAAFPAC12QUAL-26-FRES",
+            "side": "no",
+            "quantity": 2,
+            "ceiling": 8300,
+            "entryBudget": 16800,
+            "recoveryBudget": 200,
+            "riskCash": 200,
+            "reserved": 17200,
+            "planned": {
+              "quantity": 2,
+              "cost": 16600,
+              "fees": 200,
+              "levels": [
+                {
+                  "price": 8300,
+                  "quantity": 2
+                }
+              ],
+              "feeBound": 200
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106588459,
+            "submittedMono": 17950.408208,
+            "arrivalMono": 18450.408208
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "aqc-cfb-pac12-2026-12-04-champq-frest",
+            "side": "yes",
+            "quantity": 2,
+            "ceiling": 1100,
+            "entryBudget": 2300,
+            "recoveryBudget": 1000,
+            "riskCash": 200,
+            "reserved": 3500,
+            "planned": {
+              "quantity": 2,
+              "cost": 2200,
+              "fees": 100,
+              "levels": [
+                {
+                  "price": 1100,
+                  "quantity": 2
+                }
+              ],
+              "feeBound": 100
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106588459,
+            "submittedMono": 17950.408208,
+            "arrivalMono": 18450.408208
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 2,
+              "cost": 16600,
+              "fees": 200,
+              "levels": [
+                {
+                  "price": 8300,
+                  "quantity": 2
+                }
+              ]
+            },
+            "at": 1790106588957.3982
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 2,
+              "cost": 2200,
+              "fees": 100,
+              "levels": [
+                {
+                  "price": 1100,
+                  "quantity": 2
+                }
+              ]
+            },
+            "at": 1790106588957.3982
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+        "route": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "quantity": 9,
+        "feeNetDisplayedSpread": 1000,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXNCAAFB10QUAL-26-PSU",
+            "side": "no",
+            "quantity": 9,
+            "ceiling": 7500,
+            "entryBudget": 69100,
+            "recoveryBudget": 900,
+            "riskCash": 900,
+            "reserved": 70900,
+            "planned": {
+              "quantity": 9,
+              "cost": 67300,
+              "fees": 1800,
+              "levels": [
+                {
+                  "price": 7400,
+                  "quantity": 2
+                },
+                {
+                  "price": 7500,
+                  "quantity": 7
+                }
+              ],
+              "feeBound": 1800
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106591056,
+            "submittedMono": 20547.566708,
+            "arrivalMono": 21047.566708
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "aqc-cfb-bigten-2026-12-05-champq-pennst",
+            "side": "yes",
+            "quantity": 9,
+            "ceiling": 2100,
+            "entryBudget": 19900,
+            "recoveryBudget": 4500,
+            "riskCash": 900,
+            "reserved": 25300,
+            "planned": {
+              "quantity": 9,
+              "cost": 18900,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 2100,
+                  "quantity": 9
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106591056,
+            "submittedMono": 20547.566708,
+            "arrivalMono": 21047.566708
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 9,
+              "cost": 67300,
+              "fees": 1800,
+              "levels": [
+                {
+                  "price": 7400,
+                  "quantity": 2
+                },
+                {
+                  "price": 7500,
+                  "quantity": 7
+                }
+              ]
+            },
+            "at": 1790106591554.5566
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 9,
+              "cost": 18900,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 2100,
+                  "quantity": 9
+                }
+              ]
+            },
+            "at": 1790106591554.5566
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 700,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXNCAAFB12QUAL-26-ARIZ",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 1200,
+            "entryBudget": 12500,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 14500,
+            "planned": {
+              "quantity": 10,
+              "cost": 11500,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 1100,
+                  "quantity": 5
+                },
+                {
+                  "price": 1200,
+                  "quantity": 5
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106593869,
+            "submittedMono": 23360.278583,
+            "arrivalMono": 23860.278583
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "aqc-cfb-big12-2026-12-04-champq-arz",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 8600,
+            "entryBudget": 86800,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 92800,
+            "planned": {
+              "quantity": 10,
+              "cost": 86000,
+              "fees": 800,
+              "levels": [
+                {
+                  "price": 8600,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 800
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106593869,
+            "submittedMono": 23360.278583,
+            "arrivalMono": 23860.278583
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 11500,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 1100,
+                  "quantity": 5
+                },
+                {
+                  "price": 1200,
+                  "quantity": 5
+                }
+              ]
+            },
+            "at": 1790106594367.2686
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 86000,
+              "fees": 800,
+              "levels": [
+                {
+                  "price": 8600,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106594367.2686
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 700,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXNCAAFMWCQUAL-26-NEV",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 1200,
+            "entryBudget": 12500,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 14500,
+            "planned": {
+              "quantity": 10,
+              "cost": 11500,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 1100,
+                  "quantity": 5
+                },
+                {
+                  "price": 1200,
+                  "quantity": 5
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106596501,
+            "submittedMono": 25992.354833,
+            "arrivalMono": 26492.354833
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "aqc-cfb-mwc-2026-12-04-champq-nevada",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 8600,
+            "entryBudget": 86800,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 92800,
+            "planned": {
+              "quantity": 10,
+              "cost": 86000,
+              "fees": 800,
+              "levels": [
+                {
+                  "price": 8600,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 800
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106596501,
+            "submittedMono": 25992.354833,
+            "arrivalMono": 26492.354833
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 11500,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 1100,
+                  "quantity": 5
+                },
+                {
+                  "price": 1200,
+                  "quantity": 5
+                }
+              ]
+            },
+            "at": 1790106596999.3447
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 86000,
+              "fees": 800,
+              "levels": [
+                {
+                  "price": 8600,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106596999.3447
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-JP::tpoyc-2026-jerpow",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 700,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-JP",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 300,
+            "entryBudget": 4000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 6000,
+            "planned": {
+              "quantity": 10,
+              "cost": 3000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 300,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106598981,
+            "submittedMono": 28472.483417,
+            "arrivalMono": 28972.483417
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-jerpow",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 9500,
+            "entryBudget": 95300,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 101300,
+            "planned": {
+              "quantity": 10,
+              "cost": 95000,
+              "fees": 300,
+              "levels": [
+                {
+                  "price": 9500,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 300
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106598981,
+            "submittedMono": 28472.483417,
+            "arrivalMono": 28972.483417
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 3000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 300,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106599479.4734
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 95000,
+              "fees": 300,
+              "levels": [
+                {
+                  "price": 9500,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106599479.4734
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+        "route": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "quantity": 7,
+        "feeNetDisplayedSpread": 600,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXNCAAFCUSAQUAL-26-MTU",
+            "side": "no",
+            "quantity": 7,
+            "ceiling": 9500,
+            "entryBudget": 67200,
+            "recoveryBudget": 700,
+            "riskCash": 700,
+            "reserved": 68600,
+            "planned": {
+              "quantity": 7,
+              "cost": 66500,
+              "fees": 700,
+              "levels": [
+                {
+                  "price": 9500,
+                  "quantity": 7
+                }
+              ],
+              "feeBound": 700
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106601447,
+            "submittedMono": 30937.9985,
+            "arrivalMono": 31437.9985
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "aqc-cfb-cusa-2026-12-04-champq-mtnst",
+            "side": "yes",
+            "quantity": 7,
+            "ceiling": 300,
+            "entryBudget": 2200,
+            "recoveryBudget": 3500,
+            "riskCash": 700,
+            "reserved": 6400,
+            "planned": {
+              "quantity": 7,
+              "cost": 2100,
+              "fees": 100,
+              "levels": [
+                {
+                  "price": 300,
+                  "quantity": 7
+                }
+              ],
+              "feeBound": 100
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106601447,
+            "submittedMono": 30937.9985,
+            "arrivalMono": 31437.9985
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 7,
+              "cost": 66500,
+              "fees": 700,
+              "levels": [
+                {
+                  "price": 9500,
+                  "quantity": 7
+                }
+              ]
+            },
+            "at": 1790106601944.9885
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 7,
+              "cost": 2100,
+              "fees": 100,
+              "levels": [
+                {
+                  "price": 300,
+                  "quantity": 7
+                }
+              ]
+            },
+            "at": 1790106601944.9885
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 600,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-JAM",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 400,
+            "entryBudget": 5000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 7000,
+            "planned": {
+              "quantity": 10,
+              "cost": 4000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 400,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106603850,
+            "submittedMono": 33341.771875,
+            "arrivalMono": 33841.771875
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-jamtal",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 9400,
+            "entryBudget": 94400,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 100400,
+            "planned": {
+              "quantity": 10,
+              "cost": 94000,
+              "fees": 400,
+              "levels": [
+                {
+                  "price": 9400,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 400
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106603850,
+            "submittedMono": 33341.771875,
+            "arrivalMono": 33841.771875
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 4000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 400,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106604348.762
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 94000,
+              "fees": 400,
+              "levels": [
+                {
+                  "price": 9400,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106604348.762
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+        "route": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "quantity": 9,
+        "feeNetDisplayedSpread": 400,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXNCAAFAACQUAL-26-TULN",
+            "side": "no",
+            "quantity": 9,
+            "ceiling": 8900,
+            "entryBudget": 81000,
+            "recoveryBudget": 900,
+            "riskCash": 900,
+            "reserved": 82800,
+            "planned": {
+              "quantity": 9,
+              "cost": 80100,
+              "fees": 900,
+              "levels": [
+                {
+                  "price": 8900,
+                  "quantity": 9
+                }
+              ],
+              "feeBound": 900
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106606488,
+            "submittedMono": 35979.826917,
+            "arrivalMono": 36479.826917
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "aqc-cfb-aac-2026-12-05-champq-tulane",
+            "side": "yes",
+            "quantity": 9,
+            "ceiling": 900,
+            "entryBudget": 8600,
+            "recoveryBudget": 4500,
+            "riskCash": 900,
+            "reserved": 14000,
+            "planned": {
+              "quantity": 9,
+              "cost": 8100,
+              "fees": 500,
+              "levels": [
+                {
+                  "price": 900,
+                  "quantity": 9
+                }
+              ],
+              "feeBound": 500
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106606488,
+            "submittedMono": 35979.826917,
+            "arrivalMono": 36479.826917
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 9,
+              "cost": 80100,
+              "fees": 900,
+              "levels": [
+                {
+                  "price": 8900,
+                  "quantity": 9
+                }
+              ]
+            },
+            "at": 1790106606986.817
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 9,
+              "cost": 8100,
+              "fees": 500,
+              "levels": [
+                {
+                  "price": 900,
+                  "quantity": 9
+                }
+              ]
+            },
+            "at": 1790106606986.817
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 2,
+        "feeNetDisplayedSpread": 100,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KX1ALBUM-26DEC-KEN",
+            "side": "yes",
+            "quantity": 2,
+            "ceiling": 3600,
+            "entryBudget": 7600,
+            "recoveryBudget": 200,
+            "riskCash": 200,
+            "reserved": 8000,
+            "planned": {
+              "quantity": 2,
+              "cost": 7200,
+              "fees": 400,
+              "levels": [
+                {
+                  "price": 3600,
+                  "quantity": 2
+                }
+              ],
+              "feeBound": 400
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106609059,
+            "submittedMono": 38550.340375,
+            "arrivalMono": 39050.340375
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "ccpc-bilbrd-1album-any2026-kenlam",
+            "side": "no",
+            "quantity": 2,
+            "ceiling": 6000,
+            "entryBudget": 12300,
+            "recoveryBudget": 1000,
+            "riskCash": 200,
+            "reserved": 13500,
+            "planned": {
+              "quantity": 2,
+              "cost": 12000,
+              "fees": 300,
+              "levels": [
+                {
+                  "price": 6000,
+                  "quantity": 2
+                }
+              ],
+              "feeBound": 300
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106609059,
+            "submittedMono": 38550.340375,
+            "arrivalMono": 39050.340375
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 2,
+              "cost": 7200,
+              "fees": 400,
+              "levels": [
+                {
+                  "price": 3600,
+                  "quantity": 2
+                }
+              ]
+            },
+            "at": 1790106609557.3303
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 2,
+              "cost": 12000,
+              "fees": 300,
+              "levels": [
+                {
+                  "price": 6000,
+                  "quantity": 2
+                }
+              ]
+            },
+            "at": 1790106609557.3303
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 2,
+        "feeNetDisplayedSpread": 100,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-BEN",
+            "side": "yes",
+            "quantity": 2,
+            "ceiling": 800,
+            "entryBudget": 1800,
+            "recoveryBudget": 200,
+            "riskCash": 200,
+            "reserved": 2200,
+            "planned": {
+              "quantity": 2,
+              "cost": 1600,
+              "fees": 200,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 2
+                }
+              ],
+              "feeBound": 200
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106611695,
+            "submittedMono": 41186.501875,
+            "arrivalMono": 41686.501875
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-bennet",
+            "side": "no",
+            "quantity": 2,
+            "ceiling": 9000,
+            "entryBudget": 18100,
+            "recoveryBudget": 1000,
+            "riskCash": 200,
+            "reserved": 19300,
+            "planned": {
+              "quantity": 2,
+              "cost": 18000,
+              "fees": 100,
+              "levels": [
+                {
+                  "price": 9000,
+                  "quantity": 2
+                }
+              ],
+              "feeBound": 100
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106611695,
+            "submittedMono": 41186.501875,
+            "arrivalMono": 41686.501875
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 2,
+              "cost": 1600,
+              "fees": 200,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 2
+                }
+              ]
+            },
+            "at": 1790106612193.492
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 2,
+              "cost": 18000,
+              "fees": 100,
+              "levels": [
+                {
+                  "price": 9000,
+                  "quantity": 2
+                }
+              ]
+            },
+            "at": 1790106612193.492
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 400,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-BEN",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 800,
+            "entryBudget": 9000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 11000,
+            "planned": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106872809,
+            "submittedMono": 302296.477,
+            "arrivalMono": 302796.477
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-bennet",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 9000,
+            "entryBudget": 90600,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 96600,
+            "planned": {
+              "quantity": 10,
+              "cost": 90000,
+              "fees": 600,
+              "levels": [
+                {
+                  "price": 9000,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 600
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106872809,
+            "submittedMono": 302296.477,
+            "arrivalMono": 302796.477
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106873303.467
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 90000,
+              "fees": 600,
+              "levels": [
+                {
+                  "price": 9000,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106873303.467
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 2300,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-DAR",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 800,
+            "entryBudget": 9000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 11000,
+            "planned": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106933491,
+            "submittedMono": 362978.137,
+            "arrivalMono": 363478.137
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-daramo",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 8800,
+            "entryBudget": 88700,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 94700,
+            "planned": {
+              "quantity": 10,
+              "cost": 88000,
+              "fees": 700,
+              "levels": [
+                {
+                  "price": 8800,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 700
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106933491,
+            "submittedMono": 362978.137,
+            "arrivalMono": 363478.137
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106933985.127
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 88000,
+              "fees": 700,
+              "levels": [
+                {
+                  "price": 8800,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106933985.127
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 400,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-BEN",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 800,
+            "entryBudget": 9000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 11000,
+            "planned": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106935815,
+            "submittedMono": 365301.503083,
+            "arrivalMono": 365801.503083
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-bennet",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 9000,
+            "entryBudget": 90600,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 96600,
+            "planned": {
+              "quantity": 10,
+              "cost": 90000,
+              "fees": 600,
+              "levels": [
+                {
+                  "price": 9000,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 600
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790106935815,
+            "submittedMono": 365301.503083,
+            "arrivalMono": 365801.503083
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106936308.4932
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 90000,
+              "fees": 600,
+              "levels": [
+                {
+                  "price": 9000,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790106936308.4932
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 400,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-BEN",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 800,
+            "entryBudget": 9000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 11000,
+            "planned": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107033106,
+            "submittedMono": 462591.123417,
+            "arrivalMono": 463091.123417
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-bennet",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 9000,
+            "entryBudget": 90600,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 96600,
+            "planned": {
+              "quantity": 10,
+              "cost": 90000,
+              "fees": 600,
+              "levels": [
+                {
+                  "price": 9000,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 600
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107033106,
+            "submittedMono": 462591.123417,
+            "arrivalMono": 463091.123417
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 8000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 800,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790107033598.1135
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 90000,
+              "fees": 600,
+              "levels": [
+                {
+                  "price": 9000,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790107033598.1135
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 3,
+        "feeNetDisplayedSpread": 400,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KX1ALBUM-26DEC-KEN",
+            "side": "yes",
+            "quantity": 3,
+            "ceiling": 3500,
+            "entryBudget": 11100,
+            "recoveryBudget": 300,
+            "riskCash": 300,
+            "reserved": 11700,
+            "planned": {
+              "quantity": 3,
+              "cost": 10500,
+              "fees": 600,
+              "levels": [
+                {
+                  "price": 3500,
+                  "quantity": 3
+                }
+              ],
+              "feeBound": 600
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107455693,
+            "submittedMono": 885221.319917,
+            "arrivalMono": 885721.319917
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "ccpc-bilbrd-1album-any2026-kenlam",
+            "side": "no",
+            "quantity": 3,
+            "ceiling": 6000,
+            "entryBudget": 18500,
+            "recoveryBudget": 1500,
+            "riskCash": 300,
+            "reserved": 20300,
+            "planned": {
+              "quantity": 3,
+              "cost": 18000,
+              "fees": 500,
+              "levels": [
+                {
+                  "price": 6000,
+                  "quantity": 3
+                }
+              ],
+              "feeBound": 500
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107455693,
+            "submittedMono": 885221.319917,
+            "arrivalMono": 885721.319917
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 3,
+              "cost": 10500,
+              "fees": 600,
+              "levels": [
+                {
+                  "price": 3500,
+                  "quantity": 3
+                }
+              ]
+            },
+            "at": 1790107456228.3098
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 3,
+              "cost": 18000,
+              "fees": 500,
+              "levels": [
+                {
+                  "price": 6000,
+                  "quantity": 3
+                }
+              ]
+            },
+            "at": 1790107456228.3098
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 500,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-EM",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 600,
+            "entryBudget": 7000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 9000,
+            "planned": {
+              "quantity": 10,
+              "cost": 6000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 600,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107599492,
+            "submittedMono": 1029018.780833,
+            "arrivalMono": 1029518.780833
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-elomus",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 9200,
+            "entryBudget": 92500,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 98500,
+            "planned": {
+              "quantity": 10,
+              "cost": 92000,
+              "fees": 500,
+              "levels": [
+                {
+                  "price": 9200,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 500
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107599492,
+            "submittedMono": 1029018.780833,
+            "arrivalMono": 1029518.780833
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 6000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 600,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790107600025.7708
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 92000,
+              "fees": 500,
+              "levels": [
+                {
+                  "price": 9200,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790107600025.7708
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+        "route": {
+          "kalshi": "yes",
+          "poly": "no"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 500,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXTIME-26-EM",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 600,
+            "entryBudget": 7000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 9000,
+            "planned": {
+              "quantity": 10,
+              "cost": 6000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 600,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107661566,
+            "submittedMono": 1091093.233917,
+            "arrivalMono": 1091593.233917
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "tpoyc-2026-elomus",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 9200,
+            "entryBudget": 92500,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 98500,
+            "planned": {
+              "quantity": 10,
+              "cost": 92000,
+              "fees": 500,
+              "levels": [
+                {
+                  "price": 9200,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 500
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107661566,
+            "submittedMono": 1091093.233917,
+            "arrivalMono": 1091593.233917
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 6000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 600,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790107662100.2239
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 92000,
+              "fees": 500,
+              "levels": [
+                {
+                  "price": 9200,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790107662100.2239
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      },
+      {
+        "pairId": "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+        "route": {
+          "kalshi": "no",
+          "poly": "yes"
+        },
+        "quantity": 10,
+        "feeNetDisplayedSpread": 800,
+        "plans": {
+          "kalshi": {
+            "venue": "kalshi",
+            "marketId": "KXNCAAFB12QUAL-26-TCU",
+            "side": "no",
+            "quantity": 10,
+            "ceiling": 9500,
+            "entryBudget": 96000,
+            "recoveryBudget": 1000,
+            "riskCash": 1000,
+            "reserved": 98000,
+            "planned": {
+              "quantity": 10,
+              "cost": 95000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 9500,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 1000
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107679634,
+            "submittedMono": 1109160.496417,
+            "arrivalMono": 1109660.496417
+          },
+          "poly": {
+            "venue": "poly",
+            "marketId": "aqc-cfb-big12-2026-12-04-champq-tcu",
+            "side": "yes",
+            "quantity": 10,
+            "ceiling": 300,
+            "entryBudget": 3200,
+            "recoveryBudget": 5000,
+            "riskCash": 1000,
+            "reserved": 9200,
+            "planned": {
+              "quantity": 10,
+              "cost": 3000,
+              "fees": 200,
+              "levels": [
+                {
+                  "price": 300,
+                  "quantity": 10
+                }
+              ],
+              "feeBound": 200
+            },
+            "tick": 100,
+            "tif": "FOK",
+            "submittedAt": 1790107679634,
+            "submittedMono": 1109160.496417,
+            "arrivalMono": 1109660.496417
+          }
+        },
+        "legs": {
+          "kalshi": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 95000,
+              "fees": 1000,
+              "levels": [
+                {
+                  "price": 9500,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790107680167.4863
+          },
+          "poly": {
+            "outcome": "FILLED",
+            "reasons": [
+              "DELAYED_DISPLAYED_DEPTH_MODEL_NOT_REAL_FILL"
+            ],
+            "fill": {
+              "quantity": 10,
+              "cost": 3000,
+              "fees": 200,
+              "levels": [
+                {
+                  "price": 300,
+                  "quantity": 10
+                }
+              ]
+            },
+            "at": 1790107680167.4863
+          }
+        },
+        "executionClass": "PAIRED_MODELED_FILLS",
+        "failedLegExposure": [],
+        "hypotheticalRecovery": null,
+        "hypotheticalRecoveryLoss": null
+      }
+    ]
+  },
+  "arrivalMovement": {
+    "strategy": {
+      "recordedLegArrivals": 2,
+      "usablePricedLegArrivals": 1,
+      "censoredOrInsufficientDepth": 1,
+      "priceMovementPerContract": {
+        "n": 1,
+        "min": 0,
+        "max": 0,
+        "median": null,
+        "medianOmittedReason": "fewer than five observations"
+      },
+      "entryDebitMovement": {
+        "n": 1,
+        "min": 0,
+        "max": 0,
+        "median": null,
+        "medianOmittedReason": "fewer than five observations"
+      },
+      "adversePriceLegs": 0,
+      "favorablePriceLegs": 0,
+      "unchangedPriceLegs": 1
+    },
+    "shadow": {
+      "recordedLegArrivals": 40,
+      "usablePricedLegArrivals": 40,
+      "censoredOrInsufficientDepth": 0,
+      "priceMovementPerContract": {
+        "n": 40,
+        "min": 0,
+        "max": 0,
+        "median": 0.0,
+        "medianOmittedReason": null
+      },
+      "entryDebitMovement": {
+        "n": 40,
+        "min": 0,
+        "max": 0,
+        "median": 0.0,
+        "medianOmittedReason": null
+      },
+      "adversePriceLegs": 0,
+      "favorablePriceLegs": 0,
+      "unchangedPriceLegs": 40
+    },
+    "combined": {
+      "recordedLegArrivals": 42,
+      "usablePricedLegArrivals": 41,
+      "censoredOrInsufficientDepth": 1,
+      "priceMovementPerContract": {
+        "n": 41,
+        "min": 0,
+        "max": 0,
+        "median": 0,
+        "medianOmittedReason": null
+      },
+      "entryDebitMovement": {
+        "n": 41,
+        "min": 0,
+        "max": 0,
+        "median": 0,
+        "medianOmittedReason": null
+      },
+      "adversePriceLegs": 0,
+      "favorablePriceLegs": 0,
+      "unchangedPriceLegs": 41
+    }
+  },
+  "arrivals": [
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "venue": "kalshi",
+      "modeledArrivalMono": 13178.660208,
+      "processedMono": 13179.7635,
+      "bookReceiptAt": 1790106582649,
+      "bookReceiptMono": 12141.145,
+      "bookProcessedMono": 12142.210167,
+      "exchangeAt": null,
+      "sequence": 37,
+      "transactTime": null,
+      "requestRoundTripMs": 129.4219580000008,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-DAR::tpoyc-2026-daramo:1790106581218",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 800,
+        "arrivalAveragePrice": 800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 53,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "venue": "poly",
+      "modeledArrivalMono": 13178.660208,
+      "processedMono": 13186.902833,
+      "bookReceiptAt": 1790106583179,
+      "bookReceiptMono": 12670.974458,
+      "bookProcessedMono": 12672.478333,
+      "exchangeAt": 1790106450797,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:47:30.797621960Z",
+      "requestRoundTripMs": 163.57395800000086,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-DAR::tpoyc-2026-daramo:1790106581218",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 8800,
+        "arrivalAveragePrice": 8800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 19,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "venue": "kalshi",
+      "modeledArrivalMono": 15821.378375,
+      "processedMono": 15822.530875,
+      "bookReceiptAt": 1790106585286,
+      "bookReceiptMono": 14777.887458,
+      "bookProcessedMono": 14778.284208,
+      "exchangeAt": null,
+      "sequence": 38,
+      "transactTime": null,
+      "requestRoundTripMs": 133.62470799999937,
+      "reasons": [],
+      "attemptId": "shadow:KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia:1790106583994",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 800,
+        "arrivalAveragePrice": 800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 442.11,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "venue": "poly",
+      "modeledArrivalMono": 15821.378375,
+      "processedMono": 15827.506875,
+      "bookReceiptAt": 1790106585822,
+      "bookReceiptMono": 15313.744958,
+      "bookProcessedMono": 15314.3505,
+      "exchangeAt": 1790106449919,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:47:29.919929103Z",
+      "requestRoundTripMs": 171.52574999999888,
+      "reasons": [],
+      "attemptId": "shadow:KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia:1790106583994",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 8900,
+        "arrivalAveragePrice": 8900,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 99.11,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+      "venue": "kalshi",
+      "modeledArrivalMono": 18450.408208,
+      "processedMono": 18451.48725,
+      "bookReceiptAt": 1790106587917,
+      "bookReceiptMono": 17408.612208,
+      "bookProcessedMono": 17409.491542,
+      "exchangeAt": null,
+      "sequence": 39,
+      "transactTime": null,
+      "requestRoundTripMs": 129.96583299999838,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest:1790106586635",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 2,
+        "confirmationAveragePrice": 8300,
+        "arrivalAveragePrice": 8300,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 6.9,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+      "venue": "poly",
+      "modeledArrivalMono": 18450.408208,
+      "processedMono": 18456.386583,
+      "bookReceiptAt": 1790106588450,
+      "bookReceiptMono": 17941.827,
+      "bookProcessedMono": 17942.185792,
+      "exchangeAt": 1790106560774,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:49:20.774288895Z",
+      "requestRoundTripMs": 186.73533300000054,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest:1790106586635",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 2,
+        "confirmationAveragePrice": 1100,
+        "arrivalAveragePrice": 1100,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 2.77,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "venue": "kalshi",
+      "modeledArrivalMono": 21047.566708,
+      "processedMono": 21049.497125,
+      "bookReceiptAt": 1790106590545,
+      "bookReceiptMono": 20036.299458,
+      "bookProcessedMono": 20037.206083,
+      "exchangeAt": null,
+      "sequence": 40,
+      "transactTime": null,
+      "requestRoundTripMs": 139.83150000000023,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst:1790106589260",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 9,
+        "confirmationAveragePrice": 7477.777777777777,
+        "arrivalAveragePrice": 7477.777777777777,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 102,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "venue": "poly",
+      "modeledArrivalMono": 21047.566708,
+      "processedMono": 21054.932542,
+      "bookReceiptAt": 1790106591035,
+      "bookReceiptMono": 20527.044458,
+      "bookProcessedMono": 20527.760208,
+      "exchangeAt": 1790106574802,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:49:34.802226891Z",
+      "requestRoundTripMs": 170.68483299999934,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst:1790106589260",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 9,
+        "confirmationAveragePrice": 2100,
+        "arrivalAveragePrice": 2100,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 69.77,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "venue": "kalshi",
+      "modeledArrivalMono": 23860.278583,
+      "processedMono": 23859.938125,
+      "bookReceiptAt": 1790106593160,
+      "bookReceiptMono": 22651.57,
+      "bookProcessedMono": 22653.672958,
+      "exchangeAt": null,
+      "sequence": 41,
+      "transactTime": null,
+      "requestRoundTripMs": 147.59854199999972,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz:1790106591861",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 1150,
+        "arrivalAveragePrice": 1150,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 317,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "venue": "poly",
+      "modeledArrivalMono": 23860.278583,
+      "processedMono": 23866.886083,
+      "bookReceiptAt": 1790106593853,
+      "bookReceiptMono": 23344.088125,
+      "bookProcessedMono": 23344.482458,
+      "exchangeAt": 1790106357525,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:45:57.525865740Z",
+      "requestRoundTripMs": 373.63566699999865,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz:1790106591861",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 8600,
+        "arrivalAveragePrice": 8600,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 36.71,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "venue": "kalshi",
+      "modeledArrivalMono": 26492.354833,
+      "processedMono": 26494.6275,
+      "bookReceiptAt": 1790106595971,
+      "bookReceiptMono": 25462.320667,
+      "bookProcessedMono": 25463.371583,
+      "exchangeAt": null,
+      "sequence": 42,
+      "transactTime": null,
+      "requestRoundTripMs": 168.6411670000016,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada:1790106594619",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 1150,
+        "arrivalAveragePrice": 1150,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 317,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "venue": "poly",
+      "modeledArrivalMono": 26492.354833,
+      "processedMono": 26500.445292,
+      "bookReceiptAt": 1790106596485,
+      "bookReceiptMono": 25976.211708,
+      "bookProcessedMono": 25977.161583,
+      "exchangeAt": 1790106416499,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:46:56.499147638Z",
+      "requestRoundTripMs": 208.34566599999744,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada:1790106594619",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 8600,
+        "arrivalAveragePrice": 8600,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 570736.68,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-JP::tpoyc-2026-jerpow",
+      "venue": "kalshi",
+      "modeledArrivalMono": 28972.483417,
+      "processedMono": 28972.985208,
+      "bookReceiptAt": 1790106598409,
+      "bookReceiptMono": 27900.187958,
+      "bookProcessedMono": 27900.840583,
+      "exchangeAt": null,
+      "sequence": 43,
+      "transactTime": null,
+      "requestRoundTripMs": 133.82716599999912,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-JP::tpoyc-2026-jerpow:1790106597123",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 300,
+        "arrivalAveragePrice": 300,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 733.38,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-JP::tpoyc-2026-jerpow",
+      "venue": "poly",
+      "modeledArrivalMono": 28972.483417,
+      "processedMono": 28976.893417,
+      "bookReceiptAt": 1790106598963,
+      "bookReceiptMono": 28454.329875,
+      "bookProcessedMono": 28456.314625,
+      "exchangeAt": 1790106596947,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:49:56.947845285Z",
+      "requestRoundTripMs": 208.0049579999977,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-JP::tpoyc-2026-jerpow:1790106597123",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 9500,
+        "arrivalAveragePrice": 9500,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 768.08,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "venue": "kalshi",
+      "modeledArrivalMono": 31437.9985,
+      "processedMono": 31443.324083,
+      "bookReceiptAt": 1790106600942,
+      "bookReceiptMono": 30433.489875,
+      "bookProcessedMono": 30433.994458,
+      "exchangeAt": null,
+      "sequence": 44,
+      "transactTime": null,
+      "requestRoundTripMs": 131.83979199999885,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst:1790106599656",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 7,
+        "confirmationAveragePrice": 9500,
+        "arrivalAveragePrice": 9500,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 1250,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "venue": "poly",
+      "modeledArrivalMono": 31437.9985,
+      "processedMono": 31448.197167,
+      "bookReceiptAt": 1790106601439,
+      "bookReceiptMono": 30930.146958,
+      "bookProcessedMono": 30930.69225,
+      "exchangeAt": 1790106564794,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:49:24.794186422Z",
+      "requestRoundTripMs": 168.91345800000272,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst:1790106599656",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 7,
+        "confirmationAveragePrice": 300,
+        "arrivalAveragePrice": 300,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 8.47,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+      "venue": "kalshi",
+      "modeledArrivalMono": 33841.771875,
+      "processedMono": 33842.88075,
+      "bookReceiptAt": 1790106603374,
+      "bookReceiptMono": 32865.12025,
+      "bookProcessedMono": 32865.564792,
+      "exchangeAt": null,
+      "sequence": 45,
+      "transactTime": null,
+      "requestRoundTripMs": 136.471375000001,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-JAM::tpoyc-2026-jamtal:1790106602090",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 400,
+        "arrivalAveragePrice": 400,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 55.65,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+      "venue": "poly",
+      "modeledArrivalMono": 33841.771875,
+      "processedMono": 33847.576417,
+      "bookReceiptAt": 1790106603844,
+      "bookReceiptMono": 33335.781833,
+      "bookProcessedMono": 33336.395583,
+      "exchangeAt": 1790106435226,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:47:15.226485142Z",
+      "requestRoundTripMs": 165.37116600000445,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-JAM::tpoyc-2026-jamtal:1790106602090",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 9400,
+        "arrivalAveragePrice": 9400,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 42.68,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "venue": "kalshi",
+      "modeledArrivalMono": 36479.826917,
+      "processedMono": 36481.646333,
+      "bookReceiptAt": 1790106605923,
+      "bookReceiptMono": 35413.991167,
+      "bookProcessedMono": 35414.7095,
+      "exchangeAt": null,
+      "sequence": 46,
+      "transactTime": null,
+      "requestRoundTripMs": 136.0737500000032,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane:1790106604646",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 9,
+        "confirmationAveragePrice": 8900,
+        "arrivalAveragePrice": 8900,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 10000,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "venue": "poly",
+      "modeledArrivalMono": 36479.826917,
+      "processedMono": 36489.313333,
+      "bookReceiptAt": 1790106606477,
+      "bookReceiptMono": 35968.744125,
+      "bookProcessedMono": 35969.277792,
+      "exchangeAt": 1790106552058,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:49:12.058534901Z",
+      "requestRoundTripMs": 163.6807919999992,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane:1790106604646",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 9,
+        "confirmationAveragePrice": 900,
+        "arrivalAveragePrice": 900,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 88.49,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "venue": "kalshi",
+      "modeledArrivalMono": 39050.340375,
+      "processedMono": 39049.129083,
+      "bookReceiptAt": 1790106608572,
+      "bookReceiptMono": 38063.076708,
+      "bookProcessedMono": 38063.963542,
+      "exchangeAt": null,
+      "sequence": 47,
+      "transactTime": null,
+      "requestRoundTripMs": 129.4297910000023,
+      "reasons": [],
+      "attemptId": "shadow:KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam:1790106607298",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 2,
+        "confirmationAveragePrice": 3600,
+        "arrivalAveragePrice": 3600,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 100,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "venue": "poly",
+      "modeledArrivalMono": 39050.340375,
+      "processedMono": 39053.893208,
+      "bookReceiptAt": 1790106609040,
+      "bookReceiptMono": 38531.713042,
+      "bookProcessedMono": 38532.187625,
+      "exchangeAt": 1790106538223,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:48:58.223081310Z",
+      "requestRoundTripMs": 157.45520899999974,
+      "reasons": [],
+      "attemptId": "shadow:KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam:1790106607298",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 2,
+        "confirmationAveragePrice": 6000,
+        "arrivalAveragePrice": 6000,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 3.91,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "venue": "kalshi",
+      "modeledArrivalMono": 41686.501875,
+      "processedMono": 41687.141208,
+      "bookReceiptAt": 1790106611168,
+      "bookReceiptMono": 40659.195292,
+      "bookProcessedMono": 40662.365208,
+      "exchangeAt": null,
+      "sequence": 50,
+      "transactTime": null,
+      "requestRoundTripMs": 177.51724999999715,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106609847",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 2,
+        "confirmationAveragePrice": 800,
+        "arrivalAveragePrice": 800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 88,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "venue": "poly",
+      "modeledArrivalMono": 41686.501875,
+      "processedMono": 41695.747583,
+      "bookReceiptAt": 1790106611674,
+      "bookReceiptMono": 41165.62875,
+      "bookProcessedMono": 41166.053042,
+      "exchangeAt": 1790106603386,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:50:03.386788229Z",
+      "requestRoundTripMs": 192.75904200000514,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106609847",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 2,
+        "confirmationAveragePrice": 9000,
+        "arrivalAveragePrice": 9000,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 2,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "venue": "kalshi",
+      "modeledArrivalMono": 302796.477,
+      "processedMono": 302797.162417,
+      "bookReceiptAt": 1790106872337,
+      "bookReceiptMono": 301824.482875,
+      "bookProcessedMono": 301824.931458,
+      "exchangeAt": null,
+      "sequence": 275,
+      "transactTime": null,
+      "requestRoundTripMs": 129.4234169999836,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106870646",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 800,
+        "arrivalAveragePrice": 800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 88,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "venue": "poly",
+      "modeledArrivalMono": 302796.477,
+      "processedMono": 302799.893417,
+      "bookReceiptAt": 1790106872803,
+      "bookReceiptMono": 302290.168833,
+      "bookProcessedMono": 302290.843375,
+      "exchangeAt": 1790106870638,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:54:30.638665142Z",
+      "requestRoundTripMs": 166.11604100000113,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106870646",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 9000,
+        "arrivalAveragePrice": 9000,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 47,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "venue": "kalshi",
+      "modeledArrivalMono": 363478.137,
+      "processedMono": 363479.3535,
+      "bookReceiptAt": 1790106933028,
+      "bookReceiptMono": 362514.322292,
+      "bookProcessedMono": 362514.565333,
+      "exchangeAt": null,
+      "sequence": 357,
+      "transactTime": null,
+      "requestRoundTripMs": 133.3638749999809,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-DAR::tpoyc-2026-daramo:1790106931452",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 800,
+        "arrivalAveragePrice": 800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 53,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "venue": "poly",
+      "modeledArrivalMono": 363478.137,
+      "processedMono": 363484.963125,
+      "bookReceiptAt": 1790106933489,
+      "bookReceiptMono": 362975.697917,
+      "bookProcessedMono": 362976.135542,
+      "exchangeAt": 1790106931398,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:55:31.398708516Z",
+      "requestRoundTripMs": 168.663499999966,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-DAR::tpoyc-2026-daramo:1790106931452",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 8800,
+        "arrivalAveragePrice": 8800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 36,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "venue": "kalshi",
+      "modeledArrivalMono": 365801.503083,
+      "processedMono": 365801.9455,
+      "bookReceiptAt": 1790106935324,
+      "bookReceiptMono": 364810.278125,
+      "bookProcessedMono": 364810.708708,
+      "exchangeAt": null,
+      "sequence": 358,
+      "transactTime": null,
+      "requestRoundTripMs": 129.1115829999908,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106934056",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 800,
+        "arrivalAveragePrice": 800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 88,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "venue": "poly",
+      "modeledArrivalMono": 365801.503083,
+      "processedMono": 365810.053792,
+      "bookReceiptAt": 1790106935793,
+      "bookReceiptMono": 365279.684375,
+      "bookProcessedMono": 365280.43,
+      "exchangeAt": 1790106894010,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:54:54.010475407Z",
+      "requestRoundTripMs": 160.3209580000257,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106934056",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 9000,
+        "arrivalAveragePrice": 9000,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 18.89,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "venue": "kalshi",
+      "modeledArrivalMono": 463091.123417,
+      "processedMono": 463092.550458,
+      "bookReceiptAt": 1790107032644,
+      "bookReceiptMono": 462129.747333,
+      "bookProcessedMono": 462129.929083,
+      "exchangeAt": null,
+      "sequence": 516,
+      "transactTime": null,
+      "requestRoundTripMs": 128.98254100000486,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790107030988",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 800,
+        "arrivalAveragePrice": 800,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 88,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "venue": "poly",
+      "modeledArrivalMono": 463091.123417,
+      "processedMono": 463096.612708,
+      "bookReceiptAt": 1790107033083,
+      "bookReceiptMono": 462567.912583,
+      "bookProcessedMono": 462568.406542,
+      "exchangeAt": 1790107030825,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:57:10.825237638Z",
+      "requestRoundTripMs": 152.7265410000109,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790107030988",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 9000,
+        "arrivalAveragePrice": 9000,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 86.51,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "strategy",
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "venue": "kalshi",
+      "modeledArrivalMono": 529358.074542,
+      "processedMono": 529358.80975,
+      "bookReceiptAt": 1790107098974,
+      "bookReceiptMono": 528457.946458,
+      "bookProcessedMono": 528458.460083,
+      "exchangeAt": null,
+      "sequence": 579,
+      "transactTime": null,
+      "requestRoundTripMs": 129.1418330000015,
+      "reasons": [
+        "INGRESS_BACKLOG",
+        "LATEST_INGRESS_BACKLOG"
+      ],
+      "attemptId": "strategy:KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws:1790107097419",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": false,
+        "quantity": 1,
+        "confirmationAveragePrice": 9100,
+        "arrivalAveragePrice": 9100,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 17273.64,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "strategy",
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "venue": "poly",
+      "modeledArrivalMono": 529358.074542,
+      "processedMono": 529362.318417,
+      "bookReceiptAt": 1790107099357,
+      "bookReceiptMono": 528841.8985,
+      "bookProcessedMono": 528842.508125,
+      "exchangeAt": 1790107097278,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:58:17.278156052Z",
+      "requestRoundTripMs": 164.1215830000583,
+      "reasons": [],
+      "attemptId": "strategy:KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws:1790107097419",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 1,
+        "confirmationAveragePrice": 780,
+        "arrivalAveragePrice": 780,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 426,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "venue": "kalshi",
+      "modeledArrivalMono": 885721.319917,
+      "processedMono": 885722.126125,
+      "bookReceiptAt": 1790107455113,
+      "bookReceiptMono": 884641.592417,
+      "bookProcessedMono": 884642.155,
+      "exchangeAt": null,
+      "sequence": 759,
+      "transactTime": null,
+      "requestRoundTripMs": 128.03779199998826,
+      "reasons": [],
+      "attemptId": "shadow:KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam:1790107453042",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 3,
+        "confirmationAveragePrice": 3500,
+        "arrivalAveragePrice": 3500,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 3,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "venue": "poly",
+      "modeledArrivalMono": 885721.319917,
+      "processedMono": 885728.25825,
+      "bookReceiptAt": 1790107455686,
+      "bookReceiptMono": 885214.486458,
+      "bookProcessedMono": 885214.891667,
+      "exchangeAt": 1790107183680,
+      "sequence": null,
+      "transactTime": "2026-09-22T19:59:43.680042992Z",
+      "requestRoundTripMs": 164.0444579999894,
+      "reasons": [],
+      "attemptId": "shadow:KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam:1790107453042",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 3,
+        "confirmationAveragePrice": 6000,
+        "arrivalAveragePrice": 6000,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 3.91,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "venue": "kalshi",
+      "modeledArrivalMono": 1029518.780833,
+      "processedMono": 1029518.882458,
+      "bookReceiptAt": 1790107599054,
+      "bookReceiptMono": 1028581.365917,
+      "bookProcessedMono": 1028581.789875,
+      "exchangeAt": null,
+      "sequence": 810,
+      "transactTime": null,
+      "requestRoundTripMs": 130.27583399997093,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-EM::tpoyc-2026-elomus:1790107597351",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 600,
+        "arrivalAveragePrice": 600,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 182.84,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "venue": "poly",
+      "modeledArrivalMono": 1029518.780833,
+      "processedMono": 1029521.334833,
+      "bookReceiptAt": 1790107599483,
+      "bookReceiptMono": 1029010.18175,
+      "bookProcessedMono": 1029010.332375,
+      "exchangeAt": 1790107597594,
+      "sequence": null,
+      "transactTime": "2026-09-22T20:06:37.594838717Z",
+      "requestRoundTripMs": 153.20329199999105,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-EM::tpoyc-2026-elomus:1790107597351",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 9200,
+        "arrivalAveragePrice": 9200,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 38.4,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "venue": "kalshi",
+      "modeledArrivalMono": 1091593.233917,
+      "processedMono": 1091593.52075,
+      "bookReceiptAt": 1790107661026,
+      "bookReceiptMono": 1090552.669375,
+      "bookProcessedMono": 1090554.030708,
+      "exchangeAt": null,
+      "sequence": 839,
+      "transactTime": null,
+      "requestRoundTripMs": 137.40454200003296,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-EM::tpoyc-2026-elomus:1790107659395",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 600,
+        "arrivalAveragePrice": 600,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 182.84,
+        "depthEvidenceTruncated": true
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "venue": "poly",
+      "modeledArrivalMono": 1091593.233917,
+      "processedMono": 1091597.907583,
+      "bookReceiptAt": 1790107661551,
+      "bookReceiptMono": 1091077.628208,
+      "bookProcessedMono": 1091078.069708,
+      "exchangeAt": 1790107624650,
+      "sequence": null,
+      "transactTime": "2026-09-22T20:07:04.650297395Z",
+      "requestRoundTripMs": 194.5702080000192,
+      "reasons": [],
+      "attemptId": "shadow:KXTIME-26-EM::tpoyc-2026-elomus:1790107659395",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 9200,
+        "arrivalAveragePrice": 9200,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 69.69,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "venue": "kalshi",
+      "modeledArrivalMono": 1109660.496417,
+      "processedMono": 1109661.205333,
+      "bookReceiptAt": 1790107679121,
+      "bookReceiptMono": 1108647.862417,
+      "bookProcessedMono": 1108648.033667,
+      "exchangeAt": null,
+      "sequence": 884,
+      "transactTime": null,
+      "requestRoundTripMs": 128.58587500010617,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu:1790107677128",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 9500,
+        "arrivalAveragePrice": 9500,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 10000,
+        "depthEvidenceTruncated": false
+      }
+    },
+    {
+      "scenario": "shadow",
+      "pairId": "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "venue": "poly",
+      "modeledArrivalMono": 1109660.496417,
+      "processedMono": 1109663.198417,
+      "bookReceiptAt": 1790107679613,
+      "bookReceiptMono": 1109140.0355,
+      "bookProcessedMono": 1109140.224,
+      "exchangeAt": 1790107677149,
+      "sequence": null,
+      "transactTime": "2026-09-22T20:07:57.149423452Z",
+      "requestRoundTripMs": 180.21366699994542,
+      "reasons": [],
+      "attemptId": "shadow:KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu:1790107677128",
+      "phase": "ENTRY",
+      "movement": {
+        "evidenceUsable": true,
+        "quantity": 10,
+        "confirmationAveragePrice": 300,
+        "arrivalAveragePrice": 300,
+        "priceMovementPerContract": 0,
+        "entryDebitMovement": 0,
+        "depthWithinFrozenLimit": 54.76,
+        "depthEvidenceTruncated": false
+      }
+    }
+  ],
+  "confirmationEvidence": [
+    {
+      "attemptId": "shadow:KXTIME-26-DAR::tpoyc-2026-daramo:1790106581218",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "at": 1790106583186,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 2300,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.34047238425926,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.00019030616895878382
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-DAR::tpoyc-2026-daramo:1790106581218",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "at": 1790106583698,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia:1790106583994",
+      "lane": "shadow",
+      "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "at": 1790106585828,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 1300,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-06-15T14:00:00Z",
+          "kalshiExpected": "2027-06-01T14:00:00Z",
+          "kalshiLatest": "2027-06-15T14:00:00Z",
+          "polyEnd": "2027-04-26T03:00:00Z"
+        },
+        "indicativeAt": 1811858400000,
+        "indicativeDays": 251.75710847222223,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.839463191327535e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia:1790106583994",
+      "lane": "shadow",
+      "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "at": 1790106586338,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest:1790106586635",
+      "lane": "shadow",
+      "pairId": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+      "at": 1790106588458,
+      "quantity": 2,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 900,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.34041136574074,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.0004978023367384729
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest:1790106586635",
+      "lane": "shadow",
+      "pairId": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+      "at": 1790106588967,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst:1790106589260",
+      "lane": "shadow",
+      "pairId": "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "at": 1790106591055,
+      "quantity": 9,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 1000,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.34038130787037,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.00011766997426446798
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst:1790106589260",
+      "lane": "shadow",
+      "pairId": "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "at": 1790106591567,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz:1790106591861",
+      "lane": "shadow",
+      "pairId": "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "at": 1790106593868,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 700,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.34034875,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 7.469360081361937e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz:1790106591861",
+      "lane": "shadow",
+      "pairId": "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "at": 1790106594377,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada:1790106594619",
+      "lane": "shadow",
+      "pairId": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "at": 1790106596500,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 700,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.34031828703704,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 7.469362686560132e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada:1790106594619",
+      "lane": "shadow",
+      "pairId": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "at": 1790106597012,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-JP::tpoyc-2026-jerpow:1790106597123",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-JP::tpoyc-2026-jerpow",
+      "at": 1790106598979,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 700,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.3402895949074,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 5.7055698980365025e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-JP::tpoyc-2026-jerpow:1790106597123",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-JP::tpoyc-2026-jerpow",
+      "at": 1790106599488,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst:1790106599656",
+      "lane": "shadow",
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "at": 1790106601445,
+      "quantity": 7,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 600,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.34026105324074,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 9.159578759586455e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst:1790106599656",
+      "lane": "shadow",
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "at": 1790106601960,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-JAM::tpoyc-2026-jamtal:1790106602090",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+      "at": 1790106603849,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 600,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.34023322916667,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.8859373651739975e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-JAM::tpoyc-2026-jamtal:1790106602090",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+      "at": 1790106604358,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane:1790106604646",
+      "lane": "shadow",
+      "pairId": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "at": 1790106606487,
+      "quantity": 9,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.34020269675926,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.6776340542744395e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane:1790106604646",
+      "lane": "shadow",
+      "pairId": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "at": 1790106607000,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam:1790106607298",
+      "lane": "shadow",
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "at": 1790106609057,
+      "quantity": 2,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 100,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2026-12-27T04:59:00Z",
+          "kalshiExpected": "2026-12-27T15:00:00Z",
+          "kalshiLatest": "2026-12-27T15:00:00Z",
+          "polyEnd": "2027-01-10T04:00:00Z"
+        },
+        "indicativeAt": 1799553600000,
+        "indicativeDays": 109.3401729513889,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.253846198657026e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam:1790106607298",
+      "lane": "shadow",
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "at": 1790106609565,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106609847",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "at": 1790106611695,
+      "quantity": 2,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 100,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.34014241898149,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.067830153345637e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106609847",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "at": 1790106612207,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106870646",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "at": 1790106872808,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.33712027777777,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 3.2513256499093624e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106870646",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "at": 1790106873314,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-DAR::tpoyc-2026-daramo:1790106931452",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "at": 1790106933491,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 2300,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.33641792824073,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.00019031291735974022
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-DAR::tpoyc-2026-daramo:1790106931452",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "at": 1790106934000,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106934056",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "at": 1790106935812,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.33639106481482,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 3.2513463861665474e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790106934056",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "at": 1790106936325,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790107030988",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "at": 1790107033105,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.33526498842592,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 3.251378408346213e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-BEN::tpoyc-2026-bennet:1790107030988",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "at": 1790107033614,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "strategy:KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws:1790107097419",
+      "lane": "strategy",
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "at": 1790107099373,
+      "quantity": 1,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 20,
+      "economics": {
+        "feeNetSurplus": 20,
+        "reservedRiskCash": 200,
+        "analyticalRiskEstimate": 200,
+        "conditionalSurplusNetOfAnalyticalRisk": -180,
+        "reservation": 10780,
+        "capitalEfficiency": 0.0018552875695732839
+      },
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2028-10-31T04:00:00Z",
+          "kalshiExpected": "2026-11-01T04:00:00Z",
+          "kalshiLatest": "2028-10-31T04:00:00Z",
+          "polyEnd": "2026-11-06T21:20:09Z"
+        },
+        "indicativeAt": 1794000009000,
+        "indicativeDays": 45.05682438657407,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.1176616302460014e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "strategy:KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws:1790107097419",
+      "lane": "strategy",
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "at": 1790107099880,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam:1790107453042",
+      "lane": "shadow",
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "at": 1790107455691,
+      "quantity": 3,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2026-12-27T04:59:00Z",
+          "kalshiExpected": "2026-12-27T15:00:00Z",
+          "kalshiLatest": "2026-12-27T15:00:00Z",
+          "polyEnd": "2027-01-10T04:00:00Z"
+        },
+        "indicativeAt": 1799553600000,
+        "indicativeDays": 109.33037394675927,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.00011433236299079284
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam:1790107453042",
+      "lane": "shadow",
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "at": 1790107456202,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-EM::tpoyc-2026-elomus:1790107597351",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "at": 1790107599491,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 500,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.32870959490741,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.0682369346927826e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-EM::tpoyc-2026-elomus:1790107597351",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "at": 1790107599996,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-EM::tpoyc-2026-elomus:1790107659395",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "at": 1790107661565,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 500,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.32799114583334,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.068262499919894e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXTIME-26-EM::tpoyc-2026-elomus:1790107659395",
+      "lane": "shadow",
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "at": 1790107662072,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    },
+    {
+      "attemptId": "shadow:KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu:1790107677128",
+      "lane": "shadow",
+      "pairId": "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "at": 1790107679631,
+      "quantity": 10,
+      "bookConfirmed": true,
+      "reasons": [],
+      "feeNetDisplayedSpread": 800,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.32778204861111,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 8.545604150360839e-05
+      },
+      "statusAssumption": {
+        "admitted": true,
+        "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+        "reasons": [],
+        "liveAdmitted": false
+      }
+    },
+    {
+      "attemptId": "shadow:KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu:1790107677128",
+      "lane": "shadow",
+      "pairId": "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "at": 1790107680138,
+      "phase": "FINAL_ADMISSION",
+      "attempted": true,
+      "reasons": []
+    }
+  ],
+  "observations": [
+    {
+      "pairId": "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "lane": "strategy",
+      "at": 1790111025552,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "CONDITIONAL",
+      "quantity": 1,
+      "economics": {
+        "feeNetSurplus": -100,
+        "reservedRiskCash": 200,
+        "analyticalRiskEstimate": 200,
+        "conditionalSurplusNetOfAnalyticalRisk": -300,
+        "reservation": 10900,
+        "capitalEfficiency": -0.009174311926605505
+      },
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28905611111111,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.00010510265931765182
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "UNRESOLVED_EXECUTION_EXPOSURE"
+      ],
+      "changes": 183
+    },
+    {
+      "pairId": "KXEPLRELEGATION-27-TOT::aachc-epl-2027-05-30-relegation-tot",
+      "lane": "shadow",
+      "at": 1790111073375,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -100,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-06-21T21:00:00Z",
+          "kalshiExpected": "2027-06-21T21:00:00Z",
+          "kalshiLatest": "2027-06-21T21:00:00Z",
+          "polyEnd": "2027-06-14T03:00:00Z"
+        },
+        "indicativeAt": 1813611600000,
+        "indicativeDays": 271.9968359375,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -3.3729480326431436e-05
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 120
+    },
+    {
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "lane": "strategy",
+      "at": 1790111112143,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "CONDITIONAL",
+      "quantity": 10,
+      "economics": {
+        "feeNetSurplus": 3200,
+        "reservedRiskCash": 2000,
+        "analyticalRiskEstimate": 2000,
+        "conditionalSurplusNetOfAnalyticalRisk": 1200,
+        "reservation": 104800,
+        "capitalEfficiency": 0.030534351145038167
+      },
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2026-12-31T15:00:00Z",
+          "kalshiExpected": "2026-12-31T15:00:00Z",
+          "kalshiLatest": "2027-01-07T15:00:00Z",
+          "polyEnd": "2026-12-02T04:00:00Z"
+        },
+        "indicativeAt": 1798729200000,
+        "indicativeDays": 99.7463872337963,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.0003061198705219115
+      },
+      "reasons": [
+        "UNRESOLVED_EXECUTION_EXPOSURE",
+        "COMPARISON_ALREADY_ATTEMPTED"
+      ],
+      "changes": 121
+    },
+    {
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "lane": "strategy",
+      "at": 1790111108153,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "CONDITIONAL",
+      "quantity": 10,
+      "economics": {
+        "feeNetSurplus": 1200,
+        "reservedRiskCash": 2000,
+        "analyticalRiskEstimate": 2000,
+        "conditionalSurplusNetOfAnalyticalRisk": -800,
+        "reservation": 106800,
+        "capitalEfficiency": 0.011235955056179775
+      },
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-03T15:00:00Z",
+          "kalshiExpected": "2026-12-06T15:00:00Z",
+          "kalshiLatest": "2027-01-03T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28810008101851,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.0001287226442751172
+      },
+      "reasons": [
+        "UNRESOLVED_EXECUTION_EXPOSURE",
+        "COMPARISON_ALREADY_ATTEMPTED"
+      ],
+      "changes": 189
+    },
+    {
+      "pairId": "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "lane": "shadow",
+      "at": 1790110995399,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -2300,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28940510416666,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.0020113840720354355
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 124
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "lane": "strategy",
+      "at": 1790110995856,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "CONDITIONAL",
+      "quantity": 1,
+      "economics": {
+        "feeNetSurplus": -1100,
+        "reservedRiskCash": 200,
+        "analyticalRiskEstimate": 200,
+        "conditionalSurplusNetOfAnalyticalRisk": -1300,
+        "reservation": 11900,
+        "capitalEfficiency": -0.09243697478991597
+      },
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28939981481481,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.0010589713640604904
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "UNRESOLVED_EXECUTION_EXPOSURE"
+      ],
+      "changes": 222
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-MSST::aqc-cfb-sec-2026-12-05-champq-mspst",
+      "lane": "shadow",
+      "at": 1790111018244,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -100,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-03T04:00:00Z",
+          "kalshiExpected": "2026-12-06T04:00:00Z",
+          "kalshiLatest": "2027-01-03T04:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.28914069444444,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.00010391212163176932
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 86
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-KENN::aqc-cfb-cusa-2026-12-04-champq-kenest",
+      "lane": "shadow",
+      "at": 1790110998597,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": 0,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28936809027778,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 206
+    },
+    {
+      "pairId": "KXPRESNOMD-28-KH::enwc-uspres-nom-dem-2028-kamhar",
+      "lane": "shadow",
+      "at": 1790110984490,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -140,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2028-11-07T15:00:00Z",
+          "kalshiExpected": "2028-11-07T15:00:00Z",
+          "kalshiLatest": "2028-11-07T15:00:00Z",
+          "polyEnd": "2028-08-25T03:00:00Z"
+        },
+        "indicativeAt": 1857222000000,
+        "indicativeDays": 776.7478646990741,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -1.6475198112393878e-05
+      },
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 225
+    },
+    {
+      "pairId": "KXPRESNOMD-28-MK::enwc-uspres-nom-dem-2028-markel",
+      "lane": "shadow",
+      "at": 1790111068530,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -100,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2028-11-07T15:00:00Z",
+          "kalshiExpected": "2028-11-07T15:00:00Z",
+          "kalshiLatest": "2028-11-07T15:00:00Z",
+          "polyEnd": "2028-08-25T03:00:00Z"
+        },
+        "indicativeAt": 1857222000000,
+        "indicativeDays": 776.7468920138889,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -1.1811198758477248e-05
+      },
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 262
+    },
+    {
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "lane": "shadow",
+      "at": 1790110705951,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 10,
+      "feeNetDisplayedSpread": 2300,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.29275519675926,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.00019038562172139312
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 72
+    },
+    {
+      "pairId": "KXNCAAFAAC-26-NAVY::tec-cfb-aacchamp-2026-12-05-w-navy",
+      "lane": "shadow",
+      "at": 1790111102117,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 2,
+      "feeNetDisplayedSpread": -100,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-03T15:00:00Z",
+          "kalshiExpected": "2026-12-06T15:00:00Z",
+          "kalshiLatest": "2027-01-03T15:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.28816994212963,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -5.219606357110111e-05
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 208
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "lane": "shadow",
+      "at": 1790111077299,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 9,
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.2884571875,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.680375596758898e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 119
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "lane": "shadow",
+      "at": 1790111055828,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 3,
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2026-12-27T04:59:00Z",
+          "kalshiExpected": "2026-12-27T15:00:00Z",
+          "kalshiLatest": "2026-12-27T15:00:00Z",
+          "polyEnd": "2027-01-10T04:00:00Z"
+        },
+        "indicativeAt": 1799553600000,
+        "indicativeDays": 109.28870569444445,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.00011437595422667195
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 69
+    },
+    {
+      "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "lane": "shadow",
+      "at": 1790110991569,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 10,
+      "feeNetDisplayedSpread": 1300,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-06-15T14:00:00Z",
+          "kalshiExpected": "2027-06-01T14:00:00Z",
+          "kalshiLatest": "2027-06-15T14:00:00Z",
+          "polyEnd": "2027-04-26T03:00:00Z"
+        },
+        "indicativeAt": 1811858400000,
+        "indicativeDays": 251.70611609953704,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.8404436033829614e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 138
+    },
+    {
+      "pairId": "KXFRENCHPRES-27-MLEP::ewc-pres-fra-2027-04-11-marlep",
+      "lane": "shadow",
+      "at": 1790111015039,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -600,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2028-05-30T14:00:00Z",
+          "kalshiExpected": "2027-05-31T14:00:00Z",
+          "kalshiLatest": "2028-05-30T14:00:00Z",
+          "polyEnd": "2027-04-26T03:00:00Z"
+        },
+        "indicativeAt": 1811772000000,
+        "indicativeDays": 250.70584445601853,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.00020993359393582707
+      },
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 214
+    },
+    {
+      "pairId": "KXNCAAFB10QUAL-26-ORE::aqc-cfb-bigten-2026-12-05-champq-ore",
+      "lane": "shadow",
+      "at": 1790111082701,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 9,
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.28839466435186,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.680378911258136e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 225
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "lane": "shadow",
+      "at": 1790110980398,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -800,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-03T04:00:00Z",
+          "kalshiExpected": "2026-12-06T04:00:00Z",
+          "kalshiLatest": "2027-01-03T04:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.28957872685186,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.0007811286250979081
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 60
+    },
+    {
+      "pairId": "KXNEWSOMRUN-28-27JAN01::cranc-uspres28-12-31-2026-gavnew",
+      "lane": "shadow",
+      "at": 1790111141601,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -200,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T15:00:00Z",
+          "kalshiExpected": "2028-01-01T15:00:00Z",
+          "kalshiLatest": "2028-01-01T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1830351600000,
+        "indicativeDays": 465.74604628472224,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -3.90380515881034e-05
+      },
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 195
+    },
+    {
+      "pairId": "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "lane": "shadow",
+      "at": 1790111003792,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": 200,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.28930796296297,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.0002137056565922672
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 212
+    },
+    {
+      "pairId": "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "lane": "shadow",
+      "at": 1790110989014,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 10,
+      "feeNetDisplayedSpread": 700,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28947900462963,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 7.473713005102018e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 135
+    },
+    {
+      "pairId": "KXTIME-26-JP::tpoyc-2026-jerpow",
+      "lane": "shadow",
+      "at": 1790111118793,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 10,
+      "feeNetDisplayedSpread": 700,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.28797693287036,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 5.708181489892573e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 67
+    },
+    {
+      "pairId": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+      "lane": "shadow",
+      "at": 1790111005972,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 2,
+      "feeNetDisplayedSpread": 900,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28928273148148,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.000498093918394457
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 112
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "lane": "shadow",
+      "at": 1790111003408,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 7,
+      "feeNetDisplayedSpread": 600,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28931240740741,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 9.164924982638673e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 124
+    },
+    {
+      "pairId": "KXNCAAFAACQUAL-26-ARMY::aqc-cfb-aac-2026-12-05-champq-army",
+      "lane": "shadow",
+      "at": 1790110991577,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -800,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.28944934027778,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.0007811297698276291
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 149
+    },
+    {
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "lane": "shadow",
+      "at": 1790111136029,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 10,
+      "feeNetDisplayedSpread": 500,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.28777744212962,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.0696939732272085e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 138
+    },
+    {
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "lane": "shadow",
+      "at": 1790111065372,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 10,
+      "feeNetDisplayedSpread": 400,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.28859523148148,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 3.252706108977624e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 102
+    },
+    {
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "lane": "strategy",
+      "at": 1790111135724,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "CONDITIONAL",
+      "quantity": 1,
+      "economics": {
+        "feeNetSurplus": -150,
+        "reservedRiskCash": 200,
+        "analyticalRiskEstimate": 200,
+        "conditionalSurplusNetOfAnalyticalRisk": -350,
+        "reservation": 10950,
+        "capitalEfficiency": -0.0136986301369863
+      },
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2028-10-31T04:00:00Z",
+          "kalshiExpected": "2026-11-01T04:00:00Z",
+          "kalshiLatest": "2028-10-31T04:00:00Z",
+          "polyEnd": "2026-11-06T21:20:09Z"
+        },
+        "indicativeAt": 1794000009000,
+        "indicativeDays": 45.01010736111111,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.0003043456445700897
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "UNRESOLVED_EXECUTION_EXPOSURE",
+        "COMPARISON_ALREADY_ATTEMPTED"
+      ],
+      "changes": 750
+    },
+    {
+      "pairId": "KXNCAAFSBELT-26-TROY::tec-cfb-sbeltchamp-2026-12-04-w-troy",
+      "lane": "shadow",
+      "at": 1790111118800,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -500,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-03T15:00:00Z",
+          "kalshiExpected": "2026-12-06T15:00:00Z",
+          "kalshiLatest": "2027-01-03T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28797685185185,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -0.0005069173236277241
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 424
+    },
+    {
+      "pairId": "KXNCAAFSECQ-26-MISS::aqc-cfb-sec-2026-12-05-champq-miss",
+      "lane": "shadow",
+      "at": 1790111125543,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": 0,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-03T04:00:00Z",
+          "kalshiExpected": "2026-12-06T04:00:00Z",
+          "kalshiLatest": "2027-01-03T04:00:00Z",
+          "polyEnd": "2026-12-20T04:00:00Z"
+        },
+        "indicativeAt": 1797739200000,
+        "indicativeDays": 88.28789880787038,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0
+      },
+      "reasons": [
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 212
+    },
+    {
+      "pairId": "KXARGENTINAPRES-27-SMAS::ewc-pres-arg-2027-10-24-sermas",
+      "lane": "shadow",
+      "at": 1790111077660,
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -250,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2028-10-30T14:00:00Z",
+          "kalshiExpected": "2027-10-31T14:00:00Z",
+          "kalshiLatest": "2028-10-30T14:00:00Z",
+          "polyEnd": "2027-11-08T04:00:00Z"
+        },
+        "indicativeAt": 1825646400000,
+        "indicativeDays": 411.2884530092593,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -5.500867875965127e-05
+      },
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 233
+    },
+    {
+      "pairId": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+      "lane": "shadow",
+      "at": 1790111003418,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 10,
+      "feeNetDisplayedSpread": 600,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.28931229166666,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.888114266112609e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 106
+    },
+    {
+      "pairId": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "lane": "shadow",
+      "at": 1790110998333,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 10,
+      "feeNetDisplayedSpread": 700,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-10T15:00:00Z",
+          "kalshiExpected": "2026-12-13T15:00:00Z",
+          "kalshiLatest": "2027-01-10T15:00:00Z",
+          "polyEnd": "2026-12-19T04:00:00Z"
+        },
+        "indicativeAt": 1797652800000,
+        "indicativeDays": 87.28937114583333,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 7.473722239968508e-05
+      },
+      "reasons": [
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 123
+    },
+    {
+      "pairId": "KXPRESNOMD-28-AB::enwc-uspres-nom-dem-2028-andbes",
+      "lane": "shadow",
+      "at": 1790111098597,
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "classification": "UNRESOLVED",
+      "quantity": 1,
+      "feeNetDisplayedSpread": -170,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2028-11-07T15:00:00Z",
+          "kalshiExpected": "2028-11-07T15:00:00Z",
+          "kalshiLatest": "2028-11-07T15:00:00Z",
+          "polyEnd": "2028-08-25T03:00:00Z"
+        },
+        "indicativeAt": 1857222000000,
+        "indicativeDays": 776.7465440162038,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": -1.9950921699984822e-05
+      },
+      "reasons": [
+        "UNSUPPORTED_ENTRY_PRICE_GRID",
+        "WRONG_OR_NONPOSITIVE_ROUTE",
+        "NONPOSITIVE_AFTER_ADMISSION_MARGIN",
+        "kalshi_QUANTITY_CONSTRAINT",
+        "kalshi_PRICE_GRID",
+        "SHADOW_ATTEMPT_LIMIT"
+      ],
+      "changes": 156
+    }
+  ],
+  "reconnections": 2,
+  "feedEvents": [
+    {
+      "at": 1790108255758,
+      "venues": [
+        "poly"
+      ],
+      "failures": [
+        "DISCONNECTED"
+      ],
+      "action": "PAUSE_AND_REBUILD"
+    },
+    {
+      "at": 1790110704740,
+      "venues": [
+        "poly"
+      ],
+      "failures": [
+        "DISCONNECTED"
+      ],
+      "action": "PAUSE_AND_REBUILD"
+    },
+    {
+      "at": 1790111151356,
+      "venues": [
+        "kalshi",
+        "poly"
+      ],
+      "failures": [],
+      "action": "PAUSE_AND_REBUILD"
+    }
+  ],
+  "rawEvidenceBytes": 39611906,
+  "promotionCandidates": [
+    {
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "confirmedPositiveObservations": 2,
+      "maxFeeNetDisplayedSpread": 2300,
+      "medianFeeNetDisplayedSpread": 2300.0,
+      "quantityRange": [
+        10,
+        10
+      ],
+      "lastConfirmedAt": 1790106933491,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.33641792824073,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.00019031291735974022
+      },
+      "reason": "Repeated current confirmed fee-net displayed spread; settlement equivalence NOT established",
+      "lastDisplayedObservation": {
+        "at": 1790110705951,
+        "quantity": 10,
+        "feeNetDisplayedSpread": 2300,
+        "reasons": [
+          "SHADOW_ATTEMPT_LIMIT"
+        ]
+      },
+      "lastConfirmationAgeAtStopMs": 4217869,
+      "evidenceScope": "Repeated confirmations within this session; later displayed positivity is not a new requested confirmation. Reconfirm before any future execution."
+    },
+    {
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "confirmedPositiveObservations": 2,
+      "maxFeeNetDisplayedSpread": 500,
+      "medianFeeNetDisplayedSpread": 500.0,
+      "quantityRange": [
+        10,
+        10
+      ],
+      "lastConfirmedAt": 1790107661565,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.32799114583334,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 4.068262499919894e-05
+      },
+      "reason": "Repeated current confirmed fee-net displayed spread; settlement equivalence NOT established",
+      "lastDisplayedObservation": {
+        "at": 1790111136029,
+        "quantity": 10,
+        "feeNetDisplayedSpread": 500,
+        "reasons": [
+          "SHADOW_ATTEMPT_LIMIT"
+        ]
+      },
+      "lastConfirmationAgeAtStopMs": 3489795,
+      "evidenceScope": "Repeated confirmations within this session; later displayed positivity is not a new requested confirmation. Reconfirm before any future execution."
+    },
+    {
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "confirmedPositiveObservations": 4,
+      "maxFeeNetDisplayedSpread": 400,
+      "medianFeeNetDisplayedSpread": 400.0,
+      "quantityRange": [
+        2,
+        10
+      ],
+      "lastConfirmedAt": 1790107033105,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2027-01-01T04:59:00Z",
+          "kalshiExpected": "2027-01-01T15:00:00Z",
+          "kalshiLatest": "2027-12-31T15:00:00Z",
+          "polyEnd": "2027-01-15T04:00:00Z"
+        },
+        "indicativeAt": 1799985600000,
+        "indicativeDays": 114.33526498842592,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 3.251378408346213e-05
+      },
+      "reason": "Repeated current confirmed fee-net displayed spread; settlement equivalence NOT established",
+      "lastDisplayedObservation": {
+        "at": 1790111065372,
+        "quantity": 10,
+        "feeNetDisplayedSpread": 400,
+        "reasons": [
+          "SHADOW_ATTEMPT_LIMIT"
+        ]
+      },
+      "lastConfirmationAgeAtStopMs": 4118255,
+      "evidenceScope": "Repeated confirmations within this session; later displayed positivity is not a new requested confirmation. Reconfirm before any future execution."
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "confirmedPositiveObservations": 2,
+      "maxFeeNetDisplayedSpread": 400,
+      "medianFeeNetDisplayedSpread": 250.0,
+      "quantityRange": [
+        2,
+        3
+      ],
+      "lastConfirmedAt": 1790107455691,
+      "horizon": {
+        "sourceTimes": {
+          "kalshiClose": "2026-12-27T04:59:00Z",
+          "kalshiExpected": "2026-12-27T15:00:00Z",
+          "kalshiLatest": "2026-12-27T15:00:00Z",
+          "polyEnd": "2027-01-10T04:00:00Z"
+        },
+        "indicativeAt": 1799553600000,
+        "indicativeDays": 109.33037394675927,
+        "cashRelease": "UNCERTAIN_NOT_GUARANTEED",
+        "basis": "MAX_KALSHI_EXPECTED_OR_CLOSE_AND_POLY_ADMINISTRATIVE_END",
+        "feeNetSurplusPerReservedDollarDay": 0.00011433236299079284
+      },
+      "reason": "Repeated current confirmed fee-net displayed spread; settlement equivalence NOT established",
+      "lastDisplayedObservation": {
+        "at": 1790111055828,
+        "quantity": 3,
+        "feeNetDisplayedSpread": 400,
+        "reasons": [
+          "SHADOW_ATTEMPT_LIMIT"
+        ]
+      },
+      "lastConfirmationAgeAtStopMs": 3695669,
+      "evidenceScope": "Repeated confirmations within this session; later displayed positivity is not a new requested confirmation. Reconfirm before any future execution."
+    }
+  ],
+  "promotionQualification": "At least two current requested-book positive confirmations, then strongest median displayed fee-net dollars; horizon breaks ties. No deep review performed.",
+  "statisticalLimits": "Descriptive counts and observed movements only; correlated route/time samples, modeled displayed depth and no real fills. No probability estimate or empirical cushion fitted.",
+  "feeModelLimits": "Kalshi cent-precision whole-contract fragmentation bound excludes unknown account/fractional behavior. PM cumulative-order estimate is not collected commission. No actual commission validation.",
+  "cushionAssessment": "A future empirical cushion would need a supported distribution of arrival movement, failed-leg recovery losses and fee-model error. FOK ceilings block adverse repricing but may leave one filled leg. Zero observed failures cannot establish zero risk; conditional settlement loss and lockup are separate.",
+  "plannedDurationMs": 7200000,
+  "completion": "STOPPED_EARLY_RECONNECT_BUDGET",
+  "supervisor": {
+    "startedAt": 1790106570483,
+    "endedAt": 1790111151642,
+    "deadlineAt": 1790113770483,
+    "reason": "WORKER_EXITED",
+    "exitCode": 0,
+    "exitSignal": null
+  },
+  "stopExplanation": {
+    "successfulPerVenueReconnections": 2,
+    "budget": 3,
+    "finalAffectedVenues": [
+      "kalshi",
+      "poly"
+    ],
+    "finalDiagnosticReasons": [],
+    "remainingBudget": 1,
+    "requiredRebuildCount": 2,
+    "rootCause": "Both feed health checks were false; socket state versus pong-age cause was not captured. Do not infer a confirmed dual transport disconnect."
+  },
+  "observedComparisonContentStates": 6081,
+  "freezeVerification": {
+    "at": "2026-09-22T21:06:58.075Z",
+    "frozenFileCount": 136,
+    "changed": [],
+    "added": [],
+    "sourceJournalUnchanged": true,
+    "sourceJournalSha256": "45a1058025bdef7f87f39481b94667c4c367fa8a127c7d9d5a9ec4a468c8d25a"
+  },
+  "validation": {
+    "focusedTestsPassed": 42,
+    "hostedTestsPassed": 608,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "executedCommit": "90963927f8f40169a058a010df29134fee48ca0c",
+    "ciUrl": "https://github.com/tyhuffman7/lights_on/actions/runs/35775891650",
+    "noTestsOrBuildsDuringCollection": true
+  },
+  "shadowPositiveUnattemptedRoutes": [
+    "KXNCAAFB10QUAL-26-ORE::aqc-cfb-bigten-2026-12-05-champq-ore"
+  ]
+}
