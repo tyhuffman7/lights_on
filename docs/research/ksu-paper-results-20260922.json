@@ -1,0 +1,604 @@
+{
+  "scope": "KSU_CONDITIONAL_PAPER_ONLY",
+  "dataSource": "FRESH_REQUESTED_MARKET_BOOKS_NOT_SYNTHETIC",
+  "classification": "CONDITIONAL",
+  "ordersEnabled": false,
+  "liveAdmitted": false,
+  "moneyUnit": "INTEGER_1_10000_USD",
+  "window": {
+    "startedAt": "2026-09-22T05:12:07.309Z",
+    "endedAt": "2026-09-22T05:35:13.238Z",
+    "durationMs": 1385929,
+    "maximumMs": 1800000,
+    "completionGraceMs": 15000,
+    "phase": "STOPPED",
+    "stopReason": "BROKEN_FEED",
+    "supervisor": {
+      "reason": "WORKER_EXITED",
+      "exitCode": 0
+    }
+  },
+  "policy": {
+    "version": 1,
+    "mode": "KSU_CONDITIONAL_PAPER_ONLY",
+    "kalshi": "KXNCAAFB12QUAL-26-KSU",
+    "poly": "aqc-cfb-big12-2026-12-04-champq-kanst",
+    "classification": "CONDITIONAL",
+    "ordersEnabled": false,
+    "liveAdmitted": false,
+    "capitalPerVenue": 500000,
+    "maxReservation": 120000,
+    "maxQuantity": 10,
+    "maxAttempts": 1,
+    "durationMs": 1800000,
+    "graceMs": 15000,
+    "transportMs": 500,
+    "recoveryDelayMs": 1000,
+    "maxRecoveryAttempts": 1,
+    "recoveryPriceLossPerContract": 500,
+    "confirmationSpacingMs": 30000,
+    "maxConfirmations": 60,
+    "riskPerContract": 200,
+    "recoveryPerContract": {
+      "kalshi": 100,
+      "poly": 500
+    },
+    "minProfit": 1000,
+    "minRoi": 1,
+    "tif": "FOK",
+    "maxEvidenceBytes": 67108864,
+    "ohioLiveEligibility": "NOT_REVALIDATED_LIVE_BLOCKED",
+    "horizon": "NAMED_2026_QUALIFICATION_ONLY_NO_CASH_RELEASE_DEADLINE",
+    "feeUncertainty": "Whole-contract fragmentation/cent-precision Kalshi bound; account class and fractional fragmentation unknown. PM cumulative order estimate is not collected commission."
+  },
+  "counts": {
+    "pairedBookChecks": 45,
+    "confirmedPricingComparisons": 45,
+    "failedOrUnconfirmedChecks": 0,
+    "qualifyingEntries": 0,
+    "entryAttempts": 0,
+    "positions": 0
+  },
+  "admissionReasonCounts": {
+    "WRONG_OR_NONPOSITIVE_ROUTE": 45,
+    "BELOW_10_CENT_AFTER_RISK_FLOOR": 45,
+    "BELOW_1_PERCENT_ROI": 45
+  },
+  "firstComparison": {
+    "at": "2026-09-22T05:12:08.766Z",
+    "bookConfirmed": true,
+    "selectedQuantity": 1,
+    "quantityComparison": [
+      {
+        "quantity": 1,
+        "cost": 9900,
+        "feeBound": 200,
+        "feeBoundSurplus": -100,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 2,
+        "cost": 19800,
+        "feeBound": 400,
+        "feeBoundSurplus": -200,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 3,
+        "cost": 29700,
+        "feeBound": 600,
+        "feeBoundSurplus": -300,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 4,
+        "cost": 39600,
+        "feeBound": 800,
+        "feeBoundSurplus": -400,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 5,
+        "cost": 49500,
+        "feeBound": 900,
+        "feeBoundSurplus": -400,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 6,
+        "cost": 59400,
+        "feeBound": 1100,
+        "feeBoundSurplus": -500,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 7,
+        "cost": 69300,
+        "feeBound": 1300,
+        "feeBoundSurplus": -600,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 8,
+        "cost": 79200,
+        "feeBound": 1500,
+        "feeBoundSurplus": -700,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 9,
+        "cost": 89100,
+        "feeBound": 1700,
+        "feeBoundSurplus": -800,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 10,
+        "cost": 99000,
+        "feeBound": 1900,
+        "feeBoundSurplus": -900,
+        "pricingReasons": []
+      }
+    ],
+    "observedPricingOnly": {
+      "kalshi": {
+        "quantity": 1,
+        "cost": 8400,
+        "fees": 100,
+        "levels": [
+          {
+            "price": 8400,
+            "quantity": 1
+          }
+        ],
+        "feeBound": 100
+      },
+      "poly": {
+        "quantity": 1,
+        "cost": 1500,
+        "fees": 100,
+        "levels": [
+          {
+            "price": 1500,
+            "quantity": 1
+          }
+        ],
+        "feeBound": 100
+      },
+      "cost": 9900,
+      "feeBound": 200,
+      "ordinaryOutcomeSurplus": -100,
+      "riskAllowance": 200,
+      "afterRisk": -300,
+      "hypotheticalReservation": 10900,
+      "venueHypotheticalReservation": {
+        "kalshi": 8700,
+        "poly": 2200
+      }
+    },
+    "admissionReasons": [
+      "WRONG_OR_NONPOSITIVE_ROUTE",
+      "BELOW_10_CENT_AFTER_RISK_FLOOR",
+      "BELOW_1_PERCENT_ROI"
+    ],
+    "status": {
+      "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+      "assumedActive": true,
+      "underlyingClassification": "UNRESOLVED",
+      "reasons": [
+        "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+        "NON_ATOMIC_INITIAL_STATE"
+      ]
+    },
+    "notAnEntryPlan": true
+  },
+  "bestAfterRiskComparison": {
+    "at": "2026-09-22T05:12:08.766Z",
+    "bookConfirmed": true,
+    "selectedQuantity": 1,
+    "quantityComparison": [
+      {
+        "quantity": 1,
+        "cost": 9900,
+        "feeBound": 200,
+        "feeBoundSurplus": -100,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 2,
+        "cost": 19800,
+        "feeBound": 400,
+        "feeBoundSurplus": -200,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 3,
+        "cost": 29700,
+        "feeBound": 600,
+        "feeBoundSurplus": -300,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 4,
+        "cost": 39600,
+        "feeBound": 800,
+        "feeBoundSurplus": -400,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 5,
+        "cost": 49500,
+        "feeBound": 900,
+        "feeBoundSurplus": -400,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 6,
+        "cost": 59400,
+        "feeBound": 1100,
+        "feeBoundSurplus": -500,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 7,
+        "cost": 69300,
+        "feeBound": 1300,
+        "feeBoundSurplus": -600,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 8,
+        "cost": 79200,
+        "feeBound": 1500,
+        "feeBoundSurplus": -700,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 9,
+        "cost": 89100,
+        "feeBound": 1700,
+        "feeBoundSurplus": -800,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 10,
+        "cost": 99000,
+        "feeBound": 1900,
+        "feeBoundSurplus": -900,
+        "pricingReasons": []
+      }
+    ],
+    "observedPricingOnly": {
+      "kalshi": {
+        "quantity": 1,
+        "cost": 8400,
+        "fees": 100,
+        "levels": [
+          {
+            "price": 8400,
+            "quantity": 1
+          }
+        ],
+        "feeBound": 100
+      },
+      "poly": {
+        "quantity": 1,
+        "cost": 1500,
+        "fees": 100,
+        "levels": [
+          {
+            "price": 1500,
+            "quantity": 1
+          }
+        ],
+        "feeBound": 100
+      },
+      "cost": 9900,
+      "feeBound": 200,
+      "ordinaryOutcomeSurplus": -100,
+      "riskAllowance": 200,
+      "afterRisk": -300,
+      "hypotheticalReservation": 10900,
+      "venueHypotheticalReservation": {
+        "kalshi": 8700,
+        "poly": 2200
+      }
+    },
+    "admissionReasons": [
+      "WRONG_OR_NONPOSITIVE_ROUTE",
+      "BELOW_10_CENT_AFTER_RISK_FLOOR",
+      "BELOW_1_PERCENT_ROI"
+    ],
+    "status": {
+      "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+      "assumedActive": true,
+      "underlyingClassification": "UNRESOLVED",
+      "reasons": [
+        "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+        "NON_ATOMIC_INITIAL_STATE"
+      ]
+    },
+    "notAnEntryPlan": true
+  },
+  "lastComparison": {
+    "at": "2026-09-22T05:34:43.445Z",
+    "bookConfirmed": true,
+    "selectedQuantity": 1,
+    "quantityComparison": [
+      {
+        "quantity": 1,
+        "cost": 9900,
+        "feeBound": 200,
+        "feeBoundSurplus": -100,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 2,
+        "cost": 19800,
+        "feeBound": 400,
+        "feeBoundSurplus": -200,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 3,
+        "cost": 29700,
+        "feeBound": 600,
+        "feeBoundSurplus": -300,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 4,
+        "cost": 39600,
+        "feeBound": 800,
+        "feeBoundSurplus": -400,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 5,
+        "cost": 49500,
+        "feeBound": 900,
+        "feeBoundSurplus": -400,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 6,
+        "cost": 59400,
+        "feeBound": 1100,
+        "feeBoundSurplus": -500,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 7,
+        "cost": 69300,
+        "feeBound": 1300,
+        "feeBoundSurplus": -600,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 8,
+        "cost": 79200,
+        "feeBound": 1500,
+        "feeBoundSurplus": -700,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 9,
+        "cost": 89100,
+        "feeBound": 1700,
+        "feeBoundSurplus": -800,
+        "pricingReasons": []
+      },
+      {
+        "quantity": 10,
+        "cost": 99000,
+        "feeBound": 1900,
+        "feeBoundSurplus": -900,
+        "pricingReasons": []
+      }
+    ],
+    "observedPricingOnly": {
+      "kalshi": {
+        "quantity": 1,
+        "cost": 8400,
+        "fees": 100,
+        "levels": [
+          {
+            "price": 8400,
+            "quantity": 1
+          }
+        ],
+        "feeBound": 100
+      },
+      "poly": {
+        "quantity": 1,
+        "cost": 1500,
+        "fees": 100,
+        "levels": [
+          {
+            "price": 1500,
+            "quantity": 1
+          }
+        ],
+        "feeBound": 100
+      },
+      "cost": 9900,
+      "feeBound": 200,
+      "ordinaryOutcomeSurplus": -100,
+      "riskAllowance": 200,
+      "afterRisk": -300,
+      "hypotheticalReservation": 10900,
+      "venueHypotheticalReservation": {
+        "kalshi": 8700,
+        "poly": 2200
+      }
+    },
+    "admissionReasons": [
+      "WRONG_OR_NONPOSITIVE_ROUTE",
+      "BELOW_10_CENT_AFTER_RISK_FLOOR",
+      "BELOW_1_PERCENT_ROI"
+    ],
+    "status": {
+      "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+      "assumedActive": true,
+      "underlyingClassification": "UNRESOLVED",
+      "reasons": [
+        "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+        "NON_ATOMIC_INITIAL_STATE"
+      ]
+    },
+    "notAnEntryPlan": true
+  },
+  "feesChargedInPaperModel": 0,
+  "planned": null,
+  "modeled": {},
+  "arrivalEvidence": [],
+  "recovery": null,
+  "accounting": {
+    "cash": {
+      "kalshi": 500000,
+      "poly": 500000
+    },
+    "reserved": {
+      "kalshi": 0,
+      "poly": 0
+    },
+    "entryAttempts": 0,
+    "positions": 0,
+    "residualInventory": {
+      "kalshi": 0,
+      "poly": 0
+    },
+    "unresolvedPossibleInventory": false,
+    "conditionalUnrealizedSurplus": null,
+    "separateRiskAllowance": 0,
+    "recoveryLoss": null,
+    "realizedProfit": null,
+    "classification": "CONDITIONAL",
+    "liveAdmitted": false
+  },
+  "scenarios": [
+    {
+      "name": "ordinary qualification or elimination",
+      "formula": "1-k+p = 1 only when k=p",
+      "cashRelease": "Venue-specific; not necessarily simultaneous"
+    },
+    {
+      "name": "cancellation",
+      "formula": "1-r+f; below 1 if PM fair payout f < Kalshi allocation r",
+      "cashRelease": "Kalshi postponement can extend up to two years; PM may extend or use fair value"
+    },
+    {
+      "name": "withdrawal / reinstatement",
+      "formula": "Kalshi withdrawal or settled elimination stays No; PM fair payout/reversal can differ",
+      "cashRelease": "Re-entry does not reopen an already settled Kalshi elimination"
+    },
+    {
+      "name": "correction / divergent cutoffs",
+      "formula": "k=1,p=0 gives zero for purchased NO+YES",
+      "cashRelease": "Different expiry/correction decisions can destroy complementarity"
+    },
+    {
+      "name": "settlement timing / review",
+      "formula": "Even equal final payouts do not make cash available together",
+      "cashRelease": "December 4 game date is not a guaranteed release date; no forced settlement"
+    }
+  ],
+  "metadata": {
+    "documents": [
+      {
+        "url": "https://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf",
+        "sha256": "146a07f48325b0ec14ca993c9f3e6ebd8bee26f143cf3cd125053f721696bf7c",
+        "bytes": 21826,
+        "retrievedAt": 1790053799730
+      },
+      {
+        "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AQC%20-%20%282026.03.26%29.pdf",
+        "sha256": "5960588d6a24f1ff1b1636ccfe7d14cb6cd32fc167a0efce39c87830edbe980e",
+        "bytes": 227132,
+        "retrievedAt": 1790053800201
+      },
+      {
+        "url": "https://www.polymarketexchange.com/files/legal/latest/rulebook",
+        "sha256": "e7b7793e75dd61a8adaf807c588e1212cf0600100e5727d7d546ba0a0b7f35e5",
+        "bytes": 789996,
+        "retrievedAt": 1790053802294
+      },
+      {
+        "url": "https://docs.kalshi.com/api-reference/orders/create-order-v2.md",
+        "sha256": "1358cd4ef9aeb4d475baadbc79a93d151cd029786183797e230c0258b434527a",
+        "bytes": 13241,
+        "retrievedAt": 1790053802659
+      },
+      {
+        "url": "https://docs.polymarket.us/api-reference/orders/create-order.md",
+        "sha256": "0f7ffdcb944bc4b630177c2dfeeadc58462f55c28722bd1699d7caf4ea39d32d",
+        "bytes": 18860,
+        "retrievedAt": 1790053803070
+      }
+    ],
+    "feeEvidence": {
+      "series": "quadratic",
+      "multiplier": 1,
+      "eventOverride": null,
+      "eventMultiplierOverride": null,
+      "polyCoefficient": 0.0695
+    },
+    "constraints": {
+      "kalshi": {
+        "tick": 100,
+        "minimum": 1
+      },
+      "poly": {
+        "tick": 100,
+        "minimum": 0.01
+      }
+    },
+    "administrativeTimes": {
+      "kalshiClose": "2027-01-10T15:00:00Z",
+      "kalshiExpected": "2026-12-13T15:00:00Z",
+      "kalshiLatest": "2027-01-10T15:00:00Z",
+      "polyEnd": "2026-12-19T04:00:00Z"
+    },
+    "lastRefreshedAt": "2026-09-22T05:34:43.234Z",
+    "kalshiStatusAssumption": {
+      "classification": "ACTIVE_STATUS_ASSUMPTION_NOT_PROVEN",
+      "admitted": true,
+      "underlyingClassification": "UNRESOLVED",
+      "reasons": [
+        "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+        "NON_ATOMIC_INITIAL_STATE"
+      ]
+    }
+  },
+  "feedFailures": {
+    "kalshi": [],
+    "poly": [
+      "DISCONNECTED"
+    ]
+  },
+  "interpretation": "NO_ENTRY: no qualifying current entry in this bounded window. No submitted paper plan, modeled fill, fees charged, profit, recovery or capital lockup. Repeated snapshots are observations, not trades.",
+  "sourceIntegrity": {
+    "freezeSha256": "b4345621fb0e57582a621329e6276ec54a9e8a71178ffb1b7aefe4f85933f05d",
+    "rawEvidenceSha256": "bd1f4301a7571db8ba05df0bb42562fb474f5580f572afa34bf8014be028d6eb",
+    "frozenSourceFiles": 128,
+    "scopedSourceSha256": {
+      "lib/arb/ksu-paper.ts": "baf5bf0a5d589c2bc417e9a035a6e3ba9cf10240ad41bbefc2cec0d75cb13aa8",
+      "worker/ksu-paper.ts": "456eeeb6906b85a81597b9158c278486d6ecb44ca8981590f78d639978833374",
+      "scripts/ksu-paper-launch.mjs": "c4d30ef90e66aa9db47e6bbb68c0dbd64a2ba9d369a748320e0caa17eaff3fe8"
+    },
+    "changedFiles": []
+  },
+  "validation": {
+    "targetedTests": 34,
+    "targetedFailures": 0,
+    "fullValidation": "HOSTED_CI_NOT_STARTED_SIGNED_PUBLICATION_BLOCKED",
+    "signing": "Existing 1Password signer unavailable; user will unlock later. No unsigned commit or signing change."
+  },
+  "limitations": [
+    "Active status is assumed under the named paper exception, not proven. Ohio live eligibility remains unvalidated and live blocked.",
+    "Displayed executable-depth simulation does not measure order latency, queue competition, actual fills or collected fees.",
+    "Kalshi account precision/fractional fragmentation and PM collected commission are unknown.",
+    "No settlement modeled, locked capital recycled or conditional outcome treated as guaranteed.",
+    "Fresh-fill execution and recovery remain unproven if no entry occurred."
+  ]
+}
