@@ -77,7 +77,7 @@ export async function observe(dir:string,root:string){
   const qualifying=new Set<string>(),automatic=new Set<string>();
   const observations=new Map<string,any>(),rejections:Record<string,number>={},confirmations:any[]=[],arrivals:any[]=[],feedEvents:any[]=[];
   const dirty=new Set<string>(),fingerprints=new Map<string,string>(),histories=new Map<string,SnapshotReceipt[]>();
-  let tracker:MarketStatusTracker,feeds:Record<Venue,ConfirmationFeed>,stopped=false,reason='ORIGINAL_DEADLINE',bytes=0,ready=false;
+  let tracker:MarketStatusTracker,feeds:Record<Venue,ConfirmationFeed>={} as Record<Venue,ConfirmationFeed>,stopped=false,reason='ORIGINAL_DEADLINE',bytes=0,ready=false;
   let wake:()=>void=()=>{},nextRequest=0;
   const notify=()=>wake();
   const stop=()=>{stopped=true;reason='EXTERNAL_OR_SUPERVISOR_STOP';notify();};process.once('SIGINT',stop);process.once('SIGTERM',stop);
