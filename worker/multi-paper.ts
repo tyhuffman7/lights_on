@@ -25,6 +25,10 @@ const read=(root:string,file:string)=>JSON.parse(readFileSync(resolve(root,file)
 export function manifest(root:string){const m=sourceManifest(root);for(const file of ['scripts/multi-paper-launch.mjs','docs/research/contract-shortlist/review.json','docs/research/contract-shortlist/REVIEW.md','docs/research/contract-shortlist/retained-markets.json','docs/research/contract-shortlist/sources.json'])m[file]=sha(readFileSync(resolve(root,file)));return m;}
 let nextHttp=0;
 async function get(url:string,record:RecordEvidence){await sleep(nextHttp-performance.now());nextHttp=performance.now()+250;const r=await publicConfirmationGet(url,record);if(r.evidence.status!==200)throw Error('METADATA_HTTP_'+r.evidence.status);return r;}
+export function reconnectPortfolios(portfolios:MultiPaper[],now:number,deadline:number,count:number){
+  if(!Number.isSafeInteger(count)||count<1||portfolios.some(p=>p.halt||p.busy||p.reconnects+count>policy.maxReconnects)||now>=deadline)return false;
+  for(const p of portfolios)p.reconnects+=count;return true;
+}
 export function entryConstraints(m:any,pm:any,a:Pair['a'],b:Pair['b']){
   const ranges=m.price_ranges,pt=pm.orderPriceMinTickSize*10000,entryReasons:string[]=[];
   const linear=m.price_level_structure==='linear_cent'&&ranges?.length===1&&ranges[0].start==='0.0000'&&ranges[0].end==='1.0000'&&ranges[0].step==='0.0100';
@@ -86,7 +90,7 @@ export async function observe(dir:string,root:string){
   if(frozen.comparison&&(JSON.stringify(frozen.comparison.scenarios)!==JSON.stringify(marginScenarios)||sha(readFileSync(frozen.comparison.sourceJournal))!==frozen.comparison.sourceJournalSha256))throw Error('COMPARISON_SEED_CHANGED');
   const runs=(frozen.comparison?marginScenarios:[undefined]).map(scenario=>({portfolio:new MultiPaper(frozen.review,scenario,frozen.comparison?.initialState),qualifying:new Set<string>(),automatic:new Set<string>(),observations:new Map<string,any>(),rejections:{} as Record<string,number>,confirmations:[] as any[]}));
   const sharedStop=()=>runs.length===1?runs[0].portfolio.stopReason():runs.find(r=>r.portfolio.halt||r.portfolio.realizedLoss()>=policy.maxRealizedLoss)?.portfolio.stopReason()??(runs.every(r=>r.portfolio.stopReason())?'ALL_SCENARIOS_AT_LIMIT':null);
-  const reconnect=(count:number)=>{if(sharedStop()||runs.some(r=>r.portfolio.busy||r.portfolio.reconnects+count>policy.maxReconnects)||performance.now()>=deadline)return false;for(const r of runs)r.portfolio.reconnects+=count;return true;};
+  const reconnect=(count:number)=>!sharedStop()&&reconnectPortfolios(runs.map(r=>r.portfolio),performance.now(),deadline,count);
   const metadata=frozen.metadata as Metadata[],blocked=new Map<string,string>(frozen.blocked.map((x:any)=>[x.pairId,x.reason]));
   const arrivals:any[]=[],feedEvents:any[]=[],policyDifferences:any[]=[];let sharedConfirmations=0;
   const dirty=new Set<string>(),fingerprints=new Map<string,string>(),histories=new Map<string,SnapshotReceipt[]>();

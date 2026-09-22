@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {MultiPaper,marginScenarios,reviewedRows} from '../lib/arb/multi-paper.ts';
 import type {ReviewRow,InitialJournal} from '../lib/arb/multi-paper.ts';
+import {reconnectPortfolios} from '../worker/multi-paper.ts';
 import {quoteCandidate} from '../lib/screen/confirmation.ts';
 import {admission,accountLeg,modelLeg,recoveryPlan} from '../lib/arb/ksu-paper.ts';
 import type {Book,Pair,Venue} from '../lib/arb/types.ts';
@@ -54,4 +55,15 @@ test('independent reconciled ledgers retain Julia, locked funds and position cap
 test('unreconciled seeds fail closed and risk/recovery reservations still constrain zero-margin selection',async()=>{
  const initial=await seed();for(const alter of [(s:InitialJournal)=>s.portfolio.cash.kalshi++, (s:InitialJournal)=>s.entries[0].session.held.poly--,(s:InitialJournal)=>s.entries.push(structuredClone(s.entries[0])),(s:InitialJournal)=>s.entries[0].session.results.poly!.outcome='INCONCLUSIVE']){const bad=structuredClone(initial);alter(bad);assert.throws(()=>new MultiPaper(review,marginScenarios[1],bad),/INITIAL/);}
  const p=new MultiPaper(review,marginScenarios[1]),r=rows[0],b=books(r,100,9700,1),q=quote(r,b);p.cash.poly=q.economics!.poly.cost+q.economics!.poly.feeBound;assert.ok(p.gates(r,pair(r),q,status,constraints).includes('poly_CASH'));assert.equal(p.select(r,pair(r),b.kalshi,b.poly,status,constraints,at).selected,null);
+});
+
+test('shared reconnect preserves invalid-count, deadline, halt, busy and atomic budget guards',()=>{
+ const ps=marginScenarios.map(s=>new MultiPaper(review,s));
+ for(const count of [0,-1,1.5,NaN]){assert.equal(reconnectPortfolios(ps,100,1000,count),false);assert.deepEqual(ps.map(p=>p.reconnects),[0,0]);}
+ assert.equal(reconnectPortfolios(ps,1000,1000,1),false);
+ ps[1].busy=true;assert.equal(reconnectPortfolios(ps,100,1000,1),false);ps[1].busy=false;
+ ps[1].halt='UNRESOLVED_EXECUTION_EXPOSURE';assert.equal(reconnectPortfolios(ps,100,1000,1),false);ps[1].halt=null;
+ ps[1].reconnects=3;assert.equal(reconnectPortfolios(ps,100,1000,1),false);assert.deepEqual(ps.map(p=>p.reconnects),[0,3]);ps[1].reconnects=0;
+ for(let i=1;i<=3;i++){assert.equal(reconnectPortfolios(ps,100,1000,1),true);assert.deepEqual(ps.map(p=>p.reconnects),[i,i]);}
+ assert.equal(reconnectPortfolios(ps,100,1000,1),false);
 });
