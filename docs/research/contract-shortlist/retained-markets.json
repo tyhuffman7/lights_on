@@ -1,0 +1,3941 @@
+{
+  "kalshi": [
+    {
+      "id": "KXDWTSRANK-226DEC31-JSTIL",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "marketType": "future",
+        "outcome": "julia stiles",
+        "entities": [],
+        "numbers": [
+          "35"
+        ],
+        "aliases": [],
+        "eventKey": "what rank participant finish"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Julia Stiles finish 2nd Place on Dancing with the Stars Season 35?",
+      "outcome": "Julia Stiles",
+      "opposite": "Julia Stiles",
+      "category": "Entertainment",
+      "rules": "If Julia Stiles finishes 2nd on Dancing with the Stars Season 35, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Dancing with the Stars. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/COMPETITIONREALITYPLACEDWTS.pdf\n\n[{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"NBC\",\"url\":\"https://www.nbcnews.com/\"},{\"name\":\"Peacock\",\"url\":\"https://www.peacocktv.com/watch/home?orig_ref=https://www.google.com/\"},{\"name\":\"itv\",\"url\":\"https://www.itv.com/\"},{\"name\":\"Hulu\",\"url\":\"https://www.hulu.com/\"}]",
+      "url": "https://kalshi.com/markets/kxdwtsrank/kxdwtsrank-226dec31",
+      "closeAt": "2026-12-31T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "7d2acf9a36284fb3181cb64fe3efe67b1b8777571c5d6735ae7365e60d2d02b9",
+      "settlement": null,
+      "series": "KXDWTSRANK"
+    },
+    {
+      "id": "KXISRDEFMIN-30-NBEN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "naftali bennett",
+        "entities": [],
+        "numbers": [
+          "28",
+          "2030"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will it be reported by The Times of Israel that Naftali Bennett is the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election before Oct 28, 2030?",
+      "outcome": "Naftali Bennett",
+      "opposite": "Naftali Bennett",
+      "category": "Elections",
+      "rules": "If it is reported by The Times of Israel after Issuance and before Oct 28, 2030 that Naftali Bennett is the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election, then the market resolves to Yes.\n\nOnly reporting from The Times of Israel qualifies for the purposes of this market. Reports that merely reference prior publications (from before Issuance) do not qualify. Republishing of content originally produced by other sources (e.g., wire services) only qualifies if the content is hosted on the outlet's official platform and the outlet is clearly identified as the publishing entity.\n\nThis market concerns the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election, including a government formed after repeat elections. A new government is formed when the Knesset expresses confidence in it. A retained incumbent counts if appointed in that new government; continuation in the outgoing government does not.\n\nMinister of Defense means the holder of the Defense portfolio, including a Prime Minister who also formally holds it. An acting substitute, deputy minister, additional minister within the Defense Ministry, or Minister of National Security does not count. If the portfolio is initially vacant, the first person subsequently appointed to it in that government counts. Nominations, coalition agreements, intended appointments, and hypothetical scenarios do not qualify as taking office. Later replacements do not change the first officeholder.\n\nhttps://assets.kalshi.com/contract_terms/REPORTTOPIC.pdf\n\n[{\"name\":\"The Times of Israel\",\"url\":\"https://www.timesofisrael.com\"}]",
+      "url": "https://kalshi.com/markets/kxisrdefmin/kxisrdefmin-30",
+      "closeAt": "2030-11-04T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "57d6e0113caa67d94e7256a9304b62216562c86b8f1a317a51447a9fdcb8cc75",
+      "settlement": null,
+      "series": "KXISRDEFMIN"
+    },
+    {
+      "id": "KXISRDEFMIN-30-BNET",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "benjamin netanyahu",
+        "entities": [],
+        "numbers": [
+          "28",
+          "2030"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will it be reported by The Times of Israel that Benjamin Netanyahu is the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election before Oct 28, 2030?",
+      "outcome": "Benjamin Netanyahu",
+      "opposite": "Benjamin Netanyahu",
+      "category": "Elections",
+      "rules": "If it is reported by The Times of Israel after Issuance and before Oct 28, 2030 that Benjamin Netanyahu is the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election, then the market resolves to Yes.\n\nOnly reporting from The Times of Israel qualifies for the purposes of this market. Reports that merely reference prior publications (from before Issuance) do not qualify. Republishing of content originally produced by other sources (e.g., wire services) only qualifies if the content is hosted on the outlet's official platform and the outlet is clearly identified as the publishing entity.\n\nThis market concerns the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election, including a government formed after repeat elections. A new government is formed when the Knesset expresses confidence in it. A retained incumbent counts if appointed in that new government; continuation in the outgoing government does not.\n\nMinister of Defense means the holder of the Defense portfolio, including a Prime Minister who also formally holds it. An acting substitute, deputy minister, additional minister within the Defense Ministry, or Minister of National Security does not count. If the portfolio is initially vacant, the first person subsequently appointed to it in that government counts. Nominations, coalition agreements, intended appointments, and hypothetical scenarios do not qualify as taking office. Later replacements do not change the first officeholder.\n\nhttps://assets.kalshi.com/contract_terms/REPORTTOPIC.pdf\n\n[{\"name\":\"The Times of Israel\",\"url\":\"https://www.timesofisrael.com\"}]",
+      "url": "https://kalshi.com/markets/kxisrdefmin/kxisrdefmin-30",
+      "closeAt": "2030-11-04T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "e0059bdb0143de9d69fd4dec94fb98516819347d5926855f215117cc8627db14",
+      "settlement": null,
+      "series": "KXISRDEFMIN"
+    },
+    {
+      "id": "KXISRDEFMIN-30-ALIE",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "avigdor lieberman",
+        "entities": [],
+        "numbers": [
+          "28",
+          "2030"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will it be reported by The Times of Israel that Avigdor Lieberman is the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election before Oct 28, 2030?",
+      "outcome": "Avigdor Lieberman",
+      "opposite": "Avigdor Lieberman",
+      "category": "Elections",
+      "rules": "If it is reported by The Times of Israel after Issuance and before Oct 28, 2030 that Avigdor Lieberman is the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election, then the market resolves to Yes.\n\nOnly reporting from The Times of Israel qualifies for the purposes of this market. Reports that merely reference prior publications (from before Issuance) do not qualify. Republishing of content originally produced by other sources (e.g., wire services) only qualifies if the content is hosted on the outlet's official platform and the outlet is clearly identified as the publishing entity.\n\nThis market concerns the first Minister of Defense to take office in the first new Israeli government formed after the next Knesset election, including a government formed after repeat elections. A new government is formed when the Knesset expresses confidence in it. A retained incumbent counts if appointed in that new government; continuation in the outgoing government does not.\n\nMinister of Defense means the holder of the Defense portfolio, including a Prime Minister who also formally holds it. An acting substitute, deputy minister, additional minister within the Defense Ministry, or Minister of National Security does not count. If the portfolio is initially vacant, the first person subsequently appointed to it in that government counts. Nominations, coalition agreements, intended appointments, and hypothetical scenarios do not qualify as taking office. Later replacements do not change the first officeholder.\n\nhttps://assets.kalshi.com/contract_terms/REPORTTOPIC.pdf\n\n[{\"name\":\"The Times of Israel\",\"url\":\"https://www.timesofisrael.com\"}]",
+      "url": "https://kalshi.com/markets/kxisrdefmin/kxisrdefmin-30",
+      "closeAt": "2030-11-04T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "7fcd38d8fbec19f4e58df8de86edc0887bb1125a419acb9f152cc1fc4544619d",
+      "settlement": null,
+      "series": "KXISRDEFMIN"
+    },
+    {
+      "id": "KXGRAMBNA-69-SIE",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "marketType": "winner",
+        "outcome": "sienna spiro",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will SIENNA SPIRO win Best New Artist at the Grammys?",
+      "outcome": "SIENNA SPIRO",
+      "opposite": "SIENNA SPIRO",
+      "category": "Entertainment",
+      "rules": "If  SIENNA SPIRO has won Best New Artist at the 69th Annual Grammy Awards, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/GRAMMY.pdf\n\n[{\"name\":\"Recording Academy\",\"url\":\"https://www.grammy.com/\"}]",
+      "url": "https://kalshi.com/markets/kxgrambna/kxgrambna-69",
+      "closeAt": "2027-02-09T04:59:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "d2fe2db12e38b6314c0f8adc80b5ff2f734ccde1a443010b52c04d8164a9807f",
+      "settlement": null,
+      "series": "KXGRAMBNA"
+    },
+    {
+      "id": "KXEPLRELEGATION-27-TOT",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "competition": "epl",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "tottenham",
+        "entities": [],
+        "numbers": [
+          "2026",
+          "27"
+        ],
+        "aliases": [],
+        "eventKey": "english premier league relegation"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Tottenham be relegated from EPL in 2026-27 Season?",
+      "outcome": "Tottenham",
+      "opposite": "Tottenham",
+      "category": "Sports",
+      "rules": "If Tottenham is relegated from the EPL in 2026-27 season, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/RELEGATION.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"}]",
+      "url": "https://kalshi.com/markets/kxeplrelegation/kxeplrelegation-27",
+      "closeAt": "2027-06-21T21:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "d1725d8866b5ce060b1b2a82cae1d3f64915ab595aa8fdcc5466c391feb82c18",
+      "settlement": null,
+      "series": "KXEPLRELEGATION"
+    },
+    {
+      "id": "KXNBARECORD-27BEST-OKC",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "basketball",
+        "competition": "nba",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "oklahoma city",
+        "entities": [],
+        "numbers": [
+          "2026",
+          "27"
+        ],
+        "aliases": [],
+        "eventKey": "pro basketball best worst regular season record"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Oklahoma City have the best regular season record in the 2026-27 season?",
+      "outcome": "Oklahoma City",
+      "opposite": "Oklahoma City",
+      "category": "Sports",
+      "rules": "If the Oklahoma City Pro Basketball team has the best regular season record in the league in the 2026-27 Pro Basketball season, then the market resolves to Yes.\n\nIf two or more teams are tied for the best regular-season record, the Governing League's official tie-breaking procedures will be applied until a single team remains. If multiple teams remain tied after all applicable tiebreakers, dead-heat rules apply and each tied team\u2019s market will resolve at 1 / N, where N is the number of tied teams.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/TEAMRECORDS.pdf\n\n[{\"name\":\"the Governing League\",\"url\":\"https://www.nba.com\"},{\"name\":\"ESPN\",\"url\":\"https://espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxnbarecord/kxnbarecord-27best",
+      "closeAt": "2027-05-01T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "7ecfaa53a2fc8bd15993b910525eb42b7d9ac2bcf3c8a13f40fd71cafe1aad51",
+      "settlement": null,
+      "series": "KXNBARECORD"
+    },
+    {
+      "id": "KXSWEDENPM-26SEP13-UKRI",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "ulf kristersson",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Ulf Kristersson become Prime Minister of Sweden following the 2026 Swedish general election?",
+      "outcome": "Ulf Kristersson",
+      "opposite": "Ulf Kristersson",
+      "category": "Elections",
+      "rules": "If Ulf Kristersson becomes Prime Minister of Sweden as a result of government formation following the 2026 Swedish general election and meets all constitutional requirements before Jan 1, 2028, then the market resolves to Yes.\n\nThe market resolves to the first person who, as a result of government formation following the election, is formally appointed, sworn in, or invested as Prime Minister according to the country's constitutional procedures, commands the confidence of the parliament/legislature, and exercises the full powers of the office (not serving in a caretaker/acting capacity from the previous government).\n\nIf no government forms by Jan 1, 2028, the Contract resolves to \"No one\" if that is an option and No for all other strikes. If new elections are called before government formation, the Contract resolves to \"No one\" immediately and No for all other strikes.\n\nhttps://assets.kalshi.com/contract_terms/GOVHEAD.pdf\n\n[{\"name\":\"parliament or legislature of \",\"url\":\"https://www.parliament.go.ke/\"},{\"name\":\"official government gazette or equivalent official publication of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"office of the head of state of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"major national news outlets of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://ft.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"official government websites of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com\"},{\"name\":\"The Guardian\",\"url\":\"https://www.theguardian.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com\"}]",
+      "url": "https://kalshi.com/markets/kxswedenpm/kxswedenpm-26sep13",
+      "closeAt": "2028-01-01T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "2dbb3f10dd0179a2758b6179951295f19c822db15ef5cf0799bc613eb64754b4",
+      "settlement": null,
+      "series": "KXSWEDENPM"
+    },
+    {
+      "id": "KXNCAAFMWCQUAL-26-NEV",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "nevada",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football mountain west conference championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Nevada qualify for the College Football Mountain West Conference Championship Game?",
+      "outcome": "Nevada",
+      "opposite": "Nevada",
+      "category": "Sports",
+      "rules": "If Nevada qualifies for the 2026 College Football Mountain West Conference Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafmwcqual/kxncaafmwcqual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "6250ed1687502ae0d1f8d524a514e418495ef4c56300ab10ea9d3c94ff8196c5",
+      "settlement": null,
+      "series": "KXNCAAFMWCQUAL"
+    },
+    {
+      "id": "KXNCAAFCUSAQUAL-26-WKU",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "western kentucky",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football conference usa championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Western Kentucky qualify for the College Football Conference USA Championship Game?",
+      "outcome": "Western Kentucky",
+      "opposite": "Western Kentucky",
+      "category": "Sports",
+      "rules": "If Western Kentucky qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafcusaqual/kxncaafcusaqual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "4b44806636b0d45dfdce3bcb85c7d66322d9820eacc65cb23de8b7ad639b6d94",
+      "settlement": null,
+      "series": "KXNCAAFCUSAQUAL"
+    },
+    {
+      "id": "KXNCAAFCUSAQUAL-26-MTU",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "middle tennessee",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football conference usa championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Middle Tennessee qualify for the College Football Conference USA Championship Game?",
+      "outcome": "Middle Tennessee",
+      "opposite": "Middle Tennessee",
+      "category": "Sports",
+      "rules": "If Middle Tennessee qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafcusaqual/kxncaafcusaqual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "885e9ee9330c6a593a83aeeee43f50896af0df8b56f181c3760eebefc8082b2e",
+      "settlement": null,
+      "series": "KXNCAAFCUSAQUAL"
+    },
+    {
+      "id": "KXNCAAFCUSAQUAL-26-KENN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "kennesaw st",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football conference usa championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Kennesaw St. qualify for the College Football Conference USA Championship Game?",
+      "outcome": "Kennesaw St.",
+      "opposite": "Kennesaw St.",
+      "category": "Sports",
+      "rules": "If Kennesaw St. qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafcusaqual/kxncaafcusaqual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "a1b50e7d27ed22a9311ea4316489c7f7b2919dc3b45666968d5f7dacd658d6b4",
+      "settlement": null,
+      "series": "KXNCAAFCUSAQUAL"
+    },
+    {
+      "id": "KXNCAAFAACQUAL-26-TULN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "tulane",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football american athletic conference championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Tulane qualify for the College Football American Athletic Conference Championship Game?",
+      "outcome": "Tulane",
+      "opposite": "Tulane",
+      "category": "Sports",
+      "rules": "If Tulane qualifies for the 2026 College Football American Athletic Conference Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafaacqual/kxncaafaacqual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "468c2e9f9d21eb55d0358861006ff46c3be67f7150b540cc772d777ae6a2e8d8",
+      "settlement": null,
+      "series": "KXNCAAFAACQUAL"
+    },
+    {
+      "id": "KXNCAAFAACQUAL-26-ARMY",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "army",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football american athletic conference championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Army qualify for the College Football American Athletic Conference Championship Game?",
+      "outcome": "Army",
+      "opposite": "Army",
+      "category": "Sports",
+      "rules": "If Army qualifies for the 2026 College Football American Athletic Conference Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafaacqual/kxncaafaacqual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "d330d89e21d9e62651cbc84198b3e7a2cf3ff18f54ce2ea6d2a9b8e4b4fbf3d4",
+      "settlement": null,
+      "series": "KXNCAAFAACQUAL"
+    },
+    {
+      "id": "KXNCAAFPAC12QUAL-26-FRES",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "fresno st",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [],
+        "eventKey": "college football pac 12 championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Fresno St. qualify for the College Football Pac-12 Championship Game?",
+      "outcome": "Fresno St.",
+      "opposite": "Fresno St.",
+      "category": "Sports",
+      "rules": "If Fresno St. qualifies for the 2026 College Football Pac-12 Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafpac12qual/kxncaafpac12qual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "907ab0282277470624fad827a35632740c91c5bad0a968a00e0479f5ace5ac66",
+      "settlement": null,
+      "series": "KXNCAAFPAC12QUAL"
+    },
+    {
+      "id": "KXNCAAFACCQUAL-26-VT",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "virginia tech",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football acc championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Virginia Tech qualify for the College Football Atlantic Coast Conference Championship Game?",
+      "outcome": "Virginia Tech",
+      "opposite": "Virginia Tech",
+      "category": "Sports",
+      "rules": "If Virginia Tech qualifies for the 2026 College Football Atlantic Coast Conference Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafaccqual/kxncaafaccqual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "af27f24acbebdd0038b3bdc5a55fb7b6d7704d7dfff28bef4377ca67e618918b",
+      "settlement": null,
+      "series": "KXNCAAFACCQUAL"
+    },
+    {
+      "id": "KXNCAAFB10QUAL-26-PSU",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "penn st",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football big ten championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Penn St. qualify for the College Football Big Ten Championship Game?",
+      "outcome": "Penn St.",
+      "opposite": "Penn St.",
+      "category": "Sports",
+      "rules": "If Penn St. qualifies for the 2026 College Football Big Ten Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafb10qual/kxncaafb10qual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "f6a06bf8a3a8760e37652007dca88598f448de65763cc159941bdd6fa8906376",
+      "settlement": null,
+      "series": "KXNCAAFB10QUAL"
+    },
+    {
+      "id": "KXNCAAFB10QUAL-26-ORE",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "oregon",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football big ten championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Oregon qualify for the College Football Big Ten Championship Game?",
+      "outcome": "Oregon",
+      "opposite": "Oregon",
+      "category": "Sports",
+      "rules": "If Oregon qualifies for the 2026 College Football Big Ten Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafb10qual/kxncaafb10qual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "4f2b0c9f25b0c56bdb9ca6f9a00716f4c49c5fd15a246f1675a5f7da8b00b6df",
+      "settlement": null,
+      "series": "KXNCAAFB10QUAL"
+    },
+    {
+      "id": "KXNCAAFB12QUAL-26-TCU",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "tcu",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [],
+        "eventKey": "college football big 12 championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will TCU qualify for the College Football Big 12 Championship Game?",
+      "outcome": "TCU",
+      "opposite": "TCU",
+      "category": "Sports",
+      "rules": "If TCU qualifies for the 2026 College Football Big 12 Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafb12qual/kxncaafb12qual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "26239ee6d47780f9889e22644671d77281e2f047d7a61464ffcf964cefc9356f",
+      "settlement": null,
+      "series": "KXNCAAFB12QUAL"
+    },
+    {
+      "id": "KXNCAAFB12QUAL-26-KU",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "kansas",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [],
+        "eventKey": "college football big 12 championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Kansas qualify for the College Football Big 12 Championship Game?",
+      "outcome": "Kansas",
+      "opposite": "Kansas",
+      "category": "Sports",
+      "rules": "If Kansas qualifies for the 2026 College Football Big 12 Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafb12qual/kxncaafb12qual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "beeef6ea761fd8566508447903f089871be3712460a735106b57ca8605021c2d",
+      "settlement": null,
+      "series": "KXNCAAFB12QUAL"
+    },
+    {
+      "id": "KXNCAAFB12QUAL-26-KSU",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "kansas st",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [],
+        "eventKey": "college football big 12 championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Kansas St. qualify for the College Football Big 12 Championship Game?",
+      "outcome": "Kansas St.",
+      "opposite": "Kansas St.",
+      "category": "Sports",
+      "rules": "If Kansas St. qualifies for the 2026 College Football Big 12 Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafb12qual/kxncaafb12qual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "6b0fd9f28f81de0e62e704251c9b2a82e22114f24d91928828d0f4d58ac3f320",
+      "settlement": null,
+      "series": "KXNCAAFB12QUAL"
+    },
+    {
+      "id": "KXNCAAFB12QUAL-26-ARIZ",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "arizona",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [],
+        "eventKey": "college football big 12 championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Arizona qualify for the College Football Big 12 Championship Game?",
+      "outcome": "Arizona",
+      "opposite": "Arizona",
+      "category": "Sports",
+      "rules": "If Arizona qualifies for the 2026 College Football Big 12 Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafb12qual/kxncaafb12qual-26",
+      "closeAt": "2026-12-13T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "aeb3fc2fbe4e6e3c857a5db5771a9ea917ad4aa862c19a2bad2fab46fad2cb98",
+      "settlement": null,
+      "series": "KXNCAAFB12QUAL"
+    },
+    {
+      "id": "KXNCAAFSECQ-26-OKLA",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "oklahoma",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football sec championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Oklahoma qualify for the College Football SEC Championship Game?",
+      "outcome": "Oklahoma",
+      "opposite": "Oklahoma",
+      "category": "Sports",
+      "rules": "If Oklahoma qualifies for the 2026 College Football SEC Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NEWACHIEVEMENT.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafsecq/kxncaafsecq-26",
+      "closeAt": "2026-12-06T04:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "4184f0ae03e277ed4df897a311a7146cea2fc230396f3eaf35d24ef14d4531f4",
+      "settlement": null,
+      "series": "KXNCAAFSECQ"
+    },
+    {
+      "id": "KXNCAAFSECQ-26-MSST",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "mississippi st",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football sec championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Mississippi St. qualify for the College Football SEC Championship Game?",
+      "outcome": "Mississippi St.",
+      "opposite": "Mississippi St.",
+      "category": "Sports",
+      "rules": "If Mississippi St. qualifies for the 2026 College Football SEC Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NEWACHIEVEMENT.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafsecq/kxncaafsecq-26",
+      "closeAt": "2026-12-06T04:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "b4aa6b13b49f6fadd30738dc7a1836770ec4c8171ab880e3daa7f16e3781127d",
+      "settlement": null,
+      "series": "KXNCAAFSECQ"
+    },
+    {
+      "id": "KXNCAAFSECQ-26-MISS",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "ole miss",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "college football sec championship qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Ole Miss qualify for the College Football SEC Championship Game?",
+      "outcome": "Ole Miss",
+      "opposite": "Ole Miss",
+      "category": "Sports",
+      "rules": "If Ole Miss qualifies for the 2026 College Football SEC Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NEWACHIEVEMENT.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxncaafsecq/kxncaafsecq-26",
+      "closeAt": "2026-12-06T04:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "1362df8a864ab14e2386d709464b923a41dd62839987a0cb7b5b6da27e86af4a",
+      "settlement": null,
+      "series": "KXNCAAFSECQ"
+    },
+    {
+      "id": "KXNBAEAST1SEED-26-MIA",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "basketball",
+        "competition": "nba",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "miami",
+        "entities": [],
+        "numbers": [
+          "1",
+          "2026",
+          "27"
+        ],
+        "aliases": [],
+        "eventKey": "nba eastern conference 1 seed"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Miami be the #1 seed in the Eastern Conference at the conclusion of the 2026-27 Pro Basketball regular season?",
+      "outcome": "Miami",
+      "opposite": "Miami",
+      "category": "Sports",
+      "rules": "If Miami is the #1 seed in the Eastern Conference at the conclusion of the 2026-27 Pro Basketball regular season, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NBA.pdf\n\n[{\"name\":\"the Governing League\",\"url\":\"https://www.nba.com\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "url": "https://kalshi.com/markets/kxnbaeast1seed/kxnbaeast1seed-26",
+      "closeAt": "2027-06-01T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "31589301e75c114df68a75d78d0a8977edb0b1ef01710c91201261366b68fe34",
+      "settlement": null,
+      "series": "KXNBAEAST1SEED"
+    },
+    {
+      "id": "KXTIME-26-JAM",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "james talarico",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will James Talarico be Time Person of the Year in 2026?",
+      "outcome": "James Talarico",
+      "opposite": "James Talarico",
+      "category": "Entertainment",
+      "rules": "If James Talarico is Time Person of the Year for 2026, then the market resolves to Yes.\n\nThis will count towards the payout criterion: \nIf multiple persons win, all persons that are listed are encompassed within the Payout Criterion. If, for example, the Person of the Year is \u201cJoe Biden and Kamala Harris\u201d, both \u201cJoe Biden\u201d and \u201cKamala Harris\u201d strikes are encompassed within the Payout Criterion. \nThe person must be explicitly named as the Person of the Year or pictured on the/a relevant cover if they are associated with the group/concept winning (the picture is only relevant for a natural human being winning). Some examples to illustrate this: \u201cJamal Khasogghi\u201d would resolve to Yes in 2018, when \u201cThe Guardians\u201d won, as he is also named and shown on a cover and falls within \u201cThe Guardians\u201d. Similarly, \u201cBill Gates\u201d would resolve to Yes in 2005. \nIf Time uses language that does not specifically refer to a person or organization (examples being 2018\u2019s \u201cThe Guardians of Truth\u201d or 2017\u2019s \u201cThe Silence Breakers\u201d), Kalshi will resolve markets to the most simple meaning reasonable. In those cases, \u201cJournalists\u201d and \u201cthe Me Too movement\u201d would resolve to Yes.\n\nThis does NOT count towards the payout criterion: \nIf there is no Person of the Year (and instead many variations thereof, e.g. Entertainer of the Year, Hero of the Year), that is not encompassed in the Payout Criterion. \nIf \u201cChatGPT\u201d was the Person of the Year, strikes of \u201cAI\u201d or \u201cLLMs\u201d would resolve to No, since even if they are conceptually linked, they are not synonymous (and thus are not explicitly named), and are not persons, so it would not matter if they were identified in the image. Or if \u201cSam Altman\u201d was the Person of the Year, and the cover showed a person using ChatGPT on their computer, \u201cChatGPT\u201d would not resolve to Yes because it is not a person.\n\nThis market and these products have not been endorsed by TIME. Any references to TIME, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between TIME and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TIME.pdf\n\n[{\"name\":\"TIME\",\"url\":\"https://time.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtime/kxtime-26",
+      "closeAt": "2027-01-01T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "245e128048befe5ffb1d5e99765b9e60ecfc2243b7c0235eceae64d179f2f66e",
+      "settlement": null,
+      "series": "KXTIME"
+    },
+    {
+      "id": "KXTIME-26-BEN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "benjamin netanyahu",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Benjamin Netanyahu be Time Person of the Year in 2026?",
+      "outcome": "Benjamin Netanyahu",
+      "opposite": "Benjamin Netanyahu",
+      "category": "Entertainment",
+      "rules": "If Benjamin Netanyahu is Time Person of the Year for 2026, then the market resolves to Yes.\n\nThis will count towards the payout criterion: \nIf multiple persons win, all persons that are listed are encompassed within the Payout Criterion. If, for example, the Person of the Year is \u201cJoe Biden and Kamala Harris\u201d, both \u201cJoe Biden\u201d and \u201cKamala Harris\u201d strikes are encompassed within the Payout Criterion. \nThe person must be explicitly named as the Person of the Year or pictured on the/a relevant cover if they are associated with the group/concept winning (the picture is only relevant for a natural human being winning). Some examples to illustrate this: \u201cJamal Khasogghi\u201d would resolve to Yes in 2018, when \u201cThe Guardians\u201d won, as he is also named and shown on a cover and falls within \u201cThe Guardians\u201d. Similarly, \u201cBill Gates\u201d would resolve to Yes in 2005. \nIf Time uses language that does not specifically refer to a person or organization (examples being 2018\u2019s \u201cThe Guardians of Truth\u201d or 2017\u2019s \u201cThe Silence Breakers\u201d), Kalshi will resolve markets to the most simple meaning reasonable. In those cases, \u201cJournalists\u201d and \u201cthe Me Too movement\u201d would resolve to Yes.\n\nThis does NOT count towards the payout criterion: \nIf there is no Person of the Year (and instead many variations thereof, e.g. Entertainer of the Year, Hero of the Year), that is not encompassed in the Payout Criterion. \nIf \u201cChatGPT\u201d was the Person of the Year, strikes of \u201cAI\u201d or \u201cLLMs\u201d would resolve to No, since even if they are conceptually linked, they are not synonymous (and thus are not explicitly named), and are not persons, so it would not matter if they were identified in the image. Or if \u201cSam Altman\u201d was the Person of the Year, and the cover showed a person using ChatGPT on their computer, \u201cChatGPT\u201d would not resolve to Yes because it is not a person.\n\nThis market and these products have not been endorsed by TIME. Any references to TIME, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between TIME and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TIME.pdf\n\n[{\"name\":\"TIME\",\"url\":\"https://time.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtime/kxtime-26",
+      "closeAt": "2027-01-01T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "d62d01cfbf4ccc8fd8f02ea3b0cb10dd4ed99545eb3a944e46794b83190c00fc",
+      "settlement": null,
+      "series": "KXTIME"
+    },
+    {
+      "id": "KXISRAELPM-26OCT27-NBEN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "naftali bennett",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Naftali Bennett become Prime Minister of Israel following the 2026 Israeli legislative election?",
+      "outcome": "Naftali Bennett",
+      "opposite": "Naftali Bennett",
+      "category": "Elections",
+      "rules": "If Naftali Bennett becomes Prime Minister of Israel as a result of government formation following the 2026 Israeli legislative election and meets all constitutional requirements before Oct 27, 2027, then the market resolves to Yes.\n\nThe market resolves to the first person who, as a result of government formation following the election, is formally appointed, sworn in, or invested as Prime Minister according to the country's constitutional procedures, commands the confidence of the parliament/legislature, and exercises the full powers of the office (not serving in a caretaker/acting capacity from the previous government).\n\nIf no government forms by Oct 27, 2027, the Contract resolves to \"No one\" if that is an option and No for all other strikes. If new elections are called before government formation, the Contract resolves to \"No one\" immediately and No for all other strikes.\n\nhttps://assets.kalshi.com/contract_terms/GOVHEAD.pdf\n\n[{\"name\":\"parliament or legislature of \",\"url\":\"https://www.parliament.go.ke/\"},{\"name\":\"official government gazette or equivalent official publication of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"office of the head of state of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"major national news outlets of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://ft.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"official government websites of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com\"},{\"name\":\"The Guardian\",\"url\":\"https://www.theguardian.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com\"}]",
+      "url": "https://kalshi.com/markets/kxisraelpm/kxisraelpm-26oct27",
+      "closeAt": "2027-10-27T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "563fa1536cd183b628a620b034e96db733a723884a51a9bf7c727f57a29c59f1",
+      "settlement": null,
+      "series": "KXISRAELPM"
+    },
+    {
+      "id": "KXISRAELPM-26OCT27-BNET",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "benjamin netanyahu",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Benjamin Netanyahu become Prime Minister of Israel following the 2026 Israeli legislative election?",
+      "outcome": "Benjamin Netanyahu",
+      "opposite": "Benjamin Netanyahu",
+      "category": "Elections",
+      "rules": "If Benjamin Netanyahu becomes Prime Minister of Israel as a result of government formation following the 2026 Israeli legislative election and meets all constitutional requirements before Oct 27, 2027, then the market resolves to Yes.\n\nThe market resolves to the first person who, as a result of government formation following the election, is formally appointed, sworn in, or invested as Prime Minister according to the country's constitutional procedures, commands the confidence of the parliament/legislature, and exercises the full powers of the office (not serving in a caretaker/acting capacity from the previous government).\n\nIf no government forms by Oct 27, 2027, the Contract resolves to \"No one\" if that is an option and No for all other strikes. If new elections are called before government formation, the Contract resolves to \"No one\" immediately and No for all other strikes.\n\nhttps://assets.kalshi.com/contract_terms/GOVHEAD.pdf\n\n[{\"name\":\"parliament or legislature of \",\"url\":\"https://www.parliament.go.ke/\"},{\"name\":\"official government gazette or equivalent official publication of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"office of the head of state of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"major national news outlets of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://ft.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"official government websites of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com\"},{\"name\":\"The Guardian\",\"url\":\"https://www.theguardian.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com\"}]",
+      "url": "https://kalshi.com/markets/kxisraelpm/kxisraelpm-26oct27",
+      "closeAt": "2027-10-27T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "8f1c1193da5e9aefb7ba00655d2484042913728c9d03f0fea06e32667c0ffbbc",
+      "settlement": null,
+      "series": "KXISRAELPM"
+    },
+    {
+      "id": "KXISRAELPM-26OCT27-BGAN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "benny gantz",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Benny Gantz become Prime Minister of Israel following the 2026 Israeli legislative election?",
+      "outcome": "Benny Gantz",
+      "opposite": "Benny Gantz",
+      "category": "Elections",
+      "rules": "If Benny Gantz becomes Prime Minister of Israel as a result of government formation following the 2026 Israeli legislative election and meets all constitutional requirements before Oct 27, 2027, then the market resolves to Yes.\n\nThe market resolves to the first person who, as a result of government formation following the election, is formally appointed, sworn in, or invested as Prime Minister according to the country's constitutional procedures, commands the confidence of the parliament/legislature, and exercises the full powers of the office (not serving in a caretaker/acting capacity from the previous government).\n\nIf no government forms by Oct 27, 2027, the Contract resolves to \"No one\" if that is an option and No for all other strikes. If new elections are called before government formation, the Contract resolves to \"No one\" immediately and No for all other strikes.\n\nhttps://assets.kalshi.com/contract_terms/GOVHEAD.pdf\n\n[{\"name\":\"parliament or legislature of \",\"url\":\"https://www.parliament.go.ke/\"},{\"name\":\"official government gazette or equivalent official publication of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"office of the head of state of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"major national news outlets of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://ft.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"official government websites of \",\"url\":\"https://kalshi.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com\"},{\"name\":\"The Guardian\",\"url\":\"https://www.theguardian.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com\"}]",
+      "url": "https://kalshi.com/markets/kxisraelpm/kxisraelpm-26oct27",
+      "closeAt": "2027-10-27T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "f53933c4a8ecc588a29064d6eb08d84bbaa95206fa38e95ff61b2771bd28013b",
+      "settlement": null,
+      "series": "KXISRAELPM"
+    },
+    {
+      "id": "KXNEWSOMRUN-28-27JAN01",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "before jan 1 2027",
+        "entities": [],
+        "numbers": [
+          "1",
+          "2027",
+          "1",
+          "2027"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Gavin Newsom announce a run for President of the United States before Jan 1, 2027?",
+      "outcome": "Before Jan 1, 2027",
+      "opposite": "Before Jan 1, 2027",
+      "category": "Elections",
+      "rules": "If Gavin Newsom has announced that he will run for President of the United States in 2028 before Jan 1, 2027, including running for the nomination of any political party to contest that office, then the market resolves to Yes.\n\nThe person must publicly announce their campaign for it to be reported by a Source Agency. Merely filing campaign paperwork with the Federal Election Commission or similar entity is insufficient without a public announcement. The announcement must be for the specific office and election year listed. Exploratory committees or statements of interest without formal campaign announcements do not qualify. Running for a party's nomination to contest the office counts as running for that office. The announcement must come from the person themselves or their official campaign, not from speculation or third-party sources.\n\nhttps://assets.kalshi.com/contract_terms/RUN.pdf\n\n[{\"name\":\"ABC\",\"url\":\"https://abcnews.go.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com/\"},{\"name\":\"MSNBC\",\"url\":\"https://www.msnbc.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Semafor\",\"url\":\"https://www.semafor.com/\"},{\"name\":\"The Information\",\"url\":\"https://www.theinformation.com/\"},{\"name\":\"CBS\",\"url\":\"https://www.cbsnews.com/\"},{\"name\":\"Axios\",\"url\":\"https://www.axios.com/\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com/\"}]",
+      "url": "https://kalshi.com/markets/kxnewsomrun/kxnewsomrun-28",
+      "closeAt": "2028-01-01T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "4ffdd67e9cb1debf261f750865e01b98a818816ab6a6e2b4606873c091c7169e",
+      "settlement": null,
+      "series": "KXNEWSOMRUN"
+    },
+    {
+      "id": "KXTIME-26-DAR",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "dario amodei",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Dario Amodei be Time Person of the Year in 2026?",
+      "outcome": "Dario Amodei",
+      "opposite": "Dario Amodei",
+      "category": "Entertainment",
+      "rules": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes.\n\nThis will count towards the payout criterion: \nIf multiple persons win, all persons that are listed are encompassed within the Payout Criterion. If, for example, the Person of the Year is \u201cJoe Biden and Kamala Harris\u201d, both \u201cJoe Biden\u201d and \u201cKamala Harris\u201d strikes are encompassed within the Payout Criterion. \nThe person must be explicitly named as the Person of the Year or pictured on the/a relevant cover if they are associated with the group/concept winning (the picture is only relevant for a natural human being winning). Some examples to illustrate this: \u201cJamal Khasogghi\u201d would resolve to Yes in 2018, when \u201cThe Guardians\u201d won, as he is also named and shown on a cover and falls within \u201cThe Guardians\u201d. Similarly, \u201cBill Gates\u201d would resolve to Yes in 2005. \nIf Time uses language that does not specifically refer to a person or organization (examples being 2018\u2019s \u201cThe Guardians of Truth\u201d or 2017\u2019s \u201cThe Silence Breakers\u201d), Kalshi will resolve markets to the most simple meaning reasonable. In those cases, \u201cJournalists\u201d and \u201cthe Me Too movement\u201d would resolve to Yes.\n\nThis does NOT count towards the payout criterion: \nIf there is no Person of the Year (and instead many variations thereof, e.g. Entertainer of the Year, Hero of the Year), that is not encompassed in the Payout Criterion. \nIf \u201cChatGPT\u201d was the Person of the Year, strikes of \u201cAI\u201d or \u201cLLMs\u201d would resolve to No, since even if they are conceptually linked, they are not synonymous (and thus are not explicitly named), and are not persons, so it would not matter if they were identified in the image. Or if \u201cSam Altman\u201d was the Person of the Year, and the cover showed a person using ChatGPT on their computer, \u201cChatGPT\u201d would not resolve to Yes because it is not a person.\n\nThis market and these products have not been endorsed by TIME. Any references to TIME, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between TIME and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TIME.pdf\n\n[{\"name\":\"TIME\",\"url\":\"https://time.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtime/kxtime-26",
+      "closeAt": "2027-01-01T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "0d5dbae6102b353300d7bff2320d027743b54c8d64117cc4d7cccd3d6a7726d6",
+      "settlement": null,
+      "series": "KXTIME"
+    },
+    {
+      "id": "KXNCAAFPAC12-26-ORST",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "oregon st",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [],
+        "eventKey": "pac 12 champion"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Oregon St. win the College Football Pac-12 Championship?",
+      "outcome": "Oregon St.",
+      "opposite": "Oregon St.",
+      "category": "Sports",
+      "rules": "If Oregon St. wins the 2026 College Football Pac-12 Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAF.pdf\n\n[{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+      "url": "https://kalshi.com/markets/kxncaafpac12/kxncaafpac12-26",
+      "closeAt": "2026-12-06T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "dfd7b87e81cb67866aef768123611eeccd856cd9da078c75c0ea5ad07d2b637e",
+      "settlement": null,
+      "series": "KXNCAAFPAC12"
+    },
+    {
+      "id": "KXNCAAFAAC-26-NAVY",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "navy",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "american athletic conference champion"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Navy win the College Football American Athletic Conference Championship?",
+      "outcome": "Navy",
+      "opposite": "Navy",
+      "category": "Sports",
+      "rules": "If Navy wins the 2026 College Football American Athletic Conference Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAF.pdf\n\n[{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+      "url": "https://kalshi.com/markets/kxncaafaac/kxncaafaac-26",
+      "closeAt": "2026-12-06T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "4b8ca51e7385382910dcb6256808a28a75106c5ac870151444850708be5a0693",
+      "settlement": null,
+      "series": "KXNCAAFAAC"
+    },
+    {
+      "id": "KXNCAAFSBELT-26-TROY",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "troy",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "sun belt champion"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Troy win the College Football Sun Belt Championship?",
+      "outcome": "Troy",
+      "opposite": "Troy",
+      "category": "Sports",
+      "rules": "If Troy wins the 2026 College Football Sun Belt Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAF.pdf\n\n[{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+      "url": "https://kalshi.com/markets/kxncaafsbelt/kxncaafsbelt-26",
+      "closeAt": "2026-12-06T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "80f82cf61be7e1f6962af08a709412d4e5547863d044fb2b28ff1a6c26136a7f",
+      "settlement": null,
+      "series": "KXNCAAFSBELT"
+    },
+    {
+      "id": "KXMLBAL-26-CWS",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "chicago ws",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "mlb american league championship"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Chicago WS win the 2026 Pro Baseball American League Championship?",
+      "outcome": "Chicago WS",
+      "opposite": "Chicago WS",
+      "category": "Sports",
+      "rules": "If Chicago WS win the 2026 Pro Baseball American League Championship, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/TITLE.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"},{\"name\":\"AP\",\"url\":\"https://apnews.com/\"}]",
+      "url": "https://kalshi.com/markets/kxmlbal/kxmlbal-26",
+      "closeAt": "2026-11-01T04:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "f4b37b4f1cdf2b01e2a91882c7eb78ed81908af2118f63da481218b044db8890",
+      "settlement": null,
+      "series": "KXMLBAL"
+    },
+    {
+      "id": "KXTIME-26-JP",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "jerome powell",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Jerome Powell be Time Person of the Year in 2026?",
+      "outcome": "Jerome Powell",
+      "opposite": "Jerome Powell",
+      "category": "Entertainment",
+      "rules": "If Jerome Powell is Time Person of the Year for 2026, then the market resolves to Yes.\n\nThis will count towards the payout criterion: \nIf multiple persons win, all persons that are listed are encompassed within the Payout Criterion. If, for example, the Person of the Year is \u201cJoe Biden and Kamala Harris\u201d, both \u201cJoe Biden\u201d and \u201cKamala Harris\u201d strikes are encompassed within the Payout Criterion. \nThe person must be explicitly named as the Person of the Year or pictured on the/a relevant cover if they are associated with the group/concept winning (the picture is only relevant for a natural human being winning). Some examples to illustrate this: \u201cJamal Khasogghi\u201d would resolve to Yes in 2018, when \u201cThe Guardians\u201d won, as he is also named and shown on a cover and falls within \u201cThe Guardians\u201d. Similarly, \u201cBill Gates\u201d would resolve to Yes in 2005. \nIf Time uses language that does not specifically refer to a person or organization (examples being 2018\u2019s \u201cThe Guardians of Truth\u201d or 2017\u2019s \u201cThe Silence Breakers\u201d), Kalshi will resolve markets to the most simple meaning reasonable. In those cases, \u201cJournalists\u201d and \u201cthe Me Too movement\u201d would resolve to Yes.\n\nThis does NOT count towards the payout criterion: \nIf there is no Person of the Year (and instead many variations thereof, e.g. Entertainer of the Year, Hero of the Year), that is not encompassed in the Payout Criterion. \nIf \u201cChatGPT\u201d was the Person of the Year, strikes of \u201cAI\u201d or \u201cLLMs\u201d would resolve to No, since even if they are conceptually linked, they are not synonymous (and thus are not explicitly named), and are not persons, so it would not matter if they were identified in the image. Or if \u201cSam Altman\u201d was the Person of the Year, and the cover showed a person using ChatGPT on their computer, \u201cChatGPT\u201d would not resolve to Yes because it is not a person.\n\nThis market and these products have not been endorsed by TIME. Any references to TIME, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between TIME and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TIME.pdf\n\n[{\"name\":\"TIME\",\"url\":\"https://time.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtime/kxtime-26",
+      "closeAt": "2027-01-01T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "467ef27f97de69a2092b270a6ec739a896e1d982f20357b5dfa2d34d3a032bcb",
+      "settlement": null,
+      "series": "KXTIME"
+    },
+    {
+      "id": "KXTIME-26-EM",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "elon musk",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Elon Musk be Time Person of the Year in 2026?",
+      "outcome": "Elon Musk",
+      "opposite": "Elon Musk",
+      "category": "Entertainment",
+      "rules": "If Elon Musk is Time Person of the Year for 2026, then the market resolves to Yes.\n\nThis will count towards the payout criterion: \nIf multiple persons win, all persons that are listed are encompassed within the Payout Criterion. If, for example, the Person of the Year is \u201cJoe Biden and Kamala Harris\u201d, both \u201cJoe Biden\u201d and \u201cKamala Harris\u201d strikes are encompassed within the Payout Criterion. \nThe person must be explicitly named as the Person of the Year or pictured on the/a relevant cover if they are associated with the group/concept winning (the picture is only relevant for a natural human being winning). Some examples to illustrate this: \u201cJamal Khasogghi\u201d would resolve to Yes in 2018, when \u201cThe Guardians\u201d won, as he is also named and shown on a cover and falls within \u201cThe Guardians\u201d. Similarly, \u201cBill Gates\u201d would resolve to Yes in 2005. \nIf Time uses language that does not specifically refer to a person or organization (examples being 2018\u2019s \u201cThe Guardians of Truth\u201d or 2017\u2019s \u201cThe Silence Breakers\u201d), Kalshi will resolve markets to the most simple meaning reasonable. In those cases, \u201cJournalists\u201d and \u201cthe Me Too movement\u201d would resolve to Yes.\n\nThis does NOT count towards the payout criterion: \nIf there is no Person of the Year (and instead many variations thereof, e.g. Entertainer of the Year, Hero of the Year), that is not encompassed in the Payout Criterion. \nIf \u201cChatGPT\u201d was the Person of the Year, strikes of \u201cAI\u201d or \u201cLLMs\u201d would resolve to No, since even if they are conceptually linked, they are not synonymous (and thus are not explicitly named), and are not persons, so it would not matter if they were identified in the image. Or if \u201cSam Altman\u201d was the Person of the Year, and the cover showed a person using ChatGPT on their computer, \u201cChatGPT\u201d would not resolve to Yes because it is not a person.\n\nThis market and these products have not been endorsed by TIME. Any references to TIME, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between TIME and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TIME.pdf\n\n[{\"name\":\"TIME\",\"url\":\"https://time.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtime/kxtime-26",
+      "closeAt": "2027-01-01T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "3539215abbdf354cb4a29e458a9a569d86040dc1575dd050dc0b8fa0deff0cf0",
+      "settlement": null,
+      "series": "KXTIME"
+    },
+    {
+      "id": "KX1ALBUM-26DEC-KEN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "kendrick lamar",
+        "entities": [],
+        "numbers": [
+          "1"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Kendrick Lamar have a #1 album this year?",
+      "outcome": "Kendrick Lamar",
+      "opposite": "Kendrick Lamar",
+      "category": "Entertainment",
+      "rules": "If Kendrick Lamar has a #1 album on the Billboard 200 by Dec 26, 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Billboard. Any references to \"Billboard\", the \"Hot 100,\" or any other associated marks are descriptive only, and do not indicate an endorsement of this product or any affiliation between Billboard and Kalshi. For the purposes of this market, the last Billboard chart that will be included is the one published for Dec 26, 2026.\n\nhttps://assets.kalshi.com/contract_terms/TOPALBUMBY.pdf\n\n[{\"name\":\"Billboard\",\"url\":\"https://www.billboard.com/charts/billboard-200/\"}]",
+      "url": "https://kalshi.com/markets/kx1album/kx1album-26dec",
+      "closeAt": "2026-12-27T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "c363649b47e91aabd352faf8d8d6a4550f193205648f77f8ecdd55ce49a5e744",
+      "settlement": null,
+      "series": "KX1ALBUM"
+    },
+    {
+      "id": "KXNEXTISRAELPM-45JAN01-BGAN",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "benny gantz",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Benny Gantz be the next Prime Minister of Israel?",
+      "outcome": "Benny Gantz",
+      "opposite": "Benny Gantz",
+      "category": "Elections",
+      "rules": "If the first new person to hold Prime Minister of Israel after Issuance is Benny Gantz, then the market resolves to Yes.\n\nThe market resolves based on who actually assumes the office of Prime Minister, not who is elected or nominated. Acting or interim appointments count as holding the position if they formally assume the office. The person must be different from whoever held the position at market issuance - if the same person continues in office through the expiration date, all markets resolve to No. Resolution is based on official announcements from the country's legislature or government, with The New York Times as a secondary source for confirmation.\n\nhttps://assets.kalshi.com/contract_terms/NEXTPM.pdf\n\n[{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"}]",
+      "url": "https://kalshi.com/markets/kxnextisraelpm/kxnextisraelpm-45jan01",
+      "closeAt": "2045-01-01T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "d0774a574150aa9004242ae46a913dea452025ccc880f91b7f1dc2cb3995a008",
+      "settlement": null,
+      "series": "KXNEXTISRAELPM"
+    },
+    {
+      "id": "KXTOPARTIST-26B-MOR",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "morgan wallen",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Who will be the top Spotify artist this year?",
+      "outcome": "Morgan Wallen",
+      "opposite": "Morgan Wallen",
+      "category": "Entertainment",
+      "rules": "If Morgan Wallen is the most streamed Spotify artist in 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf\n\n[{\"name\":\"Spotify\",\"url\":\"https://open.spotify.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtopartist/kxtopartist-26b",
+      "closeAt": "2026-12-31T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "0a3d3a7714237cd73b7b69b73b58f59a0e446d98869d9215545f56692c9e5afa",
+      "settlement": null,
+      "series": "KXTOPARTIST"
+    },
+    {
+      "id": "KXTOPARTIST-26B-DRA",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "drake",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Who will be the top Spotify artist this year?",
+      "outcome": "Drake",
+      "opposite": "Drake",
+      "category": "Entertainment",
+      "rules": "If Drake is the most streamed Spotify artist in 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf\n\n[{\"name\":\"Spotify\",\"url\":\"https://open.spotify.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtopartist/kxtopartist-26b",
+      "closeAt": "2026-12-31T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "4ceff58d2f2471822a1d28578a034b9af5a6d5ca8e50aba1ab31b560cfc3a9a5",
+      "settlement": null,
+      "series": "KXTOPARTIST"
+    },
+    {
+      "id": "KXTOPARTIST-26B-BAD",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "outcome": "bad bunny",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Who will be the top Spotify artist this year?",
+      "outcome": "Bad Bunny",
+      "opposite": "Bad Bunny",
+      "category": "Entertainment",
+      "rules": "If Bad Bunny is the most streamed Spotify artist in 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf\n\n[{\"name\":\"Spotify\",\"url\":\"https://open.spotify.com/\"}]",
+      "url": "https://kalshi.com/markets/kxtopartist/kxtopartist-26b",
+      "closeAt": "2026-12-31T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+      "settlement": null,
+      "series": "KXTOPARTIST"
+    },
+    {
+      "id": "KXARGENTINAPRES-27-SMAS",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "marketType": "winner",
+        "outcome": "sergio massa",
+        "entities": [],
+        "numbers": [],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Who will win the next Argentine presidential election?",
+      "outcome": "Sergio Massa",
+      "opposite": "Sergio Massa",
+      "category": "Elections",
+      "rules": "If the winner of the next Argentine presidential election is Sergio Massa, then the market resolves to Yes.\n\nThis market may resolve early once a consensus of designated media sources has declared a winner. See full rules for details.\n\nhttps://assets.kalshi.com/contract_terms/ELECTION.pdf\n\n[{\"name\":\"or equivalent electoral authority of the relevant jurisdiction; the formal proclamation by the head of state or government when constitutionally required; for religious elections\",\"url\":\"https://kalshi.com/\"},{\"name\":\"in hierarchical order: Primary Sources: the official electoral commission\",\"url\":\"https://kalshi.com/\"},{\"name\":\"constitutional court\",\"url\":\"https://kalshi.com/\"}]",
+      "url": "https://kalshi.com/markets/kxargentinapres/kxargentinapres-27",
+      "closeAt": "2027-10-31T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "7e3ab0c3cff6f92861318a39325dc03dedbc08f382606730f00b021d9aa5cb1c",
+      "settlement": null,
+      "series": "KXARGENTINAPRES"
+    },
+    {
+      "id": "KXFRENCHPRES-27-MLEP",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "marketType": "winner",
+        "outcome": "marine le pen",
+        "entities": [],
+        "numbers": [
+          "2027"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Marine Le Pen win the 2027 French presidential election?",
+      "outcome": "Marine Le Pen",
+      "opposite": "Marine Le Pen",
+      "category": "Elections",
+      "rules": "If Marine Le Pen wins the next French presidential election, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/FRENCHPRES.pdf\n\n[{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com/\"},{\"name\":\"MSNBC\",\"url\":\"https://www.msnbc.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Semafor\",\"url\":\"https://www.semafor.com/\"},{\"name\":\"ABC\",\"url\":\"https://abcnews.go.com/\"},{\"name\":\"The Information\",\"url\":\"https://www.theinformation.com/\"},{\"name\":\"CBS\",\"url\":\"https://www.cbsnews.com/\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"Axios\",\"url\":\"https://www.axios.com/\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com/\"}]",
+      "url": "https://kalshi.com/markets/kxfrenchpres/kxfrenchpres-27",
+      "closeAt": "2027-05-31T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "251cd1a0cc3aae5a965d169a408683ff39ef6a16154309135df3d6baaba15d75",
+      "settlement": null,
+      "series": "KXFRENCHPRES"
+    },
+    {
+      "id": "KXPRESNOMD-28-MK",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "marketType": "winner",
+        "outcome": "mark kelly",
+        "entities": [],
+        "numbers": [
+          "2028"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Mark Kelly be the Democratic Presidential nominee in 2028?",
+      "outcome": "Mark Kelly",
+      "opposite": "Mark Kelly",
+      "category": "Elections",
+      "rules": "If Mark Kelly wins and accepts the nomination for the Presidency for the Democratic party in 2028, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/PRESNOM.pdf\n\n[{\"name\":\"Republican Party\",\"url\":\"https://gop.com/\"},{\"name\":\"Democratic Party\",\"url\":\"https://democrats.org/\"}]",
+      "url": "https://kalshi.com/markets/kxpresnomd/kxpresnomd-28",
+      "closeAt": "2028-11-07T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "04a47d2dcac3586b1321466305434e39d0eacb0c07f08da644cd8d0e2e5af873",
+      "settlement": null,
+      "series": "KXPRESNOMD"
+    },
+    {
+      "id": "KXPRESNOMD-28-KH",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "marketType": "winner",
+        "outcome": "kamala harris",
+        "entities": [],
+        "numbers": [
+          "2028"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Kamala Harris be the Democratic Presidential nominee in 2028?",
+      "outcome": "Kamala Harris",
+      "opposite": "Kamala Harris",
+      "category": "Elections",
+      "rules": "If Kamala Harris wins and accepts the nomination for the Presidency for the Democratic party in 2028, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/PRESNOM.pdf\n\n[{\"name\":\"Republican Party\",\"url\":\"https://gop.com/\"},{\"name\":\"Democratic Party\",\"url\":\"https://democrats.org/\"}]",
+      "url": "https://kalshi.com/markets/kxpresnomd/kxpresnomd-28",
+      "closeAt": "2028-11-07T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "aa303fcca26dc58f7958521571f95af6b17db12cc6b179ae57a6940164b69341",
+      "settlement": null,
+      "series": "KXPRESNOMD"
+    },
+    {
+      "id": "KXPRESNOMD-28-AB",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "marketType": "winner",
+        "outcome": "andy beshear",
+        "entities": [],
+        "numbers": [
+          "2028"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Andy Beshear be the Democratic Presidential nominee in 2028?",
+      "outcome": "Andy Beshear",
+      "opposite": "Andy Beshear",
+      "category": "Elections",
+      "rules": "If Andy Beshear wins and accepts the nomination for the Presidency for the Democratic party in 2028, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/PRESNOM.pdf\n\n[{\"name\":\"Republican Party\",\"url\":\"https://gop.com/\"},{\"name\":\"Democratic Party\",\"url\":\"https://democrats.org/\"}]",
+      "url": "https://kalshi.com/markets/kxpresnomd/kxpresnomd-28",
+      "closeAt": "2028-11-07T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "6b776e6499bdd886fba64c091cc2150779be2b992667e9d085e24e70eaa5fe17",
+      "settlement": null,
+      "series": "KXPRESNOMD"
+    }
+  ],
+  "poly": [
+    {
+      "id": "tec-mlb-alchamp-2026-09-27-cws",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-09-07T00:00:00.000Z",
+        "eventDate": "2026-09-07",
+        "participants": [
+          "white sox"
+        ],
+        "participant": "white sox",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "white sox",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "white sox",
+            "venue": "poly",
+            "venueId": "3009",
+            "aliases": [
+              "chicago white sox",
+              "chicago white sox",
+              "white sox",
+              "cws",
+              "cws"
+            ]
+          },
+          {
+            "name": "white sox",
+            "venue": "poly",
+            "venueId": "3009",
+            "aliases": [
+              "chicago white sox",
+              "chicago white sox",
+              "white sox",
+              "cws",
+              "cws"
+            ]
+          }
+        ],
+        "eventKey": "american league champion"
+      },
+      "title": "Chicago White Sox \u00b7 American League Champion",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "Will Chicago White Sox win the 2026 American League pennant, scheduled for October 23, 2026? If the event is postponed, delayed, or rescheduled, the expiration date will be amended to align with the new event date. If the event is not rescheduled within two weeks of the originally scheduled date, the instrument may settle at last fair market prices. If the event is canceled, the instrument may settle at last fair market prices. If the team is eliminated from contention, the instrument will settle to $0.00.",
+      "url": "https://polymarket.us/event/tec-mlb-alchamp-2026-09-27-cws",
+      "closeAt": "2026-11-06T21:20:09Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 1,
+      "hash": "b7f0991e82796aa1e343579de6403e76c868de6258f58f5797257b502d84117f",
+      "settlement": null
+    },
+    {
+      "id": "tpoyc-2026-jerpow",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "2026",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "time person of the year 2026"
+      },
+      "title": "Jerome Powell \u00b7 TIME Person of the Year 2026",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "If Jerome Powell is TIME Person of the Year in 2026, this market will settle to Yes. Outcome verified by TIME Magazine.\n\nA listed option will be considered TIME Person of the Year if they are explicitly named by TIME as TIME Person of the Year. Additionally, the following rules apply:\n\nIf multiple persons, concepts, groups, entities, or things are named TIME Person of the Year, each such named person, concept, group, entity, or thing will be considered TIME Person of the Year.\n\nIf the TIME Person of the Year is a non-human concept, group, entity, or thing, a listed person will still be considered to be TIME Person of the Year if the person is directly associated with the concept, group, entity or thing named TIME Person of the Year and is pictured on any official TIME Person of the Year cover. For example, in 2025 when TIME Person of the Year was Architects of AI, Contracts for Sam Altman would have settled to Yes, as Altman was associated with the concept and pictured on the cover. However, if Sam Altman were Person of the Year, and ChatGPT was shown on the cover, this would not qualify for ChatGPT because ChatGPT is not a person.\n\nIf the TIME Person of the Year is a specific concept, group, entity, or thing (e.g., artificial intelligence), listed non-human concepts, groups, entities, or things will be considered TIME Person of the Year only if they are synonymous with the announced TIME Person of the Year. For example, if ChatGPT were TIME Person of the Year, Contracts for AI or LLMs would not settle to Yes because, while they are conceptually linked, they are not synonymous.\n\nIf TIME uses language that does not refer to a specific, commonly-recognized, concept, group, entity, or thing (e.g., 2011s The Protester or 2017s The Silence Breakers), the TIME Person of the Year feature article will be used to determine the meaning of the language defining TIME Person of the Year. In such cases non-human concepts, groups, entities, or things will be considered TIME Person of the Year if they can be reasonably understood as equivalent to the meaning of the language used to define TIME Person of the Year. For example, Contracts for The Me Too Movement would have settled to Yes in 2017.",
+      "url": "https://polymarket.us/event/tpoyc-2026-jerpow",
+      "closeAt": "2027-01-15T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "d015a6b7aea729e61af4913309ee4357acdc976e179e830947c67a8f1be93554",
+      "settlement": null
+    },
+    {
+      "id": "tpoyc-2026-bennet",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "2026",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "time person of the year 2026"
+      },
+      "title": "Benjamin Netanyahu \u00b7 TIME Person of the Year 2026",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "If Benjamin Netanyahu is TIME Person of the Year in 2026, this market will settle to Yes. Outcome verified by TIME Magazine.\n\nA listed option will be considered TIME Person of the Year if they are explicitly named by TIME as TIME Person of the Year. Additionally, the following rules apply:\n\nIf multiple persons, concepts, groups, entities, or things are named TIME Person of the Year, each such named person, concept, group, entity, or thing will be considered TIME Person of the Year.\n\nIf the TIME Person of the Year is a non-human concept, group, entity, or thing, a listed person will still be considered to be TIME Person of the Year if the person is directly associated with the concept, group, entity or thing named TIME Person of the Year and is pictured on any official TIME Person of the Year cover. For example, in 2025 when TIME Person of the Year was Architects of AI, Contracts for Sam Altman would have settled to Yes, as Altman was associated with the concept and pictured on the cover. However, if Sam Altman were Person of the Year, and ChatGPT was shown on the cover, this would not qualify for ChatGPT because ChatGPT is not a person.\n\nIf the TIME Person of the Year is a specific concept, group, entity, or thing (e.g., artificial intelligence), listed non-human concepts, groups, entities, or things will be considered TIME Person of the Year only if they are synonymous with the announced TIME Person of the Year. For example, if ChatGPT were TIME Person of the Year, Contracts for AI or LLMs would not settle to Yes because, while they are conceptually linked, they are not synonymous.\n\nIf TIME uses language that does not refer to a specific, commonly-recognized, concept, group, entity, or thing (e.g., 2011s The Protester or 2017s The Silence Breakers), the TIME Person of the Year feature article will be used to determine the meaning of the language defining TIME Person of the Year. In such cases non-human concepts, groups, entities, or things will be considered TIME Person of the Year if they can be reasonably understood as equivalent to the meaning of the language used to define TIME Person of the Year. For example, Contracts for The Me Too Movement would have settled to Yes in 2017.",
+      "url": "https://polymarket.us/event/tpoyc-2026-bennet",
+      "closeAt": "2027-01-15T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "dc4bfb10b685965011906c2d081f29a2b7862336dea934a1e4331f601bc9112d",
+      "settlement": null
+    },
+    {
+      "id": "tpoyc-2026-jamtal",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "2026",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "time person of the year 2026"
+      },
+      "title": "James Talarico \u00b7 TIME Person of the Year 2026",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "If James Talarico is TIME Person of the Year in 2026, this market will settle to Yes. Outcome verified by TIME Magazine.\n\nA listed option will be considered TIME Person of the Year if they are explicitly named by TIME as TIME Person of the Year. Additionally, the following rules apply:\n\nIf multiple persons, concepts, groups, entities, or things are named TIME Person of the Year, each such named person, concept, group, entity, or thing will be considered TIME Person of the Year.\n\nIf the TIME Person of the Year is a non-human concept, group, entity, or thing, a listed person will still be considered to be TIME Person of the Year if the person is directly associated with the concept, group, entity or thing named TIME Person of the Year and is pictured on any official TIME Person of the Year cover. For example, in 2025 when TIME Person of the Year was Architects of AI, Contracts for Sam Altman would have settled to Yes, as Altman was associated with the concept and pictured on the cover. However, if Sam Altman were Person of the Year, and ChatGPT was shown on the cover, this would not qualify for ChatGPT because ChatGPT is not a person.\n\nIf the TIME Person of the Year is a specific concept, group, entity, or thing (e.g., artificial intelligence), listed non-human concepts, groups, entities, or things will be considered TIME Person of the Year only if they are synonymous with the announced TIME Person of the Year. For example, if ChatGPT were TIME Person of the Year, Contracts for AI or LLMs would not settle to Yes because, while they are conceptually linked, they are not synonymous.\n\nIf TIME uses language that does not refer to a specific, commonly-recognized, concept, group, entity, or thing (e.g., 2011s The Protester or 2017s The Silence Breakers), the TIME Person of the Year feature article will be used to determine the meaning of the language defining TIME Person of the Year. In such cases non-human concepts, groups, entities, or things will be considered TIME Person of the Year if they can be reasonably understood as equivalent to the meaning of the language used to define TIME Person of the Year. For example, Contracts for The Me Too Movement would have settled to Yes in 2017.",
+      "url": "https://polymarket.us/event/tpoyc-2026-jamtal",
+      "closeAt": "2027-01-15T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "e7e9aa852656fb2a81d58fc4f577f9b8143c3320d584ac02251a6817adcbf439",
+      "settlement": null
+    },
+    {
+      "id": "tpoyc-2026-elomus",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "2026",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "time person of the year 2026"
+      },
+      "title": "Elon Musk \u00b7 TIME Person of the Year 2026",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "If Elon Musk is TIME Person of the Year in 2026, this market will settle to Yes. Outcome verified by TIME Magazine.\n\nA listed option will be considered TIME Person of the Year if they are explicitly named by TIME as TIME Person of the Year. Additionally, the following rules apply:\n\nIf multiple persons, concepts, groups, entities, or things are named TIME Person of the Year, each such named person, concept, group, entity, or thing will be considered TIME Person of the Year.\n\nIf the TIME Person of the Year is a non-human concept, group, entity, or thing, a listed person will still be considered to be TIME Person of the Year if the person is directly associated with the concept, group, entity or thing named TIME Person of the Year and is pictured on any official TIME Person of the Year cover. For example, in 2025 when TIME Person of the Year was Architects of AI, Contracts for Sam Altman would have settled to Yes, as Altman was associated with the concept and pictured on the cover. However, if Sam Altman were Person of the Year, and ChatGPT was shown on the cover, this would not qualify for ChatGPT because ChatGPT is not a person.\n\nIf the TIME Person of the Year is a specific concept, group, entity, or thing (e.g., artificial intelligence), listed non-human concepts, groups, entities, or things will be considered TIME Person of the Year only if they are synonymous with the announced TIME Person of the Year. For example, if ChatGPT were TIME Person of the Year, Contracts for AI or LLMs would not settle to Yes because, while they are conceptually linked, they are not synonymous.\n\nIf TIME uses language that does not refer to a specific, commonly-recognized, concept, group, entity, or thing (e.g., 2011s The Protester or 2017s The Silence Breakers), the TIME Person of the Year feature article will be used to determine the meaning of the language defining TIME Person of the Year. In such cases non-human concepts, groups, entities, or things will be considered TIME Person of the Year if they can be reasonably understood as equivalent to the meaning of the language used to define TIME Person of the Year. For example, Contracts for The Me Too Movement would have settled to Yes in 2017.",
+      "url": "https://polymarket.us/event/tpoyc-2026-elomus",
+      "closeAt": "2027-01-15T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "dfc8bedbc286eb10477323eeb50873e882454809849b377fe8b5871e1f17c76f",
+      "settlement": null
+    },
+    {
+      "id": "tpoyc-2026-daramo",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "2026",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "time person of the year 2026"
+      },
+      "title": "Dario Amodei \u00b7 TIME Person of the Year 2026",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes. Outcome verified by TIME Magazine.\n\nA listed option will be considered TIME Person of the Year if they are explicitly named by TIME as TIME Person of the Year. Additionally, the following rules apply:\n\nIf multiple persons, concepts, groups, entities, or things are named TIME Person of the Year, each such named person, concept, group, entity, or thing will be considered TIME Person of the Year.\n\nIf the TIME Person of the Year is a non-human concept, group, entity, or thing, a listed person will still be considered to be TIME Person of the Year if the person is directly associated with the concept, group, entity or thing named TIME Person of the Year and is pictured on any official TIME Person of the Year cover. For example, in 2025 when TIME Person of the Year was Architects of AI, Contracts for Sam Altman would have settled to Yes, as Altman was associated with the concept and pictured on the cover. However, if Sam Altman were Person of the Year, and ChatGPT was shown on the cover, this would not qualify for ChatGPT because ChatGPT is not a person.\n\nIf the TIME Person of the Year is a specific concept, group, entity, or thing (e.g., artificial intelligence), listed non-human concepts, groups, entities, or things will be considered TIME Person of the Year only if they are synonymous with the announced TIME Person of the Year. For example, if ChatGPT were TIME Person of the Year, Contracts for AI or LLMs would not settle to Yes because, while they are conceptually linked, they are not synonymous.\n\nIf TIME uses language that does not refer to a specific, commonly-recognized, concept, group, entity, or thing (e.g., 2011s The Protester or 2017s The Silence Breakers), the TIME Person of the Year feature article will be used to determine the meaning of the language defining TIME Person of the Year. In such cases non-human concepts, groups, entities, or things will be considered TIME Person of the Year if they can be reasonably understood as equivalent to the meaning of the language used to define TIME Person of the Year. For example, Contracts for The Me Too Movement would have settled to Yes in 2017.",
+      "url": "https://polymarket.us/event/tpoyc-2026-daramo",
+      "closeAt": "2027-01-15T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "0882bd0bcbcffbc419891f9cebdfd28c8091aaefd07df861f6378e8f578d54ac",
+      "settlement": null
+    },
+    {
+      "id": "cranc-uspres28-12-31-2026-gavnew",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "uspres28",
+        "eventAt": "2027-01-01T04:59:00.000Z",
+        "eventDate": "2027-01-01",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "who will announce a presidential run in 2026"
+      },
+      "title": "Gavin Newsom \u00b7 Who Will Announce a Presidential Run in 2026?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Gavin Newsom announces they will run for President of the United States in the 2028 United States Presidential election by December 31, 2026, 11:59 PM ET. Outcome sourced from public announcements and communications from Gavin Newsom. \n\nTo qualify, Gavin Newsom, or their authorized representatives, must publicly and unambiguously declare that Gavin Newsom will be a candidate in the 2028 United States Presidential election, including a run for a party's nomination. Official candidacy filing is not required. Conditional, non-definitive, or exploratory statements do not qualify, including statements that Gavin Newsom is considering or open to a run, likely to run, or will run if specified conditions are met.",
+      "url": "https://polymarket.us/event/cranc-uspres28-12-31-2026-gavnew",
+      "closeAt": "2027-01-15T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "5210cad91d2a59e1fda23876df6a976ce58cc3fe09266d78c89c222c23089213",
+      "settlement": null
+    },
+    {
+      "id": "mlaec-isrpol-pm-2026-10-27-nafben",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "isrpol",
+        "eventAt": "2026-10-27T16:00:00.000Z",
+        "eventDate": "2026-10-27",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "prime minister of israel after the next election"
+      },
+      "title": "Naftali Bennett \u00b7 Prime Minister of Israel After the Next Election",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Naftali Bennett is the first individual to formally assume the office of Prime Minister of Israel as part of government formation following the next Israeli Parliamentary election. Outcome sourced from the Government of Israel.\n\nAny acting, interim, or caretaker Prime Minister will not count toward the settlement of this market. If the next Israeli parliamentary election takes place, and a new election is called prior to any individual formally assuming the office of Prime Minister of Israel, this market will settle based on the next individual to assume the office as part of government formation following the new election.",
+      "url": "https://polymarket.us/event/mlaec-isrpol-pm-2026-10-27-nafben",
+      "closeAt": "2026-11-11T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "31bc506de07da5f40d8eb16b746202c79a9d4d04c469dd43643d8477276d7d3c",
+      "settlement": null
+    },
+    {
+      "id": "ewc-pres-fra-2027-04-11-marlep",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "pres",
+        "eventAt": "2027-04-11T16:00:00.000Z",
+        "eventDate": "2027-04-11",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2027"
+        ],
+        "aliases": [],
+        "eventKey": "2027 french presidential election winner"
+      },
+      "title": "Marine Le Pen \u00b7 2027 French Presidential Election Winner",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "If Marine Le Pen wins the 2027 French Presidential Election, including any potential runoff, this market will settle to Yes. Outcome verified from relevant government authorities.\n\nIn the event that the 2027 French Presidential Election is rescheduled, this market will settle based on the results of the next French Presidential Election to be held within two years of April 18, 2027.",
+      "url": "https://polymarket.us/event/ewc-pres-fra-2027-04-11-marlep",
+      "closeAt": "2027-04-26T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 1,
+      "hash": "dd38878c751b1d35fbdab629c2d518ef87227c81ead2c74c238d4e38e0e44205",
+      "settlement": null
+    },
+    {
+      "id": "mlaec-isrpol-pm-2026-10-27-bengan",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "isrpol",
+        "eventAt": "2026-10-27T16:00:00.000Z",
+        "eventDate": "2026-10-27",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "prime minister of israel after the next election"
+      },
+      "title": "Benny Gantz \u00b7 Prime Minister of Israel After the Next Election",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Benny Gantz is the first individual to formally assume the office of Prime Minister of Israel as part of government formation following the next Israeli Parliamentary election. Outcome sourced from the Government of Israel.\n\nAny acting, interim, or caretaker Prime Minister will not count toward the settlement of this market. If the next Israeli parliamentary election takes place, and a new election is called prior to any individual formally assuming the office of Prime Minister of Israel, this market will settle based on the next individual to assume the office as part of government formation following the new election.",
+      "url": "https://polymarket.us/event/mlaec-isrpol-pm-2026-10-27-bengan",
+      "closeAt": "2026-11-11T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "896f3f686696dac9a1b61b388de600936b573a408095c4f8fe4d92f83b4fab9d",
+      "settlement": null
+    },
+    {
+      "id": "mlaec-isrpol-pm-2026-10-27-avilie",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "isrpol",
+        "eventAt": "2026-10-27T16:00:00.000Z",
+        "eventDate": "2026-10-27",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "prime minister of israel after the next election"
+      },
+      "title": "Avigdor Lieberman \u00b7 Prime Minister of Israel After the Next Election",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Avigdor Lieberman is the first individual to formally assume the office of Prime Minister of Israel as part of government formation following the next Israeli Parliamentary election. Outcome sourced from the Government of Israel.\n\nAny acting, interim, or caretaker Prime Minister will not count toward the settlement of this market. If the next Israeli parliamentary election takes place, and a new election is called prior to any individual formally assuming the office of Prime Minister of Israel, this market will settle based on the next individual to assume the office as part of government formation following the new election.",
+      "url": "https://polymarket.us/event/mlaec-isrpol-pm-2026-10-27-avilie",
+      "closeAt": "2026-11-11T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "84a5dad2eb83c3ae0ce6a8fb2a90d808701641a0362fdfad325c3218653c66e5",
+      "settlement": null
+    },
+    {
+      "id": "mlaec-isrpol-pm-2026-10-27-bennet",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "isrpol",
+        "eventAt": "2026-10-27T16:00:00.000Z",
+        "eventDate": "2026-10-27",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "prime minister of israel after the next election"
+      },
+      "title": "Benjamin Netanyahu \u00b7 Prime Minister of Israel After the Next Election",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Benjamin Netanyahu is the first individual to formally assume the office of Prime Minister of Israel as part of government formation following the next Israeli Parliamentary election. Outcome sourced from the Government of Israel.\n\nAny acting, interim, or caretaker Prime Minister will not count toward the settlement of this market. If the next Israeli parliamentary election takes place, and a new election is called prior to any individual formally assuming the office of Prime Minister of Israel, this market will settle based on the next individual to assume the office as part of government formation following the new election.",
+      "url": "https://polymarket.us/event/mlaec-isrpol-pm-2026-10-27-bennet",
+      "closeAt": "2026-11-11T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "90ef5fbed11a21d50549f00c0dd0b5bf333ababf56a69c766c613b2dbe00645f",
+      "settlement": null
+    },
+    {
+      "id": "ewc-pres-arg-2027-10-24-sermas",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "pres",
+        "eventAt": "2027-10-25T03:59:00.000Z",
+        "eventDate": "2027-10-25",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "argentina presidential election winner"
+      },
+      "title": "Sergio Massa \u00b7 Argentina Presidential Election Winner",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes If Sergio Massa wins the 2027 Argentina Presidential Election, including any potential runoff. Outcome sourced from relevant government authorities.\n\nIn the event that the 2027 Argentina Presidential Election is rescheduled, this market will settle based on the results of the next Argentina Presidential Election to be held within two years of October 24, 2027.",
+      "url": "https://polymarket.us/event/ewc-pres-arg-2027-10-24-sermas",
+      "closeAt": "2027-11-08T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "480765d7ece9308b4c84a4b6f4d95ba6863326dce23ff15582580a60826b88b0",
+      "settlement": null
+    },
+    {
+      "id": "ccrc-sptfy-1-artst-us-yr-2026-morwal",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "sptfy",
+        "eventAt": "2026-12-02T17:00:00.000Z",
+        "eventDate": "2026-12-02",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "top artist in the us 2026"
+      },
+      "title": "Morgan Wallen \u00b7 Top Artist in the US 2026?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "This market will settle to Yes if Morgan Wallen is ranked the top artist in the US on Spotify in 2026. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists in the US ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.\n\nNote: This market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Polymarket. Spotify and related marks are the property of Spotify AB and its group companies.",
+      "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-us-yr-2026-morwal",
+      "closeAt": "2026-12-17T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "9dd825401d61ec923d087f2fd514995293e82768d470b2912324d8df80d59da8",
+      "settlement": null
+    },
+    {
+      "id": "ccrc-sptfy-1-artst-us-yr-2026-drake",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "sptfy",
+        "eventAt": "2026-12-02T17:00:00.000Z",
+        "eventDate": "2026-12-02",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "top artist in the us 2026"
+      },
+      "title": "Drake \u00b7 Top Artist in the US 2026?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "This market will settle to Yes if Drake is ranked the top artist in the US on Spotify in 2026. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists in the US ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.\n\nNote: This market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Polymarket. Spotify and related marks are the property of Spotify AB and its group companies.",
+      "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-us-yr-2026-drake",
+      "closeAt": "2026-12-17T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "188cf5e7063e0a491084e214fe3cafa9e5275cfef6b7314726f06ee3c47b8935",
+      "settlement": null
+    },
+    {
+      "id": "ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "sptfy",
+        "eventAt": "2026-12-02T17:00:00.000Z",
+        "eventDate": "2026-12-02",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "top artist in the us 2026"
+      },
+      "title": "Bad Bunny \u00b7 Top Artist in the US 2026?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "This market will settle to Yes if Bad Bunny is ranked the top artist in the US on Spotify in 2026. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists in the US ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.\n\nNote: This market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Polymarket. Spotify and related marks are the property of Spotify AB and its group companies.",
+      "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "closeAt": "2026-12-17T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "cf17ca3e530893153fac0cc5c5c6795be51e5135081a6f0f2b65ab4f5254a3b0",
+      "settlement": null
+    },
+    {
+      "id": "aachc-nba-2027-04-11-bestrecord-okc",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "basketball",
+        "competition": "nba",
+        "eventAt": "2026-10-21T00:00:00.000Z",
+        "eventDate": "2026-10-21",
+        "participants": [
+          "oklahoma city"
+        ],
+        "participant": "oklahoma city",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "oklahoma city",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "oklahoma city",
+            "venue": "poly",
+            "venueId": "27",
+            "aliases": [
+              "thunder",
+              "thunder",
+              "oklahoma city",
+              "okc",
+              "okc"
+            ]
+          },
+          {
+            "name": "oklahoma city",
+            "venue": "poly",
+            "venueId": "27",
+            "aliases": [
+              "thunder",
+              "thunder",
+              "oklahoma city",
+              "okc",
+              "okc"
+            ]
+          }
+        ],
+        "eventKey": "nba best regular season record"
+      },
+      "title": "Oklahoma City \u00b7 NBA Best Regular Season Record",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if the Oklahoma City Thunder finish with the best overall regular season record in the 2026-27 NBA season, which is scheduled to end on April 11, 2027. If two or more teams tie for the best overall record, each tied team's market will settle at $1.00 divided by the number of teams tied. If the regular season is not completed as scheduled, the market will settle based on final records from the games played. Outcome sourced from the NBA.",
+      "url": "https://polymarket.us/event/aachc-nba-2027-04-11-bestrecord-okc",
+      "closeAt": "2027-04-26T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "ad24eed390e57d4a2ce7fbaba52aa26753b7bed7c3476075c620f1adb3801b32",
+      "settlement": null
+    },
+    {
+      "id": "ccpc-bilbrd-1album-any2026-kenlam",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "bilbrd",
+        "eventAt": "2026-12-27T04:59:00.000Z",
+        "eventDate": "2026-12-27",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "1",
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "who will have a 1 album in 2026"
+      },
+      "title": "Kendrick Lamar \u00b7 Who Will Have a #1 Album in 2026?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "This market will settle to Yes if Kendrick Lamar has a #1 album on the Billboard 200 on any Billboard 200 chart released after Contract Issuance and dated in 2026. Outcome sourced from Billboard.\n\nBillboard typically updates the Billboard 200 albums chart each Tuesday (with adjusted release schedules on some holiday weeks), reflecting data from the previous week (Friday-Thursday). Each Billboard chart is then dated Week of (date of the upcoming Saturday). Under this framework, the final relevant chart would be the chart dated December 26, 2026.\n\nAny album released with the listed artist as a primary artist will count, including albums released before 2026. If an album is released jointly by multiple artists credited equally as primary artists, it will count for all of them. Writing credits, production credits, features, or other forms of non-primary contributions to an album will not count. Artist attribution will be determined solely by the artist(s) displayed by Billboard on the relevant chart.",
+      "url": "https://polymarket.us/event/ccpc-bilbrd-1album-any2026-kenlam",
+      "closeAt": "2027-01-10T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "974efd846f57b4c7be0d903255a787b5b1c49911feaebf73278f3ff39ee7141f",
+      "settlement": null
+    },
+    {
+      "id": "mlaec-swepm-2026-09-13-ulfkri",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "swepm",
+        "eventAt": "2026-07-24T16:00:00.000Z",
+        "eventDate": "2026-07-24",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "prime minister of sweden after the next election"
+      },
+      "title": "Ulf Kristersson \u00b7 Prime Minister of Sweden After The Next Election",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Ulf Kristersson is the first individual to formally assume the office of Prime Minister of Sweden as part of government formation following the next Swedish parliamentary election. Outcome sourced from the Government of Sweden.\n\nAny acting, interim, or caretaker Prime Minister will not count toward the settlement of this market. If the next Swedish parliamentary election takes place, and a new election is called prior to any individual formally assuming the office of Prime Minister of Sweden, this market will settle based on the next individual to assume the office as part of government formation following the new election.",
+      "url": "https://polymarket.us/event/mlaec-swepm-2026-09-13-ulfkri",
+      "closeAt": "2026-09-28T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "5706a4c5c46135e591685cf828bf9b7734f880473c24398f74a24d593c9616f3",
+      "settlement": null
+    },
+    {
+      "id": "aachc-nba-eastseed1-2027-04-11-w-mia",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "basketball",
+        "competition": "nba",
+        "eventAt": "2026-07-28T20:00:00.000Z",
+        "eventDate": "2026-07-28",
+        "participants": [
+          "miami"
+        ],
+        "participant": "miami",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "miami",
+        "entities": [],
+        "numbers": [
+          "1"
+        ],
+        "aliases": [
+          {
+            "name": "miami",
+            "venue": "poly",
+            "venueId": "14",
+            "aliases": [
+              "heat",
+              "heat",
+              "miami",
+              "mia",
+              "mia"
+            ]
+          },
+          {
+            "name": "miami",
+            "venue": "poly",
+            "venueId": "14",
+            "aliases": [
+              "heat",
+              "heat",
+              "miami",
+              "mia",
+              "mia"
+            ]
+          }
+        ],
+        "eventKey": "nba eastern conference 1 seed"
+      },
+      "title": "Miami \u00b7 NBA Eastern Conference #1 Seed",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if the Miami Heat earn the #1 seed in the NBA Eastern Conference for the 2026-27 NBA season. The #1 seed is the conference's top playoff seed, determined by the official final standings and applicable tiebreakers. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/aachc-nba-eastseed1-2027-04-11-w-mia",
+      "closeAt": "2027-04-26T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "a3b7e470d0eb43d0ad53e753a556487b71b4deeb84b929cc6d447c4501bc1f5f",
+      "settlement": null
+    },
+    {
+      "id": "tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-07-29T18:00:00.000Z",
+        "eventDate": "2026-07-29",
+        "participants": [
+          "oregon state"
+        ],
+        "participant": "oregon state",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "oregon state",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [
+          {
+            "name": "oregon state",
+            "venue": "poly",
+            "venueId": "1239",
+            "aliases": [
+              "beavers",
+              "beavers",
+              "oregon state",
+              "oregst",
+              "orst"
+            ]
+          },
+          {
+            "name": "oregon state",
+            "venue": "poly",
+            "venueId": "1239",
+            "aliases": [
+              "beavers",
+              "beavers",
+              "oregon state",
+              "oregst",
+              "orst"
+            ]
+          }
+        ],
+        "eventKey": "pac 12 football championship winner"
+      },
+      "title": "Oregon State \u00b7 Pac-12 Football Championship Winner",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Oregon State wins the 2026 Pac-12 Football Championship Game scheduled for December 4, 2026. Outcome sourced from Pac-12.",
+      "url": "https://polymarket.us/event/tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "8e95ce399e13046b951da3f21d97ef449ec0eae79a68ee7b60314327a664b62c",
+      "settlement": null
+    },
+    {
+      "id": "tec-cfb-aacchamp-2026-12-05-w-navy",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-10T19:00:00.000Z",
+        "eventDate": "2026-08-10",
+        "participants": [
+          "navy"
+        ],
+        "participant": "navy",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "navy",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "navy",
+            "venue": "poly",
+            "venueId": "1245",
+            "aliases": [
+              "midshipmen",
+              "midshipmen",
+              "navy",
+              "navy",
+              "navy"
+            ]
+          },
+          {
+            "name": "navy",
+            "venue": "poly",
+            "venueId": "1245",
+            "aliases": [
+              "midshipmen",
+              "midshipmen",
+              "navy",
+              "navy",
+              "navy"
+            ]
+          }
+        ],
+        "eventKey": "american athletic conference football championship winner"
+      },
+      "title": "Navy \u00b7 American Athletic Conference Football Championship Winner",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Navy wins the 2026 American Athletic Conference Football Championship Game scheduled for December 5, 2026. Outcome sourced from American Athletic Conference.",
+      "url": "https://polymarket.us/event/tec-cfb-aacchamp-2026-12-05-w-navy",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "b28ade71bcb54e86f55ec92228ff8cd9d7da62d87b10dfef6b389657e492af1b",
+      "settlement": null
+    },
+    {
+      "id": "tec-cfb-sbeltchamp-2026-12-04-w-troy",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-09-04T23:00:00.000Z",
+        "eventDate": "2026-09-04",
+        "participants": [
+          "troy"
+        ],
+        "participant": "troy",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "troy",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "troy",
+            "venue": "poly",
+            "venueId": "1307",
+            "aliases": [
+              "trojans",
+              "trojans",
+              "troy",
+              "troy",
+              "troy"
+            ]
+          },
+          {
+            "name": "troy",
+            "venue": "poly",
+            "venueId": "1307",
+            "aliases": [
+              "trojans",
+              "trojans",
+              "troy",
+              "troy",
+              "troy"
+            ]
+          }
+        ],
+        "eventKey": "sun belt football championship winner"
+      },
+      "title": "Troy \u00b7 Sun Belt Football Championship Winner",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Troy wins the 2026 Sun Belt Football Championship Game scheduled for December 4, 2026. Outcome sourced from Sun Belt.",
+      "url": "https://polymarket.us/event/tec-cfb-sbeltchamp-2026-12-04-w-troy",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "099c6ea6554e0e7363d0a0dec6d0646dbb6ca80c150d53e65cd76afc1a791658",
+      "settlement": null
+    },
+    {
+      "id": "aachc-epl-2027-05-30-relegation-tot",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "competition": "epl",
+        "eventAt": "2026-08-21T13:00:00.000Z",
+        "eventDate": "2026-08-21",
+        "participants": [
+          "tottenham hotspur"
+        ],
+        "participant": "tottenham hotspur",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "tottenham hotspur",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "tottenham hotspur",
+            "venue": "poly",
+            "venueId": "2701",
+            "aliases": [
+              "tottenham hotspur fc",
+              "spurs",
+              "tottenham hotspur",
+              "tot",
+              "tot"
+            ]
+          },
+          {
+            "name": "tottenham hotspur",
+            "venue": "poly",
+            "venueId": "2701",
+            "aliases": [
+              "tottenham hotspur fc",
+              "spurs",
+              "tottenham hotspur",
+              "tot",
+              "tot"
+            ]
+          }
+        ],
+        "eventKey": "english premier league relegation"
+      },
+      "title": "Tottenham Hotspur \u00b7 English Premier League Relegation",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Tottenham Hotspur FC is relegated from the Premier League at the end of the 2026-2027 season. Outcome sourced from Premier League.",
+      "url": "https://polymarket.us/event/aachc-epl-2027-05-30-relegation-tot",
+      "closeAt": "2027-06-14T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "5555d3690c3c95e43b2d24a6393064613909d1f734becd47e3e51942d7714eff",
+      "settlement": null
+    },
+    {
+      "id": "enwc-uspres-nom-dem-2028-markel",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "uspres",
+        "eventAt": "2026-08-13T16:00:00.000Z",
+        "eventDate": "2026-08-13",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2028"
+        ],
+        "aliases": [],
+        "eventKey": "2028 democratic presidential nominee"
+      },
+      "title": "Mark Kelly \u00b7 2028 Democratic Presidential Nominee",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Mark Kelly wins and accepts the Democratic Party nomination to contest the 2028 United States Presidential Election. Outcome sourced from the Democratic Party.\n\nAny replacement of the Democratic Party nominee before election day will not affect the settlement of this market.",
+      "url": "https://polymarket.us/event/enwc-uspres-nom-dem-2028-markel",
+      "closeAt": "2028-08-25T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "77f17326111883270e543a22ea28d8524b3060088a836697d1dd2f9e93128c2c",
+      "settlement": null
+    },
+    {
+      "id": "enwc-uspres-nom-dem-2028-andbes",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "uspres",
+        "eventAt": "2026-08-13T16:00:00.000Z",
+        "eventDate": "2026-08-13",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2028"
+        ],
+        "aliases": [],
+        "eventKey": "2028 democratic presidential nominee"
+      },
+      "title": "Andy Beshear \u00b7 2028 Democratic Presidential Nominee",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Andy Beshear wins and accepts the Democratic Party nomination to contest the 2028 United States Presidential Election. Outcome sourced from the Democratic Party.\n\nAny replacement of the Democratic Party nominee before election day will not affect the settlement of this market.",
+      "url": "https://polymarket.us/event/enwc-uspres-nom-dem-2028-andbes",
+      "closeAt": "2028-08-25T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "851e38c9a88110b737e666ecb643ae3fd92b2c1b7d73330e103d5071a0fc7c0e",
+      "settlement": null
+    },
+    {
+      "id": "enwc-uspres-nom-dem-2028-kamhar",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "uspres",
+        "eventAt": "2026-08-13T16:00:00.000Z",
+        "eventDate": "2026-08-13",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2028"
+        ],
+        "aliases": [],
+        "eventKey": "2028 democratic presidential nominee"
+      },
+      "title": "Kamala Harris \u00b7 2028 Democratic Presidential Nominee",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "politics",
+      "rules": "This market will settle to Yes if Kamala Harris wins and accepts the Democratic Party nomination to contest the 2028 United States Presidential Election. Outcome sourced from the Democratic Party.\n\nAny replacement of the Democratic Party nominee before election day will not affect the settlement of this market.",
+      "url": "https://polymarket.us/event/enwc-uspres-nom-dem-2028-kamhar",
+      "closeAt": "2028-08-25T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "794726c79fc20476a560e68b7325c78b77adc175b4afd3051930e459740ee772",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-sec-2026-12-05-champq-okl",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-29T16:00:00.000Z",
+        "eventDate": "2026-08-29",
+        "participants": [
+          "oklahoma"
+        ],
+        "participant": "oklahoma",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "oklahoma",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "oklahoma",
+            "venue": "poly",
+            "venueId": "1136",
+            "aliases": [
+              "sooners",
+              "sooners",
+              "oklahoma",
+              "okl",
+              "okla"
+            ]
+          },
+          {
+            "name": "oklahoma",
+            "venue": "poly",
+            "venueId": "1136",
+            "aliases": [
+              "sooners",
+              "sooners",
+              "oklahoma",
+              "okl",
+              "okla"
+            ]
+          }
+        ],
+        "eventKey": "sec football championship game qualifiers"
+      },
+      "title": "Oklahoma \u00b7 SEC Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Oklahoma qualifies for the 2026 SEC Football Championship Game scheduled for December 5, 2026. Outcome sourced from SEC.",
+      "url": "https://polymarket.us/event/aqc-cfb-sec-2026-12-05-champq-okl",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "28881c86a0cded85cfd7331a59586a0ba930164396477681a4440b99361f7d9a",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-sec-2026-12-05-champq-mspst",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-29T16:00:00.000Z",
+        "eventDate": "2026-08-29",
+        "participants": [
+          "mississippi state"
+        ],
+        "participant": "mississippi state",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "mississippi state",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "mississippi state",
+            "venue": "poly",
+            "venueId": "1262",
+            "aliases": [
+              "bulldogs",
+              "bulldogs",
+              "mississippi state",
+              "mspst",
+              "msst"
+            ]
+          },
+          {
+            "name": "mississippi state",
+            "venue": "poly",
+            "venueId": "1262",
+            "aliases": [
+              "bulldogs",
+              "bulldogs",
+              "mississippi state",
+              "mspst",
+              "msst"
+            ]
+          }
+        ],
+        "eventKey": "sec football championship game qualifiers"
+      },
+      "title": "Mississippi State \u00b7 SEC Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Mississippi State qualifies for the 2026 SEC Football Championship Game scheduled for December 5, 2026. Outcome sourced from SEC.",
+      "url": "https://polymarket.us/event/aqc-cfb-sec-2026-12-05-champq-mspst",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "fed433b2e8debc26664f06c7fa5fafa36edb59ddb953cdc9e50c26d9511fe750",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-sec-2026-12-05-champq-miss",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-29T16:00:00.000Z",
+        "eventDate": "2026-08-29",
+        "participants": [
+          "ole miss"
+        ],
+        "participant": "ole miss",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "ole miss",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "ole miss",
+            "venue": "poly",
+            "venueId": "1258",
+            "aliases": [
+              "rebels",
+              "rebels",
+              "ole miss",
+              "miss",
+              "miss"
+            ]
+          },
+          {
+            "name": "ole miss",
+            "venue": "poly",
+            "venueId": "1258",
+            "aliases": [
+              "rebels",
+              "rebels",
+              "ole miss",
+              "miss",
+              "miss"
+            ]
+          }
+        ],
+        "eventKey": "sec football championship game qualifiers"
+      },
+      "title": "Ole Miss \u00b7 SEC Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Ole Miss qualifies for the 2026 SEC Football Championship Game scheduled for December 5, 2026. Outcome sourced from SEC.",
+      "url": "https://polymarket.us/event/aqc-cfb-sec-2026-12-05-champq-miss",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "54c8a613468283309ac6360ed2bf46d2573a53a83d18ae1455c2406da2f2a93d",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "penn state"
+        ],
+        "participant": "penn state",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "penn state",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "penn state",
+            "venue": "poly",
+            "venueId": "1132",
+            "aliases": [
+              "nittany lions",
+              "nittany lions",
+              "penn state",
+              "pennst",
+              "psu"
+            ]
+          },
+          {
+            "name": "penn state",
+            "venue": "poly",
+            "venueId": "1132",
+            "aliases": [
+              "nittany lions",
+              "nittany lions",
+              "penn state",
+              "pennst",
+              "psu"
+            ]
+          }
+        ],
+        "eventKey": "big ten football championship game qualifiers"
+      },
+      "title": "Penn State \u00b7 Big Ten Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Penn State qualifies for the 2026 Big Ten Football Championship Game scheduled for December 5, 2026. Outcome sourced from Big Ten.",
+      "url": "https://polymarket.us/event/aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "fb397fe2ee57c17588bd144ea2e4770949d539b4783a83fc7b5126d005770176",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-bigten-2026-12-05-champq-ore",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "oregon"
+        ],
+        "participant": "oregon",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "oregon",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "oregon",
+            "venue": "poly",
+            "venueId": "1232",
+            "aliases": [
+              "ducks",
+              "ducks",
+              "oregon",
+              "ore",
+              "ore"
+            ]
+          },
+          {
+            "name": "oregon",
+            "venue": "poly",
+            "venueId": "1232",
+            "aliases": [
+              "ducks",
+              "ducks",
+              "oregon",
+              "ore",
+              "ore"
+            ]
+          }
+        ],
+        "eventKey": "big ten football championship game qualifiers"
+      },
+      "title": "Oregon \u00b7 Big Ten Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Oregon qualifies for the 2026 Big Ten Football Championship Game scheduled for December 5, 2026. Outcome sourced from Big Ten.",
+      "url": "https://polymarket.us/event/aqc-cfb-bigten-2026-12-05-champq-ore",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "6342b377b130d429a424a15f5daaf639b9ec8a5b82ab8a411f5cdc38291439c0",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-acc-2026-12-05-champq-vir",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "virginia"
+        ],
+        "participant": "virginia",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "virginia",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "virginia",
+            "venue": "poly",
+            "venueId": "1083",
+            "aliases": [
+              "cavaliers",
+              "cavaliers",
+              "virginia",
+              "vir",
+              "uva"
+            ]
+          },
+          {
+            "name": "virginia",
+            "venue": "poly",
+            "venueId": "1083",
+            "aliases": [
+              "cavaliers",
+              "cavaliers",
+              "virginia",
+              "vir",
+              "uva"
+            ]
+          }
+        ],
+        "eventKey": "acc football championship game qualifiers"
+      },
+      "title": "Virginia \u00b7 ACC Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Virginia qualifies for the 2026 ACC Football Championship Game scheduled for December 5, 2026. Outcome sourced from ACC.",
+      "url": "https://polymarket.us/event/aqc-cfb-acc-2026-12-05-champq-vir",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "e932b7fc092dd841460d1270f0577b8429f3b1abac704a02216ebdb9f12afceb",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-big12-2026-12-04-champq-kan",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "kansas"
+        ],
+        "participant": "kansas",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "kansas",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [
+          {
+            "name": "kansas",
+            "venue": "poly",
+            "venueId": "1137",
+            "aliases": [
+              "jayhawks",
+              "jayhawks",
+              "kansas",
+              "kan",
+              "ku"
+            ]
+          },
+          {
+            "name": "kansas",
+            "venue": "poly",
+            "venueId": "1137",
+            "aliases": [
+              "jayhawks",
+              "jayhawks",
+              "kansas",
+              "kan",
+              "ku"
+            ]
+          }
+        ],
+        "eventKey": "big 12 football championship game qualifiers"
+      },
+      "title": "Kansas \u00b7 Big 12 Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Kansas qualifies for the 2026 Big 12 Football Championship Game scheduled for December 4, 2026. Outcome sourced from Big 12.",
+      "url": "https://polymarket.us/event/aqc-cfb-big12-2026-12-04-champq-kan",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "5efe3dabc0ac2f7a49591cf69fbd4e3fd88dacdac57437022845375e189edd44",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-big12-2026-12-04-champq-arz",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "arizona"
+        ],
+        "participant": "arizona",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "arizona",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [
+          {
+            "name": "arizona",
+            "venue": "poly",
+            "venueId": "1234",
+            "aliases": [
+              "wildcats",
+              "wildcats",
+              "arizona",
+              "arz",
+              "ariz"
+            ]
+          },
+          {
+            "name": "arizona",
+            "venue": "poly",
+            "venueId": "1234",
+            "aliases": [
+              "wildcats",
+              "wildcats",
+              "arizona",
+              "arz",
+              "ariz"
+            ]
+          }
+        ],
+        "eventKey": "big 12 football championship game qualifiers"
+      },
+      "title": "Arizona \u00b7 Big 12 Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Arizona qualifies for the 2026 Big 12 Football Championship Game scheduled for December 4, 2026. Outcome sourced from Big 12.",
+      "url": "https://polymarket.us/event/aqc-cfb-big12-2026-12-04-champq-arz",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "9c54a9de7c3840740e6ccc7ec5bada15d1bbb8801112684d6da8f8da79d9de45",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-big12-2026-12-04-champq-kanst",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "kansas state"
+        ],
+        "participant": "kansas state",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "kansas state",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [
+          {
+            "name": "kansas state",
+            "venue": "poly",
+            "venueId": "1143",
+            "aliases": [
+              "wildcats",
+              "wildcats",
+              "kansas state",
+              "kanst",
+              "ksu"
+            ]
+          },
+          {
+            "name": "kansas state",
+            "venue": "poly",
+            "venueId": "1143",
+            "aliases": [
+              "wildcats",
+              "wildcats",
+              "kansas state",
+              "kanst",
+              "ksu"
+            ]
+          }
+        ],
+        "eventKey": "big 12 football championship game qualifiers"
+      },
+      "title": "Kansas State \u00b7 Big 12 Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Kansas State qualifies for the 2026 Big 12 Football Championship Game scheduled for December 4, 2026. Outcome sourced from Big 12.",
+      "url": "https://polymarket.us/event/aqc-cfb-big12-2026-12-04-champq-kanst",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "b4fd24dec1fa4a0f77645bc89c8f215529e6a3c1fd0822a0523e8d3be928262b",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-big12-2026-12-04-champq-tcu",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "tcu"
+        ],
+        "participant": "tcu",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "tcu",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [
+          {
+            "name": "tcu",
+            "venue": "poly",
+            "venueId": "1145",
+            "aliases": [
+              "horned frogs",
+              "horned frogs",
+              "tcu",
+              "tcu",
+              "tcu"
+            ]
+          },
+          {
+            "name": "tcu",
+            "venue": "poly",
+            "venueId": "1145",
+            "aliases": [
+              "horned frogs",
+              "horned frogs",
+              "tcu",
+              "tcu",
+              "tcu"
+            ]
+          }
+        ],
+        "eventKey": "big 12 football championship game qualifiers"
+      },
+      "title": "TCU \u00b7 Big 12 Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if TCU qualifies for the 2026 Big 12 Football Championship Game scheduled for December 4, 2026. Outcome sourced from Big 12.",
+      "url": "https://polymarket.us/event/aqc-cfb-big12-2026-12-04-champq-tcu",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "1f33959da806310d0773309890dc4462f0cd0a4c41e4e5b171e2b227b3f24d07",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-pac12-2026-12-04-champq-frest",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "fresno state"
+        ],
+        "participant": "fresno state",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "fresno state",
+        "entities": [],
+        "numbers": [
+          "12"
+        ],
+        "aliases": [
+          {
+            "name": "fresno state",
+            "venue": "poly",
+            "venueId": "1206",
+            "aliases": [
+              "bulldogs",
+              "bulldogs",
+              "fresno state",
+              "frest",
+              "fres"
+            ]
+          },
+          {
+            "name": "fresno state",
+            "venue": "poly",
+            "venueId": "1206",
+            "aliases": [
+              "bulldogs",
+              "bulldogs",
+              "fresno state",
+              "frest",
+              "fres"
+            ]
+          }
+        ],
+        "eventKey": "pac 12 football championship game qualifiers"
+      },
+      "title": "Fresno State \u00b7 Pac-12 Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Fresno State qualifies for the 2026 Pac-12 Football Championship Game scheduled for December 4, 2026. Outcome sourced from Pac-12.",
+      "url": "https://polymarket.us/event/aqc-cfb-pac12-2026-12-04-champq-frest",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "88949b8bf8dafff6182c76493e4cdcb00b31a2c96eb7d33b0297d021603a89be",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-aac-2026-12-05-champq-tulane",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "tulane"
+        ],
+        "participant": "tulane",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "tulane",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "tulane",
+            "venue": "poly",
+            "venueId": "1076",
+            "aliases": [
+              "green wave",
+              "green wave",
+              "tulane",
+              "tulane",
+              "tuln"
+            ]
+          },
+          {
+            "name": "tulane",
+            "venue": "poly",
+            "venueId": "1076",
+            "aliases": [
+              "green wave",
+              "green wave",
+              "tulane",
+              "tulane",
+              "tuln"
+            ]
+          }
+        ],
+        "eventKey": "american athletic conference football championship game qualifiers"
+      },
+      "title": "Tulane \u00b7 American Athletic Conference Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Tulane qualifies for the 2026 American Athletic Conference Football Championship Game scheduled for December 5, 2026. Outcome sourced from American Athletic Conference.",
+      "url": "https://polymarket.us/event/aqc-cfb-aac-2026-12-05-champq-tulane",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "89a2fff85bd7a209cb87cbd60cf402eef31a496f5bdcf2e037a787ea9db0d4e5",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-aac-2026-12-05-champq-army",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "army"
+        ],
+        "participant": "army",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "army",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "army",
+            "venue": "poly",
+            "venueId": "1248",
+            "aliases": [
+              "black knights",
+              "black knights",
+              "army",
+              "army",
+              "army"
+            ]
+          },
+          {
+            "name": "army",
+            "venue": "poly",
+            "venueId": "1248",
+            "aliases": [
+              "black knights",
+              "black knights",
+              "army",
+              "army",
+              "army"
+            ]
+          }
+        ],
+        "eventKey": "american athletic conference football championship game qualifiers"
+      },
+      "title": "Army \u00b7 American Athletic Conference Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Army qualifies for the 2026 American Athletic Conference Football Championship Game scheduled for December 5, 2026. Outcome sourced from American Athletic Conference.",
+      "url": "https://polymarket.us/event/aqc-cfb-aac-2026-12-05-champq-army",
+      "closeAt": "2026-12-20T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "92f8ff851b1e69f4c94c59a381cb66890fd622a528ed39b5d5200885222e90ae",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "nevada"
+        ],
+        "participant": "nevada",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "nevada",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "nevada",
+            "venue": "poly",
+            "venueId": "1209",
+            "aliases": [
+              "wolf pack",
+              "wolf pack",
+              "nevada",
+              "nevada",
+              "nev"
+            ]
+          },
+          {
+            "name": "nevada",
+            "venue": "poly",
+            "venueId": "1209",
+            "aliases": [
+              "wolf pack",
+              "wolf pack",
+              "nevada",
+              "nevada",
+              "nev"
+            ]
+          }
+        ],
+        "eventKey": "mountain west football championship game qualifiers"
+      },
+      "title": "Nevada \u00b7 Mountain West Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Nevada qualifies for the 2026 Mountain West Football Championship Game scheduled for December 4, 2026. Outcome sourced from Mountain West.",
+      "url": "https://polymarket.us/event/aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "9d1ea3e8b140ed9aa9cd36b98d8d8f047248a5856e5c02ae58c663bef3bfbac3",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "middle tennessee"
+        ],
+        "participant": "middle tennessee",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "middle tennessee",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "middle tennessee",
+            "venue": "poly",
+            "venueId": "1158",
+            "aliases": [
+              "blue raiders",
+              "blue raiders",
+              "middle tennessee",
+              "mtnst",
+              "mtsu"
+            ]
+          },
+          {
+            "name": "middle tennessee",
+            "venue": "poly",
+            "venueId": "1158",
+            "aliases": [
+              "blue raiders",
+              "blue raiders",
+              "middle tennessee",
+              "mtnst",
+              "mtsu"
+            ]
+          }
+        ],
+        "eventKey": "conference usa football championship game qualifiers"
+      },
+      "title": "Middle Tennessee \u00b7 Conference USA Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Middle Tennessee qualifies for the 2026 Conference USA Football Championship Game scheduled for December 4, 2026. Outcome sourced from Conference USA.",
+      "url": "https://polymarket.us/event/aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "5a190c1b4e13f149585764ca152f276c5cba5241f58e9154ea6bfef4f8a3b11f",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "western kentucky"
+        ],
+        "participant": "western kentucky",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "western kentucky",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "western kentucky",
+            "venue": "poly",
+            "venueId": "1167",
+            "aliases": [
+              "hilltoppers",
+              "hilltoppers",
+              "western kentucky",
+              "wkent",
+              "wku"
+            ]
+          },
+          {
+            "name": "western kentucky",
+            "venue": "poly",
+            "venueId": "1167",
+            "aliases": [
+              "hilltoppers",
+              "hilltoppers",
+              "western kentucky",
+              "wkent",
+              "wku"
+            ]
+          }
+        ],
+        "eventKey": "conference usa football championship game qualifiers"
+      },
+      "title": "Western Kentucky \u00b7 Conference USA Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Western Kentucky qualifies for the 2026 Conference USA Football Championship Game scheduled for December 4, 2026. Outcome sourced from Conference USA.",
+      "url": "https://polymarket.us/event/aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "2bed345e495dc2dd46ef5bdd2b0ea70ce28c37abab0199d89ba6a32b6963fdbb",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-cusa-2026-12-04-champq-kenest",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-24T19:00:00.000Z",
+        "eventDate": "2026-08-24",
+        "participants": [
+          "kennesaw state"
+        ],
+        "participant": "kennesaw state",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "kennesaw state",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "kennesaw state",
+            "venue": "poly",
+            "venueId": "1097",
+            "aliases": [
+              "owls",
+              "owls",
+              "kennesaw state",
+              "kenest",
+              "kenn"
+            ]
+          },
+          {
+            "name": "kennesaw state",
+            "venue": "poly",
+            "venueId": "1097",
+            "aliases": [
+              "owls",
+              "owls",
+              "kennesaw state",
+              "kenest",
+              "kenn"
+            ]
+          }
+        ],
+        "eventKey": "conference usa football championship game qualifiers"
+      },
+      "title": "Kennesaw State \u00b7 Conference USA Football Championship Game Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Kennesaw State qualifies for the 2026 Conference USA Football Championship Game scheduled for December 4, 2026. Outcome sourced from Conference USA.",
+      "url": "https://polymarket.us/event/aqc-cfb-cusa-2026-12-04-champq-kenest",
+      "closeAt": "2026-12-19T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "33cb32ba8bf891735b900bbcda61623a36ff442b1098414ef71d5c9a8c719d6c",
+      "settlement": null
+    },
+    {
+      "id": "rtc-dwts-s35-2-2026-11-17-julsti",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "dwts",
+        "eventAt": "2026-09-15T04:00:00.000Z",
+        "eventDate": "2026-09-15",
+        "participants": [],
+        "marketType": "future",
+        "period": "set 35",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "dancing with the stars s35 runner up"
+      },
+      "title": "Julia Stiles \u00b7 Dancing With The Stars S35 Runner-Up",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "This market will settle to Yes if Julia Stiles finishes as the runner-up (second place) on Dancing With The Stars season 35. If the finale of Dancing With The Stars season 35 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date. Outcome sourced from ABC.",
+      "url": "https://polymarket.us/event/rtc-dwts-s35-2-2026-11-17-julsti",
+      "closeAt": "2026-12-02T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "a7ba548b17a4e1ce43f6691465fe4acf871c31c27151e8dcc93325a8e3bd9de1",
+      "settlement": null
+    },
+    {
+      "id": "tac-vmas-bna-09-27-2026-siespi",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "vmas",
+        "eventAt": "2026-09-18T04:00:00.000Z",
+        "eventDate": "2026-09-18",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "2026"
+        ],
+        "aliases": [],
+        "eventKey": "vma best new artist 2026"
+      },
+      "title": "Sienna Spiro \u00b7 VMA Best New Artist 2026",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "This market will settle to Yes if Sienna Spiro wins Best New Artist at the 2026 MTV Video Music Awards. Outcome sourced from MTV.",
+      "url": "https://polymarket.us/event/tac-vmas-bna-09-27-2026-siespi",
+      "closeAt": "2026-10-12T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "422e9d46075cf12d5774dd44b509ee85c70660d64d1422b7785f7b6947667c1a",
+      "settlement": null
+    }
+  ],
+  "provenance": {
+    "catalogueAt": 1790038559272,
+    "source": "Frozen depth-discovery catalogue; allowlisted public metadata only, no prices or account data. IDs ordered as retained catalogue."
+  },
+  "aliasContext": [
+    {
+      "id": "aqc-cfb-cfp-2026-12-06-playoffq-vtech",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-29T16:00:00.000Z",
+        "eventDate": "2026-08-29",
+        "participants": [
+          "virginia tech"
+        ],
+        "participant": "virginia tech",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "virginia tech",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "virginia tech",
+            "venue": "poly",
+            "venueId": "1092",
+            "aliases": [
+              "hokies",
+              "hokies",
+              "virginia tech",
+              "vtech",
+              "vt"
+            ]
+          },
+          {
+            "name": "virginia tech",
+            "venue": "poly",
+            "venueId": "1092",
+            "aliases": [
+              "hokies",
+              "hokies",
+              "virginia tech",
+              "vtech",
+              "vt"
+            ]
+          }
+        ],
+        "eventKey": "college football playoff qualifiers"
+      },
+      "title": "Virginia Tech \u00b7 College Football Playoff Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Virginia Tech advances to the 2026-27 College Football Playoff. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/aqc-cfb-cfp-2026-12-06-playoffq-vtech",
+      "closeAt": "2026-12-21T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "7f41731e7df224726d250e3a380d7dfa40647842a2c80b77859a9cad1c7d1e87",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-cfp-2026-12-06-playoffq-vir",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-29T16:00:00.000Z",
+        "eventDate": "2026-08-29",
+        "participants": [
+          "virginia"
+        ],
+        "participant": "virginia",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "virginia",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "virginia",
+            "venue": "poly",
+            "venueId": "1083",
+            "aliases": [
+              "cavaliers",
+              "cavaliers",
+              "virginia",
+              "vir",
+              "uva"
+            ]
+          },
+          {
+            "name": "virginia",
+            "venue": "poly",
+            "venueId": "1083",
+            "aliases": [
+              "cavaliers",
+              "cavaliers",
+              "virginia",
+              "vir",
+              "uva"
+            ]
+          }
+        ],
+        "eventKey": "college football playoff qualifiers"
+      },
+      "title": "Virginia \u00b7 College Football Playoff Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Virginia advances to the 2026-27 College Football Playoff. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/aqc-cfb-cfp-2026-12-06-playoffq-vir",
+      "closeAt": "2026-12-21T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "dad83273ae840b1687db8bea2d21b8f4cfa39f4c7468e85e3a1539479b7f3a07",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-cfp-2026-12-06-playoffq-kanst",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-29T16:00:00.000Z",
+        "eventDate": "2026-08-29",
+        "participants": [
+          "kansas state"
+        ],
+        "participant": "kansas state",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "kansas state",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "kansas state",
+            "venue": "poly",
+            "venueId": "1143",
+            "aliases": [
+              "wildcats",
+              "wildcats",
+              "kansas state",
+              "kanst",
+              "ksu"
+            ]
+          },
+          {
+            "name": "kansas state",
+            "venue": "poly",
+            "venueId": "1143",
+            "aliases": [
+              "wildcats",
+              "wildcats",
+              "kansas state",
+              "kanst",
+              "ksu"
+            ]
+          }
+        ],
+        "eventKey": "college football playoff qualifiers"
+      },
+      "title": "Kansas State \u00b7 College Football Playoff Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Kansas St. advances to the 2026-27 College Football Playoff. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/aqc-cfb-cfp-2026-12-06-playoffq-kanst",
+      "closeAt": "2026-12-21T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "5347dd5578453a067778a1fa7d98e2b70cb5299cc7128be1ea9dc7ea9e3db4ca",
+      "settlement": null
+    },
+    {
+      "id": "aqc-cfb-cfp-2026-12-06-playoffq-kan",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "cfb",
+        "eventAt": "2026-08-29T16:00:00.000Z",
+        "eventDate": "2026-08-29",
+        "participants": [
+          "kansas"
+        ],
+        "participant": "kansas",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "kansas",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "kansas",
+            "venue": "poly",
+            "venueId": "1137",
+            "aliases": [
+              "jayhawks",
+              "jayhawks",
+              "kansas",
+              "kan",
+              "ku"
+            ]
+          },
+          {
+            "name": "kansas",
+            "venue": "poly",
+            "venueId": "1137",
+            "aliases": [
+              "jayhawks",
+              "jayhawks",
+              "kansas",
+              "kan",
+              "ku"
+            ]
+          }
+        ],
+        "eventKey": "college football playoff qualifiers"
+      },
+      "title": "Kansas \u00b7 College Football Playoff Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Kansas advances to the 2026-27 College Football Playoff. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/aqc-cfb-cfp-2026-12-06-playoffq-kan",
+      "closeAt": "2026-12-21T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "4acb6a70b19ff23f44c7e1ca5595937615641879a92509e77430550ddcf3da5f",
+      "settlement": null
+    }
+  ],
+  "aliasContextNote": "These four public retained markets supply the original earlier alias-registration order only; they are not additional price comparisons."
+}

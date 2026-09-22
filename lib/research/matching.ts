@@ -11,6 +11,12 @@ import {
   chamberControlEvent,
   electionStage,
   meetingPredicate,
+  spotifyGeography,
+  israeliOffice,
+  israeliSuccession,
+  awardCeremony,
+  repeatElectionTreatment,
+  bestRecordTieTreatment,
 } from "./identity.ts";
 import type { Market, Pair } from "../arb/types.ts";
 import { equivalent } from "./mappings.ts";
@@ -126,6 +132,9 @@ export function discoverCandidates(
         chamberControlEvent: chamberControlEvent(m.rules),
         electionStage: electionStage(m.rules),
         meeting: meetingPredicate(m.rules),
+        payoutHints: [spotifyGeography(m), israeliOffice(m.rules),
+          israeliSuccession(m.rules), awardCeremony(m.rules),
+          repeatElectionTreatment(m.rules), bestRecordTieTreatment(m.rules)],
         identity,
         // Primary payout dates/concepts disambiguate generic titles. Exclude later
         // exception paragraphs and examples; preserve title-based entity/placement.
@@ -226,6 +235,11 @@ export function discoverCandidates(
         diagnostics.rejected[reason]++;
       };
       if (keys.some((k) => sa[k] && sb[k] && sa[k] !== sb[k])) {
+        reject("structuralConflict");
+        continue;
+      }
+      if (left.payoutHints.some((value, i) =>
+        value !== undefined && right.payoutHints[i] !== undefined && value !== right.payoutHints[i])) {
         reject("structuralConflict");
         continue;
       }

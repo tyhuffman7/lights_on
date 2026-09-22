@@ -1,0 +1,2544 @@
+{
+  "scope": "RETAINED_50_CONTRACT_REVIEW_NO_NEW_PRICES_NO_ORDERS",
+  "reviewDate": "2026-09-22",
+  "discoveryCommit": "b2c6cc7093f1bd331808a2c546a8a8813fe828f1",
+  "discoverySummarySha256": "6962d7f8af604a674d007821b47619db9b185dd786eecf939611caea2e7dc39a",
+  "counts": {
+    "comparisons": 50,
+    "identityConflicts": 11,
+    "structurallyPlausible": 36,
+    "insufficientIdentityEvidence": 3,
+    "additionalExplicitPayoutConflicts": 5,
+    "matcherExcluded": 16,
+    "matcherUnverified": 34,
+    "deeplyReviewed": 5,
+    "deepEquivalent": 0,
+    "deepConditional": 5,
+    "paperExecutionReady": 0
+  },
+  "rows": [
+    {
+      "rank": 1,
+      "pairId": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "kalshiId": "KXTOPARTIST-26B-BAD",
+      "polyId": "ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Bad Bunny",
+        "polyEntity": "Bad Bunny",
+        "eventAndMetric": "Spotify annual top artist",
+        "geography": "global (family-source interpretation) / US",
+        "seasonOrWindow": "2026 annual ranking",
+        "thresholdOrOutcome": "rank 1"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Retains original INCOMPATIBLE triage; global reading is a documented family-source inference, not explicit binding geography.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXTOPARTIST-26B-BAD",
+          "normalizedTermsHash": "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTOPARTIST-26B-BAD"
+        },
+        {
+          "venue": "poly",
+          "id": "ccrc-sptfy-1-artst-us-yr-2026-badbun",
+          "normalizedTermsHash": "cf17ca3e530893153fac0cc5c5c6795be51e5135081a6f0f2b65ab4f5254a3b0",
+          "url": "https://gateway.polymarket.us/v1/market/slug/ccrc-sptfy-1-artst-us-yr-2026-badbun"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "pairId": "KXTOPARTIST-26B-DRA::ccrc-sptfy-1-artst-us-yr-2026-drake",
+      "kalshiId": "KXTOPARTIST-26B-DRA",
+      "polyId": "ccrc-sptfy-1-artst-us-yr-2026-drake",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Drake",
+        "polyEntity": "Drake",
+        "eventAndMetric": "Spotify annual top artist",
+        "geography": "global (family-source interpretation) / US",
+        "seasonOrWindow": "2026 annual ranking",
+        "thresholdOrOutcome": "rank 1"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Retains original INCOMPATIBLE triage; same geography evidence as Bad Bunny.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXTOPARTIST-26B-DRA",
+          "normalizedTermsHash": "4ceff58d2f2471822a1d28578a034b9af5a6d5ca8e50aba1ab31b560cfc3a9a5",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTOPARTIST-26B-DRA"
+        },
+        {
+          "venue": "poly",
+          "id": "ccrc-sptfy-1-artst-us-yr-2026-drake",
+          "normalizedTermsHash": "188cf5e7063e0a491084e214fe3cafa9e5275cfef6b7314726f06ee3c47b8935",
+          "url": "https://gateway.polymarket.us/v1/market/slug/ccrc-sptfy-1-artst-us-yr-2026-drake"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "pairId": "KXISRDEFMIN-30-BNET::mlaec-isrpol-pm-2026-10-27-bennet",
+      "kalshiId": "KXISRDEFMIN-30-BNET",
+      "polyId": "mlaec-isrpol-pm-2026-10-27-bennet",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Benjamin Netanyahu",
+        "polyEntity": "Benjamin Netanyahu",
+        "eventAndMetric": "first Defense Minister / first post-election Prime Minister",
+        "geography": "Israel",
+        "seasonOrWindow": "first new government after next election; K reporting before 2030-10-28",
+        "thresholdOrOutcome": "hold different offices"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Retains original INCOMPATIBLE triage; PM slug bennet actually names Netanyahu, so no slug-based name conflict.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXISRDEFMIN-30-BNET",
+          "normalizedTermsHash": "e0059bdb0143de9d69fd4dec94fb98516819347d5926855f215117cc8627db14",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXISRDEFMIN-30-BNET"
+        },
+        {
+          "venue": "poly",
+          "id": "mlaec-isrpol-pm-2026-10-27-bennet",
+          "normalizedTermsHash": "90ef5fbed11a21d50549f00c0dd0b5bf333ababf56a69c766c613b2dbe00645f",
+          "url": "https://gateway.polymarket.us/v1/market/slug/mlaec-isrpol-pm-2026-10-27-bennet"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "pairId": "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kan",
+      "kalshiId": "KXNCAAFB12QUAL-26-KSU",
+      "polyId": "aqc-cfb-big12-2026-12-04-champq-kan",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Kansas State",
+        "polyEntity": "Kansas",
+        "eventAndMetric": "Big 12 football championship qualification",
+        "geography": "US / Big 12",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "PM primary name and team ID 1137 identify Kansas Jayhawks; K primary Kansas St. means Kansas State, PM team ID 1143. Different teams.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFB12QUAL-26-KSU",
+          "normalizedTermsHash": "6b0fd9f28f81de0e62e704251c9b2a82e22114f24d91928828d0f4d58ac3f320",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFB12QUAL-26-KSU"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-big12-2026-12-04-champq-kan",
+          "normalizedTermsHash": "5efe3dabc0ac2f7a49591cf69fbd4e3fd88dacdac57437022845375e189edd44",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-big12-2026-12-04-champq-kan"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "pairId": "KXISRDEFMIN-30-ALIE::mlaec-isrpol-pm-2026-10-27-avilie",
+      "kalshiId": "KXISRDEFMIN-30-ALIE",
+      "polyId": "mlaec-isrpol-pm-2026-10-27-avilie",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Avigdor Lieberman",
+        "polyEntity": "Avigdor Lieberman",
+        "eventAndMetric": "first Defense Minister / first post-election Prime Minister",
+        "geography": "Israel",
+        "seasonOrWindow": "first new government after next election; K reporting before 2030-10-28",
+        "thresholdOrOutcome": "hold different offices"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Same Defense-versus-Prime-Minister contradiction as original Netanyahu review.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXISRDEFMIN-30-ALIE",
+          "normalizedTermsHash": "7fcd38d8fbec19f4e58df8de86edc0887bb1125a419acb9f152cc1fc4544619d",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXISRDEFMIN-30-ALIE"
+        },
+        {
+          "venue": "poly",
+          "id": "mlaec-isrpol-pm-2026-10-27-avilie",
+          "normalizedTermsHash": "84a5dad2eb83c3ae0ce6a8fb2a90d808701641a0362fdfad325c3218653c66e5",
+          "url": "https://gateway.polymarket.us/v1/market/slug/mlaec-isrpol-pm-2026-10-27-avilie"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "pairId": "KXNEXTISRAELPM-45JAN01-BGAN::mlaec-isrpol-pm-2026-10-27-bengan",
+      "kalshiId": "KXNEXTISRAELPM-45JAN01-BGAN",
+      "polyId": "mlaec-isrpol-pm-2026-10-27-bengan",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Benny Gantz",
+        "polyEntity": "Benny Gantz",
+        "eventAndMetric": "first new PM after issuance / first PM after next election",
+        "geography": "Israel",
+        "seasonOrWindow": "K any succession after issuance / PM post-election formation",
+        "thresholdOrOutcome": "new holder incl acting / formal non-caretaker holder"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Any first new officeholder, including acting service, is not the first post-election full Prime Minister.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNEXTISRAELPM-45JAN01-BGAN",
+          "normalizedTermsHash": "d0774a574150aa9004242ae46a913dea452025ccc880f91b7f1dc2cb3995a008",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNEXTISRAELPM-45JAN01-BGAN"
+        },
+        {
+          "venue": "poly",
+          "id": "mlaec-isrpol-pm-2026-10-27-bengan",
+          "normalizedTermsHash": "896f3f686696dac9a1b61b388de600936b573a408095c4f8fe4d92f83b4fab9d",
+          "url": "https://gateway.polymarket.us/v1/market/slug/mlaec-isrpol-pm-2026-10-27-bengan"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "pairId": "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "kalshiId": "KXNCAAFB12QUAL-26-KSU",
+      "polyId": "aqc-cfb-big12-2026-12-04-champq-kanst",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Kansas State",
+        "polyEntity": "Kansas State",
+        "eventAndMetric": "Big 12 football championship qualification",
+        "geography": "US / Big 12",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "State/St. are valid aliases. Distinct from Kansas; deep review Q.",
+      "settlementClassification": "CONDITIONAL",
+      "reviewDepth": "DEEP",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFB12QUAL-26-KSU",
+          "normalizedTermsHash": "6b0fd9f28f81de0e62e704251c9b2a82e22114f24d91928828d0f4d58ac3f320",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFB12QUAL-26-KSU"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-big12-2026-12-04-champq-kanst",
+          "normalizedTermsHash": "b4fd24dec1fa4a0f77645bc89c8f215529e6a3c1fd0822a0523e8d3be928262b",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-big12-2026-12-04-champq-kanst"
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "pairId": "KXISRDEFMIN-30-NBEN::mlaec-isrpol-pm-2026-10-27-nafben",
+      "kalshiId": "KXISRDEFMIN-30-NBEN",
+      "polyId": "mlaec-isrpol-pm-2026-10-27-nafben",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Naftali Bennett",
+        "polyEntity": "Naftali Bennett",
+        "eventAndMetric": "first Defense Minister / first post-election Prime Minister",
+        "geography": "Israel",
+        "seasonOrWindow": "first new government after next election; K reporting before 2030-10-28",
+        "thresholdOrOutcome": "hold different offices"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Same Defense-versus-Prime-Minister contradiction as original Netanyahu review.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXISRDEFMIN-30-NBEN",
+          "normalizedTermsHash": "57d6e0113caa67d94e7256a9304b62216562c86b8f1a317a51447a9fdcb8cc75",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXISRDEFMIN-30-NBEN"
+        },
+        {
+          "venue": "poly",
+          "id": "mlaec-isrpol-pm-2026-10-27-nafben",
+          "normalizedTermsHash": "31bc506de07da5f40d8eb16b746202c79a9d4d04c469dd43643d8477276d7d3c",
+          "url": "https://gateway.polymarket.us/v1/market/slug/mlaec-isrpol-pm-2026-10-27-nafben"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "pairId": "KXGRAMBNA-69-SIE::tac-vmas-bna-09-27-2026-siespi",
+      "kalshiId": "KXGRAMBNA-69-SIE",
+      "polyId": "tac-vmas-bna-09-27-2026-siespi",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Sienna Spiro",
+        "polyEntity": "Sienna Spiro",
+        "eventAndMetric": "Grammy Best New Artist / MTV VMA Best New Artist",
+        "geography": "US award institutions",
+        "seasonOrWindow": "69th Grammys / 2026 VMAs",
+        "thresholdOrOutcome": "wins award at different ceremony"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Same person and award label, different awarding institution and event.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXGRAMBNA-69-SIE",
+          "normalizedTermsHash": "d2fe2db12e38b6314c0f8adc80b5ff2f734ccde1a443010b52c04d8164a9807f",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXGRAMBNA-69-SIE"
+        },
+        {
+          "venue": "poly",
+          "id": "tac-vmas-bna-09-27-2026-siespi",
+          "normalizedTermsHash": "422e9d46075cf12d5774dd44b509ee85c70660d64d1422b7785f7b6947667c1a",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tac-vmas-bna-09-27-2026-siespi"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "pairId": "KXEPLRELEGATION-27-TOT::aachc-epl-2027-05-30-relegation-tot",
+      "kalshiId": "KXEPLRELEGATION-27-TOT",
+      "polyId": "aachc-epl-2027-05-30-relegation-tot",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Tottenham",
+        "polyEntity": "Tottenham Hotspur FC",
+        "eventAndMetric": "Premier League relegation",
+        "geography": "England / EPL",
+        "seasonOrWindow": "2026-27",
+        "thresholdOrOutcome": "relegated"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXEPLRELEGATION-27-TOT",
+          "normalizedTermsHash": "d1725d8866b5ce060b1b2a82cae1d3f64915ab595aa8fdcc5466c391feb82c18",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXEPLRELEGATION-27-TOT"
+        },
+        {
+          "venue": "poly",
+          "id": "aachc-epl-2027-05-30-relegation-tot",
+          "normalizedTermsHash": "5555d3690c3c95e43b2d24a6393064613909d1f734becd47e3e51942d7714eff",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aachc-epl-2027-05-30-relegation-tot"
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "pairId": "KXNBARECORD-27BEST-OKC::aachc-nba-2027-04-11-bestrecord-okc",
+      "kalshiId": "KXNBARECORD-27BEST-OKC",
+      "polyId": "aachc-nba-2027-04-11-bestrecord-okc",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Oklahoma City",
+        "polyEntity": "Oklahoma City Thunder",
+        "eventAndMetric": "NBA best regular-season record",
+        "geography": "US/Canada NBA",
+        "seasonOrWindow": "2026-27",
+        "thresholdOrOutcome": "best record; tiebreak-first / split record ties"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "K applies official tiebreakers before dead heat; PM splits all best-record ties. Retained explicit clauses suffice to reject.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNBARECORD-27BEST-OKC",
+          "normalizedTermsHash": "7ecfaa53a2fc8bd15993b910525eb42b7d9ac2bcf3c8a13f40fd71cafe1aad51",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNBARECORD-27BEST-OKC"
+        },
+        {
+          "venue": "poly",
+          "id": "aachc-nba-2027-04-11-bestrecord-okc",
+          "normalizedTermsHash": "ad24eed390e57d4a2ce7fbaba52aa26753b7bed7c3476075c620f1adb3801b32",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aachc-nba-2027-04-11-bestrecord-okc"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "pairId": "KXNCAAFB12QUAL-26-KU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "kalshiId": "KXNCAAFB12QUAL-26-KU",
+      "polyId": "aqc-cfb-big12-2026-12-04-champq-kanst",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Kansas",
+        "polyEntity": "Kansas State",
+        "eventAndMetric": "Big 12 football championship qualification",
+        "geography": "US / Big 12",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Reverse Kansas/Kansas State false mapping; distinct teams.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFB12QUAL-26-KU",
+          "normalizedTermsHash": "beeef6ea761fd8566508447903f089871be3712460a735106b57ca8605021c2d",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFB12QUAL-26-KU"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-big12-2026-12-04-champq-kanst",
+          "normalizedTermsHash": "b4fd24dec1fa4a0f77645bc89c8f215529e6a3c1fd0822a0523e8d3be928262b",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-big12-2026-12-04-champq-kanst"
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "kalshiId": "KXDWTSRANK-226DEC31-JSTIL",
+      "polyId": "rtc-dwts-s35-2-2026-11-17-julsti",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Julia Stiles",
+        "polyEntity": "Julia Stiles",
+        "eventAndMetric": "Dancing With the Stars final placement",
+        "geography": "US show / ABC; no competing version named",
+        "seasonOrWindow": "season 35",
+        "thresholdOrOutcome": "exactly second, not winner"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Both specify second place in season 35; deep review R.",
+      "settlementClassification": "CONDITIONAL",
+      "reviewDepth": "DEEP",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXDWTSRANK-226DEC31-JSTIL",
+          "normalizedTermsHash": "7d2acf9a36284fb3181cb64fe3efe67b1b8777571c5d6735ae7365e60d2d02b9",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXDWTSRANK-226DEC31-JSTIL"
+        },
+        {
+          "venue": "poly",
+          "id": "rtc-dwts-s35-2-2026-11-17-julsti",
+          "normalizedTermsHash": "a7ba548b17a4e1ce43f6691465fe4acf871c31c27151e8dcc93325a8e3bd9de1",
+          "url": "https://gateway.polymarket.us/v1/market/slug/rtc-dwts-s35-2-2026-11-17-julsti"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "kalshiId": "KXNCAAFPAC12-26-ORST",
+      "polyId": "tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Oregon State",
+        "polyEntity": "Oregon State",
+        "eventAndMetric": "Pac-12 football championship winner",
+        "geography": "US / Pac-12",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "wins championship game, not qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "State/St. valid alias; championship winner distinct from qualification; deep review T.",
+      "settlementClassification": "CONDITIONAL",
+      "reviewDepth": "DEEP",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFPAC12-26-ORST",
+          "normalizedTermsHash": "dfd7b87e81cb67866aef768123611eeccd856cd9da078c75c0ea5ad07d2b637e",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFPAC12-26-ORST"
+        },
+        {
+          "venue": "poly",
+          "id": "tec-cfb-pac12champ-2026-12-04-w-oregst",
+          "normalizedTermsHash": "8e95ce399e13046b951da3f21d97ef449ec0eae79a68ee7b60314327a664b62c",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tec-cfb-pac12champ-2026-12-04-w-oregst"
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "pairId": "KXNCAAFB12QUAL-26-TCU::aqc-cfb-big12-2026-12-04-champq-tcu",
+      "kalshiId": "KXNCAAFB12QUAL-26-TCU",
+      "polyId": "aqc-cfb-big12-2026-12-04-champq-tcu",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "TCU",
+        "polyEntity": "TCU",
+        "eventAndMetric": "Big 12 football championship qualification",
+        "geography": "US / Big 12",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFB12QUAL-26-TCU",
+          "normalizedTermsHash": "26239ee6d47780f9889e22644671d77281e2f047d7a61464ffcf964cefc9356f",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFB12QUAL-26-TCU"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-big12-2026-12-04-champq-tcu",
+          "normalizedTermsHash": "1f33959da806310d0773309890dc4462f0cd0a4c41e4e5b171e2b227b3f24d07",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-big12-2026-12-04-champq-tcu"
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "kalshiId": "KXNCAAFCUSAQUAL-26-WKU",
+      "polyId": "aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Western Kentucky",
+        "polyEntity": "Western Kentucky",
+        "eventAndMetric": "Conference USA football championship qualification",
+        "geography": "US / Conference USA",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Same named team and conference; deep review Q.",
+      "settlementClassification": "CONDITIONAL",
+      "reviewDepth": "DEEP",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFCUSAQUAL-26-WKU",
+          "normalizedTermsHash": "4b44806636b0d45dfdce3bcb85c7d66322d9820eacc65cb23de8b7ad639b6d94",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFCUSAQUAL-26-WKU"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-cusa-2026-12-04-champq-wkent",
+          "normalizedTermsHash": "2bed345e495dc2dd46ef5bdd2b0ea70ce28c37abab0199d89ba6a32b6963fdbb",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-cusa-2026-12-04-champq-wkent"
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "pairId": "KXNCAAFSECQ-26-MSST::aqc-cfb-sec-2026-12-05-champq-mspst",
+      "kalshiId": "KXNCAAFSECQ-26-MSST",
+      "polyId": "aqc-cfb-sec-2026-12-05-champq-mspst",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Mississippi State",
+        "polyEntity": "Mississippi State",
+        "eventAndMetric": "SEC football championship qualification",
+        "geography": "US / SEC",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFSECQ-26-MSST",
+          "normalizedTermsHash": "b4aa6b13b49f6fadd30738dc7a1836770ec4c8171ab880e3daa7f16e3781127d",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFSECQ-26-MSST"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-sec-2026-12-05-champq-mspst",
+          "normalizedTermsHash": "fed433b2e8debc26664f06c7fa5fafa36edb59ddb953cdc9e50c26d9511fe750",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-sec-2026-12-05-champq-mspst"
+        }
+      ]
+    },
+    {
+      "rank": 18,
+      "pairId": "KXNCAAFACCQUAL-26-VT::aqc-cfb-acc-2026-12-05-champq-vir",
+      "kalshiId": "KXNCAAFACCQUAL-26-VT",
+      "polyId": "aqc-cfb-acc-2026-12-05-champq-vir",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Virginia Tech",
+        "polyEntity": "Virginia",
+        "eventAndMetric": "ACC football championship qualification",
+        "geography": "US / ACC",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Tech is part of the institution name, not a removable mascot.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFACCQUAL-26-VT",
+          "normalizedTermsHash": "af27f24acbebdd0038b3bdc5a55fb7b6d7704d7dfff28bef4377ca67e618918b",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFACCQUAL-26-VT"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-acc-2026-12-05-champq-vir",
+          "normalizedTermsHash": "e932b7fc092dd841460d1270f0577b8429f3b1abac704a02216ebdb9f12afceb",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-acc-2026-12-05-champq-vir"
+        }
+      ]
+    },
+    {
+      "rank": 19,
+      "pairId": "KXNCAAFCUSAQUAL-26-KENN::aqc-cfb-cusa-2026-12-04-champq-kenest",
+      "kalshiId": "KXNCAAFCUSAQUAL-26-KENN",
+      "polyId": "aqc-cfb-cusa-2026-12-04-champq-kenest",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Kennesaw State",
+        "polyEntity": "Kennesaw State",
+        "eventAndMetric": "Conference USA football championship qualification",
+        "geography": "US / Conference USA",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFCUSAQUAL-26-KENN",
+          "normalizedTermsHash": "a1b50e7d27ed22a9311ea4316489c7f7b2919dc3b45666968d5f7dacd658d6b4",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFCUSAQUAL-26-KENN"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-cusa-2026-12-04-champq-kenest",
+          "normalizedTermsHash": "33cb32ba8bf891735b900bbcda61623a36ff442b1098414ef71d5c9a8c719d6c",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-cusa-2026-12-04-champq-kenest"
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "pairId": "KXTOPARTIST-26B-MOR::ccrc-sptfy-1-artst-us-yr-2026-morwal",
+      "kalshiId": "KXTOPARTIST-26B-MOR",
+      "polyId": "ccrc-sptfy-1-artst-us-yr-2026-morwal",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "IDENTITY_CONFLICT",
+      "axes": {
+        "kalshiEntity": "Morgan Wallen",
+        "polyEntity": "Morgan Wallen",
+        "eventAndMetric": "Spotify annual top artist",
+        "geography": "global (family-source interpretation) / US",
+        "seasonOrWindow": "2026 annual ranking",
+        "thresholdOrOutcome": "rank 1"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Related Spotify route: same family global-versus-US mismatch.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXTOPARTIST-26B-MOR",
+          "normalizedTermsHash": "0a3d3a7714237cd73b7b69b73b58f59a0e446d98869d9215545f56692c9e5afa",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTOPARTIST-26B-MOR"
+        },
+        {
+          "venue": "poly",
+          "id": "ccrc-sptfy-1-artst-us-yr-2026-morwal",
+          "normalizedTermsHash": "9dd825401d61ec923d087f2fd514995293e82768d470b2912324d8df80d59da8",
+          "url": "https://gateway.polymarket.us/v1/market/slug/ccrc-sptfy-1-artst-us-yr-2026-morwal"
+        }
+      ]
+    },
+    {
+      "rank": 21,
+      "pairId": "KXISRAELPM-26OCT27-NBEN::mlaec-isrpol-pm-2026-10-27-nafben",
+      "kalshiId": "KXISRAELPM-26OCT27-NBEN",
+      "polyId": "mlaec-isrpol-pm-2026-10-27-nafben",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Naftali Bennett",
+        "polyEntity": "Naftali Bennett",
+        "eventAndMetric": "first PM formed after election",
+        "geography": "Israel",
+        "seasonOrWindow": "K 2026 election before 2027-10-27 / PM next election; different repeat-election scope",
+        "thresholdOrOutcome": "formally assumes full office"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "K settles No immediately on new elections before government formation; PM carries into new election.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXISRAELPM-26OCT27-NBEN",
+          "normalizedTermsHash": "563fa1536cd183b628a620b034e96db733a723884a51a9bf7c727f57a29c59f1",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXISRAELPM-26OCT27-NBEN"
+        },
+        {
+          "venue": "poly",
+          "id": "mlaec-isrpol-pm-2026-10-27-nafben",
+          "normalizedTermsHash": "31bc506de07da5f40d8eb16b746202c79a9d4d04c469dd43643d8477276d7d3c",
+          "url": "https://gateway.polymarket.us/v1/market/slug/mlaec-isrpol-pm-2026-10-27-nafben"
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "pairId": "KXISRAELPM-26OCT27-BGAN::mlaec-isrpol-pm-2026-10-27-bengan",
+      "kalshiId": "KXISRAELPM-26OCT27-BGAN",
+      "polyId": "mlaec-isrpol-pm-2026-10-27-bengan",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Benny Gantz",
+        "polyEntity": "Benny Gantz",
+        "eventAndMetric": "first PM formed after election",
+        "geography": "Israel",
+        "seasonOrWindow": "K 2026 election before 2027-10-27 / PM next election; different repeat-election scope",
+        "thresholdOrOutcome": "formally assumes full office"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Same explicit repeat-election contradiction.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXISRAELPM-26OCT27-BGAN",
+          "normalizedTermsHash": "f53933c4a8ecc588a29064d6eb08d84bbaa95206fa38e95ff61b2771bd28013b",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXISRAELPM-26OCT27-BGAN"
+        },
+        {
+          "venue": "poly",
+          "id": "mlaec-isrpol-pm-2026-10-27-bengan",
+          "normalizedTermsHash": "896f3f686696dac9a1b61b388de600936b573a408095c4f8fe4d92f83b4fab9d",
+          "url": "https://gateway.polymarket.us/v1/market/slug/mlaec-isrpol-pm-2026-10-27-bengan"
+        }
+      ]
+    },
+    {
+      "rank": 23,
+      "pairId": "KXPRESNOMD-28-KH::enwc-uspres-nom-dem-2028-kamhar",
+      "kalshiId": "KXPRESNOMD-28-KH",
+      "polyId": "enwc-uspres-nom-dem-2028-kamhar",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Kamala Harris",
+        "polyEntity": "Kamala Harris",
+        "eventAndMetric": "Democratic presidential nomination",
+        "geography": "United States / Democratic Party",
+        "seasonOrWindow": "2028 nomination",
+        "thresholdOrOutcome": "wins AND accepts nomination"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXPRESNOMD-28-KH",
+          "normalizedTermsHash": "aa303fcca26dc58f7958521571f95af6b17db12cc6b179ae57a6940164b69341",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXPRESNOMD-28-KH"
+        },
+        {
+          "venue": "poly",
+          "id": "enwc-uspres-nom-dem-2028-kamhar",
+          "normalizedTermsHash": "794726c79fc20476a560e68b7325c78b77adc175b4afd3051930e459740ee772",
+          "url": "https://gateway.polymarket.us/v1/market/slug/enwc-uspres-nom-dem-2028-kamhar"
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "pairId": "KXPRESNOMD-28-MK::enwc-uspres-nom-dem-2028-markel",
+      "kalshiId": "KXPRESNOMD-28-MK",
+      "polyId": "enwc-uspres-nom-dem-2028-markel",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Mark Kelly",
+        "polyEntity": "Mark Kelly",
+        "eventAndMetric": "Democratic presidential nomination",
+        "geography": "United States / Democratic Party",
+        "seasonOrWindow": "2028 nomination",
+        "thresholdOrOutcome": "wins AND accepts nomination"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXPRESNOMD-28-MK",
+          "normalizedTermsHash": "04a47d2dcac3586b1321466305434e39d0eacb0c07f08da644cd8d0e2e5af873",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXPRESNOMD-28-MK"
+        },
+        {
+          "venue": "poly",
+          "id": "enwc-uspres-nom-dem-2028-markel",
+          "normalizedTermsHash": "77f17326111883270e543a22ea28d8524b3060088a836697d1dd2f9e93128c2c",
+          "url": "https://gateway.polymarket.us/v1/market/slug/enwc-uspres-nom-dem-2028-markel"
+        }
+      ]
+    },
+    {
+      "rank": 25,
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "kalshiId": "KXTIME-26-DAR",
+      "polyId": "tpoyc-2026-daramo",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Dario Amodei",
+        "polyEntity": "Dario Amodei",
+        "eventAndMetric": "TIME Person of the Year",
+        "geography": "TIME publication; not a national-only award",
+        "seasonOrWindow": "2026",
+        "thresholdOrOutcome": "named winner or qualifying associated person on cover"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXTIME-26-DAR",
+          "normalizedTermsHash": "0d5dbae6102b353300d7bff2320d027743b54c8d64117cc4d7cccd3d6a7726d6",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTIME-26-DAR"
+        },
+        {
+          "venue": "poly",
+          "id": "tpoyc-2026-daramo",
+          "normalizedTermsHash": "0882bd0bcbcffbc419891f9cebdfd28c8091aaefd07df861f6378e8f578d54ac",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tpoyc-2026-daramo"
+        }
+      ]
+    },
+    {
+      "rank": 26,
+      "pairId": "KXNCAAFAAC-26-NAVY::tec-cfb-aacchamp-2026-12-05-w-navy",
+      "kalshiId": "KXNCAAFAAC-26-NAVY",
+      "polyId": "tec-cfb-aacchamp-2026-12-05-w-navy",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Navy",
+        "polyEntity": "Navy",
+        "eventAndMetric": "American Athletic Conference football championship winner",
+        "geography": "US / American Athletic Conference",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "wins"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFAAC-26-NAVY",
+          "normalizedTermsHash": "4b8ca51e7385382910dcb6256808a28a75106c5ac870151444850708be5a0693",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFAAC-26-NAVY"
+        },
+        {
+          "venue": "poly",
+          "id": "tec-cfb-aacchamp-2026-12-05-w-navy",
+          "normalizedTermsHash": "b28ade71bcb54e86f55ec92228ff8cd9d7da62d87b10dfef6b389657e492af1b",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tec-cfb-aacchamp-2026-12-05-w-navy"
+        }
+      ]
+    },
+    {
+      "rank": 27,
+      "pairId": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane",
+      "kalshiId": "KXNCAAFAACQUAL-26-TULN",
+      "polyId": "aqc-cfb-aac-2026-12-05-champq-tulane",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Tulane",
+        "polyEntity": "Tulane",
+        "eventAndMetric": "American Athletic Conference football championship qualification",
+        "geography": "US / American Athletic Conference",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFAACQUAL-26-TULN",
+          "normalizedTermsHash": "468c2e9f9d21eb55d0358861006ff46c3be67f7150b540cc772d777ae6a2e8d8",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFAACQUAL-26-TULN"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-aac-2026-12-05-champq-tulane",
+          "normalizedTermsHash": "89a2fff85bd7a209cb87cbd60cf402eef31a496f5bdcf2e037a787ea9db0d4e5",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-aac-2026-12-05-champq-tulane"
+        }
+      ]
+    },
+    {
+      "rank": 28,
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "kalshiId": "KX1ALBUM-26DEC-KEN",
+      "polyId": "ccpc-bilbrd-1album-any2026-kenlam",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "INSUFFICIENT_EVIDENCE",
+      "axes": {
+        "kalshiEntity": "Kendrick Lamar",
+        "polyEntity": "Kendrick Lamar",
+        "eventAndMetric": "Billboard 200 number-one album",
+        "geography": "US Billboard 200 chart",
+        "seasonOrWindow": "K through chart dated 2026-12-26 / PM charts dated 2026 after issuance; start not established",
+        "thresholdOrOutcome": "at least one number-one album"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Neither issuance boundary nor equal earliest eligible chart is established; common final chart alone is insufficient.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KX1ALBUM-26DEC-KEN",
+          "normalizedTermsHash": "c363649b47e91aabd352faf8d8d6a4550f193205648f77f8ecdd55ce49a5e744",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KX1ALBUM-26DEC-KEN"
+        },
+        {
+          "venue": "poly",
+          "id": "ccpc-bilbrd-1album-any2026-kenlam",
+          "normalizedTermsHash": "974efd846f57b4c7be0d903255a787b5b1c49911feaebf73278f3ff39ee7141f",
+          "url": "https://gateway.polymarket.us/v1/market/slug/ccpc-bilbrd-1album-any2026-kenlam"
+        }
+      ]
+    },
+    {
+      "rank": 29,
+      "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "kalshiId": "KXNBAEAST1SEED-26-MIA",
+      "polyId": "aachc-nba-eastseed1-2027-04-11-w-mia",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Miami",
+        "polyEntity": "Miami Heat",
+        "eventAndMetric": "NBA Eastern Conference playoff seed",
+        "geography": "NBA Eastern Conference",
+        "seasonOrWindow": "2026-27 regular season",
+        "thresholdOrOutcome": "number-one seed under official tiebreakers"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNBAEAST1SEED-26-MIA",
+          "normalizedTermsHash": "31589301e75c114df68a75d78d0a8977edb0b1ef01710c91201261366b68fe34",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNBAEAST1SEED-26-MIA"
+        },
+        {
+          "venue": "poly",
+          "id": "aachc-nba-eastseed1-2027-04-11-w-mia",
+          "normalizedTermsHash": "a3b7e470d0eb43d0ad53e753a556487b71b4deeb84b929cc6d447c4501bc1f5f",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aachc-nba-eastseed1-2027-04-11-w-mia"
+        }
+      ]
+    },
+    {
+      "rank": 30,
+      "pairId": "KXFRENCHPRES-27-MLEP::ewc-pres-fra-2027-04-11-marlep",
+      "kalshiId": "KXFRENCHPRES-27-MLEP",
+      "polyId": "ewc-pres-fra-2027-04-11-marlep",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Marine Le Pen",
+        "polyEntity": "Marine Le Pen",
+        "eventAndMetric": "French presidential election winner",
+        "geography": "France",
+        "seasonOrWindow": "K title 2027, predicate next election / PM 2027 incl runoff; reschedule exceptions not reviewed",
+        "thresholdOrOutcome": "wins election"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXFRENCHPRES-27-MLEP",
+          "normalizedTermsHash": "251cd1a0cc3aae5a965d169a408683ff39ef6a16154309135df3d6baaba15d75",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXFRENCHPRES-27-MLEP"
+        },
+        {
+          "venue": "poly",
+          "id": "ewc-pres-fra-2027-04-11-marlep",
+          "normalizedTermsHash": "dd38878c751b1d35fbdab629c2d518ef87227c81ead2c74c238d4e38e0e44205",
+          "url": "https://gateway.polymarket.us/v1/market/slug/ewc-pres-fra-2027-04-11-marlep"
+        }
+      ]
+    },
+    {
+      "rank": 31,
+      "pairId": "KXNCAAFB10QUAL-26-ORE::aqc-cfb-bigten-2026-12-05-champq-ore",
+      "kalshiId": "KXNCAAFB10QUAL-26-ORE",
+      "polyId": "aqc-cfb-bigten-2026-12-05-champq-ore",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Oregon",
+        "polyEntity": "Oregon",
+        "eventAndMetric": "Big Ten football championship qualification",
+        "geography": "US / Big Ten",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFB10QUAL-26-ORE",
+          "normalizedTermsHash": "4f2b0c9f25b0c56bdb9ca6f9a00716f4c49c5fd15a246f1675a5f7da8b00b6df",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFB10QUAL-26-ORE"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-bigten-2026-12-05-champq-ore",
+          "normalizedTermsHash": "6342b377b130d429a424a15f5daaf639b9ec8a5b82ab8a411f5cdc38291439c0",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-bigten-2026-12-05-champq-ore"
+        }
+      ]
+    },
+    {
+      "rank": 32,
+      "pairId": "KXNCAAFSECQ-26-OKLA::aqc-cfb-sec-2026-12-05-champq-okl",
+      "kalshiId": "KXNCAAFSECQ-26-OKLA",
+      "polyId": "aqc-cfb-sec-2026-12-05-champq-okl",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Oklahoma",
+        "polyEntity": "Oklahoma",
+        "eventAndMetric": "SEC football championship qualification",
+        "geography": "US / SEC",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFSECQ-26-OKLA",
+          "normalizedTermsHash": "4184f0ae03e277ed4df897a311a7146cea2fc230396f3eaf35d24ef14d4531f4",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFSECQ-26-OKLA"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-sec-2026-12-05-champq-okl",
+          "normalizedTermsHash": "28881c86a0cded85cfd7331a59586a0ba930164396477681a4440b99361f7d9a",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-sec-2026-12-05-champq-okl"
+        }
+      ]
+    },
+    {
+      "rank": 33,
+      "pairId": "KXNEWSOMRUN-28-27JAN01::cranc-uspres28-12-31-2026-gavnew",
+      "kalshiId": "KXNEWSOMRUN-28-27JAN01",
+      "polyId": "cranc-uspres28-12-31-2026-gavnew",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "INSUFFICIENT_EVIDENCE",
+      "axes": {
+        "kalshiEntity": "Gavin Newsom",
+        "polyEntity": "Gavin Newsom",
+        "eventAndMetric": "announcement of 2028 presidential run",
+        "geography": "United States presidency, including party nomination",
+        "seasonOrWindow": "K before 2027-01-01 / PM by 2026-12-31 23:59 ET; earliest qualifying announcement not established",
+        "thresholdOrOutcome": "formal public announcement, not exploratory"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Common stated end-day does not establish equal opening boundary or K timezone at identity-screen depth. Leave unresolved.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNEWSOMRUN-28-27JAN01",
+          "normalizedTermsHash": "4ffdd67e9cb1debf261f750865e01b98a818816ab6a6e2b4606873c091c7169e",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNEWSOMRUN-28-27JAN01"
+        },
+        {
+          "venue": "poly",
+          "id": "cranc-uspres28-12-31-2026-gavnew",
+          "normalizedTermsHash": "5210cad91d2a59e1fda23876df6a976ce58cc3fe09266d78c89c222c23089213",
+          "url": "https://gateway.polymarket.us/v1/market/slug/cranc-uspres28-12-31-2026-gavnew"
+        }
+      ]
+    },
+    {
+      "rank": 34,
+      "pairId": "KXNCAAFB10QUAL-26-PSU::aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "kalshiId": "KXNCAAFB10QUAL-26-PSU",
+      "polyId": "aqc-cfb-bigten-2026-12-05-champq-pennst",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Penn State",
+        "polyEntity": "Penn State",
+        "eventAndMetric": "Big Ten football championship qualification",
+        "geography": "US / Big Ten",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFB10QUAL-26-PSU",
+          "normalizedTermsHash": "f6a06bf8a3a8760e37652007dca88598f448de65763cc159941bdd6fa8906376",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFB10QUAL-26-PSU"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-bigten-2026-12-05-champq-pennst",
+          "normalizedTermsHash": "fb397fe2ee57c17588bd144ea2e4770949d539b4783a83fc7b5126d005770176",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-bigten-2026-12-05-champq-pennst"
+        }
+      ]
+    },
+    {
+      "rank": 35,
+      "pairId": "KXNCAAFB12QUAL-26-ARIZ::aqc-cfb-big12-2026-12-04-champq-arz",
+      "kalshiId": "KXNCAAFB12QUAL-26-ARIZ",
+      "polyId": "aqc-cfb-big12-2026-12-04-champq-arz",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Arizona",
+        "polyEntity": "Arizona",
+        "eventAndMetric": "Big 12 football championship qualification",
+        "geography": "US / Big 12",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFB12QUAL-26-ARIZ",
+          "normalizedTermsHash": "aeb3fc2fbe4e6e3c857a5db5771a9ea917ad4aa862c19a2bad2fab46fad2cb98",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFB12QUAL-26-ARIZ"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-big12-2026-12-04-champq-arz",
+          "normalizedTermsHash": "9c54a9de7c3840740e6ccc7ec5bada15d1bbb8801112684d6da8f8da79d9de45",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-big12-2026-12-04-champq-arz"
+        }
+      ]
+    },
+    {
+      "rank": 36,
+      "pairId": "KXTIME-26-JP::tpoyc-2026-jerpow",
+      "kalshiId": "KXTIME-26-JP",
+      "polyId": "tpoyc-2026-jerpow",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Jerome Powell",
+        "polyEntity": "Jerome Powell",
+        "eventAndMetric": "TIME Person of the Year",
+        "geography": "TIME publication",
+        "seasonOrWindow": "2026",
+        "thresholdOrOutcome": "named winner or qualifying associated person on cover"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXTIME-26-JP",
+          "normalizedTermsHash": "467ef27f97de69a2092b270a6ec739a896e1d982f20357b5dfa2d34d3a032bcb",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTIME-26-JP"
+        },
+        {
+          "venue": "poly",
+          "id": "tpoyc-2026-jerpow",
+          "normalizedTermsHash": "d015a6b7aea729e61af4913309ee4357acdc976e179e830947c67a8f1be93554",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tpoyc-2026-jerpow"
+        }
+      ]
+    },
+    {
+      "rank": 37,
+      "pairId": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest",
+      "kalshiId": "KXNCAAFPAC12QUAL-26-FRES",
+      "polyId": "aqc-cfb-pac12-2026-12-04-champq-frest",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Fresno State",
+        "polyEntity": "Fresno State",
+        "eventAndMetric": "Pac-12 football championship qualification",
+        "geography": "US / Pac-12",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFPAC12QUAL-26-FRES",
+          "normalizedTermsHash": "907ab0282277470624fad827a35632740c91c5bad0a968a00e0479f5ace5ac66",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFPAC12QUAL-26-FRES"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-pac12-2026-12-04-champq-frest",
+          "normalizedTermsHash": "88949b8bf8dafff6182c76493e4cdcb00b31a2c96eb7d33b0297d021603a89be",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-pac12-2026-12-04-champq-frest"
+        }
+      ]
+    },
+    {
+      "rank": 38,
+      "pairId": "KXNCAAFCUSAQUAL-26-MTU::aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "kalshiId": "KXNCAAFCUSAQUAL-26-MTU",
+      "polyId": "aqc-cfb-cusa-2026-12-04-champq-mtnst",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Middle Tennessee",
+        "polyEntity": "Middle Tennessee",
+        "eventAndMetric": "Conference USA football championship qualification",
+        "geography": "US / Conference USA",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFCUSAQUAL-26-MTU",
+          "normalizedTermsHash": "885e9ee9330c6a593a83aeeee43f50896af0df8b56f181c3760eebefc8082b2e",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFCUSAQUAL-26-MTU"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-cusa-2026-12-04-champq-mtnst",
+          "normalizedTermsHash": "5a190c1b4e13f149585764ca152f276c5cba5241f58e9154ea6bfef4f8a3b11f",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-cusa-2026-12-04-champq-mtnst"
+        }
+      ]
+    },
+    {
+      "rank": 39,
+      "pairId": "KXNCAAFAACQUAL-26-ARMY::aqc-cfb-aac-2026-12-05-champq-army",
+      "kalshiId": "KXNCAAFAACQUAL-26-ARMY",
+      "polyId": "aqc-cfb-aac-2026-12-05-champq-army",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Army",
+        "polyEntity": "Army",
+        "eventAndMetric": "American Athletic Conference football championship qualification",
+        "geography": "US / American Athletic Conference",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFAACQUAL-26-ARMY",
+          "normalizedTermsHash": "d330d89e21d9e62651cbc84198b3e7a2cf3ff18f54ce2ea6d2a9b8e4b4fbf3d4",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFAACQUAL-26-ARMY"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-aac-2026-12-05-champq-army",
+          "normalizedTermsHash": "92f8ff851b1e69f4c94c59a381cb66890fd622a528ed39b5d5200885222e90ae",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-aac-2026-12-05-champq-army"
+        }
+      ]
+    },
+    {
+      "rank": 40,
+      "pairId": "KXISRAELPM-26OCT27-BNET::mlaec-isrpol-pm-2026-10-27-bennet",
+      "kalshiId": "KXISRAELPM-26OCT27-BNET",
+      "polyId": "mlaec-isrpol-pm-2026-10-27-bennet",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Benjamin Netanyahu",
+        "polyEntity": "Benjamin Netanyahu",
+        "eventAndMetric": "first PM formed after election",
+        "geography": "Israel",
+        "seasonOrWindow": "K 2026 election before 2027-10-27 / PM next election; different repeat-election scope",
+        "thresholdOrOutcome": "formally assumes full office"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Same explicit repeat-election contradiction; names align despite opaque PM slug.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXISRAELPM-26OCT27-BNET",
+          "normalizedTermsHash": "8f1c1193da5e9aefb7ba00655d2484042913728c9d03f0fea06e32667c0ffbbc",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXISRAELPM-26OCT27-BNET"
+        },
+        {
+          "venue": "poly",
+          "id": "mlaec-isrpol-pm-2026-10-27-bennet",
+          "normalizedTermsHash": "90ef5fbed11a21d50549f00c0dd0b5bf333ababf56a69c766c613b2dbe00645f",
+          "url": "https://gateway.polymarket.us/v1/market/slug/mlaec-isrpol-pm-2026-10-27-bennet"
+        }
+      ]
+    },
+    {
+      "rank": 41,
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "kalshiId": "KXTIME-26-EM",
+      "polyId": "tpoyc-2026-elomus",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Elon Musk",
+        "polyEntity": "Elon Musk",
+        "eventAndMetric": "TIME Person of the Year",
+        "geography": "TIME publication",
+        "seasonOrWindow": "2026",
+        "thresholdOrOutcome": "named winner or qualifying associated person on cover"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXTIME-26-EM",
+          "normalizedTermsHash": "3539215abbdf354cb4a29e458a9a569d86040dc1575dd050dc0b8fa0deff0cf0",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTIME-26-EM"
+        },
+        {
+          "venue": "poly",
+          "id": "tpoyc-2026-elomus",
+          "normalizedTermsHash": "dfc8bedbc286eb10477323eeb50873e882454809849b377fe8b5871e1f17c76f",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tpoyc-2026-elomus"
+        }
+      ]
+    },
+    {
+      "rank": 42,
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "kalshiId": "KXTIME-26-BEN",
+      "polyId": "tpoyc-2026-bennet",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Benjamin Netanyahu",
+        "polyEntity": "Benjamin Netanyahu",
+        "eventAndMetric": "TIME Person of the Year",
+        "geography": "TIME publication",
+        "seasonOrWindow": "2026",
+        "thresholdOrOutcome": "named winner or qualifying associated person on cover"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXTIME-26-BEN",
+          "normalizedTermsHash": "d62d01cfbf4ccc8fd8f02ea3b0cb10dd4ed99545eb3a944e46794b83190c00fc",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTIME-26-BEN"
+        },
+        {
+          "venue": "poly",
+          "id": "tpoyc-2026-bennet",
+          "normalizedTermsHash": "dc4bfb10b685965011906c2d081f29a2b7862336dea934a1e4331f601bc9112d",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tpoyc-2026-bennet"
+        }
+      ]
+    },
+    {
+      "rank": 43,
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "kalshiId": "KXMLBAL-26-CWS",
+      "polyId": "tec-mlb-alchamp-2026-09-27-cws",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Chicago White Sox (Chicago WS)",
+        "polyEntity": "Chicago White Sox",
+        "eventAndMetric": "American League baseball pennant",
+        "geography": "US/Canada MLB / American League",
+        "seasonOrWindow": "2026; PM terms scheduled 2026-10-23 (slug date is not event proof)",
+        "thresholdOrOutcome": "wins league championship, not World Series"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Chicago WS is the MLB White Sox; pennant wording aligns. Deep review T; small surplus fails retained risk allowance.",
+      "settlementClassification": "CONDITIONAL",
+      "reviewDepth": "DEEP",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXMLBAL-26-CWS",
+          "normalizedTermsHash": "f4b37b4f1cdf2b01e2a91882c7eb78ed81908af2118f63da481218b044db8890",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBAL-26-CWS"
+        },
+        {
+          "venue": "poly",
+          "id": "tec-mlb-alchamp-2026-09-27-cws",
+          "normalizedTermsHash": "b7f0991e82796aa1e343579de6403e76c868de6258f58f5797257b502d84117f",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tec-mlb-alchamp-2026-09-27-cws"
+        }
+      ]
+    },
+    {
+      "rank": 44,
+      "pairId": "KXNCAAFSBELT-26-TROY::tec-cfb-sbeltchamp-2026-12-04-w-troy",
+      "kalshiId": "KXNCAAFSBELT-26-TROY",
+      "polyId": "tec-cfb-sbeltchamp-2026-12-04-w-troy",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Troy",
+        "polyEntity": "Troy",
+        "eventAndMetric": "Sun Belt football championship winner",
+        "geography": "US / Sun Belt",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "wins"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFSBELT-26-TROY",
+          "normalizedTermsHash": "80f82cf61be7e1f6962af08a709412d4e5547863d044fb2b28ff1a6c26136a7f",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFSBELT-26-TROY"
+        },
+        {
+          "venue": "poly",
+          "id": "tec-cfb-sbeltchamp-2026-12-04-w-troy",
+          "normalizedTermsHash": "099c6ea6554e0e7363d0a0dec6d0646dbb6ca80c150d53e65cd76afc1a791658",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tec-cfb-sbeltchamp-2026-12-04-w-troy"
+        }
+      ]
+    },
+    {
+      "rank": 45,
+      "pairId": "KXNCAAFSECQ-26-MISS::aqc-cfb-sec-2026-12-05-champq-miss",
+      "kalshiId": "KXNCAAFSECQ-26-MISS",
+      "polyId": "aqc-cfb-sec-2026-12-05-champq-miss",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Ole Miss",
+        "polyEntity": "Ole Miss",
+        "eventAndMetric": "SEC football championship qualification",
+        "geography": "US / SEC",
+        "seasonOrWindow": "2026; PM event 2026-12-05",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFSECQ-26-MISS",
+          "normalizedTermsHash": "1362df8a864ab14e2386d709464b923a41dd62839987a0cb7b5b6da27e86af4a",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFSECQ-26-MISS"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-sec-2026-12-05-champq-miss",
+          "normalizedTermsHash": "54c8a613468283309ac6360ed2bf46d2573a53a83d18ae1455c2406da2f2a93d",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-sec-2026-12-05-champq-miss"
+        }
+      ]
+    },
+    {
+      "rank": 46,
+      "pairId": "KXARGENTINAPRES-27-SMAS::ewc-pres-arg-2027-10-24-sermas",
+      "kalshiId": "KXARGENTINAPRES-27-SMAS",
+      "polyId": "ewc-pres-arg-2027-10-24-sermas",
+      "sides": {
+        "kalshi": "no",
+        "poly": "yes"
+      },
+      "identityScreen": "INSUFFICIENT_EVIDENCE",
+      "axes": {
+        "kalshiEntity": "Sergio Massa",
+        "polyEntity": "Sergio Massa",
+        "eventAndMetric": "Argentine presidential election winner",
+        "geography": "Argentina",
+        "seasonOrWindow": "K next election without primary year / PM 2027 incl runoff; exact alignment unproven",
+        "thresholdOrOutcome": "wins election"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Ticker year and administrative close cannot prove next-election/2027 observation identity.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXARGENTINAPRES-27-SMAS",
+          "normalizedTermsHash": "7e3ab0c3cff6f92861318a39325dc03dedbc08f382606730f00b021d9aa5cb1c",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXARGENTINAPRES-27-SMAS"
+        },
+        {
+          "venue": "poly",
+          "id": "ewc-pres-arg-2027-10-24-sermas",
+          "normalizedTermsHash": "480765d7ece9308b4c84a4b6f4d95ba6863326dce23ff15582580a60826b88b0",
+          "url": "https://gateway.polymarket.us/v1/market/slug/ewc-pres-arg-2027-10-24-sermas"
+        }
+      ]
+    },
+    {
+      "rank": 47,
+      "pairId": "KXTIME-26-JAM::tpoyc-2026-jamtal",
+      "kalshiId": "KXTIME-26-JAM",
+      "polyId": "tpoyc-2026-jamtal",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "James Talarico",
+        "polyEntity": "James Talarico",
+        "eventAndMetric": "TIME Person of the Year",
+        "geography": "TIME publication",
+        "seasonOrWindow": "2026",
+        "thresholdOrOutcome": "named winner or qualifying associated person on cover"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXTIME-26-JAM",
+          "normalizedTermsHash": "245e128048befe5ffb1d5e99765b9e60ecfc2243b7c0235eceae64d179f2f66e",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTIME-26-JAM"
+        },
+        {
+          "venue": "poly",
+          "id": "tpoyc-2026-jamtal",
+          "normalizedTermsHash": "e7e9aa852656fb2a81d58fc4f577f9b8143c3320d584ac02251a6817adcbf439",
+          "url": "https://gateway.polymarket.us/v1/market/slug/tpoyc-2026-jamtal"
+        }
+      ]
+    },
+    {
+      "rank": 48,
+      "pairId": "KXNCAAFMWCQUAL-26-NEV::aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "kalshiId": "KXNCAAFMWCQUAL-26-NEV",
+      "polyId": "aqc-cfb-mwc-2026-12-04-champq-nevada",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Nevada",
+        "polyEntity": "Nevada",
+        "eventAndMetric": "Mountain West Conference football championship qualification",
+        "geography": "US / Mountain West Conference",
+        "seasonOrWindow": "2026; PM event 2026-12-04",
+        "thresholdOrOutcome": "qualifies"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXNCAAFMWCQUAL-26-NEV",
+          "normalizedTermsHash": "6250ed1687502ae0d1f8d524a514e418495ef4c56300ab10ea9d3c94ff8196c5",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFMWCQUAL-26-NEV"
+        },
+        {
+          "venue": "poly",
+          "id": "aqc-cfb-mwc-2026-12-04-champq-nevada",
+          "normalizedTermsHash": "9d1ea3e8b140ed9aa9cd36b98d8d8f047248a5856e5c02ae58c663bef3bfbac3",
+          "url": "https://gateway.polymarket.us/v1/market/slug/aqc-cfb-mwc-2026-12-04-champq-nevada"
+        }
+      ]
+    },
+    {
+      "rank": 49,
+      "pairId": "KXSWEDENPM-26SEP13-UKRI::mlaec-swepm-2026-09-13-ulfkri",
+      "kalshiId": "KXSWEDENPM-26SEP13-UKRI",
+      "polyId": "mlaec-swepm-2026-09-13-ulfkri",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Ulf Kristersson",
+        "polyEntity": "Ulf Kristersson",
+        "eventAndMetric": "first PM formed after election",
+        "geography": "Sweden",
+        "seasonOrWindow": "K 2026 election before 2028-01-01 / PM next election; different repeat-election scope",
+        "thresholdOrOutcome": "formally assumes full office"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Same explicit repeat-election contradiction as Israeli GOVHEAD contracts.",
+      "settlementClassification": "INCOMPATIBLE",
+      "reviewDepth": "EXPLICIT_CONFLICT_ONLY",
+      "matcherAfter": "EXCLUDED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXSWEDENPM-26SEP13-UKRI",
+          "normalizedTermsHash": "2dbb3f10dd0179a2758b6179951295f19c822db15ef5cf0799bc613eb64754b4",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXSWEDENPM-26SEP13-UKRI"
+        },
+        {
+          "venue": "poly",
+          "id": "mlaec-swepm-2026-09-13-ulfkri",
+          "normalizedTermsHash": "5706a4c5c46135e591685cf828bf9b7734f880473c24398f74a24d593c9616f3",
+          "url": "https://gateway.polymarket.us/v1/market/slug/mlaec-swepm-2026-09-13-ulfkri"
+        }
+      ]
+    },
+    {
+      "rank": 50,
+      "pairId": "KXPRESNOMD-28-AB::enwc-uspres-nom-dem-2028-andbes",
+      "kalshiId": "KXPRESNOMD-28-AB",
+      "polyId": "enwc-uspres-nom-dem-2028-andbes",
+      "sides": {
+        "kalshi": "yes",
+        "poly": "no"
+      },
+      "identityScreen": "STRUCTURALLY_PLAUSIBLE",
+      "axes": {
+        "kalshiEntity": "Andy Beshear",
+        "polyEntity": "Andy Beshear",
+        "eventAndMetric": "Democratic presidential nomination",
+        "geography": "United States / Democratic Party",
+        "seasonOrWindow": "2028 nomination",
+        "thresholdOrOutcome": "wins AND accepts nomination"
+      },
+      "outcomeOrientation": "Both primary YES predicates assert the named outcome; no inverted outcomes. Purchased sides remain as recorded.",
+      "note": "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+      "settlementClassification": "UNRESOLVED",
+      "reviewDepth": "IDENTITY_SCREEN_ONLY",
+      "matcherAfter": "UNVERIFIED",
+      "primarySources": [
+        {
+          "venue": "kalshi",
+          "id": "KXPRESNOMD-28-AB",
+          "normalizedTermsHash": "6b776e6499bdd886fba64c091cc2150779be2b992667e9d085e24e70eaa5fe17",
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXPRESNOMD-28-AB"
+        },
+        {
+          "venue": "poly",
+          "id": "enwc-uspres-nom-dem-2028-andbes",
+          "normalizedTermsHash": "851e38c9a88110b737e666ecb643ae3fd92b2c1b7d73330e103d5071a0fc7c0e",
+          "url": "https://gateway.polymarket.us/v1/market/slug/enwc-uspres-nom-dem-2028-andbes"
+        }
+      ]
+    }
+  ],
+  "deepReviews": [
+    {
+      "rank": 7,
+      "pairId": "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "kalshiId": "KXNCAAFB12QUAL-26-KSU",
+      "polyId": "aqc-cfb-big12-2026-12-04-champq-kanst",
+      "kalshiSide": "no",
+      "polySide": "yes",
+      "confirmedAt": "2026-09-22T01:12:51.967Z",
+      "quantity": 10,
+      "moneyScale": 10000,
+      "economics": {
+        "cost": 94000,
+        "feeBound": 1700,
+        "feeBoundSurplus": 4300,
+        "kalshi": {
+          "cost": 83000,
+          "feeBound": 1000,
+          "levels": [
+            {
+              "price": 8300,
+              "quantity": 10
+            }
+          ]
+        },
+        "poly": {
+          "cost": 11000,
+          "feeBound": 700,
+          "levels": [
+            {
+              "price": 1100,
+              "quantity": 10
+            }
+          ]
+        },
+        "riskAllowance": 2000,
+        "afterRisk": 2300,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 103700,
+        "venueReservedCash": {
+          "kalshi": 86000,
+          "poly": 17700
+        },
+        "simulatedCapital": {
+          "kalshi": 500000,
+          "poly": 500000
+        },
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "historicalBaselineAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_30_DAY_HORIZON",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ]
+        },
+        "poly": {
+          "classification": "OPEN_IN_CONFIRMED_BOOK",
+          "admitted": true
+        }
+      },
+      "confirmationWindow": {
+        "startedAt": 1790039571680,
+        "endedAt": 1790039571967,
+        "kalshiSnapshotMono": 738266.091042,
+        "polyResponseMono": 738428.353583,
+        "nowMono": 738442.517958
+      },
+      "bookConfirmation": {
+        "accepted": true,
+        "reasons": [],
+        "kalshi": {
+          "receivedAt": 1790039571791,
+          "exchangeAt": null,
+          "processedAt": 1790039571791,
+          "version": 2,
+          "sequence": 100,
+          "transactTime": null
+        },
+        "poly": {
+          "receivedAt": 1790039571953,
+          "exchangeAt": 1790039557140,
+          "processedAt": 1790039571953,
+          "version": 1,
+          "sequence": null,
+          "transactTime": "2026-09-22T01:12:37.140325636Z"
+        }
+      },
+      "historicalAdministrativeCloseAt": {
+        "kalshi": "2026-12-13T15:00:00Z",
+        "poly": "2026-12-19T04:00:00Z"
+      },
+      "settlementClassification": "CONDITIONAL",
+      "paperExecutionReady": false,
+      "reviewSection": "Q"
+    },
+    {
+      "rank": 13,
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "kalshiId": "KXDWTSRANK-226DEC31-JSTIL",
+      "polyId": "rtc-dwts-s35-2-2026-11-17-julsti",
+      "kalshiSide": "yes",
+      "polySide": "no",
+      "confirmedAt": "2026-09-22T01:14:21.323Z",
+      "quantity": 7,
+      "moneyScale": 10000,
+      "economics": {
+        "cost": 66500,
+        "feeBound": 1300,
+        "feeBoundSurplus": 2200,
+        "kalshi": {
+          "cost": 5600,
+          "feeBound": 700,
+          "levels": [
+            {
+              "price": 800,
+              "quantity": 7
+            }
+          ]
+        },
+        "poly": {
+          "cost": 60900,
+          "feeBound": 600,
+          "levels": [
+            {
+              "price": 8700,
+              "quantity": 7
+            }
+          ]
+        },
+        "riskAllowance": 1400,
+        "afterRisk": 800,
+        "recoveryCash": {
+          "kalshi": 700,
+          "poly": 3500
+        },
+        "reservedCash": 73400,
+        "venueReservedCash": {
+          "kalshi": 7700,
+          "poly": 65700
+        },
+        "simulatedCapital": {
+          "kalshi": 500000,
+          "poly": 500000
+        },
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "historicalBaselineAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_30_DAY_HORIZON",
+          "BASELINE_10_CENT_PROFIT_FLOOR"
+        ]
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ]
+        },
+        "poly": {
+          "classification": "OPEN_IN_CONFIRMED_BOOK",
+          "admitted": true
+        }
+      },
+      "confirmationWindow": {
+        "startedAt": 1790039661113,
+        "endedAt": 1790039661323,
+        "kalshiSnapshotMono": 827637.90525,
+        "polyResponseMono": 827793.317042,
+        "nowMono": 827797.98625
+      },
+      "bookConfirmation": {
+        "accepted": true,
+        "reasons": [],
+        "kalshi": {
+          "receivedAt": 1790039661163,
+          "exchangeAt": null,
+          "processedAt": 1790039661164,
+          "version": 2,
+          "sequence": 66,
+          "transactTime": null
+        },
+        "poly": {
+          "receivedAt": 1790039661319,
+          "exchangeAt": 1790039548300,
+          "processedAt": 1790039661319,
+          "version": 1,
+          "sequence": null,
+          "transactTime": "2026-09-22T01:12:28.300343711Z"
+        }
+      },
+      "historicalAdministrativeCloseAt": {
+        "kalshi": "2026-12-31T15:00:00Z",
+        "poly": "2026-12-02T04:00:00Z"
+      },
+      "settlementClassification": "CONDITIONAL",
+      "paperExecutionReady": false,
+      "reviewSection": "R"
+    },
+    {
+      "rank": 16,
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "kalshiId": "KXNCAAFCUSAQUAL-26-WKU",
+      "polyId": "aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "kalshiSide": "yes",
+      "polySide": "no",
+      "confirmedAt": "2026-09-22T01:14:23.352Z",
+      "quantity": 7,
+      "moneyScale": 10000,
+      "economics": {
+        "cost": 65600,
+        "feeBound": 2500,
+        "feeBoundSurplus": 1900,
+        "kalshi": {
+          "cost": 20100,
+          "feeBound": 1400,
+          "levels": [
+            {
+              "price": 2800,
+              "quantity": 2
+            },
+            {
+              "price": 2900,
+              "quantity": 5
+            }
+          ]
+        },
+        "poly": {
+          "cost": 45500,
+          "feeBound": 1100,
+          "levels": [
+            {
+              "price": 6500,
+              "quantity": 7
+            }
+          ]
+        },
+        "riskAllowance": 1400,
+        "afterRisk": 500,
+        "recoveryCash": {
+          "kalshi": 700,
+          "poly": 3500
+        },
+        "reservedCash": 73700,
+        "venueReservedCash": {
+          "kalshi": 22900,
+          "poly": 50800
+        },
+        "simulatedCapital": {
+          "kalshi": 500000,
+          "poly": 500000
+        },
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "historicalBaselineAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_30_DAY_HORIZON",
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI"
+        ]
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ]
+        },
+        "poly": {
+          "classification": "OPEN_IN_CONFIRMED_BOOK",
+          "admitted": true
+        }
+      },
+      "confirmationWindow": {
+        "startedAt": 1790039663114,
+        "endedAt": 1790039663352,
+        "kalshiSnapshotMono": 829657.859917,
+        "polyResponseMono": 829820.100417,
+        "nowMono": 829826.88175
+      },
+      "bookConfirmation": {
+        "accepted": true,
+        "reasons": [],
+        "kalshi": {
+          "receivedAt": 1790039663183,
+          "exchangeAt": null,
+          "processedAt": 1790039663183,
+          "version": 2,
+          "sequence": 67,
+          "transactTime": null
+        },
+        "poly": {
+          "receivedAt": 1790039663345,
+          "exchangeAt": 1790039586546,
+          "processedAt": 1790039663346,
+          "version": 1,
+          "sequence": null,
+          "transactTime": "2026-09-22T01:13:06.546118106Z"
+        }
+      },
+      "historicalAdministrativeCloseAt": {
+        "kalshi": "2026-12-13T15:00:00Z",
+        "poly": "2026-12-19T04:00:00Z"
+      },
+      "settlementClassification": "CONDITIONAL",
+      "paperExecutionReady": false,
+      "reviewSection": "Q"
+    },
+    {
+      "rank": 14,
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "kalshiId": "KXNCAAFPAC12-26-ORST",
+      "polyId": "tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "kalshiSide": "yes",
+      "polySide": "no",
+      "confirmedAt": "2026-09-22T01:24:49.616Z",
+      "quantity": 10,
+      "moneyScale": 10000,
+      "economics": {
+        "cost": 96000,
+        "feeBound": 1800,
+        "feeBoundSurplus": 2200,
+        "kalshi": {
+          "cost": 10000,
+          "feeBound": 1000,
+          "levels": [
+            {
+              "price": 1000,
+              "quantity": 10
+            }
+          ]
+        },
+        "poly": {
+          "cost": 86000,
+          "feeBound": 800,
+          "levels": [
+            {
+              "price": 8600,
+              "quantity": 10
+            }
+          ]
+        },
+        "riskAllowance": 2000,
+        "afterRisk": 200,
+        "recoveryCash": {
+          "kalshi": 1000,
+          "poly": 5000
+        },
+        "reservedCash": 105800,
+        "venueReservedCash": {
+          "kalshi": 13000,
+          "poly": 92800
+        },
+        "simulatedCapital": {
+          "kalshi": 500000,
+          "poly": 500000
+        },
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "historicalBaselineAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_30_DAY_HORIZON",
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI",
+          "BASELINE_10_DOLLAR_ENTRY_CAP"
+        ]
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ]
+        },
+        "poly": {
+          "classification": "OPEN_IN_CONFIRMED_BOOK",
+          "admitted": true
+        }
+      },
+      "confirmationWindow": {
+        "startedAt": 1790040289377,
+        "endedAt": 1790040289616,
+        "kalshiSnapshotMono": 1455988.632792,
+        "polyResponseMono": 1456124.013458,
+        "nowMono": 1456125.243333
+      },
+      "bookConfirmation": {
+        "accepted": true,
+        "reasons": [],
+        "kalshi": {
+          "receivedAt": 1790040289479,
+          "exchangeAt": null,
+          "processedAt": 1790040289480,
+          "version": 2,
+          "sequence": 96,
+          "transactTime": null
+        },
+        "poly": {
+          "receivedAt": 1790040289615,
+          "exchangeAt": 1790040211901,
+          "processedAt": 1790040289615,
+          "version": 1,
+          "sequence": null,
+          "transactTime": "2026-09-22T01:23:31.901776784Z"
+        }
+      },
+      "historicalAdministrativeCloseAt": {
+        "kalshi": "2026-12-06T15:00:00Z",
+        "poly": "2026-12-19T04:00:00Z"
+      },
+      "settlementClassification": "CONDITIONAL",
+      "paperExecutionReady": false,
+      "reviewSection": "T"
+    },
+    {
+      "rank": 43,
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "kalshiId": "KXMLBAL-26-CWS",
+      "polyId": "tec-mlb-alchamp-2026-09-27-cws",
+      "kalshiSide": "no",
+      "polySide": "yes",
+      "confirmedAt": "2026-09-22T01:05:33.908Z",
+      "quantity": 9,
+      "moneyScale": 10000,
+      "economics": {
+        "cost": 88380,
+        "feeBound": 1300,
+        "feeBoundSurplus": 320,
+        "kalshi": {
+          "cost": 81900,
+          "feeBound": 900,
+          "levels": [
+            {
+              "price": 9100,
+              "quantity": 9
+            }
+          ]
+        },
+        "poly": {
+          "cost": 6480,
+          "feeBound": 400,
+          "levels": [
+            {
+              "price": 720,
+              "quantity": 9
+            }
+          ]
+        },
+        "riskAllowance": 1800,
+        "afterRisk": -1480,
+        "recoveryCash": {
+          "kalshi": 900,
+          "poly": 4500
+        },
+        "reservedCash": 96880,
+        "venueReservedCash": {
+          "kalshi": 84600,
+          "poly": 12280
+        },
+        "simulatedCapital": {
+          "kalshi": 500000,
+          "poly": 500000
+        },
+        "feeProvenance": {
+          "kalshi": {
+            "rate": 700,
+            "rounding": "ceil",
+            "aggregation": "level",
+            "source": "Kalshi quadratic metadata; whole-contract model excludes account-specific fractional balance rounding",
+            "scope": "CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED"
+          },
+          "poly": {
+            "rate": 695,
+            "rounding": "even",
+            "aggregation": "order",
+            "source": "PM-US market coefficient; rounded cumulative taker fee upper bound",
+            "scope": "CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION"
+          }
+        },
+        "feeUncertainty": "Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed."
+      },
+      "historicalBaselineAdmission": {
+        "admitted": false,
+        "blockers": [
+          "BASELINE_30_DAY_HORIZON",
+          "BASELINE_10_CENT_PROFIT_FLOOR",
+          "BASELINE_1_PERCENT_ROI"
+        ]
+      },
+      "marketStatus": {
+        "kalshi": {
+          "classification": "UNRESOLVED",
+          "reasons": [
+            "STATUS_CACHE_CURRENTNESS_UNPROVEN",
+            "NON_ATOMIC_INITIAL_STATE"
+          ]
+        },
+        "poly": {
+          "classification": "OPEN_IN_CONFIRMED_BOOK",
+          "admitted": true
+        }
+      },
+      "confirmationWindow": {
+        "startedAt": 1790039133677,
+        "endedAt": 1790039133908,
+        "kalshiSnapshotMono": 300213.359625,
+        "polyResponseMono": 300376.529542,
+        "nowMono": 300386.804708
+      },
+      "bookConfirmation": {
+        "accepted": true,
+        "reasons": [],
+        "kalshi": {
+          "receivedAt": 1790039133734,
+          "exchangeAt": null,
+          "processedAt": 1790039133735,
+          "version": 2,
+          "sequence": 85,
+          "transactTime": null
+        },
+        "poly": {
+          "receivedAt": 1790039133897,
+          "exchangeAt": 1790038982219,
+          "processedAt": 1790039133898,
+          "version": 1,
+          "sequence": null,
+          "transactTime": "2026-09-22T01:03:02.219928433Z"
+        }
+      },
+      "historicalAdministrativeCloseAt": {
+        "kalshi": "2026-11-01T04:00:00Z",
+        "poly": "2026-11-06T21:20:09Z"
+      },
+      "settlementClassification": "CONDITIONAL",
+      "paperExecutionReady": false,
+      "reviewSection": "T"
+    }
+  ],
+  "historicalPricesOnly": true,
+  "ordersEnabled": false,
+  "paperAuthorization": false
+}

@@ -1,0 +1,71 @@
+{
+  "retrievedFor": "Only missing public primary contract documents; no market-data collection",
+  "documents": [
+    {
+      "file": "NCAAFCONFCHAMPQ.pdf",
+      "url": "https://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf",
+      "retrievedAt": "2026-09-22T02:58:53.856769+00:00",
+      "sha256": "146a07f48325b0ec14ca993c9f3e6ebd8bee26f143cf3cd125053f721696bf7c",
+      "bytes": 21826
+    },
+    {
+      "file": "NCAAF.pdf",
+      "url": "https://assets.kalshi.com/contract_terms/NCAAF.pdf",
+      "retrievedAt": "2026-09-22T02:58:54.180452+00:00",
+      "sha256": "c3b31d2b3f585f04cb60ff0a46f4dd3848988fb3085194a9b36e2be7412fa1f3",
+      "bytes": 35432
+    },
+    {
+      "file": "COMPETITIONREALITYPLACEDWTS.pdf",
+      "url": "https://assets.kalshi.com/contract_terms/COMPETITIONREALITYPLACEDWTS.pdf",
+      "retrievedAt": "2026-09-22T02:58:54.515367+00:00",
+      "sha256": "41c283cffe05a14c6f64ba2861dded1b755339195f56e5b6a14d86f0c7df02d3",
+      "bytes": 48060
+    },
+    {
+      "file": "TITLE.pdf",
+      "url": "https://assets.kalshi.com/contract_terms/TITLE.pdf",
+      "retrievedAt": "2026-09-22T02:58:54.689018+00:00",
+      "sha256": "7014c04719227a84321d3e3d2813b04b57b066b414c30598a475bd5bbff0bcb8",
+      "bytes": 33433
+    },
+    {
+      "file": "pm-rulebook.pdf",
+      "url": "https://www.polymarketexchange.com/files/legal/latest/rulebook",
+      "retrievedAt": "2026-09-22T02:58:56.733604+00:00",
+      "sha256": "e7b7793e75dd61a8adaf807c588e1212cf0600100e5727d7d546ba0a0b7f35e5",
+      "bytes": 789996
+    },
+    {
+      "file": "notices.html",
+      "url": "https://www.polymarketexchange.com/notices.html",
+      "retrievedAt": "2026-09-22T02:58:57.110574+00:00",
+      "sha256": "31822722b2c34ceef2bb387e52340ecd16649b40acd0b0d4258da6ffd3cd4a79",
+      "bytes": 6815
+    },
+    {
+      "file": "PMUS-AQC.pdf",
+      "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AQC%20-%20%282026.03.26%29.pdf",
+      "retrievedAt": "2026-09-22T03:02:10.284324+00:00",
+      "sha256": "5960588d6a24f1ff1b1636ccfe7d14cb6cd32fc167a0efce39c87830edbe980e",
+      "bytes": 227132
+    },
+    {
+      "file": "PMUS-TEC.pdf",
+      "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TEC%20-%20%282026.03.26%29.pdf",
+      "retrievedAt": "2026-09-22T03:02:10.715027+00:00",
+      "sha256": "4253606e50cb6f13660c2ba85ec655b198b938256fd0a3aeff6475edd77fa6e9",
+      "bytes": 244462
+    },
+    {
+      "file": "PMUS-RTC.pdf",
+      "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20RTC%20-%20%282026.04.03%29.pdf",
+      "retrievedAt": "2026-09-22T03:02:11.240532+00:00",
+      "sha256": "f052ff3ced0006be4b3cc9bd102b4b19891765c38876dfc237970c30d0c317f6",
+      "bytes": 204394
+    }
+  ],
+  "retainedCatalogueAt": 1790038559272,
+  "priorTriage": "../depth-discovery/TRIAGE.md",
+  "rulebookPrecedence": "PMUS Rulebook 1.5: contract terms override product specification, which overrides rulebook; no administrative close assumed to be payout deadline."
+}
