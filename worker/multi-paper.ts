@@ -55,7 +55,7 @@ type Metadata=Awaited<ReturnType<typeof refreshRow>>;
 export async function prepare(dir:string,root:string,initialJournal?:string){
   mkdirSync(dir,{recursive:true});if(existsSync(resolve(dir,'preparation.json')))throw Error('Single-use preparation');
   const initialState=initialJournal?JSON.parse(readFileSync(initialJournal,'utf8')):null;
-  const comparison=initialState?{scenarios:marginScenarios,initialState,sourceJournalSha256:sha(readFileSync(initialJournal)),sourceJournal:resolve(initialJournal)}:null;
+  const comparison=initialJournal?{scenarios:marginScenarios,initialState,sourceJournalSha256:sha(readFileSync(initialJournal)),sourceJournal:resolve(initialJournal)}:null;
   if(comparison)for(const scenario of marginScenarios)new MultiPaper(read(root,'docs/research/contract-shortlist/review.json'),scenario,initialState);
   save(dir,'preparation.json',{at:Date.now(),policy,comparison});
   const record:RecordEvidence=(kind,body)=>appendFileSync(resolve(dir,'preparation.ndjson'),JSON.stringify({kind,body})+'\n');
