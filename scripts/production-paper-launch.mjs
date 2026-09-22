@@ -1,0 +1,12 @@
+import {supervise} from './screen-supervisor.mjs';
+import {spawn} from 'node:child_process';
+import {resolve} from 'node:path';
+import {existsSync,writeFileSync} from 'node:fs';
+const [output,envFile]=process.argv.slice(2);
+if(!output||!envFile)throw Error('Usage: production-paper-launch.mjs DIRECTORY ENV_FILE');
+const dir=resolve(output),root=resolve(new URL('..',import.meta.url).pathname);
+if(existsSync(resolve(dir,'status.json')))throw Error('One supervised launch only');
+writeFileSync(resolve(dir,'launch.lock'),JSON.stringify({pid:process.pid,at:Date.now()}),{flag:'wx'});
+const awake=process.platform==='darwin'?spawn('/usr/bin/caffeinate',['-i','-w',String(process.pid)],{stdio:'ignore'}):null;
+const result=await supervise({command:process.execPath,args:['--experimental-strip-types',resolve(root,'worker/production-paper.ts'),'observe',dir,resolve(envFile)],cwd:root,log:resolve(dir,'worker.log'),status:resolve(dir,'status.json'),durationMs:7200000,silenceMs:60000,graceMs:5000,forceMs:5000,minFreeBytes:2*1024**3});
+awake?.kill('SIGTERM');process.exitCode=result.exitCode??1;
