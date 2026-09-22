@@ -98,10 +98,11 @@ export async function observe(dir:string,root:string){
  console.log(JSON.stringify({mode:'live-data',orderDisabled:true,startedAt,routes:frozen.selection.length}));
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
- const [command,path,envFile]=process.argv.slice(2);if(!path||!['prepare','observe','confirmation-prepare','confirmation-observe','confirmation-control-prepare','confirmation-control'].includes(command))throw Error('Usage: executable-screen.ts prepare|observe OUTPUT_DIRECTORY [ENV_FILE]');
+ const [command,path,envFile]=process.argv.slice(2);if(!path||!['discovery-prepare','discovery-observe','prepare','observe','confirmation-prepare','confirmation-observe','confirmation-control-prepare','confirmation-control'].includes(command))throw Error('Usage: executable-screen.ts prepare|observe OUTPUT_DIRECTORY [ENV_FILE]');
  if(envFile&&!['confirmation-prepare','confirmation-control-prepare'].includes(command))process.loadEnvFile(envFile);
  const root=resolve(new URL('..',import.meta.url).pathname);
- if(command==='confirmation-prepare'||command==='confirmation-control-prepare'){const {prepareConfirmation}=await import('./candidate-confirmation.ts');await prepareConfirmation(resolve(path),resolve(envFile!),root,command==='confirmation-control-prepare');}
+ if(command==='discovery-prepare'||command==='discovery-observe'){const {prepareDiscovery,runDiscovery}=await import('./discovery-screen.ts');if(command==='discovery-prepare')await prepareDiscovery(resolve(path),root);else await runDiscovery(resolve(path),root);}
+ else if(command==='confirmation-prepare'||command==='confirmation-control-prepare'){const {prepareConfirmation}=await import('./candidate-confirmation.ts');await prepareConfirmation(resolve(path),resolve(envFile!),root,command==='confirmation-control-prepare');}
  else if(command==='confirmation-observe'||command==='confirmation-control'){const {runConfirmation}=await import('./candidate-confirmation.ts');await runConfirmation(resolve(path),root);}
  else if(command==='prepare')await prepare(resolve(path),root);else await observe(resolve(path),root);
 }

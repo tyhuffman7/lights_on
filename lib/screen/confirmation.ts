@@ -40,19 +40,28 @@ export function validity(e:EvidenceBook|undefined,h:FeedHealth,wall:number,mono:
  return {usableForDiscovery:reasons.length===0,reasons,confirmationRequired:!e||e.lastConfirmedSnapshotMono===null||mono-e.lastConfirmedSnapshotMono>confirmationPolicy.confirmationMaxAgeMs,
  timestamps:e?{lastMarketChangeAt:e.lastMarketChangeAt,messageReceiptAt:e.book.receivedAt,messageReceiptMono:e.book.receivedMono,processingAvailableAt:e.processedAt,processingAvailableMono:e.processedMono,lastConfirmedSnapshotAt:e.lastConfirmedSnapshotAt,exchangeTimestamp:e.book.exchangeAt}:null};
 }
+// Discovery compares every legal whole quantity; confirmation calls the exact
+// quantity branch and must never substitute a smaller surviving trade.
 export function quoteCandidate(pair:Pair,a:Book|undefined,b:Book|undefined,aSide:Side,at:number,fixedQuantity?:number){
+ const minimum=Math.max(1,Math.ceil(pair.a.minQty),Math.ceil(pair.b.minQty)),pairLabels=labels(pair,at);
+ const quantities=fixedQuantity!==undefined?[fixedQuantity]:Array.from({length:Number.isFinite(minimum)?Math.max(0,confirmationPolicy.maxContracts-minimum+1):0},(_,i)=>minimum+i);
+ const quotes=quantities.map(q=>quoteQuantity(pair,a,b,aSide,at,q,pairLabels));
+ const feasible=quotes.filter(q=>q.economics!==null);
+ const selected=feasible.sort((x,y)=>y.economics!.feeBoundSurplus-x.economics!.feeBoundSurplus||x.quantity-y.quantity)[0]??quotes[0]??quoteQuantity(pair,a,b,aSide,at,0,pairLabels);
+ return {...selected,quantitySelection:{mode:fixedQuantity!==undefined?'EXACT_CONFIRMATION_QUANTITY':'MAX_FEE_BOUND_SURPLUS_TIE_SMALLER',minimum,maxContracts:confirmationPolicy.maxContracts,
+  compared:quotes.map(q=>({quantity:q.quantity,cost:q.economics?.cost??null,feeBound:q.economics?.feeBound??null,feeBoundSurplus:q.economics?.feeBoundSurplus??null,pricingReasons:q.pricingReasons}))}};
+}
+function quoteQuantity(pair:Pair,a:Book|undefined,b:Book|undefined,aSide:Side,at:number,q:number,pairLabels:ReturnType<typeof labels>){
  const bSide:Side=pair.inverted?aSide:aSide==='yes'?'no':'yes';
  const minimum=Math.max(1,Math.ceil(pair.a.minQty),Math.ceil(pair.b.minQty));
- const capacity=(book:Book|undefined,side:Side)=>book?.[side].reduce((s,l)=>s+Math.floor(l.quantity),0)??0;
- const q=fixedQuantity??Math.min(confirmationPolicy.maxContracts,capacity(a,aSide),capacity(b,bSide));
  const ks=feeSchedule(pair.a),ps=feeSchedule(pair.b);let economics=null;const reasons:string[]=[];
  if(!ks||!ps)reasons.push('UNKNOWN_FEE_SCHEDULE');
- if(!Number.isSafeInteger(q)||q<minimum||q>confirmationPolicy.maxContracts)reasons.push('SIZE_OR_MINIMUM_UNAVAILABLE');
+ if(!Number.isFinite(minimum)||![pair.a.minQty,pair.b.minQty].every(n=>Number.isFinite(n)&&n>0)||!Number.isSafeInteger(q)||q<minimum||q>confirmationPolicy.maxContracts)reasons.push('SIZE_OR_MINIMUM_UNAVAILABLE');
  const af=a&&ks&&reasons.length===0?walk(a[aSide],q,ks.rate,ks.rounding):null;
  const bf=b&&ps&&reasons.length===0?walk(b[bSide],q,ps.rate,ps.rounding):null;
  if(!af||!bf)reasons.push('FIXED_QUANTITY_DEPTH_UNAVAILABLE');
  const blockers:string[]=[];
- if(labels(pair,at).horizon==='OUTSIDE_BASELINE_HORIZON')blockers.push('BASELINE_30_DAY_HORIZON');
+ if(pairLabels.horizon==='OUTSIDE_BASELINE_HORIZON')blockers.push('BASELINE_30_DAY_HORIZON');
  if(af&&bf&&ks&&ps){const k=feeBounds(af.levels,ks),p=feeBounds(bf.levels,ps);const fees=k.upper+p.upper,cost=af.cost+bf.cost,risk=q*confirmationPolicy.riskPerContract;
   const surplus=q*10000-cost-fees,afterRisk=surplus-risk,recovery={kalshi:q*100,poly:q*500},reservedCash=cost+fees+risk+recovery.kalshi+recovery.poly;
   if(afterRisk<defaults.minProfit)blockers.push('BASELINE_10_CENT_PROFIT_FLOOR');
@@ -61,11 +70,12 @@ export function quoteCandidate(pair:Pair,a:Book|undefined,b:Book|undefined,aSide
   if(reservedCash>defaults.maxCommitted)blockers.push('BASELINE_40_DOLLAR_COMMITMENT_CAP');
   if(af.cost+k.upper+risk/2+recovery.kalshi>confirmationPolicy.capital.kalshi||bf.cost+p.upper+risk/2+recovery.poly>confirmationPolicy.capital.poly)blockers.push('SIMULATED_VENUE_CASH');
   economics={quantity:q,kalshi:{...af,feeBound:k.upper},poly:{...bf,feeBound:p.upper},cost,feeBound:fees,feeBoundSurplus:surplus,riskAllowance:risk,afterRisk,recoveryCash:recovery,reservedCash,
+   simulatedCapital:{...confirmationPolicy.capital},venueReservedCash:{kalshi:af.cost+k.upper+risk/2+recovery.kalshi,poly:bf.cost+p.upper+risk/2+recovery.poly},
    feeProvenance:{kalshi:{...ks,scope:'CENT_PRECISION_WHOLE_CONTRACT_FRAGMENTATION_BOUND; ACCOUNT_CLASS_UNKNOWN; ARBITRARY_FRACTIONAL_FILL_ROUNDING_NOT_BOUNDED'},poly:{...ps,scope:'CUMULATIVE_ORDER_CEILING_NOT_COLLECTED_COMMISSION'}},feeUncertainty:'Neither actual fill fragmentation nor account precision is known; no favorable commission/rebate assumed.'};
  }
  return {pairId:pair.id,category:category(pair),aSide,bSide,quantity:q,at,route:'TAKER_TAKER',economics,
   positiveExchangeNet:!!economics&&economics.feeBoundSurplus>0,pricingReasons:reasons,
-  additionalPolicyAdmission:{admitted:!!economics&&blockers.length===0,blockers},labels:labels(pair,at),
+  additionalPolicyAdmission:{admitted:!!economics&&blockers.length===0,blockers},labels:pairLabels,
   tradingAuthorization:{authorized:false,reason:'ORDER_DISABLED',ohioEligibility:'NOT_REVALIDATED'},fillClaim:false};
 }
 export type HttpEvidence={url:string;requestAt:number;requestMono:number;responseAt:number;responseMono:number;processedAt:number;processedMono:number;status:number;headers:Record<string,string>;bodySha256:string};
@@ -88,14 +98,15 @@ export function confirmationResult(original:ReturnType<typeof quoteCandidate>,la
 }
 // Counts transitions into economic candidacy, never repeated evaluation samples.
 export class CandidateIntervals{
- active=new Map<string,{id:number;key:string;openedAt:number;lastObservedAt:number;quantity:number;original:ReturnType<typeof quoteCandidate>}>();
+ active=new Map<string,{id:number;key:string;openedAt:number;lastObservedAt:number;quantity:number;original:ReturnType<typeof quoteCandidate>;latest:ReturnType<typeof quoteCandidate>}>();
  completed:unknown[]=[];nextId=0;
  update(key:string,row:ReturnType<typeof quoteCandidate>,usable:boolean,at:number){
   const previous=this.active.get(key);
   if(!usable||!row.positiveExchangeNet){if(previous){this.completed.push({...previous,closedAt:at,closeReason:!usable?'DATA_INVALID_OR_CENSORED':'EDGE_NOT_POSITIVE'});this.active.delete(key);}return null;}
-  if(previous){previous.lastObservedAt=at;return previous;}
+  if(previous&&previous.quantity===row.quantity){previous.lastObservedAt=at;previous.latest=row;return previous;}
+  if(previous){this.completed.push({...previous,closedAt:at,closeReason:'SELECTED_QUANTITY_CHANGED_NOT_ADDITIVE'});this.active.delete(key);}
   if(this.nextId>=confirmationPolicy.maxIntervals)return null;
-  const next={id:++this.nextId,key,openedAt:at,lastObservedAt:at,quantity:row.quantity,original:row};this.active.set(key,next);return next;
+  const next={id:++this.nextId,key,openedAt:at,lastObservedAt:at,quantity:row.quantity,original:row,latest:row};this.active.set(key,next);return next;
  }
  stop(at:number){for(const [key,x]of this.active){this.completed.push({...x,closedAt:at,closeReason:'OBSERVATION_ENDED_RIGHT_CENSORED'});this.active.delete(key);}}
 }

@@ -19,6 +19,11 @@ test('intervening deactivation cannot be overwritten by active baseline; conflic
  const v=t.view('K',wall+12,true);assert(v.knownBlocked);assert(v.reasons.includes('BASELINE_EVENT_ORDER_UNRESOLVED'));assert(v.reasons.includes('BASELINE_LIFECYCLE_CONTRADICTION'));assert.equal(v.events.length,1);
  evt(t,11,'activated');assert(t.view('K',wall+15,true).reasons.includes('REACTIVATION_REQUIRES_RECONCILIATION'));assert.equal(t.view('K',wall+15,true).admitted,false);
 });
+test('status bootstrap stops new GETs at the bounded batch deadline',async()=>{
+ const t=new MarketStatusTracker(['K','K2']);ack(t);let calls=0,stopped=false;
+ await bootstrapStatus(t,['K','K2'],async()=>{calls++;stopped=true;return {data:{market:metadata},evidence:http};},0,()=>stopped);
+ assert.equal(calls,1);assert.equal(t.view('K2',wall,true).reportedStatus,null);
+});
 test('implicit closure, unrelated sequence events, gaps, disconnect and bounded buffers stay blocked',async()=>{
  const t=new MarketStatusTracker(['K']);ack(t);await bootstrapStatus(t,['K'],async()=>({data:{market:metadata},evidence:http}),0);
  t.receive({sid:7,seq:10,type:'event_lifecycle',msg:{event_ticker:'OTHER'}},wall,mono);evt(t,11,'close_date_updated',{close_ts:Math.floor(wall/1000)-1});assert(t.view('K',wall,true).knownBlocked);
@@ -47,6 +52,15 @@ test('newer adverse data supersedes earlier snapshot and unknown survival is not
  const f=fixture();const newer=structuredClone(f.pr);newer.transactTime=new Date(Date.now()).toISOString();newer.e.book.exchangeAt=Date.parse(newer.transactTime);newer.e.book.yes=[{price:9000,quantity:20}];newer.e.book.noBids=[{price:1000,quantity:20}];
  const r=await confirmScreenCandidate(f.pair,f.original,f.feeds,f.unknown,{status:'UNRESOLVED'},()=>{},async()=>{f.feeds.poly.latest.set('P',newer);return f.p;});
  assert.equal(r.status,'FAILED');assert.equal(r.edgeSurvived,null);assert.equal(r.repriced?.economics?.poly.cost,90000);assert(r.reasons.includes('SNAPSHOT_OLDER_THAN_STREAM'));
+});
+test('integrated requested-book confirmation fails exact selected quantity after depth loss',async()=>{
+ const f=fixture(),kb=f.k.response.e.book,pb=f.p.response.e.book;
+ kb.no=[{price:4000,quantity:3},{price:7000,quantity:7}];
+ const original=quoteCandidate(f.pair,kb,pb,'no',Date.now());assert.equal(original.quantity,3);assert(original.positiveExchangeNet);
+ // Both response and latest now agree on a fresh but insufficient two-contract book.
+ pb.yes=[{price:5000,quantity:2}];pb.noBids=[{price:5000,quantity:2}];
+ const r=await confirmScreenCandidate(f.pair,original,f.feeds,f.unknown,{status:'UNRESOLVED'},()=>{},async()=>f.p);
+ assert.equal(r.repriced?.quantity,3);assert.equal(r.status,'FAILED');assert.equal(r.edgeSurvived,null);assert(r.reasons.includes('FIXED_QUANTITY_DEPTH_UNAVAILABLE'));
 });
 test('broken book feeds fail but status deactivation independently retains valid confirmation result',async()=>{
  const f=fixture();f.feeds.poly.health=()=>({...healthy,connected:false});let r=await confirmScreenCandidate(f.pair,f.original,f.feeds,f.unknown,{status:'UNRESOLVED'},()=>{},async()=>f.p);assert.equal(r.status,'FAILED');assert.equal(r.edgeSurvived,null);

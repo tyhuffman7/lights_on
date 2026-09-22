@@ -63,7 +63,7 @@ export class MarketStatusTracker{
  }
  summary(){return {subscription:{requestedAt:this.requestedAt,ackAt:this.ackAt,sid:this.sid,lastSequence:this.sequence},faults:[...this.faults],relevantEvents:this.eventCount,ignoredEvents:this.ignored,limits:{total:this.eventLimit,perMarket:this.perMarketLimit}};}
 }
-export async function bootstrapStatus(tracker:MarketStatusTracker,ids:string[],get:(id:string)=>Promise<{data:any;evidence:HttpEvidence}>,spacing=250){
+export async function bootstrapStatus(tracker:MarketStatusTracker,ids:string[],get:(id:string)=>Promise<{data:any;evidence:HttpEvidence}>,spacing=250,stopped:()=>boolean=()=>false){
  // Callers wait for the server subscription acknowledgement, not merely socket open.
- for(const id of ids){tracker.beginBaseline(id);try{const r=await get(id);tracker.applyBaseline(id,r.data.market,r.evidence);if(r.evidence.status===429){tracker.invalidate('STATUS_RATE_LIMITED');break;}}catch{tracker.baselineFailed(id);}if(spacing)await new Promise(r=>setTimeout(r,spacing));}
+ for(const id of ids){if(stopped())break;tracker.beginBaseline(id);try{const r=await get(id);tracker.applyBaseline(id,r.data.market,r.evidence);if(r.evidence.status===429){tracker.invalidate('STATUS_RATE_LIMITED');break;}}catch{tracker.baselineFailed(id);}if(spacing)await new Promise(r=>setTimeout(r,spacing));}
 }
