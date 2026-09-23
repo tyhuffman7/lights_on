@@ -1,17 +1,18 @@
 {
-  "implementationCommit": "2ad2c2d2523a274df3ec54981c857781f1750c0d",
+  "implementationCommit": "72186bef7d992faa4ac76bdd27073a95aea4b478",
   "signatureVerifiedLocally": true,
   "githubAccount": "tyhuffman7",
-  "targetedTests": 34,
+  "targetedTests": 35,
   "hostedCi": {
-    "url": "https://github.com/tyhuffman7/lights_on/actions/runs/35915723152",
-    "mergeCommit": "645a1181cc552916509097b57fb51f760f43a637",
-    "tests": 751,
-    "passed": 751,
+    "url": "https://github.com/tyhuffman7/lights_on/actions/runs/35916226932",
+    "mergeCommit": "17ba7de40f382c503e4a61ec87e205c5096d098a",
+    "tests": 752,
+    "passed": 752,
     "failed": 0,
     "skipped": 0,
     "typecheck": "passed",
     "productionBuild": "passed"
   },
-  "marketCollectionRun": false
+  "marketCollectionRun": false,
+  "finalAffectedTests": 19
 }
