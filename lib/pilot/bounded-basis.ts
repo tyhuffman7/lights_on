@@ -96,21 +96,21 @@ const ceil = (n: bigint, d: bigint) => (n + d - 1n) / d;
 export function conservativeFee(levels: Level[], f: FeeEvidence) {
   // Prices use 1/10,000 USD, quantities are whole paired contracts. The Kalshi
   // fill count bound includes fractional fragmentation; rebates are never needed.
-  const raw = levels.reduce((n,l) => n + BigInt(l.quantity) * BigInt(l.price) * BigInt(10000-l.price) * BigInt(f.rate), 0n);
-  if (f.model === 'PM_CUMULATIVE') return Number(ceil(raw, 10000000000n)) * 100;
-  const fills = levels.reduce((n,l) => n + l.quantity * 100 / f.minFillHundredths!, 0);
-  const micros = ceil(raw, 1000000n) + BigInt(Math.max(0,fills-1)) + BigInt(fills) * BigInt(f.balancePrecisionMicros!-1);
+  const raw = levels.reduce((n,l) => n + BigInt(Math.round(l.quantity*100)) * BigInt(l.price) * BigInt(10000-l.price) * BigInt(f.rate), 0n);
+  if (f.model === 'PM_CUMULATIVE') return Number(ceil(raw, 1000000000000n)) * 100;
+  const fills = levels.reduce((n,l) => n + Math.round(l.quantity * 100) / f.minFillHundredths!, 0);
+  const micros = ceil(raw, 100000000n) + BigInt(Math.max(0,fills-1)) + BigInt(fills) * BigInt(f.balancePrecisionMicros!-1);
   return Number(ceil(micros, 100n));
 }
 function depth(levels: Level[]) {
-  if (!Array.isArray(levels) || levels.some(l => !integer(l.price,1) || l.price >= 10000 || !Number.isFinite(l.quantity) || l.quantity <= 0)) return null;
-  // This paired whole-contract model conservatively floors each visible price level.
-  return [...levels].map(l => ({price:l.price,quantity:Math.floor(l.quantity)})).filter(l=>l.quantity>0).sort((a,b)=>a.price-b.price);
+  if (!Array.isArray(levels) || levels.some(l => !integer(l.price,1) || l.price >= 10000 || !Number.isFinite(l.quantity) || l.quantity <= 0 || !Number.isSafeInteger(Math.round(l.quantity*100)) || Math.abs(l.quantity*100-Math.round(l.quantity*100))>1e-8)) return null;
+  // Preserve fractional visible fills even though the paired order size is whole.
+  return [...levels].map(l => ({price:l.price,quantity:Math.round(l.quantity*100)/100})).filter(l=>l.quantity>0).sort((a,b)=>a.price-b.price);
 }
 function take(levels: Level[], quantity: number) {
-  let left = quantity;
+  let left = quantity*100;
   const used: Level[] = [];
-  for (const l of levels) {const n = Math.min(left,l.quantity); if(n)used.push({price:l.price,quantity:n});left-=n;if(!left)break;}
+  for (const l of levels) {const n = Math.min(left,Math.round(l.quantity*100)); if(n)used.push({price:l.price,quantity:n/100});left-=n;if(!left)break;}
   return left ? null : used;
 }
 export type Quote = {
@@ -127,12 +127,12 @@ export function quoteBounded(pair: Pair, books: Record<Venue,StreamBook>, side: 
   const bSide:Side=pair.inverted?side:side==='yes'?'no':'yes', a=depth(books.kalshi[side]),b=depth(books.poly[bSide]);
   if(!a?.length||!b?.length)return [] as Quote[];
   const minimum=Math.max(1,Math.ceil(pair.a.minQty),Math.ceil(pair.b.minQty));
-  const limit=Math.min(Math.floor(boundedPolicy.maxCommitted/(a[0].price+b[0].price)),a.reduce((n,l)=>n+l.quantity,0),b.reduce((n,l)=>n+l.quantity,0));
+  const limit=Math.min(Math.floor(boundedPolicy.maxCommitted/(a[0].price+b[0].price)),Math.floor(a.reduce((n,l)=>n+Math.round(l.quantity*100),0)/100),Math.floor(b.reduce((n,l)=>n+Math.round(l.quantity*100),0)/100));
   if(exactQuantity!==undefined&&(!integer(exactQuantity,minimum)||exactQuantity>limit))return [] as Quote[];
   const out:Quote[]=[];
   for(let q=exactQuantity??minimum;q<=(exactQuantity??limit);q++){
-    const al=take(a,q),bl=take(b,q);if(!al||!bl)continue;
-    const leg=(levels:Level[],f:FeeEvidence)=>{const cost=levels.reduce((n,l)=>n+l.price*l.quantity,0),feeUpper=conservativeFee(levels,f);
+    const al=take(a,q),bl=take(b,q);if(!al||!bl||al.some(l=>Math.round(l.quantity*100)%fees.kalshi.minFillHundredths!))continue;
+    const leg=(levels:Level[],f:FeeEvidence)=>{const cost=Math.ceil(levels.reduce((n,l)=>n+l.price*Math.round(l.quantity*100),0)/100),feeUpper=conservativeFee(levels,f);
       // Reserve one reducing unwind at the maximum quadratic fee price. This is
       // cash capacity, not a deduction from ordinary settlement profitability.
       const recoveryCash=conservativeFee([{price:5000,quantity:q}],f);

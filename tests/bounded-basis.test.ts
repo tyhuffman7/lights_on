@@ -145,3 +145,9 @@ test('confirmed economics that turn zero or negative are not a surviving candida
  {isolated:true,persistenceHealthy:()=>true,stopped:()=>false},x.requestPoly as any);
  assert.equal(result.candidate,null);
 });
+
+test('fractional visible levels combine into a legal whole paired order without truncating depth',()=>{
+ const f=fixture();f.books.kalshi.yes=[{price:4000,quantity:0.6},{price:4100,quantity:0.4}];f.books.poly.no=[{price:4000,quantity:1}];
+ const q=quoteBounded(f.p as any,f.books as any,'yes',f.fees as any,f.review.expectedReleaseAt,f.now,1)[0];assert.ok(q);assert.equal(q.quantity,1);assert.deepEqual(q.kalshi.levels,f.books.kalshi.yes);assert.equal(q.kalshi.cost,4040);assert.ok(q.feeNetProfit>0);
+ f.books.kalshi.yes[1].quantity=0.39;assert.equal(quoteBounded(f.p as any,f.books as any,'yes',f.fees as any,f.review.expectedReleaseAt,f.now,1).length,0);
+});
