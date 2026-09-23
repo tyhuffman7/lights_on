@@ -1,0 +1,47 @@
+{
+  "retrievedFor": "2026-09-23 practical admission checkpoint",
+  "sources": [
+    {
+      "url": "https://docs.polymarket.us/api-reference/authentication",
+      "at": 1790194787366,
+      "status": 200,
+      "sha256": "af053639189099e0b08f4433f1478528f767d9e314c6c3a5131195661e1a1adb"
+    },
+    {
+      "url": "https://docs.polymarket.us/learn/trading/access-and-limits/trading-restrictions",
+      "at": 1790194787894,
+      "status": 200,
+      "sha256": "21ae26b6043bbf2535aa1412a2b75c8652e6ad57f4e0bfe85be1163c0ecdd9d2"
+    },
+    {
+      "url": "https://docs.polymarket.us/fees",
+      "at": 1790194788046,
+      "status": 200,
+      "sha256": "cd635598bf3f670252b182cac93b44a696d4b3a2eeb98546d49326a1e1906f52"
+    },
+    {
+      "url": "https://docs.polymarket.us/llms.txt",
+      "at": 1790194788198,
+      "status": 200,
+      "sha256": "4c541f6258fc3149a3837af35ca474d464692ab86523fa50fa4ed0aefe457ad0"
+    },
+    {
+      "url": "https://docs.kalshi.com/api-reference/api-keys/get-api-keys",
+      "at": 1790194788310,
+      "status": 200,
+      "sha256": "c64007091d301512106fe8aeaba96d7f1788976fd5120b454236a177b014b473"
+    },
+    {
+      "url": "https://docs.kalshi.com/getting_started/fee_rounding",
+      "at": 1790194788732,
+      "status": 200,
+      "sha256": "2f4efe27738adb1eb600131eacc00f647a1e716992aba58c3f66c3b65109e305"
+    },
+    {
+      "url": "https://docs.kalshi.com/getting_started/fixed_point_migration",
+      "at": 1790194992318,
+      "status": 200,
+      "sha256": "fdec3d34509f878e714b413ca2bd6b9ab79c7611621e9eb00b3f3ef9ed5696ae"
+    }
+  ]
+}

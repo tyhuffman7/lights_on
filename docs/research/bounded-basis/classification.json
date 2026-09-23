@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "scope": "Reclassification of pinned PR17 ordinary-predicate evidence; no matcher, mapping, catalog refresh or price watch",
+  "candidateRoutes": 3120,
+  "totals": {
+    "ECONOMICALLY_EQUIVALENT": 0,
+    "BOUNDED_BASIS": 2852,
+    "INCOMPATIBLE": 63,
+    "UNRESOLVED": 205
+  },
+  "ordinaryOutcomeEligible": 2852,
+  "priorRouteAuditSha256": "45bdadfd32c126e6d12a1d247f8a62853fa6ad2c3c5b65404c1a7a006e858013",
+  "ordersEnabled": false,
+  "marketWatchRun": false
+}
