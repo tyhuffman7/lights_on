@@ -21,7 +21,7 @@ export function auditFamilies(catalog: {kalshi:Market[];poly:Market[];complete:b
   const rows=pairs.map(pair=>{
     const a=marketMap.get(`kalshi:${pair.a.id}`),b=marketMap.get(`poly:${pair.b.id}`);
     if(!a||!b||a.hash!==pair.a.hash||b.hash!==pair.b.hash)throw new Error('Candidate not bound to source catalog');
-    const original={...pair,a,b};const id=documentPair(original);const found=id&&families.get(id);
+    const original={...pair,a,b};const id=documentPair(original);const found=id ? families.get(id) : undefined;
     const family:FamilyProof=found??{id:id??'UNKNOWN',documents:[],missingEvidence:['Unreviewed controlling document pair'],ordinaryConflicts:[],divergences:[],stateProofs:[]};
     if(found&&found.documents.some(d=>found.sourceBindings[d]!==sourceMap.get(d)||!sourceMap.get(d)))throw new Error('Unpinned rule source');
     const proof=proveRoute(original,registry), result=classifySettlement(family,proof);

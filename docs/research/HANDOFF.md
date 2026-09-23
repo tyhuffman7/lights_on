@@ -27,4 +27,4 @@ The worker pins the reviewed catalog and source hashes, leaves private route evi
 
 ## Publication receipt
 
-Pending draft URL and hosted CI result. No merge or force-push is authorized.
+[Draft PR #17](https://github.com/tyhuffman7/lights_on/pull/17), stacked on #16. Signed research commit `e7cf171`. Initial hosted validation passed all 732 tests and the production build; one worker lookup type error was found and corrected. Replacement CI is pending. No merge or force-push is authorized.
