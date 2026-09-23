@@ -20,11 +20,11 @@ The authorized read-only streaming culture-versus-sports study is complete. **St
 
 Scoped branch: `codex/streaming-culture-dispersion`, based on `codex/non-sports-dispersion` at `a117b2a` (PR #14). Main checkout and its unrelated index/worktree changes are preserved. Publication is authorized only as a **signed non-main draft PR** to `tyhuffman7/lights_on`; no merge or force-push.
 
-Current blocker: both attempts through the repository’s existing 1Password SSH signer failed (`failed to fill whole buffer`) before creating a commit. No push or PR occurred. User unlock request is pending. Preserve signing configuration; do not publish unsigned. Hosted full-suite/typecheck/build CI remains pending signed publication.
+Publication: signed commit `6446be8` is on [draft PR #15](https://github.com/tyhuffman7/lights_on/pull/15), stacked on draft #14. The existing 1Password signer succeeded after unlock; local SSH verification passed. GitHub reports the preserved signing key as `unknown_key`; cryptographic verification with the configured public key passes locally. For code commit `6446be8`, [hosted CI](https://github.com/tyhuffman7/lights_on/actions/runs/35874820195) passed **677 tests**, typecheck and production build, with zero failures or skipped tests. No merge or force-push occurred.
 
 ## Needed next action / commands
 
-Complete only scoped signed publication and hosted CI when the existing signer is available; then stop. Use GitHub account `tyhuffman7` exclusively. Inspect/explicitly stage only this checkpoint’s code, tests, review, methodology, sanitized results/report and handoff. Exclude credentials, env files, raw books/tape/catalogs, databases, leases, account information and unrelated work.
+The scoped implementation, study, signed draft publication and hosted validation are complete. **Stop; no further collection or PAPER strategy work is authorized.** Use GitHub account `tyhuffman7` exclusively for any later authorized publication maintenance. Inspect/explicitly stage only this checkpoint’s code, tests, review, methodology, sanitized results/report and handoff. Exclude credentials, env files, raw books/tape/catalogs, databases, leases, account information and unrelated work.
 
 Offline report command (does not collect again):
 
