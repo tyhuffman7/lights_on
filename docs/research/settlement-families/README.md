@@ -105,6 +105,6 @@ The design uses **72 hours expected settlement**, not a guarantee against contra
 
 ## Verification and stop
 
-Twelve focused tests cover the four proof classes, missing evidence, surviving exceptional branches, post-close states, ordinary threshold/date/orientation mismatches, wrong-date baseball, Pacific elimination deadlines, source pins/dimension coverage and disabled policy controls. Full tests/typecheck/build are delegated to GitHub CI; the publication receipt is recorded in the handoff. No local full build or repeated collection was used.
+Twelve focused tests cover the four proof classes, missing evidence, surviving exceptional branches, post-close states, ordinary threshold/date/orientation mismatches, wrong-date baseball, Pacific elimination deadlines, source pins/dimension coverage and disabled policy controls. Hosted [CI 35910971866](https://github.com/tyhuffman7/lights_on/actions/runs/35910971866) passed 732/732 tests, typecheck and production build on signed implementation `eb2bd8a`, with no failures or skips. The [draft PR #17](https://github.com/tyhuffman7/lights_on/pull/17) publication receipt is recorded in the handoff. No local full build or repeated collection was used.
 
 This checkpoint ends after signed draft publication and handoff. Do not start another watch, PAPER run, live transaction or recovery refinement from this report.
