@@ -1,0 +1,1710 @@
+{
+  "scope": "TINY_LIVE_READINESS_READ_ONLY_WATCH",
+  "readiness": "NOT READY",
+  "ordersEnabled": false,
+  "realOrderApiCalls": 0,
+  "liveEntryAttempts": 0,
+  "recoveryAttempts": 0,
+  "paperLedgerAccess": false,
+  "moneyScale": 10000,
+  "source": "ACTUAL_READ_ONLY_WEBSOCKET_WATCH_NO_MODELED_FILLS",
+  "executedCommit": "32a15868e4abbee9eb22f4461a79d2d4f1bfe8da",
+  "startedAt": 1790180186845,
+  "endedAt": 1790181386679,
+  "originalDeadlineAt": 1790181386663,
+  "durationMs": 1199834,
+  "stopReason": "ORIGINAL_DEADLINE",
+  "supervisorExit": 0,
+  "policy": {
+    "version": 1,
+    "ordersEnabled": false,
+    "durationMs": 1200000,
+    "maxRoutes": 32,
+    "quantity": 1,
+    "maxConfirmations": 30,
+    "confirmationSpacingMs": 5000,
+    "confirmationReserveMs": 15000,
+    "maxReconnectsPerVenue": 3,
+    "heartbeatMs": 10000,
+    "healthSampleMs": 250,
+    "discoveryOnly": true,
+    "evidence": {
+      "segmentBytes": 8388608,
+      "rawSegments": 8,
+      "criticalBytes": 67108864,
+      "maxRecordBytes": 2097152,
+      "minFreeBytes": 2147483648,
+      "maxRssBytes": 805306368
+    }
+  },
+  "settlement": {
+    "reviewedRoutes": 26,
+    "LIVE_EQUIVALENT": 0,
+    "LIVE_BLOCKED": 19,
+    "UNRESOLVED": 7
+  },
+  "counts": {
+    "subscribedRoutes": 26,
+    "booksReceived": {
+      "kalshi": 26,
+      "poly": 26
+    },
+    "routesWithLegalDepth": 23,
+    "unpricedRoutes": [
+      "KXAGTWINNER-26SEP24-VER::rtc-agt-s21-win-2026-09-23-vergor",
+      "KXNETFLIXRANKSHOW-26SEP28-DAN::ccrc-ntflx-1shwus-2026-09-29-dango2",
+      "KXTOPSONG-26OCT03-CHO::ccrc-bilbrd-1song-2026-10-03-chotex"
+    ],
+    "distinctFeePositiveEpisodes": 3,
+    "requestedBookConfirmations": 3,
+    "confirmedPositiveAfterModeledFees": 3,
+    "confirmedLiveEquivalent": 0,
+    "liveAdmitted": 0
+  },
+  "rows": [
+    {
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "settlement": "UNRESOLVED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 376,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 1,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187386,
+        "principal": 9500,
+        "principalByVenue": {
+          "kalshi": 3500,
+          "poly": 6000
+        },
+        "feeBound": 400,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 500,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 3500,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 6000,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 3900,
+          "poly": 6800
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXAGTWINNER-26SEP24-VER::rtc-agt-s21-win-2026-09-23-vergor",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "NO_LEGAL_PAIRED_ONE_CONTRACT_DEPTH",
+      "priceableEvaluations": 0,
+      "unpriceableEvaluations": 342,
+      "feePositiveEpisodes": null,
+      "bestUnconfirmedDerivedQuote": null
+    },
+    {
+      "pairId": "KXBIGBROTHERRANK-26DEC31R2-TAY::rtc-bbus-s28-2-2026-10-01-taybro",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 704,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXBIGBROTHERRANK-26DEC31R2-TAY::rtc-bbus-s28-2-2026-10-01-taybro",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180203378,
+        "principal": 10100,
+        "principalByVenue": {
+          "kalshi": 5500,
+          "poly": 4600
+        },
+        "feeBound": 400,
+        "feeNetSurplus": -500,
+        "rawGapPerContract": -100,
+        "feeNetGapPerContract": -500,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 5500,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 4600,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11300,
+        "venueReservedCash": {
+          "kalshi": 5900,
+          "poly": 5400
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 46,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180403662,
+        "principal": 10100,
+        "principalByVenue": {
+          "kalshi": 800,
+          "poly": 9300
+        },
+        "feeBound": 100,
+        "feeNetSurplus": -200,
+        "rawGapPerContract": -100,
+        "feeNetGapPerContract": -200,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 800,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 9300,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11000,
+        "venueReservedCash": {
+          "kalshi": 1100,
+          "poly": 9900
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXIPOANTHROPIC-DATE-26OCT01::ipcc-anthropic-2026-09-30",
+      "settlement": "UNRESOLVED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 29,
+      "unpriceableEvaluations": 29,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXIPOANTHROPIC-DATE-26OCT01::ipcc-anthropic-2026-09-30",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180234818,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 100,
+          "poly": 9900
+        },
+        "feeBound": 100,
+        "feeNetSurplus": -100,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 100,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 9900,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10900,
+        "venueReservedCash": {
+          "kalshi": 400,
+          "poly": 10500
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 424,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 1,
+        "at": 1790180199704,
+        "principal": 9890,
+        "principalByVenue": {
+          "kalshi": 9100,
+          "poly": 790
+        },
+        "feeBound": 200,
+        "feeNetSurplus": -90,
+        "rawGapPerContract": 110,
+        "feeNetGapPerContract": -90,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 9100,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 790,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10890,
+        "venueReservedCash": {
+          "kalshi": 9400,
+          "poly": 1490
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXMLBGAME-26SEP231310WSHDET-DET::aec-mlb-wsh-det-2026-09-23",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 2946,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXMLBGAME-26SEP231310WSHDET-DET::aec-mlb-wsh-det-2026-09-23",
+        "aSide": "yes",
+        "bSide": "yes",
+        "quantity": 1,
+        "at": 1790180188023,
+        "principal": 10050,
+        "principalByVenue": {
+          "kalshi": 6200,
+          "poly": 3850
+        },
+        "feeBound": 300,
+        "feeNetSurplus": -350,
+        "rawGapPerContract": -50,
+        "feeNetGapPerContract": -350,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 6200,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 3850,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11150,
+        "venueReservedCash": {
+          "kalshi": 6500,
+          "poly": 4650
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXMLBTOTAL-26SEP231840MILPHI-8::tsc-mlb-mil-phi-2026-09-23-7pt5",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 592,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXMLBTOTAL-26SEP231840MILPHI-8::tsc-mlb-mil-phi-2026-09-23-7pt5",
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 1,
+        "at": 1790180187460,
+        "principal": 10050,
+        "principalByVenue": {
+          "kalshi": 5600,
+          "poly": 4450
+        },
+        "feeBound": 300,
+        "feeNetSurplus": -350,
+        "rawGapPerContract": -50,
+        "feeNetGapPerContract": -350,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 5600,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 4450,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11150,
+        "venueReservedCash": {
+          "kalshi": 5900,
+          "poly": 5250
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 100,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kanst",
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 1,
+        "at": 1790180187462,
+        "principal": 9800,
+        "principalByVenue": {
+          "kalshi": 8300,
+          "poly": 1500
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 0,
+        "rawGapPerContract": 200,
+        "feeNetGapPerContract": 0,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 8300,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 1500,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10800,
+        "venueReservedCash": {
+          "kalshi": 8600,
+          "poly": 2200
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 328,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 1,
+        "at": 1790180187463,
+        "principal": 10200,
+        "principalByVenue": {
+          "kalshi": 8100,
+          "poly": 2100
+        },
+        "feeBound": 300,
+        "feeNetSurplus": -500,
+        "rawGapPerContract": -200,
+        "feeNetGapPerContract": -500,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 8100,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 2100,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11300,
+        "venueReservedCash": {
+          "kalshi": 8500,
+          "poly": 2800
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFGAME-26SEP24LIBCCAR-LIB::aec-cfb-librty-coast-2026-09-24",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 280,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNCAAFGAME-26SEP24LIBCCAR-LIB::aec-cfb-librty-coast-2026-09-24",
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 1,
+        "at": 1790180187464,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 4400,
+          "poly": 5600
+        },
+        "feeBound": 400,
+        "feeNetSurplus": -400,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -400,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 4400,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 5600,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11200,
+        "venueReservedCash": {
+          "kalshi": 4800,
+          "poly": 6400
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 128,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 1,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187465,
+        "principal": 9700,
+        "principalByVenue": {
+          "kalshi": 1100,
+          "poly": 8600
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 300,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 1100,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 8600,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 1400,
+          "poly": 9300
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFSPREAD-26SEP24LIBCCAR-LIB7::asc-cfb-librty-coast-2026-09-24-neg-6pt5",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 318,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNCAAFSPREAD-26SEP24LIBCCAR-LIB7::asc-cfb-librty-coast-2026-09-24-neg-6pt5",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187466,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 3600,
+          "poly": 6400
+        },
+        "feeBound": 400,
+        "feeNetSurplus": -400,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -400,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 3600,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 6400,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11200,
+        "venueReservedCash": {
+          "kalshi": 4000,
+          "poly": 7200
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFTOTAL-26SEP24LIBCCAR-58::tsc-cfb-librty-coast-2026-09-24-total-57pt5",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 572,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNCAAFTOTAL-26SEP24LIBCCAR-58::tsc-cfb-librty-coast-2026-09-24-total-57pt5",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187466,
+        "principal": 9900,
+        "principalByVenue": {
+          "kalshi": 3300,
+          "poly": 6600
+        },
+        "feeBound": 400,
+        "feeNetSurplus": -300,
+        "rawGapPerContract": 100,
+        "feeNetGapPerContract": -300,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 3300,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 6600,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11100,
+        "venueReservedCash": {
+          "kalshi": 3700,
+          "poly": 7400
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNETFLIXRANKMOVIE-26SEP28-WHY::ccrc-ntflx-1movus-2026-09-29-whydid",
+      "settlement": "UNRESOLVED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 11,
+      "unpriceableEvaluations": 11,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNETFLIXRANKMOVIE-26SEP28-WHY::ccrc-ntflx-1movus-2026-09-29-whydid",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187467,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 100,
+          "poly": 9900
+        },
+        "feeBound": 100,
+        "feeNetSurplus": -100,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 100,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 9900,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10900,
+        "venueReservedCash": {
+          "kalshi": 400,
+          "poly": 10500
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNETFLIXRANKSHOW-26SEP28-DAN::ccrc-ntflx-1shwus-2026-09-29-dango2",
+      "settlement": "UNRESOLVED",
+      "coverage": "NO_LEGAL_PAIRED_ONE_CONTRACT_DEPTH",
+      "priceableEvaluations": 0,
+      "unpriceableEvaluations": 10,
+      "feePositiveEpisodes": null,
+      "bestUnconfirmedDerivedQuote": null
+    },
+    {
+      "pairId": "KXNFLSPREAD-26SEP24ATLGB-ATL7::asc-nfl-atl-gb-2026-09-24-neg-6pt5",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 452,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNFLSPREAD-26SEP24ATLGB-ATL7::asc-nfl-atl-gb-2026-09-24-neg-6pt5",
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 1,
+        "at": 1790180187467,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 8400,
+          "poly": 1600
+        },
+        "feeBound": 200,
+        "feeNetSurplus": -200,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -200,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 8400,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 1600,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11000,
+        "venueReservedCash": {
+          "kalshi": 8700,
+          "poly": 2300
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXNFLTOTAL-26SEP24ATLGB-47::tsc-nfl-atl-gb-2026-09-24-total-46pt5",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 234,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXNFLTOTAL-26SEP24ATLGB-47::tsc-nfl-atl-gb-2026-09-24-total-46pt5",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187467,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 4000,
+          "poly": 6000
+        },
+        "feeBound": 400,
+        "feeNetSurplus": -400,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -400,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 4000,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 6000,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11200,
+        "venueReservedCash": {
+          "kalshi": 4400,
+          "poly": 6800
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "settlement": "UNRESOLVED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 108,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187468,
+        "principal": 9800,
+        "principalByVenue": {
+          "kalshi": 800,
+          "poly": 9000
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 0,
+        "rawGapPerContract": 200,
+        "feeNetGapPerContract": 0,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 800,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 9000,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10800,
+        "venueReservedCash": {
+          "kalshi": 1100,
+          "poly": 9700
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "settlement": "UNRESOLVED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 50,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 1,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187468,
+        "principal": 9700,
+        "principalByVenue": {
+          "kalshi": 900,
+          "poly": 8800
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 300,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 900,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 8800,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 1200,
+          "poly": 9500
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "settlement": "UNRESOLVED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 74,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187468,
+        "principal": 9800,
+        "principalByVenue": {
+          "kalshi": 600,
+          "poly": 9200
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 0,
+        "rawGapPerContract": 200,
+        "feeNetGapPerContract": 0,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 600,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 9200,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10800,
+        "venueReservedCash": {
+          "kalshi": 900,
+          "poly": 9900
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXTOPALBUM-26OCT03-DAN::ccrc-bilbrd-1album-2026-10-03-dandel",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 76,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXTOPALBUM-26OCT03-DAN::ccrc-bilbrd-1album-2026-10-03-dandel",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187468,
+        "principal": 10200,
+        "principalByVenue": {
+          "kalshi": 3000,
+          "poly": 7200
+        },
+        "feeBound": 300,
+        "feeNetSurplus": -500,
+        "rawGapPerContract": -200,
+        "feeNetGapPerContract": -500,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 3000,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 7200,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 11300,
+        "venueReservedCash": {
+          "kalshi": 3400,
+          "poly": 7900
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXTOPARTISTUSA-26-BAD::ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 194,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXTOPARTISTUSA-26-BAD::ccrc-sptfy-1-artst-us-yr-2026-badbun",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187469,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 500,
+          "poly": 9500
+        },
+        "feeBound": 100,
+        "feeNetSurplus": -100,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 500,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 9500,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10900,
+        "venueReservedCash": {
+          "kalshi": 800,
+          "poly": 10100
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXTOPSONG-26OCT03-CHO::ccrc-bilbrd-1song-2026-10-03-chotex",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "NO_LEGAL_PAIRED_ONE_CONTRACT_DEPTH",
+      "priceableEvaluations": 0,
+      "unpriceableEvaluations": 50,
+      "feePositiveEpisodes": null,
+      "bestUnconfirmedDerivedQuote": null
+    },
+    {
+      "pairId": "KXVMA-BA26-TAM::tac-vmas-alt-09-27-2026-dratam",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 116,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXVMA-BA26-TAM::tac-vmas-alt-09-27-2026-dratam",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187470,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 300,
+          "poly": 9700
+        },
+        "feeBound": 100,
+        "feeNetSurplus": -100,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 300,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 9700,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10900,
+        "venueReservedCash": {
+          "kalshi": 600,
+          "poly": 10300
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    },
+    {
+      "pairId": "KXVMA-BAD26-CHA::tac-vmas-artdirection-09-27-2026-ss26ch",
+      "settlement": "LIVE_BLOCKED",
+      "coverage": "LEGAL_ONE_CONTRACT_DEPTH_OBSERVED",
+      "priceableEvaluations": 162,
+      "unpriceableEvaluations": 0,
+      "feePositiveEpisodes": 0,
+      "bestUnconfirmedDerivedQuote": {
+        "pairId": "KXVMA-BAD26-CHA::tac-vmas-artdirection-09-27-2026-ss26ch",
+        "aSide": "no",
+        "bSide": "yes",
+        "quantity": 1,
+        "at": 1790180187470,
+        "principal": 10000,
+        "principalByVenue": {
+          "kalshi": 9700,
+          "poly": 300
+        },
+        "feeBound": 100,
+        "feeNetSurplus": -100,
+        "rawGapPerContract": 0,
+        "feeNetGapPerContract": -100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 9700,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 300,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10900,
+        "venueReservedCash": {
+          "kalshi": 10000,
+          "poly": 900
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      }
+    }
+  ],
+  "confirmations": [
+    {
+      "episode": 1,
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "settlement": "UNRESOLVED",
+      "startedAt": 1790180187633,
+      "endedAt": 1790180187980,
+      "status": "EDGE_SURVIVED",
+      "bookConfirmed": true,
+      "original": {
+        "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187633,
+        "principal": 9500,
+        "principalByVenue": {
+          "kalshi": 3500,
+          "poly": 6000
+        },
+        "feeBound": 400,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 500,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 3500,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 6000,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 3900,
+          "poly": 6800
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      },
+      "repriced": {
+        "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180187977,
+        "principal": 9500,
+        "principalByVenue": {
+          "kalshi": 3500,
+          "poly": 6000
+        },
+        "feeBound": 400,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 500,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 3500,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 6000,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 3900,
+          "poly": 6800
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      },
+      "confirmationWindow": {
+        "startedAt": 1790180187643,
+        "endedAt": 1790180187977,
+        "kalshiSnapshotMono": 1043.244458,
+        "polyResponseMono": 1269.56675,
+        "nowMono": 1285.720875
+      },
+      "liveAdmission": {
+        "admitted": false,
+        "reasons": [
+          "NO_LIVE_EQUIVALENCE",
+          "MATERIAL_SETTLEMENT_BRANCH_NOT_ALIGNED",
+          "NO_POSITIVE_AFTER_FEE_AND_RISK_EDGE",
+          "CURRENT_EXACT_BOOK_CONFIRMATION_REQUIRED",
+          "MARKET_NOT_CONFIRMED_OPEN",
+          "SHORT_LOCKUP_UNESTABLISHED",
+          "OHIO_ELIGIBILITY_NOT_REVALIDATED",
+          "CURRENT_ACCOUNT_CAPABILITY_AND_CASH_REQUIRED",
+          "ACCOUNT_SPECIFIC_FEE_BOUND_UNVALIDATED",
+          "UNRESOLVED_EXPOSURE",
+          "ISOLATED_EXECUTION_FEEDS_UNHEALTHY"
+        ],
+        "ordersEnabled": false
+      },
+      "fillClaim": false
+    },
+    {
+      "episode": 2,
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "settlement": "LIVE_BLOCKED",
+      "startedAt": 1790180192660,
+      "endedAt": 1790180192992,
+      "status": "EDGE_SURVIVED",
+      "bookConfirmed": true,
+      "original": {
+        "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180192660,
+        "principal": 9700,
+        "principalByVenue": {
+          "kalshi": 1100,
+          "poly": 8600
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 300,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 1100,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 8600,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 1400,
+          "poly": 9300
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      },
+      "repriced": {
+        "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180192991,
+        "principal": 9700,
+        "principalByVenue": {
+          "kalshi": 1100,
+          "poly": 8600
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 300,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 1100,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 8600,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 1400,
+          "poly": 9300
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      },
+      "confirmationWindow": {
+        "startedAt": 1790180192666,
+        "endedAt": 1790180192991,
+        "kalshiSnapshotMono": 6072.274458,
+        "polyResponseMono": 6286.418458,
+        "nowMono": 6300.131166
+      },
+      "liveAdmission": {
+        "admitted": false,
+        "reasons": [
+          "NO_LIVE_EQUIVALENCE",
+          "MATERIAL_SETTLEMENT_BRANCH_NOT_ALIGNED",
+          "NO_POSITIVE_AFTER_FEE_AND_RISK_EDGE",
+          "CURRENT_EXACT_BOOK_CONFIRMATION_REQUIRED",
+          "MARKET_NOT_CONFIRMED_OPEN",
+          "SHORT_LOCKUP_UNESTABLISHED",
+          "OHIO_ELIGIBILITY_NOT_REVALIDATED",
+          "CURRENT_ACCOUNT_CAPABILITY_AND_CASH_REQUIRED",
+          "ACCOUNT_SPECIFIC_FEE_BOUND_UNVALIDATED",
+          "UNRESOLVED_EXPOSURE",
+          "ISOLATED_EXECUTION_FEEDS_UNHEALTHY"
+        ],
+        "ordersEnabled": false
+      },
+      "fillClaim": false
+    },
+    {
+      "episode": 3,
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "settlement": "UNRESOLVED",
+      "startedAt": 1790180197681,
+      "endedAt": 1790180198012,
+      "status": "EDGE_SURVIVED",
+      "bookConfirmed": true,
+      "original": {
+        "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180197681,
+        "principal": 9700,
+        "principalByVenue": {
+          "kalshi": 900,
+          "poly": 8800
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 300,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 900,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 8800,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 1200,
+          "poly": 9500
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      },
+      "repriced": {
+        "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+        "aSide": "yes",
+        "bSide": "no",
+        "quantity": 1,
+        "at": 1790180198011,
+        "principal": 9700,
+        "principalByVenue": {
+          "kalshi": 900,
+          "poly": 8800
+        },
+        "feeBound": 200,
+        "feeNetSurplus": 100,
+        "rawGapPerContract": 300,
+        "feeNetGapPerContract": 100,
+        "consumedDepth": {
+          "kalshi": [
+            {
+              "price": 900,
+              "quantity": 1
+            }
+          ],
+          "poly": [
+            {
+              "price": 8800,
+              "quantity": 1
+            }
+          ]
+        },
+        "riskCash": 200,
+        "recoveryCash": {
+          "kalshi": 100,
+          "poly": 500
+        },
+        "totalReservedCash": 10700,
+        "venueReservedCash": {
+          "kalshi": 1200,
+          "poly": 9500
+        },
+        "withinIndicativeCash": true,
+        "settlementAssumed": false,
+        "fillClaim": false
+      },
+      "confirmationWindow": {
+        "startedAt": 1790180197688,
+        "endedAt": 1790180198011,
+        "kalshiSnapshotMono": 11097.014625,
+        "polyResponseMono": 11301.505791,
+        "nowMono": 11320.107916
+      },
+      "liveAdmission": {
+        "admitted": false,
+        "reasons": [
+          "NO_LIVE_EQUIVALENCE",
+          "MATERIAL_SETTLEMENT_BRANCH_NOT_ALIGNED",
+          "NO_POSITIVE_AFTER_FEE_AND_RISK_EDGE",
+          "CURRENT_EXACT_BOOK_CONFIRMATION_REQUIRED",
+          "MARKET_NOT_CONFIRMED_OPEN",
+          "SHORT_LOCKUP_UNESTABLISHED",
+          "OHIO_ELIGIBILITY_NOT_REVALIDATED",
+          "CURRENT_ACCOUNT_CAPABILITY_AND_CASH_REQUIRED",
+          "ACCOUNT_SPECIFIC_FEE_BOUND_UNVALIDATED",
+          "UNRESOLVED_EXPOSURE",
+          "ISOLATED_EXECUTION_FEEDS_UNHEALTHY"
+        ],
+        "ordersEnabled": false
+      },
+      "fillClaim": false
+    }
+  ],
+  "storage": {
+    "totalWrittenBytes": 26455214,
+    "retainedRawBytes": 26216174,
+    "rawSegments": 4,
+    "evictedMonitoring": {
+      "segments": 0,
+      "bytes": 0,
+      "records": 0,
+      "digest": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "critical": {
+      "records": 86,
+      "digest": "e0abcefcdc068a7b0fb933119277d2f8ac4ca852ae5796107dab033dce9aaf9e",
+      "bytes": 239040
+    },
+    "limits": {
+      "segmentBytes": 8388608,
+      "rawSegments": 8,
+      "criticalBytes": 67108864,
+      "maxRecordBytes": 2097152,
+      "minFreeBytes": 2147483648,
+      "maxRssBytes": 805306368
+    },
+    "closed": true,
+    "fault": null
+  },
+  "integrity": {
+    "freezeSha256": "a0bbf07f9d44bdb6e2d73ec51788f1dad66f95e550660f005e404e5a3e33d39f",
+    "evidenceManifestSha256": "74476b5ab54e214140d069d3506ed6a23c052c659bce4169f3c84de902310fd7",
+    "runtimeSourceFiles": 148,
+    "runtimeUnchangedDuringWatch": true,
+    "verifiedAt": 1790181427505,
+    "deadlineDeltaMs": 16
+  },
+  "feedHealth": {
+    "reconnections": {
+      "kalshi": 0,
+      "poly": 0
+    },
+    "clockFault": false,
+    "events": [],
+    "finalSocketClosure": "EXPECTED_AFTER_ORDERLY_STOP; not counted as in-window downtime"
+  },
+  "diagnosticCorrection": {
+    "executedIssue": "Successful confirmation timestamps are nested in window. The executed watch used a missing top-level endedAt, adding a false CURRENT_EXACT_BOOK_CONFIRMATION_REQUIRED admission blocker.",
+    "effect": "Book-confirmation proofs, original/repriced economics, episode counts and stop were unaffected. No LIVE_EQUIVALENT route existed; no eligible opportunity was hidden by this diagnostic issue.",
+    "finalFix": "Read window.endedAt; targeted regression checks current, missing, stale and stopped confirmation contexts. No watch rerun or setting change."
+  },
+  "blockers": [
+    "No LIVE_EQUIVALENT route across 26 retained candidates.",
+    "No current confirmed positive-after-fee LIVE_EQUIVALENT opportunity; diagnostic positives also fail the separate risk allowance.",
+    "Kalshi active-status initialization/cache currentness remains unresolved; no paper-only status assumption was promoted.",
+    "Ohio and account-specific live eligibility/write capability need current validation.",
+    "Fresh complete account/inventory/execution and cash reconciliation is required for the exact pilot; read-only endpoint success is insufficient.",
+    "Actual account-class and fractional-fill fee bounds are unvalidated.",
+    "No verified short capital-lockup bound for an eligible route.",
+    "Isolated execution feed admission was not exercised on an equivalent candidate; actual order acceptance/latency and fresh-fill recovery remain unproven.",
+    "Separate exact-pilot user authorization, build-gate review and arming are absent; orders remain disabled."
+  ],
+  "fillClaim": false,
+  "realizedProfitClaim": false,
+  "interpretation": "Three confirmed diagnostic one-contract spreads of $0.01 after modeled fees are not live arbitrage or realized profit. Raw books/tape, private accounts and order responses are excluded.",
+  "verification": {
+    "targetedDistinctTests": 69,
+    "executedRevisionCI": {
+      "url": "https://github.com/tyhuffman7/lights_on/actions/runs/35887401127",
+      "tests": 718,
+      "testsPassed": true,
+      "typecheckPassed": true,
+      "buildPassed": true
+    },
+    "finalCodeCommit": "8155fafcea2c69653bd875f406672b70c1363a3a",
+    "finalCodeCI": {
+      "url": "https://github.com/tyhuffman7/lights_on/actions/runs/35890444671",
+      "conclusion": "success",
+      "tests": 720,
+      "failures": 0,
+      "skipped": 0,
+      "typecheckPassed": true,
+      "buildPassed": true
+    }
+  }
+}
