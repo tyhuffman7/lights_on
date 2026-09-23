@@ -1,5 +1,6 @@
 import {sameTennisTournament} from './tennis-tournament.ts';
 import { catalogEntities } from "./entities.ts";
+import { canonicalTemplate, canonicalTemplateKey, canonicalTemplateConflict } from './canonical-template.ts';
 import {
   normalizeText,
   categoryName,
@@ -99,6 +100,7 @@ export function discoverCandidates(
       outcomeMismatch: 0,
       other: 0,
     },
+    canonical: { kalshi: {} as Record<string,number>, poly: {} as Record<string,number>, matched: {} as Record<string,number>, conflicts: {} as Record<string,number> },
     categories: {
       kalshi: {} as Record<string, number>,
       poly: {} as Record<string, number>,
@@ -122,6 +124,8 @@ export function discoverCandidates(
     ].map((m) => {
       const i = m.identity;
       const identity = i ? entityRegistry.normalize(i) : undefined;
+      const template = canonicalTemplate(m, entityRegistry);
+      if (template) diagnostics.canonical[m.venue][template.family] = (diagnostics.canonical[m.venue][template.family] ?? 0) + 1;
       return {
         m: { ...m, identity },
         structured: fields(m),
@@ -136,6 +140,7 @@ export function discoverCandidates(
           israeliSuccession(m.rules), awardCeremony(m.rules),
           repeatElectionTreatment(m.rules), bestRecordTieTreatment(m.rules)],
         identity,
+        template,
         // Primary payout dates/concepts disambiguate generic titles. Exclude later
         // exception paragraphs and examples; preserve title-based entity/placement.
         hints: (() => {
@@ -196,6 +201,8 @@ export function discoverCandidates(
         x.structured.entity
           ? ["entity:" + normalizeText(x.structured.entity)]
           : [],
+      ).concat(
+        x.template ? ['canonical:'+canonicalTemplateKey(x.template)] : [],
       );
   rights.forEach((r, n) => {
     for (const k of new Set(blockKeys(r))) {
@@ -209,7 +216,7 @@ export function discoverCandidates(
     const blocks = blockKeys(left)
       .map((k) => ({ k, ids: index.get(k) ?? [] }))
       .filter((x) => x.ids.length);
-    blocks.sort((a, b) => a.ids.length - b.ids.length);
+    blocks.sort((a, b) => Number(b.k.startsWith('canonical:'))-Number(a.k.startsWith('canonical:')) || a.ids.length - b.ids.length);
     const proposed = new Map<number, number>();
     // Rare-token/participant blocking bounds work independently of catalog size.
     for (const block of blocks.slice(0, 6)) {
@@ -217,7 +224,7 @@ export function discoverCandidates(
         diagnostics.comparisonLimitDeferred += block.ids.length;
         continue;
       }
-      for (const n of block.ids) proposed.set(n, (proposed.get(n) ?? 0) + 1);
+      for (const n of block.ids) proposed.set(n, (proposed.get(n) ?? 0) + (block.k.startsWith('canonical:')?100:1));
     }
     const choices = [...proposed].sort((a, b) => b[1] - a[1] || a[0] - b[0]);
     diagnostics.comparisonLimitDeferred += Math.max(0, choices.length - 300);
@@ -234,6 +241,10 @@ export function discoverCandidates(
       const reject = (reason: keyof typeof diagnostics.rejected) => {
         diagnostics.rejected[reason]++;
       };
+      if(ia?.ambiguousEntities?.length || ib?.ambiguousEntities?.length) {
+        diagnostics.canonical.conflicts.ambiguousEntity=(diagnostics.canonical.conflicts.ambiguousEntity??0)+1;
+        reject('outcomeMismatch');continue;
+      }
       if (keys.some((k) => sa[k] && sb[k] && sa[k] !== sb[k])) {
         reject("structuralConflict");
         continue;
@@ -267,6 +278,28 @@ export function discoverCandidates(
       const shared = [...left.tokens].filter((w) => right.tokens.has(w)).length;
       const score =
         shared / Math.max(1, new Set([...left.tokens, ...right.tokens]).size);
+      if (left.template && right.template) {
+        // Scheduled instants additionally separate same-day doubleheaders;
+        // a primary game date does not collapse different scheduled events.
+        if (left.template.family.startsWith('game-') && right.template.family.startsWith('game-') &&
+            ia?.eventAt && ib?.eventAt && Math.abs(Date.parse(ia.eventAt)-Date.parse(ib.eventAt))>3*3600000) {
+          reject('dateMismatch');
+          continue;
+        }
+        const conflict=canonicalTemplateConflict(left.template,right.template);
+        if (conflict) {
+          diagnostics.canonical.conflicts[conflict]=(diagnostics.canonical.conflicts[conflict]??0)+1;
+          reject(conflict==='dateWindow'?'dateMismatch':conflict==='threshold'?'thresholdMismatch':conflict==='entityAlias'?'outcomeMismatch':'structuralConflict');
+          continue;
+        }
+        // Exact independent public-template dimensions admit a candidate only.
+        // Historical reviewed payout exclusions above still apply, and no
+        // settlement fields are synthesized from this representation.
+        const direct=equivalent(sa,sb), inverted=!direct&&equivalent(sa,sb,true);
+        diagnostics.canonical.matched[left.template.family]=(diagnostics.canonical.matched[left.template.family]??0)+1;
+        found.push({pair:{id:`${a.id}::${b.id}`,a,b,inverted,reviewed:false},status:direct||inverted?'AUTO_VERIFIED':'UNVERIFIED',score:score+1,reasons:[`Same canonical ${left.template.family}: independently parsed subject, domain, metric, geography, period, threshold, comparator and outcome`, 'Public metadata candidate only; settlement sources, timing, corrections and exceptional treatment require review'],structured:{a:sa,b:sb}});
+        continue;
+      }
       if (
         ia?.line !== undefined &&
         ib?.line !== undefined &&

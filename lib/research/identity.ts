@@ -41,6 +41,7 @@ export type Identity = {
     venue?: string;
     venueId?: string;
   }[];
+  ambiguousEntities?: string[];
 };
 export const normalizeText = (x: unknown) =>
   String(x ?? "")
@@ -49,6 +50,19 @@ export const normalizeText = (x: unknown) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
+// Competition labels occur in both public venue metadata and primary payout clauses.
+// Keep men's/women's and professional/college competitions separate.
+export const canonicalCompetition = (s?: string) => ({
+  ncaaf: "cfb", "college football": "cfb", "ncaa football": "cfb",
+  ncaamb: "cbb", "men s college basketball": "cbb",
+  ncaawb: "wcbb", "women s college basketball": "wcbb",
+  "national football league": "nfl", "pro football": "nfl", "professional football": "nfl",
+  "major league baseball": "mlb", "professional baseball": "mlb", "pro baseball": "mlb",
+  "national basketball association": "nba", "pro basketball": "nba",
+  "women s national basketball association": "wnba", "women s pro basketball": "wnba",
+  "national hockey league": "nhl", "english premier league": "epl",
+  "korea kbo": "kbo", "japan npb": "npb",
+} as Record<string, string>)[normalizeText(s)] ?? normalizeText(s);
 export function categoryName(s: string) {
   const n = normalizeText(s);
   return (
@@ -160,10 +174,7 @@ export function identity(
             /^KX(NFL|MLB|NBA|NHL|WNBA|ATP|WTA|NCAAF|NCAAMB|NCAAWB|EPL|MLS|UFC|KBO|NPB)/,
           )?.[1]),
   );
-  competition =
-    ({ ncaaf: "cfb", ncaamb: "cbb", ncaawb: "wcbb" } as Record<string, string>)[
-      competition
-    ] ?? competition;
+  competition = canonicalCompetition(competition);
   const rawType =
     venue === "poly"
       ? [m.sportsMarketTypeV2, m.sportsMarketType, m.marketType]

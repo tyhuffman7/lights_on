@@ -1,0 +1,678 @@
+{
+  "scope": "OFFLINE_PUBLIC_CATALOG_MAPPING_ONLY",
+  "at": 1790121367521,
+  "complete": true,
+  "errors": [],
+  "snapshotSha256": "c036dffa813d024d2f6c2638be4d90d9c709f96173c99dd1891f6942dfca6273",
+  "catalogs": {
+    "kalshi": {
+      "listed": 121000,
+      "unique": 121000,
+      "eligibleOpen": 121000
+    },
+    "poly": {
+      "listed": 74624,
+      "unique": 74620,
+      "eligibleOpen": 74620
+    }
+  },
+  "before": {
+    "pairs": 1242,
+    "statuses": {
+      "AUTO_VERIFIED": 0,
+      "MANUAL_VERIFIED": 0,
+      "UNVERIFIED": 1242
+    },
+    "uniqueKalshiMarkets": 1216,
+    "uniquePolyMarkets": 975,
+    "categories": {
+      "Economics": 8,
+      "Elections": 75,
+      "Entertainment": 152,
+      "Politics": 5,
+      "Sports": 1002
+    },
+    "diagnostics": {
+      "comparisons": 18477141,
+      "blockedByIndex": 8986403015,
+      "comparisonLimitDeferred": 271504035,
+      "rejected": {
+        "structuralConflict": 9357757,
+        "insufficientSimilarity": 1393901,
+        "dateMismatch": 444372,
+        "thresholdMismatch": 5924382,
+        "outcomeMismatch": 1355487,
+        "other": 0
+      },
+      "categories": {
+        "kalshi": {
+          "sports": 63843,
+          "culture": 8784,
+          "commodities": 1342,
+          "climate and weather": 1329,
+          "economics": 14773,
+          "politics": 24012,
+          "mentions": 897,
+          "science and technology": 1088,
+          "crypto": 4492,
+          "ai": 7,
+          "business": 1,
+          "companies": 395,
+          "unknown": 32,
+          "social": 2,
+          "world": 3
+        },
+        "poly": {
+          "sports": 66925,
+          "politics": 6530,
+          "culture": 703,
+          "economics": 255,
+          "technology": 79,
+          "geopolitics": 9,
+          "crypto": 56,
+          "science": 7,
+          "climate": 60
+        }
+      }
+    }
+  },
+  "after": {
+    "pairs": 2919,
+    "statuses": {
+      "AUTO_VERIFIED": 0,
+      "MANUAL_VERIFIED": 0,
+      "UNVERIFIED": 2919
+    },
+    "uniqueKalshiMarkets": 2826,
+    "uniquePolyMarkets": 2650,
+    "categories": {
+      "Economics": 23,
+      "Elections": 75,
+      "Entertainment": 152,
+      "Politics": 5,
+      "Sports": 2664
+    },
+    "diagnostics": {
+      "comparisons": 18469598,
+      "blockedByIndex": 8986339709,
+      "comparisonLimitDeferred": 264931237,
+      "rejected": {
+        "structuralConflict": 9427902,
+        "insufficientSimilarity": 1393387,
+        "dateMismatch": 449470,
+        "thresholdMismatch": 5801518,
+        "outcomeMismatch": 1394402,
+        "other": 0
+      },
+      "canonical": {
+        "kalshi": {
+          "game-spread": 2608,
+          "game-total": 1880,
+          "economic-release": 69,
+          "season-wins": 581,
+          "conference-championship": 255
+        },
+        "poly": {
+          "conference-championship": 238,
+          "economic-release": 15,
+          "season-wins": 451,
+          "game-spread": 1673,
+          "game-total": 1779,
+          "published-chart-ranking": 40
+        },
+        "matched": {
+          "game-total": 538,
+          "game-spread": 739,
+          "season-wins": 396,
+          "economic-release": 15,
+          "conference-championship": 223
+        },
+        "conflicts": {
+          "marketFamily": 98434,
+          "ambiguousEntity": 2496,
+          "entityAlias": 38961,
+          "threshold": 24909,
+          "competition": 1573,
+          "outcomeOrientation": 9,
+          "dateWindow": 333,
+          "marketMetric": 221
+        }
+      },
+      "categories": {
+        "kalshi": {
+          "sports": 63843,
+          "culture": 8784,
+          "commodities": 1342,
+          "climate and weather": 1329,
+          "economics": 14773,
+          "politics": 24012,
+          "mentions": 897,
+          "science and technology": 1088,
+          "crypto": 4492,
+          "ai": 7,
+          "business": 1,
+          "companies": 395,
+          "unknown": 32,
+          "social": 2,
+          "world": 3
+        },
+        "poly": {
+          "sports": 66925,
+          "politics": 6530,
+          "culture": 703,
+          "economics": 255,
+          "technology": 79,
+          "geopolitics": 9,
+          "crypto": 56,
+          "science": 7,
+          "climate": 60
+        }
+      }
+    }
+  },
+  "added": 1683,
+  "removed": 6,
+  "retained": 1236,
+  "netAdditionalRoutes": 1677,
+  "addedFamilies": {
+    "future": 79,
+    "general": 15,
+    "prop": 102,
+    "spread": 739,
+    "total": 738,
+    "winner": 10
+  },
+  "registry": [
+    {
+      "database": "research",
+      "total": 2508,
+      "active": 1819,
+      "statuses": {
+        "UNVERIFIED": 2410,
+        "INVALIDATED": 98
+      },
+      "currentCandidateOverlap": 390,
+      "currentCandidateStatuses": {
+        "UNVERIFIED": 390
+      },
+      "baselineCandidateOverlap": 378
+    },
+    {
+      "database": "broad-coverage",
+      "total": 1650,
+      "active": 1650,
+      "statuses": {
+        "UNVERIFIED": 1650
+      },
+      "currentCandidateOverlap": 358,
+      "currentCandidateStatuses": {
+        "UNVERIFIED": 358
+      },
+      "baselineCandidateOverlap": 346
+    },
+    {
+      "database": "paper-bot",
+      "total": 0,
+      "active": 0,
+      "statuses": {},
+      "currentCandidateOverlap": 0,
+      "currentCandidateStatuses": {},
+      "baselineCandidateOverlap": 0
+    }
+  ],
+  "unmatchedPoly": {
+    "eligible": 71970,
+    "categories": {
+      "climate": 60,
+      "crypto": 56,
+      "culture": 552,
+      "finance": 78,
+      "geopolitics": 9,
+      "macro": 154,
+      "politics": 6450,
+      "science": 7,
+      "sports": 64525,
+      "technology": 79
+    },
+    "families": {
+      "future": 14439,
+      "general": 2,
+      "prop": 22737,
+      "spread": 10914,
+      "total": 21279,
+      "winner": 2599
+    }
+  },
+  "interpretation": "Candidates are review routes, not settlement equivalence or executable/profitable opportunities. Rejection counters describe evaluated pair comparisons, not independent missing mappings. Unmatched listings may have no counterpart. Registry inventories are read-only historical state.",
+  "catalogCollection": {
+    "startedAt": "2026-09-22T23:56:07.520Z",
+    "endedAt": "2026-09-22T23:58:33.897Z",
+    "requests": 460,
+    "kalshiPages": 121,
+    "polyPages": 150,
+    "nonAtomic": true,
+    "normalizationParity": "All normalized records reproduced from captured responses with baseline code; no differences."
+  },
+  "inventory": {
+    "seedRows": 70,
+    "seedNamesAndAliases": 240,
+    "catalogAliasKeys": 10418,
+    "catalogVenueIDKeys": 2987,
+    "strata": {
+      "entity-alias:nfl:prop": 102,
+      "entity-alias:cfb:future": 3,
+      "conference-championship:cfb:winner": 67,
+      "conference-championship:cfb:qualifier": 3,
+      "economic-release:economics:real-gdp:quarter-growth:seasonally-adjusted-annualized:advance": 6,
+      "economic-release:economics:cpi:headline:month-over-month:seasonally-adjusted": 9,
+      "entity-alias:nfl:future": 6,
+      "season-wins:cfb:team-wins": 396,
+      "game-spread:cfb:points": 531,
+      "game-spread:nfl:points": 208,
+      "game-total:cfb:points": 70,
+      "game-total:mlb:runs": 60,
+      "game-total:nfl:points": 212,
+      "entity-alias:cfb:winner": 10
+    }
+  },
+  "missAnalysis": {
+    "unmatched": 71970,
+    "nonExclusiveMetadataGaps": {
+      "outsideNewTemplateFamiliesOrIncompleteConflictingMetadata": 69700,
+      "missingVenueEntityID": 49207,
+      "missingParsedOutcome": 39893,
+      "recognizedTemplateWithoutCandidate": 2270,
+      "ambiguousKnownEntity": 4
+    },
+    "recognizedUnmatchedTemplates": {
+      "season-wins": 55,
+      "game-spread": 934,
+      "game-total": 1241,
+      "published-chart-ranking": 40
+    },
+    "largestPMUSPrefixes": [
+      [
+        "astatc",
+        28582
+      ],
+      [
+        "asc",
+        10914
+      ],
+      [
+        "tsc",
+        9309
+      ],
+      [
+        "atc",
+        6570
+      ],
+      [
+        "vmc",
+        4483
+      ],
+      [
+        "aachc",
+        3669
+      ],
+      [
+        "tec",
+        2577
+      ],
+      [
+        "aec",
+        1414
+      ],
+      [
+        "ushrewc",
+        871
+      ],
+      [
+        "ftsc",
+        628
+      ],
+      [
+        "arankc",
+        418
+      ],
+      [
+        "vtc",
+        326
+      ],
+      [
+        "tac",
+        258
+      ],
+      [
+        "aqc",
+        247
+      ],
+      [
+        "fptc",
+        166
+      ]
+    ]
+  },
+  "externalObtained": {
+    "currentNativeUSPairs": 0,
+    "overlap": 0,
+    "externalOnly": 0,
+    "internalOnlyInObtainedComparison": 2919,
+    "trueHostedCountsAndOverlap": "UNKNOWN",
+    "reference": "EXTERNAL-MAPPING-SOURCES-20260922.md"
+  },
+  "manualReview": {
+    "method": "Fixed stratified sample: first, middle and last pair ID in lexicographic order per new-candidate canonical family/domain/metric; legacy entity-alias candidates stratified by competition/marketType. Three per each of fourteen strata.",
+    "sampleSize": 42,
+    "obviousPrimaryIdentityErrors": 0,
+    "knownFallbackIncompatibilities": 3,
+    "additionalGDPReleaseAndExceptionQuestions": 3,
+    "additionalNFLFractionalTiePayoutQuestions": 3,
+    "allRemainUnverified": true,
+    "limitations": "Purposeful diagnostic sample, not random or representative; no confidence interval, universal settlement review, live mapping-error rate or trading approval inferred.",
+    "rows": [
+      {
+        "pairId": "KXNCAAFB12QUAL-26-HOU::aqc-cfb-big12-2026-12-04-champq-hou",
+        "inverted": false,
+        "stratum": "conference-championship:cfb:qualifier",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFSECQ-26-FLA::aqc-cfb-sec-2026-12-05-champq-fl",
+        "inverted": false,
+        "stratum": "conference-championship:cfb:qualifier",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFSECQ-26-TEX::aqc-cfb-sec-2026-12-05-champq-tx",
+        "inverted": false,
+        "stratum": "conference-championship:cfb:qualifier",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFACC-26-BC::tec-cfb-accchamp-2026-12-05-w-boscol",
+        "inverted": false,
+        "stratum": "conference-championship:cfb:winner",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFB10-26-WASH::tec-cfb-bigtenchamp-2026-12-05-w-wash",
+        "inverted": false,
+        "stratum": "conference-championship:cfb:winner",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFSEC-26-VAN::tec-cfb-secchamp-2026-12-05-winner-van",
+        "inverted": false,
+        "stratum": "conference-championship:cfb:winner",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXCPI-26SEP-T-0.1::cpic-uscpi-september-mom-2026-10-14-gtneg0pt1pct",
+        "inverted": false,
+        "stratum": "economic-release:economics:cpi:headline:month-over-month:seasonally-adjusted",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_BUT_FALLBACK_INCOMPATIBLE",
+        "note": "Same CPI-U monthly statistic/window/threshold; linked Kalshi missing-data formula/shutdown deadline differ from PM-US prior-month fallback and three-month deadline."
+      },
+      {
+        "pairId": "KXCPI-26SEP-T0.2::cpic-uscpi-september-mom-2026-10-14-gt0pt2pct",
+        "inverted": false,
+        "stratum": "economic-release:economics:cpi:headline:month-over-month:seasonally-adjusted",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_BUT_FALLBACK_INCOMPATIBLE",
+        "note": "Same CPI-U monthly statistic/window/threshold; linked Kalshi missing-data formula/shutdown deadline differ from PM-US prior-month fallback and three-month deadline."
+      },
+      {
+        "pairId": "KXCPI-26SEP-T0.6::cpic-uscpi-september-mom-2026-10-14-gt0pt6pct",
+        "inverted": false,
+        "stratum": "economic-release:economics:cpi:headline:month-over-month:seasonally-adjusted",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_BUT_FALLBACK_INCOMPATIBLE",
+        "note": "Same CPI-U monthly statistic/window/threshold; linked Kalshi missing-data formula/shutdown deadline differ from PM-US prior-month fallback and three-month deadline."
+      },
+      {
+        "pairId": "KXGDP-26OCT30-T0.0::gdpc-us-saa-q3-2026-10-29-gt0pt0",
+        "inverted": false,
+        "stratum": "economic-release:economics:real-gdp:quarter-growth:seasonally-adjusted-annualized:advance",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same advance real-GDP quarterly statistic/threshold; release-date identifiers differ (Oct 30 versus Oct 29; not treated as binding observation windows), correction and no-release behavior still require review."
+      },
+      {
+        "pairId": "KXGDP-26OCT30-T1.0::gdpc-us-saa-q3-2026-10-29-gt1pt0",
+        "inverted": false,
+        "stratum": "economic-release:economics:real-gdp:quarter-growth:seasonally-adjusted-annualized:advance",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same advance real-GDP quarterly statistic/threshold; release-date identifiers differ (Oct 30 versus Oct 29; not treated as binding observation windows), correction and no-release behavior still require review."
+      },
+      {
+        "pairId": "KXGDP-26OCT30-T2.5::gdpc-us-saa-q3-2026-10-29-gt2pt5",
+        "inverted": false,
+        "stratum": "economic-release:economics:real-gdp:quarter-growth:seasonally-adjusted-annualized:advance",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same advance real-GDP quarterly statistic/threshold; release-date identifiers differ (Oct 30 versus Oct 29; not treated as binding observation windows), correction and no-release behavior still require review."
+      },
+      {
+        "pairId": "KXNCAAFACCQUAL-26-UNC::aqc-cfb-acc-2026-12-05-champq-ncar",
+        "inverted": false,
+        "stratum": "entity-alias:cfb:future",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFUNDEFEATED-26-FLA::aachc-cfb-undefeated-2026-11-28-fl",
+        "inverted": false,
+        "stratum": "entity-alias:cfb:future",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFUNDEFEATED-26-TEX::aachc-cfb-undefeated-2026-11-28-tx",
+        "inverted": false,
+        "stratum": "entity-alias:cfb:future",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFGAME-26OCT03FLAMIZZ-FLA::aec-cfb-fl-missr-2026-10-03",
+        "inverted": false,
+        "stratum": "entity-alias:cfb:winner",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFGAME-26SEP26HOUGASO-GASO::aec-cfb-hou-gas-2026-09-26",
+        "inverted": true,
+        "stratum": "entity-alias:cfb:winner",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFGAME-26SEP26TEXTENN-TEX::aec-cfb-tx-tenn-2026-09-26",
+        "inverted": false,
+        "stratum": "entity-alias:cfb:winner",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNFLLASTTOLOSE-27-BUF::aachc-nfl-2027-01-10-lastundefeated-buf",
+        "inverted": false,
+        "stratum": "entity-alias:nfl:future",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same last-undefeated team predicate; both mention divided tie payouts, but Kalshi cent rounding and PM-US fractional payout precision need review; not a proved binary payoff."
+      },
+      {
+        "pairId": "KXNFLLASTTOLOSE-27-LV::aachc-nfl-2027-01-10-lastundefeated-lv",
+        "inverted": false,
+        "stratum": "entity-alias:nfl:future",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same last-undefeated team predicate; both mention divided tie payouts, but Kalshi cent rounding and PM-US fractional payout precision need review; not a proved binary payoff."
+      },
+      {
+        "pairId": "KXNFLLASTTOLOSE-27-SF::aachc-nfl-2027-01-10-lastundefeated-sf",
+        "inverted": false,
+        "stratum": "entity-alias:nfl:future",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same last-undefeated team predicate; both mention divided tie payouts, but Kalshi cent rounding and PM-US fractional payout precision need review; not a proved binary payoff."
+      },
+      {
+        "pairId": "KXNFLPASSYDS-26SEP24ATLGB-GBJLOVE10-175::astatc-nfl-atl-gb-2026-09-24-pyd-jorlov-gte175",
+        "inverted": false,
+        "stratum": "entity-alias:nfl:prop",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same player/statistic/game/date/integer threshold; player-participation, corrections and postponement exceptions remain unreviewed."
+      },
+      {
+        "pairId": "KXNFLRECYDS-26SEP27BALDAL-DALCLAMB88-80::astatc-nfl-bal-dal-2026-09-27-recyd-ceelam-gte80",
+        "inverted": false,
+        "stratum": "entity-alias:nfl:prop",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same player/statistic/game/date/integer threshold; player-participation, corrections and postponement exceptions remain unreviewed."
+      },
+      {
+        "pairId": "KXNFLRSHYDS-26SEP27LACBUF-LACOHAMPTON8-80::astatc-nfl-lac-buf-2026-09-27-ryd-omaham-gte80",
+        "inverted": false,
+        "stratum": "entity-alias:nfl:prop",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "Same player/statistic/game/date/integer threshold; player-participation, corrections and postponement exceptions remain unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFSPREAD-26SEP24LIBCCAR-LIB11::asc-cfb-librty-coast-2026-09-24-neg-10pt5",
+        "inverted": false,
+        "stratum": "game-spread:cfb:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFSPREAD-26SEP26NEBMSU-NEB2::asc-cfb-nebr-mst-2026-09-26-neg-1pt5",
+        "inverted": false,
+        "stratum": "game-spread:cfb:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFSPREAD-26SEP26WISPSU-WIS8::asc-cfb-wisc-pennst-2026-09-26-neg-7pt5",
+        "inverted": false,
+        "stratum": "game-spread:cfb:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNFLSPREAD-26SEP24ATLGB-ATL10::asc-nfl-atl-gb-2026-09-24-neg-9pt5",
+        "inverted": false,
+        "stratum": "game-spread:nfl:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNFLSPREAD-26SEP27LACBUF-LAC6::asc-nfl-lac-buf-2026-09-27-neg-5pt5",
+        "inverted": false,
+        "stratum": "game-spread:nfl:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNFLSPREAD-26SEP28PHICHI-PHI8::asc-nfl-phi-chi-2026-09-28-neg-7pt5",
+        "inverted": false,
+        "stratum": "game-spread:nfl:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFTOTAL-26SEP25CLEMCAL-38::tsc-cfb-clmsn-cah-2026-09-25-total-37pt5",
+        "inverted": false,
+        "stratum": "game-total:cfb:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFTOTAL-26SEP26MINNWASH-38::tsc-cfb-minnst-wash-2026-09-26-total-37pt5",
+        "inverted": false,
+        "stratum": "game-total:cfb:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFTOTAL-26SEP26ULLCHAR-52::tsc-cfb-loulaf-charlt-2026-09-26-total-51pt5",
+        "inverted": false,
+        "stratum": "game-total:cfb:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXMLBTOTAL-26SEP221840MILPHI-7::tsc-mlb-mil-phi-2026-09-22-6pt5",
+        "inverted": false,
+        "stratum": "game-total:mlb:runs",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXMLBTOTAL-26SEP222140HOUSEA-9::tsc-mlb-hou-sea-2026-09-22-8pt5",
+        "inverted": false,
+        "stratum": "game-total:mlb:runs",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXMLBTOTAL-26SEP232140LAAATH-9::tsc-mlb-laa-ath-2026-09-23-8pt5",
+        "inverted": false,
+        "stratum": "game-total:mlb:runs",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNFLTOTAL-26SEP24ATLGB-29::tsc-nfl-atl-gb-2026-09-24-total-28pt5",
+        "inverted": false,
+        "stratum": "game-total:nfl:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNFLTOTAL-26SEP27LARDEN-31::tsc-nfl-lar-den-2026-09-27-total-30pt5",
+        "inverted": false,
+        "stratum": "game-total:nfl:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNFLTOTAL-26SEP28PHICHI-63::tsc-nfl-phi-chi-2026-09-28-total-62pt5",
+        "inverted": false,
+        "stratum": "game-total:nfl:points",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFWINS-26ALA-10::aachc-cfb-wins-2026-11-28-ala-9pt5wins",
+        "inverted": false,
+        "stratum": "season-wins:cfb:team-wins",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFWINS-26ND-12::aachc-cfb-wins-ou-2026-11-28-nd",
+        "inverted": false,
+        "stratum": "season-wins:cfb:team-wins",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      },
+      {
+        "pairId": "KXNCAAFWINS-26WVU-8::aachc-cfb-wins-2026-11-28-wvir-7pt5wins",
+        "inverted": false,
+        "stratum": "season-wins:cfb:team-wins",
+        "classification": "PRIMARY_IDENTITY_COMPATIBLE_SETTLEMENT_UNREVIEWED",
+        "note": "No obvious subject, competition, period, numeric threshold, comparator or positive-outcome mismatch in the public primary clauses; exceptional settlement remains unreviewed."
+      }
+    ]
+  },
+  "verification": {
+    "focusedMappingTests": {
+      "passed": 119,
+      "failed": 0
+    },
+    "localFullSuiteRun": false,
+    "hostedCI": "See draft PR checks for final typecheck/build/full-test result."
+  }
+}

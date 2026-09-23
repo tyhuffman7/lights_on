@@ -1,4 +1,4 @@
-import { normalizeText, type Identity } from "./identity.ts";
+import { canonicalCompetition, normalizeText, type Identity } from "./identity.ts";
 export type Entity = {
   id: string;
   scope: string;
@@ -117,9 +117,7 @@ export const entities: Entity[] = [
     aliases: ["ETH", "Ether"],
   },
 ];
-export const competitionScope = (s?: string) =>
-  ({ ncaaf: "cfb", ncaamb: "cbb", ncaawb: "wcbb" })[normalizeText(s)] ??
-  normalizeText(s);
+export const competitionScope = canonicalCompetition;
 export class EntityRegistry {
   aliases = new Map<string, Set<string>>();
   ids = new Map<string, Set<string>>();
@@ -159,17 +157,20 @@ export class EntityRegistry {
     const aliases = this.aliases.get(scoped + ":" + normalizeText(name));
     return aliases?.size === 1 ? [...aliases][0] : undefined;
   }
+  ambiguous(name:string, scope?:string) {
+    return (this.aliases.get(competitionScope(scope)+':'+normalizeText(name))?.size??0)>1;
+  }
   normalize(i: Identity): Identity {
     const scope = competitionScope(i.competition);
+    const ambiguousEntities=new Set(i.ambiguousEntities??[]);
     const resolve = (n?: string) => {
       if (!n) return undefined;
       const metadata = i.aliases?.find(
         (a) => normalizeText(a.name) === normalizeText(n),
       );
-      return (
-        this.resolve(n, scope, metadata?.venue, metadata?.venueId) ??
-        normalizeText(n)
-      );
+      const id=this.resolve(n, scope, metadata?.venue, metadata?.venueId);
+      if(!id && this.ambiguous(n,scope)) ambiguousEntities.add(normalizeText(n));
+      return id ?? normalizeText(n);
     };
     const id = (prefix: string, value: string) =>
       value.startsWith(prefix + ":")
@@ -197,7 +198,7 @@ export class EntityRegistry {
           indicator: g.indicator ? id("INDICATOR", g.indicator) : undefined,
         }
       : undefined;
-    return {
+    const normalized = {
       ...i,
       general,
       competition: scope || undefined,
@@ -207,27 +208,46 @@ export class EntityRegistry {
       participant: resolve(i.participant),
       outcome: resolve(i.outcome),
     };
+    return ambiguousEntities.size ? {...normalized,ambiguousEntities:[...ambiguousEntities].sort()} : normalized;
   }
 }
 export function catalogEntities(identities: (Identity | undefined)[]) {
   const registry = new EntityRegistry();
-  for (const i of identities)
-    for (const team of i?.aliases ?? []) {
-      if (!i?.competition) continue;
-      const id =
-        registry.resolve(team.name, i.competition) ??
-        competitionScope(i.competition).toUpperCase() +
-          ":" +
-          normalizeText(team.name).replaceAll(" ", "_").toUpperCase();
+  const seeds = new EntityRegistry();
+  const groups = new Map<string, {scope:string; rows:NonNullable<Identity['aliases']>} >();
+  for (const i of identities) for (const team of i?.aliases ?? []) {
+    const scope = competitionScope(i?.competition);
+    if (!scope) continue;
+    // Only an explicit venue ID joins records. Shared nicknames are not identity evidence.
+    const key = scope + ':' + (team.venue && team.venueId
+      ? team.venue + ':' + team.venueId : 'name:' + normalizeText(team.name));
+    const group = groups.get(key) ?? {scope,rows:[]};
+    group.rows.push(team); groups.set(key,group);
+  }
+  const fallbackNames = new Map<string,Set<string>>();
+  for (const [key,group] of groups) {
+    const names = [...new Set(group.rows.map(t=>normalizeText(t.name)))].sort((a,b)=>a.split(' ').length-b.split(' ').length||a.localeCompare(b));
+    const nameKey=group.scope+':'+names[0];
+    const owners=fallbackNames.get(nameKey)??new Set<string>();owners.add(key);fallbackNames.set(nameKey,owners);
+  }
+  for (const [key,group] of [...groups].sort(([a],[b])=>a.localeCompare(b))) {
+    const names = [...new Set(group.rows.map(t=>normalizeText(t.name)))].sort((a,b)=>a.split(' ').length-b.split(' ').length||a.localeCompare(b));
+    // Full venue aliases corroborate the reviewed seed even when safeName is abbreviated.
+    // A conflicting alias never selects one of several seed entities by catalog order.
+    const seedIds = new Set(group.rows.flatMap(t=>[t.name,...t.aliases]).map(n=>seeds.resolve(n,group.scope)).filter((id):id is string=>!!id));
+    const collision=(fallbackNames.get(group.scope+':'+names[0])?.size??0)>1;
+    const id = seedIds.size === 1 ? [...seedIds][0]
+      : group.scope.toUpperCase() + ':' + names[0].replaceAll(' ','_').toUpperCase()
+        + (collision ? ':VENUE_ID:'+key : '');
+    for (const team of group.rows) {
       const parts = normalizeText(team.name).split(" ");
-      // State/St and Tech distinguish colleges, not removable mascots.
-      // Dropping them made Kansas State/Kansas and Virginia Tech/Virginia
-      // share an ID, depending on catalogue order. Keep the State -> St alias.
-      const collegeQualifier = competitionScope(i.competition) === "cfb" &&
-        ["state", "st", "tech"].includes(parts.at(-1) ?? "");
+      // College safeName is often the whole school (Georgia Southern), not a
+      // city plus removable mascot. Use its supplied aliases/IDs; stripping any
+      // final word invented Georgia/Southern and Kansas/State collisions.
+      const college = ["cfb","cbb","wcbb"].includes(group.scope);
       registry.add({
         id,
-        scope: i.competition,
+        scope: group.scope,
         name: team.name,
         venueIds:
           team.venue && team.venueId
@@ -240,12 +260,13 @@ export function catalogEntities(identities: (Identity | undefined)[]) {
           ...(parts.at(-1) === "state"
             ? [parts.slice(0, -1).join(" ") + " st"]
             : []),
-          ...(!collegeQualifier ? [parts.slice(0, -1).join(" ")] : []),
-          ...(parts.length > 2 && !collegeQualifier
+          ...(!college ? [parts.slice(0, -1).join(" ")] : []),
+          ...(parts.length > 2 && !college
             ? [parts.slice(0, -1).join(" ") + " " + parts.at(-1)![0]]
             : []),
         ],
       });
     }
+  }
   return registry;
 }
