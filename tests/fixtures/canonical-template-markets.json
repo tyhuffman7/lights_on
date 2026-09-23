@@ -1,0 +1,684 @@
+{
+  "source": "Public venue catalog captured 2026-09-22; only template-relevant metadata excerpts, not full settlement terms",
+  "rows": [
+    {
+      "family": "conference-championship",
+      "domain": "cfb",
+      "metric": "winner",
+      "kalshi": {
+        "id": "KXNCAAFB12-26-WVU",
+        "venue": "kalshi",
+        "title": "Will West Virginia win the College Football Big 12 Championship?",
+        "outcome": "West Virginia",
+        "category": "Sports",
+        "series": "KXNCAAFB12",
+        "rules": "If West Virginia wins the 2026 College Football Big 12 Championship Game, then the market resolves to Yes.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "participants": [],
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "west virginia",
+          "entities": [],
+          "numbers": [
+            "12"
+          ],
+          "aliases": [],
+          "eventKey": "big 12 champion"
+        }
+      },
+      "poly": {
+        "id": "tec-cfb-big12-2026-12-04-w-wvir",
+        "venue": "poly",
+        "title": "West Virginia · Big 12 Football Championship Winner",
+        "outcome": "Yes",
+        "category": "sports",
+        "rules": "This market will settle to Yes if West Virginia wins the 2026 Big 12 Football Championship Game scheduled for December 4, 2026. Outcome sourced from Big 12.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-08-28T16:00:00.000Z",
+          "eventDate": "2026-08-28",
+          "participants": [],
+          "marketType": "future",
+          "period": "full event",
+          "entities": [],
+          "numbers": [
+            "12"
+          ],
+          "aliases": [],
+          "eventKey": "big 12 football championship winner"
+        }
+      }
+    },
+    {
+      "family": "economic-release",
+      "domain": "economics",
+      "metric": "real-gdp:quarter-growth:seasonally-adjusted-annualized:advance",
+      "kalshi": {
+        "id": "KXGDP-26OCT30-T2.5",
+        "venue": "kalshi",
+        "title": "Will **real GDP** increase by more than 2.5% in Q3 2026?",
+        "outcome": "Above 2.5%",
+        "category": "Economics",
+        "series": "KXGDP",
+        "rules": "If real GDP (as measured by the BEA’s seasonally adjusted and annualized Advance Estimate) increases by more than 2.5, then the market resolves to Yes.",
+        "identity": {
+          "sports": false,
+          "general": {},
+          "participants": [],
+          "line": 2.5,
+          "outcome": "above 2 5",
+          "entities": [],
+          "numbers": [
+            "2.5",
+            "2026",
+            "2.5"
+          ],
+          "aliases": []
+        }
+      },
+      "poly": {
+        "id": "gdpc-us-saa-q3-2026-10-29-gt2pt5",
+        "venue": "poly",
+        "title": "Above 2.5% · US GDP Growth in Q3 2026?",
+        "outcome": "Yes",
+        "category": "macro",
+        "rules": "This market will settle to Yes if the seasonally adjusted annualized rate of real U.S. GDP growth for Q3 2026 is above 2.5%. Outcome sourced from the Bureau of Economic Analysis. \n\nSettlement is based on the Advance Estimate GDP release published by the BEA, currently scheduled for October 29, 2026. Any subsequent revisions to this figure will not be considered for settlement purposes.",
+        "identity": {
+          "sports": false,
+          "general": {},
+          "competition": "us",
+          "eventAt": "2026-07-31T16:00:00.000Z",
+          "eventDate": "2026-07-31",
+          "participants": [],
+          "marketType": "future",
+          "line": 2.5,
+          "period": "quarter 3",
+          "entities": [],
+          "numbers": [
+            "2.5",
+            "2026"
+          ],
+          "aliases": [],
+          "eventKey": "us gdp growth in q3 2026"
+        }
+      }
+    },
+    {
+      "family": "season-wins",
+      "domain": "cfb",
+      "metric": "team-wins",
+      "kalshi": {
+        "id": "KXNCAAFWINS-26ALA-11",
+        "venue": "kalshi",
+        "title": "Will Alabama win at least 11 games this season?",
+        "outcome": "11+ wins",
+        "category": "Sports",
+        "series": "KXNCAAFWINS",
+        "rules": "If the Alabama college football team has at least 11 wins in the 2026 regular season, then the market resolves to Yes.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "participants": [],
+          "marketType": "total",
+          "line": 11,
+          "period": "full event",
+          "outcome": "11 wins",
+          "entities": [],
+          "numbers": [
+            "11",
+            "11"
+          ],
+          "aliases": []
+        }
+      },
+      "poly": {
+        "id": "aachc-cfb-wins-2026-11-28-ala-10pt5wins",
+        "venue": "poly",
+        "title": "10.5+ Wins · Alabama Regular Season Win Total",
+        "outcome": "Yes",
+        "category": "sports",
+        "rules": "This market will settle to Yes if Alabama finishes the 2026 College Football regular season with over 10.5 wins. Statistics are based on official regular season games only. Conference championship games, bowl games, and college football playoff games do not count. Outcome sourced from the relevant governing body.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-08-27T16:00:00.000Z",
+          "eventDate": "2026-08-27",
+          "participants": [],
+          "marketType": "total",
+          "period": "full event",
+          "entities": [],
+          "numbers": [
+            "10.5"
+          ],
+          "aliases": []
+        }
+      }
+    },
+    {
+      "family": "conference-championship",
+      "domain": "cfb",
+      "metric": "qualifier",
+      "kalshi": {
+        "id": "KXNCAAFSECQ-26-SCAR",
+        "venue": "kalshi",
+        "title": "Will South Carolina qualify for the College Football SEC Championship Game?",
+        "outcome": "South Carolina",
+        "category": "Sports",
+        "series": "KXNCAAFSECQ",
+        "rules": "If South Carolina qualifies for the 2026 College Football SEC Championship Game, then the market resolves to Yes.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "participants": [],
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "south carolina",
+          "entities": [],
+          "numbers": [],
+          "aliases": [],
+          "eventKey": "college football sec championship qualifiers"
+        }
+      },
+      "poly": {
+        "id": "aqc-cfb-sec-2026-12-05-champq-sc",
+        "venue": "poly",
+        "title": "South Carolina · SEC Football Championship Game Qualifiers",
+        "outcome": "Yes",
+        "category": "sports",
+        "rules": "This market will settle to Yes if South Carolina qualifies for the 2026 SEC Football Championship Game scheduled for December 5, 2026. Outcome sourced from SEC.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-08-29T16:00:00.000Z",
+          "eventDate": "2026-08-29",
+          "participants": [
+            "south carolina"
+          ],
+          "participant": "south carolina",
+          "marketType": "future",
+          "period": "full event",
+          "outcome": "south carolina",
+          "entities": [],
+          "numbers": [],
+          "aliases": [
+            {
+              "name": "south carolina",
+              "venue": "poly",
+              "venueId": "1251",
+              "aliases": [
+                "gamecocks",
+                "gamecocks",
+                "south carolina",
+                "sc",
+                "scar"
+              ]
+            },
+            {
+              "name": "south carolina",
+              "venue": "poly",
+              "venueId": "1251",
+              "aliases": [
+                "gamecocks",
+                "gamecocks",
+                "south carolina",
+                "sc",
+                "scar"
+              ]
+            }
+          ],
+          "eventKey": "sec football championship game qualifiers"
+        }
+      }
+    },
+    {
+      "family": "game-spread",
+      "domain": "nfl",
+      "metric": "points",
+      "kalshi": {
+        "id": "KXNFLSPREAD-26SEP24ATLGB-ATL15",
+        "venue": "kalshi",
+        "title": "ATL Falcons wins by over 14.5 points?",
+        "outcome": "ATL Falcons wins by over 14.5 points",
+        "category": "Sports",
+        "series": "KXNFLSPREAD",
+        "rules": "If ATL Falcons wins by more than 14.5 points in the ATL Falcons vs GB Packers Pro Football game originally scheduled for Sep 24, 2026, then the market resolves to Yes.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "nfl",
+          "eventDate": "2026-09-24",
+          "participants": [],
+          "marketType": "spread",
+          "line": 14.5,
+          "period": "full event",
+          "outcome": "atl falcons wins by over 14 5 points",
+          "entities": [],
+          "numbers": [
+            "14.5",
+            "14.5"
+          ],
+          "units": "points",
+          "aliases": []
+        }
+      },
+      "poly": {
+        "id": "asc-nfl-atl-gb-2026-09-24-neg-14pt5",
+        "venue": "poly",
+        "title": "Will the Atlanta Falcons cover -14.5 vs the Green Bay Packers in Atlanta vs. Green Bay?",
+        "outcome": "-14.50",
+        "category": "sports",
+        "rules": "This market will settle to Yes if Atlanta Falcons wins by more than 14.5 in the Atlanta Falcons vs Green Bay Packers professional football game scheduled for Sep 24, 2026. Overtime is included if played. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "nfl",
+          "eventAt": "2026-09-25T00:15:00.000Z",
+          "eventDate": "2026-09-25",
+          "participants": [
+            "atl falcons",
+            "gb packers"
+          ],
+          "home": "gb packers",
+          "away": "atl falcons",
+          "marketType": "spread",
+          "line": -14.5,
+          "period": "full event",
+          "outcome": "atl falcons",
+          "entities": [],
+          "numbers": [
+            "14.5"
+          ],
+          "aliases": [
+            {
+              "name": "atl falcons",
+              "venue": "poly",
+              "venueId": "49",
+              "aliases": [
+                "atlanta falcons",
+                "falcons",
+                "atl falcons",
+                "atl",
+                "atl"
+              ]
+            },
+            {
+              "name": "gb packers",
+              "venue": "poly",
+              "venueId": "59",
+              "aliases": [
+                "green bay packers",
+                "packers",
+                "gb packers",
+                "gb",
+                "gb"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "family": "game-total",
+      "domain": "nfl",
+      "metric": "points",
+      "kalshi": {
+        "id": "KXNFLTOTAL-26SEP24ATLGB-29",
+        "venue": "kalshi",
+        "title": "Full Game: over 28.5 points scored?",
+        "outcome": "Over 28.5 points scored",
+        "category": "Sports",
+        "series": "KXNFLTOTAL",
+        "rules": "If ATL Falcons and GB Packers collectively score more than 28.5 points in the ATL Falcons vs GB Packers Pro Football game originally scheduled for Sep 24, 2026, then the market resolves to Yes.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "nfl",
+          "eventDate": "2026-09-24",
+          "participants": [],
+          "marketType": "total",
+          "line": 28.5,
+          "period": "full event",
+          "outcome": "over 28 5 points scored",
+          "entities": [],
+          "numbers": [
+            "28.5",
+            "28.5"
+          ],
+          "units": "points",
+          "aliases": []
+        }
+      },
+      "poly": {
+        "id": "tsc-nfl-atl-gb-2026-09-24-total-28pt5",
+        "venue": "poly",
+        "title": "Will the total in Atlanta vs. Green Bay be more than 28.5?",
+        "outcome": "Over",
+        "category": "sports",
+        "rules": "This market will settle to Yes if Atlanta Falcons and Green Bay Packers combine for over 28.5 points in the Atlanta Falcons vs Green Bay Packers professional football game scheduled for Sep 24, 2026. Overtime is included if played. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "nfl",
+          "eventAt": "2026-09-25T00:15:00.000Z",
+          "eventDate": "2026-09-25",
+          "participants": [
+            "will the total in atlanta",
+            "green bay be more than 28 5"
+          ],
+          "marketType": "total",
+          "line": 28.5,
+          "period": "full event",
+          "outcome": "over",
+          "entities": [],
+          "numbers": [
+            "28.5"
+          ],
+          "aliases": []
+        }
+      }
+    },
+    {
+      "family": "game-spread",
+      "domain": "cfb",
+      "metric": "points",
+      "kalshi": {
+        "id": "KXNCAAFSPREAD-26SEP24LIBCCAR-LIB17",
+        "venue": "kalshi",
+        "title": "Liberty wins by over 16.5 points",
+        "outcome": "Liberty wins by over 16.5 points",
+        "category": "Sports",
+        "series": "KXNCAAFSPREAD",
+        "rules": "If Liberty wins by more than 16.5 points in the Liberty vs Coastal Carolina college football game originally scheduled for Sep 24, 2026, then the market resolves to Yes.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventDate": "2026-09-24",
+          "participants": [],
+          "marketType": "spread",
+          "line": 16.5,
+          "period": "full event",
+          "outcome": "liberty wins by over 16 5 points",
+          "entities": [],
+          "numbers": [
+            "16.5",
+            "16.5"
+          ],
+          "units": "points",
+          "aliases": []
+        }
+      },
+      "poly": {
+        "id": "asc-cfb-librty-coast-2026-09-24-neg-16pt5",
+        "venue": "poly",
+        "title": "Will the Liberty cover -16.5 vs the Coastal Carolina in Liberty vs. Coastal Carolina?",
+        "outcome": "-16.50",
+        "category": "sports",
+        "rules": "This market will settle to Yes if Liberty wins by more than 16.5 in the Liberty vs Coastal Carolina College Football game scheduled for Sep 24, 2026. Overtime is included if played. If the game is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-09-24T23:30:00.000Z",
+          "eventDate": "2026-09-24",
+          "participants": [
+            "liberty",
+            "coastal carolina"
+          ],
+          "home": "coastal carolina",
+          "away": "liberty",
+          "marketType": "spread",
+          "line": -16.5,
+          "period": "full event",
+          "outcome": "liberty",
+          "entities": [],
+          "numbers": [
+            "16.5"
+          ],
+          "aliases": [
+            {
+              "name": "liberty",
+              "venue": "poly",
+              "venueId": "1118",
+              "aliases": [
+                "flames",
+                "flames",
+                "liberty",
+                "librty",
+                "lib"
+              ]
+            },
+            {
+              "name": "coastal carolina",
+              "venue": "poly",
+              "venueId": "1116",
+              "aliases": [
+                "chanticleers",
+                "chanticleers",
+                "coastal carolina",
+                "coast",
+                "ccar"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "family": "game-total",
+      "domain": "cfb",
+      "metric": "points",
+      "kalshi": {
+        "id": "KXNCAAFTOTAL-26SEP24LIBCCAR-56",
+        "venue": "kalshi",
+        "title": "Over 55.5 points scored",
+        "outcome": "Over 55.5 points scored",
+        "category": "Sports",
+        "series": "KXNCAAFTOTAL",
+        "rules": "If the teams collectively score more than 55.5 points in the Liberty vs Coastal Carolina college football game originally scheduled for Sep 24, 2026, then the market resolves to Yes.",
+        "identity": {
+          "sports": true,
+          "sport": "football",
+          "competition": "cfb",
+          "eventDate": "2026-09-24",
+          "participants": [
+            "liberty",
+            "coastal carolina"
+          ],
+          "marketType": "total",
+          "line": 55.5,
+          "period": "full event",
+          "outcome": "over",
+          "entities": [],
+          "numbers": [
+            "55.5",
+            "55.5"
+          ],
+          "units": "points",
+          "aliases": []
+        }
+      },
+      "poly": {
+        "id": "tsc-cfb-librty-coast-2026-09-24-total-55pt5",
+        "venue": "poly",
+        "title": "Will the total in Liberty vs. Coastal Carolina be more than 55.5?",
+        "outcome": "Over",
+        "category": "sports",
+        "rules": "This market will settle to Yes if Liberty and Coastal Carolina combine for over 55.5 points in the Liberty vs Coastal Carolina College Football game scheduled for Sep 24, 2026. Overtime is included if played. If the game is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+        "identity": {
+          "sports": true,
+          "eventContext": {
+            "source": "https://gateway.polymarket.us/v1/events/slug/cfb-librty-coast-2026-09-24",
+            "eventSlug": "cfb-librty-coast-2026-09-24",
+            "marketId": "788918"
+          },
+          "sport": "football",
+          "competition": "cfb",
+          "eventAt": "2026-09-24T23:30:00.000Z",
+          "eventDate": "2026-09-24",
+          "participants": [
+            "liberty",
+            "coastal carolina"
+          ],
+          "marketType": "total",
+          "line": 55.5,
+          "period": "full event",
+          "outcome": "over",
+          "entities": [],
+          "numbers": [
+            "55.5"
+          ],
+          "units": "points",
+          "aliases": [
+            {
+              "name": "liberty",
+              "venue": "poly",
+              "venueId": "1118",
+              "aliases": [
+                "flames",
+                "flames",
+                "liberty",
+                "librty",
+                "lib"
+              ]
+            },
+            {
+              "name": "coastal carolina",
+              "venue": "poly",
+              "venueId": "1116",
+              "aliases": [
+                "chanticleers",
+                "chanticleers",
+                "coastal carolina",
+                "coast",
+                "ccar"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "family": "economic-release",
+      "domain": "economics",
+      "metric": "cpi:headline:month-over-month:seasonally-adjusted",
+      "kalshi": {
+        "id": "KXCPI-26SEP-T0.6",
+        "venue": "kalshi",
+        "title": "Will CPI rise more than 0.6% in September 2026?",
+        "outcome": "Above 0.6%",
+        "category": "Economics",
+        "series": "KXCPI",
+        "rules": "If the Consumer Price Index (CPI) increases by more than 0.6% (single-decimal) in September 2026, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/CPI.pdf",
+        "identity": {
+          "sports": false,
+          "general": {},
+          "participants": [],
+          "line": 0.6,
+          "outcome": "above 0 6",
+          "entities": [],
+          "numbers": [
+            "0.6",
+            "2026",
+            "0.6"
+          ],
+          "aliases": []
+        }
+      },
+      "poly": {
+        "id": "cpic-uscpi-september-mom-2026-10-14-gt0pt6pct",
+        "venue": "poly",
+        "title": "Above 0.6% · CPI MoM in September",
+        "outcome": "Yes",
+        "category": "macro",
+        "rules": "This market will settle to Yes if the one-month percent change in the seasonally adjusted Consumer Price Index for All Urban Consumers (CPI MoM) for September 2026 is above 0.6%. Outcome sourced from BLS. ",
+        "identity": {
+          "sports": false,
+          "general": {},
+          "competition": "uscpi",
+          "eventAt": "2026-10-14T12:30:00.000Z",
+          "eventDate": "2026-10-14",
+          "participants": [],
+          "marketType": "future",
+          "line": 0.6,
+          "entities": [],
+          "numbers": [
+            "0.6"
+          ],
+          "aliases": [],
+          "eventKey": "cpi mom in september"
+        }
+      }
+    },
+    {
+      "family": "game-total",
+      "domain": "mlb",
+      "metric": "runs",
+      "kalshi": {
+        "id": "KXMLBTOTAL-26SEP221835TORBAL-8",
+        "venue": "kalshi",
+        "title": "Over 7.5 runs scored",
+        "outcome": "Over 7.5 runs scored",
+        "category": "Sports",
+        "series": "KXMLBTOTAL",
+        "rules": "If Toronto and Baltimore collectively score more 7.5 runs in the Toronto vs Baltimore professional baseball game originally scheduled for Sep 22, 2026 at 6:35 PM EDT, then the market resolves to Yes.",
+        "identity": {
+          "sports": true,
+          "sport": "baseball",
+          "competition": "mlb",
+          "eventAt": "2026-09-22T22:35:00.000Z",
+          "eventDate": "2026-09-22",
+          "participants": [],
+          "marketType": "total",
+          "line": 7.5,
+          "period": "full event",
+          "outcome": "over 7 5 runs scored",
+          "entities": [],
+          "numbers": [
+            "7.5",
+            "7.5"
+          ],
+          "units": "runs",
+          "aliases": []
+        }
+      },
+      "poly": {
+        "id": "tsc-mlb-tor-bal-2026-09-22-7pt5",
+        "venue": "poly",
+        "title": "Will the total in Toronto Blue Jays vs Baltimore Orioles be more than 7.5?",
+        "outcome": "Over",
+        "category": "sports",
+        "rules": "This market will settle to Yes if the Toronto Blue Jays and Baltimore Orioles combine for over 7.5 runs in the Toronto Blue Jays vs Baltimore Orioles MLB game scheduled for 2026-09-22 at 6:35PM ET. Extra innings are included if played. If the game is shortened but an official final result is declared, the market will settle based on that result. If the game is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from MLB.",
+        "identity": {
+          "sports": true,
+          "sport": "baseball",
+          "competition": "mlb",
+          "eventAt": "2026-09-23T17:35:00.000Z",
+          "eventDate": "2026-09-23",
+          "participants": [
+            "will the total in toronto blue jays",
+            "baltimore orioles be more than 7 5"
+          ],
+          "marketType": "total",
+          "line": 7.5,
+          "period": "full event",
+          "outcome": "over",
+          "entities": [],
+          "numbers": [
+            "7.5"
+          ],
+          "aliases": []
+        }
+      }
+    }
+  ]
+}
