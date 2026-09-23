@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-09-23T16:08:34.558246+00:00",
+  "scope": "OFFICIAL_CURRENT_PUBLIC_DOCUMENTATION_ONLY",
+  "sources": [
+    {
+      "name": "kalshi-create",
+      "url": "https://docs.kalshi.com/api-reference/orders/create-order-v2",
+      "sha256": "79c5a3f427e5bc0e17e18318669541b0f04cfb1c1a87c49688a75393569593a9"
+    },
+    {
+      "name": "kalshi-auth",
+      "url": "https://docs.kalshi.com/getting_started/quick_start_authenticated_requests",
+      "sha256": "cbd37219e5cf2c8cd6c9c76e326561fc0ef70e46e402e840a9d1d3095fccf044"
+    },
+    {
+      "name": "kalshi-fixed",
+      "url": "https://docs.kalshi.com/getting_started/fixed_point_migration",
+      "sha256": "f2669602e88a6a42f92a1608775e90a6881de115d6539686d12b0e8f07d94a76"
+    },
+    {
+      "name": "kalshi-cancel",
+      "url": "https://docs.kalshi.com/api-reference/orders/cancel-order-v2",
+      "sha256": "236989b017eb92a94731b3abe014a842f03e63eac14015948b118a915903cd2b"
+    },
+    {
+      "name": "kalshi-fills",
+      "url": "https://docs.kalshi.com/api-reference/portfolio/get-fills",
+      "sha256": "3cbfa1019e896516cb52a0ce2ee086b418323bc88344d25ceb07bd6b4df55bd4"
+    },
+    {
+      "name": "kalshi-fees",
+      "url": "https://docs.kalshi.com/getting_started/fee_rounding",
+      "sha256": "7591cf0fb277eaf8fac8aedaf1645e58b61dacb22b5fed20ba7d8ea9f76ffa22"
+    },
+    {
+      "name": "kalshi-balance",
+      "url": "https://docs.kalshi.com/api-reference/portfolio/get-balance",
+      "sha256": "2c5120c8c49da8bd0693740de40fdb40313a53711cb497dedc7deb5fad7bc513"
+    },
+    {
+      "name": "kalshi-order",
+      "url": "https://docs.kalshi.com/api-reference/orders/get-order",
+      "sha256": "ec98ada9073d7b3d68f6bc6d8d6f157340972cbd3ef66bc7f2a6653b0e11248f"
+    },
+    {
+      "name": "poly-create",
+      "url": "https://docs.polymarket.us/api-reference/orders/create-order",
+      "sha256": "0f7ffdcb944bc4b630177c2dfeeadc58462f55c28722bd1699d7caf4ea39d32d"
+    },
+    {
+      "name": "poly-overview",
+      "url": "https://docs.polymarket.us/api-reference/orders/overview",
+      "sha256": "0ac3852a15f1ea66a1856cfe1fe87e7c881da4b91fee52468b198f3a38b7b72c"
+    },
+    {
+      "name": "poly-auth",
+      "url": "https://docs.polymarket.us/api-reference/authentication",
+      "sha256": "e34367cf9dc27fd5a672bce6fc2ef8af10d7efbae9368086737de3ec9027d12c"
+    },
+    {
+      "name": "poly-order",
+      "url": "https://docs.polymarket.us/api-reference/orders/get-order",
+      "sha256": "5abf2afa58affb5ddb2861b7ee253ba0d1346c314b9cdaafe5305e252f0cc851"
+    },
+    {
+      "name": "poly-schema",
+      "url": "https://docs.polymarket.us/api-reference/oapi-schemas/orders-schema.json",
+      "sha256": "853f478b389a18793c900dc40b5997eba5700ab51986e57c6c8bd87196b872fe"
+    },
+    {
+      "name": "poly-cancel",
+      "url": "https://docs.polymarket.us/api-reference/orders/cancel-order",
+      "sha256": "84b43862273cf1123a728a8a8dd9fb9915bcc94b6c0c36ed2ff31520100e1fc6"
+    },
+    {
+      "name": "poly-fees",
+      "url": "https://docs.polymarket.us/fees",
+      "sha256": "24fcb758e11d6c1d8bd412dd12e5afd1725d390ffb52233786963c7d64cb564e"
+    },
+    {
+      "name": "poly-activities",
+      "url": "https://docs.polymarket.us/api-reference/portfolio/get-activities",
+      "sha256": "15a45674197dfecae83eff3b6822026cb9c017192cd3d987813228e74dcf7445"
+    }
+  ],
+  "submissionCalls": 0,
+  "venueAcceptanceClaim": false
+}

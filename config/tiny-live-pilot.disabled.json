@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "ordersEnabled": false,
+  "checkpointAllowsOrders": false,
+  "maxCommitted": 50000,
+  "moneyScale": 10000,
+  "quantity": 1,
+  "maxPositions": 1,
+  "maxEntryAttempts": 1,
+  "maxRecoveryAttempts": 1,
+  "reuseProceeds": false,
+  "concurrentSequences": 1,
+  "stopOnUnknown": true,
+  "stopOnRealizedLoss": true,
+  "recovery": "ONE_REDUCING_FOK_UNWIND_ONLY_AFTER_CONFIRMED_ONE_SIDED_FILL",
+  "authorization": null,
+  "maxConfirmationAgeMs": 2000,
+  "maxAccountAgeMs": 5000,
+  "maxLockupMs": 604800000
+}
