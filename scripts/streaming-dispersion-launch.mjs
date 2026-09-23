@@ -1,0 +1,10 @@
+import {resolve} from 'node:path';
+import {readFileSync,existsSync,writeFileSync} from 'node:fs';
+import {supervise} from './screen-supervisor.mjs';
+const [output,envFile]=process.argv.slice(2),root=resolve(new URL('..',import.meta.url).pathname),dir=resolve(output);
+const frozen=JSON.parse(readFileSync(resolve(dir,'frozen.json'),'utf8'));
+if(frozen.policy.ordersEnabled!==false||frozen.policy.durationMs!==5400000||existsSync(resolve(dir,'launch.json')))throw Error('SINGLE_ORDER_DISABLED_STUDY_ONLY');
+const deadlineAt=Date.now()+frozen.policy.durationMs;
+writeFileSync(resolve(dir,'launch.json'),JSON.stringify({at:Date.now(),deadlineAt,ordersEnabled:false}),{flag:'wx'});
+const result=await supervise({command:process.execPath,args:['--experimental-strip-types',resolve(root,'worker/streaming-dispersion.ts'),'observe',dir,resolve(envFile),String(deadlineAt)],cwd:root,log:resolve(dir,'worker.log'),status:resolve(dir,'supervisor.json'),durationMs:Math.max(1,deadlineAt-Date.now()),silenceMs:60000,graceMs:5000,forceMs:5000,minFreeBytes:2*1024**3});
+console.log(JSON.stringify(result));
