@@ -10,7 +10,8 @@ if(summary.phase!=='STOPPED'||!summary.endedAt)throw Error('Only a completed bou
 const median=xs=>{const s=xs.filter(Number.isFinite).sort((a,b)=>a-b),n=s.length;return n?n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2:null;};
 const maximum=xs=>{const s=xs.filter(Number.isFinite);return s.length?Math.max(...s):null;};
 const extrema=new Map(),largestQuantity=new Map();
-for await(const line of createInterface({input:createReadStream(resolve(dir,'evidence.ndjson')),crlfDelay:Infinity})){
+if(summary.evidenceStorage){for(const r of summary.routes){if(r.recordedExtrema)extrema.set(r.pairId,r.recordedExtrema);if(r.largestQuantity)largestQuantity.set(r.pairId,r.largestQuantity);}}
+else for await(const line of createInterface({input:createReadStream(resolve(dir,'evidence.ndjson')),crlfDelay:Infinity})){
  const x=JSON.parse(line);if(x.kind!=='DERIVED_CHANGE'||!x.body.usable)continue;
  for(const q of x.body.quotes){const old=extrema.get(q.pairId);if(!old||q.feeNetGapPerContract>old.feeNetGapPerContract)extrema.set(q.pairId,q);
   const size=largestQuantity.get(q.pairId);if(!size||q.quantity>size.quantity||(q.quantity===size.quantity&&q.feeNetSurplus>size.feeNetSurplus))largestQuantity.set(q.pairId,q);
@@ -65,7 +66,7 @@ const capitalEfficiency=confirmed.map(c=>{const q=c.repriced,r=rows.find(r=>r.pa
   cashReleaseCertain:false,expectedProfitModel:false,strategyApproved:false};});
 const result={scope:summary.scope,startedAt:summary.startedAt,endedAt:summary.endedAt,originalDeadlineAt:summary.deadlineAt,durationMs:summary.endedAt-summary.startedAt,
  stopReason:summary.reason,ordersEnabled:false,ledgerAccess:false,freezeSha256:started.freezeSha256,policy:summary.policy,
- evidenceSha256:createHash('sha256').update(readFileSync(resolve(dir,'evidence.ndjson'))).digest('hex'),
+ evidenceSha256:createHash('sha256').update(readFileSync(resolve(dir,summary.evidenceStorage?'evidence/manifest.json':'evidence.ndjson'))).digest('hex'),
  measurementUnits:'Money in integer $0.0001 units; times in milliseconds unless named hours/days. No raw book/tape included.',
  definitions:{categoryMedian:'Median across route time-weighted medians at the preferred total-fee-surplus quantity; routes weighted equally. Preferred-quantity maxima include every evaluation. Separate recorded-content-change maxima search every legal quantity in valid DERIVED_CHANGE records; health-only evaluations are not included in that auxiliary metric.',
   frequency:'Distinct route/direction fee-positive episodes / sum of usable priceable route-hours. Unknown gaps do not create additional episodes; known onsets are separate.',
@@ -79,7 +80,7 @@ const result={scope:summary.scope,startedAt:summary.startedAt,endedAt:summary.en
   conditionalFeeNetReturnOnAllReservedCash:q?q.feeNetSurplus/q.totalReservedCash:null,indicativeDaysToEvent:r.indicativeDaysToEvent,
   administrativeDaysFromStart:r.administrativeDaysFromStart,lockupBasis:r.lockupBasis,
   confirmed:false,negativeReturnsNotAnnualizedOrRanked:true,cashReleaseCertain:false,expectedProfitModel:false};}),
- reconnections:summary.reconnections,feedEvents:summary.feedEvents,clockFault:summary.clockFault,privateEvidenceBytes:statSync(resolve(dir,'evidence.ndjson')).size,attemptedEvidenceBytes:summary.bytes,
+ reconnections:summary.reconnections,feedEvents:summary.feedEvents,clockFault:summary.clockFault,evidenceStorage:summary.evidenceStorage??null,privateEvidenceBytes:summary.evidenceStorage?summary.evidenceStorage.critical.bytes+summary.evidenceStorage.retained.reduce((n,r)=>n+r.bytes,0):statSync(resolve(dir,'evidence.ndjson')).size,attemptedEvidenceBytes:summary.bytes,
  settlementPasses:rows.filter(r=>r.settlementClassification==='EQUIVALENT').map(r=>r.pairId),fillClaim:false,realizedProfitClaim:false};
 writeFileSync(resolve(output),JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({output,routes:rows.length,categories:result.categories.map(c=>({category:c.category,usableRouteHours:c.usablePriceableRouteHours,feeIntervals:c.feePositiveIntervals,confirmed:c.confirmedPositiveIntervals})),stopReason:result.stopReason}));

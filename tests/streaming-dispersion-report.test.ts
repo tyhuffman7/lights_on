@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtempSync,writeFileSync,readFileSync,rmSync} from 'node:fs';
+import {mkdtempSync,writeFileSync,readFileSync,rmSync,mkdirSync,unlinkSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {spawnSync} from 'node:child_process';
@@ -39,4 +39,14 @@ test('offline report preserves unavailable depth, route-hour denominators and ex
 });
 test('offline report refuses to turn an ongoing study into a final result',()=>{
  const {dir,output}=fixture('RUNNING');try{const done=run(dir,output);assert.notEqual(done.status,0);assert.match(done.stderr,/Only a completed bounded study/);}finally{rmSync(dir,{recursive:true,force:true});}
+});
+test('segmented reports use durable full-session extrema after raw monitoring has rotated',()=>{
+ const {dir,output}=fixture();try{
+  const s=JSON.parse(readFileSync(join(dir,'summary.json'),'utf8')),q=s.confirmations[0].repriced;
+  s.routes[2].recordedExtrema=q;s.routes[2].largestQuantity=q;
+  s.evidenceStorage={critical:{bytes:100},retained:[{bytes:500}],evictedMonitoring:{segments:12},closed:true};
+  writeFileSync(join(dir,'summary.json'),JSON.stringify(s));mkdirSync(join(dir,'evidence'));writeFileSync(join(dir,'evidence/manifest.json'),JSON.stringify(s.evidenceStorage));unlinkSync(join(dir,'evidence.ndjson'));
+  const done=run(dir,output);assert.equal(done.status,0,done.stderr);const r=JSON.parse(readFileSync(output,'utf8'));
+  assert.equal(r.routes[2].maximumFeeNetGapInRecordedContentChanges,200);assert.equal(r.privateEvidenceBytes,600);assert.equal(r.evidenceStorage.evictedMonitoring.segments,12);
+ }finally{rmSync(dir,{recursive:true,force:true});}
 });

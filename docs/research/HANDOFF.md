@@ -1,41 +1,25 @@
 # Lights On handoff — 2026-09-23
 
-## Current checkpoint
+## Active authorized checkpoint: dormant $5 live readiness
 
-The authorized read-only streaming culture-versus-sports study is complete. **Stop here; no repeat run, mapping expansion, recovery refinement or PAPER strategy run is authorized.** No orders, new positions, PAPER ledger changes or Julia/Oregon/White Sox settlement occurred. Ohio eligibility, settlement, fee, freshness and risk gates remain in force. Fresh-fill recovery is still unproven; the earlier no-fill sizing/recovery test is complete and must not be repeated without new evidence.
+The user authorized evidence-retention hardening, disabled real-order adapters, current official API validation, strict live settlement review, one bounded read-only watch and signed scoped draft publication. **No real order, order preview/cancel POST, live activation, PAPER mutation, merge, force-push or mapping expansion is authorized.** The earlier paper/streaming checkpoints remain complete and must not be repeated.
 
-[Final report](STREAMING-DISPERSION-20260923.md) · [Exact payout review](STREAMING-CULTURE-REVIEW-20260923.md) · [Methodology](STREAMING-DISPERSION-METHODOLOGY-20260923.md) · [Sanitized results](streaming-dispersion-results-20260923.json)
+Isolated checkout: `/private/tmp/lights-on-live-readiness-20260923`, branch `codex/tiny-live-readiness`, based on signed `c40f52c` / draft #15. The primary checkout is main with unrelated staged/unstaged work; preserve it. GitHub must use `tyhuffman7` exclusively; origin is `https://tyhuffman7@github.com/tyhuffman7/lights_on.git`. Signing uses the primary checkout's repo-local `.git/codex_tyhuffman7_signing` via `/usr/bin/ssh-keygen`, never 1Password or disabled signing.
 
-- Ten retained non-sports routes reviewed: 0 EQUIVALENT, 5 CONDITIONAL, 2 INCOMPATIBLE, 3 UNRESOLVED. No strategy approval or registry promotion.
-- Seventeen concurrent routes (10 non-sports, 7 existing sports controls), persistent Kalshi + native PM-US WebSocket books and unchanged economics/confirmation routines. No REST book polling.
-- One run: **03:56:55–05:00:36 UTC**, 63.689 minutes. Frozen 256 MiB evidence guard stopped it; original 05:26:55 UTC deadline was never extended. Remaining 26.308 minutes censored; no restart.
-- **37 distinct raw-positive intervals; 0 fee-positive intervals; 0 confirmation requests or confirmed positives.** Culture 6.632 usable route-hours; sports 7.249; company control 1.035. Netflix show and AGT have no legal complementary whole-depth evidence; do not call those zero opportunities.
-- Kalshi reconnects 0; PM-US 3 using PR #13 per-venue bounded rebuilding. All 34 subscribed books arrived. Supervisor clean exit; no clock fault.
-- Neither culture nor sports has demonstrated more fee-positive opportunities. Confirmed spread magnitude unavailable. No positive spread/depth/short-lockup combination established.
-- Recommend recurring manual review of weekly Billboard and finale-window AGT/Big Brother. Netflix needs controlling chart-scope clarification; VMA tie payouts conflict; Spotify annual and IPO are controls, not short-lockup priorities. Additional broad mapping is not justified before resolving settlement/economics blockers.
+Implemented: bounded raw evidence rotation plus durable protected decision journal; dormant Kalshi V2/PM-US app FOK payload/signing/reply paths; separate one-attempt live ledger; strict LIVE-ADMISSION gate; disabled $5 configuration; bounded watch. Read [methodology](../pilot/TINY-LIVE-METHODOLOGY-20260923.md), [API validation](../pilot/TINY-LIVE-API-20260923.md) and [26-route review](../pilot/tiny-live-settlement-review-20260923.json).
 
-## Verification and publication
+Verified locally: 65 focused tests passed; the added segmented-report regression subsequently passed with all three report tests (66 distinct focused tests). The synthetic storage test exceeded 256 MiB without exceeding the 64 MiB retained raw cap. Protected evidence survived rotations. Current review: **0 LIVE_EQUIVALENT, 19 LIVE_BLOCKED, 7 UNRESOLVED**. Read-only account GETs responded on both venues; private results are ignored and do not prove full account/capability/eligibility readiness.
 
-42 targeted local tests passed after collection; derived counts/coverage/deadline/size invariants passed; frozen runtime sources unchanged. No full local tests/typecheck/build or CI polling occurred during collection. The previous REST observation remains preserved and methodologically inconclusive.
+Blockers: strict settlement equivalence, current confirmed equivalent economics, Ohio eligibility, fully reconciled inventory/execution and venue cash/capability, account-specific fee bounds, verified short lockup and unproven fresh-fill recovery. Live remains disabled. Readiness is provisionally NOT READY; do not change this based only on CI or conditional diagnostic quotes.
 
-Scoped branch: `codex/streaming-culture-dispersion`, based on `codex/non-sports-dispersion` at `a117b2a` (PR #14). Main checkout and its unrelated index/worktree changes are preserved. Publication is authorized only as a **signed non-main draft PR** to `tyhuffman7/lights_on`; no merge or force-push.
+Next: hosted CI for this implementation, then refresh the same exact metadata and freeze/run the one 20-minute read-only watch. No source edits, tests/builds or CI polling during collection. Preserve raw evidence under ignored `work/tiny-live/`; publish only sanitized derived results and final report, update this handoff, then stop. No watch has yet been launched.
 
-Publication: signed commit `6446be8` is on [draft PR #15](https://github.com/tyhuffman7/lights_on/pull/15), stacked on draft #14. The existing 1Password signer succeeded after unlock; local SSH verification passed. GitHub reports the preserved signing key as `unknown_key`; cryptographic verification with the configured public key passes locally. For code commit `6446be8`, [hosted CI](https://github.com/tyhuffman7/lights_on/actions/runs/35874820195) passed **677 tests**, typecheck and production build, with zero failures or skipped tests. No merge or force-push occurred.
-
-## Needed next action / commands
-
-The scoped implementation, study, signed draft publication and hosted validation are complete. **Stop; no further collection or PAPER strategy work is authorized.** Use GitHub account `tyhuffman7` exclusively for any later authorized publication maintenance. Inspect/explicitly stage only this checkpoint’s code, tests, review, methodology, sanitized results/report and handoff. Exclude credentials, env files, raw books/tape/catalogs, databases, leases, account information and unrelated work.
-
-Offline report command (does not collect again):
+Commands (isolated checkout only):
 
 ```sh
-node scripts/streaming-dispersion-report.mjs work/streaming-culture-20260923/study docs/research/streaming-dispersion-results-20260923.json
+node --experimental-strip-types --test tests/tiny-live.test.ts tests/tiny-live-watch.test.ts tests/segmented-evidence.test.ts tests/streaming-dispersion.test.ts tests/streaming-dispersion-report.test.ts tests/book-confirmation-adapter.test.ts tests/production-operations.test.ts
+node --experimental-strip-types worker/tiny-live-watch.ts freeze work/tiny-live/watch work/tiny-live/metadata.json
+node scripts/tiny-live-launch.mjs work/tiny-live/watch /Users/tylerhuffman/Documents/code_projects/lights-on/.env.research
 ```
 
-Targeted checks:
-
-```sh
-node --experimental-strip-types --test tests/streaming-dispersion.test.ts tests/streaming-dispersion-report.test.ts tests/book-confirmation-adapter.test.ts tests/candidate-confirmation.test.ts tests/streams.test.ts tests/production-operations.test.ts
-```
-
-Private study evidence stays under `work/streaming-culture-20260923/study/` and is never published. Evidence SHA256 `f4597c7fc96f0c3a630d242ca9d110bf4cbaedffd9d1eb00c9069ae92bc19488`; freeze SHA256 `ad98a00b5e6d7de598299e0d77103d1b5f36934102607a19259cf6cf8cc1e930`.
+Earlier streaming results and raw evidence remain in `/private/tmp/lights-on-streaming-20260923`, signed final head `c40f52c`, [draft #15](https://github.com/tyhuffman7/lights_on/pull/15), [successful CI](https://github.com/tyhuffman7/lights_on/actions/runs/35875284324). Historical PAPER Julia/Oregon/White Sox holdings and unknown exposure remain retained; no settlement or recovery is claimed here.

@@ -1,0 +1,1194 @@
+{
+  "scope": "LIVE_ADMISSION_REVIEW_RETAINED_26_ROUTES_NO_MAPPING_EXPANSION",
+  "reviewedAt": 1790179515924,
+  "definitions": {
+    "LIVE_EQUIVALENT": "All material ordinary and exceptional settlement dimensions match with current hash-bound controlling rules.",
+    "LIVE_BLOCKED": "Concrete payout or exceptional-treatment conflict; conditional paper approval is insufficient.",
+    "UNRESOLVED": "Material controlling terms, metadata or identity remain unresolved."
+  },
+  "routes": [
+    {
+      "pairId": "KXNETFLIXRANKSHOW-26SEP28-DAN::ccrc-ntflx-1shwus-2026-09-29-dango2",
+      "classification": "UNRESOLVED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "5276efdf3c601ba05974bd0cae2c9ec396d51a43dc5518c416c22dc065d2ccd9",
+        "poly": "17fc941eeb70b09d614bbdf32ed356e57ddb5f6fc83a7e6b0f26be3be590ab94"
+      },
+      "reviewedAt": 1790179381472,
+      "expiresAt": 1790265781472,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "UNKNOWN",
+        "cancellation": "UNKNOWN",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Current Kalshi primary text and Netflix source URL specify United States; linked NETFLIXRANK p1 restricts chart to Films (English) or TV (English). No precedence clarification establishing the US override was located.",
+        "PM CCRC pp3–4 uses first official publication, explicit split ties at the contract tick, a two-week publication cutoff, and alternative-source/review fallback if the chart is discontinued. Kalshi fixes value at expiration, permits pre-expiration revisions and does not specify matching split-tie or delayed-publication fallback in NETFLIXRANK.",
+        "Do not replace the US predicate with a global English chart, assume identical ties, or equate expected expiration with cash release."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/NETFLIXRANK.pdf",
+          "sha256": "6f89810250af204695b456aaa433d91a1f637e2d56e131adc6d4d8722410076f"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16"
+        }
+      ],
+      "category": "Netflix",
+      "kalshiId": "KXNETFLIXRANKSHOW-26SEP28-DAN",
+      "polyId": "ccrc-ntflx-1shwus-2026-09-29-dango2",
+      "open": true,
+      "indicativeEventAt": "2026-09-29T14:00:00Z",
+      "lockupBasis": "September 29 expected chart release; timestamp is indicative, publication and settlement uncertain.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXNETFLIXRANKMOVIE-26SEP28-WHY::ccrc-ntflx-1movus-2026-09-29-whydid",
+      "classification": "UNRESOLVED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "7225cfa6b9415540e3a0ce803728b097e791f1a28a03b1b44d0d7a882c6a381a",
+        "poly": "6016178b3e0f777dd341ec2984142d55f926066c2e769c2d886137380666690b"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "UNKNOWN",
+        "cancellation": "UNKNOWN",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Current Kalshi primary text and Netflix source URL specify United States; linked NETFLIXRANK p1 restricts chart to Films (English) or TV (English). No precedence clarification establishing the US override was located.",
+        "PM CCRC pp3–4 uses first official publication, explicit split ties at the contract tick, a two-week publication cutoff, and alternative-source/review fallback if the chart is discontinued. Kalshi fixes value at expiration, permits pre-expiration revisions and does not specify matching split-tie or delayed-publication fallback in NETFLIXRANK.",
+        "Do not replace the US predicate with a global English chart, assume identical ties, or equate expected expiration with cash release."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/NETFLIXRANK.pdf",
+          "sha256": "6f89810250af204695b456aaa433d91a1f637e2d56e131adc6d4d8722410076f"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16"
+        }
+      ],
+      "category": "Netflix",
+      "kalshiId": "KXNETFLIXRANKMOVIE-26SEP28-WHY",
+      "polyId": "ccrc-ntflx-1movus-2026-09-29-whydid",
+      "open": true,
+      "indicativeEventAt": "2026-09-29T14:00:00Z",
+      "lockupBasis": "September 29 expected chart release; timestamp is indicative, publication and settlement uncertain.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXTOPSONG-26OCT03-CHO::ccrc-bilbrd-1song-2026-10-03-chotex",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "bdca3b0f3a9889663839097916f63e14c55d238e5554043c39beef4634a1cba4",
+        "poly": "266d569c4470dc666d14b63077d5c6c2892ef62c1f45f83a3f2fc654e5fe4db2"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "RANKLIST pp1–3 and CCRC pp3–4 both use the official named chart; publisher tie-breaking controls, otherwise tied contracts split $1 rounded down. Current PM tick is $0.01, matching Kalshi cents. Neither a tied #1 nor an absent chart may be treated as a guaranteed binary $1 hedge.",
+        "PM fixes first official ranking and has a two-week delayed-publication window; Kalshi refers to the value at expiration, excludes only later revisions, and treats no publication during the stated period as No. Correction or missing-publication branches are not proven equivalent.",
+        "Kalshi names the work without the artist; PM explicitly credits Ella Langley. Billboard primary reporting identifies both Choosin’ Texas and the Dandelion album with Ella Langley. Alternate recordings/remixes and different credited works remain excluded."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/RANKLIST.pdf",
+          "sha256": "255ec41a916d04f147187b748048f738fd1b7eb664054b1bc64b92e047474ab1"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16"
+        }
+      ],
+      "category": "Billboard/music",
+      "kalshiId": "KXTOPSONG-26OCT03-CHO",
+      "polyId": "ccrc-bilbrd-1song-2026-10-03-chotex",
+      "open": true,
+      "indicativeEventAt": "2026-09-29T14:00:00Z",
+      "lockupBasis": "Indicative Tuesday September 29 publication for chart dated October 3; no guaranteed publication or fund-release time.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXTOPALBUM-26OCT03-DAN::ccrc-bilbrd-1album-2026-10-03-dandel",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "7a2b726231c19462d783e54b9aa4cc20bf6c123db4f020158a02dc79cd9ac820",
+        "poly": "ebdd6f6b18585ecd1609e09e49fe8c1db55d93cd00097d3b67df4704caaeec6d"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "RANKLIST pp1–3 and CCRC pp3–4 both use the official named chart; publisher tie-breaking controls, otherwise tied contracts split $1 rounded down. Current PM tick is $0.01, matching Kalshi cents. Neither a tied #1 nor an absent chart may be treated as a guaranteed binary $1 hedge.",
+        "PM fixes first official ranking and has a two-week delayed-publication window; Kalshi refers to the value at expiration, excludes only later revisions, and treats no publication during the stated period as No. Correction or missing-publication branches are not proven equivalent.",
+        "Kalshi names the work without the artist; PM explicitly credits Ella Langley. Billboard primary reporting identifies both Choosin’ Texas and the Dandelion album with Ella Langley. Alternate recordings/remixes and different credited works remain excluded."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/RANKLIST.pdf",
+          "sha256": "255ec41a916d04f147187b748048f738fd1b7eb664054b1bc64b92e047474ab1"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16"
+        }
+      ],
+      "category": "Billboard/music",
+      "kalshiId": "KXTOPALBUM-26OCT03-DAN",
+      "polyId": "ccrc-bilbrd-1album-2026-10-03-dandel",
+      "open": true,
+      "indicativeEventAt": "2026-09-29T14:00:00Z",
+      "lockupBasis": "Indicative Tuesday September 29 publication for chart dated October 3; no guaranteed publication or fund-release time.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXVMA-BA26-TAM::tac-vmas-alt-09-27-2026-dratam",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "071036c8034022ed982c128641e349405274c5907d0eb83c88858407c4d11741",
+        "poly": "5a011b68b89fc4b403f52c6314e6b857b6b40674676cca11b1b044ed25344f65"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "CONFLICT"
+      },
+      "reasons": [
+        "MTVVMAS p1: on a tie, the tie strike resolves Yes and all nominee strikes No. PM TAC p4: multiple successful participants in a mutually exclusive iteration split $1 at the tick. This is a concrete payout difference, even if artist and nominated work are ultimately shown to be the same entry.",
+        "Kalshi immediately resolves nonnomination or withdrawal/disqualification to No; PM similarly excludes withdrawal and requires nomination where it is a prerequisite. Both allow functionally equivalent renamed categories, but those are separate exchange judgments.",
+        "Kalshi cancellation uses independently determined fair price and postponement may last one year. PM may extend or use its own fair-price review; corrected/replayed announcement rules and cutoff also differ.",
+        "An artist can be associated with multiple works or technical credits. The PM work credit does not prove Kalshi refers to precisely that work. Best Art Direction may name technical recipients rather than the artist."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/MTVVMAS.pdf",
+          "sha256": "667654e242bca0aa476412a4308786186cc02705b384219916f2101abff90dab"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TAC%20-%20%282026.03.31%29.pdf",
+          "sha256": "ff9c2b1a169927fc6f3898efd40d7bc930f1403e9d519655b73d3cb92b099a61"
+        }
+      ],
+      "category": "awards",
+      "kalshiId": "KXVMA-BA26-TAM",
+      "polyId": "tac-vmas-alt-09-27-2026-dratam",
+      "open": true,
+      "indicativeEventAt": "2026-09-28T03:59:00Z",
+      "lockupBasis": "September 27 ceremony as named by current PM route and Kalshi expected expiration; event and settlement uncertain.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXVMA-BAD26-CHA::tac-vmas-artdirection-09-27-2026-ss26ch",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "2570b030e7210b83c4e6bf063447b72ca206f79bbbe01ea1e3aabdc31f980e84",
+        "poly": "8f69e1da4e5b656af4211cbf802c81ed098d6c30bbdedf0bd8a88665ae4a2b9a"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "CONFLICT"
+      },
+      "reasons": [
+        "MTVVMAS p1: on a tie, the tie strike resolves Yes and all nominee strikes No. PM TAC p4: multiple successful participants in a mutually exclusive iteration split $1 at the tick. This is a concrete payout difference, even if artist and nominated work are ultimately shown to be the same entry.",
+        "Kalshi immediately resolves nonnomination or withdrawal/disqualification to No; PM similarly excludes withdrawal and requires nomination where it is a prerequisite. Both allow functionally equivalent renamed categories, but those are separate exchange judgments.",
+        "Kalshi cancellation uses independently determined fair price and postponement may last one year. PM may extend or use its own fair-price review; corrected/replayed announcement rules and cutoff also differ.",
+        "An artist can be associated with multiple works or technical credits. The PM work credit does not prove Kalshi refers to precisely that work. Best Art Direction may name technical recipients rather than the artist."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/MTVVMAS.pdf",
+          "sha256": "667654e242bca0aa476412a4308786186cc02705b384219916f2101abff90dab"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TAC%20-%20%282026.03.31%29.pdf",
+          "sha256": "ff9c2b1a169927fc6f3898efd40d7bc930f1403e9d519655b73d3cb92b099a61"
+        }
+      ],
+      "category": "awards",
+      "kalshiId": "KXVMA-BAD26-CHA",
+      "polyId": "tac-vmas-artdirection-09-27-2026-ss26ch",
+      "open": true,
+      "indicativeEventAt": "2026-09-28T03:59:00Z",
+      "lockupBasis": "September 27 ceremony as named by current PM route and Kalshi expected expiration; event and settlement uncertain.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXAGTWINNER-26SEP24-VER::rtc-agt-s21-win-2026-09-23-vergor",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "1ebf32dc6d584f24f24cb72153bc9f3eaa2978766abef9293271347896b84b17",
+        "poly": "d3b55af0b55569d82870a2662220291f97a532d5de95c7d15eef24b55b0e141c"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Kalshi COMPETITIONREALITYWIN pp1–3 and PM RTC pp2–4 use the official broadcaster/show result. Both split joint winners; current PM tick is $0.01. Both exclude pre-result withdrawal for a winner, and unconditional victory still counts when the award is declined.",
+        "Kalshi freezes the original finale winner and pays No if canceled/truncated without a winner. PM permits fair-price/review cancellation and confirmations before its expiration; its finale date is amended if rescheduled. These branches are not an unconditional hedge.",
+        "Kalshi requires a finale or immediately following official announcement and has a one-week latest-expiration provision. PM also recognizes off-broadcast official declarations; delayed announcements and longer postponements can diverge."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/COMPETITIONREALITYWIN.pdf",
+          "sha256": "60f1d26310bf7ea30cb9d7384a4147526b35fa1b25074ff60a22d3f1d7e90bd0"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20RTC%20-%20%282026.04.03%29.pdf",
+          "sha256": "f052ff3ced0006be4b3cc9bd102b4b19891765c38876dfc237970c30d0c317f6"
+        }
+      ],
+      "category": "reality TV",
+      "kalshiId": "KXAGTWINNER-26SEP24-VER",
+      "polyId": "rtc-agt-s21-win-2026-09-23-vergor",
+      "open": true,
+      "indicativeEventAt": "2026-09-24T03:00:00Z",
+      "lockupBasis": "September 23 finale from the native PM route; time is indicative, release of funds uncertain.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXBIGBROTHERRANK-26DEC31R2-TAY::rtc-bbus-s28-2-2026-10-01-taybro",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "365fba5018b526eae5fb7b44924ad77f935e7a5ee875c764b65858cfe32b5600",
+        "poly": "93cad52938caf09ff2a9c916d715e966a62e7189b76060775666fc8ea8e86771"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "BIGBROTHERRANK pp1–3 uses official final rank, includes final reinstatement, allows rank inference from elimination structure and shared double evictions. Its first official ranking controls later alterations. PM RTC and the exact listing require an official second-place outcome; generic elimination finality must not be substituted for final placement.",
+        "Kalshi gives a listed Tie strike priority; without one it splits shared ranks at cents. PM mutually exclusive successful outcomes split at its tick (currently cents). Presence and precedence of a Tie strike are a condition, not assumed absent.",
+        "Kalshi cancellation/truncation without final ranks pays No. PM may use fair-price/review cancellation and amends finale expiration. Kalshi administrative date is December 31 with latest January 7, despite PM’s October 1 finale label.",
+        "Withdrawal counts only if an official final second-place rank remains on Kalshi; PM’s generic withdrawal provision is explicitly for winner contracts, so placement handling needs an unambiguous official result."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/BIGBROTHERRANK.pdf",
+          "sha256": "dea6e9e073d6b82ad19c2a09869297cd79c96cdef4c9d2bd6b6850c3a431f646"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20RTC%20-%20%282026.04.03%29.pdf",
+          "sha256": "f052ff3ced0006be4b3cc9bd102b4b19891765c38876dfc237970c30d0c317f6"
+        }
+      ],
+      "category": "reality TV",
+      "kalshiId": "KXBIGBROTHERRANK-26DEC31R2-TAY",
+      "polyId": "rtc-bbus-s28-2-2026-10-01-taybro",
+      "open": true,
+      "indicativeEventAt": "2026-10-02T03:00:00Z",
+      "lockupBasis": "October 1 finale implied by native PM route; indicative only, particularly uncertain relative to Kalshi December administrative dates.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXTOPARTISTUSA-26-BAD::ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "8eec2abac22c42bc81973e6588f0d7ab12dcee21e591add91a61b79675ac8cef",
+        "poly": "cf17ca3e530893153fac0cc5c5c6795be51e5135081a6f0f2b65ab4f5254a3b0"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Both exact listings specify the US annual Wrapped ranking even if released before year end. STREAMRANK pp1–2 and CCRC pp3–4 use exact creator identity, publisher tie-breaks and split ties. Current PM tick is cents.",
+        "Kalshi uses the chart as of expiration and pays all non-none strikes No if no data is available by then. PM uses the first published ranking and permits substitute-source/review cancellation; late or missing publication and corrections can diverge.",
+        "Kalshi latest expiration is January 7, 2027; PM listed end is December 17, 2026. No confirmed 2026 Wrapped publication date is asserted."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/STREAMRANK.pdf",
+          "sha256": "f4f06b9f64d011d66ebbe68871b3648e9baa8471bbd523f6049cca63503af9df"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16"
+        }
+      ],
+      "category": "Spotify",
+      "kalshiId": "KXTOPARTISTUSA-26-BAD",
+      "polyId": "ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "open": true,
+      "indicativeEventAt": null,
+      "lockupBasis": "Annual release date unverified; show administrative horizon separately, not a short-lockup estimate.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXIPOANTHROPIC-DATE-26OCT01::ipcc-anthropic-2026-09-30",
+      "classification": "UNRESOLVED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "087d02b984f038f15f26208aa04fa6b59d77a2cc1a23b1f7197b9d0a5cecdae8",
+        "poly": "afda7d251a9f08c3207cbce7919d27b2323f54f971d40c2cdd5b2451bd426a70"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "UNKNOWN",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "UNKNOWN",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Kalshi short primary text lists effective SEC S-1, pricing, or exchange ticker assignment. The linked WHENIPO/IPOEventConfirm pp1–2 expands to foreign equivalent approvals and requires ticker plus approved IPO listing, substantially matching PM IPCC pp2–3. Do not claim foreign-regulator incompatibility solely from the shortened listing.",
+        "The short Kalshi ticker-assignment clause is broader than the linked document. Contract precedence at that boundary is not resolved here. Both long documents exclude filing alone, direct listings without new shares, SPAC/reverse merger, private offers and non-common-equity listings.",
+        "Kalshi long terms additionally require a first-time public listing and enumerate prior-public/OTC/relisting exclusions. PM’s reviewed product lacks the same explicit first-time history test. Any prior-public history or nonstandard issuance needs confirmation.",
+        "PM explicitly fixes 11:59 PM ET; Kalshi says before October 1 with 11:59 PM trading time. Exact final-minute inclusion remains unresolved. Kalshi expected expiration April 1, 2027 is later than its October 8 latest expiration; PM lists July 15, 2027. These administrative anomalies preclude a reliable short capital-lockup estimate."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/WHENIPO.pdf",
+          "sha256": "402683c0afae0721064d285271cd2c7f4f760f2fbf253be9116f72ddc046f18d"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20IPCC%20-%20%282026.06.08%29.pdf",
+          "sha256": "81caf1a64d3c09858b72b3714cb2f59eb745a9caaba735db55da75802ec430e9"
+        }
+      ],
+      "category": "company/IPO",
+      "kalshiId": "KXIPOANTHROPIC-DATE-26OCT01",
+      "polyId": "ipcc-anthropic-2026-09-30",
+      "open": true,
+      "indicativeEventAt": "2026-10-01T03:59:00Z",
+      "lockupBasis": "Contract cutoff only; administrative horizons conflict and do not support a fund-release estimate.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXNCAAFSPREAD-26SEP24LIBCCAR-LIB7::asc-cfb-librty-coast-2026-09-24-neg-6pt5",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "72e81759b391d40ef240ac3127ba076a78afb77d27e252800162efdf156dee51",
+        "poly": "beb1efd139de68135f196a181f04d12ce7846a5c6acb850ecf7d2e017089a3a5"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "CONFLICT",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLSPREAD.pdf",
+          "sha256": "1daaea87a853adcb485bdb80fb8bd5c5fa7c831d8e237f7446bc16ea43705f5a"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20ASC%20-%20%282026.03.26%29.pdf",
+          "sha256": "649ce9d4499cb3564fec53364ddaff15161be53da04c07a78876fcbc2e0c1b04"
+        }
+      ],
+      "category": "sports",
+      "kalshiId": "KXNCAAFSPREAD-26SEP24LIBCCAR-LIB7",
+      "polyId": "asc-cfb-librty-coast-2026-09-24-neg-6pt5",
+      "open": true,
+      "indicativeEventAt": "2026-09-25T02:30:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXNCAAFTOTAL-26SEP24LIBCCAR-58::tsc-cfb-librty-coast-2026-09-24-total-57pt5",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "aba60a1c26c7cdb1fc4447b364e2454377764ec0caf70eaa0c67383aad3ec5e0",
+        "poly": "9af618fafc0dd29ec773096203c084c96e0ae43919938f4fcfac351b07f7b4fa"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "CONFLICT",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLTOTALS.pdf",
+          "sha256": "84be6b2cc3a16e1c3997824a6ec1ebac878a76f98609318cc223e67a6ace1572"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TSC%20-%20%282026.03.26%29.pdf",
+          "sha256": "e75d54993da84ae169a043ea3a8d2650939f3f354a0c4c377531ecd77834594d"
+        }
+      ],
+      "category": "sports",
+      "kalshiId": "KXNCAAFTOTAL-26SEP24LIBCCAR-58",
+      "polyId": "tsc-cfb-librty-coast-2026-09-24-total-57pt5",
+      "open": true,
+      "indicativeEventAt": "2026-09-25T02:30:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXNCAAFGAME-26SEP24LIBCCAR-LIB::aec-cfb-librty-coast-2026-09-24",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "a110a3e0e44a7db9cbf5306b110f61d1b0728e06f979665304cb49463dd8d903",
+        "poly": "02416d1e05153acbbcce4703bd9a01b0d8b78a7166abb72ba404fe6d3cedce50"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "CONFLICT",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLGAMEWIN.pdf",
+          "sha256": "19578b71cd63da63cc2894c60542ef06bb5de56b9366add56f07cee645cfca4b"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AEC%20-%20%282026.03.26%29.pdf",
+          "sha256": "cb4ad9c4d7ddc8db99c4cd271a4ee0fe7db367828d1f2832d727a0f6084f2d07"
+        }
+      ],
+      "category": "sports",
+      "kalshiId": "KXNCAAFGAME-26SEP24LIBCCAR-LIB",
+      "polyId": "aec-cfb-librty-coast-2026-09-24",
+      "open": true,
+      "indicativeEventAt": "2026-09-25T02:30:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXMLBTOTAL-26SEP231840MILPHI-8::tsc-mlb-mil-phi-2026-09-23-7pt5",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "e8cdd1d4af7a3978d02bb093df7dd4df98be0d47b4f744b4117a152e95f6c2c8",
+        "poly": "04b7b24fd0d3cbf7963aea7b8f0a8adc85b252122778e20274ad0eb2b2755c1e"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "CONFLICT",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/BASEBALLTOTALS.pdf",
+          "sha256": "772c802f40ad2fbd3f9527cc915130c2315b111ff3e942c2ced9ab9604fb3fe5"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TSC%20-%20%282026.03.26%29.pdf",
+          "sha256": "e75d54993da84ae169a043ea3a8d2650939f3f354a0c4c377531ecd77834594d"
+        }
+      ],
+      "category": "sports",
+      "kalshiId": "KXMLBTOTAL-26SEP231840MILPHI-8",
+      "polyId": "tsc-mlb-mil-phi-2026-09-23-7pt5",
+      "open": true,
+      "indicativeEventAt": "2026-09-24T01:40:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXMLBGAME-26SEP231310WSHDET-DET::aec-mlb-wsh-det-2026-09-23",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "ebf063f72bf146de886d8242ae5ed40a9976ce609f017d8e4f13b95595e92994",
+        "poly": "0bda813ab973a8a6764fd87eac4d30909dbad38ef115b5d8e70d7e6114b39e89"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "CONFLICT",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+          "sha256": "46b02443153f4692acb3bac3d3aedabe93e837b08c80323013c8dce117ebb6e7"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AEC%20-%20%282026.03.26%29.pdf",
+          "sha256": "cb4ad9c4d7ddc8db99c4cd271a4ee0fe7db367828d1f2832d727a0f6084f2d07"
+        }
+      ],
+      "category": "sports",
+      "kalshiId": "KXMLBGAME-26SEP231310WSHDET-DET",
+      "polyId": "aec-mlb-wsh-det-2026-09-23",
+      "open": true,
+      "indicativeEventAt": "2026-09-23T20:10:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXNFLSPREAD-26SEP24ATLGB-ATL7::asc-nfl-atl-gb-2026-09-24-neg-6pt5",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "5139dcf370dd5dc78e33de681d0e6a933ff406adb562574d70a4455fa4848bfc",
+        "poly": "1d2d9f08fc3c7c842457bcd432280749fab8a0d0990390638bce70a4842a74f0"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLSPREAD.pdf",
+          "sha256": "1daaea87a853adcb485bdb80fb8bd5c5fa7c831d8e237f7446bc16ea43705f5a"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20ASC%20-%20%282026.03.26%29.pdf",
+          "sha256": "649ce9d4499cb3564fec53364ddaff15161be53da04c07a78876fcbc2e0c1b04"
+        }
+      ],
+      "category": "sports",
+      "kalshiId": "KXNFLSPREAD-26SEP24ATLGB-ATL7",
+      "polyId": "asc-nfl-atl-gb-2026-09-24-neg-6pt5",
+      "open": true,
+      "indicativeEventAt": "2026-09-25T03:15:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXNFLTOTAL-26SEP24ATLGB-47::tsc-nfl-atl-gb-2026-09-24-total-46pt5",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "04696270596daca34fa135e2644af5866ec035ed4bc2e0edc1195aa8188e1ba7",
+        "poly": "db30ad6dc5ba20f02daa676dae541d451e01f37c63ac64752e2887252831e5bf"
+      },
+      "reviewedAt": 1790179381473,
+      "expiresAt": 1790265781473,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "MATCH",
+        "threshold": "MATCH",
+        "date": "MATCH",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLTOTALS.pdf",
+          "sha256": "84be6b2cc3a16e1c3997824a6ec1ebac878a76f98609318cc223e67a6ace1572"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TSC%20-%20%282026.03.26%29.pdf",
+          "sha256": "e75d54993da84ae169a043ea3a8d2650939f3f354a0c4c377531ecd77834594d"
+        }
+      ],
+      "category": "sports",
+      "kalshiId": "KXNFLTOTAL-26SEP24ATLGB-47",
+      "polyId": "tsc-nfl-atl-gb-2026-09-24-total-46pt5",
+      "open": true,
+      "indicativeEventAt": "2026-09-25T03:15:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "metadataUnchanged": true
+    },
+    {
+      "pairId": "KXNCAAFB12QUAL-26-KSU::aqc-cfb-big12-2026-12-04-champq-kanst",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "6b0fd9f28f81de0e62e704251c9b2a82e22114f24d91928828d0f4d58ac3f320",
+        "poly": "b4fd24dec1fa4a0f77645bc89c8f215529e6a3c1fd0822a0523e8d3be928262b"
+      },
+      "reviewedAt": 1790179508830,
+      "expiresAt": 1790265908830,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "UNKNOWN",
+        "correction": "CONFLICT",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Kalshi allocates cancelled qualification across eligible participants; PM may choose fair-price settlement or extension. Withdrawal and reinstatement/correction finality differ.",
+        "Conference championship qualification is a long-horizon control; no short cash-release guarantee."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf",
+          "sha256": "146a07f48325b0ec14ca993c9f3e6ebd8bee26f143cf3cd125053f721696bf7c"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AQC%20-%20%282026.03.26%29.pdf",
+          "sha256": "5960588d6a24f1ff1b1636ccfe7d14cb6cd32fc167a0efce39c87830edbe980e"
+        }
+      ],
+      "category": "sports season",
+      "kalshiId": "KXNCAAFB12QUAL-26-KSU",
+      "polyId": "aqc-cfb-big12-2026-12-04-champq-kanst",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    },
+    {
+      "pairId": "KXDWTSRANK-226DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "7d2acf9a36284fb3181cb64fe3efe67b1b8777571c5d6735ae7365e60d2d02b9",
+        "poly": "a7ba548b17a4e1ce43f6691465fe4acf871c31c27151e8dcc93325a8e3bd9de1"
+      },
+      "reviewedAt": 1790179509667,
+      "expiresAt": 1790265909667,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Cancelled season without final ranking: Kalshi No versus PM fair-price/review treatment. Shared ranking/Tie-strike priority and incapacitation provisions can disagree.",
+        "Season 35 runner-up aligns only ordinarily; no common final review cutoff or short capital-lockup bound."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/COMPETITIONREALITYPLACEDWTS.pdf",
+          "sha256": "41c283cffe05a14c6f64ba2861dded1b755339195f56e5b6a14d86f0c7df02d3"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20RTC%20-%20%282026.04.03%29.pdf",
+          "sha256": "f052ff3ced0006be4b3cc9bd102b4b19891765c38876dfc237970c30d0c317f6"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/legal/latest/rulebook",
+          "sha256": "e7b7793e75dd61a8adaf807c588e1212cf0600100e5727d7d546ba0a0b7f35e5"
+        }
+      ],
+      "category": "reality TV",
+      "kalshiId": "KXDWTSRANK-226DEC31-JSTIL",
+      "polyId": "rtc-dwts-s35-2-2026-11-17-julsti",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    },
+    {
+      "pairId": "KXNCAAFPAC12-26-ORST::tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "dfd7b87e81cb67866aef768123611eeccd856cd9da078c75c0ea5ad07d2b637e",
+        "poly": "8e95ce399e13046b951da3f21d97ef449ec0eae79a68ee7b60314327a664b62c"
+      },
+      "reviewedAt": 1790179510556,
+      "expiresAt": 1790265910556,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "CONFLICT",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Title cancellation allocations, withdrawal/forfeit treatment and postponement windows differ. PM controlling withdrawal fair-price clause conflicts with its illustrative zero-payout example.",
+        "Same ordinary 2026 title is insufficient; independently determined fractional payouts need not complement."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/NCAAF.pdf",
+          "sha256": "c3b31d2b3f585f04cb60ff0a46f4dd3848988fb3085194a9b36e2be7412fa1f3"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TEC%20-%20%282026.03.26%29.pdf",
+          "sha256": "4253606e50cb6f13660c2ba85ec655b198b938256fd0a3aeff6475edd77fa6e9"
+        }
+      ],
+      "category": "sports season",
+      "kalshiId": "KXNCAAFPAC12-26-ORST",
+      "polyId": "tec-cfb-pac12champ-2026-12-04-w-oregst",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    },
+    {
+      "pairId": "KXNCAAFCUSAQUAL-26-WKU::aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "4b44806636b0d45dfdce3bcb85c7d66322d9820eacc65cb23de8b7ad639b6d94",
+        "poly": "2bed345e495dc2dd46ef5bdd2b0ea70ce28c37abab0199d89ba6a32b6963fdbb"
+      },
+      "reviewedAt": 1790179511428,
+      "expiresAt": 1790265911428,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "UNKNOWN",
+        "correction": "CONFLICT",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Kalshi allocates cancelled qualification across eligible participants; PM may choose fair-price settlement or extension. Withdrawal and reinstatement/correction finality differ.",
+        "Conference championship qualification is a long-horizon control; no short cash-release guarantee."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf",
+          "sha256": "146a07f48325b0ec14ca993c9f3e6ebd8bee26f143cf3cd125053f721696bf7c"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AQC%20-%20%282026.03.26%29.pdf",
+          "sha256": "5960588d6a24f1ff1b1636ccfe7d14cb6cd32fc167a0efce39c87830edbe980e"
+        }
+      ],
+      "category": "sports season",
+      "kalshiId": "KXNCAAFCUSAQUAL-26-WKU",
+      "polyId": "aqc-cfb-cusa-2026-12-04-champq-wkent",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    },
+    {
+      "pairId": "KXTIME-26-DAR::tpoyc-2026-daramo",
+      "classification": "UNRESOLVED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "0d5dbae6102b353300d7bff2320d027743b54c8d64117cc4d7cccd3d6a7726d6",
+        "poly": "0882bd0bcbcffbc419891f9cebdfd28c8091aaefd07df861f6378e8f578d54ac"
+      },
+      "reviewedAt": 1790179512340,
+      "expiresAt": 1790265912340,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "UNKNOWN",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+        "Exact treatment of shared or group/cover awards, cancellation and source/correction cutoffs is not established as matching by retained review; current listing alone cannot certify equivalence.",
+        "Long-horizon control; no short cash-release guarantee."
+      ],
+      "sources": [
+        {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTIME-26-DAR",
+          "sha256": "fe4b58173f570270a60602997b99819ceb0ce41da9cefa61f8c26c8948814726"
+        },
+        {
+          "url": "https://gateway.polymarket.us/v1/market/slug/tpoyc-2026-daramo",
+          "sha256": "64819f2d77576d09165779b8c56a5878b25714d336f64f38932c7524d37ec622"
+        }
+      ],
+      "category": "TIME award",
+      "kalshiId": "KXTIME-26-DAR",
+      "polyId": "tpoyc-2026-daramo",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "classification": "UNRESOLVED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "c363649b47e91aabd352faf8d8d6a4550f193205648f77f8ecdd55ce49a5e744",
+        "poly": "974efd846f57b4c7be0d903255a787b5b1c49911feaebf73278f3ff39ee7141f"
+      },
+      "reviewedAt": 1790179513253,
+      "expiresAt": 1790265913253,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "UNKNOWN",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Neither issuance boundary nor equal earliest eligible chart is established; common final chart alone is insufficient.",
+        "Earliest eligible Billboard chart/issuance window differs or is not evidenced; year-end label does not establish identical measurement period.",
+        "Long-horizon control; no short cash-release guarantee."
+      ],
+      "sources": [
+        {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KX1ALBUM-26DEC-KEN",
+          "sha256": "a72a85d512469ba68907f5bd5664a521f338e2d045dcb504983811d7a9934e3d"
+        },
+        {
+          "url": "https://gateway.polymarket.us/v1/market/slug/ccpc-bilbrd-1album-any2026-kenlam",
+          "sha256": "276fae9cfd210b573b5404c5c1878f71e37347c3ff1a007c14881af1280d4fb6"
+        }
+      ],
+      "category": "Billboard annual",
+      "kalshiId": "KX1ALBUM-26DEC-KEN",
+      "polyId": "ccpc-bilbrd-1album-any2026-kenlam",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    },
+    {
+      "pairId": "KXTIME-26-EM::tpoyc-2026-elomus",
+      "classification": "UNRESOLVED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "3539215abbdf354cb4a29e458a9a569d86040dc1575dd050dc0b8fa0deff0cf0",
+        "poly": "dfc8bedbc286eb10477323eeb50873e882454809849b377fe8b5871e1f17c76f"
+      },
+      "reviewedAt": 1790179514148,
+      "expiresAt": 1790265914148,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "UNKNOWN",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+        "Exact treatment of shared or group/cover awards, cancellation and source/correction cutoffs is not established as matching by retained review; current listing alone cannot certify equivalence.",
+        "Long-horizon control; no short cash-release guarantee."
+      ],
+      "sources": [
+        {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTIME-26-EM",
+          "sha256": "4740d6c4b3930ca1f87339059c1e34534434d0213dd5879877708cdee5763497"
+        },
+        {
+          "url": "https://gateway.polymarket.us/v1/market/slug/tpoyc-2026-elomus",
+          "sha256": "f257ff14dbb54831a6e7547527a6d86271f6c916579056b7aa16fbf4363abaee"
+        }
+      ],
+      "category": "TIME award",
+      "kalshiId": "KXTIME-26-EM",
+      "polyId": "tpoyc-2026-elomus",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    },
+    {
+      "pairId": "KXTIME-26-BEN::tpoyc-2026-bennet",
+      "classification": "UNRESOLVED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "d62d01cfbf4ccc8fd8f02ea3b0cb10dd4ed99545eb3a944e46794b83190c00fc",
+        "poly": "dc4bfb10b685965011906c2d081f29a2b7862336dea934a1e4331f601bc9112d"
+      },
+      "reviewedAt": 1790179515021,
+      "expiresAt": 1790265915021,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "UNKNOWN",
+        "void": "UNKNOWN",
+        "postponement": "UNKNOWN",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Named outcome, event, period and threshold align in retained primary terms; material settlement exceptions not deeply reviewed.",
+        "Exact treatment of shared or group/cover awards, cancellation and source/correction cutoffs is not established as matching by retained review; current listing alone cannot certify equivalence.",
+        "Long-horizon control; no short cash-release guarantee."
+      ],
+      "sources": [
+        {
+          "url": "https://external-api.kalshi.com/trade-api/v2/markets/KXTIME-26-BEN",
+          "sha256": "af6e168e61b9b06afd8787f25d6192d437741b7d4a828d50f011e96fa7fa24ab"
+        },
+        {
+          "url": "https://gateway.polymarket.us/v1/market/slug/tpoyc-2026-bennet",
+          "sha256": "0e554b9c4bc60641d5f041eccdb60b643e241e411f957df0146bded3ea7b14c1"
+        }
+      ],
+      "category": "TIME award",
+      "kalshiId": "KXTIME-26-BEN",
+      "polyId": "tpoyc-2026-bennet",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    },
+    {
+      "pairId": "KXMLBAL-26-CWS::tec-mlb-alchamp-2026-09-27-cws",
+      "classification": "LIVE_BLOCKED",
+      "ordinaryOnly": true,
+      "marketHashes": {
+        "kalshi": "f4b37b4f1cdf2b01e2a91882c7eb78ed81908af2118f63da481218b044db8890",
+        "poly": "b7f0991e82796aa1e343579de6403e76c868de6258f58f5797257b502d84117f"
+      },
+      "reviewedAt": 1790179515924,
+      "expiresAt": 1790265915924,
+      "dimensions": {
+        "event": "MATCH",
+        "outcome": "MATCH",
+        "source": "UNKNOWN",
+        "threshold": "MATCH",
+        "date": "UNKNOWN",
+        "geography": "MATCH",
+        "cancellation": "CONFLICT",
+        "void": "CONFLICT",
+        "postponement": "CONFLICT",
+        "correction": "UNKNOWN",
+        "tie": "UNKNOWN"
+      },
+      "reasons": [
+        "Title cancellation allocations, withdrawal/forfeit treatment and postponement windows differ. PM controlling withdrawal fair-price clause conflicts with its illustrative zero-payout example.",
+        "Same ordinary 2026 title is insufficient; independently determined fractional payouts need not complement."
+      ],
+      "sources": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/TITLE.pdf",
+          "sha256": "7014c04719227a84321d3e3d2813b04b57b066b414c30598a475bd5bbff0bcb8"
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TEC%20-%20%282026.03.26%29.pdf",
+          "sha256": "4253606e50cb6f13660c2ba85ec655b198b938256fd0a3aeff6475edd77fa6e9"
+        }
+      ],
+      "category": "sports season",
+      "kalshiId": "KXMLBAL-26-CWS",
+      "polyId": "tec-mlb-alchamp-2026-09-27-cws",
+      "open": true,
+      "metadataUnchanged": true,
+      "lockupBasis": "Long-horizon control; not a verified release date."
+    }
+  ]
+}

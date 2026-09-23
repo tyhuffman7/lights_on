@@ -1,10 +1,10 @@
 import type {Pair,Book,Side} from '../arb/types.ts';
 import {quoteCandidate} from '../screen/confirmation.ts';
 
-export const streamingStudyPolicy=Object.freeze({version:1,ordersEnabled:false,ledgerAccess:false,
+export const streamingStudyPolicy=Object.freeze({version:2,ordersEnabled:false,ledgerAccess:false,
  durationMs:90*60*1000,maxRoutes:20,maxCultureRoutes:10,maxContracts:10,maxReconnectsPerVenue:3,
  maxConfirmations:180,confirmationSpacingMs:2000,confirmationShutdownReserveMs:6000,
- healthSampleMs:250,heartbeatMs:10000,maxEvidenceBytes:256*1024*1024,maxIntervals:4000,
+ healthSampleMs:250,heartbeatMs:10000,evidenceStorage:'BOUNDED_RAW_ROTATION_WITH_PROTECTED_DECISIONS',maxIntervals:4000,
  indicativeCapitalPerVenue:500000,selection:'RETAINED_ONLY_PRICE_BLIND',bookSource:'PERSISTENT_WEBSOCKET'});
 export type StudyQuote=ReturnType<typeof quoteCandidate>;
 export function studyQuotes(pair:Pair,a:Book|undefined,b:Book|undefined,side:Side,at:number){
