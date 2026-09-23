@@ -1,5 +1,7 @@
 # Tiny live-pilot readiness — September 23, 2026
 
+**Follow-up:** The [settlement-family checkpoint](../research/settlement-families/README.md) expands the rule review to the full saved matcher universe and separates pre-pilot requirements from pilot-learning objectives. The watch results below remain historical evidence.
+
 **NOT READY.** No live order was enabled, submitted, previewed or canceled. The maximum-$5 configuration remains disabled. No PAPER store was opened or changed, no existing holding was settled, and no earlier paper or category study was repeated. [Draft PR #16](https://github.com/tyhuffman7/lights_on/pull/16) is stacked on #15; no merge or force-push.
 
 | Requested readiness question | Verified answer |

@@ -1,0 +1,1334 @@
+{
+  "version": 1,
+  "catalogAt": "2026-09-22T00:55:59.272Z",
+  "scope": "Existing matcher output over saved complete catalog; not current tradable inventory",
+  "candidateRoutes": 3120,
+  "semanticFamilyPairs": 46,
+  "documentVariantPairs": 52,
+  "totals": {
+    "LIVE_EXACT": 0,
+    "STATE_CONDITIONED": 0,
+    "BOUNDED_BASIS": 2852,
+    "INCOMPATIBLE": 63,
+    "UNRESOLVED": 205
+  },
+  "families": [
+    {
+      "family": "FOOTBALLSPREAD \u00d7 ASC",
+      "routes": 736,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 736,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "FOOTBALLTOTALS \u00d7 TSC",
+      "routes": 451,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 451,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "WINTOTAL \u00d7 AACHC",
+      "routes": 396,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 396,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "FOOTBALLGAMEWIN \u00d7 AEC",
+      "routes": 364,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 364,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "ACHIEVEMENTS \u00d7 TEC",
+      "routes": 130,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 130,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "NEWACHIEVEMENT \u00d7 AQC",
+      "routes": 120,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 117,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 3
+      }
+    },
+    {
+      "family": "BASEBALLGAMEWIN \u00d7 AEC",
+      "routes": 120,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 108,
+        "INCOMPATIBLE": 12,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "AWARDS \u00d7 TAC",
+      "routes": 89,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 13,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 76
+      }
+    },
+    {
+      "family": "FOOTBALLENTITYSTAT \u00d7 ASTATC",
+      "routes": 81,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 81,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "OSCARS \u00d7 TAC",
+      "routes": 66,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 66,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "COMPETITIONREALITYPLACE \u00d7 RTC",
+      "routes": 50,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 50,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "BASEBALLTOTALS \u00d7 TSC",
+      "routes": 45,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 45,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "COMPETITIONREALITYWIN \u00d7 RTC",
+      "routes": 42,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 42,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "TITLE \u00d7 TEC",
+      "routes": 42,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 42,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "ACHIEVEMENTS \u00d7 AEC",
+      "routes": 42,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 42,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "IPOEVENTCONFIRM \u00d7 IPCC",
+      "routes": 39,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 39
+      }
+    },
+    {
+      "family": "TOPALBUMBY \u00d7 CCPC",
+      "routes": 36,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 36
+      }
+    },
+    {
+      "family": "ACHIEVEMENTS \u00d7 AACHC",
+      "routes": 30,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 30,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "NETFLIXRANK \u00d7 CCRC",
+      "routes": 27,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 27
+      }
+    },
+    {
+      "family": "STREAMRANK \u00d7 CCRC",
+      "routes": 27,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 10,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 17
+      }
+    },
+    {
+      "family": "TIME \u00d7 TPOYC",
+      "routes": 24,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 24,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "LEAGUECHANGE \u00d7 AACHC",
+      "routes": 19,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 19,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "COMPETITIONREALITYELIM \u00d7 RTC",
+      "routes": 19,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 19,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "NEWACHIEVEMENT \u00d7 AACHC",
+      "routes": 16,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 16,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "PRESNOM \u00d7 ENWC",
+      "routes": 16,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 16,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "FRENCHPRES \u00d7 EWC",
+      "routes": 10,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 10,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "CPI \u00d7 CPIC",
+      "routes": 9,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 9,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "TOPARTIST \u00d7 CCRC",
+      "routes": 9,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 9,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "U3 \u00d7 URC",
+      "routes": 8,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 8,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "GDP \u00d7 GDPC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 6,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "ENTITYOUTCOME \u00d7 AACHC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 6,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "BASEBALLSPREAD \u00d7 ASC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 6,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "BASKETBALLGAMEWIN \u00d7 AEC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 6,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "RUN \u00d7 CRANC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 6
+      }
+    },
+    {
+      "family": "RANKLIST \u00d7 CCPC",
+      "routes": 4,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 3,
+        "UNRESOLVED": 1
+      }
+    },
+    {
+      "family": "ELECTION \u00d7 EWC",
+      "routes": 4,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 4,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "SCOURT \u00d7 NPHC",
+      "routes": 3,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 3,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "POLITICALSTATVALUECOMPARISON \u00d7 USGOVCC",
+      "routes": 3,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 3,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "MODELRELEASE \u00d7 AIMC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 2,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "USELECTION \u00d7 USMAYEWC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 2,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "CONTROL \u00d7 PACCC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 2,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "PRESPERSON \u00d7 EWC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 2,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "USELECTION \u00d7 EWC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 2,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "RANKLIST \u00d7 CCRC",
+      "routes": 1,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 1,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "PERSONMEETING \u00d7 PINTC",
+      "routes": 1,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 1,
+        "UNRESOLVED": 0
+      }
+    },
+    {
+      "family": "NEXTOUT \u00d7 OPDC",
+      "routes": 1,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 1,
+        "UNRESOLVED": 0
+      }
+    }
+  ],
+  "documentVariants": [
+    {
+      "family": "FOOTBALLSPREAD \u00d7 ASC",
+      "routes": 736,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 736,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 736,
+        "family-branches": 736
+      }
+    },
+    {
+      "family": "FOOTBALLTOTALS \u00d7 TSC",
+      "routes": 451,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 451,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 451,
+        "family-branches": 451
+      }
+    },
+    {
+      "family": "NCAAFWINS \u00d7 AACHC",
+      "routes": 396,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 396,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 396,
+        "family-branches": 396
+      }
+    },
+    {
+      "family": "FOOTBALLGAMEWIN \u00d7 AEC",
+      "routes": 364,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 364,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 364,
+        "family-branches": 364
+      }
+    },
+    {
+      "family": "NCAAF \u00d7 TEC",
+      "routes": 130,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 130,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 130,
+        "family-branches": 130
+      }
+    },
+    {
+      "family": "BASEBALLGAMEWIN \u00d7 AEC",
+      "routes": 120,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 108,
+        "INCOMPATIBLE": 12,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 108,
+        "family-branches": 108,
+        "Baseball scheduled instant differs (possible doubleheader).": 12,
+        "Different window: 2026-09-23 / 2026-09-24": 4,
+        "Different window: 2026-09-24 / 2026-09-23": 4,
+        "Different window: 2026-09-22 / 2026-09-23": 2,
+        "Different window: 2026-09-23 / 2026-09-22": 2
+      }
+    },
+    {
+      "family": "NCAAFCONFCHAMPQ \u00d7 AQC",
+      "routes": 104,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 101,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 3
+      },
+      "reasons": {
+        "venue-finality": 101,
+        "family-branches": 101,
+        "Primary conference-team alias lacks an exact venue-ID binding in saved metadata.": 3,
+        "Missing entity proof": 3
+      }
+    },
+    {
+      "family": "MTVVMAS \u00d7 TAC",
+      "routes": 89,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 13,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 76
+      },
+      "reasons": {
+        "venue-finality": 13,
+        "family-branches": 13,
+        "Artist-only versus specific work/credited recipient: official category nomination/credit binding unavailable.": 76,
+        "Missing entity proof": 76
+      }
+    },
+    {
+      "family": "FOOTBALLENTITYSTAT \u00d7 ASTATC",
+      "routes": 81,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 81,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 81,
+        "family-branches": 81
+      }
+    },
+    {
+      "family": "OSCARS \u00d7 TAC",
+      "routes": 66,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 66,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 66,
+        "family-branches": 66
+      }
+    },
+    {
+      "family": "BASEBALLTOTALS \u00d7 TSC",
+      "routes": 45,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 45,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 45,
+        "family-branches": 45
+      }
+    },
+    {
+      "family": "TITLE \u00d7 TEC",
+      "routes": 42,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 42,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 42,
+        "family-branches": 42
+      }
+    },
+    {
+      "family": "ACHIEVEMENTS \u00d7 AEC",
+      "routes": 42,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 42,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 42,
+        "family-branches": 42
+      }
+    },
+    {
+      "family": "TOPALBUMBY \u00d7 CCPC",
+      "routes": 36,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 36
+      },
+      "reasons": {
+        "Common contractual issuance/qualifying-history boundary is unproven; creation/open timestamps alone do not establish identical eligible history.": 36,
+        "Missing entity proof": 36,
+        "Missing threshold proof": 36,
+        "Missing orientation proof": 36,
+        "Missing window proof": 36,
+        "Missing geography proof": 36,
+        "Missing source proof": 36,
+        "Missing familyDimensions proof": 36
+      }
+    },
+    {
+      "family": "BIGBROTHERRANK \u00d7 RTC",
+      "routes": 34,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 34,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 34,
+        "family-branches": 34
+      }
+    },
+    {
+      "family": "NBA \u00d7 AACHC",
+      "routes": 30,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 30,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 30,
+        "family-branches": 30
+      }
+    },
+    {
+      "family": "NETFLIXRANK \u00d7 CCRC",
+      "routes": 27,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 27
+      },
+      "reasons": {
+        "Kalshi US-vs-English chart scope/precedence clarification": 27,
+        "Kalshi US inline chart versus English-chart PDF scope: authoritative precedence/scope clarification unavailable.": 27
+      }
+    },
+    {
+      "family": "STREAMRANK \u00d7 CCRC",
+      "routes": 27,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 10,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 17
+      },
+      "reasons": {
+        "Exact work/version creator attribution absent on one side.": 17,
+        "venue-finality": 10,
+        "family-branches": 10
+      }
+    },
+    {
+      "family": "COMPETITIONREALITYWIN \u00d7 RTC",
+      "routes": 25,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 25,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 25,
+        "family-branches": 25
+      }
+    },
+    {
+      "family": "TIME \u00d7 TPOYC",
+      "routes": 24,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 24,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 24,
+        "family-branches": 24
+      }
+    },
+    {
+      "family": "WHENIPO \u00d7 IPCC",
+      "routes": 21,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 21
+      },
+      "reasons": {
+        "Common contractual issuance/qualifying-history boundary is unproven; creation/open timestamps alone do not establish identical eligible history.": 21,
+        "First-ever-public-company restriction needs company-history binding absent from catalog.": 21
+      }
+    },
+    {
+      "family": "RELEGATION \u00d7 AACHC",
+      "routes": 19,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 19,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 19,
+        "family-branches": 19
+      }
+    },
+    {
+      "family": "IPOEVENTANNOUNCE \u00d7 IPCC",
+      "routes": 18,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 18
+      },
+      "reasons": {
+        "Common contractual issuance/qualifying-history boundary is unproven; creation/open timestamps alone do not establish identical eligible history.": 18
+      }
+    },
+    {
+      "family": "BIGBROTHERWINNER \u00d7 RTC",
+      "routes": 17,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 17,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 17,
+        "family-branches": 17
+      }
+    },
+    {
+      "family": "NCAAFUNDEFEATED \u00d7 AACHC",
+      "routes": 16,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 16,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 16,
+        "family-branches": 16
+      }
+    },
+    {
+      "family": "NEWACHIEVEMENT \u00d7 AQC",
+      "routes": 16,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 16,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 16,
+        "family-branches": 16
+      }
+    },
+    {
+      "family": "COMPETITIONREALITYPLACEDWTS \u00d7 RTC",
+      "routes": 16,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 16,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 16,
+        "family-branches": 16
+      }
+    },
+    {
+      "family": "PRESNOM \u00d7 ENWC",
+      "routes": 16,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 16,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 16,
+        "family-branches": 16
+      }
+    },
+    {
+      "family": "COMPETITIONREALITYELIM \u00d7 RTC",
+      "routes": 14,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 14,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Kalshi before next calendar date in ET versus PM 23:59 Pacific; three-hour ordinary announcement window differs.": 14
+      }
+    },
+    {
+      "family": "FRENCHPRES \u00d7 EWC",
+      "routes": 10,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 10,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Next election after issuance versus specifically 2027 election; an earlier election need not be the same event.": 10
+      }
+    },
+    {
+      "family": "CPI \u00d7 CPIC",
+      "routes": 9,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 9,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 9,
+        "family-branches": 9
+      }
+    },
+    {
+      "family": "TOPARTIST \u00d7 CCRC",
+      "routes": 9,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 9,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 9,
+        "family-branches": 9
+      }
+    },
+    {
+      "family": "U3 \u00d7 URC",
+      "routes": 8,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 8,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 8,
+        "family-branches": 8
+      }
+    },
+    {
+      "family": "GDP \u00d7 GDPC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 6,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 6,
+        "family-branches": 6
+      }
+    },
+    {
+      "family": "NFLLASTUNDEFEATEDTEAM \u00d7 AACHC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 6,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 6,
+        "family-branches": 6
+      }
+    },
+    {
+      "family": "BASEBALLSPREAD \u00d7 ASC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 6,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 6,
+        "family-branches": 6
+      }
+    },
+    {
+      "family": "BASKETBALLGAMEWIN \u00d7 AEC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 6,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 6,
+        "family-branches": 6
+      }
+    },
+    {
+      "family": "RUN \u00d7 CRANC",
+      "routes": 6,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 6
+      },
+      "reasons": {
+        "Common contractual issuance/qualifying-history boundary is unproven; creation/open timestamps alone do not establish identical eligible history.": 6,
+        "Missing entity proof": 6,
+        "Missing threshold proof": 6,
+        "Missing orientation proof": 6,
+        "Missing window proof": 6,
+        "Missing geography proof": 6,
+        "Missing source proof": 6,
+        "Missing familyDimensions proof": 6
+      }
+    },
+    {
+      "family": "BIGBROTHERELIMINATION \u00d7 RTC",
+      "routes": 5,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 5,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Kalshi before next calendar date in ET versus PM 23:59 Pacific; three-hour ordinary announcement window differs.": 5
+      }
+    },
+    {
+      "family": "ELECTION \u00d7 EWC",
+      "routes": 4,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 4,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Next election after issuance versus specifically 2027 election; an earlier election need not be the same event.": 4
+      }
+    },
+    {
+      "family": "SCOURT \u00d7 NPHC",
+      "routes": 3,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 3,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Senate confirmation versus formal assumption including recess appointment.": 3
+      }
+    },
+    {
+      "family": "RANKLISTMUSICINDUSTRY \u00d7 CCPC",
+      "routes": 3,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 3,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Year-end Luminate digital-sales list versus monthly Billboard Hot 100 achievement.": 3
+      }
+    },
+    {
+      "family": "POLITICALSTATVALUECOMPARISON \u00d7 USGOVCC",
+      "routes": 3,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 3,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "2026 contested-governor set and current count versus November election-day party attribution; range-title/inline boundary conflict also present.": 3
+      }
+    },
+    {
+      "family": "MODELRELEASEDATE \u00d7 AIMC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 2,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Named Grok 5 versus Grok 5-or-greater/generation successor in PM inline terms.": 2
+      }
+    },
+    {
+      "family": "USELECTION \u00d7 USMAYEWC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 2,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 2,
+        "family-branches": 2
+      }
+    },
+    {
+      "family": "CONTROL \u00d7 PACCC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 2,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Leader-party snapshot versus election-attributed majority/VP tiebreak; a party switch or different leader can disagree.": 2
+      }
+    },
+    {
+      "family": "PRESPERSON \u00d7 EWC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 2,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Inaugurated non-acting president versus electoral winner; a successor inauguration can disagree.": 2
+      }
+    },
+    {
+      "family": "USELECTION \u00d7 EWC",
+      "routes": 2,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 2,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "venue-finality": 2,
+        "family-branches": 2
+      }
+    },
+    {
+      "family": "RANKLISTSONG \u00d7 CCPC",
+      "routes": 1,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 0,
+        "UNRESOLVED": 1
+      },
+      "reasons": {
+        "Common contractual issuance/qualifying-history boundary is unproven; creation/open timestamps alone do not establish identical eligible history.": 1,
+        "Missing entity proof": 1,
+        "Missing threshold proof": 1,
+        "Missing orientation proof": 1,
+        "Missing window proof": 1,
+        "Missing geography proof": 1,
+        "Missing source proof": 1,
+        "Missing familyDimensions proof": 1
+      }
+    },
+    {
+      "family": "RANKLISTSONG \u00d7 CCRC",
+      "routes": 1,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 1,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "Any September chart versus single September 26 chart.": 1
+      }
+    },
+    {
+      "family": "PERSONMEETING \u00d7 PINTC",
+      "routes": 1,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 1,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "September meeting window versus issuance-to-2026-year-end interaction window.": 1
+      }
+    },
+    {
+      "family": "NEXTOUT \u00d7 OPDC",
+      "routes": 1,
+      "counts": {
+        "LIVE_EXACT": 0,
+        "STATE_CONDITIONED": 0,
+        "BOUNDED_BASIS": 0,
+        "INCOMPATIBLE": 1,
+        "UNRESOLVED": 0
+      },
+      "reasons": {
+        "First departure in a set versus individual departure by 2026 year-end.": 1
+      }
+    }
+  ],
+  "routeAuditSha256": "45bdadfd32c126e6d12a1d247f8a62853fa6ad2c3c5b65404c1a7a006e858013",
+  "pricesUsed": false,
+  "marketWatchRun": false,
+  "paperSessionRun": false,
+  "ordersEnabled": false,
+  "catalogSha256": "ca2861f93a4115bc1b1e28448fff6d1d516ea70aa9667ad2fcfdaf69cfe608c7",
+  "matcherDiagnostics": "Pinned precomputed unmodified matcher result",
+  "matcherBaseCommit": "16e9a15cdb7886bae9721b8ded4f08f035ee6f00",
+  "catalogListingCounts": {
+    "kalshi": 113720,
+    "poly": 64178
+  },
+  "matcherComparisonLimitDeferred": 209493577,
+  "candidateCacheSha256": "0e8f7a3c68880c0d333adeb4bf58c33ae241e824aac697c06f914d1ade672cb4",
+  "matrixScope": "Source documents retrieved September 23; candidate snapshot September 22; no new market collection."
+}

@@ -1,0 +1,548 @@
+[
+  {
+    "id": "ACHIEVEMENTS",
+    "url": "https://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf",
+    "sha256": "f56411d3bc76c0d9f693433dfbabce09c452a18eb05ce36f6565fe2db793e17a",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:08.330986+00:00"
+  },
+  {
+    "id": "BASEBALLGAMEWIN",
+    "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+    "sha256": "46b02443153f4692acb3bac3d3aedabe93e837b08c80323013c8dce117ebb6e7",
+    "pages": 5,
+    "retrievedAt": "2026-09-23T19:02:08.331501+00:00"
+  },
+  {
+    "id": "BASEBALLSPREAD",
+    "url": "https://assets.kalshi.com/contract_terms/BASEBALLSPREAD.pdf",
+    "sha256": "9060020bb71acafacf41a3a1f2e0923904d560cfdba059583dc0219e02d6c4e8",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:08.331241+00:00"
+  },
+  {
+    "id": "BASEBALLTOTALS",
+    "url": "https://assets.kalshi.com/contract_terms/BASEBALLTOTALS.pdf",
+    "sha256": "772c802f40ad2fbd3f9527cc915130c2315b111ff3e942c2ced9ab9604fb3fe5",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:08.298254+00:00"
+  },
+  {
+    "id": "BASKETBALLGAMEWIN",
+    "url": "https://assets.kalshi.com/contract_terms/BASKETBALLGAMEWIN.pdf",
+    "sha256": "5a118c4246507207faddb17854c1085dad65e1a7bc40c34107c4d17b96ea5d8f",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:09.250335+00:00"
+  },
+  {
+    "id": "BIGBROTHERELIMINATION",
+    "url": "https://assets.kalshi.com/contract_terms/BIGBROTHERELIMINATION.pdf",
+    "sha256": "a3c34b64f27a3f8b52990d402ac767fe6a9926b94455ec214071a2689bba9e4c",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:08.757622+00:00"
+  },
+  {
+    "id": "BIGBROTHERRANK",
+    "url": "https://assets.kalshi.com/contract_terms/BIGBROTHERRANK.pdf",
+    "sha256": "dea6e9e073d6b82ad19c2a09869297cd79c96cdef4c9d2bd6b6850c3a431f646",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:09.224896+00:00"
+  },
+  {
+    "id": "BIGBROTHERWINNER",
+    "url": "https://assets.kalshi.com/contract_terms/BIGBROTHERWINNER.pdf",
+    "sha256": "52fae45a7252902f2d368152b3e1398f701666ba06a361010052240075fc90ab",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:08.844945+00:00"
+  },
+  {
+    "id": "COMPETITIONREALITYELIM",
+    "url": "https://assets.kalshi.com/contract_terms/COMPETITIONREALITYELIM.pdf",
+    "sha256": "bcd56c47995657095ea8e17afbd2c9cefc3fc891bd58fedeb35d6f72458d67dd",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:09.339964+00:00"
+  },
+  {
+    "id": "COMPETITIONREALITYPLACEDWTS",
+    "url": "https://assets.kalshi.com/contract_terms/COMPETITIONREALITYPLACEDWTS.pdf",
+    "sha256": "41c283cffe05a14c6f64ba2861dded1b755339195f56e5b6a14d86f0c7df02d3",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:09.523134+00:00"
+  },
+  {
+    "id": "COMPETITIONREALITYWIN",
+    "url": "https://assets.kalshi.com/contract_terms/COMPETITIONREALITYWIN.pdf",
+    "sha256": "60f1d26310bf7ea30cb9d7384a4147526b35fa1b25074ff60a22d3f1d7e90bd0",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:09.643210+00:00"
+  },
+  {
+    "id": "CONTROL",
+    "url": "https://assets.kalshi.com/contract_terms/CONTROL.pdf",
+    "sha256": "8a3e901b007c8e519a422da6b318fdf02ac5638acb8f78a05b7faab1fa2042d1",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:09.770010+00:00"
+  },
+  {
+    "id": "CPI",
+    "url": "https://assets.kalshi.com/contract_terms/CPI.pdf",
+    "sha256": "2317b1d8e823082b409f6ff3415fb135804d9682681f9f92f640b3681b29a872",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:09.721700+00:00"
+  },
+  {
+    "id": "ELECTION",
+    "url": "https://assets.kalshi.com/contract_terms/ELECTION.pdf",
+    "sha256": "c802998e02d3394e73bc802a1d562b14847e33092246bd7f2f2efce86bc39d98",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:10.204758+00:00"
+  },
+  {
+    "id": "FOOTBALLENTITYSTAT",
+    "url": "https://assets.kalshi.com/contract_terms/FOOTBALLENTITYSTAT.pdf",
+    "sha256": "667ec1a9b87681a4f26225ad2bbcd0a90b7032a6843a48a493ba5d77669e99fe",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:10.624140+00:00"
+  },
+  {
+    "id": "FOOTBALLGAMEWIN",
+    "url": "https://assets.kalshi.com/contract_terms/FOOTBALLGAMEWIN.pdf",
+    "sha256": "19578b71cd63da63cc2894c60542ef06bb5de56b9366add56f07cee645cfca4b",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:10.644166+00:00"
+  },
+  {
+    "id": "FOOTBALLSPREAD",
+    "url": "https://assets.kalshi.com/contract_terms/FOOTBALLSPREAD.pdf",
+    "sha256": "1daaea87a853adcb485bdb80fb8bd5c5fa7c831d8e237f7446bc16ea43705f5a",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:10.398691+00:00"
+  },
+  {
+    "id": "FOOTBALLTOTALS",
+    "url": "https://assets.kalshi.com/contract_terms/FOOTBALLTOTALS.pdf",
+    "sha256": "84be6b2cc3a16e1c3997824a6ec1ebac878a76f98609318cc223e67a6ace1572",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:10.706815+00:00"
+  },
+  {
+    "id": "FRENCHPRES",
+    "url": "https://assets.kalshi.com/contract_terms/FRENCHPRES.pdf",
+    "sha256": "5e3b0a40f6c7fbe59e6ff4c3d2dcebe73e954a9b30c5e51744c36bab7d91fed3",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:10.764689+00:00"
+  },
+  {
+    "id": "GDP",
+    "url": "https://assets.kalshi.com/contract_terms/GDP.pdf",
+    "sha256": "3a85e8c06ffa8699d3874b53e18a1efb8cda33850a414febbfebf3c4325600b1",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:11.078844+00:00"
+  },
+  {
+    "id": "IPOEVENTANNOUNCE",
+    "url": "https://assets.kalshi.com/contract_terms/IPOEVENTANNOUNCE.pdf",
+    "sha256": "47d356ff63fd7c75c99005fde7f0cf536a5584dc7e29289d9f84af641d478a9a",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:11.245968+00:00"
+  },
+  {
+    "id": "MODELRELEASEDATE",
+    "url": "https://assets.kalshi.com/contract_terms/MODELRELEASEDATE.pdf",
+    "sha256": "4b96e7463839a3413f498e6eeec7f80c4e17a5691a5d88565880c3d4d00941d3",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:11.246316+00:00"
+  },
+  {
+    "id": "MTVVMAS",
+    "url": "https://assets.kalshi.com/contract_terms/MTVVMAS.pdf",
+    "sha256": "667654e242bca0aa476412a4308786186cc02705b384219916f2101abff90dab",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:11.201658+00:00"
+  },
+  {
+    "id": "NBA",
+    "url": "https://assets.kalshi.com/contract_terms/NBA.pdf",
+    "sha256": "e7fbfdb2cbc109a55e018500908dfea4c39e912ef9c2f8ec4551553ae9cd18cc",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:11.652474+00:00"
+  },
+  {
+    "id": "NCAAF",
+    "url": "https://assets.kalshi.com/contract_terms/NCAAF.pdf",
+    "sha256": "c3b31d2b3f585f04cb60ff0a46f4dd3848988fb3085194a9b36e2be7412fa1f3",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:11.950336+00:00"
+  },
+  {
+    "id": "NCAAFCONFCHAMPQ",
+    "url": "https://assets.kalshi.com/contract_terms/NCAAFCONFCHAMPQ.pdf",
+    "sha256": "146a07f48325b0ec14ca993c9f3e6ebd8bee26f143cf3cd125053f721696bf7c",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:11.941577+00:00"
+  },
+  {
+    "id": "NCAAFUNDEFEATED",
+    "url": "https://assets.kalshi.com/contract_terms/NCAAFUNDEFEATED.pdf",
+    "sha256": "dd0366242b056d8ec33a3cb24e6462439b77cb589410dad1aa64c3e92e88aecb",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:11.975257+00:00"
+  },
+  {
+    "id": "NCAAFWINS",
+    "url": "https://assets.kalshi.com/contract_terms/NCAAFWINS.pdf",
+    "sha256": "3b1b9eb8087d29c7d8d4375bee5907eecc025993ee9bb3e2c422862162bfb50c",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:12.036301+00:00"
+  },
+  {
+    "id": "NETFLIXRANK",
+    "url": "https://assets.kalshi.com/contract_terms/NETFLIXRANK.pdf",
+    "sha256": "6f89810250af204695b456aaa433d91a1f637e2d56e131adc6d4d8722410076f",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:12.452262+00:00"
+  },
+  {
+    "id": "NEWACHIEVEMENT",
+    "url": "https://assets.kalshi.com/contract_terms/NEWACHIEVEMENT.pdf",
+    "sha256": "403112e02b14f45a0ec2d4544f6f6c9600e0aaa70ea69a7707a3c0c8b3f8b3e2",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:12.405451+00:00"
+  },
+  {
+    "id": "NEXTOUT",
+    "url": "https://assets.kalshi.com/contract_terms/NEXTOUT.pdf",
+    "sha256": "085f2c84a540bc23171f621b8964b11b9677ab4b5d2b685a2d3949258515822b",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:12.216459+00:00"
+  },
+  {
+    "id": "NFLLASTUNDEFEATEDTEAM",
+    "url": "https://assets.kalshi.com/contract_terms/NFLLASTUNDEFEATEDTEAM.pdf",
+    "sha256": "78394cab838d9f2e102095c9e3cfe37468c757b90158f8675153ca2bea79ad5a",
+    "pages": 5,
+    "retrievedAt": "2026-09-23T19:02:12.726429+00:00"
+  },
+  {
+    "id": "OSCARS",
+    "url": "https://assets.kalshi.com/contract_terms/OSCARS.pdf",
+    "sha256": "cdf79e6509279d55171510e1f9396a118fc3f2bff5780513c0e518805c199c71",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:12.608786+00:00"
+  },
+  {
+    "id": "PERSONMEETING",
+    "url": "https://assets.kalshi.com/contract_terms/PERSONMEETING.pdf",
+    "sha256": "e89354c2112da52d81168d2350df9b4e5e7de6e6eea482f0e3a1cc1c861add06",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:13.060827+00:00"
+  },
+  {
+    "id": "POLITICALSTATVALUECOMPARISON",
+    "url": "https://assets.kalshi.com/contract_terms/POLITICALSTATVALUECOMPARISON.pdf",
+    "sha256": "8878209f04faf1dfbf0ecebbb61887fbe1d6f257a9837013bbbfcb124c88111e",
+    "pages": 5,
+    "retrievedAt": "2026-09-23T19:02:13.000861+00:00"
+  },
+  {
+    "id": "PRESNOM",
+    "url": "https://assets.kalshi.com/contract_terms/PRESNOM.pdf",
+    "sha256": "63736b85e907e2155cdb88fc8e15bdfcda69e080293745f3c26b60ecaf40bc47",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:13.105761+00:00"
+  },
+  {
+    "id": "PRESPERSON",
+    "url": "https://assets.kalshi.com/contract_terms/PRESPERSON.pdf",
+    "sha256": "70aaebb361170a8fc6540f61e75df9d682982a3e281c1e4a4a112623ce7344b5",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:13.182747+00:00"
+  },
+  {
+    "id": "RANKLISTMUSICINDUSTRY",
+    "url": "https://assets.kalshi.com/contract_terms/RANKLISTMUSICINDUSTRY.pdf",
+    "sha256": "4adcae83cfd2a38ba9354143d7c9623b3c7461f620a29d68b32426765de91d67",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:13.338185+00:00"
+  },
+  {
+    "id": "RANKLISTSONG",
+    "url": "https://assets.kalshi.com/contract_terms/RANKLISTSONG.pdf",
+    "sha256": "6989c2a1341d0042c3546297203355cfae6ae697a91d90966cfa7d08a09b451f",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:13.515786+00:00"
+  },
+  {
+    "id": "RELEGATION",
+    "url": "https://assets.kalshi.com/contract_terms/RELEGATION.pdf",
+    "sha256": "6c8dcae8dc55314488d901945fd36a88f0b3af8b10d07dfc9bb02e55d4b31d8d",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:13.697093+00:00"
+  },
+  {
+    "id": "RUN",
+    "url": "https://assets.kalshi.com/contract_terms/RUN.pdf",
+    "sha256": "5c6d4363d0c85fa458cd21f41af8eff86b136e98ed375cb6b929889dd4dab95b",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:13.728466+00:00"
+  },
+  {
+    "id": "SCOURT",
+    "url": "https://assets.kalshi.com/contract_terms/SCOURT.pdf",
+    "sha256": "a04998c9850788022bbeb85f2f2faa1412e1b715c1781a45948f2cb135b4daaa",
+    "pages": 1,
+    "retrievedAt": "2026-09-23T19:02:13.728327+00:00"
+  },
+  {
+    "id": "STREAMRANK",
+    "url": "https://assets.kalshi.com/contract_terms/STREAMRANK.pdf",
+    "sha256": "f4f06b9f64d011d66ebbe68871b3648e9baa8471bbd523f6049cca63503af9df",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:13.908274+00:00"
+  },
+  {
+    "id": "TIME",
+    "url": "https://assets.kalshi.com/contract_terms/TIME.pdf",
+    "sha256": "617f7ec819ba97339631b6a754e6f906438100c00bde5179b05160034cfd1a10",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:14.093512+00:00"
+  },
+  {
+    "id": "TITLE",
+    "url": "https://assets.kalshi.com/contract_terms/TITLE.pdf",
+    "sha256": "7014c04719227a84321d3e3d2813b04b57b066b414c30598a475bd5bbff0bcb8",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:14.201289+00:00"
+  },
+  {
+    "id": "TOPALBUMBY",
+    "url": "https://assets.kalshi.com/contract_terms/TOPALBUMBY.pdf",
+    "sha256": "39f7d8cff7e1388f607b9a30ba9f93f6c323b7761110ca2ab408b0525a303f3c",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:14.039470+00:00"
+  },
+  {
+    "id": "TOPARTIST",
+    "url": "https://assets.kalshi.com/contract_terms/TOPARTIST.pdf",
+    "sha256": "8f09e4acf1811aa52c3ef55b72ecd0be050ec8add731689d01a3edce6f8f741e",
+    "pages": 1,
+    "retrievedAt": "2026-09-23T19:02:14.271999+00:00"
+  },
+  {
+    "id": "U3",
+    "url": "https://assets.kalshi.com/contract_terms/U3.pdf",
+    "sha256": "d192a4b68de0adc3f80515c4ca302b87128c998d8a1a7f3a9dded5aae2fa41f7",
+    "pages": 2,
+    "retrievedAt": "2026-09-23T19:02:14.611698+00:00"
+  },
+  {
+    "id": "USELECTION",
+    "url": "https://assets.kalshi.com/contract_terms/USELECTION.pdf",
+    "sha256": "3c9096f3881820a584ddfb0e74821a72f2c68d581ba5a91ff3b5ab4bf7fa39c2",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:14.574786+00:00"
+  },
+  {
+    "id": "WHENIPO",
+    "url": "https://assets.kalshi.com/contract_terms/WHENIPO.pdf",
+    "sha256": "402683c0afae0721064d285271cd2c7f4f760f2fbf253be9116f72ddc046f18d",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:14.745422+00:00"
+  },
+  {
+    "id": "PM-AACHC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AACHC%20-%20%282026.06.01%29.pdf",
+    "sha256": "e06e13ffa4474d57ad5ba7cb58f7fa6b4a39704dd6315605cc23b1dc0bb1ed13",
+    "pages": 6,
+    "retrievedAt": "2026-09-23T19:02:15.055797+00:00"
+  },
+  {
+    "id": "PM-AEC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AEC%20-%20%282026.03.26%29.pdf",
+    "sha256": "cb4ad9c4d7ddc8db99c4cd271a4ee0fe7db367828d1f2832d727a0f6084f2d07",
+    "pages": 5,
+    "retrievedAt": "2026-09-23T19:02:15.309276+00:00"
+  },
+  {
+    "id": "PM-AIMC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AIMC%20-%20%282026.06.22%29.pdf",
+    "sha256": "1d1cb03f55d3f85f247090f68209eb00813c99cf99652acd3007b12d5b63fce1",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:15.330936+00:00"
+  },
+  {
+    "id": "PM-AQC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AQC%20-%20%282026.03.26%29.pdf",
+    "sha256": "5960588d6a24f1ff1b1636ccfe7d14cb6cd32fc167a0efce39c87830edbe980e",
+    "pages": 5,
+    "retrievedAt": "2026-09-23T19:02:15.472538+00:00"
+  },
+  {
+    "id": "PM-ASC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20ASC%20-%20%282026.03.26%29.pdf",
+    "sha256": "649ce9d4499cb3564fec53364ddaff15161be53da04c07a78876fcbc2e0c1b04",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:15.753730+00:00"
+  },
+  {
+    "id": "PM-ASTATC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20ASTATC%20-%20%282026.03.31%29.pdf",
+    "sha256": "e68e674ddeecc51a1f4a0c319be5c777fe08ecd4ce6ea81ba6df27da5f6f327b",
+    "pages": 6,
+    "retrievedAt": "2026-09-23T19:02:16.278997+00:00"
+  },
+  {
+    "id": "PM-CCPC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCPC%20-%20%282026.06.08%29.pdf",
+    "sha256": "dc00f7890535fbb17ca50a0419977d12a2256b475a892d272ab6b556fa5fa3ac",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:16.204124+00:00"
+  },
+  {
+    "id": "PM-CCRC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+    "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:16.462629+00:00"
+  },
+  {
+    "id": "PM-CPIC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CPIC%20-%20%282026.04.06%29.pdf",
+    "sha256": "585d331b60e1206ffd6cb9b1e039697e722fbbe87f8106d63054be33dd8ec414",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:16.624066+00:00"
+  },
+  {
+    "id": "PM-CRANC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CRANC%20-%20%282026.07.01%29.pdf",
+    "sha256": "5104dc45df556d21d80e031b78b1d1d831479d69647de23f96d0d211744443c8",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:16.902836+00:00"
+  },
+  {
+    "id": "PM-ENWC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20ENWC%20-%20%282026.07.14%29.pdf",
+    "sha256": "725a1fca03552503d029e244ef7fa9d97e5f8b7ef38161def8511eba25f25ffc",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:16.927788+00:00"
+  },
+  {
+    "id": "PM-EWC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20EWC%20-%20%282026.07.01%29.pdf",
+    "sha256": "405f715961776c88bb1dc3688bb43213785040982e7b749fc4201a9b53dceb14",
+    "pages": 5,
+    "retrievedAt": "2026-09-23T19:02:17.065329+00:00"
+  },
+  {
+    "id": "PM-GDPC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20GDPC%20-%20%282026.04.06%29.pdf",
+    "sha256": "e822d0d8651292f254be6a53271a1e25f9b6be8c21d6383851fb7cfc681b46ce",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:17.365088+00:00"
+  },
+  {
+    "id": "PM-IPCC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20IPCC%20-%20%282026.06.08%29.pdf",
+    "sha256": "81caf1a64d3c09858b72b3714cb2f59eb745a9caaba735db55da75802ec430e9",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:17.516637+00:00"
+  },
+  {
+    "id": "PM-NPHC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20NPHC%20-%20%282026.07.07%29.pdf",
+    "sha256": "923821a3a98f04de6ba089c0cd9c5b16ad1172ea8444bddee763d623b1f29132",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:17.637041+00:00"
+  },
+  {
+    "id": "PM-OPDC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20OPDC%20-%20%282026.06.30%29.pdf",
+    "sha256": "4eb696853c8307925cff1f5b574f23fb4207d72cdabc079e7c3feace0254cdef",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:17.758861+00:00"
+  },
+  {
+    "id": "PM-PACCC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20PACCC%20-%20%282026.07.14%29.pdf",
+    "sha256": "a0667007ca5f7280011fa89d1a1f9fd5c46e0b6fb976594c7f2331f9310ff601",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:18.133870+00:00"
+  },
+  {
+    "id": "PM-PINTC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20PINTC%20-%20%282026.06.22%29.pdf",
+    "sha256": "03679cd7f8842d7bda3224e3fd0e39afe21cf09bf75a14759eaba98344b33836",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:18.305878+00:00"
+  },
+  {
+    "id": "PM-RTC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20RTC%20-%20%282026.04.03%29.pdf",
+    "sha256": "f052ff3ced0006be4b3cc9bd102b4b19891765c38876dfc237970c30d0c317f6",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:18.514235+00:00"
+  },
+  {
+    "id": "PM-TAC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TAC%20-%20%282026.03.31%29.pdf",
+    "sha256": "ff9c2b1a169927fc6f3898efd40d7bc930f1403e9d519655b73d3cb92b099a61",
+    "pages": 5,
+    "retrievedAt": "2026-09-23T19:02:18.691289+00:00"
+  },
+  {
+    "id": "PM-TEC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TEC%20-%20%282026.03.26%29.pdf",
+    "sha256": "4253606e50cb6f13660c2ba85ec655b198b938256fd0a3aeff6475edd77fa6e9",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:18.844354+00:00"
+  },
+  {
+    "id": "PM-TPOYC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TPOYC%20-%20%282026.06.15%29.pdf",
+    "sha256": "63d4913649e899bce5af894c352361e5c0401b9513c8af32a2e36ad1658d3690",
+    "pages": 3,
+    "retrievedAt": "2026-09-23T19:02:18.950819+00:00"
+  },
+  {
+    "id": "PM-TSC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TSC%20-%20%282026.03.26%29.pdf",
+    "sha256": "e75d54993da84ae169a043ea3a8d2650939f3f354a0c4c377531ecd77834594d",
+    "pages": 5,
+    "retrievedAt": "2026-09-23T19:02:19.277032+00:00"
+  },
+  {
+    "id": "PM-URC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20URC%20-%20%282026.04.03%29.pdf",
+    "sha256": "916127ab0b1d9bd874b0a184aebb925ad48c01f555cba4483e8fa61e856f88f0",
+    "pages": 4,
+    "retrievedAt": "2026-09-23T19:02:19.392183+00:00"
+  },
+  {
+    "id": "PM-USGOVCC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20USGOVCC%20-%20%282026.08.18%29.pdf",
+    "sha256": "8492cc21e16e69a09bbf1d15d0c7eee0b97c1c41a60cc0ae37904de4e702bf55",
+    "pages": 8,
+    "retrievedAt": "2026-09-23T19:02:19.643239+00:00"
+  },
+  {
+    "id": "PM-USMAYEWC",
+    "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20USMAYEWC%20-%20%282026.08.07%29.pdf",
+    "sha256": "8669712ec9b569a9dbbd26fe0c9583ce2ca24c7057e404ed0f6e5fbce88bc7d2",
+    "pages": 8,
+    "retrievedAt": "2026-09-23T19:02:19.906604+00:00"
+  },
+  {
+    "id": "PM-RULEBOOK",
+    "url": "https://www.polymarketexchange.com/files/legal/latest/rulebook",
+    "sha256": "e7b7793e75dd61a8adaf807c588e1212cf0600100e5727d7d546ba0a0b7f35e5",
+    "pages": 84,
+    "retrievedAt": "2026-09-23T19:02:23.913350+00:00"
+  },
+  {
+    "id": "K-RULEBOOK",
+    "url": "https://kalshi-public-docs.s3.amazonaws.com/regulatory/rulebook/Kalshi%20DCM%20Rulebook%20v.1.29.pdf",
+    "sha256": "3b6d4ffd5b32330d3466179d4cae610372d07511123c9976bc6cbb1b5185240b",
+    "pages": 85,
+    "retrievedAt": "2026-09-23T19:03:53.627810+00:00"
+  }
+]
