@@ -1,12 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "policy": "TINY_LIVE_BOUNDED_BASIS",
-  "implementationStatus": "DESIGN_ONLY_NOT_CONSUMED_BY_EXECUTION",
+  "implementationStatus": "READ_ONLY_CANDIDATE_POLICY",
   "ordersEnabled": false,
   "checkpointAllowsOrders": false,
   "authorization": null,
-  "requiredSettlementClass": "BOUNDED_BASIS",
-  "preferLiveExact": true,
   "requireAllOrdinaryDimensionsProven": true,
   "allowKnownOrdinaryConflict": false,
   "requireEnumeratedExceptionalDifferences": true,
@@ -15,7 +13,6 @@
   "riskFreeClaim": false,
   "maxCommitted": 50000,
   "moneyScale": 10000,
-  "quantityPerVenue": 1,
   "maxPositions": 1,
   "maxEntryAttempts": 1,
   "entryAttemptScope": "LIFETIME_DURABLE_LEDGER_NEVER_RESET",
@@ -26,7 +23,6 @@
   "reuseProceeds": false,
   "stopOnUnknown": true,
   "stopOnRealizedLoss": true,
-  "maxExpectedSettlementHours": 72,
   "settlementExtensionRiskMustBeAccepted": true,
   "maxMarketAndQuoteAgeMs": 2000,
   "maxAccountAgeMs": 5000,
@@ -35,5 +31,15 @@
   "positiveEconomicsDoNotPriceExceptionalRisk": true,
   "requireFreshEligibilityAndCapability": true,
   "requireHealthyAuthenticatedExecutionFeeds": true,
-  "separateLaunchAuthorizationRequired": true
+  "separateLaunchAuthorizationRequired": true,
+  "acceptedClasses": [
+    "ECONOMICALLY_EQUIVALENT",
+    "BOUNDED_BASIS"
+  ],
+  "quantitySelection": "ALL_SUPPORTED_WHOLE_QUANTITIES_WITHIN_FIVE_DOLLARS",
+  "admissionCushion": 0,
+  "preferredSettlementHours": 72,
+  "exceptionalRiskPenalty": null,
+  "maxWatchMs": 5400000,
+  "maxRoutes": 60
 }

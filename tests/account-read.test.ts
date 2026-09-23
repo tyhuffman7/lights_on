@@ -108,3 +108,12 @@ test("Single-order reconciliation reads reject paths and remain GET-only", async
   ])
     await assert.rejects(readOrder("poly", id, options));
 });
+
+test('capability reads remain an explicit GET-only allowlist', async () => {
+  const {readKalshiCapability}=await import('../lib/pilot/account-read.ts');
+  const keys=generateKeyPairSync('rsa',{modulusLength:2048});let calls=0;
+  const options={at:123,env:{KALSHI_KEY_ID:'fixture',KALSHI_PRIVATE_KEY:keys.privateKey.export({type:'pkcs8',format:'pem'}).toString()},
+    fetch:async (url:any,init:any)=>{calls++;assert.equal(init.method,'GET');assert.equal(init.redirect,'error');assert.ok(['/api_keys','/account/limits','/exchange/user_data_timestamp'].some(p=>String(url).endsWith(p)));return new Response('{}');}};
+  for(const operation of ['keys','limits','dataTime'] as const)assert.equal((await readKalshiCapability(operation,options)).ok,true);
+  await assert.rejects(readKalshiCapability('preview' as any,options),/Unsupported/);assert.equal(calls,3);
+});

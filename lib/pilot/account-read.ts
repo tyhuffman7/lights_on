@@ -75,6 +75,15 @@ export async function readOrder(
       : "https://api.polymarket.us/v1/order/";
   return signedGet(venue, base + orderId, options);
 }
+// Public documentation exposes these Kalshi capability reads. No corresponding
+// retail PM-US trading-permission endpoint is documented; do not substitute an
+// institutional identity endpoint or an order preview as a capability probe.
+export async function readKalshiCapability(operation: 'keys' | 'limits' | 'dataTime', options: ReadOptions = {}) {
+  const paths = {keys:'/api_keys', limits:'/account/limits', dataTime:'/exchange/user_data_timestamp'};
+  if (!Object.hasOwn(paths, operation)) throw Error('Unsupported capability read');
+  return signedGet('kalshi', 'https://external-api.kalshi.com/trade-api/v2' + paths[operation], options);
+}
+
 // Private helper: only the fixed account/order GET constructors above can call it.
 async function signedGet(venue: Venue, url: string, options: ReadOptions) {
   const env = options.env ?? process.env,

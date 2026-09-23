@@ -1,0 +1,18 @@
+{
+  "implementationCommit": "72186bef7d992faa4ac76bdd27073a95aea4b478",
+  "signatureVerifiedLocally": true,
+  "githubAccount": "tyhuffman7",
+  "targetedTests": 35,
+  "hostedCi": {
+    "url": "https://github.com/tyhuffman7/lights_on/actions/runs/35916226932",
+    "mergeCommit": "17ba7de40f382c503e4a61ec87e205c5096d098a",
+    "tests": 752,
+    "passed": 752,
+    "failed": 0,
+    "skipped": 0,
+    "typecheck": "passed",
+    "productionBuild": "passed"
+  },
+  "marketCollectionRun": false,
+  "finalAffectedTests": 19
+}
