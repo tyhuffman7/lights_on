@@ -1,6 +1,7 @@
 import type { Market } from '../arb/types.ts';
 import { canonicalCompetition, netflixChart, normalizeText } from './identity.ts';
 import type { EntityRegistry } from './entities.ts';
+import {nonSportsTemplate} from './non-sports.ts';
 
 // Public metadata candidate identity only. This deliberately omits settlement/void
 // equivalence and cannot populate StructuredMarket or promote registry verification.
@@ -16,6 +17,7 @@ export type CanonicalTemplate = {
   outcome: string;
   orientation: 'yes';
   participants?: string[];
+  creator?: string;
   source: 'public-venue-metadata';
 };
 const months = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
@@ -36,6 +38,7 @@ export function canonicalTemplateConflict(a:CanonicalTemplate,b:CanonicalTemplat
   if (a.family!==b.family) return 'marketFamily';
   if (a.domain!==b.domain) return 'competition';
   if (a.subject!==b.subject) return 'entityAlias';
+  if (a.creator && b.creator && a.creator!==b.creator) return 'creator';
   if (a.metric!==b.metric) return 'marketMetric';
   if (a.geography!==b.geography) return 'geography';
   if (a.period!==b.period) return 'dateWindow';
@@ -44,6 +47,8 @@ export function canonicalTemplateConflict(a:CanonicalTemplate,b:CanonicalTemplat
   return undefined;
 }
 export function canonicalTemplate(m:Market, registry:EntityRegistry):CanonicalTemplate | undefined {
+  const nonSports=nonSportsTemplate(m);
+  if(nonSports)return nonSports;
   const primary = m.rules.split(/\n/)[0].trim();
   const competition = canonicalCompetition(m.identity?.competition);
   let ambiguous=false;

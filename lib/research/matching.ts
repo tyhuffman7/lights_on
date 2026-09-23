@@ -245,7 +245,11 @@ export function discoverCandidates(
         diagnostics.canonical.conflicts.ambiguousEntity=(diagnostics.canonical.conflicts.ambiguousEntity??0)+1;
         reject('outcomeMismatch');continue;
       }
-      if (keys.some((k) => sa[k] && sb[k] && sa[k] !== sb[k])) {
+      // Venue taxonomy labels (e.g. Science and Technology / technology)
+      // cannot veto independently identical public predicates. All other
+      // supplied structured fields and every payout exclusion still apply.
+      const samePublicTemplate=left.template&&right.template&&canonicalTemplateKey(left.template)===canonicalTemplateKey(right.template);
+      if (keys.some((k) => sa[k] && sb[k] && sa[k] !== sb[k] && !(k==='category'&&samePublicTemplate))) {
         reject("structuralConflict");
         continue;
       }
@@ -287,6 +291,17 @@ export function discoverCandidates(
           continue;
         }
         const conflict=canonicalTemplateConflict(left.template,right.template);
+        // An award can list the work on one venue and its explicitly credited
+        // artist on the other. Preserve both subjects and admit a review link,
+        // never an exact canonical identity or verified complementary payout.
+        const awardCredit=conflict==='entityAlias'&&left.template.family==='ceremony-award'&&right.template.family==='ceremony-award'&&
+          (left.template.creator===right.template.subject||right.template.creator===left.template.subject)&&
+          !canonicalTemplateConflict({...left.template,subject:right.template.subject,creator:undefined},{...right.template,creator:undefined});
+        if(awardCredit){
+          found.push({pair:{id:`${a.id}::${b.id}`,a,b,inverted:false,reviewed:false},status:'UNVERIFIED',score,
+            reasons:['Same ceremony/category with explicit work-to-credited-artist link; subjects remain distinct','Work/person award scope, shared credits and alternative nominated works require settlement review'],structured:{a:sa,b:sb}});
+          continue;
+        }
         if (conflict) {
           diagnostics.canonical.conflicts[conflict]=(diagnostics.canonical.conflicts[conflict]??0)+1;
           reject(conflict==='dateWindow'?'dateMismatch':conflict==='threshold'?'thresholdMismatch':conflict==='entityAlias'?'outcomeMismatch':'structuralConflict');

@@ -1,0 +1,33 @@
+{
+  "exactNamedNobelPeaceCounterpartsStillUnmapped": 11,
+  "nobelExamples": [
+    {
+      "kalshiId": "KXNOBELPEACE-27-UNRWA",
+      "polyId": "tac-nobel-peace-2026-10-09-unrwa",
+      "subject": "UNRWA",
+      "year": "2026"
+    },
+    {
+      "kalshiId": "KXNOBELPEACE-27-YNAV",
+      "polyId": "tac-nobel-peace-2026-10-09-yulnav",
+      "subject": "Yulia Navalnaya",
+      "year": "2026"
+    },
+    {
+      "kalshiId": "KXNOBELPEACE-26-ELO",
+      "polyId": "tac-nobel-peace-2026-10-09-elomus",
+      "subject": "Elon Musk",
+      "year": "2026"
+    }
+  ],
+  "awardWorkCreatorLinks": 80,
+  "addedByReason": {
+    "Same canonical reality-placement: independently parsed subject, domain, metric, geography, period, threshold, comparator and outcome": 41,
+    "Same canonical ceremony-award: independently parsed subject, domain, metric, geography, period, threshold, comparator and outcome": 72,
+    "Same canonical weekly-chart-ranking: independently parsed subject, domain, metric, geography, period, threshold, comparator and outcome": 17,
+    "Same canonical annual-chart-ranking: independently parsed subject, domain, metric, geography, period, threshold, comparator and outcome": 28,
+    "Same canonical business-deadline: independently parsed subject, domain, metric, geography, period, threshold, comparator and outcome": 39,
+    "Same canonical model-release: independently parsed subject, domain, metric, geography, period, threshold, comparator and outcome": 2,
+    "Same ceremony/category with explicit work-to-credited-artist link; subjects remain distinct": 75
+  }
+}

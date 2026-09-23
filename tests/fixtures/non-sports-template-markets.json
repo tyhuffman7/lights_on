@@ -1,0 +1,346 @@
+{
+  "scope": "Minimal public predicate excerpts, current native-US catalog; no private account data",
+  "capturedAt": "2026-09-23T02:36:13.921Z",
+  "rows": [
+    {
+      "stratum": "annual-chart-ranking:spotify:artist:global",
+      "kalshi": {
+        "id": "KXTOPARTIST-26B-TAY",
+        "venue": "kalshi",
+        "title": "Who will be the top Spotify artist this year?",
+        "outcome": "Taylor Swift",
+        "category": "Entertainment",
+        "series": "KXTOPARTIST",
+        "rules": "If Taylor Swift is the most streamed Spotify artist in 2026, then the market resolves to Yes.\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf"
+      },
+      "poly": {
+        "id": "ccrc-sptfy-1-artst-glbl-yr-2026-tayswi",
+        "venue": "poly",
+        "title": "Taylor Swift · Spotify Top Global Artist 2026",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "If Taylor Swift is ranked the top artist globally on Spotify in 2026, this market will settle to Yes. Outcome verified by Spotify.\nThe relevant ranking is the annual Spotify Wrapped campaign."
+      }
+    },
+    {
+      "stratum": "business-deadline:business:ipo-confirmation:issuer-scope",
+      "kalshi": {
+        "id": "KXIPODEEL-27JAN01",
+        "venue": "kalshi",
+        "title": "When will Deel IPO?",
+        "outcome": "Before Jan 1, 2027",
+        "category": "Financials",
+        "series": "KXIPODEEL",
+        "rules": "If Deel confirms an IPO before Jan 1, 2027, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "ipcc-2026ipos-deel",
+        "venue": "poly",
+        "title": "Deel · Which Companies Will Confirm an IPO in 2026",
+        "outcome": "Yes",
+        "category": "finance",
+        "rules": "If Deel confirms an IPO by December 31, 2026, 11:59 PM ET, this market will settle to Yes. Outcome verified by Deel, the relevant IPO regulatory authority, and the IPOs primary listing exchange."
+      }
+    },
+    {
+      "stratum": "named-list-award:time:person-of-the-year:publisher-scope",
+      "kalshi": {
+        "id": "KXTIME-26-BAD",
+        "venue": "kalshi",
+        "title": "Will Bad Bunny be Time Person of the Year in 2026?",
+        "outcome": "Bad Bunny",
+        "category": "Entertainment",
+        "series": "KXTIME",
+        "rules": "If Bad Bunny is Time Person of the Year for 2026, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "tpoyc-2026-badbun",
+        "venue": "poly",
+        "title": "Bad Bunny · TIME Person of the Year 2026",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "If Bad Bunny is TIME Person of the Year in 2026, this market will settle to Yes. Outcome verified by TIME Magazine."
+      }
+    },
+    {
+      "stratum": "reality-placement:big brother:exact-place:program-scope",
+      "kalshi": {
+        "id": "KXBIGBROTHER-26DEC31-YAS",
+        "venue": "kalshi",
+        "title": "Will Yash Patel win Big Brother Season 28?",
+        "outcome": "Yash Patel",
+        "category": "Entertainment",
+        "series": "KXBIGBROTHER",
+        "rules": "If Yash Patel are officially declared the winner of Big Brother Season 28, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "rtc-bbus-s28-winner-2026-10-01-yaspat",
+        "venue": "poly",
+        "title": "Yash Patel · Big Brother Season 28 Winner",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "If Yash Patel wins Big Brother season 28, this market will settle to Yes. If the finale of Big Brother season 28 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date."
+      }
+    },
+    {
+      "stratum": "ceremony-award:99th academy awards:best picture:ceremony-scope",
+      "kalshi": {
+        "id": "KXOSCARPIC-27-JOS",
+        "venue": "kalshi",
+        "title": "Will Josephine win Best Picture at the Oscars?",
+        "outcome": "Josephine",
+        "category": "Entertainment",
+        "series": "KXOSCARPIC",
+        "rules": "If Josephine has won Best Picture at the 99th Academy Awards, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "tac-oscars-03-14-2027-bestpic-joseph",
+        "venue": "poly",
+        "title": "Josephine · Oscar Winner: Best Picture",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Josephine wins Best Picture at the 99th Academy Awards. Outcome sourced from Academy of Motion Picture Arts and Sciences."
+      }
+    },
+    {
+      "stratum": "annual-chart-ranking:spotify:artist:us",
+      "kalshi": {
+        "id": "KXTOPARTISTUSA-26-BEY",
+        "venue": "kalshi",
+        "title": "Will Beyoncé be the #1 most streamed Artist on the  2026 Spotify Wrapped Top 10 Artist U.S chart on the date that the chart is released for 2026?",
+        "outcome": "Beyoncé",
+        "category": "Entertainment",
+        "series": "KXTOPARTISTUSA",
+        "rules": "If Beyoncé is the #1  most streamed Artist on Spotify's 2026 Spotify Wrapped Top 10 Artist U.S chart on the date that the chart is released for 2026, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "ccrc-sptfy-1-artst-us-yr-2026-beyonc",
+        "venue": "poly",
+        "title": "Beyonce · Top Artist in the US 2026?",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Beyonce is ranked the top artist in the US on Spotify in 2026. Outcome verified by Spotify.\nThe relevant ranking is the annual Spotify Wrapped campaign."
+      }
+    },
+    {
+      "stratum": "annual-chart-ranking:spotify:song:global",
+      "kalshi": {
+        "id": "KXTOPSONGSPOTIFY-26-DIE",
+        "venue": "kalshi",
+        "title": "Will Die With A Smile be the #1 most streamed Song on the  2026 Spotify Wrapped Top 10 Songs Globally chart on the date that the chart is released for 2026?",
+        "outcome": "Die With A Smile",
+        "category": "Entertainment",
+        "series": "KXTOPSONGSPOTIFY",
+        "rules": "If Die With A Smile is the #1  most streamed Song on Spotify's 2026 Spotify Wrapped Top 10 Songs Globally chart on the date that the chart is released for 2026, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "ccrc-sptfy-n1-song-glbl-yr-2026-diewit",
+        "venue": "poly",
+        "title": "Die With A Smile - Lady Gaga & Bruno Mars · Top Song 2026?",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Die With A Smile - Lady Gaga & Bruno Mars is ranked the top song globally on Spotify in 2026. Outcome verified by Spotify.\nThe relevant ranking is the annual Spotify Wrapped campaign."
+      }
+    },
+    {
+      "stratum": "annual-chart-ranking:spotify:song:us",
+      "kalshi": {
+        "id": "KXTOPSONGSPOTIFYUSA-26-DIE",
+        "venue": "kalshi",
+        "title": "Will Die With A Smile be the #1 most streamed Song on the  2026 Spotify Wrapped Top 10 Songs USA chart on the date that the chart is released for 2026?",
+        "outcome": "Die With A Smile",
+        "category": "Entertainment",
+        "series": "KXTOPSONGSPOTIFYUSA",
+        "rules": "If Die With A Smile is the #1  most streamed Song on Spotify's 2026 Spotify Wrapped Top 10 Songs USA chart on the date that the chart is released for 2026, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "ccrc-sptfy-n1-song-us-yr-2026-diewit",
+        "venue": "poly",
+        "title": "Die With A Smile - Lady Gaga & Bruno Mars · Top Song in the US 2026?",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Die With A Smile - Lady Gaga & Bruno Mars is ranked the top song in the US on Spotify in 2026. Outcome verified by Spotify.\nThe relevant ranking is the annual Spotify Wrapped campaign."
+      }
+    },
+    {
+      "stratum": "model-release:technology:grok 5:public-release",
+      "kalshi": {
+        "id": "KXGROK-GROK5-26OCT01",
+        "venue": "kalshi",
+        "title": "Will xAI release Grok 5 before Oct 1, 2026?",
+        "outcome": "Before October",
+        "category": "Science and Technology",
+        "series": "KXGROK",
+        "rules": "If xAI releases Grok 5 before Oct 1, 2026, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "aimc-xai-grok-5-2026-09-30",
+        "venue": "poly",
+        "title": "By September 30, 2026 · Grok 5 Released?",
+        "outcome": "Yes",
+        "category": "technology",
+        "rules": "This market will settle to Yes if xAI releases Grok 5 by September 30, 2026, 11:59 PM ET. Outcome sourced from xAI."
+      }
+    },
+    {
+      "stratum": "ceremony-award:99th academy awards:best actress:ceremony-scope",
+      "kalshi": {
+        "id": "KXOSCARACTR-27-MIK",
+        "venue": "kalshi",
+        "title": "Will Mikey Madison win Best Actress at the Oscars?",
+        "outcome": "Mikey Madison",
+        "category": "Entertainment",
+        "series": "KXOSCARACTR",
+        "rules": "If Mikey Madison has won Best Actress at the 99th Academy Awards, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "tac-oscars-03-14-2027-bestactre-mikmad",
+        "venue": "poly",
+        "title": "Mikey Madison · Oscar Winner: Best Actress",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Mikey Madison wins Best Actress at the 99th Academy Awards. Outcome sourced from Academy of Motion Picture Arts and Sciences."
+      }
+    },
+    {
+      "stratum": "ceremony-award:99th academy awards:best actor:ceremony-scope",
+      "kalshi": {
+        "id": "KXOSCARACTO-27-MATT",
+        "venue": "kalshi",
+        "title": "Will Matt Damon win Best Actor at the Oscars?",
+        "outcome": "Matt Damon",
+        "category": "Entertainment",
+        "series": "KXOSCARACTO",
+        "rules": "If Matt Damon has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "tac-oscars-03-14-2027-bestacto-matdam",
+        "venue": "poly",
+        "title": "Matt Damon · Oscar Winner: Best Actor",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Matt Damon wins Best Actor at the 99th Academy Awards. Outcome sourced from Academy of Motion Picture Arts and Sciences."
+      }
+    },
+    {
+      "stratum": "reality-placement:america s got talent:exact-place:program-scope",
+      "kalshi": {
+        "id": "KXAGTWINNER-26SEP24-OLI",
+        "venue": "kalshi",
+        "title": "Will Olivia Befus win America's Got Talent Season 21?",
+        "outcome": "Olivia Befus",
+        "category": "Entertainment",
+        "series": "KXAGTWINNER",
+        "rules": "If Olivia Befus is officially declared the winner of America's Got Talent Season 21, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "rtc-agt-s21-win-2026-09-23-olibef",
+        "venue": "poly",
+        "title": "Olivia Befus · America's Got Talent Season 21: Winner",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Olivia Befus wins America's Got Talent Season 21. If the finale of America's Got Talent Season 21 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date. Outcome sourced from NBC."
+      }
+    },
+    {
+      "stratum": "reality-placement:dancing with the stars:exact-place:program-scope",
+      "kalshi": {
+        "id": "KXDANCINGWITHTHESTARS-26DEC31-SJAN",
+        "venue": "kalshi",
+        "title": "Will Sarah Jane Nader win Dancing with the Stars Season 35?",
+        "outcome": "Sarah Jane Nader",
+        "category": "Entertainment",
+        "series": "KXDANCINGWITHTHESTARS",
+        "rules": "If Sarah Jane Nader is officially declared the winner of Dancing with the Stars Season 35, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "rtc-dwts-s35-1-2026-11-17-sarjan",
+        "venue": "poly",
+        "title": "Sarah Jane Nader · Dancing With The Stars S35 Winner",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Sarah Jane Nader wins Dancing With The Stars season 35. If the finale of Dancing With The Stars season 35 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date. Outcome sourced from ABC."
+      }
+    },
+    {
+      "stratum": "ceremony-award:2026 mtv video music awards:artist of the year:ceremony-scope",
+      "kalshi": {
+        "id": "KXVMA-AOTY26-TAY",
+        "venue": "kalshi",
+        "title": "Will Taylor Swift win Artist of The Year at the 2026 MTV Video Music Awards?",
+        "outcome": "Taylor Swift",
+        "category": "Entertainment",
+        "series": "KXVMA",
+        "rules": "If Taylor Swift wins Artist of The Year at the 2026 MTV Video Music Awards, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "tac-vmas-aoty-09-27-2026-tayswi",
+        "venue": "poly",
+        "title": "Taylor Swift · VMA Artist of the Year 2026",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Taylor Swift wins Artist of the Year at the 2026 MTV Video Music Awards. Outcome sourced from MTV."
+      }
+    },
+    {
+      "stratum": "ceremony-award:2026 mtv video music awards:best new artist:ceremony-scope",
+      "kalshi": {
+        "id": "KXVMA-BNA26-STE",
+        "venue": "kalshi",
+        "title": "Will Stella Lefty win Best New Artist at the 2026 MTV Video Music Awards?",
+        "outcome": "Stella Lefty",
+        "category": "Entertainment",
+        "series": "KXVMA",
+        "rules": "If Stella Lefty wins Best New Artist at the 2026 MTV Video Music Awards, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "tac-vmas-bna-09-27-2026-stelef",
+        "venue": "poly",
+        "title": "Stella Lefty · VMA Best New Artist 2026",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if Stella Lefty wins Best New Artist at the 2026 MTV Video Music Awards. Outcome sourced from MTV."
+      }
+    },
+    {
+      "stratum": "weekly-chart-ranking:billboard:hot 100:us",
+      "kalshi": {
+        "id": "KXTOPSONG-26OCT03-BBY",
+        "venue": "kalshi",
+        "title": "Will BbY WOW be #1 on the Billboard Hot 100 during the week of Oct 3, 2026",
+        "outcome": "BbY WOW",
+        "category": "Entertainment",
+        "series": "KXTOPSONG",
+        "rules": "If BbY WOW is #1 on the Billboard Hot 100  chart for the Week of Oct 3, 2026, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "ccrc-bilbrd-1song-2026-10-03-bbywow",
+        "venue": "poly",
+        "title": "BbY WOW - Karol G With Judeline & rusowsky · Billboard #1 Song Week of October 3?",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if BbY WOW by Karol G With Judeline & rusowsky is the #1 song on the Billboard Hot 100 chart dated Week of October 3, 2026. Outcome sourced from Billboard."
+      }
+    },
+    {
+      "stratum": "weekly-chart-ranking:billboard:200:us",
+      "kalshi": {
+        "id": "KXTOPALBUM-26OCT03-THEA",
+        "venue": "kalshi",
+        "title": "Will The Art of Loving be #1 on the Billboard 200 during the week of Oct 3, 2026",
+        "outcome": "The Art of Loving",
+        "category": "Entertainment",
+        "series": "KXTOPALBUM",
+        "rules": "If The Art of Loving is #1 on the Billboard 200  chart for the Week of Oct 3, 2026, then the market resolves to Yes."
+      },
+      "poly": {
+        "id": "ccrc-bilbrd-1album-2026-10-03-artlov",
+        "venue": "poly",
+        "title": "The Art Of Loving - Olivia Dean · Billboard #1 Album Week of October 3?",
+        "outcome": "Yes",
+        "category": "culture",
+        "rules": "This market will settle to Yes if The Art Of Loving by Olivia Dean is the #1 album on the Billboard 200 chart dated Week of October 3, 2026. Outcome sourced from Billboard."
+      }
+    }
+  ]
+}

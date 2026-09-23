@@ -1,0 +1,433 @@
+{
+  "scope": "ORDER_DISABLED_PUBLIC_CATALOG_ONLY",
+  "snapshotAt": 1790130973921,
+  "snapshotSha256": "5b16e8f52dec57ffd9cbf03b0fa46730433140068410a43276619a60324181b8",
+  "catalogs": {
+    "kalshi": 121792,
+    "poly": 72127
+  },
+  "beforeTotal": 3010,
+  "afterTotal": 3284,
+  "families": [
+    {
+      "family": "netflix-ranking",
+      "kalshi": 80,
+      "poly": 40,
+      "before": 20,
+      "after": 20,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 20,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 80,
+      "parsedPoly": 40,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "US/global; English/non-English; movie/show",
+        "published Tuesday vs observation week vs Monday close",
+        "rank, season and Other fallback; delayed publication; ties"
+      ]
+    },
+    {
+      "family": "netflix-views",
+      "kalshi": 22,
+      "poly": 0,
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 0,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 0,
+      "parsedPoly": 0,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "views vs hours; global English show/movie; chart date",
+        "threshold/comparator; rounding; corrections and missing chart"
+      ]
+    },
+    {
+      "family": "spotify",
+      "kalshi": 334,
+      "poly": 48,
+      "before": 8,
+      "after": 36,
+      "added": 28,
+      "removed": 0,
+      "exactParsedPairs": 36,
+      "exactParsedMissingBefore": 28,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 315,
+      "parsedPoly": 48,
+      "missingBeforeExamples": [
+        {
+          "kalshiId": "KXTOPARTIST-26B-WEE",
+          "polyId": "ccrc-sptfy-1-artst-glbl-yr-2026-thewee",
+          "kalshiTitle": "Who will be the top Spotify artist this year?",
+          "polyTitle": "The Weeknd · Spotify Top Global Artist 2026"
+        },
+        {
+          "kalshiId": "KXTOPARTISTUSA-26-BEY",
+          "polyId": "ccrc-sptfy-1-artst-us-yr-2026-beyonc",
+          "kalshiTitle": "Will Beyoncé be the #1 most streamed Artist on the  2026 Spotify Wrapped Top 10 Artist U.S chart on the date that the chart is released for 2026?",
+          "polyTitle": "Beyonce · Top Artist in the US 2026?"
+        },
+        {
+          "kalshiId": "KXTOPARTISTUSA-26-CHA",
+          "polyId": "ccrc-sptfy-1-artst-us-yr-2026-charoa",
+          "kalshiTitle": "Will Chappell Roan be the #1 most streamed Artist on the  2026 Spotify Wrapped Top 10 Artist U.S chart on the date that the chart is released for 2026?",
+          "polyTitle": "Chappell Roan · Top Artist in the US 2026?"
+        }
+      ],
+      "settlementDimensions": [
+        "US/global; daily/weekly/annual Wrapped; artist/song/album",
+        "rank; title and credited artist; source date; ties"
+      ]
+    },
+    {
+      "family": "other-music-charts",
+      "kalshi": 1130,
+      "poly": 0,
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 0,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 0,
+      "parsedPoly": 0,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "publisher; chart type; geography; day/week/year",
+        "streams/views/sales/units; revisions; threshold and credits"
+      ]
+    },
+    {
+      "family": "billboard",
+      "kalshi": 776,
+      "poly": 79,
+      "before": 38,
+      "after": 55,
+      "added": 17,
+      "removed": 0,
+      "exactParsedPairs": 18,
+      "exactParsedMissingBefore": 17,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 97,
+      "parsedPoly": 20,
+      "missingBeforeExamples": [
+        {
+          "kalshiId": "KXTOPSONG-26OCT03-BBY",
+          "polyId": "ccrc-bilbrd-1song-2026-10-03-bbywow",
+          "kalshiTitle": "Will BbY WOW be #1 on the Billboard Hot 100 during the week of Oct 3, 2026",
+          "polyTitle": "BbY WOW - Karol G With Judeline & rusowsky · Billboard #1 Song Week of October 3?"
+        },
+        {
+          "kalshiId": "KXTOPSONG-26OCT03-BEH",
+          "polyId": "ccrc-bilbrd-1song-2026-10-03-beher",
+          "kalshiTitle": "Will BE HER be #1 on the Billboard Hot 100 during the week of Oct 3, 2026",
+          "polyTitle": "Be Her - Ella Langley · Billboard #1 Song Week of October 3?"
+        },
+        {
+          "kalshiId": "KXTOPSONG-26OCT03-MAN",
+          "polyId": "ccrc-bilbrd-1song-2026-10-03-manind",
+          "kalshiTitle": "Will Man I Need be #1 on the Billboard Hot 100 during the week of Oct 3, 2026",
+          "polyTitle": "Man I Need - Olivia Dean · Billboard #1 Song Week of October 3?"
+        }
+      ],
+      "settlementDimensions": [
+        "Hot 100/200; song/album; credited artist",
+        "dated Saturday vs publication Tuesday; issuance start; year cutoff",
+        "rank/top-N; features and joint credits; corrections"
+      ]
+    },
+    {
+      "family": "reality-tv",
+      "kalshi": 149,
+      "poly": 190,
+      "before": 70,
+      "after": 111,
+      "added": 41,
+      "removed": 0,
+      "exactParsedPairs": 92,
+      "exactParsedMissingBefore": 41,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 125,
+      "parsedPoly": 171,
+      "missingBeforeExamples": [
+        {
+          "kalshiId": "KXBIGBROTHER-26DEC31-YAS",
+          "polyId": "rtc-bbus-s28-winner-2026-10-01-yaspat",
+          "kalshiTitle": "Will Yash Patel win Big Brother Season 28?",
+          "polyTitle": "Yash Patel · Big Brother Season 28 Winner"
+        },
+        {
+          "kalshiId": "KXBIGBROTHER-26DEC31-TAY",
+          "polyId": "rtc-bbus-s28-winner-2026-10-01-taybro",
+          "kalshiTitle": "Will Taylor Brown win Big Brother Season 28?",
+          "polyTitle": "Taylor Brown · Big Brother Season 28 Winner"
+        },
+        {
+          "kalshiId": "KXBIGBROTHER-26DEC31-ROM",
+          "polyId": "rtc-bbus-s28-winner-2026-10-01-romsey",
+          "kalshiTitle": "Will Rome Seymour win Big Brother Season 28?",
+          "polyTitle": "Rome Seymour · Big Brother Season 28 Winner"
+        }
+      ],
+      "settlementDimensions": [
+        "program/season; winner/exact-place/top-N/advancement",
+        "split payouts for shared winners; withdrawal/disqualification",
+        "initial vs final elimination; ET/PT deadline; finale postponement"
+      ]
+    },
+    {
+      "family": "awards",
+      "kalshi": 1793,
+      "poly": 271,
+      "before": 12,
+      "after": 159,
+      "added": 147,
+      "removed": 0,
+      "exactParsedPairs": 79,
+      "exactParsedMissingBefore": 72,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 930,
+      "parsedPoly": 197,
+      "missingBeforeExamples": [
+        {
+          "kalshiId": "KXOSCARPIC-27-JOS",
+          "polyId": "tac-oscars-03-14-2027-bestpic-joseph",
+          "kalshiTitle": "Will Josephine win Best Picture at the Oscars?",
+          "polyTitle": "Josephine · Oscar Winner: Best Picture"
+        },
+        {
+          "kalshiId": "KXOSCARPIC-27-BEH",
+          "polyId": "tac-oscars-03-14-2027-bestpic-behemo",
+          "kalshiTitle": "Will Behemoth win Best Picture at the Oscars?",
+          "polyTitle": "Behemoth · Oscar Winner: Best Picture"
+        },
+        {
+          "kalshiId": "KXOSCARPIC-27-SOC",
+          "polyId": "tac-oscars-03-14-2027-bestpic-socrec",
+          "kalshiTitle": "Will The Social Reckoning win Best Picture at the Oscars?",
+          "polyTitle": "The Social Reckoning · Oscar Winner: Best Picture"
+        }
+      ],
+      "settlementDimensions": [
+        "ceremony/version and category; nomination vs winner",
+        "work vs credited person; tie/shared award or separate Tie outcome",
+        "postponement; changed categories; rescission"
+      ]
+    },
+    {
+      "family": "time-person",
+      "kalshi": 48,
+      "poly": 25,
+      "before": 24,
+      "after": 24,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 24,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 42,
+      "parsedPoly": 25,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "year vs decade; individual vs group",
+        "explicit naming vs cover depiction; shared winners"
+      ]
+    },
+    {
+      "family": "entertainment-release",
+      "kalshi": 299,
+      "poly": 2,
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 0,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 0,
+      "parsedPoly": 0,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "platform/geography; full release vs beta/early access",
+        "release vs announcement; before/by and time zone"
+      ]
+    },
+    {
+      "family": "critic-score",
+      "kalshi": 385,
+      "poly": 49,
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 0,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 0,
+      "parsedPoly": 0,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "Tomatometer vs audience/Metacritic; film vs TV season",
+        "strict above vs at least; measurement instant; source revisions"
+      ]
+    },
+    {
+      "family": "box-office",
+      "kalshi": 4,
+      "poly": 0,
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 0,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 0,
+      "parsedPoly": 0,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "domestic/global; gross vs net; preview receipts",
+        "opening weekend/calendar window; source and revisions"
+      ]
+    },
+    {
+      "family": "casting-announcement",
+      "kalshi": 1538,
+      "poly": 0,
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 0,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 0,
+      "parsedPoly": 0,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "confirmed casting vs performance/rumor",
+        "franchise/version/role; announcement deadline; source"
+      ]
+    },
+    {
+      "family": "culture-lists",
+      "kalshi": 286,
+      "poly": 24,
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 0,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 0,
+      "parsedPoly": 0,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "publisher; list edition/date; rank vs top-N",
+        "named entity vs group; tie and revision rules"
+      ]
+    },
+    {
+      "family": "science-technology",
+      "kalshi": 1033,
+      "poly": 86,
+      "before": 0,
+      "after": 2,
+      "added": 2,
+      "removed": 0,
+      "exactParsedPairs": 2,
+      "exactParsedMissingBefore": 2,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 11,
+      "parsedPoly": 2,
+      "missingBeforeExamples": [
+        {
+          "kalshiId": "KXGROK-GROK5-26OCT01",
+          "polyId": "aimc-xai-grok-5-2026-09-30",
+          "kalshiTitle": "Will xAI release Grok 5 before Oct 1, 2026?",
+          "polyTitle": "By September 30, 2026 · Grok 5 Released?"
+        },
+        {
+          "kalshiId": "KXGROK-GROK5-27JAN01",
+          "polyId": "aimc-xai-grok-5-2026-12-31",
+          "kalshiTitle": "Will xAI release Grok 5 before Jan 1, 2027?",
+          "polyTitle": "By December 31, 2026 · Grok 5 Released?"
+        }
+      ],
+      "settlementDimensions": [
+        "model/version/benchmark/source and date",
+        "public release vs beta; named model vs successor; geographic scope"
+      ]
+    },
+    {
+      "family": "companies-business",
+      "kalshi": 753,
+      "poly": 37,
+      "before": 0,
+      "after": 39,
+      "added": 39,
+      "removed": 0,
+      "exactParsedPairs": 39,
+      "exactParsedMissingBefore": 39,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 271,
+      "parsedPoly": 34,
+      "missingBeforeExamples": [
+        {
+          "kalshiId": "KXIPO-26-DEEL",
+          "polyId": "ipcc-2026ipos-deel",
+          "kalshiTitle": "Who will IPO before 2027?",
+          "polyTitle": "Deel · Which Companies Will Confirm an IPO in 2026"
+        },
+        {
+          "kalshiId": "KXIPODEEL-27JAN01",
+          "polyId": "ipcc-2026ipos-deel",
+          "kalshiTitle": "When will Deel IPO?",
+          "polyTitle": "Deel · Which Companies Will Confirm an IPO in 2026"
+        },
+        {
+          "kalshiId": "KXIPO-26-BREX",
+          "polyId": "ipcc-2026ipos-brex",
+          "kalshiTitle": "Who will IPO before 2027?",
+          "polyTitle": "Brex · Which Companies Will Confirm an IPO in 2026"
+        }
+      ],
+      "settlementDimensions": [
+        "company identity; confirmed IPO vs trading start",
+        "regulatory jurisdiction; acquisition announcement vs completion; fiscal period"
+      ]
+    },
+    {
+      "family": "economics",
+      "kalshi": 4983,
+      "poly": 179,
+      "before": 23,
+      "after": 23,
+      "added": 0,
+      "removed": 0,
+      "exactParsedPairs": 15,
+      "exactParsedMissingBefore": 0,
+      "exactParsedMissingAfter": 0,
+      "parsedKalshi": 69,
+      "parsedPoly": 15,
+      "missingBeforeExamples": [],
+      "settlementDimensions": [
+        "headline/core; MoM/YoY; seasonal basis; advance/revised",
+        "period, precision, comparator; missing-release and shutdown fallback"
+      ]
+    }
+  ],
+  "statuses": {
+    "UNVERIFIED": 3284
+  },
+  "caveat": "Exact parsed pairs are review candidates, not settlement equivalence. Missing-before counts are a reproducible lower bound on parser omissions, not all underlying shared events. No registry or ledger was opened."
+}
