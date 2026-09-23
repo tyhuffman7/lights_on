@@ -29,4 +29,4 @@ node --experimental-strip-types worker/practical-settlement-audit.ts /private/tm
 
 ## Verification / publication
 
-Targeted policy, confirmation, account and historical classification tests passed during implementation. Signed non-main draft publication and hosted full tests/typecheck/build receipt will be recorded below after verification. No merge or force-push.
+[Draft PR #18](https://github.com/tyhuffman7/lights_on/pull/18) is OPEN/DRAFT, authored by `tyhuffman7`, stacked on `codex/settlement-family-matrix`. Signed implementation `2ad2c2d2523a274df3ec54981c857781f1750c0d` passed **34 targeted tests** and [hosted CI 35915723152](https://github.com/tyhuffman7/lights_on/actions/runs/35915723152): **751/751 tests, typecheck and production build**, with no failures/skips. [Compact verification receipt](bounded-basis/verification.json). A signed documentation-only receipt commit follows the tested implementation. No merge or force-push. Checkpoint stopped.
