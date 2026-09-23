@@ -1,0 +1,1056 @@
+{
+  "scope": "BOUNDED_MANUAL_REVIEW_10_CULTURE_7_EXISTING_SPORTS_NO_REGISTRY_PROMOTION",
+  "definitions": {
+    "EQUIVALENT": "Same payout across reviewed ordinary and exceptional branches; no unresolved material terms.",
+    "CONDITIONAL": "Ordinary result aligns only under the explicit listed conditions. Not approved as a settlement-equivalent hedge.",
+    "INCOMPATIBLE": "Identified concrete payout conflict.",
+    "UNRESOLVED": "Material identity, precedence, deadline or controlling-term evidence is unresolved."
+  },
+  "sourcesRetrievedAt": "2026-09-23T03:52:31.703505+00:00",
+  "productIndex": "https://polymarketexchange.com/files/products",
+  "rowsFromPriorRestNotReinterpreted": true,
+  "routes": [
+    {
+      "status": "UNRESOLVED",
+      "category": "Netflix",
+      "identity": "Exact named work/season, #1 US weekly chart, publication September 29 (viewing week September 21\u201327). September 28 in the Kalshi title is the trading cutoff, not a different chart.",
+      "differences": [
+        "Current Kalshi primary text and Netflix source URL specify United States; linked NETFLIXRANK p1 restricts chart to Films (English) or TV (English). No precedence clarification establishing the US override was located.",
+        "PM CCRC pp3\u20134 uses first official publication, explicit split ties at the contract tick, a two-week publication cutoff, and alternative-source/review fallback if the chart is discontinued. Kalshi fixes value at expiration, permits pre-expiration revisions and does not specify matching split-tie or delayed-publication fallback in NETFLIXRANK.",
+        "Do not replace the US predicate with a global English chart, assume identical ties, or equate expected expiration with cash release."
+      ],
+      "conditions": [
+        "Resolve Kalshi listing-versus-product chart scope before any strategy admission.",
+        "Verify same official US publication and unchanged season/work; compare correction, tie and nonpublication treatment."
+      ],
+      "sourceFiles": [
+        "NETFLIXRANK.pdf",
+        "PMUS - CCRC - (2026.04.03).pdf"
+      ],
+      "indicativeEventAt": "2026-09-29T14:00:00Z",
+      "lockupBasis": "September 29 expected chart release; timestamp is indicative, publication and settlement uncertain.",
+      "pairId": "KXNETFLIXRANKSHOW-26SEP28-DAN::ccrc-ntflx-1shwus-2026-09-29-dango2",
+      "kalshiId": "KXNETFLIXRANKSHOW-26SEP28-DAN",
+      "polyId": "ccrc-ntflx-1shwus-2026-09-29-dango2",
+      "kalshiTitle": "Will Danny Go!: Season 2 be Top US Netflix Show on Sep 28, 2026?",
+      "polyTitle": "Danny Go!: Season 2 \u00b7 Top US Netflix Show This Week?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "5276efdf3c601ba05974bd0cae2c9ec396d51a43dc5518c416c22dc065d2ccd9",
+        "poly": "17fc941eeb70b09d614bbdf32ed356e57ddb5f6fc83a7e6b0f26be3be590ab94"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703165+00:00",
+      "primaryTermsRetrievedAt": 1790134913589,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxnetflixrankshow/kxnetflixrankshow-26sep28",
+        "poly": "https://polymarket.us/event/ccrc-ntflx-1shwus-2026-09-29-dango2"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXNETFLIXRANKSHOW-26SEP28-DAN",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/ccrc-ntflx-1shwus-2026-09-29-dango2"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-29T03:59:00Z",
+        "kalshiExpected": "2026-09-29T14:00:00Z",
+        "kalshiLatest": "2026-10-05T14:00:00Z",
+        "polyEnd": "2026-10-14T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/NETFLIXRANK.pdf",
+          "file": "NETFLIXRANK.pdf",
+          "sha256": "6f89810250af204695b456aaa433d91a1f637e2d56e131adc6d4d8722410076f",
+          "pages": 2
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "file": "PMUS - CCRC - (2026.04.03).pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "UNRESOLVED",
+      "category": "Netflix",
+      "identity": "Exact named work/season, #1 US weekly chart, publication September 29 (viewing week September 21\u201327). September 28 in the Kalshi title is the trading cutoff, not a different chart.",
+      "differences": [
+        "Current Kalshi primary text and Netflix source URL specify United States; linked NETFLIXRANK p1 restricts chart to Films (English) or TV (English). No precedence clarification establishing the US override was located.",
+        "PM CCRC pp3\u20134 uses first official publication, explicit split ties at the contract tick, a two-week publication cutoff, and alternative-source/review fallback if the chart is discontinued. Kalshi fixes value at expiration, permits pre-expiration revisions and does not specify matching split-tie or delayed-publication fallback in NETFLIXRANK.",
+        "Do not replace the US predicate with a global English chart, assume identical ties, or equate expected expiration with cash release."
+      ],
+      "conditions": [
+        "Resolve Kalshi listing-versus-product chart scope before any strategy admission.",
+        "Verify same official US publication and unchanged season/work; compare correction, tie and nonpublication treatment."
+      ],
+      "sourceFiles": [
+        "NETFLIXRANK.pdf",
+        "PMUS - CCRC - (2026.04.03).pdf"
+      ],
+      "indicativeEventAt": "2026-09-29T14:00:00Z",
+      "lockupBasis": "September 29 expected chart release; timestamp is indicative, publication and settlement uncertain.",
+      "pairId": "KXNETFLIXRANKMOVIE-26SEP28-WHY::ccrc-ntflx-1movus-2026-09-29-whydid",
+      "kalshiId": "KXNETFLIXRANKMOVIE-26SEP28-WHY",
+      "polyId": "ccrc-ntflx-1movus-2026-09-29-whydid",
+      "kalshiTitle": "Will Why Did I Get Married Again? be Top US Netflix Movie on Sep 28, 2026?",
+      "polyTitle": "Why Did I Get Married Again? \u00b7 Top US Netflix Movie This Week?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "7225cfa6b9415540e3a0ce803728b097e791f1a28a03b1b44d0d7a882c6a381a",
+        "poly": "6016178b3e0f777dd341ec2984142d55f926066c2e769c2d886137380666690b"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703380+00:00",
+      "primaryTermsRetrievedAt": 1790134914317,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxnetflixrankmovie/kxnetflixrankmovie-26sep28",
+        "poly": "https://polymarket.us/event/ccrc-ntflx-1movus-2026-09-29-whydid"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXNETFLIXRANKMOVIE-26SEP28-WHY",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/ccrc-ntflx-1movus-2026-09-29-whydid"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-29T03:59:00Z",
+        "kalshiExpected": "2026-09-29T14:00:00Z",
+        "kalshiLatest": "2026-10-05T14:00:00Z",
+        "polyEnd": "2026-10-14T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/NETFLIXRANK.pdf",
+          "file": "NETFLIXRANK.pdf",
+          "sha256": "6f89810250af204695b456aaa433d91a1f637e2d56e131adc6d4d8722410076f",
+          "pages": 2
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "file": "PMUS - CCRC - (2026.04.03).pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "Billboard/music",
+      "identity": "Exact #1 chart dated Week of October 3, 2026; ordinary publication is the preceding Tuesday, September 29. Hot 100 song and Billboard 200 album remain separate. Selected Choosin\u2019 Texas by Ella Langley.",
+      "differences": [
+        "RANKLIST pp1\u20133 and CCRC pp3\u20134 both use the official named chart; publisher tie-breaking controls, otherwise tied contracts split $1 rounded down. Current PM tick is $0.01, matching Kalshi cents. Neither a tied #1 nor an absent chart may be treated as a guaranteed binary $1 hedge.",
+        "PM fixes first official ranking and has a two-week delayed-publication window; Kalshi refers to the value at expiration, excludes only later revisions, and treats no publication during the stated period as No. Correction or missing-publication branches are not proven equivalent.",
+        "Kalshi names the work without the artist; PM explicitly credits Ella Langley. Billboard primary reporting identifies both Choosin\u2019 Texas and the Dandelion album with Ella Langley. Alternate recordings/remixes and different credited works remain excluded."
+      ],
+      "conditions": [
+        "Same Ella Langley work and official dated chart; no pre-settlement chart correction or nonpublication/fallback divergence.",
+        "Conditional review is not unconditional settlement approval."
+      ],
+      "sourceFiles": [
+        "RANKLIST.pdf",
+        "PMUS - CCRC - (2026.04.03).pdf"
+      ],
+      "indicativeEventAt": "2026-09-29T14:00:00Z",
+      "lockupBasis": "Indicative Tuesday September 29 publication for chart dated October 3; no guaranteed publication or fund-release time.",
+      "pairId": "KXTOPSONG-26OCT03-CHO::ccrc-bilbrd-1song-2026-10-03-chotex",
+      "kalshiId": "KXTOPSONG-26OCT03-CHO",
+      "polyId": "ccrc-bilbrd-1song-2026-10-03-chotex",
+      "kalshiTitle": "Will Choosin' Texas be #1 on the Billboard Hot 100 during the week of Oct 3, 2026",
+      "polyTitle": "Choosin' Texas - Ella Langley \u00b7 Billboard #1 Song Week of October 3?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "bdca3b0f3a9889663839097916f63e14c55d238e5554043c39beef4634a1cba4",
+        "poly": "266d569c4470dc666d14b63077d5c6c2892ef62c1f45f83a3f2fc654e5fe4db2"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703388+00:00",
+      "primaryTermsRetrievedAt": 1790134915284,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxtopsong/kxtopsong-26oct03",
+        "poly": "https://polymarket.us/event/ccrc-bilbrd-1song-2026-10-03-chotex"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXTOPSONG-26OCT03-CHO",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/ccrc-bilbrd-1song-2026-10-03-chotex"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-28T03:59:00Z",
+        "kalshiExpected": "2026-10-07T14:00:00Z",
+        "kalshiLatest": "2026-10-17T14:00:00Z",
+        "polyEnd": "2026-10-14T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/RANKLIST.pdf",
+          "file": "RANKLIST.pdf",
+          "sha256": "255ec41a916d04f147187b748048f738fd1b7eb664054b1bc64b92e047474ab1",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "file": "PMUS - CCRC - (2026.04.03).pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "Billboard/music",
+      "identity": "Exact #1 chart dated Week of October 3, 2026; ordinary publication is the preceding Tuesday, September 29. Hot 100 song and Billboard 200 album remain separate. Selected Dandelion by Ella Langley.",
+      "differences": [
+        "RANKLIST pp1\u20133 and CCRC pp3\u20134 both use the official named chart; publisher tie-breaking controls, otherwise tied contracts split $1 rounded down. Current PM tick is $0.01, matching Kalshi cents. Neither a tied #1 nor an absent chart may be treated as a guaranteed binary $1 hedge.",
+        "PM fixes first official ranking and has a two-week delayed-publication window; Kalshi refers to the value at expiration, excludes only later revisions, and treats no publication during the stated period as No. Correction or missing-publication branches are not proven equivalent.",
+        "Kalshi names the work without the artist; PM explicitly credits Ella Langley. Billboard primary reporting identifies both Choosin\u2019 Texas and the Dandelion album with Ella Langley. Alternate recordings/remixes and different credited works remain excluded."
+      ],
+      "conditions": [
+        "Same Ella Langley work and official dated chart; no pre-settlement chart correction or nonpublication/fallback divergence.",
+        "Conditional review is not unconditional settlement approval."
+      ],
+      "sourceFiles": [
+        "RANKLIST.pdf",
+        "PMUS - CCRC - (2026.04.03).pdf"
+      ],
+      "indicativeEventAt": "2026-09-29T14:00:00Z",
+      "lockupBasis": "Indicative Tuesday September 29 publication for chart dated October 3; no guaranteed publication or fund-release time.",
+      "pairId": "KXTOPALBUM-26OCT03-DAN::ccrc-bilbrd-1album-2026-10-03-dandel",
+      "kalshiId": "KXTOPALBUM-26OCT03-DAN",
+      "polyId": "ccrc-bilbrd-1album-2026-10-03-dandel",
+      "kalshiTitle": "Will DANDELION be #1 on the Billboard 200 during the week of Oct 3, 2026",
+      "polyTitle": "Dandelion - Ella Langley \u00b7 Billboard #1 Album Week of October 3?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "7a2b726231c19462d783e54b9aa4cc20bf6c123db4f020158a02dc79cd9ac820",
+        "poly": "ebdd6f6b18585ecd1609e09e49fe8c1db55d93cd00097d3b67df4704caaeec6d"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703394+00:00",
+      "primaryTermsRetrievedAt": 1790134916111,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxtopalbum/kxtopalbum-26oct03",
+        "poly": "https://polymarket.us/event/ccrc-bilbrd-1album-2026-10-03-dandel"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXTOPALBUM-26OCT03-DAN",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/ccrc-bilbrd-1album-2026-10-03-dandel"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-28T03:59:00Z",
+        "kalshiExpected": "2026-10-07T14:00:00Z",
+        "kalshiLatest": "2026-10-17T14:00:00Z",
+        "polyEnd": "2026-10-14T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/RANKLIST.pdf",
+          "file": "RANKLIST.pdf",
+          "sha256": "255ec41a916d04f147187b748048f738fd1b7eb664054b1bc64b92e047474ab1",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "file": "PMUS - CCRC - (2026.04.03).pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "INCOMPATIBLE",
+      "category": "awards",
+      "identity": "Same 2026 MTV Video Music Awards ceremony and named category; artist-only Kalshi versus explicitly named video/work on PM-US.",
+      "differences": [
+        "MTVVMAS p1: on a tie, the tie strike resolves Yes and all nominee strikes No. PM TAC p4: multiple successful participants in a mutually exclusive iteration split $1 at the tick. This is a concrete payout difference, even if artist and nominated work are ultimately shown to be the same entry.",
+        "Kalshi immediately resolves nonnomination or withdrawal/disqualification to No; PM similarly excludes withdrawal and requires nomination where it is a prerequisite. Both allow functionally equivalent renamed categories, but those are separate exchange judgments.",
+        "Kalshi cancellation uses independently determined fair price and postponement may last one year. PM may extend or use its own fair-price review; corrected/replayed announcement rules and cutoff also differ.",
+        "An artist can be associated with multiple works or technical credits. The PM work credit does not prove Kalshi refers to precisely that work. Best Art Direction may name technical recipients rather than the artist."
+      ],
+      "conditions": [
+        "No strategy promotion: tie payout is incompatible.",
+        "Any later corrected route would require explicit native artist/work/category identity, including technical recipient credits, and primary amended payout terms."
+      ],
+      "sourceFiles": [
+        "MTVVMAS.pdf",
+        "PMUS - TAC - (2026.03.31).pdf"
+      ],
+      "indicativeEventAt": "2026-09-28T03:59:00Z",
+      "lockupBasis": "September 27 ceremony as named by current PM route and Kalshi expected expiration; event and settlement uncertain.",
+      "pairId": "KXVMA-BA26-TAM::tac-vmas-alt-09-27-2026-dratam",
+      "kalshiId": "KXVMA-BA26-TAM",
+      "polyId": "tac-vmas-alt-09-27-2026-dratam",
+      "kalshiTitle": "Will Tame Impala win Best Alternative at the 2026 MTV Video Music Awards?",
+      "polyTitle": "Dracula (Tame Impala) \u00b7 VMA Best Alternative 2026",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "071036c8034022ed982c128641e349405274c5907d0eb83c88858407c4d11741",
+        "poly": "5a011b68b89fc4b403f52c6314e6b857b6b40674676cca11b1b044ed25344f65"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703399+00:00",
+      "primaryTermsRetrievedAt": 1790134917032,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxvma/kxvma-ba26",
+        "poly": "https://polymarket.us/event/tac-vmas-alt-09-27-2026-dratam"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXVMA-BA26-TAM",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/tac-vmas-alt-09-27-2026-dratam"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2027-09-27T14:00:00Z",
+        "kalshiExpected": "2026-09-28T03:59:00Z",
+        "kalshiLatest": "2027-09-27T14:00:00Z",
+        "polyEnd": "2026-10-12T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/MTVVMAS.pdf",
+          "file": "MTVVMAS.pdf",
+          "sha256": "667654e242bca0aa476412a4308786186cc02705b384219916f2101abff90dab",
+          "pages": 2
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TAC%20-%20%282026.03.31%29.pdf",
+          "file": "PMUS - TAC - (2026.03.31).pdf",
+          "sha256": "ff9c2b1a169927fc6f3898efd40d7bc930f1403e9d519655b73d3cb92b099a61",
+          "pages": 5
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "INCOMPATIBLE",
+      "category": "awards",
+      "identity": "Same 2026 MTV Video Music Awards ceremony and named category; artist-only Kalshi versus explicitly named video/work on PM-US.",
+      "differences": [
+        "MTVVMAS p1: on a tie, the tie strike resolves Yes and all nominee strikes No. PM TAC p4: multiple successful participants in a mutually exclusive iteration split $1 at the tick. This is a concrete payout difference, even if artist and nominated work are ultimately shown to be the same entry.",
+        "Kalshi immediately resolves nonnomination or withdrawal/disqualification to No; PM similarly excludes withdrawal and requires nomination where it is a prerequisite. Both allow functionally equivalent renamed categories, but those are separate exchange judgments.",
+        "Kalshi cancellation uses independently determined fair price and postponement may last one year. PM may extend or use its own fair-price review; corrected/replayed announcement rules and cutoff also differ.",
+        "An artist can be associated with multiple works or technical credits. The PM work credit does not prove Kalshi refers to precisely that work. Best Art Direction may name technical recipients rather than the artist."
+      ],
+      "conditions": [
+        "No strategy promotion: tie payout is incompatible.",
+        "Any later corrected route would require explicit native artist/work/category identity, including technical recipient credits, and primary amended payout terms."
+      ],
+      "sourceFiles": [
+        "MTVVMAS.pdf",
+        "PMUS - TAC - (2026.03.31).pdf"
+      ],
+      "indicativeEventAt": "2026-09-28T03:59:00Z",
+      "lockupBasis": "September 27 ceremony as named by current PM route and Kalshi expected expiration; event and settlement uncertain.",
+      "pairId": "KXVMA-BAD26-CHA::tac-vmas-artdirection-09-27-2026-ss26ch",
+      "kalshiId": "KXVMA-BAD26-CHA",
+      "polyId": "tac-vmas-artdirection-09-27-2026-ss26ch",
+      "kalshiTitle": "Will Charli xcx win Best Art Direction at the 2026 MTV Video Music Awards?",
+      "polyTitle": "SS26 (Charli XCX) \u00b7 VMA Best Art Direction 2026",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "2570b030e7210b83c4e6bf063447b72ca206f79bbbe01ea1e3aabdc31f980e84",
+        "poly": "8f69e1da4e5b656af4211cbf802c81ed098d6c30bbdedf0bd8a88665ae4a2b9a"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703404+00:00",
+      "primaryTermsRetrievedAt": 1790134917624,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxvma/kxvma-bad26",
+        "poly": "https://polymarket.us/event/tac-vmas-artdirection-09-27-2026-ss26ch"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXVMA-BAD26-CHA",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/tac-vmas-artdirection-09-27-2026-ss26ch"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2027-09-27T14:00:00Z",
+        "kalshiExpected": "2026-09-28T03:59:00Z",
+        "kalshiLatest": "2027-09-27T14:00:00Z",
+        "polyEnd": "2026-10-12T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/MTVVMAS.pdf",
+          "file": "MTVVMAS.pdf",
+          "sha256": "667654e242bca0aa476412a4308786186cc02705b384219916f2101abff90dab",
+          "pages": 2
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TAC%20-%20%282026.03.31%29.pdf",
+          "file": "PMUS - TAC - (2026.03.31).pdf",
+          "sha256": "ff9c2b1a169927fc6f3898efd40d7bc930f1403e9d519655b73d3cb92b099a61",
+          "pages": 5
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "reality TV",
+      "identity": "Veronika Goroshkova, primary winner of US America\u2019s Got Talent season 21; not runner-up or a secondary award.",
+      "differences": [
+        "Kalshi COMPETITIONREALITYWIN pp1\u20133 and PM RTC pp2\u20134 use the official broadcaster/show result. Both split joint winners; current PM tick is $0.01. Both exclude pre-result withdrawal for a winner, and unconditional victory still counts when the award is declined.",
+        "Kalshi freezes the original finale winner and pays No if canceled/truncated without a winner. PM permits fair-price/review cancellation and confirmations before its expiration; its finale date is amended if rescheduled. These branches are not an unconditional hedge.",
+        "Kalshi requires a finale or immediately following official announcement and has a one-week latest-expiration provision. PM also recognizes off-broadcast official declarations; delayed announcements and longer postponements can diverge."
+      ],
+      "conditions": [
+        "Ordinary completed finale with the same unambiguous official winner and no cancellation, late declaration, replacement or deadline divergence.",
+        "A joint winner is only comparable if both apply identical cent-rounded split payouts to the same winning units."
+      ],
+      "sourceFiles": [
+        "COMPETITIONREALITYWIN.pdf",
+        "PMUS - RTC - (2026.04.03).pdf"
+      ],
+      "indicativeEventAt": "2026-09-24T03:00:00Z",
+      "lockupBasis": "September 23 finale from the native PM route; time is indicative, release of funds uncertain.",
+      "pairId": "KXAGTWINNER-26SEP24-VER::rtc-agt-s21-win-2026-09-23-vergor",
+      "kalshiId": "KXAGTWINNER-26SEP24-VER",
+      "polyId": "rtc-agt-s21-win-2026-09-23-vergor",
+      "kalshiTitle": "Will Veronika Goroshkova win America's Got Talent Season 21?",
+      "polyTitle": "Veronika Goroshkova \u00b7 America's Got Talent Season 21: Winner",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "1ebf32dc6d584f24f24cb72153bc9f3eaa2978766abef9293271347896b84b17",
+        "poly": "d3b55af0b55569d82870a2662220291f97a532d5de95c7d15eef24b55b0e141c"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703408+00:00",
+      "primaryTermsRetrievedAt": 1790134918497,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxagtwinner/kxagtwinner-26sep24",
+        "poly": "https://polymarket.us/event/rtc-agt-s21-win-2026-09-23-vergor"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXAGTWINNER-26SEP24-VER",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/rtc-agt-s21-win-2026-09-23-vergor"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-10-01T14:00:00Z",
+        "kalshiExpected": "2026-09-24T14:00:00Z",
+        "kalshiLatest": "2026-10-01T14:00:00Z",
+        "polyEnd": "2026-10-08T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/COMPETITIONREALITYWIN.pdf",
+          "file": "COMPETITIONREALITYWIN.pdf",
+          "sha256": "60f1d26310bf7ea30cb9d7384a4147526b35fa1b25074ff60a22d3f1d7e90bd0",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20RTC%20-%20%282026.04.03%29.pdf",
+          "file": "PMUS - RTC - (2026.04.03).pdf",
+          "sha256": "f052ff3ced0006be4b3cc9bd102b4b19891765c38876dfc237970c30d0c317f6",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "reality TV",
+      "identity": "Taylor Brown, exactly second place/runner-up in US Big Brother season 28; top-two, finalist, eviction and winner are distinct.",
+      "differences": [
+        "BIGBROTHERRANK pp1\u20133 uses official final rank, includes final reinstatement, allows rank inference from elimination structure and shared double evictions. Its first official ranking controls later alterations. PM RTC and the exact listing require an official second-place outcome; generic elimination finality must not be substituted for final placement.",
+        "Kalshi gives a listed Tie strike priority; without one it splits shared ranks at cents. PM mutually exclusive successful outcomes split at its tick (currently cents). Presence and precedence of a Tie strike are a condition, not assumed absent.",
+        "Kalshi cancellation/truncation without final ranks pays No. PM may use fair-price/review cancellation and amends finale expiration. Kalshi administrative date is December 31 with latest January 7, despite PM\u2019s October 1 finale label.",
+        "Withdrawal counts only if an official final second-place rank remains on Kalshi; PM\u2019s generic withdrawal provision is explicitly for winner contracts, so placement handling needs an unambiguous official result."
+      ],
+      "conditions": [
+        "Unique official final second-place ranking, no joint rank/elimination inference/withdrawal dispute, cancellation or deadline divergence.",
+        "Do not use December 31 administrative expiration as the predicted finale."
+      ],
+      "sourceFiles": [
+        "BIGBROTHERRANK.pdf",
+        "PMUS - RTC - (2026.04.03).pdf"
+      ],
+      "indicativeEventAt": "2026-10-02T03:00:00Z",
+      "lockupBasis": "October 1 finale implied by native PM route; indicative only, particularly uncertain relative to Kalshi December administrative dates.",
+      "pairId": "KXBIGBROTHERRANK-26DEC31R2-TAY::rtc-bbus-s28-2-2026-10-01-taybro",
+      "kalshiId": "KXBIGBROTHERRANK-26DEC31R2-TAY",
+      "polyId": "rtc-bbus-s28-2-2026-10-01-taybro",
+      "kalshiTitle": "Will Taylor Brown finish in 2 place in Big Brother Season 28?",
+      "polyTitle": "Taylor Brown \u00b7 Big Brother Season 28: 2nd Place",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "365fba5018b526eae5fb7b44924ad77f935e7a5ee875c764b65858cfe32b5600",
+        "poly": "93cad52938caf09ff2a9c916d715e966a62e7189b76060775666fc8ea8e86771"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703412+00:00",
+      "primaryTermsRetrievedAt": 1790134919420,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxbigbrotherrank/kxbigbrotherrank-26dec31r2",
+        "poly": "https://polymarket.us/event/rtc-bbus-s28-2-2026-10-01-taybro"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXBIGBROTHERRANK-26DEC31R2-TAY",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/rtc-bbus-s28-2-2026-10-01-taybro"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-12-31T15:00:00Z",
+        "kalshiExpected": "2026-12-31T15:00:00Z",
+        "kalshiLatest": "2027-01-07T15:00:00Z",
+        "polyEnd": "2026-10-16T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/BIGBROTHERRANK.pdf",
+          "file": "BIGBROTHERRANK.pdf",
+          "sha256": "dea6e9e073d6b82ad19c2a09869297cd79c96cdef4c9d2bd6b6850c3a431f646",
+          "pages": 4
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20RTC%20-%20%282026.04.03%29.pdf",
+          "file": "PMUS - RTC - (2026.04.03).pdf",
+          "sha256": "f052ff3ced0006be4b3cc9bd102b4b19891765c38876dfc237970c30d0c317f6",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "Spotify",
+      "identity": "Bad Bunny, top US artist in Spotify Wrapped 2026 annual publication. Neither global artists, songs, calendar-year accumulated streams nor a daily chart is substituted.",
+      "differences": [
+        "Both exact listings specify the US annual Wrapped ranking even if released before year end. STREAMRANK pp1\u20132 and CCRC pp3\u20134 use exact creator identity, publisher tie-breaks and split ties. Current PM tick is cents.",
+        "Kalshi uses the chart as of expiration and pays all non-none strikes No if no data is available by then. PM uses the first published ranking and permits substitute-source/review cancellation; late or missing publication and corrections can diverge.",
+        "Kalshi latest expiration is January 7, 2027; PM listed end is December 17, 2026. No confirmed 2026 Wrapped publication date is asserted."
+      ],
+      "conditions": [
+        "Same official annual US artist ranking, exact artist credit, no correction, publication failure or deadline divergence."
+      ],
+      "sourceFiles": [
+        "STREAMRANK.pdf",
+        "PMUS - CCRC - (2026.04.03).pdf"
+      ],
+      "indicativeEventAt": null,
+      "lockupBasis": "Annual release date unverified; show administrative horizon separately, not a short-lockup estimate.",
+      "pairId": "KXTOPARTISTUSA-26-BAD::ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "kalshiId": "KXTOPARTISTUSA-26-BAD",
+      "polyId": "ccrc-sptfy-1-artst-us-yr-2026-badbun",
+      "kalshiTitle": "Will Bad Bunny be the #1 most streamed Artist on the  2026 Spotify Wrapped Top 10 Artist U.S chart on the date that the chart is released for 2026?",
+      "polyTitle": "Bad Bunny \u00b7 Top Artist in the US 2026?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "8eec2abac22c42bc81973e6588f0d7ab12dcee21e591add91a61b79675ac8cef",
+        "poly": "cf17ca3e530893153fac0cc5c5c6795be51e5135081a6f0f2b65ab4f5254a3b0"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703417+00:00",
+      "primaryTermsRetrievedAt": 1790134920532,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxtopartistusa/kxtopartistusa-26",
+        "poly": "https://polymarket.us/event/ccrc-sptfy-1-artst-us-yr-2026-badbun"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXTOPARTISTUSA-26-BAD",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/ccrc-sptfy-1-artst-us-yr-2026-badbun"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-12-31T04:59:00Z",
+        "kalshiExpected": "2026-12-31T15:00:00Z",
+        "kalshiLatest": "2027-01-07T15:00:00Z",
+        "polyEnd": "2026-12-17T04:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/STREAMRANK.pdf",
+          "file": "STREAMRANK.pdf",
+          "sha256": "f4f06b9f64d011d66ebbe68871b3648e9baa8471bbd523f6049cca63503af9df",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20CCRC%20-%20%282026.04.03%29.pdf",
+          "file": "PMUS - CCRC - (2026.04.03).pdf",
+          "sha256": "5f4ed4e824174a5045df453670dbd2736e7cd008bc68c7bc6013a9d1a32d5b16",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "UNRESOLVED",
+      "category": "company/IPO",
+      "identity": "Anthropic IPO confirmation by September 30, 2026 11:59 PM ET versus before October 1; company and intended cutoff align at date granularity.",
+      "differences": [
+        "Kalshi short primary text lists effective SEC S-1, pricing, or exchange ticker assignment. The linked WHENIPO/IPOEventConfirm pp1\u20132 expands to foreign equivalent approvals and requires ticker plus approved IPO listing, substantially matching PM IPCC pp2\u20133. Do not claim foreign-regulator incompatibility solely from the shortened listing.",
+        "The short Kalshi ticker-assignment clause is broader than the linked document. Contract precedence at that boundary is not resolved here. Both long documents exclude filing alone, direct listings without new shares, SPAC/reverse merger, private offers and non-common-equity listings.",
+        "Kalshi long terms additionally require a first-time public listing and enumerate prior-public/OTC/relisting exclusions. PM\u2019s reviewed product lacks the same explicit first-time history test. Any prior-public history or nonstandard issuance needs confirmation.",
+        "PM explicitly fixes 11:59 PM ET; Kalshi says before October 1 with 11:59 PM trading time. Exact final-minute inclusion remains unresolved. Kalshi expected expiration April 1, 2027 is later than its October 8 latest expiration; PM lists July 15, 2027. These administrative anomalies preclude a reliable short capital-lockup estimate."
+      ],
+      "conditions": [
+        "Resolve short-versus-long trigger precedence, exact cutoff, company public-listing history and contradictory administrative horizons before strategy admission."
+      ],
+      "sourceFiles": [
+        "WHENIPO.pdf",
+        "PMUS - IPCC - (2026.06.08).pdf"
+      ],
+      "indicativeEventAt": "2026-10-01T03:59:00Z",
+      "lockupBasis": "Contract cutoff only; administrative horizons conflict and do not support a fund-release estimate.",
+      "pairId": "KXIPOANTHROPIC-DATE-26OCT01::ipcc-anthropic-2026-09-30",
+      "kalshiId": "KXIPOANTHROPIC-DATE-26OCT01",
+      "polyId": "ipcc-anthropic-2026-09-30",
+      "kalshiTitle": "When will Anthropic officially announce an IPO?",
+      "polyTitle": "September 30, 2026 \u00b7 Anthropic IPO Officially Confirmed By",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "087d02b984f038f15f26208aa04fa6b59d77a2cc1a23b1f7197b9d0a5cecdae8",
+        "poly": "afda7d251a9f08c3207cbce7919d27b2323f54f971d40c2cdd5b2451bd426a70"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703421+00:00",
+      "primaryTermsRetrievedAt": 1790134921265,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxipoanthropic/kxipoanthropic-date",
+        "poly": "https://polymarket.us/event/ipcc-anthropic-2026-09-30"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXIPOANTHROPIC-DATE-26OCT01",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/ipcc-anthropic-2026-09-30"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-10-01T03:59:00Z",
+        "kalshiExpected": "2027-04-01T14:00:00Z",
+        "kalshiLatest": "2026-10-08T14:00:00Z",
+        "polyEnd": "2027-07-15T03:00:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/WHENIPO.pdf",
+          "file": "WHENIPO.pdf",
+          "sha256": "402683c0afae0721064d285271cd2c7f4f760f2fbf253be9116f72ddc046f18d",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20IPCC%20-%20%282026.06.08%29.pdf",
+          "file": "PMUS - IPCC - (2026.06.08).pdf",
+          "sha256": "81caf1a64d3c09858b72b3714cb2f59eb745a9caaba735db55da75802ec430e9",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "sports",
+      "identity": "cfb:game-spread; exact retained full-game native route and orientation; ordinary official result only.",
+      "differences": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "conditions": [
+        "Ordinary completed official game with matching participant, scheduled fixture, full-game period and outcome/threshold; no postponement, shortened-game, cancellation or fair-price divergence."
+      ],
+      "sourceFiles": [
+        "FOOTBALLSPREAD.pdf",
+        "PMUS - ASC - (2026.03.26).pdf"
+      ],
+      "indicativeEventAt": "2026-09-25T02:30:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "pairId": "KXNCAAFSPREAD-26SEP24LIBCCAR-LIB7::asc-cfb-librty-coast-2026-09-24-neg-6pt5",
+      "kalshiId": "KXNCAAFSPREAD-26SEP24LIBCCAR-LIB7",
+      "polyId": "asc-cfb-librty-coast-2026-09-24-neg-6pt5",
+      "kalshiTitle": "Liberty wins by over 6.5 points",
+      "polyTitle": "Will the Liberty cover -6.5 vs the Coastal Carolina in Liberty vs. Coastal Carolina?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "72e81759b391d40ef240ac3127ba076a78afb77d27e252800162efdf156dee51",
+        "poly": "beb1efd139de68135f196a181f04d12ce7846a5c6acb850ecf7d2e017089a3a5"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703428+00:00",
+      "primaryTermsRetrievedAt": 1790134922166,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxncaafspread/kxncaafspread-26sep24libccar",
+        "poly": "https://polymarket.us/event/asc-cfb-librty-coast-2026-09-24-neg-6pt5"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFSPREAD-26SEP24LIBCCAR-LIB7",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/asc-cfb-librty-coast-2026-09-24-neg-6pt5"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-26T23:30:00Z",
+        "kalshiExpected": "2026-09-25T02:30:00Z",
+        "kalshiLatest": "2026-09-26T23:30:00Z",
+        "polyEnd": "2026-10-09T03:30:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLSPREAD.pdf",
+          "file": "FOOTBALLSPREAD.pdf",
+          "sha256": "1daaea87a853adcb485bdb80fb8bd5c5fa7c831d8e237f7446bc16ea43705f5a",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20ASC%20-%20%282026.03.26%29.pdf",
+          "file": "PMUS - ASC - (2026.03.26).pdf",
+          "sha256": "649ce9d4499cb3564fec53364ddaff15161be53da04c07a78876fcbc2e0c1b04",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "sports",
+      "identity": "cfb:game-total; exact retained full-game native route and orientation; ordinary official result only.",
+      "differences": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "conditions": [
+        "Ordinary completed official game with matching participant, scheduled fixture, full-game period and outcome/threshold; no postponement, shortened-game, cancellation or fair-price divergence."
+      ],
+      "sourceFiles": [
+        "FOOTBALLTOTALS.pdf",
+        "PMUS - TSC - (2026.03.26).pdf"
+      ],
+      "indicativeEventAt": "2026-09-25T02:30:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "pairId": "KXNCAAFTOTAL-26SEP24LIBCCAR-58::tsc-cfb-librty-coast-2026-09-24-total-57pt5",
+      "kalshiId": "KXNCAAFTOTAL-26SEP24LIBCCAR-58",
+      "polyId": "tsc-cfb-librty-coast-2026-09-24-total-57pt5",
+      "kalshiTitle": "Over 57.5 points scored",
+      "polyTitle": "Will the total in Liberty vs. Coastal Carolina be more than 57.5?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "aba60a1c26c7cdb1fc4447b364e2454377764ec0caf70eaa0c67383aad3ec5e0",
+        "poly": "9af618fafc0dd29ec773096203c084c96e0ae43919938f4fcfac351b07f7b4fa"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703433+00:00",
+      "primaryTermsRetrievedAt": 1790134923049,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxncaaftotal/kxncaaftotal-26sep24libccar",
+        "poly": "https://polymarket.us/event/tsc-cfb-librty-coast-2026-09-24-total-57pt5"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFTOTAL-26SEP24LIBCCAR-58",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/tsc-cfb-librty-coast-2026-09-24-total-57pt5"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-26T23:30:00Z",
+        "kalshiExpected": "2026-09-25T02:30:00Z",
+        "kalshiLatest": "2026-09-26T23:30:00Z",
+        "polyEnd": "2026-10-09T03:30:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLTOTALS.pdf",
+          "file": "FOOTBALLTOTALS.pdf",
+          "sha256": "84be6b2cc3a16e1c3997824a6ec1ebac878a76f98609318cc223e67a6ace1572",
+          "pages": 2
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TSC%20-%20%282026.03.26%29.pdf",
+          "file": "PMUS - TSC - (2026.03.26).pdf",
+          "sha256": "e75d54993da84ae169a043ea3a8d2650939f3f354a0c4c377531ecd77834594d",
+          "pages": 5
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "sports",
+      "identity": "cfb:winner; exact retained full-game native route and orientation; ordinary official result only.",
+      "differences": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "conditions": [
+        "Ordinary completed official game with matching participant, scheduled fixture, full-game period and outcome/threshold; no postponement, shortened-game, cancellation or fair-price divergence."
+      ],
+      "sourceFiles": [
+        "FOOTBALLGAMEWIN.pdf",
+        "PMUS - AEC - (2026.03.26).pdf"
+      ],
+      "indicativeEventAt": "2026-09-25T02:30:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "pairId": "KXNCAAFGAME-26SEP24LIBCCAR-LIB::aec-cfb-librty-coast-2026-09-24",
+      "kalshiId": "KXNCAAFGAME-26SEP24LIBCCAR-LIB",
+      "polyId": "aec-cfb-librty-coast-2026-09-24",
+      "kalshiTitle": "Liberty wins",
+      "polyTitle": "Who will win in the upcoming football event Liberty vs Coastal Carolina scheduled for September 24, 2026 at 11:30 PM UTC?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "a110a3e0e44a7db9cbf5306b110f61d1b0728e06f979665304cb49463dd8d903",
+        "poly": "02416d1e05153acbbcce4703bd9a01b0d8b78a7166abb72ba404fe6d3cedce50"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703439+00:00",
+      "primaryTermsRetrievedAt": 1790134923979,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxncaafgame/kxncaafgame-26sep24libccar",
+        "poly": "https://polymarket.us/event/aec-cfb-librty-coast-2026-09-24"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXNCAAFGAME-26SEP24LIBCCAR-LIB",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/aec-cfb-librty-coast-2026-09-24"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-26T23:30:00Z",
+        "kalshiExpected": "2026-09-25T02:30:00Z",
+        "kalshiLatest": "2026-09-26T23:30:00Z",
+        "polyEnd": "2026-10-09T03:30:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLGAMEWIN.pdf",
+          "file": "FOOTBALLGAMEWIN.pdf",
+          "sha256": "19578b71cd63da63cc2894c60542ef06bb5de56b9366add56f07cee645cfca4b",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AEC%20-%20%282026.03.26%29.pdf",
+          "file": "PMUS - AEC - (2026.03.26).pdf",
+          "sha256": "cb4ad9c4d7ddc8db99c4cd271a4ee0fe7db367828d1f2832d727a0f6084f2d07",
+          "pages": 5
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "sports",
+      "identity": "mlb:game-total; exact retained full-game native route and orientation; ordinary official result only.",
+      "differences": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "conditions": [
+        "Ordinary completed official game with matching participant, scheduled fixture, full-game period and outcome/threshold; no postponement, shortened-game, cancellation or fair-price divergence."
+      ],
+      "sourceFiles": [
+        "BASEBALLTOTALS.pdf",
+        "PMUS - TSC - (2026.03.26).pdf"
+      ],
+      "indicativeEventAt": "2026-09-24T01:40:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "pairId": "KXMLBTOTAL-26SEP231840MILPHI-8::tsc-mlb-mil-phi-2026-09-23-7pt5",
+      "kalshiId": "KXMLBTOTAL-26SEP231840MILPHI-8",
+      "polyId": "tsc-mlb-mil-phi-2026-09-23-7pt5",
+      "kalshiTitle": "Over 7.5 runs scored",
+      "polyTitle": "Will the total in Milwaukee Brewers vs Philadelphia Phillies be more than 7.5?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "e8cdd1d4af7a3978d02bb093df7dd4df98be0d47b4f744b4117a152e95f6c2c8",
+        "poly": "04b7b24fd0d3cbf7963aea7b8f0a8adc85b252122778e20274ad0eb2b2755c1e"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703483+00:00",
+      "primaryTermsRetrievedAt": 1790134924851,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxmlbtotal/kxmlbtotal-26sep231840milphi",
+        "poly": "https://polymarket.us/event/tsc-mlb-mil-phi-2026-09-23-7pt5"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBTOTAL-26SEP231840MILPHI-8",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/tsc-mlb-mil-phi-2026-09-23-7pt5"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-26T22:40:00Z",
+        "kalshiExpected": "2026-09-24T01:40:00Z",
+        "kalshiLatest": "2026-09-26T22:40:00Z",
+        "polyEnd": "2026-10-08T02:40:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/BASEBALLTOTALS.pdf",
+          "file": "BASEBALLTOTALS.pdf",
+          "sha256": "772c802f40ad2fbd3f9527cc915130c2315b111ff3e942c2ced9ab9604fb3fe5",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TSC%20-%20%282026.03.26%29.pdf",
+          "file": "PMUS - TSC - (2026.03.26).pdf",
+          "sha256": "e75d54993da84ae169a043ea3a8d2650939f3f354a0c4c377531ecd77834594d",
+          "pages": 5
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "sports",
+      "identity": "mlb:winner; exact retained full-game native route and orientation; ordinary official result only.",
+      "differences": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "conditions": [
+        "Ordinary completed official game with matching participant, scheduled fixture, full-game period and outcome/threshold; no postponement, shortened-game, cancellation or fair-price divergence."
+      ],
+      "sourceFiles": [
+        "BASEBALLGAMEWIN.pdf",
+        "PMUS - AEC - (2026.03.26).pdf"
+      ],
+      "indicativeEventAt": "2026-09-23T20:10:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "pairId": "KXMLBGAME-26SEP231310WSHDET-DET::aec-mlb-wsh-det-2026-09-23",
+      "kalshiId": "KXMLBGAME-26SEP231310WSHDET-DET",
+      "polyId": "aec-mlb-wsh-det-2026-09-23",
+      "kalshiTitle": "Detroit wins",
+      "polyTitle": "Who will win in the upcoming baseball event Washington Nationals vs Detroit Tigers scheduled for September 23, 2026 at 5:10 PM UTC?",
+      "inverted": true,
+      "marketHashes": {
+        "kalshi": "ebf063f72bf146de886d8242ae5ed40a9976ce609f017d8e4f13b95595e92994",
+        "poly": "0bda813ab973a8a6764fd87eac4d30909dbad38ef115b5d8e70d7e6114b39e89"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703490+00:00",
+      "primaryTermsRetrievedAt": 1790134925906,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxmlbgame/kxmlbgame-26sep231310wshdet",
+        "poly": "https://polymarket.us/event/aec-mlb-wsh-det-2026-09-23"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXMLBGAME-26SEP231310WSHDET-DET",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/aec-mlb-wsh-det-2026-09-23"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-26T17:10:00Z",
+        "kalshiExpected": "2026-09-23T20:10:00Z",
+        "kalshiLatest": "2026-09-26T17:10:00Z",
+        "polyEnd": "2026-10-07T21:10:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/BASEBALLGAMEWIN.pdf",
+          "file": "BASEBALLGAMEWIN.pdf",
+          "sha256": "46b02443153f4692acb3bac3d3aedabe93e837b08c80323013c8dce117ebb6e7",
+          "pages": 5
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20AEC%20-%20%282026.03.26%29.pdf",
+          "file": "PMUS - AEC - (2026.03.26).pdf",
+          "sha256": "cb4ad9c4d7ddc8db99c4cd271a4ee0fe7db367828d1f2832d727a0f6084f2d07",
+          "pages": 5
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "sports",
+      "identity": "nfl:game-spread; exact retained full-game native route and orientation; ordinary official result only.",
+      "differences": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "conditions": [
+        "Ordinary completed official game with matching participant, scheduled fixture, full-game period and outcome/threshold; no postponement, shortened-game, cancellation or fair-price divergence."
+      ],
+      "sourceFiles": [
+        "FOOTBALLSPREAD.pdf",
+        "PMUS - ASC - (2026.03.26).pdf"
+      ],
+      "indicativeEventAt": "2026-09-25T03:15:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "pairId": "KXNFLSPREAD-26SEP24ATLGB-ATL7::asc-nfl-atl-gb-2026-09-24-neg-6pt5",
+      "kalshiId": "KXNFLSPREAD-26SEP24ATLGB-ATL7",
+      "polyId": "asc-nfl-atl-gb-2026-09-24-neg-6pt5",
+      "kalshiTitle": "ATL Falcons wins by over 6.5 points?",
+      "polyTitle": "Will the Atlanta Falcons cover -6.5 vs the Green Bay Packers in Atlanta vs. Green Bay?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "5139dcf370dd5dc78e33de681d0e6a933ff406adb562574d70a4455fa4848bfc",
+        "poly": "1d2d9f08fc3c7c842457bcd432280749fab8a0d0990390638bce70a4842a74f0"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703495+00:00",
+      "primaryTermsRetrievedAt": 1790134926657,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxnflspread/kxnflspread-26sep24atlgb",
+        "poly": "https://polymarket.us/event/asc-nfl-atl-gb-2026-09-24-neg-6pt5"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXNFLSPREAD-26SEP24ATLGB-ATL7",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/asc-nfl-atl-gb-2026-09-24-neg-6pt5"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-27T00:15:00Z",
+        "kalshiExpected": "2026-09-25T03:15:00Z",
+        "kalshiLatest": "2026-09-27T00:15:00Z",
+        "polyEnd": "2026-10-09T04:15:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLSPREAD.pdf",
+          "file": "FOOTBALLSPREAD.pdf",
+          "sha256": "1daaea87a853adcb485bdb80fb8bd5c5fa7c831d8e237f7446bc16ea43705f5a",
+          "pages": 3
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20ASC%20-%20%282026.03.26%29.pdf",
+          "file": "PMUS - ASC - (2026.03.26).pdf",
+          "sha256": "649ce9d4499cb3564fec53364ddaff15161be53da04c07a78876fcbc2e0c1b04",
+          "pages": 4
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    },
+    {
+      "status": "CONDITIONAL",
+      "category": "sports",
+      "identity": "nfl:game-total; exact retained full-game native route and orientation; ordinary official result only.",
+      "differences": [
+        "Football/MLB product documents and exact current metadata reviewed for observation labeling, not strategy approval. Overtime/extra innings and exact half-point threshold are retained.",
+        "CFB and MLB postponement terms differ: Kalshi 48 hours/two days versus PM two weeks. NFL PM uses two days, but interruption/fair-price/source handling remains conditional. MLB totals shortened-game terms need special care. Winner ties/reviews are not assumed binary."
+      ],
+      "conditions": [
+        "Ordinary completed official game with matching participant, scheduled fixture, full-game period and outcome/threshold; no postponement, shortened-game, cancellation or fair-price divergence."
+      ],
+      "sourceFiles": [
+        "FOOTBALLTOTALS.pdf",
+        "PMUS - TSC - (2026.03.26).pdf"
+      ],
+      "indicativeEventAt": "2026-09-25T03:15:00Z",
+      "lockupBasis": "Native Kalshi expected expiry proxy for ordinary game completion; not guaranteed settlement.",
+      "pairId": "KXNFLTOTAL-26SEP24ATLGB-47::tsc-nfl-atl-gb-2026-09-24-total-46pt5",
+      "kalshiId": "KXNFLTOTAL-26SEP24ATLGB-47",
+      "polyId": "tsc-nfl-atl-gb-2026-09-24-total-46pt5",
+      "kalshiTitle": "Full Game: over 46.5 points scored?",
+      "polyTitle": "Will the total in Atlanta vs. Green Bay be more than 46.5?",
+      "inverted": false,
+      "marketHashes": {
+        "kalshi": "04696270596daca34fa135e2644af5866ec035ed4bc2e0edc1195aa8188e1ba7",
+        "poly": "db30ad6dc5ba20f02daa676dae541d451e01f37c63ac64752e2887252831e5bf"
+      },
+      "reviewedAt": "2026-09-23T03:52:31.703500+00:00",
+      "primaryTermsRetrievedAt": 1790134927557,
+      "marketUrls": {
+        "kalshi": "https://kalshi.com/markets/kxnfltotal/kxnfltotal-26sep24atlgb",
+        "poly": "https://polymarket.us/event/tsc-nfl-atl-gb-2026-09-24-total-46pt5"
+      },
+      "primaryMetadataUrls": {
+        "kalshi": "https://external-api.kalshi.com/trade-api/v2/markets/KXNFLTOTAL-26SEP24ATLGB-47",
+        "poly": "https://gateway.polymarket.us/v1/market/slug/tsc-nfl-atl-gb-2026-09-24-total-46pt5"
+      },
+      "administrativeTimes": {
+        "kalshiClose": "2026-09-27T00:15:00Z",
+        "kalshiExpected": "2026-09-25T03:15:00Z",
+        "kalshiLatest": "2026-09-27T00:15:00Z",
+        "polyEnd": "2026-10-09T04:15:00Z"
+      },
+      "sourceDocuments": [
+        {
+          "url": "https://assets.kalshi.com/contract_terms/FOOTBALLTOTALS.pdf",
+          "file": "FOOTBALLTOTALS.pdf",
+          "sha256": "84be6b2cc3a16e1c3997824a6ec1ebac878a76f98609318cc223e67a6ace1572",
+          "pages": 2
+        },
+        {
+          "url": "https://www.polymarketexchange.com/files/products/PMUS%20-%20TSC%20-%20%282026.03.26%29.pdf",
+          "file": "PMUS - TSC - (2026.03.26).pdf",
+          "sha256": "e75d54993da84ae169a043ea3a8d2650939f3f354a0c4c377531ecd77834594d",
+          "pages": 5
+        }
+      ],
+      "strategyApproved": false,
+      "registryPromotion": false
+    }
+  ]
+}

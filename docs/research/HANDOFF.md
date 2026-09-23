@@ -1,19 +1,41 @@
-# Lights On — September 23, 2026 (UTC)
+# Lights On handoff — 2026-09-23
 
-**Implementation and bounded study complete; signed draft publication and hosted verification are the remaining steps at this snapshot.** Branch `codex/non-sports-dispersion`, based on signed draft [PR #13](https://github.com/tyhuffman7/lights_on/pull/13) at `aee43f495145a6a484ff8e344a434a362fb646b2`. Isolated checkout: `/private/tmp/lights-on-non-sports-20260923`. Signed non-main draft publication is explicitly authorized, using **tyhuffman7 only**; no merge or force-push. The user has unlocked the existing 1Password signer for the authorized retry; all signing settings remain unchanged. The final PR/CI identifiers and completion state are recorded in the local completion receipt and main working handoff.
+## Current checkpoint
 
-**ORDER DISABLED. No PAPER strategy session, orders, account access, ledger modification, settlement, fee/recovery change or zero-margin-policy change. Stop after this scoped draft publication and hosted verification.** Do not restart prior sessions or run another observation study without a separately scoped request.
+The authorized read-only streaming culture-versus-sports study is complete. **Stop here; no repeat run, mapping expansion, recovery refinement or PAPER strategy run is authorized.** No orders, new positions, PAPER ledger changes or Julia/Oregon/White Sox settlement occurred. Ohio eligibility, settlement, fee, freshness and risk gates remain in force. Fresh-fill recovery is still unproven; the earlier no-fill sizing/recovery test is complete and must not be repeated without new evidence.
 
-[Full findings and ten review routes](NON-SPORTS-CHECKPOINT-20260923.md) · [methodology/reproduction](NON-SPORTS-METHODOLOGY-20260923.md) · [coverage](non-sports-coverage-20260923.json) · [dispersion](non-sports-dispersion-20260923.json) · [remaining omissions](non-sports-residuals-20260923.json).
+[Final report](STREAMING-DISPERSION-20260923.md) · [Exact payout review](STREAMING-CULTURE-REVIEW-20260923.md) · [Methodology](STREAMING-DISPERSION-METHODOLOGY-20260923.md) · [Sanitized results](streaming-dispersion-results-20260923.json)
 
-**Coverage:** one complete accessible native-US catalog, 121,792 Kalshi / 72,127 PM-US unique listings, 454 bounded requests. Same snapshot before/after: 3,010 → 3,284 pairs, **274 added, zero removed**, all UNVERIFIED. Requested non-sports families 195 → 469; all non-sports 275 → 549. All 2,735 sports candidates unchanged. Gains: awards +147 (72 exact predicates, 75 new explicit work/artist review links), reality TV +41, IPO/business +39, Spotify +28, Billboard +17, exact model releases +2. Existing US Netflix coverage already captures 20 current routes; 20 apparent global English counterparts remain blocked by missing Kalshi language evidence. Eleven same-name/year Nobel Peace routes remain a parser gap. No registry verification was promoted.
+- Ten retained non-sports routes reviewed: 0 EQUIVALENT, 5 CONDITIONAL, 2 INCOMPATIBLE, 3 UNRESOLVED. No strategy approval or registry promotion.
+- Seventeen concurrent routes (10 non-sports, 7 existing sports controls), persistent Kalshi + native PM-US WebSocket books and unchanged economics/confirmation routines. No REST book polling.
+- One run: **03:56:55–05:00:36 UTC**, 63.689 minutes. Frozen 256 MiB evidence guard stopped it; original 05:26:55 UTC deadline was never extended. Remaining 26.308 minutes censored; no restart.
+- **37 distinct raw-positive intervals; 0 fee-positive intervals; 0 confirmation requests or confirmed positives.** Culture 6.632 usable route-hours; sports 7.249; company control 1.035. Netflix show and AGT have no legal complementary whole-depth evidence; do not call those zero opportunities.
+- Kalshi reconnects 0; PM-US 3 using PR #13 per-venue bounded rebuilding. All 34 subscribed books arrived. Supervisor clean exit; no clock fault.
+- Neither culture nor sports has demonstrated more fee-positive opportunities. Confirmed spread magnitude unavailable. No positive spread/depth/short-lockup combination established.
+- Recommend recurring manual review of weekly Billboard and finale-window AGT/Big Brother. Netflix needs controlling chart-scope clarification; VMA tie payouts conflict; Spotify annual and IPO are controls, not short-lockup priorities. Additional broad mapping is not justified before resolving settlement/economics blockers.
 
-**Frozen public-book study:** 2026-09-23 02:53:28.286–03:03:08.797 UTC, 10 rounds, 2,320 GETs, 98 non-sports +18 existing sports routes; at most ten contracts and $50 indicative cash/venue. Of 1,160 scheduled observations, **32 usable REST-response observations across 13 routes**, **991 PM-US HTTP 429s**, **137 explicit cached-response exclusions**. No sports sample passed. Zero positive fee-net sampled intervals, zero confirmations justified, zero strictly executable routes. Raw +3¢ on one Big Brother runner-up sample became −1¢ at q=1 (−0.5¢/contract at q=2); TIME/CPI raw +1¢ reached at most fee-net break-even. The category ranking and sports-heavy emphasis remain **inconclusive**, not disproven or validated. Study settings/code hashes were frozen; no rerun or tuning.
+## Verification and publication
 
-**Verification:** 57 focused parser, regression, fee/depth, interval and deterministic-selection tests passed. Full tests/typecheck/build belong to hosted CI, not a local full suite. Raw catalogs, books, tape, databases, credentials and account data are excluded from publication. Before/after preservation receipts cover the main checkout and PR #13 checkout; the final main working handoff is the only intended change there. Existing signing settings are preserved.
+42 targeted local tests passed after collection; derived counts/coverage/deadline/size invariants passed; frozen runtime sources unchanged. No full local tests/typecheck/build or CI polling occurred during collection. The previous REST observation remains preserved and methodologically inconclusive.
 
-**Preserve historical state:** prior Julia/Oregon positions, White Sox unknown inventory, held recovery cash and all leases/halts remain untouched. Prior recorded total: $19.098 committed, $46.890 Kalshi / $34.012 PM-US free, $100 conservation, $0 realized P/L. This study neither revalidated balances nor settled holdings. The original PR #12 PAPER session must not restart; fresh-fill recovery remains unproven. Historical reports/evidence remain the source of truth.
+Scoped branch: `codex/streaming-culture-dispersion`, based on `codex/non-sports-dispersion` at `a117b2a` (PR #14). Main checkout and its unrelated index/worktree changes are preserved. Publication is authorized only as a **signed non-main draft PR** to `tyhuffman7/lights_on`; no merge or force-push.
 
-**Next action after publication:** stop. A later authorized checkpoint should first diagnose reliable read-only PM-US book access, then review settlement on the report's shortlist before any new price study. Recurring Netflix/Billboard, near-term VMA and reality-event structures are review priorities, not demonstrated profitable opportunities. No recovery refinement, real orders, launch, automation or subagents were used or authorized here.
+Current blocker: both attempts through the repository’s existing 1Password SSH signer failed (`failed to fill whole buffer`) before creating a commit. No push or PR occurred. User unlock request is pending. Preserve signing configuration; do not publish unsigned. Hosted full-suite/typecheck/build CI remains pending signed publication.
 
-Private evidence: ignored `work/non-sports-20260923/` in the isolated checkout (catalog, frozen before/after candidates, freeze, observation tape, receipts, targeted logs, preservation/publication receipts). Reproduction commands are in the methodology; collection commands document the completed run and must not be rerun. Read-only checks: `git status --short --branch`; `git log -3 --oneline`; `gh pr checks <new-draft-number> --repo tyhuffman7/lights_on` using the required account. Hosted checks are not polled during market collection.
+## Needed next action / commands
+
+Complete only scoped signed publication and hosted CI when the existing signer is available; then stop. Use GitHub account `tyhuffman7` exclusively. Inspect/explicitly stage only this checkpoint’s code, tests, review, methodology, sanitized results/report and handoff. Exclude credentials, env files, raw books/tape/catalogs, databases, leases, account information and unrelated work.
+
+Offline report command (does not collect again):
+
+```sh
+node scripts/streaming-dispersion-report.mjs work/streaming-culture-20260923/study docs/research/streaming-dispersion-results-20260923.json
+```
+
+Targeted checks:
+
+```sh
+node --experimental-strip-types --test tests/streaming-dispersion.test.ts tests/streaming-dispersion-report.test.ts tests/book-confirmation-adapter.test.ts tests/candidate-confirmation.test.ts tests/streams.test.ts tests/production-operations.test.ts
+```
+
+Private study evidence stays under `work/streaming-culture-20260923/study/` and is never published. Evidence SHA256 `f4597c7fc96f0c3a630d242ca9d110bf4cbaedffd9d1eb00c9069ae92bc19488`; freeze SHA256 `ad98a00b5e6d7de598299e0d77103d1b5f36934102607a19259cf6cf8cc1e930`.
