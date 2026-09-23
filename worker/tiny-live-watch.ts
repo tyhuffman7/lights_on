@@ -7,7 +7,7 @@ import type {Pair,Venue,Side} from '../lib/arb/types.ts';
 import {quoteCandidate,validity} from '../lib/screen/confirmation.ts';
 import {derivedQuote} from '../lib/research/streaming-dispersion.ts';
 import {liveAdmission,liveSettlementReasons,dormantPilot} from '../lib/pilot/live-admission.ts';
-import type {LiveReview} from '../lib/pilot/live-admission.ts';
+import type {LiveReview,LivePrerequisites} from '../lib/pilot/live-admission.ts';
 import {VenueRebuildBudget,feedDiagnostic} from '../lib/arb/production-operations.ts';
 import {MarketStatusTracker,lifecycleSubscription,bootstrapStatus} from '../lib/screen/market-status.ts';
 import {ConfirmationFeed,publicConfirmationGet} from './book-confirmation-adapter.ts';
@@ -25,12 +25,25 @@ const read=(f:string)=>JSON.parse(readFileSync(f,'utf8'));
 const save=(dir:string,file:string,x:unknown)=>{writeFileSync(resolve(dir,file+'.tmp'),JSON.stringify(x,null,2)+'\n',{mode:0o600});renameSync(resolve(dir,file+'.tmp'),resolve(dir,file));};
 export function watchManifest(root:string){const files=['worker/tiny-live-watch.ts','worker/segmented-evidence.ts','lib/pilot/live-admission.ts','scripts/tiny-live-launch.mjs','docs/pilot/tiny-live-settlement-review-20260923.json'];return {...sourceManifest(root),...Object.fromEntries(files.map(f=>[f,hash(readFileSync(resolve(root,f)))]))};}
 type Entry={pair:Pair;review:LiveReview;metadataAt:number;feeOverridesReviewed:boolean};
+type Readiness=Omit<LivePrerequisites,'isolatedFeedsHealthy'|'persistenceHealthy'>&{expectedReleaseAt:number};
+const unverifiedReadiness:Readiness={expectedReleaseAt:NaN,ohioEligible:false,accountReady:false,accountAt:0,feesValidated:false,unresolvedInventory:true,unresolvedExecution:true,realizedLoss:false};
+export function assessWatchAdmission(pair:Pair,review:LiveReview,original:ReturnType<typeof quoteCandidate>,result:any,
+ context:{stopped:boolean;uninterrupted:boolean;isolatedFeedsHealthy:boolean;persistenceHealthy:boolean},now:number,readiness:Readiness=unverifiedReadiness){
+ return liveAdmission(pair,review,result.repriced??original,{...readiness,
+  confirmed:!context.stopped&&context.uninterrupted&&result.status==='EDGE_SURVIVED'&&result.bookConfirmation?.accepted===true,
+  // Successful confirmationResult stores timestamps in window; failures can carry
+  // top-level endedAt. Neither a missing time nor an acknowledgement is fresh proof.
+  confirmationAt:result.window?.endedAt??result.endedAt??0,
+  marketStatusOpen:result.marketStatus?.kalshi?.admitted===true&&result.marketStatus?.poly?.admitted===true,
+  isolatedFeedsHealthy:context.isolatedFeedsHealthy,persistenceHealthy:context.persistenceHealthy},now);
+}
 export function freezeWatch(dir:string,metadataPath:string,root:string){
  mkdirSync(dir,{recursive:true});if(existsSync(resolve(dir,'frozen.json')))throw Error('SINGLE_FREEZE_ONLY');
  const metadata=read(metadataPath),reviews=read(resolve(root,'docs/pilot/tiny-live-settlement-review-20260923.json')).routes as LiveReview[];
  if(!Array.isArray(metadata)||!metadata.length||metadata.length>watchPolicy.maxRoutes)throw Error('ROUTE_COUNT');
  const selection:Entry[]=metadata.filter((m:any)=>m.pair.a.open&&m.pair.b.open).map((m:any)=>{
   const review=reviews.find(r=>r.pairId===m.pair.id);if(!review||review.marketHashes.kalshi!==m.pair.a.hash||review.marketHashes.poly!==m.pair.b.hash||Date.now()-m.at>600000||m.at>Date.now())throw Error('REVIEW_OR_METADATA_CHANGED');
+  if(m.native.event.fee_type_override!=null||m.native.event.fee_multiplier_override!=null||m.native.kalshi.fee_waiver_expiration_time)throw Error('UNREVIEWED_FEE_OVERRIDE');
   return {pair:m.pair,review,metadataAt:m.at,feeOverridesReviewed:m.native.event.fee_type_override==null&&m.native.event.fee_multiplier_override==null&&!m.native.kalshi.fee_waiver_expiration_time};
  });
  if(!selection.length||new Set(selection.map(e=>e.pair.id)).size!==selection.length)throw Error('EMPTY_OR_DUPLICATE_UNIVERSE');
@@ -95,10 +108,8 @@ export async function runWatch(dir:string,root:string,deadline:number){
     const lane=isolated??feeds,result:any=await confirmScreenCandidate(e.pair,q,lane,()=>tracker.view(e.pair.a.id,Date.now(),health('kalshi').connected),e.review,record);
     const current=state(e),latest=quoteCandidate(e.pair,current.a?.book,current.b?.book,side,Date.now(),1);
     const uninterrupted=active.get(key)?.id===ep.id&&current.usable&&latest.positiveExchangeNet;
-    const admission=liveAdmission(e.pair,e.review,result.repriced??q,{confirmed:!stopped&&uninterrupted&&result.status==='EDGE_SURVIVED'&&result.bookConfirmation?.accepted,confirmationAt:result.endedAt??0,
-     marketStatusOpen:result.marketStatus?.kalshi?.admitted===true&&result.marketStatus?.poly?.admitted===true,expectedReleaseAt:NaN,
-     ohioEligible:false,accountReady:false,accountAt:0,feesValidated:false,unresolvedInventory:true,unresolvedExecution:true,
-     isolatedFeedsHealthy:!!isolated&&Object.values(isolated).every(feed=>feed.health().connected&&feed.health().clockOkay&&feed.health().backlog===0),persistenceHealthy:writer.snapshot().fault===null,realizedLoss:false},Date.now());
+    const admission=assessWatchAdmission(e.pair,e.review,q,result,{stopped,uninterrupted,
+     isolatedFeedsHealthy:!!isolated&&Object.values(isolated).every(feed=>feed.health().connected&&feed.health().clockOkay&&feed.health().backlog===0),persistenceHealthy:writer.snapshot().fault===null},Date.now());
     const row={episode:ep.id,pairId:e.pair.id,settlement:e.review.classification,startedAt:s.at,endedAt:Date.now(),status:stopped?'CENSORED':result.status,
      original:derivedQuote(q),repriced:derivedQuote(result.repriced??null),bookConfirmed:!stopped&&uninterrupted&&result.bookConfirmation?.accepted===true,admission,fillClaim:false};
     confirmations.push(row);record('CONFIRMATION_RESULT',{summary:row,completeRequestedProof:result});
