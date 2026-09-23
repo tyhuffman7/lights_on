@@ -78,6 +78,16 @@ export function interpretLiveReply(draft:OrderDraft,status:number,raw:unknown):L
  }catch{return unknown('REPLY_FIELDS_INVALID');}
 }
 export type Arming={ordersEnabled:boolean;planSha256:string;authorization:{userAuthorizedAt:number;expiresAt:number;planSha256:string;reference:string}|null};
+export async function collectLiveReply(draft:OrderDraft,response:Response,requestAt:number,requestMono:number):Promise<LiveOutcome>{
+ const transport={requestAt,requestMono,replyHeadersAt:Date.now(),replyHeadersMono:performance.now(),status:response.status};
+ const chunks:Buffer[]=[];let size=0,truncated=false,readFailed=false;
+ try{const reader=response.body?.getReader();if(reader){while(true){const next=await reader.read();if(next.done)break;const room=1024*1024-size;chunks.push(Buffer.from(next.value.subarray(0,room)));size+=Math.min(room,next.value.length);if(next.value.length>room){truncated=true;await reader.cancel();break;}}}}
+ catch{readFailed=true;}
+ const text=Buffer.concat(chunks).toString('utf8'),raw={transport:{...transport,replyBodyAt:Date.now(),replyBodyMono:performance.now()},responseText:text,truncated,readFailed};
+ if(truncated||readFailed)return {state:'unknown',orderId:null,filled:null,feeMicros:null,reason:truncated?'RESPONSE_RESOURCE_LIMIT_PREFIX_RETAINED':'REPLY_READ_FAILED_PREFIX_RETAINED',raw};
+ try{return {...interpretLiveReply(draft,response.status,JSON.parse(text)),raw};}
+ catch{return {state:'unknown',orderId:null,filled:null,feeMicros:null,reason:'MALFORMED_REPLY_RETAINED',raw};}
+}
 // Literal build gate, not an environment switch. The dormant transport below is
 // unreachable in this checkpoint, even with a forged arming file. Future activation
 // requires separately authorized review of this gate plus an exact-plan grant.
@@ -93,9 +103,9 @@ export class DisabledLiveAdapter {
   let outcome:LiveOutcome;
   try{
    const headers=signOrderDraft(draft,credentials(),Date.now());
+   const requestAt=Date.now(),requestMono=performance.now();
    const response=await fetch(draft.url,{method:'POST',headers,body:JSON.stringify(draft.body),redirect:'error',signal:AbortSignal.timeout(5000)});
-   const raw=await response.text();if(Buffer.byteLength(raw)>1024*1024)throw Error('RESPONSE_RESOURCE_LIMIT');
-   outcome=interpretLiveReply(draft,response.status,JSON.parse(raw));
+   outcome=await collectLiveReply(draft,response,requestAt,requestMono);
   }catch{outcome={state:'unknown',orderId:null,filled:null,feeMicros:null,reason:'TRANSPORT_OR_RESPONSE_UNKNOWN_NO_RETRY',raw:null};}
   ledger.receipt(outcome);return outcome;
  }

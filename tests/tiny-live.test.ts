@@ -1,10 +1,10 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {generateKeyPairSync,verify,constants} from 'node:crypto';
+import {generateKeyPairSync,verify,constants,createHash} from 'node:crypto';
 import {mkdtempSync,rmSync,readFileSync,writeFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {constructLiveOrder,signOrderDraft,interpretLiveReply,DisabledLiveAdapter,validateOrderDraft} from '../lib/pilot/live-adapter.ts';
+import {constructLiveOrder,signOrderDraft,interpretLiveReply,DisabledLiveAdapter,validateOrderDraft,collectLiveReply} from '../lib/pilot/live-adapter.ts';
 import {LiveLedger,validateFrozenPlan} from '../lib/pilot/live-ledger.ts';
 import {liveAdmission,liveSettlementReasons,dormantPilot,settlementDimensions} from '../lib/pilot/live-admission.ts';
 import {pair,book} from './research-fixture.ts';
@@ -47,13 +47,18 @@ test('timeouts, 4xx/5xx, partial FOK, off-limit fills and contradictory order id
  assert.equal(interpretLiveReply(draft('poly','no'),200,pReply('ORDER_STATE_PARTIALLY_FILLED',.5)).state,'unknown');
 });
 const temporary=()=>mkdtempSync(join(tmpdir(),'tiny-live-'));
+const retainedProof={orderAndFillEvidence:{synthetic:true,order:'fixture',fills:[]},evidenceSha256:createHash('sha256').update(JSON.stringify({synthetic:true,order:'fixture',fills:[]})).digest('hex')};
+test('malformed and oversized replies retain their received evidence and timings while failing closed',async()=>{
+ const malformed=await collectLiveReply(draft('poly'),new Response('not-json',{status:503}),Date.now(),performance.now());assert.equal(malformed.state,'unknown');assert.equal((malformed.raw as any).responseText,'not-json');assert.equal((malformed.raw as any).transport.status,503);
+ const large=await collectLiveReply(draft('kalshi'),new Response('x'.repeat(1024*1024+1)),Date.now(),performance.now());assert.equal(large.state,'unknown');assert.equal((large.raw as any).truncated,true);assert.equal((large.raw as any).responseText.length,1024*1024);
+});
 test('hard disabled adapter rejects forged arming before credentials, revalidation, network or ledger access',async()=>{
  let called=0;const adapter=new DisabledLiveAdapter(),original=globalThis.fetch;globalThis.fetch=async()=>{called++;throw Error('MUST_NOT_SEND');};
  try{await assert.rejects(adapter.submit('first',null as any,{ordersEnabled:true,planSha256:'a',authorization:{userAuthorizedAt:1,expiresAt:Date.now()+10000,planSha256:'a',reference:'forged'}},()=>{called++;throw Error();},async()=>{called++;return true;}),/HARD_DISABLED/);assert.equal(called,0);assert.equal(adapter.ordersEnabled,false);assert.equal(dormantPilot.ordersEnabled,false);}finally{globalThis.fetch=original;}
 });
 function filled(l:LiveLedger,slot:'first'|'second'|'recovery',state:'fill'|'no-fill'='fill'){
  const d=l.request(slot),id=d.venue+'-id';l.receipt({state,orderId:id,filled:state==='fill'?1:0,feeMicros:0,raw:{synthetic:true},reason:'fixture'});
- l.reconcile({state,orderId:id,quantity:state==='fill'?1:0,feeMicros:0,cashFlowMicros:state==='fill'?(slot==='recovery'?400000:-410000):0,evidenceSha256:'b'.repeat(64)});
+ l.reconcile({state,orderId:id,quantity:state==='fill'?1:0,feeMicros:0,cashFlowMicros:state==='fill'?(slot==='recovery'?400000:-410000):0,...retainedProof});
 }
 test('one paired attempt is durable, cannot overlap or reuse proceeds, and remains spent after reopening',()=>{
  const dir=temporary();let l=new LiveLedger(dir);try{
@@ -68,7 +73,7 @@ test('process death after intent, missing receipt, and unknown response never au
 });
 test('oversize caps, changed wire quantity and excess actual debit fail closed',()=>{
  const p=plan();p.maxCommitted=50001;assert.throws(()=>validateFrozenPlan(p));p.maxCommitted=5000;assert.throws(()=>validateFrozenPlan(p));p.maxCommitted=50000;p.entry[0].draft.body.count='100.00';assert.throws(()=>validateFrozenPlan(p));
- const dir=temporary(),l=new LiveLedger(dir);try{l.reserve(plan());l.request('first');l.receipt({state:'fill',orderId:'k',filled:1,feeMicros:0,raw:{},reason:'fixture'});l.reconcile({state:'fill',orderId:'k',quantity:1,feeMicros:0,cashFlowMicros:-500000,evidenceSha256:'a'.repeat(64)});assert.equal(l.view().phase,'UNKNOWN');}finally{l.close();rmSync(dir,{recursive:true,force:true});}
+ const dir=temporary(),l=new LiveLedger(dir);try{l.reserve(plan());l.request('first');l.receipt({state:'fill',orderId:'k',filled:1,feeMicros:0,raw:{},reason:'fixture'});l.reconcile({state:'fill',orderId:'k',quantity:1,feeMicros:0,cashFlowMicros:-500000,...retainedProof});assert.equal(l.view().phase,'UNKNOWN');}finally{l.close();rmSync(dir,{recursive:true,force:true});}
 });
 test('live settlement cannot promote conditional terms, stale reviews or changed metadata',()=>{
  const p=pair(),now=Date.now(),review={pairId:p.id,classification:'LIVE_EQUIVALENT' as const,ordinaryOnly:false,reviewedAt:now-1000,expiresAt:now+1000,marketHashes:{kalshi:p.a.hash,poly:p.b.hash},dimensions:Object.fromEntries(settlementDimensions.map(k=>[k,'MATCH'])) as any,reasons:[],sources:[{url:'https://example.test/k',sha256:'a'.repeat(64)},{url:'https://example.test/p',sha256:'b'.repeat(64)}]};

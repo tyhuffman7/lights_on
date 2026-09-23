@@ -68,9 +68,9 @@ export class LiveLedger {
  }
  // Caller must supply reconciled order AND individual fill evidence, not estimates.
  // This boundary never treats submission receipts alone as known inventory.
- reconcile(e:{state:'fill'|'no-fill'|'rejected';orderId:string;quantity:number;feeMicros:number;cashFlowMicros:number;evidenceSha256:string}){
+ reconcile(e:{state:'fill'|'no-fill'|'rejected';orderId:string;quantity:number;feeMicros:number;cashFlowMicros:number;evidenceSha256:string;orderAndFillEvidence:unknown}){
   const s=this.state,r=s.receipt,p=s.plan;
-  if(s.phase!=='RECONCILE'||!r||!p||!r.orderId||r.orderId!==e.orderId||r.state!==e.state||! /^[a-f0-9]{64}$/.test(e.evidenceSha256)||!money(e.feeMicros)||!Number.isSafeInteger(e.cashFlowMicros)||e.quantity!==(e.state==='fill'?1:0)||e.quantity!==r.filled||(r.feeMicros!==null&&r.feeMicros!==e.feeMicros))throw Error('RECONCILIATION_MISMATCH');
+  if(s.phase!=='RECONCILE'||!r||!p||!r.orderId||r.orderId!==e.orderId||r.state!==e.state||!e.orderAndFillEvidence||e.evidenceSha256!==hash(JSON.stringify(e.orderAndFillEvidence))||!money(e.feeMicros)||!Number.isSafeInteger(e.cashFlowMicros)||e.quantity!==(e.state==='fill'?1:0)||e.quantity!==r.filled||(r.feeMicros!==null&&r.feeMicros!==e.feeMicros))throw Error('RECONCILIATION_MISMATCH');
   const leg=s.slot==='recovery'?p.recovery:p.entry[s.slot==='first'?0:1];
   const excess=e.feeMicros>leg.feeUpper*100||(s.slot!=='recovery'&&(-e.cashFlowMicros>(leg.draft.leg.limitPrice+leg.feeUpper)*100||e.cashFlowMicros>0))||(e.state!=='fill'&&(e.cashFlowMicros!==0||e.feeMicros!==0));
   if(excess){this.persist('RECONCILIATION_LIMIT_BREACH',{...s,phase:'UNKNOWN'},e);return;}
