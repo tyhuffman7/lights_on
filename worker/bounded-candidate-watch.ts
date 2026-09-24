@@ -113,7 +113,7 @@ export async function observe(dir:string,root:string,deadline:number){
    const proof={requestedAt,at,ka,pa,reasons,q};record('REQUESTED_BOOK_PROOF',proof);writer.checkpoint();
    const row={episode,pairId:e.pair.id,at,status:reasons.length?'FAILED':survived?'EDGE_SURVIVED':'EDGE_DISAPPEARED',reasons:[...new Set(reasons)],quote:q??null,evidenceSha256:sha(JSON.stringify(proof)),noise:q?noiseResilience(q,fresh.fees,fresh.ticks):null};confirmations.push(row);
    if(survived){counts.confirmedPositives++;if(!best||rankWatchQuotes({quote:q!,depth:original.quantity},{quote:best.quote,depth:best.quote.quantity})<0)best=row;
-    if(row.noise?.worthwhile){candidate={status:'PILOT_CANDIDATE',...row,markets:{kalshi:{id:e.pair.a.id,side:q!.aSide,price:q!.kalshi.levels.at(-1)!.price},poly:{id:e.pair.b.id,side:q!.bSide,price:q!.poly.levels.at(-1)!.price}},residualSettlementRisks:e.family.divergences,
+    if(row.noise?.worthwhile){candidate={...row,status:'PILOT_CANDIDATE',markets:{kalshi:{id:e.pair.a.id,side:q!.aSide,price:q!.kalshi.levels.at(-1)!.price},poly:{id:e.pair.b.id,side:q!.bSide,price:q!.poly.levels.at(-1)!.price}},residualSettlementRisks:e.family.divergences,
      indicativeLockupMs:q!.expectedReleaseAt-at,exceptionEvidenceScope:'Current venue metadata and market-status flags; no known active flag',nonEligibilityPrerequisitesComplete:false,
      remainingNonEligibilityChecks:['Independent current event/exception review','Fresh account and lifetime-ledger reconciliation; sufficient venue cash; no unknown exposure'],liveSubmission:'LIVE_SUBMISSION_BLOCKED',ordersEnabled:false,fillClaim:false};
      record('CANDIDATE_FROZEN',candidate);save(dir,'candidate.json',candidate);stop('STRONG_CONFIRMED_CANDIDATE_FROZEN');}}

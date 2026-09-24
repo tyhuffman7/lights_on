@@ -7,10 +7,21 @@
     "skipped": 0,
     "phase": "BEFORE_COLLECTION"
   },
-  "frozenSourceManifestMatches": true,
   "protectedChainMatches": true,
   "aggregateCategoriesReconcile": true,
   "supervisorExitCode": 0,
   "hostedCI": "PENDING_PUBLICATION",
-  "ordersEnabled": false
+  "ordersEnabled": false,
+  "observedImplementationCommit": "c474ce4fee429e9a8f9cf67b9ec722a18f58ce4e",
+  "frozenSourceManifestMatchedAtCompletion": true,
+  "postObservationChanges": [
+    "Correct candidate status field ordering; no candidate occurred in the completed run, and no observation restarted."
+  ],
+  "firstHostedCI": {
+    "runId": 35938499445,
+    "tests": 759,
+    "passed": 759,
+    "typecheck": "failed: candidate status field overwritten by object spread",
+    "build": "passed"
+  }
 }
