@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   binaryOutcomes, classifyCluster, clusterQuery, evaluateDirection, fetchAllClusters,
-  identityFinding, parseFreshBook, redactJson, safeFailure,
+  identityFinding, nextCycleDelay, parseFreshBook, redactJson, safeFailure,
 } from "../lib/research/pmxt-poc.ts";
 import type { PmxtCluster, PmxtMarket, ResearchBook } from "../lib/research/pmxt-poc.ts";
 import type { FeeSchedule } from "../lib/research/fees.ts";
@@ -141,4 +141,12 @@ test("API errors are categorized and secrets redacted without echoing raw errors
   const encoded = redactJson({ error: "failed " + secret, key: secret }, secret);
   assert.equal(encoded.includes(secret), false);
   assert.equal(encoded.includes("[REDACTED]"), true);
+});
+
+test("polling stops at the deadline instead of accelerating in the final minute", () => {
+  const start = 1_000_000, deadline = start + 60 * 60_000;
+  assert.equal(nextCycleDelay(start + 2_500, start, deadline, 60_000), 57_500);
+  assert.equal(nextCycleDelay(deadline - 55_000, deadline - 60_000, deadline, 60_000), null);
+  assert.equal(nextCycleDelay(deadline - 1, deadline - 30_000, deadline, 60_000), null);
+  assert.equal(nextCycleDelay(start + 65_000, start, deadline, 60_000), 60_000);
 });

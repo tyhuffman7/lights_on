@@ -214,3 +214,10 @@ export function redactJson(value: unknown, key: string): string {
   const encoded = JSON.stringify(value);
   return key ? encoded.replaceAll(key, "[REDACTED]") : encoded;
 }
+
+// A cycle never begins just because its scheduled next start crossed the deadline.
+export function nextCycleDelay(now: number, cycleStart: number, deadline: number, intervalMs: number): number | null {
+  if (now >= deadline || cycleStart + intervalMs >= deadline) return null;
+  const remaining = cycleStart + intervalMs - now;
+  return remaining > 0 ? remaining : intervalMs;
+}

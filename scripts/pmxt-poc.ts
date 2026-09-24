@@ -6,7 +6,7 @@ import { GENERAL_KALSHI_RATE, PM_US_JULY_2026_RATE } from "../lib/research/fees.
 import type { FeeSchedule } from "../lib/research/fees.ts";
 import {
   binaryOutcomes, classifyCluster, evaluateDirection, fetchAllClusters, identityFinding,
-  parseFreshBook, redactJson, safeFailure, TARGET_VENUES,
+  nextCycleDelay, parseFreshBook, redactJson, safeFailure, TARGET_VENUES,
 } from "../lib/research/pmxt-poc.ts";
 import type { PmxtCluster, PmxtMarket, ResearchBook } from "../lib/research/pmxt-poc.ts";
 
@@ -258,9 +258,11 @@ async function main() {
       await save(cyclesFile, cycle);
       if (cycle.failure === "AUTH") break;
       if (cycle.failure === "RATE_LIMIT") await delay(60_000);
-      const next = cycleStart + intervalSeconds * 1000;
-      if (cycleNo + 1 < maxCycles && next < started + minutes * 60_000)
-        await delay(Math.max(0, next - Date.now()));
+      if (cycleNo + 1 >= maxCycles) break;
+      const waitMs = nextCycleDelay(Date.now(), cycleStart, started + minutes * 60_000,
+        intervalSeconds * 1000);
+      if (waitMs === null) break;
+      await delay(waitMs);
     }
   } finally {
     summary.uniqueTargetContainingClusters = targetIds.size;
