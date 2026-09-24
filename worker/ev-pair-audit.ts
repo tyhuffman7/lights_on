@@ -39,17 +39,29 @@ export function formatPairAudit(pair:Pair,books:Record<Venue,StreamBook>,now=Dat
 export async function auditPair(kalshiId:string,pmUsId:string,quantity=1){
   if(!/^[a-zA-Z0-9_.-]{1,220}$/.test(kalshiId)||!/^[a-zA-Z0-9_.-]{1,220}$/.test(pmUsId))throw Error('INVALID_MARKET_ID');
   if(!Number.isSafeInteger(quantity)||quantity<1||quantity>100)throw Error('INVALID_AUDIT_QUANTITY');
-  const [a,b]=await Promise.all([market('kalshi',kalshiId),market('poly',pmUsId)]);
+  const retrieval=await Promise.allSettled([market('kalshi',kalshiId),market('poly',pmUsId)]);
+  const labels=['Kalshi market retrieval','PM-US market retrieval'];
+  const gate=retrieval.map((r,i)=>`${labels[i]}: ${r.status==='fulfilled'?'PASS':`FAIL — ${(r.reason as Error).message}`}`);
+  if(retrieval.some(r=>r.status==='rejected'))return ['PAIR AUDIT — READ-ONLY PUBLIC L2',...gate,
+    'Pricing: NOT STARTED — MARKET_RETRIEVAL_FAILED'].join('\n');
+  const [a,b]=retrieval.map(r=>(r as PromiseFulfilledResult<Awaited<ReturnType<typeof market>>>).value);
   const matches=matchCandidates([a],[b]),m=matches[0];
   const pair:Pair=m?.pair??{id:`direct:${kalshiId}|${pmUsId}`,a,b,inverted:false,reviewed:false};
-  const [ka,pb,rawK,rawP]=await Promise.all([book(a),book(b),
+  const depth=await Promise.allSettled([book(a),book(b),
     getJSON(`https://external-api.kalshi.com/trade-api/v2/markets/${encodeURIComponent(a.id)}`),
     getJSON(`https://gateway.polymarket.us/v1/market/slug/${encodeURIComponent(b.id)}`)]);
-  const km=rawK.market,pm=rawP.market??rawP,ranges=km?.price_ranges;
+  const bookGate=[`Kalshi L2 retrieval: ${depth[0].status==='fulfilled'?'PASS':`FAIL — ${(depth[0].reason as Error).message}`}`,
+    `PM-US L2 retrieval: ${depth[1].status==='fulfilled'?'PASS':`FAIL — ${(depth[1].reason as Error).message}`}`];
+  if(depth[0].status==='rejected'||depth[1].status==='rejected')return ['PAIR AUDIT — READ-ONLY PUBLIC L2',...gate,...bookGate,
+    'Pricing: NOT STARTED — EXECUTABLE_BOOK_RETRIEVAL_FAILED'].join('\n');
+  const ka=depth[0].value,pb=depth[1].value;
+  const rawK=depth[2].status==='fulfilled'?depth[2].value:null,rawP=depth[3].status==='fulfilled'?depth[3].value:null;
+  const km=rawK?.market,pm=rawP?.market??rawP,ranges=km?.price_ranges;
   const kalshiTick=km?.price_level_structure==='linear_cent'&&ranges?.length===1&&ranges[0].step==='0.0100'?100:0;
-  const pTick=Math.round(Number(pm.orderPriceMinTickSize)*10000);
-  return formatPairAudit(pair,{kalshi:asRestBook('kalshi',a.id,ka),poly:asRestBook('poly',b.id,pb)},Date.now(),
+  const pTick=Math.round(Number(pm?.orderPriceMinTickSize)*10000);
+  const output=formatPairAudit(pair,{kalshi:asRestBook('kalshi',a.id,ka),poly:asRestBook('poly',b.id,pb)},Date.now(),
     m?'MATCHED':'UNVERIFIED_ORIENTATION',quantity,{kalshi:kalshiTick,poly:Number.isSafeInteger(pTick)&&pTick>0?pTick:0});
+  return output.replace('\n',`\n${[...gate,...bookGate].join('\n')}\n`);
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
   const kalshi=process.argv.find(x=>x.startsWith('--kalshi='))?.slice(9),pmus=process.argv.find(x=>x.startsWith('--pmus='))?.slice(7);

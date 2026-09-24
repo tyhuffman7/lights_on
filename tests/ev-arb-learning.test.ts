@@ -97,6 +97,7 @@ test('ledger is durable, rejects secrets and reports P&L and venue rates separat
     const f=emptyFunnel();observeFunnel(f,e);ledger.writeFunnel(f);ledger.close();
     const rows=readAttempts(dir),report=learningReport(rows,f);
     assert.equal(rows.length,2);assert.equal(report.funnel.paperAttempts,1);assert.equal(report.funnel.counterfactualEvaluations,1);
+    assert.equal(report.outcomes.rejected,0);assert.equal(report.counterfactualOutcomes.cleanPairedFills,1);
     assert.equal(report.pnl.netModeledPaperPnL,
       report.pnl.grossPaperProfit-report.pnl.fees-report.pnl.normalSlippage-report.pnl.unwindLoss-report.pnl.orphanLoss);
     assert.equal(report.byFirst.kalshi.attempts,1);assert.equal(report.byFirst.poly.attempts,1);

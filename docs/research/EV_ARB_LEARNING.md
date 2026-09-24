@@ -2,6 +2,8 @@
 
 **Status:** research and simulated execution only. No order submission is enabled. This branch is stacked on the September 23 bounded candidate-watch branch, not the PMXT experiment. Kalshi and Polymarket US data come from the repository's direct adapters and stream books. International Polymarket is outside scope.
 
+The first published code commit `4afa0bcabfb27afeaaac21412b84cd9a4e37dda4` passed [GitHub CI 36065594252](https://github.com/tyhuffman7/lights_on/actions/runs/36065594252): 768/768 tests, typecheck and production build. [Draft PR #21](https://github.com/tyhuffman7/lights_on/pull/21) targets the unmerged candidate-watch branch. The paper observation began only after that gate passed.
+
 ## Why this changed
 
 The bounded watch treated an unknown-account, one-cent-per-0.01-contract-fragment Kalshi fee **upper bound** as its fee-net admission price. Raw positive spreads were counted in a diagnostic, but none could advance to confirmation. This bound is retained for stress testing; it is not an estimate of a normal taker fee. The September 23 watch therefore established no confirmed profitable execution, while it also did not establish that actual exchange fees erase every spread.
@@ -36,6 +38,7 @@ The append-only attempt ledger includes a stable ID, pair/market IDs, orientatio
 ```sh
 npm run research:audit-pair -- --kalshi=KALSHI_TICKER --pmus=PM_US_SLUG [--quantity=1]
 npm run research:ev-report -- WORK/EV_SESSION
+npm run research:ev-report -- WORK/EV_SESSION --json
 npm run research:ev-replay -- /path/to/ignored/candidate-watch/session/evidence [OUTPUT_JSON]
 npm run research:ev-watch -- /path/to/ignored/candidate-watch/session/frozen.json WORK/NEW_EV_SESSION /path/to/read-only.env
 ```
@@ -57,9 +60,25 @@ The original 2-hour watch summary remains authoritative for its own bounded-fee 
 
 The strongest **fresh** modeled net observation in the retained replay was `KXOSCARACTO-27-JOH::tac-oscars-03-14-2027-bestacto-johmal`, Kalshi NO + PM-US YES, at 2026-09-24 00:06:06.704 UTC: gross +$0.07, modeled normal-fee net +$0.04 for one equal contract. This is an observed book quote, not a confirmed executable trade or realized profit. The 71 net-positive observations include stale and/or paper-cap failures; only 12 passed the other paper entry gates. The fee precision assumption and settlement basis remain unresolved.
 
-## Bounded fresh observation
+## Bounded fresh observation — September 24
 
-Pending the frozen 90-minute read-only run and its ledger report. Results will be added without changing run parameters or replaying the completed September 23 watch.
+The single frozen read-only PAPER run started **2026-09-24 22:10:08 UTC** and stopped at its original **23:40:08 UTC** deadline; the worker flushed and exited at 23:40:12 UTC. The frozen source hashes match the signed initial PR commit above. The run reached 34 of 48 pinned shards before the deadline. **2,852 is the matched route universe, not a claim that all routes were streamed in this window.** Current metadata refresh excluded 155 changed pinned definitions, 127 unreviewed fee overrides, and 10 unsupported fee/exchange cases in reached shards. The private session directory retains public book bodies and attempt records; [the sanitized, hash-checked receipt](ev-arb-paper-run-20260924.json) contains aggregate data and attempt references only. No credentials, account responses, or raw books were published.
+
+| Measure | Fixed-window result |
+| --- | ---: |
+| Fresh two-book depth orientation observations | 21,950 |
+| Gross-positive orientation observations, including stale | 47,597 |
+| Modeled normal-fee-net-positive observations, including stale | 3,548 |
+| Fresh, paper-eligible, normal-net-positive observations blocked by old extreme fee stress | 4 |
+| Empirical-EV-positive observations | 0; insufficient sample |
+| Primary paper attempts / first-leg counterfactuals | 1 / 1 |
+| Primary clean pairs / pre-entry disappearances / unwinds / orphans | 1 / 0 / 0 / 0 |
+
+These are repeated 250 ms orientation samples, **not independent trade opportunities**. The four old-stress-only readings came from the one attempted route. The primary Kalshi-first path simulated one $0.50 YES fill and one delayed $0.45 PM-US NO fill after 285 ms. Its projected ordinary-settlement accounting is **+$0.05 gross −$0.04 modeled fees −$0.00 normal slippage = +$0.01 net**. The PM-US-first counterfactual simulated a $0.45 first fill; at the hedge time the Kalshi book was no longer current under the fixed 2-second gate. It simulated selling PM-US at $0.44, giving a **$0.01 unwind price loss + $0.04 total fees = −$0.05 counterfactual P&L**. The counterfactual is excluded from primary net and bankroll accounting. Both outcomes are public-depth simulations, not exchange fills or actual profit/loss.
+
+The strongest fresh quote and the paper episode were `KXOSCARPIC-27-ODY::tac-oscars-03-14-2027-bestpic-odysse`, Kalshi YES + PM-US NO: +$0.05 gross and +$0.01 modeled net for one contract. Its extreme fragmentation fee stress bound was **$1.0375** and its one-native-tick-on-both-legs stress net was **−$0.01**. The pinned ordinary-outcome family is `BOUNDED_BASIS` with `venue-finality` and `family-branches` divergences; a fresh direct pair audit retrieved both public markets and L2 books but found **no reviewed per-pair settlement profile**. The PM-US market's recorded close was March 29, 2027 and Kalshi's was December 31, 2027. The later close is only an indicative lockup floor, not a guaranteed cash-release date. A 1-cent projected gain on roughly 99 cents committed over such a horizon is weak small-capital economics even before settlement and execution uncertainty.
+
+The run has **one** primary attempt and one dependent counterfactual. Every first-leg rate and execution-adjusted EV remains `INSUFFICIENT_EMPIRICAL_SAMPLE`; the 100% primary clean rate and 100% PM-US-first counterfactual unwind rate are single observations, not estimated probabilities. No new run, parameter tuning, or live order followed this checkpoint.
 
 ## Remaining gates and a future tiny live pilot
 

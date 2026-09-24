@@ -74,7 +74,9 @@ export function empiricalEvForCandidate(e:ArbEvaluation,attempts:PaperAttempt[],
     sampleSize:rows.length,expectedValue:estimate};
 }
 export function learningReport(attempts:PaperAttempt[],funnel:Funnel,policy:EvPaperPolicy=evPaperDefaults){
-  const accepted=attempts.filter(a=>a.attemptRole==='PRIMARY'&&!a.finalState.startsWith('REJECTED_'));
+  const primary=attempts.filter(a=>a.attemptRole==='PRIMARY');
+  const accepted=primary.filter(a=>!a.finalState.startsWith('REJECTED_'));
+  const counterfactual=attempts.filter(a=>a.attemptRole==='COUNTERFACTUAL');
   const allEligible=attempts.filter(a=>!a.finalState.startsWith('REJECTED_'));
   const paired=accepted.filter(a=>a.finalState==='CLEAN_PAIRED_FILL');
   const disappear=accepted.filter(a=>a.finalState==='DISAPPEARED_BEFORE_ENTRY');
@@ -97,9 +99,15 @@ export function learningReport(attempts:PaperAttempt[],funnel:Funnel,policy:EvPa
   const net=sums('paperPnL'),parts=sums('grossPaperProfit')-sums('fees')-sums('normalSlippage')-sums('unwindLoss')-sums('orphanLoss');
   if(net!==parts)throw Error('PAPER_PNL_RECONCILIATION_FAILED');
   return {simulation:'PAPER_DEPTH_COUNTERFACTUAL_NOT_REAL_FILL',ordersEnabled:false,funnel:{...funnel,paperAttempts:accepted.length,
-      counterfactualEvaluations:attempts.filter(a=>a.attemptRole==='COUNTERFACTUAL').length},
+      counterfactualEvaluations:counterfactual.length},
     outcomes:{cleanPairedFills:paired.length,disappearedBeforeEntry:disappear.length,unwinds:unwinds.length,
-      orphans:orphans.length,rejected:attempts.length-accepted.length},
+      orphans:orphans.length,rejected:primary.length-accepted.length},
+    counterfactualOutcomes:{cleanPairedFills:counterfactual.filter(a=>a.finalState==='CLEAN_PAIRED_FILL').length,
+      disappearedBeforeEntry:counterfactual.filter(a=>a.finalState==='DISAPPEARED_BEFORE_ENTRY').length,
+      unwinds:counterfactual.filter(a=>a.unwindRequired).length,
+      orphans:counterfactual.filter(a=>a.residualQuantity>0).length,
+      rejected:counterfactual.filter(a=>a.finalState.startsWith('REJECTED_')).length,
+      modeledPnL:counterfactual.reduce((n,a)=>n+a.paperPnL,0)},
     pnl:{grossPaperProfit:sums('grossPaperProfit'),fees:sums('fees'),normalSlippage:sums('normalSlippage'),
       unwindLoss:sums('unwindLoss'),orphanLoss:sums('orphanLoss'),netModeledPaperPnL:net,
       unresolvedResidualCost:sums('residualCost'),reconciled:true},byFirst,
