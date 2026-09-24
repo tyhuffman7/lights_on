@@ -1,0 +1,201 @@
+{
+  "scope": "RETAINED_SEPTEMBER_23_BOOK_EVENT_REPLAY",
+  "simulation": "HISTORICAL_L2_COUNTERFACTUAL_NOT_FILLS",
+  "ordersEnabled": false,
+  "source": {
+    "label": "ignored September 23 bounded candidate-watch evidence",
+    "files": [
+      "raw-00000019.ndjson",
+      "raw-00000020.ndjson",
+      "raw-00000021.ndjson",
+      "raw-00000022.ndjson",
+      "raw-00000023.ndjson",
+      "raw-00000024.ndjson",
+      "raw-00000025.ndjson",
+      "raw-00000026.ndjson"
+    ],
+    "firstAt": "2026-09-23T23:35:47.593Z",
+    "lastAt": "2026-09-24T00:23:17.038Z",
+    "limitation": "Only eight retained raw monitoring segments; earlier 18 rotated. Event-triggered samples are not the old 250 ms sample count."
+  },
+  "bookEvents": 11757,
+  "pairedEvents": 4266,
+  "orientationsPerPairedEvent": 2,
+  "funnel": {
+    "matchedCandidates": 2558,
+    "usableTwoBookObservations": 3912,
+    "grossPositiveObservations": 662,
+    "realisticNetPositiveObservations": 71,
+    "evPositiveObservations": 0,
+    "stressFeeFailures": 662,
+    "oneTickFailures": 628,
+    "freshnessFailures": 4610,
+    "settlementWarnings": 8532,
+    "oldStressOnlyRejections": 12,
+    "closest": {
+      "pairId": "KXOSCARACTO-27-JOH::tac-oscars-03-14-2027-bestacto-johmal",
+      "orientation": "kalshi_no+pm_us_yes",
+      "grossProfit": 7000000,
+      "estimatedNetProfit": 4000000,
+      "at": 1790208366704
+    }
+  },
+  "distinct": {
+    "grossRoutes": 231,
+    "netRoutes": 49,
+    "oldStressOnlyRoutes": 5,
+    "positiveRouteSeconds": 395
+  },
+  "routes": [
+    {
+      "route": "KXNCAAFWINS-26UTAH-10::aachc-cfb-wins-2026-11-28-utah-9pt5wins|no",
+      "gross": 12,
+      "net": 12,
+      "oldStressOnly": 5
+    },
+    {
+      "route": "KXNCAAFWINS-26TEX-10::aachc-cfb-wins-2026-11-28-tx-9pt5wins|yes",
+      "gross": 9,
+      "net": 9,
+      "oldStressOnly": 4
+    },
+    {
+      "route": "KXNCAAFWINS-26LSU-9::aachc-cfb-wins-ou-2026-11-28-lsu|yes",
+      "gross": 2,
+      "net": 2,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26MIZZ-9::aachc-cfb-wins-2026-11-28-missr-8pt5wins|yes",
+      "gross": 2,
+      "net": 2,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXTIME-26-ALY::tpoyc-2026-alyliu|yes",
+      "gross": 2,
+      "net": 2,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26MISS-6::aachc-cfb-wins-2026-11-28-miss-5pt5wins|no",
+      "gross": 2,
+      "net": 1,
+      "oldStressOnly": 1
+    },
+    {
+      "route": "KXNCAAFAACQUAL-26-TULN::aqc-cfb-aac-2026-12-05-champq-tulane|no",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFACC-26-VT::tec-cfb-accchamp-2026-12-05-w-vt|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFB10QUAL-26-WASH::aqc-cfb-bigten-2026-12-05-champq-wash|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFSECQ-26-ALA::aqc-cfb-sec-2026-12-05-champq-ala|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFSECQ-26-MSST::aqc-cfb-sec-2026-12-05-champq-mspst|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26BC-6::aachc-cfb-wins-2026-11-28-boscol-5pt5wins|no",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26CAL-7::aachc-cfb-wins-ou-2026-11-28-cah|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26CIN-5::aachc-cfb-wins-2026-11-28-cin-4pt5wins|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26CLEM-10::aachc-cfb-wins-2026-11-28-clmsn-9pt5wins|no",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26COLO-4::aachc-cfb-wins-2026-11-28-col-3pt5wins|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26COLO-5::aachc-cfb-wins-2026-11-28-col-4pt5wins|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26COLO-7::aachc-cfb-wins-2026-11-28-col-6pt5wins|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26DUKE-7::aachc-cfb-wins-2026-11-28-duke-6pt5wins|no",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26FSU-7::aachc-cfb-wins-ou-2026-11-28-flst|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26GT-7::aachc-cfb-wins-ou-2026-11-28-gtech|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26IND-11::aachc-cfb-wins-2026-11-28-ind-10pt5wins|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26IND-11::aachc-cfb-wins-ou-2026-11-28-ind|yes",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26KSU-9::aachc-cfb-wins-2026-11-28-kanst-8pt5wins|no",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    },
+    {
+      "route": "KXNCAAFWINS-26MD-6::aachc-cfb-wins-ou-2026-11-28-mary|no",
+      "gross": 1,
+      "net": 1,
+      "oldStressOnly": 0
+    }
+  ]
+}

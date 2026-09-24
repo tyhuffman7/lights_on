@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "scope": "BOUNDED_DIRECT_KALSHI_PM_US_EV_PAPER",
+  "simulation": "PAPER_DEPTH_COUNTERFACTUAL_NOT_REAL_FILL",
+  "ordersEnabled": false,
+  "sourceCodeHashes": {
+    "worker/ev-paper-watch.ts": "14eec333fcfda0661269b7a758fa293a10fe68d6026c2014d2b7a71121df7de9",
+    "worker/ev-learning-ledger.ts": "c4e1983bfebd8e43a24d8eec8ed29312872f82e5e968ed8c259c80366b94251d",
+    "lib/research/ev-arb.ts": "161c33f99bf698c58d91658b252c690c36ca727000fe71c46bef7634199b3754",
+    "lib/research/ev-paper.ts": "612f8010545ccc353e33b92b8492d6907f6d718420e062fec0f22ba072a16368"
+  },
+  "universeSha256": "d07b7ea867ab6de3a1fdbb191b0efc00d66d9cb09b4d05c04403c8abfbd2b6ca",
+  "startedAt": "2026-09-24T22:10:08.443Z",
+  "endedAt": "2026-09-24T23:40:12.898Z",
+  "deadlineAt": "2026-09-24T23:40:08.443Z",
+  "durationMs": 5404455,
+  "stopReason": "ORIGINAL_DEADLINE",
+  "shardsReached": 34,
+  "policy": {
+    "version": "ev-arb-paper-v1",
+    "ordersEnabled": false,
+    "kalshiCapital": 5000000000,
+    "pmUsCapital": 5000000000,
+    "maxPairedCommitment": 500000000,
+    "maxOneSidedExposure": 200000000,
+    "maxActiveAttempts": 1,
+    "dailyRealizedLossStop": 500000000,
+    "hedgeDelayMs": 250,
+    "maxBookAgeMs": 2000,
+    "minEmpiricalAttempts": 30,
+    "maxHedgeSlippage": 5000000,
+    "durationMs": 5400000,
+    "shardDwellMs": 90000,
+    "sampleMs": 250,
+    "entryDelayMs": 50,
+    "heartbeatMs": 10000,
+    "maxRoutesPerShard": 60,
+    "maxPrimaryAttempts": 50,
+    "maxReconnectsPerVenue": 3,
+    "metadataMaxAgeMs": 180000
+  },
+  "exclusions": {
+    "PINNED_SETTLEMENT_METADATA_CHANGED": 155,
+    "UNREVIEWED_FEE_OVERRIDE": 127,
+    "FEE_OR_EXCHANGE_UNSUPPORTED": 10
+  },
+  "reconnects": {
+    "kalshi": 0,
+    "poly": 0
+  },
+  "simulatedCashRemaining": {
+    "kalshi": 4948000000,
+    "poly": 4953000000
+  },
+  "publicBookHashesVerified": 3,
+  "attemptReferencesVerified": 2,
+  "report": {
+    "simulation": "PAPER_DEPTH_COUNTERFACTUAL_NOT_REAL_FILL",
+    "ordersEnabled": false,
+    "funnel": {
+      "matchedCandidates": 2852,
+      "usableTwoBookObservations": 21950,
+      "grossPositiveObservations": 47597,
+      "realisticNetPositiveObservations": 3548,
+      "evPositiveObservations": 0,
+      "stressFeeFailures": 47597,
+      "oneTickFailures": 46177,
+      "freshnessFailures": 1173036,
+      "settlementWarnings": 1195034,
+      "oldStressOnlyRejections": 4,
+      "closest": {
+        "pairId": "KXOSCARPIC-27-ODY::tac-oscars-03-14-2027-bestpic-odysse",
+        "orientation": "kalshi_yes+pm_us_no",
+        "grossProfit": 5000000,
+        "estimatedNetProfit": 1000000,
+        "at": 1790289017701
+      },
+      "paperAttempts": 1,
+      "counterfactualEvaluations": 1
+    },
+    "outcomes": {
+      "cleanPairedFills": 1,
+      "disappearedBeforeEntry": 0,
+      "unwinds": 0,
+      "orphans": 0,
+      "rejected": 0
+    },
+    "counterfactualOutcomes": {
+      "cleanPairedFills": 0,
+      "disappearedBeforeEntry": 0,
+      "unwinds": 1,
+      "orphans": 0,
+      "rejected": 0,
+      "modeledPnL": -5000000
+    },
+    "pnl": {
+      "grossPaperProfit": 5000000,
+      "fees": 4000000,
+      "normalSlippage": 0,
+      "unwindLoss": 0,
+      "orphanLoss": 0,
+      "netModeledPaperPnL": 1000000,
+      "unresolvedResidualCost": 0,
+      "reconciled": true
+    },
+    "byFirst": {
+      "kalshi": {
+        "attempts": 1,
+        "cleanHedgeRate": 1,
+        "preEntryDisappearanceRate": 0,
+        "unwindRate": 0,
+        "orphanRate": 0,
+        "meanHedgeDelayMs": 285,
+        "meanCleanProfit": 1000000,
+        "meanFees": 4000000,
+        "meanHedgeSlippage": 0,
+        "meanUnwindLoss": null,
+        "meanOrphanResidualCost": null,
+        "empiricalEv": null,
+        "evStatus": "INSUFFICIENT_EMPIRICAL_SAMPLE"
+      },
+      "poly": {
+        "attempts": 1,
+        "cleanHedgeRate": 0,
+        "preEntryDisappearanceRate": 0,
+        "unwindRate": 1,
+        "orphanRate": 0,
+        "meanHedgeDelayMs": 285,
+        "meanCleanProfit": null,
+        "meanFees": 4000000,
+        "meanHedgeSlippage": null,
+        "meanUnwindLoss": 1000000,
+        "meanOrphanResidualCost": null,
+        "empiricalEv": null,
+        "evStatus": "INSUFFICIENT_EMPIRICAL_SAMPLE"
+      }
+    },
+    "aggregateEv": null,
+    "aggregateEvStatus": "INSUFFICIENT_EMPIRICAL_SAMPLE"
+  },
+  "attempts": [
+    {
+      "attemptId": "f21427614aad4be982ed3d94186fbad39b253bc02b604a0538e55efaabfdbb5e",
+      "role": "PRIMARY",
+      "pairId": "KXOSCARPIC-27-ODY::tac-oscars-03-14-2027-bestpic-odysse",
+      "marketIds": {
+        "kalshi": "KXOSCARPIC-27-ODY",
+        "poly": "tac-oscars-03-14-2027-bestpic-odysse"
+      },
+      "orientation": "kalshi_yes+pm_us_no",
+      "quantity": 1,
+      "detectedAt": "2026-09-24T22:30:17.701Z",
+      "firstLegVenue": "kalshi",
+      "hedgeDelayMs": 285,
+      "finalState": "CLEAN_PAIRED_FILL",
+      "grossProfit": 5000000,
+      "estimatedFees": 4000000,
+      "estimatedNetProfit": 1000000,
+      "stressFeeBound": 103750000,
+      "settlementStatus": "BOUNDED_BASIS",
+      "settlementWarnings": [
+        "BOUNDED_BASIS",
+        "venue-finality",
+        "family-branches"
+      ],
+      "fees": 4000000,
+      "normalSlippage": 0,
+      "unwindLoss": 0,
+      "orphanLoss": 0,
+      "residualQuantity": 0,
+      "paperPnL": 1000000,
+      "entryBookReferences": {
+        "kalshi": {
+          "at": 1790289016911,
+          "sha256": "9c678ef542353ce7b4436ca356e4b045a012995bbe50341a7d43f43e5e68b84a"
+        },
+        "poly": {
+          "at": 1790289017627,
+          "sha256": "65561d12235618fff47cdf865bd950dc8713fb0f358bfe85b52893a305dd65a7"
+        }
+      },
+      "futureBookReferences": {
+        "kalshi": {
+          "at": 1790289016911,
+          "sha256": "e1929858b419da691469404278e397262bd4ff9dce9196967e5be4f824efd09f"
+        },
+        "poly": {
+          "at": 1790289017627,
+          "sha256": "65561d12235618fff47cdf865bd950dc8713fb0f358bfe85b52893a305dd65a7"
+        }
+      }
+    },
+    {
+      "attemptId": "fc7b6542a367c1ddef11bd723a73ac4fed4fce8ae3f12d040ff25f5d7029faa0",
+      "role": "COUNTERFACTUAL",
+      "pairId": "KXOSCARPIC-27-ODY::tac-oscars-03-14-2027-bestpic-odysse",
+      "marketIds": {
+        "kalshi": "KXOSCARPIC-27-ODY",
+        "poly": "tac-oscars-03-14-2027-bestpic-odysse"
+      },
+      "orientation": "kalshi_yes+pm_us_no",
+      "quantity": 1,
+      "detectedAt": "2026-09-24T22:30:17.701Z",
+      "firstLegVenue": "poly",
+      "hedgeDelayMs": 285,
+      "finalState": "FIRST_LEG_FILLED_HEDGE_FAILED_UNWOUND",
+      "grossProfit": 5000000,
+      "estimatedFees": 4000000,
+      "estimatedNetProfit": 1000000,
+      "stressFeeBound": 103750000,
+      "settlementStatus": "BOUNDED_BASIS",
+      "settlementWarnings": [
+        "BOUNDED_BASIS",
+        "venue-finality",
+        "family-branches"
+      ],
+      "fees": 4000000,
+      "normalSlippage": 0,
+      "unwindLoss": 1000000,
+      "orphanLoss": 0,
+      "residualQuantity": 0,
+      "paperPnL": -5000000,
+      "entryBookReferences": {
+        "kalshi": {
+          "at": 1790289016911,
+          "sha256": "9c678ef542353ce7b4436ca356e4b045a012995bbe50341a7d43f43e5e68b84a"
+        },
+        "poly": {
+          "at": 1790289017627,
+          "sha256": "65561d12235618fff47cdf865bd950dc8713fb0f358bfe85b52893a305dd65a7"
+        }
+      },
+      "futureBookReferences": {
+        "kalshi": {
+          "at": 1790289016911,
+          "sha256": "e1929858b419da691469404278e397262bd4ff9dce9196967e5be4f824efd09f"
+        },
+        "poly": {
+          "at": 1790289017627,
+          "sha256": "65561d12235618fff47cdf865bd950dc8713fb0f358bfe85b52893a305dd65a7"
+        }
+      }
+    }
+  ]
+}
