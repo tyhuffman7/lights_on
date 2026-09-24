@@ -40,3 +40,7 @@ Both feeds used zero failure reconnects. No clock, feed, persistence or resource
 Current Ohio/account/product permission remains unproven for the intended contracts on both venues; PM-US active trading entitlement and write capability also remain unproven. Kalshi key write scope and a current region attestation were observed, but do not establish Ohio/product eligibility. Successful reads do not resolve those facts. Account-specific Kalshi precision remains unknown and materially determines the fee bound.
 
 The useful next evidence is a current first-party account precision and product-permission determination. That is a separate follow-up, not authorization to repeat this watch, alter the completed run, launch another PAPER experiment or submit an order. This checkpoint is stopped.
+
+## Verification and publication
+
+[Draft PR #19](https://github.com/tyhuffman7/lights_on/pull/19) is stacked on PR #18. The observed source is signed commit `c474ce4fee429e9a8f9cf67b9ec722a18f58ce4e`. A post-run correction ensures the frozen candidate label cannot be overwritten by its confirmation status; no candidate occurred in this run. Corrected signed code `20cdd631e29ec4e97ef8f628408825734b771926` passed [hosted CI](https://github.com/tyhuffman7/lights_on/actions/runs/35938749888): **759/759 tests, typecheck and production build**. The 30 pre-run targeted tests and 26 post-correction affected tests passed. No market collection was restarted.

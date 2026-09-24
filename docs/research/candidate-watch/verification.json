@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-24T00:25:27.150Z",
+  "checkedAt": "2026-09-24T00:33:39.604444+00:00",
   "targeted": {
     "tests": 30,
     "passed": 30,
@@ -10,7 +10,19 @@
   "protectedChainMatches": true,
   "aggregateCategoriesReconcile": true,
   "supervisorExitCode": 0,
-  "hostedCI": "PENDING_PUBLICATION",
+  "hostedCI": {
+    "status": "PASSED",
+    "runId": 35938749888,
+    "url": "https://github.com/tyhuffman7/lights_on/actions/runs/35938749888",
+    "headCommit": "20cdd631e29ec4e97ef8f628408825734b771926",
+    "testedMergeCommit": "08f22f33e4371140985cf1267bc4e706d3a23aa3",
+    "tests": 759,
+    "passed": 759,
+    "failed": 0,
+    "skipped": 0,
+    "typecheck": "passed",
+    "productionBuild": "passed"
+  },
   "ordersEnabled": false,
   "observedImplementationCommit": "c474ce4fee429e9a8f9cf67b9ec722a18f58ce4e",
   "frozenSourceManifestMatchedAtCompletion": true,
@@ -23,5 +35,17 @@
     "passed": 759,
     "typecheck": "failed: candidate status field overwritten by object spread",
     "build": "passed"
+  },
+  "postCorrectionTargeted": {
+    "tests": 26,
+    "passed": 26,
+    "failed": 0
+  },
+  "publication": {
+    "draftPR": "https://github.com/tyhuffman7/lights_on/pull/19",
+    "author": "tyhuffman7",
+    "base": "codex/tiny-bounded-basis",
+    "head": "codex/bounded-candidate-watch",
+    "mergeAuthorized": false
   }
 }
