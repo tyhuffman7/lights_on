@@ -1,0 +1,1850 @@
+{
+  "scope": "POST_WINDOW_NATIVE_ARITHMETIC_AND_SIGNAL_CROSS_CHECK",
+  "ordersEnabled": false,
+  "note": "Independent prices were collected after the window. Later price changes are not proof of a missed earlier signal. This does not establish whole-catalog matching recall or settlement equivalence.",
+  "cases": 100,
+  "mismatches": [],
+  "missedPositive": [],
+  "results": [
+    {
+      "pairId": "KXMLBAWARDFIN-26NLMVP-SOHTANI17::tec-mlb-nl-2026-11-27-cy-shooht",
+      "at": 1790811118538,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.949,
+          "detectorNet": 0.949,
+          "independentGross": 0.959,
+          "detectorGross": 0.959,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTEBR1-BRPRES26ACUR-1::ewc-pres-bra-2026-10-04-augcur",
+      "at": 1790811120146,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.9199999999999999,
+          "detectorNet": 0.92,
+          "independentGross": 0.9299999999999999,
+          "detectorGross": 0.93,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTEBR1-BRPRES26RSAN-1::ewc-pres-bra-2026-10-04-rensan",
+      "at": 1790811121750,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.9,
+          "detectorNet": 0.9,
+          "independentGross": 0.91,
+          "detectorGross": 0.91,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTEBR1-BRPRES26RCAI-1::ewc-pres-bra-2026-10-04-roncai",
+      "at": 1790811123618,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.89,
+          "detectorNet": 0.89,
+          "independentGross": 0.9,
+          "detectorGross": 0.9,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXOSCARNOMSUPACTR-27-ANN::tac-oscars-nom-bstactre-2027-01-21-annhat",
+      "at": 1790811124941,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.94,
+          "detectorNet": -0.94,
+          "independentGross": -0.9299999999999999,
+          "detectorGross": -0.93,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.9,
+          "detectorNet": 0.9,
+          "independentGross": 0.91,
+          "detectorGross": 0.91,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXBALLONDORRANK-26T10-MOLI::tec-uefa-bdor-2026-10-26-w-micoli",
+      "at": 1790811126544,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.89,
+          "detectorNet": 0.89,
+          "independentGross": 0.9,
+          "detectorGross": 0.9,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTECOUNTY-GOVCA26LOSANGELESXBEC-78::ewc-usgub-ca-2026-11-03-xavbec",
+      "at": 1790811128148,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.8899999999999999,
+          "detectorNet": 0.89,
+          "independentGross": 0.8999999999999999,
+          "detectorGross": 0.9,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.96,
+          "detectorNet": -0.96,
+          "independentGross": -0.95,
+          "detectorGross": -0.95,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXLLM1-26OCT05-GOOG::ccrc-ntflx-1movus-2026-10-06-besbes",
+      "at": 1790811139603,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.96,
+          "detectorNet": -0.96,
+          "independentGross": -0.95,
+          "detectorGross": -0.95,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.89,
+          "detectorNet": 0.89,
+          "independentGross": 0.9,
+          "detectorGross": 0.9,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTECOUNTY-GOVCA26LOSANGELESXBEC-76::ewc-usgub-ca-2026-11-03-xavbec",
+      "at": 1790811140857,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.8799999999999999,
+          "detectorNet": 0.88,
+          "independentGross": 0.8899999999999999,
+          "detectorGross": 0.89,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.96,
+          "detectorNet": -0.96,
+          "independentGross": -0.95,
+          "detectorGross": -0.95,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": 8.83,
+          "detectorNet": 8.83,
+          "independentGross": 8.899999999999999,
+          "detectorGross": 8.9,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": -9.54,
+          "detectorNet": -9.54,
+          "independentGross": -9.5,
+          "detectorGross": -9.5,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTEGENERAL-GOVPARTYCA-26XBEC-70::ewc-usgub-ca-2026-11-03-xavbec",
+      "at": 1790811142453,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.8799999999999999,
+          "detectorNet": 0.88,
+          "independentGross": 0.8899999999999999,
+          "detectorGross": 0.89,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": 8.83,
+          "detectorNet": 8.83,
+          "independentGross": 8.899999999999999,
+          "detectorGross": 8.9,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTEGENERAL-GOVPARTYCA-26SHIL-30::ewc-usgub-ca-2026-11-03-stehil",
+      "at": 1790811144064,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.88,
+          "detectorNet": 0.88,
+          "independentGross": 0.89,
+          "detectorGross": 0.89,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": 8.82,
+          "detectorNet": 8.82,
+          "independentGross": 8.9,
+          "detectorGross": 8.9,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXHOUSERACE-LA01-26-D::paccc-usho-midterms-2026-11-03-dem",
+      "at": 1790811145654,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.868,
+          "detectorNet": 0.868,
+          "independentGross": 0.888,
+          "detectorGross": 0.888,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.931,
+          "detectorNet": -0.931,
+          "independentGross": -0.911,
+          "detectorGross": -0.911,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": 8.8,
+          "detectorNet": 8.8,
+          "independentGross": 8.88,
+          "detectorGross": 8.88,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": -9.170000000000002,
+          "detectorNet": -9.17,
+          "independentGross": -9.110000000000001,
+          "detectorGross": -9.11,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXMLBAWARDFIN-26ALCY-DCEASE84::tec-mlb-al-2026-11-27-cy-dylcea",
+      "at": 1790811147256,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.943,
+          "detectorNet": -0.943,
+          "independentGross": -0.9329999999999999,
+          "detectorGross": -0.933,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.882,
+          "detectorNet": 0.882,
+          "independentGross": 0.892,
+          "detectorGross": 0.892,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXDHOUSESEATS-27-216::paccc-usho-midterms-2026-11-03-dem",
+      "at": 1790811158667,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.864,
+          "detectorNet": 0.864,
+          "independentGross": 0.884,
+          "detectorGross": 0.884,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.91,
+          "detectorNet": -0.91,
+          "independentGross": -0.89,
+          "detectorGross": -0.89,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": 8.76,
+          "detectorNet": 8.76,
+          "independentGross": 8.84,
+          "detectorGross": 8.84,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": -8.97,
+          "detectorNet": -8.97,
+          "independentGross": -8.9,
+          "detectorGross": -8.9,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": false,
+        "poly": true
+      }
+    },
+    {
+      "pairId": "KXMLBAWARDFIN-26NLCY-CSALE51::tec-mlb-nl-2026-11-27-cy-chrsal",
+      "at": 1790811159939,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.879,
+          "detectorNet": 0.879,
+          "independentGross": 0.889,
+          "detectorGross": 0.889,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": 8.73,
+          "detectorNet": 8.73,
+          "independentGross": 8.82,
+          "detectorGross": 8.82,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNBARETIRE-LJAMES23-2930::tec-nba-mvp-2027-05-17-w-lebjam",
+      "at": 1790811161537,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.9299999999999999,
+          "detectorNet": -0.93,
+          "independentGross": -0.9199999999999999,
+          "detectorGross": -0.92,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.88,
+          "detectorNet": 0.88,
+          "independentGross": 0.89,
+          "detectorGross": 0.89,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTEGENERAL-GOVAK-26DBRO-10::usgubewc-usgub-ak-2026-11-03-davbro",
+      "at": 1790811163140,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.92,
+          "detectorNet": -0.92,
+          "independentGross": -0.91,
+          "detectorGross": -0.91,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.87,
+          "detectorNet": 0.87,
+          "independentGross": 0.88,
+          "detectorGross": 0.88,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": -9.170000000000002,
+          "detectorNet": -9.17,
+          "independentGross": -9.100000000000001,
+          "detectorGross": -9.1,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": 8.72,
+          "detectorNet": 8.72,
+          "independentGross": 8.8,
+          "detectorGross": 8.8,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXVOTEBR1-BRPRES26ACUR-2::ewc-pres-bra-2026-10-04-augcur",
+      "at": 1790811164727,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.87,
+          "detectorNet": 0.87,
+          "independentGross": 0.88,
+          "detectorGross": 0.88,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": 8.72,
+          "detectorNet": 8.72,
+          "independentGross": 8.8,
+          "detectorGross": 8.8,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXENDORSECOLLINS-26NOV03-JAUC::ushrewc-ushr-ma-04-2026-11-03-dem",
+      "at": 1790811166336,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.87,
+          "detectorNet": 0.87,
+          "independentGross": 0.88,
+          "detectorGross": 0.88,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.97,
+          "detectorNet": -0.97,
+          "independentGross": -0.96,
+          "detectorGross": -0.96,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": 8.719999999999999,
+          "detectorNet": 8.72,
+          "independentGross": 8.799999999999999,
+          "detectorGross": 8.8,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": -9.680000000000001,
+          "detectorNet": -9.68,
+          "independentGross": -9.650000000000002,
+          "detectorGross": -9.65,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXDHOUSESEATS-27-212::paccc-usho-midterms-2026-11-03-dem",
+      "at": 1790811167921,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.86,
+          "detectorNet": 0.86,
+          "independentGross": 0.88,
+          "detectorGross": 0.88,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.902,
+          "detectorNet": -0.902,
+          "independentGross": -0.882,
+          "detectorGross": -0.882,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": 8.71,
+          "detectorNet": 8.71,
+          "independentGross": 8.8,
+          "detectorGross": 8.8,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": -8.90088,
+          "detectorNet": -8.90088,
+          "independentGross": -8.82088,
+          "detectorGross": -8.82088,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KX20SONG-26DEC26-LAD::ccrc-sptfy-1-artst-us-yr-2026-ladgag",
+      "at": 1790811179360,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.30000000000000004,
+          "detectorNet": -0.3,
+          "independentGross": -0.28,
+          "detectorGross": -0.28,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.15999999999999998,
+          "detectorNet": 0.16,
+          "independentGross": 0.17999999999999997,
+          "detectorGross": 0.18,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXCABOUT-26MAY22-BROL::ncpdc-trmpcab-nxtout-1-brorol",
+      "at": 1790811180678,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.06999999999999994,
+          "detectorNet": -0.07,
+          "independentGross": -0.05999999999999994,
+          "detectorGross": -0.06,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 2.6020852139652106e-17,
+          "detectorNet": 0,
+          "independentGross": 0.010000000000000026,
+          "detectorGross": 0.01,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXDANCINGWITHTHESTARS-26DEC31-JSTIL::rtc-dwts-s35-elim-2026-10-06-julsti",
+      "at": 1790811182214,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 8.673617379884035e-18,
+          "detectorNet": 0,
+          "independentGross": 0.010000000000000009,
+          "detectorGross": 0.01,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXDTICKET-28NOV07-AOCGWHI::enwc-uspres-vpnom-dem-2028-grewhi",
+      "at": 1790811183814,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 8.673617379884035e-18,
+          "detectorNet": 0,
+          "independentGross": 0.010000000000000009,
+          "detectorGross": 0.01,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.039,
+          "detectorNet": -0.039,
+          "independentGross": -0.028999999999999998,
+          "detectorGross": -0.029,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-LAD::ccpc-bilbrd-1album-any2026-ladgag",
+      "at": 1790811185403,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -8.500145032286355e-17,
+          "detectorNet": 0,
+          "independentGross": 0.029999999999999916,
+          "detectorGross": 0.03,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.10999999999999999,
+          "detectorNet": -0.11,
+          "independentGross": -0.09,
+          "detectorGross": -0.09,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXBALLONDORRANK-26T3-KKVA::tec-uefa-bdor-2026-10-26-w-khvkva",
+      "at": 1790811187015,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 1.734723475976807e-17,
+          "detectorNet": 0,
+          "independentGross": 0.010000000000000018,
+          "detectorGross": 0.01,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNFLRECYDS-26OCT01PITCLE-PITJWARREN30-60::astatc-nfl-pit-cle-2026-10-01-recyd-patfre-gte60",
+      "at": 1790811198434,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 1.734723475976807e-17,
+          "detectorNet": 0,
+          "independentGross": 0.020000000000000018,
+          "detectorGross": 0.02,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.08000000000000004,
+          "detectorNet": -0.08,
+          "independentGross": -0.06000000000000005,
+          "detectorGross": -0.06,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXDECLAREPRESFIRSTD-28NOV01-KHAR::ewc-usp-2028-11-07-kamhar",
+      "at": 1790811199756,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.04000000000000003,
+          "detectorNet": -0.04,
+          "independentGross": -0.030000000000000027,
+          "detectorGross": -0.03,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 4.336808689942018e-17,
+          "detectorNet": 0,
+          "independentGross": 0.010000000000000044,
+          "detectorGross": 0.01,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXDANCINGWITHTHESTARS-26DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "at": 1790811201302,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 8.673617379884035e-18,
+          "detectorNet": 0,
+          "independentGross": 0.010000000000000009,
+          "detectorGross": 0.01,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": null,
+          "detectorNet": null,
+          "independentGross": null,
+          "detectorGross": null,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXPGATOUR-BAOUC26-MWAL::tec-pga-bankutah-2026-10-01-w-matwal",
+      "at": 1790811202902,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 8.673617379884035e-18,
+          "detectorNet": 0,
+          "independentGross": 0.010000000000000009,
+          "detectorGross": 0.01,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.027999999999999976,
+          "detectorNet": -0.028,
+          "independentGross": -0.017999999999999974,
+          "detectorGross": -0.018,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26MSST-5::aachc-cfb-wins-ou-2026-11-28-mspst",
+      "at": 1790811204489,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.12999999999999998,
+          "detectorNet": -0.13,
+          "independentGross": -0.10999999999999999,
+          "detectorGross": -0.11,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.05000000000000006,
+          "detectorNet": 0.05,
+          "independentGross": 0.07000000000000006,
+          "detectorGross": 0.07,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26NW-6::aachc-cfb-wins-ou-2026-11-28-nw",
+      "at": 1790811206087,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.2,
+          "detectorNet": -0.2,
+          "independentGross": -0.16000000000000003,
+          "detectorGross": -0.16,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.05000000000000007,
+          "detectorNet": 0.05,
+          "independentGross": 0.09000000000000008,
+          "detectorGross": 0.09,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26UK-5::aachc-cfb-wins-ou-2026-11-28-uk",
+      "at": 1790811207688,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.18999999999999992,
+          "detectorNet": -0.19,
+          "independentGross": -0.15999999999999992,
+          "detectorGross": -0.16,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.03999999999999995,
+          "detectorNet": 0.04,
+          "independentGross": 0.07999999999999996,
+          "detectorGross": 0.08,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26VAN-6::aachc-cfb-wins-ou-2026-11-28-vand",
+      "at": 1790811219147,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.03999999999999995,
+          "detectorNet": 0.04,
+          "independentGross": 0.07999999999999996,
+          "detectorGross": 0.08,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.17999999999999988,
+          "detectorNet": -0.18,
+          "independentGross": -0.1399999999999999,
+          "detectorGross": -0.14,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26ALA-9::aachc-cfb-wins-ou-2026-11-28-ala",
+      "at": 1790811220400,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.14999999999999997,
+          "detectorNet": -0.15,
+          "independentGross": -0.10999999999999999,
+          "detectorGross": -0.11,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.03999999999999995,
+          "detectorNet": 0.04,
+          "independentGross": 0.07999999999999996,
+          "detectorGross": 0.08,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26UTAH-9::aachc-cfb-wins-ou-2026-11-28-utah",
+      "at": 1790811222005,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.12999999999999998,
+          "detectorNet": -0.13,
+          "independentGross": -0.10999999999999999,
+          "detectorGross": -0.11,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.039999999999999945,
+          "detectorNet": 0.04,
+          "independentGross": 0.06999999999999995,
+          "detectorGross": 0.07,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26TXAM-9::aachc-cfb-wins-ou-2026-11-28-txam",
+      "at": 1790811223599,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.03999999999999994,
+          "detectorNet": 0.04,
+          "independentGross": 0.05999999999999994,
+          "detectorGross": 0.06,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": true,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": true
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.12000000000000002,
+          "detectorNet": -0.12,
+          "independentGross": -0.10000000000000003,
+          "detectorGross": -0.1,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": true,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": true
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": true
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26CLEM-8::aachc-cfb-wins-ou-2026-11-28-clmsn",
+      "at": 1790811225198,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.029999999999999947,
+          "detectorNet": 0.03,
+          "independentGross": 0.06999999999999995,
+          "detectorGross": 0.07,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.15999999999999998,
+          "detectorNet": -0.16,
+          "independentGross": -0.12,
+          "detectorGross": -0.12,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26VT-7::aachc-cfb-wins-ou-2026-11-28-vtech",
+      "at": 1790811226797,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.12999999999999998,
+          "detectorNet": -0.13,
+          "independentGross": -0.10999999999999999,
+          "detectorGross": -0.11,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.02999999999999993,
+          "detectorNet": 0.03,
+          "independentGross": 0.04999999999999993,
+          "detectorGross": 0.05,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXGROK-GROK5-27JAN01::aimc-xai-grok-5-2026-12-31",
+      "at": 1790811238237,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.019999999999999938,
+          "detectorNet": 0.02,
+          "independentGross": 0.05999999999999994,
+          "detectorGross": 0.06,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.16999999999999998,
+          "detectorNet": -0.17,
+          "independentGross": -0.13,
+          "detectorGross": -0.13,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      }
+    }
+  ]
+}

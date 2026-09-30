@@ -1,0 +1,1774 @@
+{
+  "ordersEnabled": false,
+  "scope": "FINAL_FROZEN_20_MINUTE_PAPER_READ_ONLY_WINDOW",
+  "summarySha256": "08fee65265dd86473670cc0d82db033534343947dca7ac47d675791641319368",
+  "start": 1790809796249,
+  "startIso": "2026-09-30T23:09:56.249Z",
+  "deadline": 1790810996249,
+  "deadlineIso": "2026-09-30T23:29:56.249Z",
+  "durationObservedMs": 1200833.421667,
+  "catalog": {
+    "kalshi": 127252,
+    "poly": 72261,
+    "complete": true,
+    "errors": [],
+    "startedAt": 1790810096486,
+    "endedAt": 1790810920830,
+    "fetchAndNormalizationMs": 824344
+  },
+  "catalogCycles": 2,
+  "candidateEventMatches": 7857,
+  "matchedRoutes": 17817,
+  "sportsRoutes": 16093,
+  "allSeenRoutes": 17817,
+  "visitedRoutes": 17817,
+  "twoBookRoutes": 17817,
+  "freshRoutes": 6512,
+  "unvisitedRoutes": 0,
+  "matchingDiagnostics": {
+    "comparisons": 19179911,
+    "textDeferred": 66119538,
+    "canonical": 1385,
+    "sports": 3922,
+    "text": 9789,
+    "orientationHypotheses": 5442,
+    "knownDimensionConflicts": {
+      "DIMENSION_CONFLICT:eventDate": 542931,
+      "DIMENSION_CONFLICT:period": 592941,
+      "DIMENSION_CONFLICT:marketType": 798056,
+      "PROPOSITION_CONFLICT:round": 4014,
+      "PROPOSITION_CONFLICT:metric": 138014,
+      "PROPOSITION_CONFLICT:scope": 63822,
+      "PROPOSITION_CONFLICT:rank": 41705,
+      "PROPOSITION_CONFLICT:lower": 608702,
+      "DIMENSION_CONFLICT:line": 1140006,
+      "DIMENSION_CONFLICT:competition": 17914,
+      "DIMENSION_CONFLICT:units": 16785,
+      "YEAR": 749,
+      "PROPOSITION_CONFLICT:award": 101,
+      "PROPOSITION_CONFLICT:chart": 4
+    },
+    "weakTextRejected": 702304
+  },
+  "counts": {
+    "streamBookEvents": 1352347,
+    "twoBookObservations": 1192699,
+    "staleTwoBookObservations": 1029182,
+    "orientationObservations": 2385398,
+    "grossNonpositive": 1347603,
+    "extremeStressFailures": 1940459,
+    "grossPositive": 592856,
+    "normalFeesEraseGross": 80748,
+    "normalFeePositive": 512108,
+    "quantityExecutablePositive": 512108,
+    "smallCapitalPositive": 512108,
+    "oneTickFailures": 1099107,
+    "distinctEconomicCandidates": 13300,
+    "noQuantityOneDepth": 444939,
+    "missingTwoBooks": 260,
+    "freshTwoBookObservations": 163517,
+    "freshNormalFeePositive": 34674,
+    "hotConfirmationDispatches": 107,
+    "confirmationRequests": 160,
+    "freshExecutablePositive": 12497,
+    "restPairRefreshes": 261,
+    "confirmationEconomicSurvivors": 147,
+    "verificationPending": 158,
+    "paperCandidateAttempts": 147,
+    "fairConfirmationDispatches": 53,
+    "confirmationCooldown": 105,
+    "confirmationDisappeared": 11,
+    "confirmedExecutableCandidates": 3,
+    "streamRestarts": 1,
+    "discoveryRefreshes": 1
+  },
+  "reasons": {
+    "CONFIRMATION:fetch failed": 1,
+    "CONFIRMATION:This operation was aborted": 1,
+    "REST_PAIR:This operation was aborted": 1
+  },
+  "buckets": {
+    "kalshi": {
+      "receipt": {
+        ">5000ms": 608335,
+        "<=5000ms": 39991,
+        "<=1000ms": 23428,
+        "<=2000ms": 27863,
+        "<=500ms": 75685,
+        "<=250ms": 417397
+      },
+      "exchange": {
+        "unknown": 339996,
+        ">5000ms": 268639,
+        "<=5000ms": 40241,
+        "<=1000ms": 23439,
+        "<=2000ms": 28284,
+        "<=500ms": 45495,
+        "<=250ms": 408783,
+        "future": 37822
+      }
+    },
+    "poly": {
+      "receipt": {
+        "<=5000ms": 95481,
+        "<=2000ms": 35495,
+        "<=500ms": 88486,
+        "<=250ms": 619010,
+        ">5000ms": 330677,
+        "<=1000ms": 23550
+      },
+      "exchange": {
+        ">5000ms": 365141,
+        "<=5000ms": 92789,
+        "<=2000ms": 36235,
+        "<=1000ms": 26941,
+        "<=500ms": 193479,
+        "<=250ms": 475125,
+        "future": 2989
+      }
+    }
+  },
+  "delayOutcomes": {
+    "0ms:UNOBSERVED_OR_INELIGIBLE": 288,
+    "100ms:UNOBSERVED_OR_INELIGIBLE": 288,
+    "250ms:UNOBSERVED_OR_INELIGIBLE": 288,
+    "500ms:UNOBSERVED_OR_INELIGIBLE": 288,
+    "1000ms:UNOBSERVED_OR_INELIGIBLE": 288,
+    "0ms:CLEAN_DEPTH_PAIR": 6,
+    "100ms:UNOBSERVED_STALE_FUTURE": 6,
+    "250ms:UNOBSERVED_STALE_FUTURE": 6,
+    "500ms:UNOBSERVED_STALE_FUTURE": 6,
+    "1000ms:UNOBSERVED_STALE_FUTURE": 6
+  },
+  "requests": {
+    "external-api.kalshi.com": 1190,
+    "gateway.polymarket.us": 974
+  },
+  "requestFailures": {
+    "gateway.polymarket.us:HTTP_429": 101,
+    "gateway.polymarket.us:fetch failed": 1,
+    "external-api.kalshi.com:This operation was aborted": 1
+  },
+  "pendingConfirmations": 7939,
+  "healthyFeeds": 171,
+  "totalFeeds": 171,
+  "feedFailures": [],
+  "evidenceBytes": 129958364,
+  "frozen": {
+    "policy": {
+      "ordersEnabled": false,
+      "sampleMs": 250,
+      "discoveryMs": 300000,
+      "durationMs": 1200000,
+      "maxContracts": 10,
+      "maxConfirmationJobs": 2,
+      "confirmationCooldownMs": 10000,
+      "streamGroupSize": 100,
+      "maxStreamRestarts": 3,
+      "maxPublicHttpAttempts": 3,
+      "maxBookAgeMs": 2000,
+      "restSpacingMs": 300,
+      "maxEvidenceBytes": 268435456,
+      "delayMs": [
+        0,
+        100,
+        250,
+        500,
+        1000
+      ],
+      "simulatedCapitalPerVenue": 50,
+      "maxPairedCommitment": 5
+    },
+    "sourceHashes": {
+      "worker/recall-observer.ts": "fb97128014ad68464dc3fb960639b07c9c7e12ddd5b60036c4cb019666a51f24",
+      "worker/recall-matching-thread.ts": "e795bb594858e99b02f8dbc421f0e7ae293cc549c3f5466f56223da43ddd8b3a",
+      "lib/research/recall-detector.ts": "c8eedf072b74e42b74e8a664ffb4aa5b2196ae7eb836b470a61eefb84feb3735",
+      "lib/research/ev-arb.ts": "161c33f99bf698c58d91658b252c690c36ca727000fe71c46bef7634199b3754",
+      "lib/arb/adapters.ts": "13f9741292acb82000d5939b29bf6f51ec69ddea329b9e188716bac1ee73dd8a",
+      "worker/streams.ts": "3d0f084bfa2924cebdf5d0a36e0be24e919d525a741d84213365895e32d0f129"
+    },
+    "ordersEnabled": false,
+    "preparedAt": 1790809613706
+  },
+  "contractVerifiedOpportunities": 0,
+  "confirmedPaperArbs": 0,
+  "verificationByAssessment": {
+    "UNSUPPORTED": 104,
+    "CONFLICT": 54
+  },
+  "confirmationByMatchSource": {
+    "CANONICAL": 106,
+    "TEXT": 52
+  },
+  "distinctQuoteConfigurationsByMatchSource": {
+    "TEXT": 4959,
+    "CANONICAL": 110,
+    "SPORTS_EVENT": 8231
+  },
+  "confirmationTiming": {
+    "queueWaitMs": {
+      "min": 541,
+      "p50": 467939,
+      "p95": 1007319,
+      "max": 1186996
+    },
+    "confirmationWorkMs": {
+      "min": 1547,
+      "p50": 10919,
+      "p95": 20556,
+      "max": 22204
+    },
+    "quoteToConfirmationMs": {
+      "min": 3791,
+      "p50": 26671,
+      "p95": 218986,
+      "max": 985857
+    }
+  },
+  "nativeFailureEndpoints": {
+    "PM_US_BOOK": 102,
+    "/trade-api/v2/markets/KXNCAAFWINS-26BAY-7": 1
+  },
+  "discoveryRefreshes": [
+    {
+      "at": 1790810096486,
+      "endedAt": 1790810920830,
+      "fetchAndNormalizationMs": 824344,
+      "matchingMs": 55199,
+      "kalshi": 127252,
+      "poly": 72261,
+      "routes": 17817
+    }
+  ],
+  "confirmedFreshExamples": [
+    {
+      "at": 1790809928836,
+      "atIso": "2026-09-30T23:12:08.836Z",
+      "pairId": "HOUSEAKAL-26-R::paccc-usho-midterms-2026-11-03-rep",
+      "event": "Will Republican win the House race for AK-AL?",
+      "polyTitle": "Republican Party · U.S House Midterm Winner",
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "signal": {
+        "evaluation": {
+          "strategy": "ev-arb-paper-v1",
+          "pairId": "HOUSEAKAL-26-R::paccc-usho-midterms-2026-11-03-rep",
+          "markets": {
+            "kalshi": "HOUSEAKAL-26-R",
+            "poly": "paccc-usho-midterms-2026-11-03-rep"
+          },
+          "orientation": "kalshi_no+pm_us_yes",
+          "kalshiSide": "no",
+          "polySide": "yes",
+          "quantity": 10,
+          "at": 1790809928836,
+          "sourceBooks": {
+            "kalshi": {
+              "at": 1790809928836,
+              "exchangeAt": null,
+              "source": "rest"
+            },
+            "poly": {
+              "at": 1790809928316,
+              "exchangeAt": 1790809927657,
+              "source": "rest"
+            }
+          },
+          "settlementStatus": "UNVERIFIED",
+          "settlementWarnings": [
+            "UNVERIFIED",
+            "SETTLEMENT_REVIEW_PENDING"
+          ],
+          "grossStatus": "GROSS_ARB",
+          "grossProfit": 759000000,
+          "acquisitionCost": 241000000,
+          "estimatedFees": 15000000,
+          "estimatedNetProfit": 744000000,
+          "economicStatus": "REALISTIC_NET_POSITIVE",
+          "feeConfidence": "UNCONFIRMED_ACCOUNT_PRECISION",
+          "kalshi": {
+            "levels": [
+              {
+                "price": 1500,
+                "quantity": 10
+              }
+            ],
+            "quantity": 10,
+            "cost": 150000000,
+            "lastPrice": 1500
+          },
+          "poly": {
+            "levels": [
+              {
+                "price": 910,
+                "quantity": 10
+              }
+            ],
+            "quantity": 10,
+            "cost": 91000000,
+            "lastPrice": 910
+          },
+          "stress": {
+            "feeBound": 1014930000,
+            "feeBoundPass": false,
+            "oneTickProfit": null,
+            "oneTickPass": null,
+            "freshnessPass": false,
+            "failed": [
+              "EXTREME_FRAGMENTATION_FEE",
+              "NATIVE_PRICE_GRID_UNPROVEN",
+              "BOOK_FRESHNESS",
+              "SETTLEMENT_RISK"
+            ]
+          },
+          "execution": {
+            "paperEligible": false,
+            "reasons": [
+              "BOOK_STALE_OR_NOT_STREAM_CONFIRMED"
+            ]
+          }
+        },
+        "ages": {
+          "kalshi": {
+            "receiptMs": 0,
+            "exchangeMs": null,
+            "cacheMs": null,
+            "requestMs": 58
+          },
+          "poly": {
+            "receiptMs": 520,
+            "exchangeMs": 1179,
+            "cacheMs": null,
+            "requestMs": 581
+          }
+        },
+        "skewMs": 520,
+        "fresh": true,
+        "candidate": true,
+        "minimumQuantityPass": true,
+        "minimumsKnown": true,
+        "withinCapital": true,
+        "verificationStatus": "verification-pending",
+        "executable": true
+      },
+      "entry": {
+        "kalshi": {
+          "book": {
+            "yes": [
+              {
+                "price": 9990,
+                "quantity": 1001000
+              },
+              {
+                "price": 9900,
+                "quantity": 83492
+              },
+              {
+                "price": 9890,
+                "quantity": 2871
+              },
+              {
+                "price": 9800,
+                "quantity": 3360
+              },
+              {
+                "price": 9700,
+                "quantity": 1622
+              },
+              {
+                "price": 9600,
+                "quantity": 399
+              },
+              {
+                "price": 9580,
+                "quantity": 33
+              },
+              {
+                "price": 9500,
+                "quantity": 5
+              },
+              {
+                "price": 9350,
+                "quantity": 500
+              },
+              {
+                "price": 9340,
+                "quantity": 41
+              },
+              {
+                "price": 9330,
+                "quantity": 48
+              },
+              {
+                "price": 9320,
+                "quantity": 20.17
+              },
+              {
+                "price": 8600,
+                "quantity": 508.51
+              }
+            ],
+            "no": [
+              {
+                "price": 9990,
+                "quantity": 501000
+              },
+              {
+                "price": 9900,
+                "quantity": 485684
+              },
+              {
+                "price": 8700,
+                "quantity": 39584
+              },
+              {
+                "price": 7500,
+                "quantity": 25
+              },
+              {
+                "price": 7400,
+                "quantity": 8354
+              },
+              {
+                "price": 7300,
+                "quantity": 550
+              },
+              {
+                "price": 6200,
+                "quantity": 2828
+              },
+              {
+                "price": 6100,
+                "quantity": 2362
+              },
+              {
+                "price": 4900,
+                "quantity": 562
+              },
+              {
+                "price": 3000,
+                "quantity": 1072
+              },
+              {
+                "price": 2800,
+                "quantity": 777
+              },
+              {
+                "price": 2100,
+                "quantity": 1000
+              },
+              {
+                "price": 1600,
+                "quantity": 2911
+              },
+              {
+                "price": 1500,
+                "quantity": 505
+              }
+            ],
+            "yesBids": [
+              {
+                "price": 10,
+                "quantity": 501000
+              },
+              {
+                "price": 100,
+                "quantity": 485684
+              },
+              {
+                "price": 1300,
+                "quantity": 39584
+              },
+              {
+                "price": 2500,
+                "quantity": 25
+              },
+              {
+                "price": 2600,
+                "quantity": 8354
+              },
+              {
+                "price": 2700,
+                "quantity": 550
+              },
+              {
+                "price": 3800,
+                "quantity": 2828
+              },
+              {
+                "price": 3900,
+                "quantity": 2362
+              },
+              {
+                "price": 5100,
+                "quantity": 562
+              },
+              {
+                "price": 7000,
+                "quantity": 1072
+              },
+              {
+                "price": 7200,
+                "quantity": 777
+              },
+              {
+                "price": 7900,
+                "quantity": 1000
+              },
+              {
+                "price": 8400,
+                "quantity": 2911
+              },
+              {
+                "price": 8500,
+                "quantity": 505
+              }
+            ],
+            "noBids": [
+              {
+                "price": 10,
+                "quantity": 1001000
+              },
+              {
+                "price": 100,
+                "quantity": 83492
+              },
+              {
+                "price": 110,
+                "quantity": 2871
+              },
+              {
+                "price": 200,
+                "quantity": 3360
+              },
+              {
+                "price": 300,
+                "quantity": 1622
+              },
+              {
+                "price": 400,
+                "quantity": 399
+              },
+              {
+                "price": 420,
+                "quantity": 33
+              },
+              {
+                "price": 500,
+                "quantity": 5
+              },
+              {
+                "price": 650,
+                "quantity": 500
+              },
+              {
+                "price": 660,
+                "quantity": 41
+              },
+              {
+                "price": 670,
+                "quantity": 48
+              },
+              {
+                "price": 680,
+                "quantity": 20.17
+              },
+              {
+                "price": 1400,
+                "quantity": 508.51
+              }
+            ],
+            "receivedAt": 1790809928836,
+            "exchangeAt": null,
+            "open": true,
+            "venue": "kalshi",
+            "marketId": "HOUSEAKAL-26-R",
+            "receivedMono": 315291.792875,
+            "sequence": null,
+            "connection": "LIVE",
+            "valid": true,
+            "source": "rest"
+          },
+          "transport": {
+            "requestAt": 1790809928778,
+            "responseAt": 1790809928836,
+            "durationMs": 58.39395900000818,
+            "cacheAgeSeconds": null,
+            "cacheStatus": null,
+            "bodySha256": "b89ab3b5e175e7ebe426aaba72010554194159f023d44d0e462c0883385cb9dc"
+          }
+        },
+        "poly": {
+          "book": {
+            "yes": [
+              {
+                "price": 910,
+                "quantity": 41829
+              },
+              {
+                "price": 920,
+                "quantity": 25000
+              },
+              {
+                "price": 960,
+                "quantity": 900
+              },
+              {
+                "price": 970,
+                "quantity": 4
+              },
+              {
+                "price": 980,
+                "quantity": 2000
+              },
+              {
+                "price": 990,
+                "quantity": 11111
+              },
+              {
+                "price": 1000,
+                "quantity": 156
+              },
+              {
+                "price": 1160,
+                "quantity": 13
+              },
+              {
+                "price": 1170,
+                "quantity": 100
+              },
+              {
+                "price": 1200,
+                "quantity": 108
+              },
+              {
+                "price": 1500,
+                "quantity": 371
+              },
+              {
+                "price": 1600,
+                "quantity": 50
+              },
+              {
+                "price": 1710,
+                "quantity": 57
+              },
+              {
+                "price": 1910,
+                "quantity": 20
+              },
+              {
+                "price": 2390,
+                "quantity": 7211
+              },
+              {
+                "price": 2400,
+                "quantity": 12636
+              },
+              {
+                "price": 2410,
+                "quantity": 200
+              },
+              {
+                "price": 2430,
+                "quantity": 3839
+              },
+              {
+                "price": 2500,
+                "quantity": 10
+              },
+              {
+                "price": 6640,
+                "quantity": 350
+              },
+              {
+                "price": 8500,
+                "quantity": 21
+              },
+              {
+                "price": 9880,
+                "quantity": 26202
+              },
+              {
+                "price": 9900,
+                "quantity": 2500
+              },
+              {
+                "price": 9980,
+                "quantity": 51003
+              },
+              {
+                "price": 9990,
+                "quantity": 284446
+              }
+            ],
+            "no": [
+              {
+                "price": 9100,
+                "quantity": 105803
+              },
+              {
+                "price": 9110,
+                "quantity": 5633
+              },
+              {
+                "price": 9140,
+                "quantity": 900
+              },
+              {
+                "price": 9150,
+                "quantity": 10400
+              },
+              {
+                "price": 9160,
+                "quantity": 1040
+              },
+              {
+                "price": 9200,
+                "quantity": 6000
+              },
+              {
+                "price": 9290,
+                "quantity": 50
+              },
+              {
+                "price": 9300,
+                "quantity": 1500
+              },
+              {
+                "price": 9400,
+                "quantity": 2500
+              },
+              {
+                "price": 9500,
+                "quantity": 4000
+              },
+              {
+                "price": 9600,
+                "quantity": 50
+              },
+              {
+                "price": 9900,
+                "quantity": 2500
+              },
+              {
+                "price": 9990,
+                "quantity": 625000
+              }
+            ],
+            "yesBids": [
+              {
+                "price": 900,
+                "quantity": 105803
+              },
+              {
+                "price": 890,
+                "quantity": 5633
+              },
+              {
+                "price": 860,
+                "quantity": 900
+              },
+              {
+                "price": 850,
+                "quantity": 10400
+              },
+              {
+                "price": 840,
+                "quantity": 1040
+              },
+              {
+                "price": 800,
+                "quantity": 6000
+              },
+              {
+                "price": 710,
+                "quantity": 50
+              },
+              {
+                "price": 700,
+                "quantity": 1500
+              },
+              {
+                "price": 600,
+                "quantity": 2500
+              },
+              {
+                "price": 500,
+                "quantity": 4000
+              },
+              {
+                "price": 400,
+                "quantity": 50
+              },
+              {
+                "price": 100,
+                "quantity": 2500
+              },
+              {
+                "price": 10,
+                "quantity": 625000
+              }
+            ],
+            "noBids": [
+              {
+                "price": 9090,
+                "quantity": 41829
+              },
+              {
+                "price": 9080,
+                "quantity": 25000
+              },
+              {
+                "price": 9040,
+                "quantity": 900
+              },
+              {
+                "price": 9030,
+                "quantity": 4
+              },
+              {
+                "price": 9020,
+                "quantity": 2000
+              },
+              {
+                "price": 9010,
+                "quantity": 11111
+              },
+              {
+                "price": 9000,
+                "quantity": 156
+              },
+              {
+                "price": 8840,
+                "quantity": 13
+              },
+              {
+                "price": 8830,
+                "quantity": 100
+              },
+              {
+                "price": 8800,
+                "quantity": 108
+              },
+              {
+                "price": 8500,
+                "quantity": 371
+              },
+              {
+                "price": 8400,
+                "quantity": 50
+              },
+              {
+                "price": 8290,
+                "quantity": 57
+              },
+              {
+                "price": 8090,
+                "quantity": 20
+              },
+              {
+                "price": 7610,
+                "quantity": 7211
+              },
+              {
+                "price": 7600,
+                "quantity": 12636
+              },
+              {
+                "price": 7590,
+                "quantity": 200
+              },
+              {
+                "price": 7570,
+                "quantity": 3839
+              },
+              {
+                "price": 7500,
+                "quantity": 10
+              },
+              {
+                "price": 3360,
+                "quantity": 350
+              },
+              {
+                "price": 1500,
+                "quantity": 21
+              },
+              {
+                "price": 120,
+                "quantity": 26202
+              },
+              {
+                "price": 100,
+                "quantity": 2500
+              },
+              {
+                "price": 20,
+                "quantity": 51003
+              },
+              {
+                "price": 10,
+                "quantity": 284446
+              }
+            ],
+            "receivedAt": 1790809928316,
+            "exchangeAt": 1790809927657,
+            "open": true,
+            "venue": "poly",
+            "marketId": "paccc-usho-midterms-2026-11-03-rep",
+            "receivedMono": 314771.523458,
+            "sequence": null,
+            "connection": "LIVE",
+            "valid": true,
+            "source": "rest"
+          },
+          "transport": {
+            "requestAt": 1790809928255,
+            "responseAt": 1790809928316,
+            "durationMs": 61.05625000002328,
+            "cacheAgeSeconds": null,
+            "cacheStatus": "MISS",
+            "bodySha256": "50e25063a7d8d245973bb66f9f82a9e7cf24b85fc54d505189b0b449b3b8b3c6"
+          }
+        }
+      },
+      "verification": {
+        "version": 1,
+        "status": "CONFLICT",
+        "profile": null,
+        "normalOutcomeMatched": false,
+        "strictEquivalent": false,
+        "checks": [],
+        "risks": [],
+        "blockers": [
+          "Current matching rejects the event, outcome, or orientation"
+        ]
+      },
+      "verificationState": "insufficient-information",
+      "queueWaitMs": 121597,
+      "confirmationWorkMs": 10977
+    },
+    {
+      "at": 1790810456527,
+      "atIso": "2026-09-30T23:20:56.527Z",
+      "pairId": "KXNCAAFWINS-26PUR-4::aachc-cfb-wins-ou-2026-11-28-pur",
+      "event": "Will Purdue win at least 4 games this season?",
+      "polyTitle": "Purdue 3.5+ · College Football Regular Season Win Totals",
+      "matchSource": "CANONICAL",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "signal": {
+        "evaluation": {
+          "strategy": "ev-arb-paper-v1",
+          "pairId": "KXNCAAFWINS-26PUR-4::aachc-cfb-wins-ou-2026-11-28-pur",
+          "markets": {
+            "kalshi": "KXNCAAFWINS-26PUR-4",
+            "poly": "aachc-cfb-wins-ou-2026-11-28-pur"
+          },
+          "orientation": "kalshi_yes+pm_us_no",
+          "kalshiSide": "yes",
+          "polySide": "no",
+          "quantity": 4,
+          "at": 1790810456527,
+          "sourceBooks": {
+            "kalshi": {
+              "at": 1790810456524,
+              "exchangeAt": null,
+              "source": "rest"
+            },
+            "poly": {
+              "at": 1790810456247,
+              "exchangeAt": 1790810455690,
+              "source": "rest"
+            }
+          },
+          "settlementStatus": "UNVERIFIED",
+          "settlementWarnings": [
+            "UNVERIFIED",
+            "SETTLEMENT_REVIEW_PENDING"
+          ],
+          "grossStatus": "GROSS_ARB",
+          "grossProfit": 16000000,
+          "acquisitionCost": 384000000,
+          "estimatedFees": 12000000,
+          "estimatedNetProfit": 4000000,
+          "economicStatus": "REALISTIC_NET_POSITIVE",
+          "feeConfidence": "UNCONFIRMED_ACCOUNT_PRECISION",
+          "kalshi": {
+            "levels": [
+              {
+                "price": 2900,
+                "quantity": 4
+              }
+            ],
+            "quantity": 4,
+            "cost": 116000000,
+            "lastPrice": 2900
+          },
+          "poly": {
+            "levels": [
+              {
+                "price": 6700,
+                "quantity": 4
+              }
+            ],
+            "quantity": 4,
+            "cost": 268000000,
+            "lastPrice": 6700
+          },
+          "stress": {
+            "feeBound": 411770000,
+            "feeBoundPass": false,
+            "oneTickProfit": -4000000,
+            "oneTickPass": false,
+            "freshnessPass": false,
+            "failed": [
+              "EXTREME_FRAGMENTATION_FEE",
+              "ONE_NATIVE_TICK_EACH_LEG",
+              "BOOK_FRESHNESS",
+              "SETTLEMENT_RISK"
+            ]
+          },
+          "execution": {
+            "paperEligible": false,
+            "reasons": [
+              "BOOK_STALE_OR_NOT_STREAM_CONFIRMED"
+            ]
+          }
+        },
+        "ages": {
+          "kalshi": {
+            "receiptMs": 3,
+            "exchangeMs": null,
+            "cacheMs": null,
+            "requestMs": 147
+          },
+          "poly": {
+            "receiptMs": 280,
+            "exchangeMs": 837,
+            "cacheMs": null,
+            "requestMs": 332
+          }
+        },
+        "skewMs": 277,
+        "fresh": true,
+        "candidate": true,
+        "minimumQuantityPass": true,
+        "minimumsKnown": true,
+        "withinCapital": true,
+        "verificationStatus": "verification-pending",
+        "executable": true
+      },
+      "entry": {
+        "kalshi": {
+          "book": {
+            "yes": [
+              {
+                "price": 9900,
+                "quantity": 520.93
+              },
+              {
+                "price": 9800,
+                "quantity": 500
+              },
+              {
+                "price": 9700,
+                "quantity": 500
+              },
+              {
+                "price": 9500,
+                "quantity": 29.68
+              },
+              {
+                "price": 9300,
+                "quantity": 11.71
+              },
+              {
+                "price": 8600,
+                "quantity": 2010
+              },
+              {
+                "price": 8500,
+                "quantity": 46
+              },
+              {
+                "price": 8400,
+                "quantity": 43
+              },
+              {
+                "price": 4900,
+                "quantity": 90
+              },
+              {
+                "price": 4200,
+                "quantity": 100
+              },
+              {
+                "price": 3800,
+                "quantity": 225
+              },
+              {
+                "price": 3700,
+                "quantity": 125
+              },
+              {
+                "price": 3400,
+                "quantity": 25
+              },
+              {
+                "price": 3000,
+                "quantity": 25
+              },
+              {
+                "price": 2900,
+                "quantity": 112
+              }
+            ],
+            "no": [
+              {
+                "price": 9800,
+                "quantity": 25
+              },
+              {
+                "price": 9500,
+                "quantity": 2018
+              },
+              {
+                "price": 9000,
+                "quantity": 12.15
+              },
+              {
+                "price": 8900,
+                "quantity": 90
+              },
+              {
+                "price": 8500,
+                "quantity": 18
+              },
+              {
+                "price": 8400,
+                "quantity": 59
+              },
+              {
+                "price": 8300,
+                "quantity": 151
+              },
+              {
+                "price": 8200,
+                "quantity": 306
+              },
+              {
+                "price": 8100,
+                "quantity": 12998
+              },
+              {
+                "price": 8000,
+                "quantity": 708
+              },
+              {
+                "price": 7900,
+                "quantity": 526
+              },
+              {
+                "price": 7800,
+                "quantity": 412
+              },
+              {
+                "price": 7700,
+                "quantity": 315
+              },
+              {
+                "price": 7600,
+                "quantity": 191
+              },
+              {
+                "price": 7500,
+                "quantity": 106
+              }
+            ],
+            "yesBids": [
+              {
+                "price": 200,
+                "quantity": 25
+              },
+              {
+                "price": 500,
+                "quantity": 2018
+              },
+              {
+                "price": 1000,
+                "quantity": 12.15
+              },
+              {
+                "price": 1100,
+                "quantity": 90
+              },
+              {
+                "price": 1500,
+                "quantity": 18
+              },
+              {
+                "price": 1600,
+                "quantity": 59
+              },
+              {
+                "price": 1700,
+                "quantity": 151
+              },
+              {
+                "price": 1800,
+                "quantity": 306
+              },
+              {
+                "price": 1900,
+                "quantity": 12998
+              },
+              {
+                "price": 2000,
+                "quantity": 708
+              },
+              {
+                "price": 2100,
+                "quantity": 526
+              },
+              {
+                "price": 2200,
+                "quantity": 412
+              },
+              {
+                "price": 2300,
+                "quantity": 315
+              },
+              {
+                "price": 2400,
+                "quantity": 191
+              },
+              {
+                "price": 2500,
+                "quantity": 106
+              }
+            ],
+            "noBids": [
+              {
+                "price": 100,
+                "quantity": 520.93
+              },
+              {
+                "price": 200,
+                "quantity": 500
+              },
+              {
+                "price": 300,
+                "quantity": 500
+              },
+              {
+                "price": 500,
+                "quantity": 29.68
+              },
+              {
+                "price": 700,
+                "quantity": 11.71
+              },
+              {
+                "price": 1400,
+                "quantity": 2010
+              },
+              {
+                "price": 1500,
+                "quantity": 46
+              },
+              {
+                "price": 1600,
+                "quantity": 43
+              },
+              {
+                "price": 5100,
+                "quantity": 90
+              },
+              {
+                "price": 5800,
+                "quantity": 100
+              },
+              {
+                "price": 6200,
+                "quantity": 225
+              },
+              {
+                "price": 6300,
+                "quantity": 125
+              },
+              {
+                "price": 6600,
+                "quantity": 25
+              },
+              {
+                "price": 7000,
+                "quantity": 25
+              },
+              {
+                "price": 7100,
+                "quantity": 112
+              }
+            ],
+            "receivedAt": 1790810456524,
+            "exchangeAt": null,
+            "open": true,
+            "venue": "kalshi",
+            "marketId": "KXNCAAFWINS-26PUR-4",
+            "receivedMono": 843008.557875,
+            "sequence": null,
+            "connection": "LIVE",
+            "valid": true,
+            "source": "rest"
+          },
+          "transport": {
+            "requestAt": 1790810456380,
+            "responseAt": 1790810456524,
+            "durationMs": 143.65666700003203,
+            "cacheAgeSeconds": null,
+            "cacheStatus": null,
+            "bodySha256": "c19ca1f4a0d35dffdc78e9cdfcd149c34b1afae970172b01cae3bc42ab78ccd9"
+          }
+        },
+        "poly": {
+          "book": {
+            "yes": [
+              {
+                "price": 3400,
+                "quantity": 94.1
+              },
+              {
+                "price": 3700,
+                "quantity": 50
+              },
+              {
+                "price": 4100,
+                "quantity": 1
+              },
+              {
+                "price": 9800,
+                "quantity": 56
+              },
+              {
+                "price": 9900,
+                "quantity": 8096
+              }
+            ],
+            "no": [
+              {
+                "price": 6700,
+                "quantity": 142.1
+              },
+              {
+                "price": 8700,
+                "quantity": 50
+              },
+              {
+                "price": 9800,
+                "quantity": 56
+              },
+              {
+                "price": 9900,
+                "quantity": 8169
+              }
+            ],
+            "yesBids": [
+              {
+                "price": 3300,
+                "quantity": 142.1
+              },
+              {
+                "price": 1300,
+                "quantity": 50
+              },
+              {
+                "price": 200,
+                "quantity": 56
+              },
+              {
+                "price": 100,
+                "quantity": 8169
+              }
+            ],
+            "noBids": [
+              {
+                "price": 6600,
+                "quantity": 94.1
+              },
+              {
+                "price": 6300,
+                "quantity": 50
+              },
+              {
+                "price": 5900,
+                "quantity": 1
+              },
+              {
+                "price": 200,
+                "quantity": 56
+              },
+              {
+                "price": 100,
+                "quantity": 8096
+              }
+            ],
+            "receivedAt": 1790810456247,
+            "exchangeAt": 1790810455690,
+            "open": true,
+            "venue": "poly",
+            "marketId": "aachc-cfb-wins-ou-2026-11-28-pur",
+            "receivedMono": 842729.310375,
+            "sequence": null,
+            "connection": "LIVE",
+            "valid": true,
+            "source": "rest"
+          },
+          "transport": {
+            "requestAt": 1790810456195,
+            "responseAt": 1790810456247,
+            "durationMs": 52.2611250000773,
+            "cacheAgeSeconds": null,
+            "cacheStatus": "MISS",
+            "bodySha256": "dde7fd064c0e9b078766370cf23a376f82973d7eee3dc242218ea331da0ab4cb"
+          }
+        }
+      },
+      "verification": {
+        "version": 1,
+        "status": "UNSUPPORTED",
+        "profile": null,
+        "normalOutcomeMatched": false,
+        "strictEquivalent": false,
+        "checks": [],
+        "risks": [],
+        "blockers": [
+          "No reviewed settlement profile for this contract family"
+        ]
+      },
+      "verificationState": "insufficient-information",
+      "queueWaitMs": 648991,
+      "confirmationWorkMs": 10919
+    },
+    {
+      "at": 1790810897084,
+      "atIso": "2026-09-30T23:28:17.084Z",
+      "pairId": "KXIPO-26-MISTRAL::ipcc-2026ipos-mistral-ai",
+      "event": "Who will IPO before 2027?",
+      "polyTitle": "Mistral AI · Which Companies Will Confirm an IPO in 2026",
+      "matchSource": "CANONICAL",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "signal": {
+        "evaluation": {
+          "strategy": "ev-arb-paper-v1",
+          "pairId": "KXIPO-26-MISTRAL::ipcc-2026ipos-mistral-ai",
+          "markets": {
+            "kalshi": "KXIPO-26-MISTRAL",
+            "poly": "ipcc-2026ipos-mistral-ai"
+          },
+          "orientation": "kalshi_no+pm_us_yes",
+          "kalshiSide": "no",
+          "polySide": "yes",
+          "quantity": 3,
+          "at": 1790810897084,
+          "sourceBooks": {
+            "kalshi": {
+              "at": 1790810897084,
+              "exchangeAt": null,
+              "source": "rest"
+            },
+            "poly": {
+              "at": 1790810896707,
+              "exchangeAt": 1790810895155,
+              "source": "rest"
+            }
+          },
+          "settlementStatus": "UNVERIFIED",
+          "settlementWarnings": [
+            "UNVERIFIED",
+            "SETTLEMENT_REVIEW_PENDING"
+          ],
+          "grossStatus": "GROSS_ARB",
+          "grossProfit": 3000000,
+          "acquisitionCost": 297000000,
+          "estimatedFees": 1000000,
+          "estimatedNetProfit": 2000000,
+          "economicStatus": "REALISTIC_NET_POSITIVE",
+          "feeConfidence": "UNCONFIRMED_ACCOUNT_PRECISION",
+          "kalshi": {
+            "levels": [
+              {
+                "price": 9700,
+                "quantity": 3
+              }
+            ],
+            "quantity": 3,
+            "cost": 291000000,
+            "lastPrice": 9700
+          },
+          "poly": {
+            "levels": [
+              {
+                "price": 200,
+                "quantity": 3
+              }
+            ],
+            "quantity": 3,
+            "cost": 6000000,
+            "lastPrice": 200
+          },
+          "stress": {
+            "feeBound": 300620000,
+            "feeBoundPass": false,
+            "oneTickProfit": -5000000,
+            "oneTickPass": false,
+            "freshnessPass": false,
+            "failed": [
+              "EXTREME_FRAGMENTATION_FEE",
+              "ONE_NATIVE_TICK_EACH_LEG",
+              "BOOK_FRESHNESS",
+              "SETTLEMENT_RISK"
+            ]
+          },
+          "execution": {
+            "paperEligible": false,
+            "reasons": [
+              "BOOK_STALE_OR_NOT_STREAM_CONFIRMED"
+            ]
+          }
+        },
+        "ages": {
+          "kalshi": {
+            "receiptMs": 0,
+            "exchangeMs": null,
+            "cacheMs": null,
+            "requestMs": 173
+          },
+          "poly": {
+            "receiptMs": 377,
+            "exchangeMs": 1929,
+            "cacheMs": null,
+            "requestMs": 504
+          }
+        },
+        "skewMs": 377,
+        "fresh": true,
+        "candidate": true,
+        "minimumQuantityPass": true,
+        "minimumsKnown": true,
+        "withinCapital": true,
+        "verificationStatus": "verification-pending",
+        "executable": true
+      },
+      "entry": {
+        "kalshi": {
+          "book": {
+            "yes": [
+              {
+                "price": 9900,
+                "quantity": 300
+              },
+              {
+                "price": 3900,
+                "quantity": 75.92
+              },
+              {
+                "price": 1600,
+                "quantity": 120
+              },
+              {
+                "price": 1500,
+                "quantity": 97
+              },
+              {
+                "price": 1400,
+                "quantity": 50
+              },
+              {
+                "price": 900,
+                "quantity": 250
+              }
+            ],
+            "no": [
+              {
+                "price": 9900,
+                "quantity": 341.72
+              },
+              {
+                "price": 9800,
+                "quantity": 25
+              },
+              {
+                "price": 9700,
+                "quantity": 33
+              }
+            ],
+            "yesBids": [
+              {
+                "price": 100,
+                "quantity": 341.72
+              },
+              {
+                "price": 200,
+                "quantity": 25
+              },
+              {
+                "price": 300,
+                "quantity": 33
+              }
+            ],
+            "noBids": [
+              {
+                "price": 100,
+                "quantity": 300
+              },
+              {
+                "price": 6100,
+                "quantity": 75.92
+              },
+              {
+                "price": 8400,
+                "quantity": 120
+              },
+              {
+                "price": 8500,
+                "quantity": 97
+              },
+              {
+                "price": 8600,
+                "quantity": 50
+              },
+              {
+                "price": 9100,
+                "quantity": 250
+              }
+            ],
+            "receivedAt": 1790810897084,
+            "exchangeAt": null,
+            "open": true,
+            "venue": "kalshi",
+            "marketId": "KXIPO-26-MISTRAL",
+            "receivedMono": 1283565.771583,
+            "sequence": null,
+            "connection": "LIVE",
+            "valid": true,
+            "source": "rest"
+          },
+          "transport": {
+            "requestAt": 1790810896911,
+            "responseAt": 1790810897084,
+            "durationMs": 172.95625000004657,
+            "cacheAgeSeconds": null,
+            "cacheStatus": null,
+            "bodySha256": "4b5bfc9c7bbf37b3e8f109170a229a31dfe51f62407c9131515a5d1ba3966004"
+          }
+        },
+        "poly": {
+          "book": {
+            "yes": [
+              {
+                "price": 200,
+                "quantity": 758
+              },
+              {
+                "price": 800,
+                "quantity": 50
+              },
+              {
+                "price": 900,
+                "quantity": 16
+              },
+              {
+                "price": 1200,
+                "quantity": 58
+              },
+              {
+                "price": 9900,
+                "quantity": 1500
+              }
+            ],
+            "no": [
+              {
+                "price": 9900,
+                "quantity": 58088
+              }
+            ],
+            "yesBids": [
+              {
+                "price": 100,
+                "quantity": 58088
+              }
+            ],
+            "noBids": [
+              {
+                "price": 9800,
+                "quantity": 758
+              },
+              {
+                "price": 9200,
+                "quantity": 50
+              },
+              {
+                "price": 9100,
+                "quantity": 16
+              },
+              {
+                "price": 8800,
+                "quantity": 58
+              },
+              {
+                "price": 100,
+                "quantity": 1500
+              }
+            ],
+            "receivedAt": 1790810896707,
+            "exchangeAt": 1790810895155,
+            "open": true,
+            "venue": "poly",
+            "marketId": "ipcc-2026ipos-mistral-ai",
+            "receivedMono": 1283188.562875,
+            "sequence": null,
+            "connection": "LIVE",
+            "valid": true,
+            "source": "rest"
+          },
+          "transport": {
+            "requestAt": 1790810896580,
+            "responseAt": 1790810896707,
+            "durationMs": 126.46554200001992,
+            "cacheAgeSeconds": null,
+            "cacheStatus": "MISS",
+            "bodySha256": "12cd6ac6a348c02eed90254d8751af5f2eefc35e0b4bdbcb985da271ead6bf40"
+          }
+        }
+      },
+      "verification": {
+        "version": 1,
+        "status": "UNSUPPORTED",
+        "profile": null,
+        "normalOutcomeMatched": false,
+        "strictEquivalent": false,
+        "checks": [],
+        "risks": [],
+        "blockers": [
+          "No reviewed settlement profile for this contract family"
+        ]
+      },
+      "verificationState": "insufficient-information",
+      "queueWaitMs": 3492,
+      "confirmationWorkMs": 10555
+    }
+  ],
+  "limitations": [
+    "Readings repeat market updates and are not independent opportunities or realized profit.",
+    "Strict settlement equivalence is not certified by the inherited diagnostic.",
+    "Native PM-US book throttles lengthened whole-host backoff and catalog refresh.",
+    "Pending confirmations remain explicit; throughput is insufficient to refresh every broad hypothesis immediately.",
+    "Every 100/250/500/1000 ms follow-up on the three fresh entries was unobserved/stale; no fresh-fill recovery proof."
+  ]
+}

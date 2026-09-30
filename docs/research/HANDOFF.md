@@ -1,34 +1,26 @@
-# Handoff — 2026-09-30 EDT, recall detector paused for laptop closure
+# Handoff — 2026-09-30 EDT, scoped recall checkpoint stopped
 
-**PAUSED at the user's request. READ ONLY / PAPER. No observation or local background work remains running. Do not start another run until the user says continue.** No real orders, fills, previews, cancellations, funding, wallet actions, live launch or automation occurred.
+**READ ONLY / PAPER. The authorized implementation, verification, bounded observation and draft-publication checkpoint is finished. All observation and native-check processes are stopped. Full arbitrage confirmation remains incomplete. Stop here; no automatic continuation, merge or live launch.** No orders, previews, cancellations, funding or wallet actions occurred.
 
-[Draft PR #22](https://github.com/tyhuffman7/lights_on/pull/22) is OPEN/DRAFT. Signed implementation `df7fb478946c145bb7cdccb51258fa0ccd844a4d` is GitHub-verified. CI is remote; no polling or local collection is left running.
+[Draft PR #22](https://github.com/tyhuffman7/lights_on/pull/22), branch `codex/recall-first-detector`, exact requested base `a200abf36cd590c894f936dbe1d6f4c81f461468`. Persistent checkout: `/Users/tylerhuffman/Documents/code_projects/lights-on/work/recall-detector-20260930/checkout`. Preserve main's local/staged work, `tyhuffman7` identity and repo-local SSH signing.
 
-## Saved checkpoint
+- Implementation `fb9da7f08733019df3e994b22559f7a61b0f6f64`: **30/30 targeted tests; CI 789/789 tests, typecheck and build passed** ([receipt](recall-detector/ci-receipt.json)). Signed implementation and documentary commits; PR remains draft.
+- Final frozen run `work/final-20260930-batched`, 23:09:56–23:29:56 UTC: complete native catalogs, 17,817 matched/visited/two-book routes, zero unvisited, 6,512 routes with fresh paired books, 171/171 feeds healthy at stop. **163,517 fresh two-book observations; 592,856 gross and 512,108 normal-fee-positive readings including stale; 160 confirmation dispatches, 147 economic survivors, three fresh quote-executable candidates, zero strict-equivalence proofs.** Readings repeat updates, not trades/profit.
+- Each bounded run froze parameters and source hashes before collection. The first exposed serial catalog normalization and matching false-positive priority. Final batches normalization by native page, matches off-thread, reserves every third confirmation oldest-first, and retries public 429s at most three times with shared bounded backoff. Public PM-US book throttles remain the measured bottleneck: **101 HTTP 429s; one refresh took 824.344 seconds fetch/normalize + 55.199 seconds matching; median queue wait 467.939 seconds; 7,939 confirmations pending at stop.** No five-minute completed-refresh or immediate-all-candidate guarantee.
+- Three fresh survivors: different-question Alaska House pairing; Purdue season-win basis candidate (quantity 4, modeled net $0.04); unresolved Mistral IPO candidate (quantity 3, modeled net $0.02). Full Kalshi IPO terms include equivalent foreign filings, correcting abbreviated inline wording; exact issuance/deadline/source/review equivalence remains unresolved. Do not conclude no arbs from an unsupported verifier.
+- Delay zero had six clean depth counterfactuals; every 100/250/500/1,000 ms follow-up on those entries was stale/unobserved. No fills, realized/portfolio profit, fresh-fill recovery or successful unwind proved. Do not repeat/refine prior completed recovery tests without new evidence.
+- Independent native checks: **43 routes, zero failed requests, 34 normal-fee-positive routes, all previously surfaced; 112 arithmetic cases, zero disagreements or suppressed positives.** Selected-route checks do not establish catalog-wide absence or complete matching recall.
+- September 22 replay preserves 51/51 ordinary-fee positives, four fresh. September 23/24 temporary raw L2 absent; user knows no alternate copy; exact 662/71/12 replay remains unverified. Synpath hosted matching failed TLS; SDK orientation/fee cross-check helped; example bot targets offshore PM.
 
-- Persistent isolated checkout: `/Users/tylerhuffman/Documents/code_projects/lights-on/work/recall-detector-20260930/checkout`; branch `codex/recall-first-detector`, created from exact requested `a200abf36cd590c894f936dbe1d6f4c81f461468` on `experiment/ev-arb-learning`. Main's staged/local work preserved. GitHub identity `tyhuffman7`; HTTPS remote and repo-local SSH signing intact.
-- New observer: full dynamic catalogs, simultaneous 100-market subscription groups, stable membership, bounded restarts, independent book/cache ages, normal-fee candidates before verification, quantities 1–10, native metadata/book confirmation, and labeled delay counterfactuals. Latest edits move matching off the observer thread and start the bounded clock after preparation. These latest edits have not had another live run yet.
-- **22/22 targeted tests passed** after final edits, including native matching regressions and background matching. Full tests/typecheck/build pending repository CI. Final completion is not claimed.
-- Retained September 22 replay: **57 gross, 51 normal-fee positives across 47 routes; all 51 preserved, four fresh, zero economics disagreements.** Requested September 23/24 temporary raw evidence absent; user has no known alternate copy. Published 662/71/12 baseline unchanged, exact replay unverified.
-- Smoke 1 exposed 613,317 overly broad hypotheses and failed multi-subscription Kalshi connections. Native 100-market feed succeeded; 500-market/five-subscription feed reproducibly failed after 100 books. Smoke 2: **18,260 matched and two-book routes; 5,447 fresh two-book observations; 41,241 gross-positive and 36,298 modeled normal-fee-positive readings including stale; 810 fresh net readings; eight repeat-economic survivors; one fresh executable candidate; zero settlement-verified arbs.** False positives remain measurable candidates. Event-driven counts are not unique trades, fills or realized profit.
-- Synpath SDK orientation/PM-US fee source cross-check done. Example bot targets international Polymarket. Two hosted probes failed at TLS/HTTP 000; hosted PM-US matching usefulness unverified and does not block native work.
+[Final evidence](recall-detector/final-receipt.json) · [Native check](recall-detector/native-check.json) · [Contract review](recall-detector/CONTRACT-REVIEW.md) · [Methodology and examples](recall-detector/README.md) · [First bounded run](recall-detector/bounded-1-receipt.json).
 
-[Implementation/methodology](recall-detector/README.md) · [Replay](recall-detector/september-replay.json) · [Smoke receipts](recall-detector/smoke-receipts.json).
-
-## Resume in this order
-
-1. Read this handoff; verify branch/status in the persistent checkout. Inspect draft PR / compact CI result. Fix relevant CI failures; use targeted tests while editing.
-2. Inspect remaining matcher false positives using exact native propositions. Missing settlement review must not gate observation. Validate latest background discovery, restarts, post-preparation clock and verification-state changes in a short smoke before freezing the final run.
-3. Freeze settings; run the meaningful bounded read-only observation (default 20 minutes). No repeated tests/builds/CI polling during collection. No tuning against final results. Preserve candidate IDs/orientation, depth/quantity, fees, independent ages/cache, confirmation and 0/100/250/500/1,000 ms simulated delays.
-4. After stop, independently inspect highest/near-positive spreads with `scripts/check-recall-native.ts`; investigate missed signals and wrong predicates. Preserve evidence/limits. Do not claim no confirmed arb merely because verification is unsupported.
-5. Complete draft PR with before/after funnel, coverage, exact examples, confirmation/verification/paper outcomes, Synpath limits and start command. Update this handoff and stop. No merge or live-money recommendation.
+If the user explicitly continues a new checkpoint: first inspect branch/status and this handoff. The next concrete work is to pace the **PM-US book endpoint** without throttling unrelated full-catalog discovery, validate confirmation access under its actual public limits, and close the Mistral IPO issuance/deadline/source proof. Preserve broad paper candidates and native timestamps. Do not redesign or replay completed recovery work, claim equivalence from a name/template, enable orders, or infer live eligibility from the paper capital assumptions. Current corrected observer command, only for a newly requested run:
 
 ```sh
 cd /Users/tylerhuffman/Documents/code_projects/lights-on/work/recall-detector-20260930/checkout
-git status --short --branch
-node --experimental-strip-types --test tests/recall-detector.test.ts tests/ev-arb-learning.test.ts
-npm run research:recall -- work/final-NEW --duration-seconds=1200 --env=/Users/tylerhuffman/Documents/code_projects/lights-on/.env.research
-node --experimental-strip-types scripts/check-recall-native.ts work/final-NEW docs/research/recall-detector/native-check.json
+npm run research:recall -- work/NEW-PAPER-WINDOW --duration-seconds=1200 --env=/Users/tylerhuffman/Documents/code_projects/lights-on/.env.research
 ```
 
-Smoke catalogs, raw books, logs, source freezes and probes persist under ignored `work/`. Prior primary handoff at sibling `primary-handoff-before.md`; staged-index fingerprint at `primary-index.sha256`. No completed recovery/no-fill run restarted or refined. The original task remains unfinished and paused.
+Ignored raw catalogs, books, source freezes, smoke logs and native checks remain under this checkout's `work/`; no evidence is deleted. Primary pre-task handoff and staged-index fingerprint remain in sibling `primary-handoff-before.md` and `primary-index.sha256`.
+
+DETECTOR STILL BROKEN — native throttling/backlog prevents prompt confirmation, and IPO settlement equivalence remains unresolved

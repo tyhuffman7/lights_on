@@ -327,6 +327,109 @@
         "ordersEnabled": false,
         "preparedAt": 1790800309955
       }
+    },
+    {
+      "label": "smoke-3",
+      "summarySha256": "cde0c178ca3af24ffe2d8139658d03f4a51be1f65048a9840b4b15de8adf9dda",
+      "start": 1790807222291,
+      "deadline": 1790807342291,
+      "durationObservedMs": 120112.56687499996,
+      "catalog": {
+        "kalshi": 126867,
+        "poly": 71689,
+        "complete": true,
+        "errors": []
+      },
+      "matchedRoutes": 17585,
+      "twoBookRoutes": 17585,
+      "freshRoutes": 1393,
+      "counts": {
+        "streamBookEvents": 148934,
+        "twoBookObservations": 127329,
+        "staleTwoBookObservations": 111624,
+        "orientationObservations": 254658,
+        "grossNonpositive": 146408,
+        "extremeStressFailures": 207174,
+        "grossPositive": 60766,
+        "normalFeePositive": 52249,
+        "quantityExecutablePositive": 52249,
+        "smallCapitalPositive": 52249,
+        "distinctEconomicCandidates": 8481,
+        "normalFeesEraseGross": 8517,
+        "oneTickFailures": 119548,
+        "noQuantityOneDepth": 47484,
+        "missingTwoBooks": 149,
+        "freshTwoBookObservations": 15705,
+        "freshNormalFeePositive": 2805,
+        "freshExecutablePositive": 520,
+        "confirmationRequests": 20,
+        "confirmationCooldown": 76,
+        "restPairRefreshes": 27,
+        "confirmationEconomicSurvivors": 17,
+        "verificationPending": 17,
+        "paperCandidateAttempts": 17,
+        "confirmedExecutableCandidates": 2
+      },
+      "reasons": {
+        "REST_PAIR:HTTP_429": 8,
+        "CONFIRMATION:HTTP_429": 2,
+        "REST_PAIR:This operation was aborted": 1,
+        "CONFIRMATION:This operation was aborted": 1
+      },
+      "delayOutcomes": {
+        "0ms:UNOBSERVED_OR_INELIGIBLE": 30,
+        "100ms:UNOBSERVED_OR_INELIGIBLE": 30,
+        "250ms:UNOBSERVED_OR_INELIGIBLE": 30,
+        "500ms:UNOBSERVED_OR_INELIGIBLE": 30,
+        "1000ms:UNOBSERVED_OR_INELIGIBLE": 30,
+        "0ms:CLEAN_DEPTH_PAIR": 4,
+        "100ms:CLEAN_DEPTH_PAIR": 2,
+        "250ms:CLEAN_DEPTH_PAIR": 2,
+        "500ms:CLEAN_DEPTH_PAIR": 2,
+        "1000ms:CLEAN_DEPTH_PAIR": 2,
+        "100ms:UNOBSERVED_STALE_FUTURE": 2,
+        "250ms:UNOBSERVED_STALE_FUTURE": 2,
+        "500ms:UNOBSERVED_STALE_FUTURE": 2,
+        "1000ms:UNOBSERVED_STALE_FUTURE": 2
+      },
+      "evidenceBytes": 72825182,
+      "frozen": {
+        "policy": {
+          "ordersEnabled": false,
+          "sampleMs": 250,
+          "discoveryMs": 300000,
+          "durationMs": 120000,
+          "maxContracts": 10,
+          "maxConfirmationJobs": 2,
+          "confirmationCooldownMs": 10000,
+          "streamGroupSize": 100,
+          "maxStreamRestarts": 3,
+          "maxBookAgeMs": 2000,
+          "restSpacingMs": 300,
+          "maxEvidenceBytes": 268435456,
+          "delayMs": [
+            0,
+            100,
+            250,
+            500,
+            1000
+          ],
+          "simulatedCapitalPerVenue": 50,
+          "maxPairedCommitment": 5
+        },
+        "sourceHashes": {
+          "worker/recall-observer.ts": "25b7603d62b0585ff50eed6d4d77f55f419c3b69e43b72964bc30d1426a58844",
+          "worker/recall-matching-thread.ts": "e795bb594858e99b02f8dbc421f0e7ae293cc549c3f5466f56223da43ddd8b3a",
+          "lib/research/recall-detector.ts": "23cacb68d150bcfcdf3e18ea842756c380c663b74f1fbf4e4f464306649e5c02",
+          "lib/research/ev-arb.ts": "161c33f99bf698c58d91658b252c690c36ca727000fe71c46bef7634199b3754",
+          "lib/arb/adapters.ts": "13f9741292acb82000d5939b29bf6f51ec69ddea329b9e188716bac1ee73dd8a",
+          "worker/streams.ts": "3d0f084bfa2924cebdf5d0a36e0be24e919d525a741d84213365895e32d0f129"
+        },
+        "ordersEnabled": false,
+        "preparedAt": 1790807039889
+      },
+      "healthyFeeds": 167,
+      "totalFeeds": 167
     }
   ]
 }
