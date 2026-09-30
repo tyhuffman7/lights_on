@@ -211,7 +211,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     const live=(v:Venue,b:ObservedBook)=>b.book.source==='rest'||marketFeeds.get(bookKey(v,b.book.marketId))?.health().connected===true;
     return {kalshi:{...k,book:{...k.book,connection:live('kalshi',k)?'LIVE':'DISCONNECTED'}},poly:{...p,book:{...p.book,connection:live('poly',p)?'LIVE':'DISCONNECTED'}}};
   };
-  async function confirm(route:RecallRoute,signal:Signal){
+  async function confirm(route:RecallRoute,signal:Signal,queuedAt:number){
+    const startedAt=Date.now();
     count('confirmationRequests');record('CANDIDATE',{route,signal,books:pairBooks(route)});
     try{
       const refreshed=await refreshCandidateMetadata(api,route);route=refreshed.route;
@@ -225,7 +226,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
       count(state==='not-equivalent'?'notEquivalent':'verificationPending');
       // This assessment never certifies strict equivalence. Do not elevate its
       // ordinary-result match or a Synpath label into a true arbitrage.
-      record('CONFIRMATION',{route,initial:signal,queueLatencyMs:at-signal.evaluation.at,signal:q,entry,metadata:refreshed.metadata,verification,
+      record('CONFIRMATION',{route,initial:signal,queueWaitMs:startedAt-queuedAt,confirmationWorkMs:at-startedAt,
+        quoteToConfirmationMs:at-signal.evaluation.at,signal:q,entry,metadata:refreshed.metadata,verification,
         verificationState:state,status:!q.candidate?'disappeared':state==='not-equivalent'?'not-equivalent':
           q.executable?'confirmed-executable-verification-pending':'economic-positive-freshness-pending'});
       if(!q.candidate)return;
@@ -287,7 +289,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         Number(b.signal.fresh)-Number(a.signal.fresh)||Number(b.route.matchSource==='CANONICAL')-Number(a.route.matchSource==='CANONICAL')||a.queuedAt-b.queuedAt);
       for(const item of pending){if(jobs.size>=recallPolicy.maxConfirmationJobs)break;
         pendingCandidates.delete(item.route.pair.id);cooldown.set(item.route.pair.id,Date.now());
-        const job=confirm(item.route,item.signal);jobs.add(job);void job.finally(()=>jobs.delete(job));}
+        const job=confirm(item.route,item.signal,item.queuedAt);jobs.add(job);void job.finally(()=>jobs.delete(job));}
       if(Date.now()-lastHealthCheck>=5000){lastHealthCheck=Date.now();let restarted=false;
         for(const [key,f] of feeds)if(!f.health().connected&&Date.now()-(feedStarted.get(key)??0)>10_000&&
           (feedRestarts.get(key)??0)<recallPolicy.maxStreamRestarts){
