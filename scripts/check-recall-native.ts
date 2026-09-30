@@ -15,12 +15,20 @@ function fee(used:Level[],rate:number,kalshi:boolean){if(!Number.isFinite(rate))
   if(kalshi)return fees.reduce((n,x)=>n+Math.ceil((x-1e-12)*100)/100,0);
   const cents=fees.reduce((n,x)=>n+x,0)*100,base=Math.floor(cents),part=cents-base;
   return (part>.5+1e-9?base+1:part<.5-1e-9?base:base%2?base+1:base)/100;}
-const slots=new Map<string,number>();
-async function get(url:string){const u=new URL(url);u.searchParams.set('native_check',crypto.randomUUID());
-  const slot=Math.max(Date.now(),slots.get(u.hostname)??0);slots.set(u.hostname,slot+400);await pause(slot-Date.now());
-  const at=Date.now(),r=await fetch(u,{headers:{accept:'application/json','cache-control':'no-cache'},signal:AbortSignal.timeout(12000)});
-  if(!r.ok)throw Error('HTTP_'+r.status);const data=await r.json() as Record<string,any>;
-  return {at,receivedAt:Date.now(),age:r.headers.get('age'),cache:r.headers.get('cf-cache-status'),data};}
+const slots=new Map<string,number>(),cooldowns=new Map<string,number>();
+async function get(url:string){
+  for(let attempt=0;attempt<3;attempt++){
+    const u=new URL(url);u.searchParams.set('native_check',crypto.randomUUID());
+    const slot=Math.max(Date.now(),slots.get(u.hostname)??0);slots.set(u.hostname,slot+400);await pause(slot-Date.now());
+    while((cooldowns.get(u.hostname)??0)>Date.now())await pause(Math.min(1000,cooldowns.get(u.hostname)!-Date.now()));
+    const at=Date.now(),r=await fetch(u,{headers:{accept:'application/json','cache-control':'no-cache'},signal:AbortSignal.timeout(12000)});
+    if(r.status===429){const seconds=Number(r.headers.get('retry-after')??0),wait=Math.min(30000,Math.max(2000*2**attempt,(Number.isFinite(seconds)?seconds:0)*1000));
+      cooldowns.set(u.hostname,Date.now()+wait);if(attempt<2){await r.body?.cancel();await pause(wait);continue;}}
+    if(!r.ok)throw Error(u.hostname+':HTTP_'+r.status);const data=await r.json() as Record<string,any>;
+    return {at,receivedAt:Date.now(),age:r.headers.get('age'),cache:r.headers.get('cf-cache-status'),data,attempts:attempt+1};
+  }
+  throw Error('NATIVE_CHECK_RETRY_BUDGET');
+}
 const checks=summary.independentCheckRoutes??{};
 const selected=[...summary.best,...(checks.highestGross??[]),...(checks.nearPositive??[]),...(checks.canonicalChecks??[])];
 const unique=[...new Map<string,any>(selected.map((x:any)=>[x.route.pair.id,x])).values()];

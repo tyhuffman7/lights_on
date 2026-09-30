@@ -7,7 +7,7 @@ import {evaluateEvArb, evPaperDefaults, USD_SCALE} from './ev-arb.ts';
 
 export const recallPolicy = Object.freeze({ordersEnabled:false, sampleMs:250, discoveryMs:300_000,
   durationMs:20*60_000, maxContracts:10, maxConfirmationJobs:2, confirmationCooldownMs:10_000,
-  streamGroupSize:100,maxStreamRestarts:3, maxBookAgeMs:2000, restSpacingMs:300, maxEvidenceBytes:256*1024*1024,
+  streamGroupSize:100,maxStreamRestarts:3,maxPublicHttpAttempts:3, maxBookAgeMs:2000, restSpacingMs:300, maxEvidenceBytes:256*1024*1024,
   delayMs:[0,100,250,500,1000], simulatedCapitalPerVenue:50, maxPairedCommitment:5});
 export type RecallRoute={pair:Pair;matchSource:'CANONICAL'|'SPORTS_EVENT'|'TEXT';warnings:string[];eventKey:string;ticks?:Record<Venue,number>};
 const stop=new Set('will the be in of by a an to on at for is than before after above below yes no and or win wins winner over under total game match'.split(' '));

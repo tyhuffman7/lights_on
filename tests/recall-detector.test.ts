@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {market,book} from './research-fixture.ts';
 import {recallMatches,recallSignals,currentBook,freshnessBucket,fairRoutes,type RecallRoute,type ObservedBook} from '../lib/research/recall-detector.ts';
-import {delayCounterfactual,matchOffThread,currentCatalog,type PublicData} from '../worker/recall-observer.ts';
+import {delayCounterfactual,matchOffThread,currentCatalog,PublicData} from '../worker/recall-observer.ts';
 import type {Market} from '../lib/arb/types.ts';
 const nativeCases=JSON.parse(readFileSync(new URL('./fixtures/recall-native-matches.json',import.meta.url),'utf8'));
 for(const c of nativeCases)test('native smoke regression: '+c.label,()=>{
@@ -63,6 +63,23 @@ test('catalog page batching preserves both native catalogs and avoids per-market
   assert.equal(result.complete,true);assert.equal(result.kalshi.length,500);assert.equal(result.poly.length,500);
   assert.equal(result.kalshi[499].id,'K-499');assert.equal(result.poly[499].id,'P-499');
   assert.equal(result.raw.size,1000);assert.equal(calls.length,4);
+});
+test('public 429 recovery is bounded and retains the failed venue and fresh retry timing',async(t)=>{
+  const records:any[]=[];let calls=0;
+  t.mock.method(globalThis,'fetch',async()=>{calls++;return new Response(JSON.stringify({value:'fixture'}),
+    {status:calls===1?429:200,headers:{'retry-after':'0'}});});
+  const api=new PublicData(new AbortController().signal,(kind,body)=>records.push({kind,body}));
+  const result=await api.get('https://gateway.polymarket.us/v1/markets?fixture=true',true);
+  assert.equal(calls,2);assert.equal(result.data.value,'fixture');
+  assert.equal(api.failures['gateway.polymarket.us:HTTP_429'],1);
+  assert.ok(records.some(r=>r.kind==='HTTP_PUBLIC_FAILURE'&&r.body.host==='gateway.polymarket.us'));
+  assert.ok(Date.now()-result.transport.requestAt<500);
+});
+test('public retry budget exhausts at three attempts and reports every 429',async(t)=>{
+  let calls=0;t.mock.method(globalThis,'fetch',async()=>{calls++;return new Response('{}',{status:429});});
+  const api=new PublicData(new AbortController().signal);
+  await assert.rejects(api.get('https://gateway.polymarket.us/v1/markets?fixture=true'),/HTTP_429/);
+  assert.equal(calls,3);assert.equal(api.failures['gateway.polymarket.us:HTTP_429'],3);
 });
 test('structured sports matching resolves opposite named winners and rejects known different lines',()=>{
   const {route}=fixtures();const common={sports:true,competition:'nfl',sport:'football',eventDate:'2026-10-01',

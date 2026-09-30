@@ -29,26 +29,31 @@ export class PublicData {
   signal:AbortSignal;record:(kind:string,body:unknown)=>void;
   constructor(signal:AbortSignal,record:(kind:string,body:unknown)=>void=()=>{}){this.signal=signal;this.record=record;}
   async get(url:string,uncached=false){
-    const u=new URL(url);if(![new URL(K).hostname,new URL(P).hostname].includes(u.hostname))throw Error('NON_NATIVE_HOST');
-    const slot=Math.max(Date.now(),this.slots.get(u.hostname)??0);this.slots.set(u.hostname,slot+recallPolicy.restSpacingMs);
-    if(slot>Date.now())await sleep(slot-Date.now());this.signal.throwIfAborted();
-    // Requests already waiting for a reserved slot also honor a newer 429.
-    while((this.cooldowns.get(u.hostname)??0)>Date.now()){
-      await sleep(Math.min(1000,this.cooldowns.get(u.hostname)!-Date.now()));this.signal.throwIfAborted();}
-    if(uncached)u.searchParams.set('lights_on',randomUUID());
-    const requestAt=Date.now(),mono=performance.now();this.counts[u.hostname]=(this.counts[u.hostname]??0)+1;
-    try{
-      const response=await fetch(u,{headers:{accept:'application/json','cache-control':'no-cache, no-store',pragma:'no-cache'},
-        cache:'no-store',signal:AbortSignal.any([this.signal,AbortSignal.timeout(12_000)])});
-      const raw=await response.text(),responseAt=Date.now();
-      const cacheAge=response.headers.get('age');
-      const transport={requestAt,responseAt,durationMs:performance.now()-mono,
-        cacheAgeSeconds:cacheAge===null?null:Number(cacheAge),cacheStatus:response.headers.get('cf-cache-status'),bodySha256:sha(raw)};
-      if(!response.ok){if(response.status===429){const seconds=Number(response.headers.get('retry-after')??2);
-        this.cooldowns.set(u.hostname,Date.now()+Math.min(30_000,Math.max(2000,(Number.isFinite(seconds)?seconds:2)*1000)));}
-        throw Error('HTTP_'+response.status);}
-      const data=JSON.parse(raw);this.record('HTTP_PUBLIC',{url:u.toString(),transport,data});return {data,transport};
-    }catch(error){const key=(error as Error).message;this.failures[key]=(this.failures[key]??0)+1;throw error;}
+    const target=new URL(url);if(![new URL(K).hostname,new URL(P).hostname].includes(target.hostname))throw Error('NON_NATIVE_HOST');
+    for(let attempt=0;attempt<recallPolicy.maxPublicHttpAttempts;attempt++){
+      const u=new URL(target),slot=Math.max(Date.now(),this.slots.get(u.hostname)??0);
+      this.slots.set(u.hostname,slot+recallPolicy.restSpacingMs);
+      if(slot>Date.now())await sleep(slot-Date.now());this.signal.throwIfAborted();
+      // Requests already waiting for a reserved slot also honor a newer 429.
+      while((this.cooldowns.get(u.hostname)??0)>Date.now()){
+        await sleep(Math.min(1000,this.cooldowns.get(u.hostname)!-Date.now()));this.signal.throwIfAborted();}
+      if(uncached)u.searchParams.set('lights_on',randomUUID());
+      const requestAt=Date.now(),mono=performance.now();this.counts[u.hostname]=(this.counts[u.hostname]??0)+1;
+      try{
+        const response=await fetch(u,{headers:{accept:'application/json','cache-control':'no-cache, no-store',pragma:'no-cache'},
+          cache:'no-store',signal:AbortSignal.any([this.signal,AbortSignal.timeout(12_000)])});
+        const raw=await response.text(),responseAt=Date.now(),cacheAge=response.headers.get('age');
+        const transport={requestAt,responseAt,durationMs:performance.now()-mono,
+          cacheAgeSeconds:cacheAge===null?null:Number(cacheAge),cacheStatus:response.headers.get('cf-cache-status'),bodySha256:sha(raw)};
+        if(!response.ok){if(response.status===429){const seconds=Number(response.headers.get('retry-after')??0);
+          this.cooldowns.set(u.hostname,Date.now()+Math.min(30_000,Math.max(2000*2**attempt,(Number.isFinite(seconds)?seconds:0)*1000)));}
+          throw Error('HTTP_'+response.status);}
+        const data=JSON.parse(raw);this.record('HTTP_PUBLIC',{url:u.toString(),transport,data});return {data,transport};
+      }catch(error){const key=u.hostname+':'+(error as Error).message;this.failures[key]=(this.failures[key]??0)+1;
+        this.record('HTTP_PUBLIC_FAILURE',{host:u.hostname,path:u.pathname,attempt:attempt+1,reason:(error as Error).message});
+        if((error as Error).message==='HTTP_429'&&attempt+1<recallPolicy.maxPublicHttpAttempts)continue;throw error;}
+    }
+    throw Error('PUBLIC_HTTP_RETRY_BUDGET');
   }
   async book(m:Market):Promise<ObservedBook>{
     const {data,transport}=await this.get(m.venue==='kalshi'?`${K}/markets/${encodeURIComponent(m.id)}/orderbook?depth=100`:
@@ -154,7 +159,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     if(evidenceBytes+Buffer.byteLength(row)>recallPolicy.maxEvidenceBytes){reasons.EVIDENCE_LIMIT=(reasons.EVIDENCE_LIMIT??0)+1;control.abort();return;}
     appendFileSync(resolve(directory,'evidence.ndjson'),row,{mode:0o600});evidenceBytes+=Buffer.byteLength(row);};
   // Catalog bodies are saved once separately, not repeated in the L2 event log.
-  const api=new PublicData(control.signal);
+  const api=new PublicData(control.signal,(kind,body)=>{if(kind==='HTTP_PUBLIC_FAILURE')record(kind,body);});
   let data=await currentCatalog(api,x=>console.log(JSON.stringify(x)));
   if(!data.kalshi.length||!data.poly.length)throw Error('NO_NATIVE_CATALOG');
   let matched=await matchOffThread(data.kalshi,data.poly,control.signal),routes=fairRoutes(matched.routes),cycles=1;
