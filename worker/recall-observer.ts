@@ -122,6 +122,12 @@ async function refreshCandidateMetadata(api:PublicData,route:RecallRoute){
 }
 
 type Signal=ReturnType<typeof recallSignals>[number];
+export function nextConfirmation<T extends {route:RecallRoute;signal:Signal;queuedAt:number}>(pending:T[],fair:boolean){
+  return [...pending].sort((a,b)=>fair?a.queuedAt-b.queuedAt:
+    Number(b.route.matchSource==='CANONICAL')-Number(a.route.matchSource==='CANONICAL')||
+    Number(a.route.warnings.includes('ORIENTATION_UNPROVEN'))-Number(b.route.warnings.includes('ORIENTATION_UNPROVEN'))||
+    Number(b.signal.fresh)-Number(a.signal.fresh)||a.queuedAt-b.queuedAt)[0];
+}
 export function delayCounterfactual(route:RecallRoute,signal:Signal,entry:Record<Venue,ObservedBook>,
   future:Record<Venue,ObservedBook>|null,first:Venue,requestedDelayMs:number,actualDelayMs:number,at:number){
   const e=signal.evaluation,second:Venue=first==='kalshi'?'poly':'kalshi',side=(v:Venue)=>v==='kalshi'?e.kalshiSide:e.polySide;
@@ -173,6 +179,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   let byMarket=new Map<string,string[]>(),restCursor=0,restActive=false,refreshing:Promise<void>|null=null;
   const jobs=new Set<Promise<void>>(),cooldown=new Map<string,number>(),candidateFingerprints=new Set<string>();
   const pendingCandidates=new Map<string,{route:RecallRoute;signal:Signal;queuedAt:number}>();
+  let confirmationTurn=0;
   const feedRestarts=new Map<string,number>(),feedStarted=new Map<string,number>();let lastHealthCheck=start;
   let best:{route:RecallRoute;signal:Signal}[]=[],stopped=false,lastDiscovery=0;
   let highestGross:typeof best=[],nearPositive:typeof best=[],canonicalChecks:typeof best=[];
@@ -286,13 +293,12 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
           else count('confirmationCooldown');
         }
       }
-      // Known orientation, currently fresh and canonical routes go first. The
-      // remainder remains explicitly queued; a cold route cannot be starved by
-      // one repeat signal because every attempted route gets a cooldown.
-      const pending=[...pendingCandidates.values()].sort((a,b)=>
-        Number(a.route.warnings.includes('ORIENTATION_UNPROVEN'))-Number(b.route.warnings.includes('ORIENTATION_UNPROVEN'))||
-        Number(b.signal.fresh)-Number(a.signal.fresh)||Number(b.route.matchSource==='CANONICAL')-Number(a.route.matchSource==='CANONICAL')||a.queuedAt-b.queuedAt);
-      for(const item of pending){if(jobs.size>=recallPolicy.maxConfirmationJobs)break;
+      // Broad hypotheses stay visible, but cannot monopolize confirmation over
+      // explicit matching predicates. Every third dispatch is oldest-first;
+      // the other two prioritize canonical, known-orientation, fresh routes.
+      while(pendingCandidates.size&&jobs.size<recallPolicy.maxConfirmationJobs){
+        const fair=confirmationTurn++%3===2,item=nextConfirmation([...pendingCandidates.values()],fair);
+        count(fair?'fairConfirmationDispatches':'hotConfirmationDispatches');
         pendingCandidates.delete(item.route.pair.id);cooldown.set(item.route.pair.id,Date.now());
         const job=confirm(item.route,item.signal,item.queuedAt);jobs.add(job);void job.finally(()=>jobs.delete(job));}
       if(Date.now()-lastHealthCheck>=5000){lastHealthCheck=Date.now();let restarted=false;

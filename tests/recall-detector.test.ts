@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {market,book} from './research-fixture.ts';
 import {recallMatches,recallSignals,currentBook,freshnessBucket,fairRoutes,type RecallRoute,type ObservedBook} from '../lib/research/recall-detector.ts';
-import {delayCounterfactual,matchOffThread,currentCatalog,PublicData} from '../worker/recall-observer.ts';
+import {delayCounterfactual,matchOffThread,currentCatalog,PublicData,nextConfirmation} from '../worker/recall-observer.ts';
 import type {Market} from '../lib/arb/types.ts';
 const nativeCases=JSON.parse(readFileSync(new URL('./fixtures/recall-native-matches.json',import.meta.url),'utf8'));
 for(const c of nativeCases)test('native smoke regression: '+c.label,()=>{
@@ -33,6 +33,13 @@ test('a one-contract thin edge is preserved and sensible quantities walk availab
   assert.equal(signals[0].candidate,true);assert.equal(signals[1].candidate,false);
   route.pair.b.minQty=2;assert.equal(recallSignals(route,books,now,[1])[0].candidate,true);
   assert.equal(recallSignals(route,books,now,[1])[0].executable,false);
+});
+test('canonical confirmation priority and oldest-first lane preserve broad candidate access',()=>{
+  const {route,books}=fixtures(),signal=recallSignals(route,books,now,[1])[0];
+  const pending=[{route,signal,queuedAt:1},{route:{...route,matchSource:'CANONICAL' as const},signal:{...signal,fresh:false},queuedAt:3},
+    {route,signal:{...signal,fresh:false},queuedAt:0}];
+  assert.equal(nextConfirmation(pending,false),pending[1]);assert.equal(nextConfirmation(pending,true),pending[2]);
+  assert.equal(pending.length,3);
 });
 test('transport age, cached REST and exchange age independently prevent fresh confirmation',()=>{
   const {books}=fixtures(),b=books.poly;b.book.source='rest';
