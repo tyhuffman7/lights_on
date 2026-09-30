@@ -1,24 +1,32 @@
-# Handoff — 2026-09-24 EDT, EV arbitrage paper checkpoint complete
+# Handoff — 2026-09-30 EDT, recall detector paused for laptop closure
 
-**PAPER / READ ONLY. Live orders remain disabled. Stop at this checkpoint.** Branch `experiment/ev-arb-learning` is stacked on unmerged candidate-watch [draft PR #19](https://github.com/tyhuffman7/lights_on/pull/19), without the PMXT experiment. [Draft PR #21](https://github.com/tyhuffman7/lights_on/pull/21) targets `codex/bounded-candidate-watch`. Nothing was merged to `main`; its unrelated local changes and prior private evidence were preserved. GitHub identity: `tyhuffman7`; repo-local SSH signing retained.
+**PAUSED at the user's request. READ ONLY / PAPER. No observation or local background work remains running. Do not start another run until the user says continue.** No real orders, fills, previews, cancellations, funding, wallet actions, live launch or automation occurred.
 
-## Verified result
+## Saved checkpoint
 
-- Direct Kalshi + Polymarket US L2 gross complement, ordinary modeled fee, extreme Kalshi fee stress, one-tick stress, freshness, settlement and paper risk gates are separate. Append-only simulated attempts include alternate first-leg outcomes. [Method and limits](EV_ARB_LEARNING.md).
-- Verified retained September 23 replay: 662 gross-positive and 71 ordinary-fee-net-positive repeated observations; 12 fresh, cap-eligible readings on five routes failed the old extreme fee stress gate. Only eight raw monitoring segments remained after 18 rotated. [Sanitized replay](ev-arb-september23-retained-replay.json).
-- One frozen 90-minute observation ran September 24 **22:10:08–23:40:12 UTC**, stopped at `ORIGINAL_DEADLINE` and exited 0. It reached 34 of 48 route shards; 2,852 is the matched universe, not the number streamed. Repeated 250 ms orientation samples: 21,950 fresh two-book depth, 47,597 gross-positive including stale, 3,548 ordinary-fee-net-positive including stale, and four fresh paper-eligible observations rejected only by the old extreme fee stress gate. All four came from one route. Empirical EV remains `INSUFFICIENT_EMPIRICAL_SAMPLE`. [Hash-checked sanitized receipt](ev-arb-paper-run-20260924.json).
-- One primary Kalshi-first simulated clean pair projected **+$0.05 gross −$0.04 modeled fees = +$0.01 net at ordinary settlement**. No primary disappearance, unwind or orphan occurred. Its dependent PM-US-first counterfactual found the Kalshi hedge book stale under the fixed two-second rule and simulated a full unwind: −$0.01 price loss −$0.04 fees = **−$0.05**. Counterfactual P&L is excluded from primary totals. These were public-depth simulations, not actual fills or profit. All three saved public-book hashes, both attempt references and P&L identities verify; the receipt contains no raw books or credentials.
-- The observed Oscar Best Picture route offered +$0.05 gross and +$0.01 modeled ordinary net, but $1.0375 in extreme fee stress and −$0.01 net under one native tick against each leg. Its family carries `venue-finality` and `family-branches` divergence; direct public pair audit retrieved both markets and books but found no reviewed pair-specific settlement profile. Recorded PM-US close is March 29, 2027; Kalshi close is December 31, 2027. The later close is an indicative lockup floor, not guaranteed release. Small-capital economics are weak at this horizon.
-- Initial signed code commit `4afa0bcabfb27afeaaac21412b84cd9a4e37dda4` passed [CI 36065594252](https://github.com/tyhuffman7/lights_on/actions/runs/36065594252): 768/768 tests, typecheck and build. Frozen source hashes matched that commit. After the run, 35 affected tests and typecheck passed locally; final PR CI covers the report, audit and documentation follow-up.
+- Persistent isolated checkout: `/Users/tylerhuffman/Documents/code_projects/lights-on/work/recall-detector-20260930/checkout`; branch `codex/recall-first-detector`, created from exact requested `a200abf36cd590c894f936dbe1d6f4c81f461468` on `experiment/ev-arb-learning`. Main's staged/local work preserved. GitHub identity `tyhuffman7`; HTTPS remote and repo-local SSH signing intact.
+- New observer: full dynamic catalogs, simultaneous 100-market subscription groups, stable membership, bounded restarts, independent book/cache ages, normal-fee candidates before verification, quantities 1–10, native metadata/book confirmation, and labeled delay counterfactuals. Latest edits move matching off the observer thread and start the bounded clock after preparation. These latest edits have not had another live run yet.
+- **22/22 targeted tests passed** after final edits, including native matching regressions and background matching. Full tests/typecheck/build pending repository CI. Final completion is not claimed.
+- Retained September 22 replay: **57 gross, 51 normal-fee positives across 47 routes; all 51 preserved, four fresh, zero economics disagreements.** Requested September 23/24 temporary raw evidence absent; user has no known alternate copy. Published 662/71/12 baseline unchanged, exact replay unverified.
+- Smoke 1 exposed 613,317 overly broad hypotheses and failed multi-subscription Kalshi connections. Native 100-market feed succeeded; 500-market/five-subscription feed reproducibly failed after 100 books. Smoke 2: **18,260 matched and two-book routes; 5,447 fresh two-book observations; 41,241 gross-positive and 36,298 modeled normal-fee-positive readings including stale; 810 fresh net readings; eight repeat-economic survivors; one fresh executable candidate; zero settlement-verified arbs.** False positives remain measurable candidates. Event-driven counts are not unique trades, fills or realized profit.
+- Synpath SDK orientation/PM-US fee source cross-check done. Example bot targets international Polymarket. Two hosted probes failed at TLS/HTTP 000; hosted PM-US matching usefulness unverified and does not block native work.
 
-## Blockers and next action
+[Implementation/methodology](recall-detector/README.md) · [Replay](recall-detector/september-replay.json) · [Smoke receipts](recall-detector/smoke-receipts.json).
 
-One primary attempt and one dependent counterfactual cannot estimate execution EV or repeatable net profit. Long capital lockup, settlement divergence, account-specific Kalshi fee precision, second-leg risk, and Ohio/account/product permission remain unresolved. Review draft PR #21 and the receipts. A shorter-lockup paper iteration needs a separate scope; a live launch needs separate approval. Do not restart this observation or the completed sizing/recovery no-fill run.
+## Resume in this order
 
-Preserve private raw paper evidence at `/private/tmp/lights-on-ev-paper-20260924/` and prior watch evidence at `/private/tmp/lights-on-bounded-basis-20260923/work/candidate-watch/session/`.
+1. Read this handoff; verify branch/status in the persistent checkout. Inspect draft PR / compact CI result. Fix relevant CI failures; use targeted tests while editing.
+2. Inspect remaining matcher false positives using exact native propositions. Missing settlement review must not gate observation. Validate latest background discovery, restarts, post-preparation clock and verification-state changes in a short smoke before freezing the final run.
+3. Freeze settings; run the meaningful bounded read-only observation (default 20 minutes). No repeated tests/builds/CI polling during collection. No tuning against final results. Preserve candidate IDs/orientation, depth/quantity, fees, independent ages/cache, confirmation and 0/100/250/500/1,000 ms simulated delays.
+4. After stop, independently inspect highest/near-positive spreads with `scripts/check-recall-native.ts`; investigate missed signals and wrong predicates. Preserve evidence/limits. Do not claim no confirmed arb merely because verification is unsupported.
+5. Complete draft PR with before/after funnel, coverage, exact examples, confirmation/verification/paper outcomes, Synpath limits and start command. Update this handoff and stop. No merge or live-money recommendation.
 
 ```sh
-npm run research:ev-report -- /private/tmp/lights-on-ev-paper-20260924
-npm run research:audit-pair -- --kalshi=KXOSCARPIC-27-ODY --pmus=tac-oscars-03-14-2027-bestpic-odysse
-gh pr checks 21 --repo tyhuffman7/lights_on
+cd /Users/tylerhuffman/Documents/code_projects/lights-on/work/recall-detector-20260930/checkout
+git status --short --branch
+node --experimental-strip-types --test tests/recall-detector.test.ts tests/ev-arb-learning.test.ts
+npm run research:recall -- work/final-NEW --duration-seconds=1200 --env=/Users/tylerhuffman/Documents/code_projects/lights-on/.env.research
+node --experimental-strip-types scripts/check-recall-native.ts work/final-NEW docs/research/recall-detector/native-check.json
 ```
+
+Smoke catalogs, raw books, logs, source freezes and probes persist under ignored `work/`. Prior primary handoff at sibling `primary-handoff-before.md`; staged-index fingerprint at `primary-index.sha256`. No completed recovery/no-fill run restarted or refined. The original task remains unfinished and paused.

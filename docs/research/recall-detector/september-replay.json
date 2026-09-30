@@ -1,0 +1,589 @@
+{
+  "ordersEnabled": false,
+  "simulation": "RETAINED_L2_REPLAY_NOT_FILLS",
+  "source": "Retained September 22 depth-discovery books",
+  "firstAt": 1790038864030,
+  "lastAt": 1790040387264,
+  "missingRequestedReplay": "September 23/24 temporary raw directories absent; published 662/71/12 aggregates cannot reconstruct underlying L2.",
+  "hashes": {
+    "batch-01/frozen.json": "b2d2f24395074ee849faa418af8e92fbbe49ce61d58bf7892b5e5774251560e6",
+    "batch-01/evidence.ndjson": "8c08fa178ce27d6299d5ff7b4e3cc6903581f5c5277e8fc32b6a2de60ffecdcc",
+    "batch-02/frozen.json": "a296a1ac559d72535c9284e99e2873d56c8cfb072eee37bed044030b4847c994",
+    "batch-02/evidence.ndjson": "eedf973843dfc1bbed17bec7381cce10f49ec033df7aa81db68f82b16fdfd40e",
+    "batch-03/frozen.json": "6e76463456c9e8da86dd4bf0ba0a541ddd789fa29da81e87bf3ad8e00aa913b6",
+    "batch-03/evidence.ndjson": "7a31ede1a0e4c3abd2cb93d592b6e2dc993b50852ff440f3141b1285d1d0988f",
+    "batch-04/frozen.json": "aa87f7e5f3a4da3607e5b785f943d6bc57863361b62f7664032f0dcdba0cd27f",
+    "batch-04/evidence.ndjson": "1fd7136695444c62fc10e1aca30c630f63ff3df2eb2591f3f7f67a8d679ae26f",
+    "batch-05/frozen.json": "1ad05f50f671aead8ca219adf17ce2f54c86b386a696a72305443126e073f5db",
+    "batch-05/evidence.ndjson": "f924c0fd4b478541b6ec07b1ea422e908e258a473a55e0ec568e6997347b06aa",
+    "batch-06/frozen.json": "1b2a0f1d86200882375acf4aa3e5eb40428a7cfec114f8b603d3e29c22e88032",
+    "batch-06/evidence.ndjson": "f794409352345036466a2b1ad0edaca83b4f9f6aa79e2bd08bdc9033dc2401c9",
+    "batch-07/frozen.json": "136fbf537a8aebd1e1d5c09ed7e1574b194d93e7da3e87904cb833e14f19c2d2",
+    "batch-07/evidence.ndjson": "25e65f5a6abe788c1ff9f2370bda5cf5375c47df34aa6265117df0f5a7b1a069",
+    "batch-08/frozen.json": "8393b69dca1f9a06596552ef91bded81de3292891d43a046c4271f6e32200249",
+    "batch-08/evidence.ndjson": "abad1cbb56c66b44a08f7605152218903e96254feecef3af1094dec4e81d8c9f",
+    "batch-09/frozen.json": "a724564f0aa1efe2aadf09d8ac9a8f0174e5369cdef5761f84376b90b192d518",
+    "batch-09/evidence.ndjson": "16dcc211a577f54bfb1ba392eeed449ee8d179c9ab565f9016b8e59e40dfa45a",
+    "batch-10/frozen.json": "96ff32c03f48df25e6b30e8a4e4494b9c2926aa1c7800ea1c86f31ee0dd277c8",
+    "batch-10/evidence.ndjson": "ca918e85aedd878986b87e7ecb658b9e7c717e1e1c8ab78cf4a3647ef76e7eb3",
+    "batch-11/frozen.json": "4886a9bdbf967204ce915b3f84de154c1f0d95cb01ad9f270ea374cde2f01c29",
+    "batch-11/evidence.ndjson": "8d71e0452bd70f956f93d50f824386b4614ae782d870a21f4639b4c40cfd65e1",
+    "batch-12/frozen.json": "0c4dc609c94fb999f4efb626bf82147ebc29bc41fef56c823c742bdef01d251e",
+    "batch-12/evidence.ndjson": "22d5155cb23fd8d30a3b48e7e831c3b3448dd798a2904f6f48615fe124632844",
+    "batch-13/frozen.json": "8749a74232174896c3eb523f619ebd37c90a556d5acdc694f9d0ae67dececc38",
+    "batch-13/evidence.ndjson": "8d88f75b8221858be2667d88d76533a155f0ce7a603c7016f820b8180f84b85c",
+    "batch-14/frozen.json": "b568b479fb37de45097958c93b397127a02ca44b56e634e421ccd5c936be9e32",
+    "batch-14/evidence.ndjson": "999b90062a565c9bdc64d209022faf4cca62ff93d36292a61fe904079de453f8",
+    "batch-15/frozen.json": "564301f08df5e68034515577ef02205d02ac9133b4c3149f74f8ba660fa03155",
+    "batch-15/evidence.ndjson": "0ab869a50af726d32270d9dc263fcf1200d30324fcdb593fb7267d2f4c565833",
+    "batch-16/frozen.json": "29147017f67ee8e68cae8835cd465731f47e3b7c639b2207dce45e8f59ce6d67",
+    "batch-16/evidence.ndjson": "df5e9ed7474a2f2e772531ab85020e9ace1c704f2202609520e74cabc4050149",
+    "batch-17/frozen.json": "3582b0cb7c591f51d5526b21cac7a830290109407fe1aa16f05498dcfb066f4d",
+    "batch-17/evidence.ndjson": "83bbc3c0fbee4a6274bc2163055eef5c4854dead0610119ee04d6e0df4439e5d",
+    "batch-18/frozen.json": "41d3a606a9147e88c1d61413b9f5b598151809f56bdac189f233ef8d22d11f79",
+    "batch-18/evidence.ndjson": "1be6917cb6a8c36cbfa18332add08d61ccfac9f10286885c6dec8b190d3e6ae6",
+    "batch-19/frozen.json": "5a04e3bbcfb3b8474372321281ec77a8a70e960df39a032fcd439b4e283f857e",
+    "batch-19/evidence.ndjson": "3226be59e5345c2eb71f4ccb193a2d81e8f542ec84057c7409acfa72fb0bf975",
+    "batch-20/frozen.json": "9451433944311be7d2271ce37b45724ba486ce43a3578709e465591f2c40af6d",
+    "batch-20/evidence.ndjson": "26158730d9894dab1be6252903b2696fb08681ff8d44f83fae4afbdd64c0e755"
+  },
+  "counts": {
+    "books": 107,
+    "pairedEvents": 57,
+    "orientations": 114,
+    "grossPositive": 57,
+    "normalFeePositive": 51,
+    "oldPaperEligible": 4,
+    "preservedCandidates": 51,
+    "preservedFreshCandidates": 4,
+    "stressOnlyOldRejections": 4,
+    "economicDisagreements": 0
+  },
+  "distinctPositiveRoutes": 47,
+  "examples": [
+    {
+      "at": 1790038864047,
+      "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+      "signal": {
+        "evaluation": {
+          "strategy": "ev-arb-paper-v1",
+          "pairId": "KXAOCRUN-28-27JAN01::cranc-uspres28-12-31-2026-aleoca",
+          "markets": {
+            "kalshi": "KXAOCRUN-28-27JAN01",
+            "poly": "cranc-uspres28-12-31-2026-aleoca"
+          },
+          "orientation": "kalshi_no+pm_us_yes",
+          "kalshiSide": "no",
+          "polySide": "yes",
+          "quantity": 1,
+          "at": 1790038864047,
+          "sourceBooks": {
+            "kalshi": {
+              "at": 1790038863805,
+              "exchangeAt": null,
+              "source": "stream"
+            },
+            "poly": {
+              "at": 1790038864030,
+              "exchangeAt": 1790038863548,
+              "source": "stream"
+            }
+          },
+          "settlementStatus": "UNVERIFIED",
+          "settlementWarnings": [
+            "UNVERIFIED",
+            "HISTORICAL_VERIFICATION_PENDING"
+          ],
+          "grossStatus": "GROSS_ARB",
+          "grossProfit": 3000000,
+          "acquisitionCost": 97000000,
+          "estimatedFees": 2000000,
+          "estimatedNetProfit": 1000000,
+          "economicStatus": "REALISTIC_NET_POSITIVE",
+          "feeConfidence": "UNCONFIRMED_ACCOUNT_PRECISION",
+          "kalshi": {
+            "levels": [
+              {
+                "price": 8900,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 89000000,
+            "lastPrice": 8900
+          },
+          "poly": {
+            "levels": [
+              {
+                "price": 800,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 8000000,
+            "lastPrice": 800
+          },
+          "stress": {
+            "feeBound": 101690000,
+            "feeBoundPass": false,
+            "oneTickProfit": null,
+            "oneTickPass": null,
+            "freshnessPass": true,
+            "failed": [
+              "EXTREME_FRAGMENTATION_FEE",
+              "NATIVE_PRICE_GRID_UNPROVEN",
+              "SETTLEMENT_RISK"
+            ]
+          },
+          "execution": {
+            "paperEligible": true,
+            "reasons": []
+          }
+        },
+        "ages": {
+          "kalshi": {
+            "receiptMs": 242,
+            "exchangeMs": null,
+            "cacheMs": null,
+            "requestMs": null
+          },
+          "poly": {
+            "receiptMs": 17,
+            "exchangeMs": 499,
+            "cacheMs": null,
+            "requestMs": null
+          }
+        },
+        "skewMs": 225,
+        "fresh": true,
+        "candidate": true,
+        "minimumQuantityPass": true,
+        "minimumsKnown": true,
+        "withinCapital": true,
+        "verificationStatus": "verification-pending",
+        "executable": true
+      }
+    },
+    {
+      "at": 1790038943909,
+      "pairId": "KXNCAAFAAC-26-NAVY::tec-cfb-aacchamp-2026-12-05-w-navy",
+      "signal": {
+        "evaluation": {
+          "strategy": "ev-arb-paper-v1",
+          "pairId": "KXNCAAFAAC-26-NAVY::tec-cfb-aacchamp-2026-12-05-w-navy",
+          "markets": {
+            "kalshi": "KXNCAAFAAC-26-NAVY",
+            "poly": "tec-cfb-aacchamp-2026-12-05-w-navy"
+          },
+          "orientation": "kalshi_yes+pm_us_no",
+          "kalshiSide": "yes",
+          "polySide": "no",
+          "quantity": 1,
+          "at": 1790038943909,
+          "sourceBooks": {
+            "kalshi": {
+              "at": 1790038943761,
+              "exchangeAt": null,
+              "source": "stream"
+            },
+            "poly": {
+              "at": 1790038943900,
+              "exchangeAt": 1790038942918,
+              "source": "stream"
+            }
+          },
+          "settlementStatus": "UNVERIFIED",
+          "settlementWarnings": [
+            "UNVERIFIED",
+            "HISTORICAL_VERIFICATION_PENDING"
+          ],
+          "grossStatus": "GROSS_ARB",
+          "grossProfit": 3000000,
+          "acquisitionCost": 97000000,
+          "estimatedFees": 2000000,
+          "estimatedNetProfit": 1000000,
+          "economicStatus": "REALISTIC_NET_POSITIVE",
+          "feeConfidence": "UNCONFIRMED_ACCOUNT_PRECISION",
+          "kalshi": {
+            "levels": [
+              {
+                "price": 600,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 6000000,
+            "lastPrice": 600
+          },
+          "poly": {
+            "levels": [
+              {
+                "price": 9100,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 91000000,
+            "lastPrice": 9100
+          },
+          "stress": {
+            "feeBound": 101400000,
+            "feeBoundPass": false,
+            "oneTickProfit": null,
+            "oneTickPass": null,
+            "freshnessPass": true,
+            "failed": [
+              "EXTREME_FRAGMENTATION_FEE",
+              "NATIVE_PRICE_GRID_UNPROVEN",
+              "SETTLEMENT_RISK"
+            ]
+          },
+          "execution": {
+            "paperEligible": true,
+            "reasons": []
+          }
+        },
+        "ages": {
+          "kalshi": {
+            "receiptMs": 148,
+            "exchangeMs": null,
+            "cacheMs": null,
+            "requestMs": null
+          },
+          "poly": {
+            "receiptMs": 9,
+            "exchangeMs": 991,
+            "cacheMs": null,
+            "requestMs": null
+          }
+        },
+        "skewMs": 139,
+        "fresh": true,
+        "candidate": true,
+        "minimumQuantityPass": true,
+        "minimumsKnown": true,
+        "withinCapital": true,
+        "verificationStatus": "verification-pending",
+        "executable": true
+      }
+    },
+    {
+      "at": 1790038946034,
+      "pairId": "KXARGENTINAPRES-27-SMAS::ewc-pres-arg-2027-10-24-sermas",
+      "signal": {
+        "evaluation": {
+          "strategy": "ev-arb-paper-v1",
+          "pairId": "KXARGENTINAPRES-27-SMAS::ewc-pres-arg-2027-10-24-sermas",
+          "markets": {
+            "kalshi": "KXARGENTINAPRES-27-SMAS",
+            "poly": "ewc-pres-arg-2027-10-24-sermas"
+          },
+          "orientation": "kalshi_no+pm_us_yes",
+          "kalshiSide": "no",
+          "polySide": "yes",
+          "quantity": 1,
+          "at": 1790038946034,
+          "sourceBooks": {
+            "kalshi": {
+              "at": 1790038945815,
+              "exchangeAt": null,
+              "source": "stream"
+            },
+            "poly": {
+              "at": 1790038946018,
+              "exchangeAt": 1790038914799,
+              "source": "stream"
+            }
+          },
+          "settlementStatus": "UNVERIFIED",
+          "settlementWarnings": [
+            "UNVERIFIED",
+            "HISTORICAL_VERIFICATION_PENDING"
+          ],
+          "grossStatus": "GROSS_ARB",
+          "grossProfit": 1500000,
+          "acquisitionCost": 98500000,
+          "estimatedFees": 1000000,
+          "estimatedNetProfit": 500000,
+          "economicStatus": "REALISTIC_NET_POSITIVE",
+          "feeConfidence": "UNCONFIRMED_ACCOUNT_PRECISION",
+          "kalshi": {
+            "levels": [
+              {
+                "price": 9350,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 93500000,
+            "lastPrice": 9350
+          },
+          "poly": {
+            "levels": [
+              {
+                "price": 500,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 5000000,
+            "lastPrice": 500
+          },
+          "stress": {
+            "feeBound": 100430000,
+            "feeBoundPass": false,
+            "oneTickProfit": null,
+            "oneTickPass": null,
+            "freshnessPass": false,
+            "failed": [
+              "EXTREME_FRAGMENTATION_FEE",
+              "NATIVE_PRICE_GRID_UNPROVEN",
+              "BOOK_FRESHNESS",
+              "SETTLEMENT_RISK"
+            ]
+          },
+          "execution": {
+            "paperEligible": false,
+            "reasons": [
+              "BOOK_STALE_OR_NOT_STREAM_CONFIRMED"
+            ]
+          }
+        },
+        "ages": {
+          "kalshi": {
+            "receiptMs": 219,
+            "exchangeMs": null,
+            "cacheMs": null,
+            "requestMs": null
+          },
+          "poly": {
+            "receiptMs": 16,
+            "exchangeMs": 31235,
+            "cacheMs": null,
+            "requestMs": null
+          }
+        },
+        "skewMs": 203,
+        "fresh": false,
+        "candidate": true,
+        "minimumQuantityPass": true,
+        "minimumsKnown": true,
+        "withinCapital": true,
+        "verificationStatus": "verification-pending",
+        "executable": false
+      }
+    },
+    {
+      "at": 1790039033908,
+      "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+      "signal": {
+        "evaluation": {
+          "strategy": "ev-arb-paper-v1",
+          "pairId": "KX1ALBUM-26DEC-KEN::ccpc-bilbrd-1album-any2026-kenlam",
+          "markets": {
+            "kalshi": "KX1ALBUM-26DEC-KEN",
+            "poly": "ccpc-bilbrd-1album-any2026-kenlam"
+          },
+          "orientation": "kalshi_yes+pm_us_no",
+          "kalshiSide": "yes",
+          "polySide": "no",
+          "quantity": 1,
+          "at": 1790039033908,
+          "sourceBooks": {
+            "kalshi": {
+              "at": 1790039033707,
+              "exchangeAt": null,
+              "source": "stream"
+            },
+            "poly": {
+              "at": 1790039033893,
+              "exchangeAt": 1790038989828,
+              "source": "stream"
+            }
+          },
+          "settlementStatus": "UNVERIFIED",
+          "settlementWarnings": [
+            "UNVERIFIED",
+            "HISTORICAL_VERIFICATION_PENDING"
+          ],
+          "grossStatus": "GROSS_ARB",
+          "grossProfit": 5000000,
+          "acquisitionCost": 95000000,
+          "estimatedFees": 4000000,
+          "estimatedNetProfit": 1000000,
+          "economicStatus": "REALISTIC_NET_POSITIVE",
+          "feeConfidence": "UNCONFIRMED_ACCOUNT_PRECISION",
+          "kalshi": {
+            "levels": [
+              {
+                "price": 3400,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 34000000,
+            "lastPrice": 3400
+          },
+          "poly": {
+            "levels": [
+              {
+                "price": 6100,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 61000000,
+            "lastPrice": 6100
+          },
+          "stress": {
+            "feeBound": 103580000,
+            "feeBoundPass": false,
+            "oneTickProfit": null,
+            "oneTickPass": null,
+            "freshnessPass": false,
+            "failed": [
+              "EXTREME_FRAGMENTATION_FEE",
+              "NATIVE_PRICE_GRID_UNPROVEN",
+              "BOOK_FRESHNESS",
+              "SETTLEMENT_RISK"
+            ]
+          },
+          "execution": {
+            "paperEligible": false,
+            "reasons": [
+              "BOOK_STALE_OR_NOT_STREAM_CONFIRMED"
+            ]
+          }
+        },
+        "ages": {
+          "kalshi": {
+            "receiptMs": 201,
+            "exchangeMs": null,
+            "cacheMs": null,
+            "requestMs": null
+          },
+          "poly": {
+            "receiptMs": 15,
+            "exchangeMs": 44080,
+            "cacheMs": null,
+            "requestMs": null
+          }
+        },
+        "skewMs": 186,
+        "fresh": false,
+        "candidate": true,
+        "minimumQuantityPass": true,
+        "minimumsKnown": true,
+        "withinCapital": true,
+        "verificationStatus": "verification-pending",
+        "executable": false
+      }
+    },
+    {
+      "at": 1790039035896,
+      "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+      "signal": {
+        "evaluation": {
+          "strategy": "ev-arb-paper-v1",
+          "pairId": "KXNBAEAST1SEED-26-MIA::aachc-nba-eastseed1-2027-04-11-w-mia",
+          "markets": {
+            "kalshi": "KXNBAEAST1SEED-26-MIA",
+            "poly": "aachc-nba-eastseed1-2027-04-11-w-mia"
+          },
+          "orientation": "kalshi_yes+pm_us_no",
+          "kalshiSide": "yes",
+          "polySide": "no",
+          "quantity": 1,
+          "at": 1790039035896,
+          "sourceBooks": {
+            "kalshi": {
+              "at": 1790039035735,
+              "exchangeAt": null,
+              "source": "stream"
+            },
+            "poly": {
+              "at": 1790039035884,
+              "exchangeAt": 1790038938896,
+              "source": "stream"
+            }
+          },
+          "settlementStatus": "UNVERIFIED",
+          "settlementWarnings": [
+            "UNVERIFIED",
+            "HISTORICAL_VERIFICATION_PENDING"
+          ],
+          "grossStatus": "GROSS_ARB",
+          "grossProfit": 3000000,
+          "acquisitionCost": 97000000,
+          "estimatedFees": 2000000,
+          "estimatedNetProfit": 1000000,
+          "economicStatus": "REALISTIC_NET_POSITIVE",
+          "feeConfidence": "UNCONFIRMED_ACCOUNT_PRECISION",
+          "kalshi": {
+            "levels": [
+              {
+                "price": 800,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 8000000,
+            "lastPrice": 800
+          },
+          "poly": {
+            "levels": [
+              {
+                "price": 8900,
+                "quantity": 1
+              }
+            ],
+            "quantity": 1,
+            "cost": 89000000,
+            "lastPrice": 8900
+          },
+          "stress": {
+            "feeBound": 101520000,
+            "feeBoundPass": false,
+            "oneTickProfit": null,
+            "oneTickPass": null,
+            "freshnessPass": false,
+            "failed": [
+              "EXTREME_FRAGMENTATION_FEE",
+              "NATIVE_PRICE_GRID_UNPROVEN",
+              "BOOK_FRESHNESS",
+              "SETTLEMENT_RISK"
+            ]
+          },
+          "execution": {
+            "paperEligible": false,
+            "reasons": [
+              "BOOK_STALE_OR_NOT_STREAM_CONFIRMED"
+            ]
+          }
+        },
+        "ages": {
+          "kalshi": {
+            "receiptMs": 161,
+            "exchangeMs": null,
+            "cacheMs": null,
+            "requestMs": null
+          },
+          "poly": {
+            "receiptMs": 12,
+            "exchangeMs": 97000,
+            "cacheMs": null,
+            "requestMs": null
+          }
+        },
+        "skewMs": 149,
+        "fresh": false,
+        "candidate": true,
+        "minimumQuantityPass": true,
+        "minimumsKnown": true,
+        "withinCapital": true,
+        "verificationStatus": "verification-pending",
+        "executable": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "ordersEnabled": false,
+  "samples": "event-driven readings, not fills or independent opportunities",
+  "smokes": [
+    {
+      "phase": "STOPPED",
+      "start": 1790799440076,
+      "deadline": 1790799560076,
+      "durationObservedMs": 120427.500292,
+      "catalog": {
+        "kalshi": 123501,
+        "poly": 70590,
+        "complete": true,
+        "errors": []
+      },
+      "matchedRoutes": 613317,
+      "visitedRoutes": 613317,
+      "twoBookRoutes": 83743,
+      "freshRoutes": 14,
+      "unvisitedRoutes": 0,
+      "matchingDiagnostics": {
+        "comparisons": 18073056,
+        "textDeferred": 58657484,
+        "canonical": 1385,
+        "sports": 5908,
+        "text": 303026,
+        "orientationHypotheses": 605996,
+        "knownDimensionConflicts": {
+          "DIMENSION_CONFLICT:eventDate": 752842,
+          "DIMENSION_CONFLICT:marketType": 1065777,
+          "DIMENSION_CONFLICT:line": 1231526,
+          "DIMENSION_CONFLICT:period": 677674,
+          "DIMENSION_CONFLICT:competition": 161676,
+          "DIMENSION_CONFLICT:units": 21077
+        }
+      },
+      "counts": {
+        "streamBookEvents": 46012,
+        "twoBookObservations": 139899,
+        "staleTwoBookObservations": 139877,
+        "orientationObservations": 279798,
+        "noQuantityOneDepth": 225888,
+        "grossPositive": 29112,
+        "normalFeePositive": 27402,
+        "extremeStressFailures": 53910,
+        "oneTickFailures": 16622,
+        "distinctEconomicCandidates": 21555,
+        "confirmationRequests": 22,
+        "confirmationDeferred": 28549,
+        "missingTwoBooks": 750259,
+        "confirmationEconomicSurvivors": 18,
+        "notEquivalent": 18,
+        "paperCandidateAttempts": 18,
+        "restPairRefreshes": 14,
+        "freshTwoBookObservations": 22,
+        "freshNormalFeePositive": 17,
+        "confirmedExecutableCandidates": 4
+      },
+      "reasons": {
+        "REST_PAIR:HTTP_429": 7,
+        "CONFIRMATION:HTTP_429": 3,
+        "CONFIRMATION:This operation was aborted": 1,
+        "REST_PAIR:This operation was aborted": 1
+      },
+      "buckets": {
+        "kalshi": {
+          "receipt": {
+            ">5000ms": 135564,
+            "<=5000ms": 413,
+            "<=500ms": 2415,
+            "<=1000ms": 464,
+            "<=2000ms": 193,
+            "<=250ms": 850
+          },
+          "exchange": {
+            "unknown": 133464,
+            "<=5000ms": 483,
+            ">5000ms": 2670,
+            "<=2000ms": 53,
+            "<=1000ms": 562,
+            "<=500ms": 1753,
+            "<=250ms": 914
+          }
+        },
+        "poly": {
+          "receipt": {
+            "<=2000ms": 11230,
+            "<=500ms": 32080,
+            "<=1000ms": 5536,
+            "<=5000ms": 21519,
+            ">5000ms": 61010,
+            "<=250ms": 8524
+          },
+          "exchange": {
+            "<=2000ms": 806,
+            "<=1000ms": 13273,
+            ">5000ms": 97028,
+            "<=5000ms": 2156,
+            "<=500ms": 24301,
+            "<=250ms": 2335
+          }
+        }
+      },
+      "delayOutcomes": {
+        "0ms:UNOBSERVED_OR_INELIGIBLE": 28,
+        "100ms:UNOBSERVED_OR_INELIGIBLE": 28,
+        "250ms:UNOBSERVED_OR_INELIGIBLE": 26,
+        "500ms:UNOBSERVED_OR_INELIGIBLE": 26,
+        "1000ms:UNOBSERVED_OR_INELIGIBLE": 26,
+        "0ms:CLEAN_DEPTH_PAIR": 8,
+        "100ms:UNOBSERVED_STALE_FUTURE": 8,
+        "250ms:UNOBSERVED_STALE_FUTURE": 8,
+        "500ms:UNOBSERVED_STALE_FUTURE": 8,
+        "1000ms:UNOBSERVED_STALE_FUTURE": 8
+      },
+      "requests": {
+        "external-api.kalshi.com": 168,
+        "gateway.polymarket.us": 184
+      },
+      "requestFailures": {
+        "HTTP_429": 10,
+        "This operation was aborted": 1
+      },
+      "evidenceBytes": 157324163,
+      "contractVerifiedOpportunities": 0,
+      "confirmedPaperArbs": 0,
+      "label": "smoke-1",
+      "summarySha256": "faa11038359532545706ccebe2a4f50cabebc6c36d9e088fa6e0239509152b2a",
+      "frozen": {
+        "policy": {
+          "ordersEnabled": false,
+          "sampleMs": 250,
+          "discoveryMs": 300000,
+          "durationMs": 120000,
+          "maxContracts": 10,
+          "maxConfirmationJobs": 2,
+          "confirmationCooldownMs": 10000,
+          "streamGroupSize": 500,
+          "maxBookAgeMs": 2000,
+          "restSpacingMs": 300,
+          "maxEvidenceBytes": 268435456,
+          "delayMs": [
+            0,
+            100,
+            250,
+            500,
+            1000
+          ],
+          "simulatedCapitalPerVenue": 50,
+          "maxPairedCommitment": 5
+        },
+        "sourceHashes": {
+          "worker/recall-observer.ts": "61974a77a5e5e6335f788d96451d5efaf555cf09fde59c6b89bfe395caad2f3b",
+          "lib/research/recall-detector.ts": "0cf3049c0994da5a02797661ae8af193af2c39f7f06ff840e38fd6775677fa75",
+          "lib/research/ev-arb.ts": "161c33f99bf698c58d91658b252c690c36ca727000fe71c46bef7634199b3754",
+          "lib/arb/adapters.ts": "13f9741292acb82000d5939b29bf6f51ec69ddea329b9e188716bac1ee73dd8a",
+          "worker/streams.ts": "3d0f084bfa2924cebdf5d0a36e0be24e919d525a741d84213365895e32d0f129"
+        },
+        "ordersEnabled": false,
+        "preparedAt": 1790799331893
+      }
+    },
+    {
+      "phase": "STOPPED",
+      "start": 1790800418671,
+      "deadline": 1790800538671,
+      "durationObservedMs": 128922.849083,
+      "catalog": {
+        "kalshi": 124929,
+        "poly": 70618,
+        "complete": true,
+        "errors": []
+      },
+      "matchedRoutes": 18260,
+      "visitedRoutes": 18260,
+      "twoBookRoutes": 18260,
+      "freshRoutes": 962,
+      "unvisitedRoutes": 0,
+      "matchingDiagnostics": {
+        "comparisons": 18557910,
+        "textDeferred": 61724114,
+        "canonical": 1385,
+        "sports": 3614,
+        "text": 10793,
+        "orientationHypotheses": 4936,
+        "knownDimensionConflicts": {
+          "DIMENSION_CONFLICT:eventDate": 158508,
+          "DIMENSION_CONFLICT:marketType": 334373,
+          "PROPOSITION_CONFLICT:scope": 45327,
+          "PROPOSITION_CONFLICT:lower": 171419,
+          "DIMENSION_CONFLICT:period": 174143,
+          "DIMENSION_CONFLICT:competition": 18065,
+          "DIMENSION_CONFLICT:line": 388823,
+          "PROPOSITION_CONFLICT:round": 3822,
+          "PROPOSITION_CONFLICT:metric": 109094,
+          "PROPOSITION_CONFLICT:rank": 27897,
+          "DIMENSION_CONFLICT:units": 592,
+          "YEAR": 751
+        },
+        "weakTextRejected": 1433837
+      },
+      "counts": {
+        "streamBookEvents": 73360,
+        "twoBookObservations": 82682,
+        "staleTwoBookObservations": 77235,
+        "orientationObservations": 165364,
+        "extremeStressFailures": 132099,
+        "grossPositive": 41241,
+        "normalFeePositive": 36298,
+        "oneTickFailures": 73281,
+        "distinctEconomicCandidates": 8834,
+        "noQuantityOneDepth": 33265,
+        "missingTwoBooks": 188,
+        "freshTwoBookObservations": 5447,
+        "freshNormalFeePositive": 810,
+        "confirmationRequests": 9,
+        "confirmationCooldown": 22,
+        "restPairRefreshes": 12,
+        "confirmationEconomicSurvivors": 8,
+        "notEquivalent": 5,
+        "paperCandidateAttempts": 8,
+        "streamRestarts": 1,
+        "verificationPending": 3,
+        "confirmedExecutableCandidates": 1
+      },
+      "reasons": {
+        "REST_PAIR:HTTP_429": 5,
+        "REST_PAIR:This operation was aborted": 1,
+        "CONFIRMATION:This operation was aborted": 1
+      },
+      "buckets": {
+        "kalshi": {
+          "receipt": {
+            ">5000ms": 60969,
+            "<=5000ms": 2523,
+            "<=2000ms": 1358,
+            "<=1000ms": 1171,
+            "<=250ms": 14697,
+            "<=500ms": 1964
+          },
+          "exchange": {
+            "unknown": 56790,
+            "<=5000ms": 2487,
+            ">5000ms": 4180,
+            "<=1000ms": 923,
+            "<=2000ms": 1584,
+            "<=250ms": 13399,
+            "<=500ms": 696,
+            "future": 2623
+          }
+        },
+        "poly": {
+          "receipt": {
+            "<=1000ms": 2494,
+            "<=5000ms": 10430,
+            "<=2000ms": 3181,
+            "<=250ms": 26892,
+            "<=500ms": 3914,
+            ">5000ms": 35771
+          },
+          "exchange": {
+            "<=1000ms": 1484,
+            ">5000ms": 42886,
+            "<=5000ms": 5589,
+            "<=2000ms": 2547,
+            "<=250ms": 23184,
+            "<=500ms": 6826,
+            "future": 166
+          }
+        }
+      },
+      "delayOutcomes": {
+        "0ms:UNOBSERVED_OR_INELIGIBLE": 14,
+        "100ms:UNOBSERVED_OR_INELIGIBLE": 14,
+        "250ms:UNOBSERVED_OR_INELIGIBLE": 14,
+        "500ms:UNOBSERVED_OR_INELIGIBLE": 14,
+        "1000ms:UNOBSERVED_OR_INELIGIBLE": 14,
+        "0ms:CLEAN_DEPTH_PAIR": 2,
+        "100ms:UNOBSERVED_STALE_FUTURE": 2,
+        "250ms:UNOBSERVED_STALE_FUTURE": 2,
+        "500ms:UNOBSERVED_STALE_FUTURE": 2,
+        "1000ms:UNOBSERVED_STALE_FUTURE": 2
+      },
+      "requests": {
+        "external-api.kalshi.com": 178,
+        "gateway.polymarket.us": 175
+      },
+      "requestFailures": {
+        "HTTP_429": 5
+      },
+      "evidenceBytes": 73491556,
+      "contractVerifiedOpportunities": 0,
+      "confirmedPaperArbs": 0,
+      "label": "smoke-2",
+      "summarySha256": "efd47c9e501eac70b72df6814f2c7fb90146e163b588b2e46315f1ad35be17f6",
+      "frozen": {
+        "policy": {
+          "ordersEnabled": false,
+          "sampleMs": 250,
+          "discoveryMs": 300000,
+          "durationMs": 120000,
+          "maxContracts": 10,
+          "maxConfirmationJobs": 2,
+          "confirmationCooldownMs": 10000,
+          "streamGroupSize": 100,
+          "maxStreamRestarts": 3,
+          "maxBookAgeMs": 2000,
+          "restSpacingMs": 300,
+          "maxEvidenceBytes": 268435456,
+          "delayMs": [
+            0,
+            100,
+            250,
+            500,
+            1000
+          ],
+          "simulatedCapitalPerVenue": 50,
+          "maxPairedCommitment": 5
+        },
+        "sourceHashes": {
+          "worker/recall-observer.ts": "4057fe10157c8c7c0f6b53953a07326831ac18f7da08df4a3f7b745080a61e3e",
+          "lib/research/recall-detector.ts": "166818adacab2e09c421fa073277d95f112713c82f6ac630d0106177dd427176",
+          "lib/research/ev-arb.ts": "161c33f99bf698c58d91658b252c690c36ca727000fe71c46bef7634199b3754",
+          "lib/arb/adapters.ts": "13f9741292acb82000d5939b29bf6f51ec69ddea329b9e188716bac1ee73dd8a",
+          "worker/streams.ts": "3d0f084bfa2924cebdf5d0a36e0be24e919d525a741d84213365895e32d0f129"
+        },
+        "ordersEnabled": false,
+        "preparedAt": 1790800309955
+      }
+    }
+  ]
+}
