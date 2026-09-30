@@ -2,6 +2,8 @@
 
 **PAUSED at the user's request. READ ONLY / PAPER. No observation or local background work remains running. Do not start another run until the user says continue.** No real orders, fills, previews, cancellations, funding, wallet actions, live launch or automation occurred.
 
+[Draft PR #22](https://github.com/tyhuffman7/lights_on/pull/22) is OPEN/DRAFT. Signed implementation `df7fb478946c145bb7cdccb51258fa0ccd844a4d` is GitHub-verified. CI is remote; no polling or local collection is left running.
+
 ## Saved checkpoint
 
 - Persistent isolated checkout: `/Users/tylerhuffman/Documents/code_projects/lights-on/work/recall-detector-20260930/checkout`; branch `codex/recall-first-detector`, created from exact requested `a200abf36cd590c894f936dbe1d6f4c81f461468` on `experiment/ev-arb-learning`. Main's staged/local work preserved. GitHub identity `tyhuffman7`; HTTPS remote and repo-local SSH signing intact.
