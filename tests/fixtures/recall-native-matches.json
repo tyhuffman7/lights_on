@@ -56,7 +56,7 @@
         "numbers": [],
         "aliases": []
       },
-      "title": "Garrett Wilson \u00b7 Will Garrett Wilson score the first touchdown?",
+      "title": "Garrett Wilson · Will Garrett Wilson score the first touchdown?",
       "outcome": "Yes",
       "opposite": "No",
       "category": "sports",
@@ -93,7 +93,7 @@
       "outcome": "Jaco Prinsloo",
       "opposite": "Jaco Prinsloo",
       "category": "Sports",
-      "rules": "If Jaco Prinsloo is the leader at the end of Round 2 in the 2026 Alfred Dunhill Links Championship, then the market resolves to Yes.\n\nIf multiple participants are tied for the lead at the end of the round, \u201cYes\u201d positions will pay $1/N (rounded down to the nearest cent), where N is the number of tied participants, and \u201cNo\u201d positions will pay 1 minus the \"Yes\" payout. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the PGA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"DP World Tour\",\"url\":\"https://www.europeantour.com/dpworld-tour/schedule/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+      "rules": "If Jaco Prinsloo is the leader at the end of Round 2 in the 2026 Alfred Dunhill Links Championship, then the market resolves to Yes.\n\nIf multiple participants are tied for the lead at the end of the round, “Yes” positions will pay $1/N (rounded down to the nearest cent), where N is the number of tied participants, and “No” positions will pay 1 minus the \"Yes\" payout. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the PGA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"DP World Tour\",\"url\":\"https://www.europeantour.com/dpworld-tour/schedule/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
       "url": "https://kalshi.com/markets/kxdpworldtourr2lead/kxdpworldtourr2lead-aldlc26",
       "closeAt": "2026-10-18T00:00:00Z",
       "open": true,
@@ -122,7 +122,7 @@
         "aliases": [],
         "eventKey": "alfred dunhill links championship end of round 2 leader"
       },
-      "title": "Jaco Prinsloo \u00b7 Alfred Dunhill Links Championship End of Round 2 Leader",
+      "title": "Jaco Prinsloo · Alfred Dunhill Links Championship End of Round 2 Leader",
       "outcome": "Yes",
       "opposite": "No",
       "category": "sports",
@@ -195,7 +195,7 @@
         "units": "yards",
         "aliases": []
       },
-      "title": "Joe Burrow most passing yards \u00b7 Will Joe Burrow record the most passing yards?",
+      "title": "Joe Burrow most passing yards · Will Joe Burrow record the most passing yards?",
       "outcome": "Yes",
       "opposite": "No",
       "category": "sports",
@@ -232,7 +232,7 @@
       "outcome": "Bowen Mauss",
       "opposite": "Bowen Mauss",
       "category": "Sports",
-      "rules": "If Bowen Mauss is the leader at the end of Round 2 in the 2026 Bank of Utah Championship, then the market resolves to Yes.\n\nIf multiple participants are tied for the lead at the end of the round, \u201cYes\u201d positions will pay $1/N (rounded down to the nearest cent), where N is the number of tied participants, and \u201cNo\u201d positions will pay 1 minus the \"Yes\" payout. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the PGA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"the Governing League\",\"url\":\"https://www.pgatour.com/\"}]",
+      "rules": "If Bowen Mauss is the leader at the end of Round 2 in the 2026 Bank of Utah Championship, then the market resolves to Yes.\n\nIf multiple participants are tied for the lead at the end of the round, “Yes” positions will pay $1/N (rounded down to the nearest cent), where N is the number of tied participants, and “No” positions will pay 1 minus the \"Yes\" payout. Kalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the PGA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"the Governing League\",\"url\":\"https://www.pgatour.com/\"}]",
       "url": "https://kalshi.com/markets/kxpgar2lead/kxpgar2lead-baouc26",
       "closeAt": "2026-10-18T04:00:00Z",
       "open": true,
@@ -261,7 +261,7 @@
         "aliases": [],
         "eventKey": "bank of utah championship end of round 3 leader"
       },
-      "title": "Bowen Mauss \u00b7 Bank of Utah Championship End of Round 3 Leader",
+      "title": "Bowen Mauss · Bank of Utah Championship End of Round 3 Leader",
       "outcome": "Yes",
       "opposite": "No",
       "category": "sports",
@@ -337,7 +337,7 @@
         ],
         "aliases": []
       },
-      "title": "Derrick Henry 12.5+ \u00b7 Regular Season Rushing TDs O/U",
+      "title": "Derrick Henry 12.5+ · Regular Season Rushing TDs O/U",
       "outcome": "Yes",
       "opposite": "No",
       "category": "sports",
@@ -351,5 +351,315 @@
       "hash": "7dad4614cb205da5ddaa426813e39e34a2aea7a8b998aeb383d222eb4db4f314",
       "settlement": null
     }
+  },
+  {
+    "label": "five chart weeks versus any chart week",
+    "a": {
+      "id": "KXWEEKSNUM1-26OCT31-CHO-5",
+      "venue": "kalshi",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "participants": [],
+        "line": 5,
+        "outcome": "at least 5 weeks",
+        "entities": [],
+        "numbers": [
+          "5",
+          "1",
+          "100",
+          "2026",
+          "5"
+        ],
+        "aliases": []
+      },
+      "exchangeIndex": 0,
+      "title": "Will Choosin' Texas by Ella Langley spend 5 weeks at #1 on the Billboard Hot 100 in October 2026?",
+      "outcome": "At least 5 weeks",
+      "opposite": "At least 5 weeks",
+      "category": "Entertainment",
+      "rules": "If Choosin' Texas by Ella Langley spends at least 5 week(s) at the #1 position on the Billboard Hot 100 in October 2026, then the market resolves to Yes.\n\nhttps://assets.kalshi.com/contract_terms/ARTISTWEEKSNUM1.pdf\n\n[{\"name\":\"Billboard\",\"url\":\"https://www.billboard.com/\"}]",
+      "url": "https://kalshi.com/markets/kxweeksnum1/kxweeksnum1-26oct31-cho",
+      "closeAt": "2026-10-31T14:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "6bec16cf3144a517071ee487887745e968ed71b92cf728da90d870c388692da8",
+      "settlement": null,
+      "series": "KXWEEKSNUM1"
+    },
+    "b": {
+      "id": "ccpc-bilbrd-1song-any-10-27-2026-chotex",
+      "venue": "poly",
+      "identity": {
+        "sports": false,
+        "general": {},
+        "competition": "bilbrd",
+        "eventAt": "2026-09-23T16:00:00.000Z",
+        "eventDate": "2026-09-23",
+        "participants": [],
+        "marketType": "future",
+        "entities": [],
+        "numbers": [
+          "1"
+        ],
+        "aliases": [],
+        "eventKey": "which songs will be billboard 1 in october"
+      },
+      "title": "Choosin' Texas - Ella Langley · Which Songs Will Be Billboard #1 in October?",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "culture",
+      "rules": "This market will settle to Yes if Choosin' Texas by Ella Langley is the #1 song on any Billboard Hot 100 chart dated in October 2026. Outcome sourced from Billboard.\n\nBillboard typically updates the Billboard Hot 100 chart each Tuesday (with adjusted release schedules on some holiday weeks), reflecting data from the previous week (Friday-Thursday). Each Billboard chart is then dated Week of (date of the upcoming Saturday). Under this framework, the charts dated October 3, October 10, October 17, October 24, and October 31 would qualify.",
+      "url": "https://polymarket.us/event/ccpc-bilbrd-1song-any-10-27-2026-chotex",
+      "closeAt": "2026-11-11T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "5892aac337d1018b1b8d121948e5f25728dfa6ecc972792209647dd89bd96dab",
+      "settlement": null
+    },
+    "expected": 0
+  },
+  {
+    "label": "league MVP versus World Series MVP",
+    "a": {
+      "id": "KXMLBNLMVP-26-PCRO",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "pete crow armstrong",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "pro baseball national league mvp"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Pete Crow-Armstrong win NL MVP?",
+      "outcome": "Pete Crow-Armstrong",
+      "opposite": "Pete Crow-Armstrong",
+      "category": "Sports",
+      "rules": "If Pete Crow-Armstrong wins the Pro Baseball National League MVP in the 2026 season, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/MLBAWARD.pdf\n\n[{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+      "url": "https://kalshi.com/markets/kxmlbnlmvp/kxmlbnlmvp-26",
+      "closeAt": "2026-12-31T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "418b97c4f385c4f6f929af07b2feed57b56ff45a2b1ba30c1431be2144e3190a",
+      "settlement": null,
+      "series": "KXMLBNLMVP"
+    },
+    "b": {
+      "id": "tec-mlb-ws-2026-10-31-mvp-petarm",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "baseball",
+        "competition": "mlb",
+        "eventAt": "2026-10-24T00:00:00.000Z",
+        "eventDate": "2026-10-24",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "pete crow armstrong"
+      },
+      "title": "Pete Crow-Armstrong",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Pete Crow-Armstrong wins the 2026 Willie Mays World Series MVP Award. If Pete Crow-Armstrong wins the award jointly with one or more other players, Yes contract holders receive $1.00 divided by the number of winning players, rounded down to the nearest cent, per contract. If the listed player does not appear in the World Series for any reason, the market will settle to No. Outcome sourced from MLB.",
+      "url": "https://polymarket.us/event/tec-mlb-ws-2026-10-31-mvp-petarm",
+      "closeAt": "2026-11-15T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "90ecf2da065b1eca945cb569bb1449d1ac039c103c4be8c992ea166236372392",
+      "settlement": null
+    },
+    "expected": 0
+  },
+  {
+    "label": "fantasy receiver versus receptions threshold",
+    "a": {
+      "id": "KXNFLFFLEADER-27WR-GPICKENS3",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "nfl",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "george pickens",
+        "entities": [],
+        "numbers": [
+          "1",
+          "2026",
+          "27"
+        ],
+        "aliases": [],
+        "eventKey": "best in fantasy by position"
+      },
+      "exchangeIndex": 0,
+      "title": "Will George Pickens be the #1 ranked fantasy WR in the 2026-27 Pro Football regular season?",
+      "outcome": "George Pickens",
+      "opposite": "George Pickens",
+      "category": "Sports",
+      "rules": "If George Pickens finishes #1 in scoring among wide receivers for the 2026-27 Pro Football regular season, then the market resolves to Yes.\n\nThis market will be based on Sleeper's FFL Points Per Reception (PPR) scoring, and refers to the totals for the entirety of the Pro Football regular season.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FFSTATLEADER.pdf\n\n[{\"name\":\"Sleeper\",\"url\":\"https://sleeper.com/\"}]",
+      "url": "https://kalshi.com/markets/kxnflffleader/kxnflffleader-27wr",
+      "closeAt": "2027-01-18T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "edbfba68b1fce7d132c54ca2329565d905721468449e6fdc91ec363f47199f3b",
+      "settlement": null,
+      "series": "KXNFLFFLEADER"
+    },
+    "b": {
+      "id": "astatc-nfl-rec-2027-01-10-geopic-45pt5rec",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "nfl",
+        "eventAt": "2026-09-10T00:00:00.000Z",
+        "eventDate": "2026-09-10",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "entities": [],
+        "numbers": [
+          "45.5"
+        ],
+        "aliases": [],
+        "eventKey": "george pickens regular season receptions"
+      },
+      "title": "45.5+ Receptions · George Pickens Regular Season Receptions",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if George Pickens records over 45.5 receptions in the 2026 Pro Football regular season. Statistics are based on official regular season games only. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/astatc-nfl-rec-2027-01-10-geopic-45pt5rec",
+      "closeAt": "2027-01-25T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "38be20d9368d63a31765fa6680df799cf5d1f074f8b1abaa0a5fdd6757923bcc",
+      "settlement": null
+    },
+    "expected": 0
+  },
+  {
+    "label": "regular season is not a named team",
+    "a": {
+      "id": "KXNFLSTAGEOFELIM-27MIA-REG",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "nfl",
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "regular season",
+        "entities": [],
+        "numbers": [
+          "2026",
+          "27"
+        ],
+        "aliases": [],
+        "eventKey": "pro football stage of elimination"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Miami be eliminated in the Regular Season in the 2026-27 Pro Football season?",
+      "outcome": "Regular Season",
+      "opposite": "Regular Season",
+      "category": "Sports",
+      "rules": "If the Miami Pro Football team is eliminated in the Regular Season in the 2026-27 Pro Football season, then the market resolves to Yes.\n\nThis market resolves based on how far the Miami Pro Football team advances in the 2026-27 Pro Football season.\nRegular Season: This market resolves Yes if the Miami Pro Football team fails to qualify for the playoffs.\nWildcard Round: This market resolves Yes if the Miami Pro Football team is eliminated in the Wildcard Round of the playoffs.\nDivisional Round: This market resolves Yes if the Miami Pro Football team is eliminated in the Divisional Round of the playoffs.\nConference Championship: This market resolves Yes if the Miami Pro Football team is eliminated in the Conference Championship of the playoffs.\nRunner-Up: This market resolves Yes if the Miami Pro Football team loses in the Pro Football Championship game.\nChampionship Winner: This market resolves Yes if the Miami Pro Football team wins the Pro Football Championship game.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NFLSTAGEOFELIM.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+      "url": "https://kalshi.com/markets/kxnflstageofelim/kxnflstageofelim-27mia",
+      "closeAt": "2027-02-28T15:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "47797b8e4d5c2f04d71835b8b9ccbc0b07bdc60a3b3556da10d444244603fd3f",
+      "settlement": null,
+      "series": "KXNFLSTAGEOFELIM"
+    },
+    "b": {
+      "id": "aachc-nfl-worstrecord-2027-01-10-was",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "sport": "football",
+        "competition": "nfl",
+        "eventAt": "2026-09-10T00:00:00.000Z",
+        "eventDate": "2026-09-10",
+        "participants": [
+          "NFL:WASHINGTON"
+        ],
+        "participant": "NFL:WASHINGTON",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "NFL:WASHINGTON",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "was commanders",
+            "venue": "poly",
+            "venueId": "79",
+            "aliases": [
+              "washington commanders",
+              "commanders",
+              "was commanders",
+              "was",
+              "was"
+            ]
+          },
+          {
+            "name": "was commanders",
+            "venue": "poly",
+            "venueId": "79",
+            "aliases": [
+              "washington commanders",
+              "commanders",
+              "was commanders",
+              "was",
+              "was"
+            ]
+          }
+        ],
+        "eventKey": "pro football worst regular season record"
+      },
+      "title": "WAS Commanders · Pro Football Worst Regular Season Record",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Washington finishes with the lowest winning percentage in the 2026 Pro Football regular season. If two or more teams tie for the lowest winning percentage, each tied team's market will settle at $1.00 divided by the number of teams tied for the lowest winning percentage. Outcome sourced from the relevant governing body.",
+      "url": "https://polymarket.us/event/aachc-nfl-worstrecord-2027-01-10-was",
+      "closeAt": "2027-01-25T04:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "309ba385dd57a1414dfe02e860a7b0b960f41e2ad38b9343591f7f91313b9508",
+      "settlement": null
+    },
+    "expected": 0
   }
 ]

@@ -18,6 +18,7 @@ function proposition(m:Market){
   const primary=m.rules.split('\n')[0].split(/\. (?=[A-Z])/)[0],s=normalizeText(m.title+' '+primary);
   const metrics=[['fantasy points',/fantasy points/],['passing touchdowns',/passing touchdowns/],
     ['rushing touchdowns',/rushing touchdowns/],['receiving touchdowns',/receiving touchdowns/],
+    ['receptions',/\breceptions\b/],['fantasy points',/fantasy|#1 in scoring/],
     ['passing yards',/passing yards/],['rushing yards',/rushing yards/],['receiving yards',/receiving yards/],
     ['first touchdown',/first touchdown|1st touchdown/],['touchdowns',/touchdowns/],
     ['mvp',/most valuable player|\bmvp\b/],['rbi',/\brbis?\b|runs batted in/],
@@ -26,11 +27,15 @@ function proposition(m:Market){
   const metric=metrics.find(([,r])=>r.test(s))?.[0];
   const scope=/career|retirement/.test(s)?'career':/\bweek \d+\b/.test(s)?s.match(/\bweek \d+\b/)![0]:
     /postseason|playoff/.test(s)?'postseason':/regular season/.test(s)?'regular-season':/game (?:originally )?scheduled/.test(s)?'game':undefined;
-  const rank=/most|highest|leads|leader/.test(s)?'leader':/first touchdown|1st touchdown/.test(s)?'first':undefined;
+  const rank=/most|highest|leads|leader|#1 ranked|#1 in scoring/.test(s)?'leader':/first touchdown|1st touchdown/.test(s)?'first':undefined;
   const round=s.match(/\bround (\d+)\b/)?.[1];
+  const award=metric==='mvp'?/world series/.test(s)?'world-series':/national league|\bnl mvp\b/.test(s)?'national-league':
+    /american league|\bal mvp\b/.test(s)?'american-league':undefined:undefined;
+  const chart=/billboard/.test(s)?/at least (\d+) week/.test(s)?'weeks:'+s.match(/at least (\d+) week/)![1]:
+    /any billboard.*chart/.test(s)?'weeks:1':undefined:undefined;
   const threshold=primary.replace(/,(?=\d{3}\b)/g,'').match(/(?:at least|over|more than|records?) (\d+(?:\.\d+)?)(\+| or more)?/i);
   const lower=threshold?(/^(?:at least|records?)/i.test(threshold[0])?Math.ceil(Number(threshold[1])):Math.floor(Number(threshold[1]))+1):undefined;
-  return {metric,scope,rank,round,lower};
+  return {metric,scope,rank,round,lower,award,chart};
 }
 
 // This index is for observation, never settlement approval. Conflicting/missing
@@ -66,7 +71,8 @@ export function recallMatches(kalshi:Market[],poly:Market[]){
       const exact=!!a.template&&!!b.template&&canonicalTemplateKey(a.template)===canonicalTemplateKey(b.template);
       const sports=!!a.event&&a.event===b.event;
       const shared=[...a.words].filter(w=>b.words.has(w)).length;
-      const namedSubject=(s:string)=>s.split(' ').filter(w=>w&&!stop.has(w)&&!/^\d+$/.test(w));
+      const genericSubject=new Set('regular season postseason playoffs playoff round least most ranked points yards receptions touchdown touchdowns'.split(' '));
+      const namedSubject=(s:string)=>s.split(' ').filter(w=>w&&!stop.has(w)&&!genericSubject.has(w)&&!/^\d+$/.test(w));
       const as=namedSubject(a.subject),bs=namedSubject(b.subject);
       const sameSubject=as.length>=2&&a.subject===b.subject;
       const subjectInOther=as.length>=2&&as.every(w=>b.words.has(w))||bs.length>=2&&bs.every(w=>a.words.has(w));
@@ -81,12 +87,12 @@ export function recallMatches(kalshi:Market[],poly:Market[]){
       const ia=a.identity,ib=b.identity;
       for(const k of ['competition','eventDate','marketType','line','period','units','location'] as const)
         if(ia?.[k]!==undefined&&ib?.[k]!==undefined&&ia[k]!==ib[k])warnings.push('DIMENSION_CONFLICT:'+k);
-      if(!exact&&ia?.sports&&ib?.sports){
-        for(const k of ['metric','scope','rank','round','lower'] as const){const x=a.proposition[k],y=b.proposition[k];
+      if(!exact){
+        for(const k of ['metric','scope','rank','round','lower','award','chart'] as const){const x=a.proposition[k],y=b.proposition[k];
           if(x!==undefined&&y!==undefined&&x!==y)warnings.push('PROPOSITION_CONFLICT:'+k);}
         // A named winner and a round leader, or a threshold and a leader, are
         // distinct questions even where one venue omits a structured type.
-        for(const k of ['rank','round'] as const)if((a.proposition[k]===undefined)!==(b.proposition[k]===undefined))warnings.push('PROPOSITION_CONFLICT:'+k);
+        if(ia?.sports&&ib?.sports)for(const k of ['rank','round'] as const)if((a.proposition[k]===undefined)!==(b.proposition[k]===undefined))warnings.push('PROPOSITION_CONFLICT:'+k);
       }
       // Known different questions are not plausible outcome matches. Canonical
       // templates handle discrete >=N / >N-.5 and venue spread conventions.

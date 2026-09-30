@@ -25,13 +25,16 @@ export function matchOffThread(kalshi:Market[],poly:Market[],signal:AbortSignal)
   });
 }
 export class PublicData {
-  slots=new Map<string,number>();counts:Record<string,number>={};failures:Record<string,number>={};
+  slots=new Map<string,number>();cooldowns=new Map<string,number>();counts:Record<string,number>={};failures:Record<string,number>={};
   signal:AbortSignal;record:(kind:string,body:unknown)=>void;
   constructor(signal:AbortSignal,record:(kind:string,body:unknown)=>void=()=>{}){this.signal=signal;this.record=record;}
   async get(url:string,uncached=false){
     const u=new URL(url);if(![new URL(K).hostname,new URL(P).hostname].includes(u.hostname))throw Error('NON_NATIVE_HOST');
     const slot=Math.max(Date.now(),this.slots.get(u.hostname)??0);this.slots.set(u.hostname,slot+recallPolicy.restSpacingMs);
     if(slot>Date.now())await sleep(slot-Date.now());this.signal.throwIfAborted();
+    // Requests already waiting for a reserved slot also honor a newer 429.
+    while((this.cooldowns.get(u.hostname)??0)>Date.now()){
+      await sleep(Math.min(1000,this.cooldowns.get(u.hostname)!-Date.now()));this.signal.throwIfAborted();}
     if(uncached)u.searchParams.set('lights_on',randomUUID());
     const requestAt=Date.now(),mono=performance.now();this.counts[u.hostname]=(this.counts[u.hostname]??0)+1;
     try{
@@ -41,7 +44,8 @@ export class PublicData {
       const cacheAge=response.headers.get('age');
       const transport={requestAt,responseAt,durationMs:performance.now()-mono,
         cacheAgeSeconds:cacheAge===null?null:Number(cacheAge),cacheStatus:response.headers.get('cf-cache-status'),bodySha256:sha(raw)};
-      if(!response.ok){if(response.status===429)this.slots.set(u.hostname,Date.now()+Math.min(30_000,Math.max(2000,Number(response.headers.get('retry-after')??2)*1000)));
+      if(!response.ok){if(response.status===429){const seconds=Number(response.headers.get('retry-after')??2);
+        this.cooldowns.set(u.hostname,Date.now()+Math.min(30_000,Math.max(2000,(Number.isFinite(seconds)?seconds:2)*1000)));}
         throw Error('HTTP_'+response.status);}
       const data=JSON.parse(raw);this.record('HTTP_PUBLIC',{url:u.toString(),transport,data});return {data,transport};
     }catch(error){const key=(error as Error).message;this.failures[key]=(this.failures[key]??0)+1;throw error;}
@@ -161,6 +165,10 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   const pendingCandidates=new Map<string,{route:RecallRoute;signal:Signal;queuedAt:number}>();
   const feedRestarts=new Map<string,number>(),feedStarted=new Map<string,number>();let lastHealthCheck=start;
   let best:{route:RecallRoute;signal:Signal}[]=[],stopped=false,lastDiscovery=0;
+  let highestGross:typeof best=[],nearPositive:typeof best=[],canonicalChecks:typeof best=[];
+  const retain=(list:typeof best,route:RecallRoute,signal:Signal,value:(s:Signal)=>number)=>{
+    const next=list.filter(x=>x.route.pair.id!==route.pair.id);next.push({route,signal});
+    return next.sort((a,b)=>value(b.signal)-value(a.signal)).slice(0,10);};
   let lastActiveFeedHealth:unknown[]=[];
   const delayOutcomes:Record<string,number>={};
   const save=()=>writeFileSync(resolve(directory,'summary.json'),JSON.stringify({ordersEnabled:false,simulation:'PUBLIC_L2_COUNTERFACTUAL_NOT_FILLS',
@@ -174,7 +182,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     pendingConfirmations:pendingCandidates.size,
     lastActiveFeedHealth,
     feedHealth:[...feeds].map(([key,f])=>({key,ids:f.stream.options.ids.length,...f.health(),failures:f.failures,reconnects:f.stream.reconnectCount})),
-    best:best.map(({route,signal})=>({event:route.pair.a.title,route,signal})),frozen},null,2)+'\n',{mode:0o600});
+    best:best.map(({route,signal})=>({event:route.pair.a.title,route,signal})),
+    independentCheckRoutes:{highestGross,nearPositive,canonicalChecks},frozen},null,2)+'\n',{mode:0o600});
   const bookKey=(v:Venue,id:string)=>v+':'+id;
   const reconcile=async()=>{
     byMarket=new Map();for(const r of routes)for(const m of [r.pair.a,r.pair.b]){const key=bookKey(m.venue,m.id),ids=byMarket.get(key)??[];ids.push(r.pair.id);byMarket.set(key,ids);}
@@ -250,6 +259,11 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
           if(e.economicStatus==='FEE_MODEL_UNAVAILABLE')count('feeModelUnavailable');
           if(e.stress.feeBoundPass===false)count('extremeStressFailures');if(e.stress.oneTickPass===false)count('oneTickFailures');}
         const bestQ=[...qs].sort((a,b)=>(b.evaluation.estimatedNetProfit??-Infinity)-(a.evaluation.estimatedNetProfit??-Infinity))[0];
+        const gross=one.filter(q=>q.evaluation.grossProfit!==null).sort((a,b)=>b.evaluation.grossProfit!-a.evaluation.grossProfit!)[0];
+        const net=one.filter(q=>q.evaluation.estimatedNetProfit!==null).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0];
+        if(gross)highestGross=retain(highestGross,r,gross,s=>s.evaluation.grossProfit!);
+        if(net&&net.evaluation.estimatedNetProfit!<=0)nearPositive=retain(nearPositive,r,net,s=>s.evaluation.estimatedNetProfit!);
+        if(net&&r.matchSource==='CANONICAL')canonicalChecks=retain(canonicalChecks,r,net,s=>s.evaluation.estimatedNetProfit!);
         if(bestQ.evaluation.grossProfit!==null){best=best.filter(x=>x.route.pair.id!==id);best.push({route:r,signal:bestQ});
           best.sort((a,b)=>(b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity));best=best.slice(0,20);}
         const q=qs.filter(x=>x.candidate&&x.withinCapital).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0]??qs.find(x=>x.candidate);
