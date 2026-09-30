@@ -68,7 +68,11 @@ export async function currentCatalog(api:PublicData,progress:(x:unknown)=>void=(
       let cursor='';const seen=new Set<string>();
       do {const {data}=await api.get(`${K}/markets?status=open&mve_filter=exclude&limit=1000${cursor?'&cursor='+encodeURIComponent(cursor):''}`,true);
         if(!Array.isArray(data.markets))throw Error('KALSHI_CATALOG_SCHEMA');
-        for(const m of data.markets){raw.set('kalshi:'+m.ticker,m);kalshi.push(await normalizeKalshi(m,series.get(m.ticker.split('-')[0])));}
+        for(const m of data.markets)raw.set('kalshi:'+m.ticker,m);
+        // Bound hashing/normalization concurrency by the native page size. A
+        // serial await per market incurs a live-ingress scheduling delay for
+        // every hash and can turn a catalog refresh into most of the window.
+        kalshi.push(...await Promise.all(data.markets.map((m:any)=>normalizeKalshi(m,series.get(m.ticker.split('-')[0])))));
         counts.kalshiPages++;if(counts.kalshiPages%20===0)progress({phase:'CATALOG',...counts,kalshi:kalshi.length,poly:poly.length});
         cursor=String(data.cursor??'');if(cursor&&seen.has(cursor))throw Error('REPEATED_KALSHI_CURSOR');seen.add(cursor);
       }while(cursor);})(),
@@ -78,7 +82,8 @@ export async function currentCatalog(api:PublicData,progress:(x:unknown)=>void=(
       const ids=data.markets.map((m:any)=>m.slug),fingerprint=JSON.stringify(ids);
       if(ids.length&&seen.has(fingerprint))throw Error('REPEATED_PM_US_PAGE');seen.add(fingerprint);
       // No serial per-market settlement/event HTTP review in the discovery path.
-      for(const m of data.markets){raw.set('poly:'+m.slug,m);poly.push(await normalizePoly(m));}
+      for(const m of data.markets)raw.set('poly:'+m.slug,m);
+      poly.push(...await Promise.all(data.markets.map((m:any)=>normalizePoly(m))));
       counts.polyPages++;if(counts.polyPages%20===0)progress({phase:'CATALOG',...counts,kalshi:kalshi.length,poly:poly.length});
       if(ids.length<500)break;
     }})()
@@ -173,7 +178,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   const delayOutcomes:Record<string,number>={};
   const save=()=>writeFileSync(resolve(directory,'summary.json'),JSON.stringify({ordersEnabled:false,simulation:'PUBLIC_L2_COUNTERFACTUAL_NOT_FILLS',
     phase:stopped?'STOPPED':'RUNNING',start,deadline,at:Date.now(),durationObservedMs:performance.now()-mono,catalogCycles:cycles,
-    catalog:{kalshi:data.kalshi.length,poly:data.poly.length,complete:data.complete,errors:data.errors},
+    catalog:{kalshi:data.kalshi.length,poly:data.poly.length,complete:data.complete,errors:data.errors,
+      startedAt:data.at,endedAt:data.endedAt,fetchAndNormalizationMs:data.endedAt-data.at},
     candidateEventMatches:matched.eventMatches,matchedRoutes:routes.length,sportsRoutes:routes.filter(r=>r.pair.a.identity?.sports).length,
     allSeenRoutes:allRoutes.size,visitedRoutes:visited.size,twoBookRoutes:twoBook.size,freshRoutes:freshRoutes.size,
     unvisitedRoutes:[...allRoutes.keys()].filter(id=>!visited.has(id)).length,matchingDiagnostics:matched.diagnostics,
@@ -297,8 +303,11 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
           record('REST_PAIR',{pairId:r.pair.id,kalshi,poly});
         }catch(error){const key='REST_PAIR:'+(error as Error).message;reasons[key]=(reasons[key]??0)+1;}finally{restActive=false;}})();jobs.add(job);void job.finally(()=>jobs.delete(job));}
       if(Date.now()-lastDiscovery>=recallPolicy.discoveryMs&&!refreshing){lastDiscovery=Date.now();
-        refreshing=(async()=>{const fresh=await currentCatalog(api);if(control.signal.aborted)return;
-          const next=await matchOffThread(fresh.kalshi,fresh.poly,control.signal);if(!fresh.complete){count('incompleteDiscoveryRefresh');return;}
+        refreshing=(async()=>{const fresh=await currentCatalog(api,x=>record('DISCOVERY_PROGRESS',x));if(control.signal.aborted)return;
+          if(!fresh.complete){count('incompleteDiscoveryRefresh');record('DISCOVERY_INCOMPLETE',{at:fresh.at,endedAt:fresh.endedAt,errors:fresh.errors,counts:fresh.counts});return;}
+          const matchingAt=Date.now(),next=await matchOffThread(fresh.kalshi,fresh.poly,control.signal);
+          record('DISCOVERY_REFRESH',{at:fresh.at,endedAt:fresh.endedAt,fetchAndNormalizationMs:fresh.endedAt-fresh.at,
+            matchingMs:Date.now()-matchingAt,kalshi:fresh.kalshi.length,poly:fresh.poly.length,routes:next.routes.length});
           data=fresh;matched=next;routes=fairRoutes(next.routes);attachTicks(routes,data.raw);cycles++;for(const r of routes)allRoutes.set(r.pair.id,r);catalogSave();
           await reconcile();count('discoveryRefreshes');})().catch(error=>{const key='DISCOVERY_REFRESH:'+(error as Error).message;
             reasons[key]=(reasons[key]??0)+1;}).finally(()=>{refreshing=null;});}

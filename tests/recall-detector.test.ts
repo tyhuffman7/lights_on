@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {market,book} from './research-fixture.ts';
 import {recallMatches,recallSignals,currentBook,freshnessBucket,fairRoutes,type RecallRoute,type ObservedBook} from '../lib/research/recall-detector.ts';
-import {delayCounterfactual,matchOffThread} from '../worker/recall-observer.ts';
+import {delayCounterfactual,matchOffThread,currentCatalog,type PublicData} from '../worker/recall-observer.ts';
 import type {Market} from '../lib/arb/types.ts';
 const nativeCases=JSON.parse(readFileSync(new URL('./fixtures/recall-native-matches.json',import.meta.url),'utf8'));
 for(const c of nativeCases)test('native smoke regression: '+c.label,()=>{
@@ -51,6 +51,18 @@ test('identical named question is observed without settlement verification',()=>
 test('background matching returns routes without blocking the observer process',async()=>{
   const {route}=fixtures();const result=await matchOffThread([route.pair.a],[route.pair.b],new AbortController().signal);
   assert.equal(result.routes.length,1);assert.equal(result.routes[0].pair.reviewed,false);
+});
+test('catalog page batching preserves both native catalogs and avoids per-market HTTP enrichment',async()=>{
+  const calls:string[]=[];
+  const k=Array.from({length:500},(_,i)=>({ticker:'K-'+i,status:'active',market_type:'binary',notional_value_dollars:'1.0000',title:'Example'}));
+  const p=Array.from({length:500},(_,i)=>({slug:'P-'+i,active:true,closed:false,title:'Example',minimumTradeQty:1,
+    marketSides:[{long:true,tradable:true,description:'Yes'},{long:false,tradable:true,description:'No'}]}));
+  const api={get:async(url:string)=>{calls.push(url);return {data:url.endsWith('/series')?{series:[]}:
+    url.includes('mve_filter')?{markets:k,cursor:''}:{markets:url.includes('offset=0')?p:[]}};}} as unknown as PublicData;
+  const result=await currentCatalog(api);
+  assert.equal(result.complete,true);assert.equal(result.kalshi.length,500);assert.equal(result.poly.length,500);
+  assert.equal(result.kalshi[499].id,'K-499');assert.equal(result.poly[499].id,'P-499');
+  assert.equal(result.raw.size,1000);assert.equal(calls.length,4);
 });
 test('structured sports matching resolves opposite named winners and rejects known different lines',()=>{
   const {route}=fixtures();const common={sports:true,competition:'nfl',sport:'football',eventDate:'2026-10-01',
