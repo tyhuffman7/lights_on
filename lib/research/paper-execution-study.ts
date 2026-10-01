@@ -34,6 +34,11 @@ export function studyEligible(r:RecallRoute,b:Books|null,at:number,c:Settlement)
 export function studyPlans(r:RecallRoute,b:Books,side:Side,at:number):Plan[]{
  const results=new Map<number,Plan>(),minimum=Math.ceil(Math.max(r.pair.a.minQty,r.pair.b.minQty));
  const maximum=Math.min(executionStudyPolicy.maxContracts,sumDepth(b.kalshi.book[side]),sumDepth(b.poly.book[otherSide(r,side)]));
+ if(maximum<minimum)return [];
+ const first=evaluateEvArb(r.pair,{kalshi:b.kalshi.book,poly:b.poly.book},side,minimum,at);
+ // Ask ladders are monotone: if minimum-size gross edge is absent, no
+ // larger integer size can become profitable under nonnegative fees.
+ if(first.grossProfit===null||first.grossProfit<=0)return [];
  for(let q=minimum;q<=maximum;q++){
   const e=evaluateEvArb(r.pair,{kalshi:b.kalshi.book,poly:b.poly.book},side,q,at,'UNVERIFIED',undefined,r.ticks);
   if(e.economicStatus!=='REALISTIC_NET_POSITIVE'||!e.kalshi||!e.poly||e.estimatedFees===null||e.acquisitionCost===null)continue;
