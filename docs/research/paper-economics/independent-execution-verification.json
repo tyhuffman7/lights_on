@@ -1,0 +1,13 @@
+{
+  "scope": "Independent Python integer arithmetic and exact recorded native level consumption, not actual fills",
+  "episodes": 416,
+  "checks": {
+    "takenCost": 36254,
+    "signalPlans": 2068,
+    "attempts": 16544,
+    "fullyUnwound": 160
+  },
+  "sourceFiles": 199,
+  "changed": [],
+  "ordersEnabled": false
+}

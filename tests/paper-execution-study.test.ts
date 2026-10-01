@@ -66,3 +66,15 @@ test('portfolio never sums ticks, reuses held market depth or silently prices un
  assert.equal(paperPortfolio([unknown],10,100).modeledPortfolioPnlDollars,null);
  assert.equal(executionReport(s.summary(),60_000).episodes,2);assert.equal(executionStudyPolicy.ordersEnabled,false);
 });
+test('frequency reporting merges freshness gaps and counts only witnessed economic returns',()=>{
+ const r=route(),at=Date.now(),b=books(r,at,100),s=new PaperExecutionStudy(()=>b,()=>{});s.observe(r,b,paperSettlement(r),at,100);s.pulse(at+100,200);s.stop(at+200);
+ const first=structuredClone(s.episodes[0]);first.endReason='OBSERVATION_GAP';first.rightCensored=true;
+ const resumed={...structuredClone(first),id:99,start:at+1000};resumed.endReason='ECONOMIC_DISAPPEARANCE';resumed.rightCensored=false;
+ const returned={...structuredClone(first),id:100,start:at+2000};resumed.netEdges=Array(1000).fill(1);
+ const result=executionReport({episodes:[first,resumed,returned],timing:[],skipped:{}},60_000);
+ assert.equal(result.captureSegments,3);assert.equal(result.episodes,2);assert.equal(result.confirmedReturns,1);assert.equal(result.recurringRoutes,1);
+ assert.equal(result.latencySurvival.find(d=>d.delayMs===100)!.eligibleEpisodes,2);
+ assert.equal(result.captureLatencySurvival.find(d=>d.delayMs===100)!.eligibleEpisodes,3);
+ assert.equal(result.baseline.acceptedEntries,1);assert.equal(result.baseline.modeledPortfolioPnlDollars,2.4);
+ assert.ok(Math.abs(result.medianPerContractNetDollars!-.2)<1e-12);assert.equal(result.contentUpdateMedianPerContractNetDollars,1e-8);
+});

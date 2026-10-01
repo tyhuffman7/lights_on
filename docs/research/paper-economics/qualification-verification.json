@@ -1,0 +1,653 @@
+{
+  "controls": [
+    {
+      "target": "Mountain West",
+      "expected": "DIFFERENT_QUESTION",
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "DIFFERENT_QUESTION",
+      "native": [
+        "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.",
+        "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+      ],
+      "certificate": {
+        "version": 1,
+        "family": "qualification",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "event",
+          "competition",
+          "competitionLevel",
+          "metric",
+          "timeframe",
+          "stage",
+          "scope",
+          "settlementScope",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "qualification",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "qualification",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "new team",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "new team",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "event",
+            "left": {
+              "value": "cfb:conference usa",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "cfb:mountain west",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "CONFLICT"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "cfb",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "cfb",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competitionLevel",
+            "left": {
+              "value": "conference",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "conference",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "advancement",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "advancement",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "season:2026",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "season:2026",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "stage",
+            "left": {
+              "value": "final",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "final",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "scope",
+            "left": {
+              "value": "team",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "team",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "settlementScope",
+            "left": {
+              "value": "final",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "final",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [
+          "event: cfb:conference usa vs cfb:mountain west"
+        ],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing"
+        ],
+        "decision": "DIFFERENT_QUESTION",
+        "strictEquivalent": false
+      }
+    },
+    {
+      "target": "National",
+      "expected": "DIFFERENT_QUESTION",
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "DIFFERENT_QUESTION",
+      "native": [
+        "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.",
+        "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+      ],
+      "certificate": {
+        "version": 1,
+        "family": "qualification",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "event",
+          "competition",
+          "competitionLevel",
+          "metric",
+          "timeframe",
+          "stage",
+          "scope",
+          "settlementScope",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "qualification",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "qualification",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "new team",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "new team",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "event",
+            "left": {
+              "value": "cfb:conference usa",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "cfb:college football playoff",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "CONFLICT"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "cfb",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "cfb",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competitionLevel",
+            "left": {
+              "value": "conference",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "national",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "CONFLICT"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "advancement",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "advancement",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "season:2026",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "season:2026",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "stage",
+            "left": {
+              "value": "final",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "final",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "scope",
+            "left": {
+              "value": "team",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "team",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "settlementScope",
+            "left": {
+              "value": "final",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "final",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [
+          "event: cfb:conference usa vs cfb:college football playoff",
+          "competitionLevel: conference vs national"
+        ],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing"
+        ],
+        "decision": "DIFFERENT_QUESTION",
+        "strictEquivalent": false
+      }
+    }
+  ],
+  "fresh50": [
+    {
+      "rank": 1,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 2,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 3,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 4,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 5,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 6,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 7,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 8,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 9,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 10,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 11,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 12,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 13,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 14,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 15,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 16,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 17,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 18,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 19,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 20,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 21,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 22,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 23,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 24,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 25,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 26,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 27,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 28,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 29,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 30,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 31,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 32,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 33,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 34,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 35,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 36,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 37,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 38,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 39,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 40,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 41,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 42,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 43,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 44,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 45,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 46,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 47,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 48,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 49,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    },
+    {
+      "rank": 50,
+      "before": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "after": "ORDINARY_EQUIVALENT_BASIS_RISK"
+    }
+  ]
+}
