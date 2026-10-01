@@ -853,7 +853,9 @@
         "poly": 100
       }
     },
-    "expected": "UNRESOLVED"
+    "expected": "DIFFERENT_QUESTION",
+    "priorExpected": "UNRESOLVED",
+    "revisionReason": "Known departure trigger/cohort contradiction now parsed independently of missing profiles."
   },
   {
     "label": "Undefeated home games versus undefeated whole regular season.",

@@ -84,7 +84,7 @@ export function paperSettlement(route:RecallRoute){
  let classification:SettlementClass='UNRESOLVED';
  const checks=[...assessment.checks];
  if(falseMatch.length)classification='DIFFERENT_QUESTION';
- else if(proposition.ordinaryAligned||assessment.normalOutcomeMatched){
+ else if((proposition.ordinaryAligned||assessment.normalOutcomeMatched)&&!proposition.missing.some(x=>x.startsWith('Unconfirmed fixture timing:'))){
   classification='ORDINARY_EQUIVALENT_BASIS_RISK';
   checks.push(proposition.ordinaryAligned?'All required ordinary proposition dimensions align':'Existing native family proof aligns ordinary dimensions');
  }

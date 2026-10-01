@@ -1746,7 +1746,7 @@
   {
     "rank": 19,
     "label": "Next departure or intent announcement versus next departure announcement; cohort, trigger, start cutoff, deadline and tie treatment remain unbound.",
-    "expected": "UNRESOLVED",
+    "expected": "DIFFERENT_QUESTION",
     "route": {
       "pair": {
         "id": "KXCABOUT-26MAY22-PHEG::ncpdc-trmpcab-nxtout-1-petheg",
@@ -1821,12 +1821,14 @@
         "poly": 100
       },
       "semanticClass": "UNRESOLVED"
-    }
+    },
+    "priorExpected": "UNRESOLVED",
+    "revisionReason": "Known departure trigger/cohort contradiction now parsed independently of missing profiles."
   },
   {
     "rank": 20,
     "label": "Next departure or intent announcement versus next departure announcement; cohort, trigger, name alias, start cutoff, deadline and tie treatment remain unbound.",
-    "expected": "UNRESOLVED",
+    "expected": "DIFFERENT_QUESTION",
     "route": {
       "pair": {
         "id": "KXCABOUT-26MAY22-RVOU::ncpdc-trmpcab-nxtout-1-rusvou",
@@ -1901,6 +1903,8 @@
         "poly": 100
       },
       "semanticClass": "UNRESOLVED"
-    }
+    },
+    "priorExpected": "UNRESOLVED",
+    "revisionReason": "Known departure trigger/cohort contradiction now parsed independently of missing profiles."
   }
 ]

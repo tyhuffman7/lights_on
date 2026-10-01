@@ -13,6 +13,7 @@ import {recallPolicy,recallMatches,recallSignals,fairRoutes,currentBook,bookAges
 import {LatestCandidates,candidateKey,priority,paperSettlement,selectConfirmationBooks} from '../lib/research/hot-confirmation.ts';
 import {transactionVersion} from '../lib/screen/book-confirmation.ts';
 import {ConfirmationFeed} from './book-confirmation-adapter.ts';
+import {rankedSemanticLists,isPromoted} from '../lib/research/semantic-lists.ts';
 import {reconcileGroups} from './coverage.ts';
 
 const K='https://external-api.kalshi.com/trade-api/v2',P='https://gateway.polymarket.us/v1';
@@ -98,6 +99,16 @@ export async function currentCatalog(api:PublicData,progress:(x:unknown)=>void=(
     }})()
   ]);
   r.forEach((v,i)=>{if(v.status==='rejected')errors.push((i?'PM_US:':'KALSHI:')+(v.reason as Error).message);});
+  // Bind a missing qualification season from the public parent event. This is
+  // semantic enrichment only; discovery routes and matching remain unchanged.
+  const needsContext=kalshi.filter(m=>!/\b20\d\d\b/.test(m.rules.trim().split('\n')[0])&&/reach|qualif|advances/i.test(m.rules.trim().split('\n')[0])&&/football|playoff|championship/i.test(m.rules));
+  const eventIds=[...new Set(needsContext.map(m=>raw.get('kalshi:'+m.id)?.event_ticker).filter(Boolean))].slice(0,32);
+  await Promise.all(eventIds.map(async id=>{try{
+    const response=await api.get(`${K}/events/${encodeURIComponent(id)}`,true),event=response.data.event;
+    if(event?.event_ticker!==id)throw Error('EVENT_CONTEXT_IDENTITY_MISMATCH');
+    raw.set('kalshi-event:'+id,{event,transport:response.transport});
+    for(const m of needsContext)if(raw.get('kalshi:'+m.id)?.event_ticker===id)m.propositionContext={eventId:id,title:String(event.title??''),subtitle:String(event.sub_title??''),source:`${K}/events/${encodeURIComponent(id)}`,at:response.transport.responseAt};
+  }catch(error){progress({phase:'SEMANTIC_CONTEXT_UNAVAILABLE',eventId:id,reason:(error as Error).message});}}));
   const unique=(ms:Market[])=>[...new Map(ms.filter(m=>m.open).map(m=>[m.id,m])).values()];
   return {at,endedAt:Date.now(),kalshi:unique(kalshi),poly:unique(poly),raw,complete:!errors.length,errors,counts};
 }
@@ -116,6 +127,7 @@ async function refreshCandidateMetadata(api:PublicData,route:RecallRoute){
   const er=await api.get(`${K}/events/${encodeURIComponent(km.event_ticker)}`,true),event=er.data.event;
   const effective={...series,fee_type:event?.fee_type_override??series.fee_type,fee_multiplier:event?.fee_multiplier_override??series.fee_multiplier};
   const [a,b]=await Promise.all([normalizeKalshi(km,effective),normalizePoly(pm)]);
+  if(event?.event_ticker===km.event_ticker)a.propositionContext={eventId:km.event_ticker,title:String(event.title??''),subtitle:String(event.sub_title??''),source:`${K}/events/${encodeURIComponent(km.event_ticker)}`,at:er.transport.responseAt};
   if(km.fee_waiver_expiration_time&&Date.parse(km.fee_waiver_expiration_time)>Date.now())a.feeRate=0;
   b.open=b.open&&pm.ep3Status==='OPEN'&&pm.status==='MARKET_STATUS_OPEN';
   const warnings=[...route.warnings];
@@ -156,7 +168,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   if(!Number.isSafeInteger(durationMs)||durationMs<1000||durationMs>90*60_000)throw Error('BOUNDED_DURATION_REQUIRED');
   if(env)process.loadEnvFile(resolve(env));mkdirSync(directory,{recursive:true,mode:0o700});
   const sourceHashes=Object.fromEntries(['worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
-    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/identity.ts','lib/research/entities.ts','lib/research/non-sports.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
+    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/proposition-differences.ts','lib/research/semantic-lists.ts','lib/research/identity.ts','lib/research/entities.ts','lib/research/non-sports.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
   const frozen={policy:{...recallPolicy,durationMs},sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
   writeFileSync(resolve(directory,'frozen.json'),JSON.stringify(frozen,null,2)+'\n',{flag:'wx',mode:0o600});
   const control=new AbortController(),preparation=setTimeout(()=>control.abort(),20*60_000);
@@ -186,7 +198,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   const latency={queue:[] as number[],work:[] as number[],signal:[] as number[],firstSignal:[] as number[]};
   let lastAudit=0,peakHot=0,peakQueue=0,lastMetadata=0;
   const classifications=new Map<string,ReturnType<typeof paperSettlement>>(),falseMatches=new Set<string>();
-  const classify=(r:RecallRoute)=>{const key=r.pair.id+':'+r.pair.a.hash+':'+r.pair.b.hash;let c=classifications.get(key);if(!c){c=paperSettlement(r);classifications.set(key,c);}r.semanticClass=c.classification;return c;};
+  const classify=(r:RecallRoute)=>{const key=r.pair.id+':'+r.pair.a.hash+':'+r.pair.b.hash+':'+JSON.stringify([r.pair.a.propositionContext?.subtitle,r.pair.b.propositionContext?.subtitle]);let c=classifications.get(key);if(!c){c=paperSettlement(r);classifications.set(key,c);}r.semanticClass=c.classification;return c;};
   let strongestConfirmed:{route:RecallRoute;signal:Signal;entry:Record<Venue,ObservedBook>;settlement:ReturnType<typeof paperSettlement>;at:number}[]=[];
   const percentiles=(xs:number[])=>{const a=[...xs].sort((a,b)=>a-b);return {n:a.length,median:a.length?a[Math.floor((a.length-1)*.5)]:null,p95:a.length?a[Math.floor((a.length-1)*.95)]:null,max:a.length?a.at(-1):null};};
   const feedRestarts=new Map<string,number>(),feedStarted=new Map<string,number>();let lastHealthCheck=start;
@@ -206,7 +218,9 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     unvisitedRoutes:[...allRoutes.keys()].filter(id=>!visited.has(id)).length,matchingDiagnostics:matched.diagnostics,
     counts,reasons,buckets,delayOutcomes,requests:api.counts,requestFailures:api.failures,evidenceBytes,
     contractVerifiedOpportunities:0,confirmedPaperArbs:0,
-    strongestConfirmed,semanticRouteCounts:[...allRoutes.values()].reduce((o,r)=>{const c=r.semanticClass??'UNRESOLVED';o[c]=(o[c]??0)+1;return o;},{} as Record<string,number>),
+    strongestConfirmed:strongestConfirmed.filter(x=>isPromoted(x.settlement.classification)),
+    ...rankedSemanticLists(strongestConfirmed,x=>x.settlement.classification,x=>x.signal.evaluation.estimatedNetProfit??-Infinity),
+    semanticRouteCounts:[...allRoutes.values()].reduce((o,r)=>{const c=r.semanticClass??'UNRESOLVED';o[c]=(o[c]??0)+1;return o;},{} as Record<string,number>),
     falseMatchRoutes:falseMatches.size,pendingConfirmations:pendingCandidates.size,peakPendingConfirmations:peakQueue,hotRoutes:hot.size,peakHotRoutes:peakHot,
     candidatesSuperseded:queue.superseded,candidatesDisappearedBeforeDispatch:queue.disappeared,
     latencyMs:Object.fromEntries(Object.entries(latency).map(([k,v])=>[k,percentiles(v)])),
@@ -214,7 +228,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     endpointRequests:api.endpointCounts,httpLatencyMs:Object.fromEntries(Object.entries(api.durations).map(([k,v])=>[k,percentiles(v)])),
     lastActiveFeedHealth,
     feedHealth:[...feeds].map(([key,f])=>({key,ids:f.stream.options.ids.length,...f.health(),failures:f.failures,reconnects:f.stream.reconnectCount})),
-    best:best.map(({route,signal})=>({event:route.pair.a.title,route,signal})),
+    best:best.filter(x=>isPromoted(x.route.semanticClass??'UNRESOLVED')).map(({route,signal})=>({event:route.pair.a.title,route,signal})),
+    observedEconomicLists:rankedSemanticLists(best,x=>x.route.semanticClass??'UNRESOLVED',x=>x.signal.evaluation.estimatedNetProfit??-Infinity),
     independentCheckRoutes:{highestGross,nearPositive,canonicalChecks},frozen},null,2)+'\n',{mode:0o600});
   const bookKey=(v:Venue,id:string)=>v+':'+id;
   const reconcile=async()=>{
@@ -272,8 +287,9 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
       if(q.candidate&&q.executable)count('confirmedExecutableCandidates');
       const settlement=classify(route);count('settlement:'+settlement.classification);
       if(q.candidate&&q.executable){count('freshSurvivor:'+settlement.classification);
-        strongestConfirmed=[...strongestConfirmed.filter(x=>x.route.pair.id!==route.pair.id),{route,signal:q,entry,settlement,at}]
-          .sort((a,b)=>(b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity)).slice(0,20);}
+        const rows=[...strongestConfirmed.filter(x=>x.route.pair.id!==route.pair.id||x.signal.evaluation.kalshiSide!==q.evaluation.kalshiSide),{route,signal:q,entry,settlement,at}];
+        const lists=rankedSemanticLists(rows,x=>x.settlement.classification,x=>x.signal.evaluation.estimatedNetProfit??-Infinity);
+        strongestConfirmed=[...lists.promotedOpportunities,...lists.unresolvedResearch];}
       latency.queue.push(startedAt-queuedAt);latency.work.push(at-startedAt);latency.signal.push(at-signal.evaluation.at);latency.firstSignal.push(at-firstQueuedAt);
       record('CONFIRMATION',{route,initial:signal,queueWaitMs:startedAt-queuedAt,firstSignalToConfirmationMs:at-firstQueuedAt,
         confirmationWorkMs:at-startedAt,quoteToConfirmationMs:at-signal.evaluation.at,signal:q,entry,
@@ -322,8 +338,10 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         if(gross)highestGross=retain(highestGross,r,gross,s=>s.evaluation.grossProfit!);
         if(net&&net.evaluation.estimatedNetProfit!<=0)nearPositive=retain(nearPositive,r,net,s=>s.evaluation.estimatedNetProfit!);
         if(net&&r.matchSource==='CANONICAL')canonicalChecks=retain(canonicalChecks,r,net,s=>s.evaluation.estimatedNetProfit!);
+        classify(r);
         if(bestQ.evaluation.grossProfit!==null){best=best.filter(x=>x.route.pair.id!==id);best.push({route:r,signal:bestQ});
-          best.sort((a,b)=>(b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity));best=best.slice(0,20);}
+          const lists=rankedSemanticLists(best,x=>x.route.semanticClass??'UNRESOLVED',x=>x.signal.evaluation.estimatedNetProfit??-Infinity);
+          best=[...lists.promotedOpportunities,...lists.unresolvedResearch,...lists.rejectedDifferentQuestions];}
         const q=qs.filter(x=>x.candidate&&x.withinCapital).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0]??qs.find(x=>x.candidate);
         const semantic=classify(r);count('observedSemantic:'+semantic.classification);
         if(!semantic.differentQuestionReasons.length&&net&&net.fresh&&net.evaluation.estimatedNetProfit!>=-recallPolicy.hotNearNet){

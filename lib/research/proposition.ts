@@ -4,8 +4,9 @@ import type {Market,Pair} from '../arb/types.ts';
 import {normalizeText,canonicalCompetition} from './identity.ts';
 import {catalogEntities} from './entities.ts';
 import {canonicalTemplate,canonicalTemplateKey} from './canonical-template.ts';
+import {differenceDimensions,nativeDifferences,fixtureTimingUncertainty} from './proposition-differences.ts';
 
-export const propositionDimensions=['subject','event','competition','family','metric','outcome','comparator','threshold','unit','timeframe','period','stage','geography','scope','conditions','settlementScope'] as const;
+export const propositionDimensions=['subject','event','competition','family','metric','outcome','comparator','threshold','unit','timeframe','period','stage','geography','scope','conditions','settlementScope',...differenceDimensions] as const;
 export type PropositionDimension=typeof propositionDimensions[number];
 export type Proposition={version:1;dimensions:Partial<Record<PropositionDimension,string>>;
  evidence:Partial<Record<PropositionDimension,string>>;unknown:PropositionDimension[];canonicalKey?:string};
@@ -41,7 +42,7 @@ export const settlementFamilyProfiles:Record<string,{required:PropositionDimensi
 export function structuredProposition(m:Market,registry=catalogEntities([m.identity])):Proposition{
  m={...m,identity:m.identity&&registry.normalize(m.identity)};
  const d:Proposition['dimensions']={},e:Proposition['evidence']={};
- const primary=m.rules.split('\n')[0].split(/\. (?=[A-Z])/)[0].trim();
+ const primary=m.rules.trim().split('\n')[0].split(/\. (?=[A-Z])/)[0].trim();
  const title=normalizeText(m.title),clause=normalizeText(primary),s=clause||title;
  const put=(k:PropositionDimension,v:string|undefined,proof=primary)=>{if(v){d[k]=v;e[k]=proof;}};
  const canonical=canonicalTemplate(m,registry);
@@ -97,6 +98,7 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
  if(['championship','qualification','ranking'].includes(d.family??'')){
   let stage=/league phase/.test(s)?'league-phase':s.match(/round (?:of )?(\d+)/)?.[0]??
    (/quarterfinal/.test(s)?'quarterfinal':/semifinal/.test(s)?'semifinal':/qualif.+\bfinal\b/.test(s)?'final':undefined);
+  if(d.family==='qualification'&&/national championship|championship game|playoff final/.test(s)&&!/semifinal|quarterfinal/.test(s))stage='championship-final';
   // Named scopes are retained: Eastern vs Western, NFC vs AFC, division vs league.
   const conference=s.match(/(?:eastern|western|national football|american football) conference|\bnfc\b|\bafc\b/);
   if(!stage&&/division/.test(s))stage='division:'+((s.match(/(?:nfc|afc) (?:north|south|east|west)/)?.[0])??'unspecified');
@@ -169,6 +171,20 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
   const span=primary.match(/\b(20\d\d)[-–](?:(20)?)(\d\d)\b/);
   put('timeframe','season-ending:'+(span?span[1].slice(0,2)+span[3]:year));
  }
+ if(d.family==='qualification'&&!d.timeframe&&m.propositionContext){
+  const context=m.propositionContext,season=context.subtitle.match(/\b(20\d\d)(?:[-–](?:20)?\d\d)?\b/);
+  if(season&&/football|playoff|championship/i.test(context.title))put('timeframe','season:'+season[1],JSON.stringify(context));
+ }
+ const extra=nativeDifferences(m,resolve);
+ for(const k of differenceDimensions)put(k,extra.dimensions[k],extra.evidence[k]);
+ const race=(s+' '+title).match(/(?:race to|first to (?:score|reach)) (\d+) points/);
+ if(race||/first team to score points/.test(s+' '+title)){
+  put('family','game-scoring');put('metric',race?'race-to-points':'first-score');put('unit','points');
+  put('threshold',race?.[1]);put('comparator','gte');put('scope','fixture');
+  if(/neither team/.test(s+' '+title))put('outcome','neither-team');
+  if(extra.dimensions.fixtureParticipants)put('event',extra.dimensions.fixtureParticipants,extra.evidence.fixtureParticipants);
+  put('timeframe',m.identity?.eventDate?'date:'+m.identity.eventDate:undefined,JSON.stringify(m.identity));
+ }
  if(!d.family){delete d.timeframe;delete e.timeframe;}
  return {version:1,dimensions:d,evidence:e,unknown:propositionDimensions.filter(k=>d[k]===undefined),...(canonical?{canonicalKey:canonicalTemplateKey(canonical)}:{})};
 }
@@ -194,6 +210,7 @@ export function comparePropositions(pair:Pair,namedWinnerOrientation:boolean|nul
   if(pair.inverted)missing.push('Complement orientation requires native named-winner proof');
  }
  if(!pair.a.rules.trim()||!pair.b.rules.trim())missing.push('Native payout clauses unavailable');
+ missing.push(...fixtureTimingUncertainty(pair.a),...fixtureTimingUncertainty(pair.b));
  return {version:1 as const,a,b,conflicts,missing,ordinaryAligned:!conflicts.length&&!missing.length,
   profile:family??null,divergenceBranches:profile?.branches??['Native exceptional settlement branches require review']};
 }
