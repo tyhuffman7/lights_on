@@ -156,7 +156,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   if(!Number.isSafeInteger(durationMs)||durationMs<1000||durationMs>90*60_000)throw Error('BOUNDED_DURATION_REQUIRED');
   if(env)process.loadEnvFile(resolve(env));mkdirSync(directory,{recursive:true,mode:0o700});
   const sourceHashes=Object.fromEntries(['worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
-    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
+    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/identity.ts','lib/research/entities.ts','lib/research/non-sports.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
   const frozen={policy:{...recallPolicy,durationMs},sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
   writeFileSync(resolve(directory,'frozen.json'),JSON.stringify(frozen,null,2)+'\n',{flag:'wx',mode:0o600});
   const control=new AbortController(),preparation=setTimeout(()=>control.abort(),20*60_000);
@@ -353,7 +353,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
       let dispatched=0;
       while(pendingCandidates.size&&dispatched++<100){
         const item=queue.next()!;item.route=allRoutes.get(item.route.pair.id)??item.route;
-        if(differentQuestion(item.route).length){pendingCandidates.delete(item.key);count('differentQuestionDispatchVetoes');continue;}
+        if(classify(item.route).classification==='DIFFERENT_QUESTION'){pendingCandidates.delete(item.key);count('differentQuestionDispatchVetoes');continue;}
         const current=pairBooks(item.route);
         if(!current||Date.now()-item.queuedAt>recallPolicy.maxPendingAgeMs){pendingCandidates.delete(item.key);count('candidatesExpiredBeforeDispatch');continue;}
         // Reprice both orientations and available quantities before dispatch. Replace historical economics with current state.

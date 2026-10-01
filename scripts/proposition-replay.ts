@@ -33,4 +33,4 @@ const result={scope:'Frozen native quote replay. Counts are repeated readings, n
  strongestAfter:[...routes.values()].filter(r=>r.after!=='DIFFERENT_QUESTION').sort((a,b)=>b.modeledNet-a.modeledNet).slice(0,20),
  routes:[...routes.values()]};
 mkdirSync(dirname(output),{recursive:true});writeFileSync(output,JSON.stringify(result,null,2)+'\n');
-console.log(JSON.stringify({...result,top20:result.top20.map(r=>({rank:r.rank,label:r.label,after:r.after})),strongestAfter:result.strongestAfter.map(r=>({id:r.route.pair.id,after:r.after,net:r.modeledNet})),routes:result.routes.length},null,2));
+console.log(JSON.stringify({...result,top20:result.top20.map((r:any)=>({rank:r.rank,label:r.label,after:r.after})),strongestAfter:result.strongestAfter.map(r=>({id:r.route.pair.id,after:r.after,net:r.modeledNet})),routes:result.routes.length},null,2));
