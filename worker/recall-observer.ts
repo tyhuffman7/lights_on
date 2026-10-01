@@ -138,6 +138,16 @@ async function refreshCandidateMetadata(api:PublicData,route:RecallRoute){
 }
 
 type Signal=ReturnType<typeof recallSignals>[number];
+// Keep native level validation fail-closed at the observation boundary. One
+// unusable book must not terminate an otherwise bounded read-only collection.
+// Do not repair/filter its levels, infer prices, or swallow unrelated failures.
+export function screenNativeSignals(route:RecallRoute,books:Record<Venue,ObservedBook>,at:number,quantities:number[]|undefined,onInvalid:(reason:string)=>void){
+  try{return recallSignals(route,books,at,quantities);}
+  catch(error){const reason=(error as Error).message;
+    if(reason!=='INVALID_EXECUTABLE_LEVEL'&&reason!=='INVALID_FEE_LEVEL')throw error;
+    onInvalid(reason);return [];
+  }
+}
 export function nextConfirmation<T extends {route:RecallRoute;signal:Signal;queuedAt:number}>(pending:T[],fair:boolean){
   return [...pending].sort((a,b)=>fair?a.queuedAt-b.queuedAt:priority({...a,key:'',firstQueuedAt:a.queuedAt},{...b,key:'',firstQueuedAt:b.queuedAt}))[0];
 }
@@ -232,6 +242,9 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     observedEconomicLists:rankedSemanticLists(best,x=>x.route.semanticClass??'UNRESOLVED',x=>x.signal.evaluation.estimatedNetProfit??-Infinity),
     independentCheckRoutes:{highestGross,nearPositive,canonicalChecks},frozen},null,2)+'\n',{mode:0o600});
   const bookKey=(v:Venue,id:string)=>v+':'+id;
+  const observedSignals=(route:RecallRoute,books:Record<Venue,ObservedBook>,at:number,quantities?:number[])=>screenNativeSignals(route,books,at,quantities,reason=>{
+    count('invalidNativeLevelObservations');record('INVALID_NATIVE_LEVEL',{pairId:route.pair.id,reason,books});queue.update(route,[],at);
+  });
   const reconcile=async()=>{
     byMarket=new Map();for(const r of routes)for(const m of [r.pair.a,r.pair.b]){const key=bookKey(m.venue,m.id),ids=byMarket.get(key)??[];ids.push(r.pair.id);byMarket.set(key,ids);}
     const desired=new Map<string,{venue:Venue;ids:string[]}>();
@@ -320,8 +333,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         const now=Date.now();for(const v of ['kalshi','poly'] as Venue[]){const a=bookAges(books[v],now);
           for(const kind of ['receipt','exchange'] as const){const key=freshnessBucket(kind==='receipt'?a.receiptMs:a.exchangeMs);
             buckets[v][kind][key]=(buckets[v][kind][key]??0)+1;}}
-        const one=recallSignals(r,books,now,[1]);
-        const qs=one.some(q=>q.evaluation.grossStatus==='GROSS_ARB')?recallSignals(r,books,now):one;
+        const one=observedSignals(r,books,now,[1]);if(!one.length)continue;
+        const qs=one.some(q=>q.evaluation.grossStatus==='GROSS_ARB')?observedSignals(r,books,now):one;if(!qs.length)continue;
         const fresh=one.some(q=>q.fresh);if(fresh){freshRoutes.add(id);count('freshTwoBookObservations');}else count('staleTwoBookObservations');
         for(const q of one){count('orientationObservations');const e=q.evaluation;
           if(e.grossStatus==='NO_EXECUTABLE_DEPTH')count('noQuantityOneDepth');
@@ -375,7 +388,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         const current=pairBooks(item.route);
         if(!current||Date.now()-item.queuedAt>recallPolicy.maxPendingAgeMs){pendingCandidates.delete(item.key);count('candidatesExpiredBeforeDispatch');continue;}
         // Reprice both orientations and available quantities before dispatch. Replace historical economics with current state.
-        const qs=recallSignals(item.route,current,Date.now());const latest=qs.filter(s=>s.evaluation.kalshiSide===item.signal.evaluation.kalshiSide&&s.candidate)
+        const qs=observedSignals(item.route,current,Date.now());const latest=qs.filter(s=>s.evaluation.kalshiSide===item.signal.evaluation.kalshiSide&&s.candidate)
           .sort((a,b)=>Number(b.withinCapital)-Number(a.withinCapital)||(b.evaluation.estimatedNetProfit??-Infinity)-(a.evaluation.estimatedNetProfit??-Infinity))[0];
         if(!latest){pendingCandidates.delete(item.key);queue.disappeared++;continue;}item.signal={...latest,evaluation:{...latest.evaluation,at:item.signal.evaluation.at}};
         const fallback=selectConfirmationBooks(item.route,current,Date.now()).length>0;
