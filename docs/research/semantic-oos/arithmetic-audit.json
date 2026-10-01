@@ -1,0 +1,726 @@
+{
+  "scope": "Offline equality checks of retained quote economics; no prices or fills regenerated",
+  "unitsPerDollar": 100000000,
+  "records": [
+    {
+      "cohort": "survivor-audit",
+      "rank": 1,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-ari-nyg-2026-10-04-fs-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 2,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-kc-lv-2026-10-04-fs-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 3,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-gb-tb-2026-10-04-fs-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 4,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-ten-bal-2026-10-04-fs-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 5,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-ind-was-2026-10-04-race7-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 6,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-ne-buf-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 7,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-lac-sea-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 8,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-mia-min-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 9,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-ind-was-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 10,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-ari-nyg-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 11,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-den-sf-2026-10-04-race21-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 12,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-ari-nyg-2026-10-04-race21-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 13,
+      "key": "KXUCLBOTTOM-27-AVL::arankc-ucl-2027-01-27-top8-ast:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 14,
+      "key": "KXUCLBOTTOM-27-MCI::arankc-ucl-2027-01-27-top8-mnc:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 15,
+      "key": "KXNFLRACE-26OCT04INDWAS-28-NONE::astatc-nfl-ne-buf-2026-10-04-race7-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 16,
+      "key": "KXNFLRACE-26OCT04INDWAS-28-NONE::astatc-nfl-jax-cin-2026-10-04-race7-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 17,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-nyj-chi-2026-10-04-race21-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 18,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-lac-sea-2026-10-04-race21-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 19,
+      "key": "KXOSCARNOMDIR-27-OLI::tac-oscars-nom-bstactre-2027-01-21-oliwil:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 20,
+      "key": "KXNFLRACE-26OCT04INDWAS-28-NONE::astatc-nfl-kc-lv-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 21,
+      "key": "KXNFLRACE-26OCT04INDWAS-28-NONE::astatc-nfl-ne-buf-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 22,
+      "key": "KXNFLRACE-26OCT04INDWAS-28-NONE::astatc-nfl-ten-bal-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 23,
+      "key": "KX20SONG-26DEC26-KEN::ccpc-bilbrd-1song-any2026-kenlam:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 24,
+      "key": "KXOSCARNOMCIN-27-PRO::tac-oscars-nom-2027-01-31-bestpic-promar:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 25,
+      "key": "KXDARTSMATCH-26OCT011200PRASHWAR-HWAR::aec-modus-petras-harwar-2026-10-01::inverted:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 26,
+      "key": "KX1SONG-DEC2626-MEG::ccpc-bilbrd-1album-any2026-megsta:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 27,
+      "key": "KXNCAAFWINS-26NEB-7::aachc-cfb-wins-ou-2026-11-28-nebr:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 28,
+      "key": "KXG7LEADEROUT-26JUL20-FMER::opdc-wrldld-2026-12-31-frimer:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 29,
+      "key": "KXLEAVEMERZ-29JAN01-26NOV01::opdc-wrldld-2026-12-31-frimer:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 30,
+      "key": "KX20SONG-26DEC26-DOJ::ccpc-bilbrd-1song-any2026-dojcat:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 31,
+      "key": "KXNFLRACE-26OCT04INDWAS-35-NONE::astatc-nfl-jax-cin-2026-10-04-race28-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 32,
+      "key": "KXDARTSMATCH-26OCT011200PRASHWAR-PRAS::aec-modus-petras-harwar-2026-10-01:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 33,
+      "key": "KXDARTSMATCH-26OCT011200PRASHWAR-HWAR::aec-modus-petras-harwar-2026-10-01::inverted:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 34,
+      "key": "KXCABOUT-26MAY22-MMUL::ncpdc-trmpcab-nxtout-1-marmul:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 35,
+      "key": "KXNCAAFWINS-26UCLA-7::aachc-cfb-wins-ou-2026-11-28-ucla:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 36,
+      "key": "KXNCAAFWINS-26UTAH-9::aachc-cfb-wins-ou-2026-11-28-utah:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 37,
+      "key": "KXNCAAFWINS-26OKLA-8::aachc-cfb-wins-ou-2026-11-28-okl:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 38,
+      "key": "KXTIME-26-DAR::tpoyc-2026-daramo:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 39,
+      "key": "CONTROLS-2028-D::paccc-usse-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 40,
+      "key": "KXNFLRACE-26OCT04INDWAS-28-NONE::astatc-nfl-gb-tb-2026-10-04-race35-none:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 41,
+      "key": "KXNHLWEST-27-ANA::tec-nhl-westconf-2027-05-19-w-ana:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 42,
+      "key": "KXNCAAFFINALIST-27-TTU::aqc-cfb-cfp-2027-01-25-finalq-txtech:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 43,
+      "key": "KXNCAAFSBELT-26-TROY::tec-cfb-sbeltchamp-2026-12-04-w-troy:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 44,
+      "key": "KXOSCARACTO-27-ROB::tac-oscars-03-14-2027-bestacto-robpat:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 45,
+      "key": "KXCABOUT-26MAY22-MRUB::ncpdc-trmpcab-nxtout-1-marrub:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 46,
+      "key": "KX20SONG-26DEC26-BIL::ccpc-bilbrd-1song-any2026-bileil:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 47,
+      "key": "KXLEADERSOUT-27JAN01-BNETISR::mlaec-isrpol-pm-2026-10-27-bennet:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 48,
+      "key": "KXNFLRACE-26OCT04INDWAS-28-NONE::astatc-nfl-mia-min-2026-10-04-race14-none:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 49,
+      "key": "KXNCAAFWINS-26NW-6::aachc-cfb-wins-2026-11-28-nw-5pt5wins:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 50,
+      "key": "KXNCAAFWINS-26HOU-9::aachc-cfb-wins-2026-11-28-hou-8pt5wins:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 51,
+      "key": "KXNCAAFWINS-26MIZZ-7::aachc-cfb-wins-2026-11-28-missr-6pt5wins:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 52,
+      "key": "KXNCAAFAAC-26-UTSA::tec-cfb-aacchamp-2026-12-05-w-utsa:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 53,
+      "key": "KXNCAAFSBELT-26-USA::tec-cfb-sbeltchamp-2026-12-04-w-sala:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 54,
+      "key": "KXNCAAFCUSA-26-KENN::tec-cfb-cusachamp-2026-12-04-w-kenest:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 55,
+      "key": "KXNCAAFWINS-26UNC-7::aachc-cfb-wins-2026-11-28-ncar-6pt5wins:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 56,
+      "key": "KXNCAAFAACQUAL-26-UTSA::aqc-cfb-aac-2026-12-05-champq-utsa:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 57,
+      "key": "KXNCAAFUNDEFEATED-26-MIA::aachc-cfb-undefeated-2026-11-28-mia:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 58,
+      "key": "KXNCAAFWINS-26PITT-8::aachc-cfb-wins-2026-11-28-pitt-7pt5wins:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 59,
+      "key": "KXNCAAFWINS-26VT-7::aachc-cfb-wins-ou-2026-11-28-vtech:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 60,
+      "key": "KXLEADERNFLRUSHYDS-27-DHENRY22::aachc-nfl-mostrushyds-2027-01-10-derhen:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 61,
+      "key": "KXNCAAFPAC12QUAL-26-FRES::aqc-cfb-pac12-2026-12-04-champq-frest:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 62,
+      "key": "KXNCAAFWINS-26USC-8::aachc-cfb-wins-2026-11-28-usc-7pt5wins:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 63,
+      "key": "KXNCAAFWINS-26SCAR-7::aachc-cfb-wins-ou-2026-11-28-sc:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 64,
+      "key": "KXLEADERNFLPTDS-27-LJACKSON8::aachc-nfl-mostpasstds-2027-01-10-lamjac:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 65,
+      "key": "KXNCAAFWINS-26CIN-5::aachc-cfb-wins-2026-11-28-cin-4pt5wins:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 66,
+      "key": "KXNHLEAST-27-BUF::tec-nhl-eastconf-2027-05-19-w-buf:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 67,
+      "key": "KXNHLWEST-27-MIN::tec-nhl-westconf-2027-05-19-w-min:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 68,
+      "key": "KXNCAAFWINS-26ND-8::aachc-cfb-wins-2026-11-28-nd-7pt5wins:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 69,
+      "key": "KXNCAAFWINS-26TTU-8::aachc-cfb-wins-2026-11-28-txtech-7pt5wins:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "survivor-audit",
+      "rank": 70,
+      "key": "KXNCAAFCUSA-26-FIU::tec-cfb-cusachamp-2026-12-04-w-flint:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 1,
+      "key": "KXMLBAWARDFIN-26NLMVP-SOHTANI17::tec-mlb-nl-2026-11-27-cy-shooht:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 2,
+      "key": "KXLLM1-26OCT05-GOOG::ccrc-ntflx-1movus-2026-10-06-besbes:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 3,
+      "key": "KXDECLAREPRESFIRSTD-28NOV01-AOCA::ushrewc-ushr-ny-14-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 4,
+      "key": "KXLLM1-26OCT05-GOOG::ccrc-ntflx-1movglbl-2026-10-06-besbes:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 5,
+      "key": "KXDECLAREPRESFIRSTD-28NOV07-AOCA::ushrewc-ushr-ny-14-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 6,
+      "key": "KXVOTEGENERAL-GOVAK-26DBRO-10::usgubewc-usgub-ak-2026-11-03-davbro:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 7,
+      "key": "KXLEADERNFLPYDS-27-CSTROUD7::astatc-nfl-dal-hou-2026-10-04-pyd-cstr-gte150:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 8,
+      "key": "KXBALLONDORRANK-26T10-MOLI::tec-uefa-bdor-2026-10-26-w-micoli:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 9,
+      "key": "KXVOTEBR1-BRPRES26ACUR-1::ewc-pres-bra-2026-10-04-augcur:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 10,
+      "key": "KXVOTEBR1-BRPRES26RSAN-1::ewc-pres-bra-2026-10-04-rensan:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 11,
+      "key": "KXVOTECOUNTY-GOVCA26LOSANGELESXBEC-78::ewc-usgub-ca-2026-11-03-xavbec:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 12,
+      "key": "KXMLBAWARDFIN-26ALCY-DCEASE84::tec-mlb-al-2026-11-27-cy-dylcea:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 13,
+      "key": "KXVOTEBR1-BRPRES26RCAI-1::ewc-pres-bra-2026-10-04-roncai:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 14,
+      "key": "KXVOTECOUNTY-GOVCA26LOSANGELESXBEC-76::ewc-usgub-ca-2026-11-03-xavbec:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 15,
+      "key": "KXVOTEGENERAL-GOVPARTYCA-26XBEC-70::ewc-usgub-ca-2026-11-03-xavbec:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 16,
+      "key": "KXBALLONDORRANK-26T10-KMBA::tec-uefa-bdor-2026-10-26-w-kylmba:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 17,
+      "key": "KXNFLRRYDS-26OCT01PITCLE-CLERSANDERS23-70::astatc-nfl-pit-cle-2026-10-01-recyd-romwil-gte70::inverted:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 18,
+      "key": "KXOSCARNOMSUPACTR-27-ANN::tac-oscars-03-14-2027-bestactre-annhat:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 19,
+      "key": "KXHOUSERACE-LA01-26-D::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 20,
+      "key": "KXDHOUSESEATS-27-216::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 21,
+      "key": "KXMLBAWARDFIN-26NLCY-CSALE51::tec-mlb-nl-2026-11-27-cy-chrsal:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 22,
+      "key": "KXENDORSECOLLINS-26NOV03-JAUC::ushrewc-ushr-ma-04-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 23,
+      "key": "KXNFLPASSYDS-26OCT04DETCAR-CARBYOUNG9-150::astatc-nfl-det-car-2026-10-04-pyd-jargof-gte150::inverted:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 24,
+      "key": "KXNFLRSHYDS-26OCT01PITCLE-CLERSANDERS23-30::astatc-nfl-pit-cle-2026-10-01-ryd-jaywar-gte30:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 25,
+      "key": "KXVOTEGENERAL-GOVPARTYCA-26SHIL-30::ewc-usgub-ca-2026-11-03-stehil:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 26,
+      "key": "KXDHOUSESEATS-27-212::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 27,
+      "key": "KXNFLRRYDS-26OCT01PITCLE-CLERSANDERS23-70::astatc-nfl-pit-cle-2026-10-01-recyd-patfre-gte70::inverted:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 28,
+      "key": "HOUSEAKAL-26-D::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 29,
+      "key": "KXDHOUSESEATS-27-210::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 30,
+      "key": "KXHOUSERACE-MO08-26-D::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 31,
+      "key": "KXHOUSERACE-LA06-26-D::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 32,
+      "key": "KXDHOUSESEATS-27-228::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 33,
+      "key": "KX2028DRUN-28-WMOO::enwc-uspres-nom-dem-2028-wesmoo:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 34,
+      "key": "KXSTATELEG-TXHOUS26-D::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 35,
+      "key": "KXNCAAFBIGTENREGTOP-27T5-IND::aachc-cfb-undefeated-2026-11-28-ind:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 36,
+      "key": "KXUCL-27-MCI::arankc-epl-2027-05-30-top5-mnc:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 37,
+      "key": "KXSTATELEG-FLSENA26-D::paccc-usse-midterms-2026-11-03-dem:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 38,
+      "key": "KX2028DRUN-28-AOC::ewc-usp-2028-11-07-aleocc:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 39,
+      "key": "KXBIGBROTHER-26DEC31-RIC::rtc-bbus-s28-2-2026-10-01-ricdev:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 40,
+      "key": "KXVOTEBR1-BRPRES26FBOL-29::ewc-pres-bra-2026-10-04-flabol:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 41,
+      "key": "KXTRUMPFLAVIO-26OCT26::ewc-pres-bra-2026-10-04-flabol:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 42,
+      "key": "KXVOTEBR1-BRPRES26FBOL-37::ewc-pres-bra-2026-10-04-flabol:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 43,
+      "key": "KXVOTEBR1-BRPRES26FBOL-39::ewc-pres-bra-2026-10-04-flabol:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 44,
+      "key": "KXOSCARNOMACTO-27-TIM::tac-oscars-03-14-2027-bestacto-timcha:no",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 45,
+      "key": "KXBIGBROTHER-26DEC31-TAY::rtc-bbus-s28-3-2026-10-01-taybro:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 46,
+      "key": "KXUSLGAME-26OCT04NEWPHO-NEW::atc-uslc-new-pho-2026-10-04-pho::inverted:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 47,
+      "key": "KXNCAAFB10QUAL-26-NEB::tec-cfb-conf-2027-01-25-w-bigten:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 48,
+      "key": "KXBIGBROTHER-26DEC31-TAY::rtc-bbus-s28-2-2026-10-01-taybro:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 49,
+      "key": "KXNCAAFSEED-27S9-VT::aqc-cfb-cfp-2026-12-06-playoffq-vtech:yes",
+      "arithmeticVerified": true
+    },
+    {
+      "cohort": "rejected-audit",
+      "rank": 50,
+      "key": "KXBRPRES1MOV-BRPRES26-FBOL-P2::pvwc-pres-bra-2026-10-04-r1-flabol:yes",
+      "arithmeticVerified": true
+    }
+  ]
+}
