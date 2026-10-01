@@ -1,0 +1,17 @@
+{
+  "conclusion": "success",
+  "headSha": "5f79fbe20af4bab164f784fbef55a135caac27c1",
+  "status": "completed",
+  "url": "https://github.com/tyhuffman7/lights_on/actions/runs/36819593348",
+  "targetedTests": {
+    "passed": 98,
+    "failed": 0
+  },
+  "fullTests": {
+    "passed": 858,
+    "failed": 0
+  },
+  "typecheck": "passed",
+  "build": "passed",
+  "testedSourceCommit": "5f79fbe20af4bab164f784fbef55a135caac27c1"
+}
