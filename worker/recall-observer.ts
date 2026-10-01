@@ -10,7 +10,7 @@ import {assessSettlement} from '../lib/research/settlement-validation.ts';
 import {takeDepth,normalFee,USD_SCALE} from '../lib/research/ev-arb.ts';
 import {recallPolicy,recallMatches,recallSignals,fairRoutes,currentBook,bookAges,freshnessBucket,
   type RecallRoute,type ObservedBook} from '../lib/research/recall-detector.ts';
-import {LatestCandidates,candidateKey,priority,paperSettlement,differentQuestion,selectConfirmationBooks} from '../lib/research/hot-confirmation.ts';
+import {LatestCandidates,candidateKey,priority,paperSettlement,selectConfirmationBooks} from '../lib/research/hot-confirmation.ts';
 import {transactionVersion} from '../lib/screen/book-confirmation.ts';
 import {ConfirmationFeed} from './book-confirmation-adapter.ts';
 import {reconcileGroups} from './coverage.ts';
@@ -156,7 +156,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   if(!Number.isSafeInteger(durationMs)||durationMs<1000||durationMs>90*60_000)throw Error('BOUNDED_DURATION_REQUIRED');
   if(env)process.loadEnvFile(resolve(env));mkdirSync(directory,{recursive:true,mode:0o700});
   const sourceHashes=Object.fromEntries(['worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
-    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
+    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
   const frozen={policy:{...recallPolicy,durationMs},sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
   writeFileSync(resolve(directory,'frozen.json'),JSON.stringify(frozen,null,2)+'\n',{flag:'wx',mode:0o600});
   const control=new AbortController(),preparation=setTimeout(()=>control.abort(),20*60_000);
@@ -186,7 +186,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   const latency={queue:[] as number[],work:[] as number[],signal:[] as number[],firstSignal:[] as number[]};
   let lastAudit=0,peakHot=0,peakQueue=0,lastMetadata=0;
   const classifications=new Map<string,ReturnType<typeof paperSettlement>>(),falseMatches=new Set<string>();
-  const classify=(r:RecallRoute)=>{const key=r.pair.id+':'+r.pair.a.hash+':'+r.pair.b.hash;let c=classifications.get(key);if(!c){c=paperSettlement(r);classifications.set(key,c);}return c;};
+  const classify=(r:RecallRoute)=>{const key=r.pair.id+':'+r.pair.a.hash+':'+r.pair.b.hash;let c=classifications.get(key);if(!c){c=paperSettlement(r);classifications.set(key,c);}r.semanticClass=c.classification;return c;};
   let strongestConfirmed:{route:RecallRoute;signal:Signal;entry:Record<Venue,ObservedBook>;settlement:ReturnType<typeof paperSettlement>;at:number}[]=[];
   const percentiles=(xs:number[])=>{const a=[...xs].sort((a,b)=>a-b);return {n:a.length,median:a.length?a[Math.floor((a.length-1)*.5)]:null,p95:a.length?a[Math.floor((a.length-1)*.95)]:null,max:a.length?a.at(-1):null};};
   const feedRestarts=new Map<string,number>(),feedStarted=new Map<string,number>();let lastHealthCheck=start;
@@ -206,7 +206,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     unvisitedRoutes:[...allRoutes.keys()].filter(id=>!visited.has(id)).length,matchingDiagnostics:matched.diagnostics,
     counts,reasons,buckets,delayOutcomes,requests:api.counts,requestFailures:api.failures,evidenceBytes,
     contractVerifiedOpportunities:0,confirmedPaperArbs:0,
-    strongestConfirmed,falseMatchRoutes:falseMatches.size,pendingConfirmations:pendingCandidates.size,peakPendingConfirmations:peakQueue,hotRoutes:hot.size,peakHotRoutes:peakHot,
+    strongestConfirmed,semanticRouteCounts:[...allRoutes.values()].reduce((o,r)=>{const c=r.semanticClass??'UNRESOLVED';o[c]=(o[c]??0)+1;return o;},{} as Record<string,number>),
+    falseMatchRoutes:falseMatches.size,pendingConfirmations:pendingCandidates.size,peakPendingConfirmations:peakQueue,hotRoutes:hot.size,peakHotRoutes:peakHot,
     candidatesSuperseded:queue.superseded,candidatesDisappearedBeforeDispatch:queue.disappeared,
     latencyMs:Object.fromEntries(Object.entries(latency).map(([k,v])=>[k,percentiles(v)])),
     confirmationsPerSecond:(counts.confirmationRequests??0)/Math.max(1,(Date.now()-start)/1000),
@@ -248,9 +249,12 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   };
   async function confirm(item:ReturnType<LatestCandidates['next']>){
     if(!item)return;let {route,signal,queuedAt,firstQueuedAt}=item;const startedAt=Date.now();
+    const cached=metadata.get(route.pair.id);if(cached)route=cached.route;
+    // Metadata may have changed after queueing. A known ordinary mismatch must
+    // stop before any scarce fallback work or nominal survivor promotion.
+    if(classify(route).classification==='DIFFERENT_QUESTION'){count('semanticVetoBeforeConfirmation');inFlight.delete(item.key);return;}
     count('confirmationRequests');
     try{
-      const cached=metadata.get(route.pair.id);if(cached)route=cached.route;
       let entry=pairBooks(route);const missing=selectConfirmationBooks(route,entry,Date.now());
       if(missing.length){count('restFallbackConfirmations');
         await Promise.all(missing.map(async v=>{const m=v==='kalshi'?route.pair.a:route.pair.b;
@@ -321,7 +325,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         if(bestQ.evaluation.grossProfit!==null){best=best.filter(x=>x.route.pair.id!==id);best.push({route:r,signal:bestQ});
           best.sort((a,b)=>(b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity));best=best.slice(0,20);}
         const q=qs.filter(x=>x.candidate&&x.withinCapital).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0]??qs.find(x=>x.candidate);
-        if(!differentQuestion(r).length&&net&&net.fresh&&net.evaluation.estimatedNetProfit!>=-recallPolicy.hotNearNet){
+        const semantic=classify(r);count('observedSemantic:'+semantic.classification);
+        if(!semantic.differentQuestionReasons.length&&net&&net.fresh&&net.evaluation.estimatedNetProfit!>=-recallPolicy.hotNearNet){
           hotSignals.set(id,net);
           if(hot.has(id))hot.set(id,now);
           else {const rank=(id:string)=>({key:id,route:allRoutes.get(id)!,signal:hotSignals.get(id)!,queuedAt:now,firstQueuedAt:now});
@@ -331,7 +336,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
             else {hotSignals.delete(id);count('hotPromotionBudgetDeferred');}}
         }
 
-        const falseMatch=differentQuestion(r);
+        const falseMatch=semantic.differentQuestionReasons;
         if(q){const fingerprint=JSON.stringify([id,q.evaluation.orientation,q.evaluation.quantity,q.evaluation.kalshi?.levels,q.evaluation.poly?.levels]);
           if(!candidateFingerprints.has(fingerprint)){candidateFingerprints.add(fingerprint);count('distinctEconomicCandidates');record('ECONOMIC_SIGNAL',{route:r,signal:q,books,settlement:classify(r)});}
         }

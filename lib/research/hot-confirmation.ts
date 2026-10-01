@@ -2,11 +2,13 @@ import type {RecallRoute,ObservedBook} from './recall-detector.ts';
 import {recallSignals,currentBook,singleEventWinner} from './recall-detector.ts';
 import {normalizeText} from './identity.ts';
 import {catalogEntities} from './entities.ts';
+import {comparePropositions} from './proposition.ts';
 import {assessSettlement} from './settlement-validation.ts';
 export type HotSignal=ReturnType<typeof recallSignals>[number];
 export type Pending={key:string;route:RecallRoute;signal:HotSignal;queuedAt:number;firstQueuedAt:number};
 export const candidateKey=(r:RecallRoute,s:HotSignal)=>r.pair.id+':'+s.evaluation.kalshiSide;
-export function priority(a:Pending,b:Pending){return ({CANONICAL:3,SPORTS_EVENT:2,TEXT:1}[b.route.matchSource])-({CANONICAL:3,SPORTS_EVENT:2,TEXT:1}[a.route.matchSource])||
+const semanticPriority=(r:RecallRoute)=>r.semanticClass==='STRICT_EQUIVALENT'?3:r.semanticClass==='ORDINARY_EQUIVALENT_BASIS_RISK'?2:r.semanticClass==='DIFFERENT_QUESTION'?0:1;
+export function priority(a:Pending,b:Pending){return semanticPriority(b.route)-semanticPriority(a.route)|| ({CANONICAL:3,SPORTS_EVENT:2,TEXT:1}[b.route.matchSource])-({CANONICAL:3,SPORTS_EVENT:2,TEXT:1}[a.route.matchSource])||
  Number(a.route.warnings.includes('ORIENTATION_UNPROVEN'))-Number(b.route.warnings.includes('ORIENTATION_UNPROVEN'))||
  Number(b.signal.fresh)-Number(a.signal.fresh)||
  (b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity)||
@@ -35,7 +37,7 @@ export function namedOrientation(route:RecallRoute):boolean|null{
  return a.outcome!==b.outcome;
 }
 // These vetoes describe explicit ordinary questions, never missing metadata.
-export function differentQuestion(route:RecallRoute){
+function legacyDifferentQuestion(route:RecallRoute){
  const [a,b]=[route.pair.a,route.pair.b];const text=(m:typeof a)=>normalizeText(m.title+' '+m.outcome+' '+m.rules.split('\n')[0]);
  const x=text(a),y=text(b),reasons:string[]=[];
  const dimension=(name:string,fn:(s:string)=>string|undefined)=>{const p=fn(x),q=fn(y);if(p&&q&&p!==q)reasons.push(name+':'+p+' vs '+q);};
@@ -71,21 +73,24 @@ export function differentQuestion(route:RecallRoute){
  for(const w of route.warnings)if(route.matchSource!=='CANONICAL'&&/^(DIMENSION|PROPOSITION)_CONFLICT:/.test(w))reasons.push(w);
  return reasons;
 }
-export type SettlementClass='STRICT_EQUIVALENT'|'ORDINARY_EQUIVALENT_BASIS_RISK'|'MATERIAL_SETTLEMENT_DIFFERENCE'|'DIFFERENT_QUESTION'|'UNRESOLVED';
+export function differentQuestion(route:RecallRoute){
+ return [...new Set([...comparePropositions(route.pair,namedOrientation(route)).conflicts,...legacyDifferentQuestion(route)])];
+}
+export type SettlementClass='STRICT_EQUIVALENT'|'ORDINARY_EQUIVALENT_BASIS_RISK'|'DIFFERENT_QUESTION'|'UNRESOLVED';
 export function paperSettlement(route:RecallRoute){
- const falseMatch=differentQuestion(route);const assessment=assessSettlement(route.pair);
- let classification:SettlementClass='UNRESOLVED';let branches=[...assessment.risks];const checks=[...assessment.checks];
+ const proposition=comparePropositions(route.pair,namedOrientation(route));
+ const falseMatch=[...new Set([...proposition.conflicts,...legacyDifferentQuestion(route)])];
+ const assessment=assessSettlement(route.pair);
+ let classification:SettlementClass='UNRESOLVED';
+ const checks=[...assessment.checks];
  if(falseMatch.length)classification='DIFFERENT_QUESTION';
- else if(assessment.normalOutcomeMatched){classification='ORDINARY_EQUIVALENT_BASIS_RISK';}
- else if(route.pair.a.series==='KXNCAAFWINS'&&route.matchSource==='CANONICAL'){
-  classification='ORDINARY_EQUIVALENT_BASIS_RISK';checks.push('Canonical same named team, season and integer win predicate');
-  branches=['Modified or shortened season: actual count versus fair-price settlement/review','Corrections after expiration versus official-result finality before settlement','Named-source hierarchy versus exchange/governing-body sources','Different expiry, review and extension deadlines'];
- }else if(/IPO/i.test(route.pair.a.series??'')&&route.matchSource==='CANONICAL'){
-  classification='ORDINARY_EQUIVALENT_BASIS_RISK';checks.push('Same canonical company and ordinary IPO confirmation predicate; full IPOEVENTANNOUNCE includes foreign filing equivalents');
-  branches=['IPO issuance and contingency language remain unresolved','Deadline interpretation and source cutoffs may diverge','Listing approval, review and expiration-extension branches require full clause review'];
- }else if(assessment.status==='CONFLICT'&&!assessment.blockers.some(s=>/matching rejects|unavailable|unsupported|missing/i.test(s)))classification='MATERIAL_SETTLEMENT_DIFFERENCE';
- return {classification,strictEquivalent:false,guaranteedArbitrage:false,checks,divergenceBranches:branches,
-  blockers:assessment.blockers,differentQuestionReasons:falseMatch,assessment};
+ else if(proposition.ordinaryAligned||assessment.normalOutcomeMatched){
+  classification='ORDINARY_EQUIVALENT_BASIS_RISK';
+  checks.push(proposition.ordinaryAligned?'All required ordinary proposition dimensions align':'Existing native family proof aligns ordinary dimensions');
+ }
+ return {classification,strictEquivalent:false,guaranteedArbitrage:false,checks,
+  divergenceBranches:[...new Set([...proposition.divergenceBranches,...assessment.risks])],
+  blockers:[...proposition.missing,...assessment.blockers],differentQuestionReasons:falseMatch,proposition,assessment};
 }
 export function selectConfirmationBooks(route:RecallRoute,books:Record<'kalshi'|'poly',ObservedBook>|null,at:number){
  return (['kalshi','poly'] as const).filter(v=>!books||!currentBook(books[v],at));

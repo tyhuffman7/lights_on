@@ -22,11 +22,10 @@ test('local House race cannot consume national House control confirmation',()=>{
  const {route}=fixture();route.pair.a.title='Will Democrats win the Alaska House race?';route.pair.b.title='Will Democrats control the House?';
  assert.ok(differentQuestion(route).length);assert.equal(paperSettlement(route).classification,'DIFFERENT_QUESTION');
 });
-test('ordinary season and IPO basis categories retain explicit divergence branches',()=>{
+test('canonical route labels alone cannot promote unknown ordinary predicates',()=>{
  const {route}=fixture();route.matchSource='CANONICAL';route.pair.a.series='KXNCAAFWINS';
- assert.equal(paperSettlement(route).classification,'ORDINARY_EQUIVALENT_BASIS_RISK');assert.ok(paperSettlement(route).divergenceBranches.length>=4);
- route.pair.a.series='KXIPO';assert.equal(paperSettlement(route).classification,'ORDINARY_EQUIVALENT_BASIS_RISK');assert.equal(paperSettlement(route).strictEquivalent,false);
- route.matchSource='TEXT';assert.equal(paperSettlement(route).classification,'UNRESOLVED');
+ assert.equal(paperSettlement(route).classification,'UNRESOLVED');
+ route.pair.a.series='KXIPO';assert.equal(paperSettlement(route).classification,'UNRESOLVED');assert.equal(paperSettlement(route).strictEquivalent,false);
 });
 test('Kalshi sequence, backlog, clock and PM conflicting versions fail closed',()=>{
  const {books,now}=fixture();const f=new ConfirmationFeed('kalshi',['K']);f.health=()=>({connected:true,backlog:0,clockOkay:true});
@@ -39,7 +38,8 @@ test('Kalshi sequence, backlog, clock and PM conflicting versions fail closed',(
 });
 const nativeClassifications=JSON.parse((await import('node:fs')).readFileSync(new URL('./fixtures/hot-native-classifications.json',import.meta.url),'utf8'));
 for(const c of nativeClassifications)test('native hot-question classification: '+c.label,()=>{
- assert.equal(paperSettlement(c.route).classification,c.expected);
+ const structurallyDifferent=['Who will be the top Spotify artist this year?','Who will win the Florida House of Representatives?','Will Manchester City win the Champions League?'];
+ assert.equal(paperSettlement(c.route).classification,structurallyDifferent.includes(c.label)?'DIFFERENT_QUESTION':c.expected);
 });
 test('equivalent nanosecond timestamp encodings cannot hide conflicting full books',()=>{
  const f=new ConfirmationFeed('poly',['P']);const at=Date.now(),mono=performance.now();

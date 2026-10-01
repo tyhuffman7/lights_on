@@ -9,7 +9,7 @@ export const recallPolicy = Object.freeze({ordersEnabled:false, sampleMs:25, dis
   durationMs:20*60_000, maxContracts:10, maxConfirmationJobs:4, confirmationCooldownMs:1000, metadataTtlMs:300_000, hotHoldMs:10_000, maxHotRoutes:128, evaluationBudgetMs:20, hotNearNet:2_000_000, auditMs:30_000, maxPendingAgeMs:2000,
   streamGroupSize:100,maxStreamRestarts:3,maxPublicHttpAttempts:3, maxBookAgeMs:2000, restSpacingMs:300, maxEvidenceBytes:1024*1024*1024,
   delayMs:[0,100,250,500,1000], simulatedCapitalPerVenue:50, maxPairedCommitment:5});
-export type RecallRoute={pair:Pair;matchSource:'CANONICAL'|'SPORTS_EVENT'|'TEXT';warnings:string[];eventKey:string;ticks?:Record<Venue,number>};
+export type RecallRoute={semanticClass?:import('./hot-confirmation.ts').SettlementClass;pair:Pair;matchSource:'CANONICAL'|'SPORTS_EVENT'|'TEXT';warnings:string[];eventKey:string;ticks?:Record<Venue,number>};
 const stop=new Set('will the be in of by a an to on at for is than before after above below yes no and or win wins winner over under total game match'.split(' '));
 const tokens=(m:Market)=>new Set(normalizeText(m.title+' '+m.outcome).split(' ').filter(w=>w.length>2&&!stop.has(w)&&!/^\d+$/.test(w)));
 
