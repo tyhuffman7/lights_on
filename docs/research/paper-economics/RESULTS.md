@@ -36,6 +36,8 @@ The fixed 45-minute request ended at **42.23 minutes (18:01:23–18:43:37 EDT)**
 
 ## Latency survival — first $10-cap entry in each conservative economic episode
 
+![Conditional native-depth survival](latency-survival.svg)
+
 | Delay | Eligible | Observable | Clean | Partial | Edge gone | First only | Unobserved | Clean / all |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 0 ms | 65 | 65 | 65 | 0 | 0 | 0 | 0 | 100.0% |
