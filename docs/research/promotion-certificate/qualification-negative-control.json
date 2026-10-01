@@ -1,0 +1,341 @@
+{
+  "sourceCommit": "f22822de3c5e3107c59e31802addf14315617a32",
+  "results": [
+    {
+      "scope": "Post-stop synthetic semantic negative control; no price/book/economics/actual market excluded or relabeled",
+      "target": "Mountain West",
+      "expected": "DIFFERENT_QUESTION",
+      "observed": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "native": [
+        "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.",
+        "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+      ],
+      "certificate": {
+        "version": 1,
+        "family": "qualification",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "timeframe",
+          "stage",
+          "scope",
+          "settlementScope",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "qualification",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "qualification",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "new team",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "new team",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "cfb",
+              "evidence": "{\"primary\":\"If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.\",\"title\":\"If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.\"}"
+            },
+            "right": {
+              "value": "cfb",
+              "evidence": "{\"primary\":\"This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game.\",\"title\":\"This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game.\"}"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "advancement",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "advancement",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "season:2026",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "season:2026",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "stage",
+            "left": {
+              "value": "championship-final",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "championship-final",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "scope",
+            "left": {
+              "value": "team",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "team",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "settlementScope",
+            "left": {
+              "value": "championship-final",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "championship-final",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football Mountain West Championship Game."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      }
+    },
+    {
+      "scope": "Post-stop synthetic semantic negative control; no price/book/economics/actual market excluded or relabeled",
+      "target": "National",
+      "expected": "DIFFERENT_QUESTION",
+      "observed": "ORDINARY_EQUIVALENT_BASIS_RISK",
+      "native": [
+        "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.",
+        "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+      ],
+      "certificate": {
+        "version": 1,
+        "family": "qualification",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "timeframe",
+          "stage",
+          "scope",
+          "settlementScope",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "qualification",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "qualification",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "new team",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "new team",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "cfb",
+              "evidence": "{\"primary\":\"If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.\",\"title\":\"If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.\"}"
+            },
+            "right": {
+              "value": "cfb",
+              "evidence": "{\"primary\":\"This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game.\",\"title\":\"This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game.\"}"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "advancement",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "advancement",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "season:2026",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "season:2026",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "stage",
+            "left": {
+              "value": "championship-final",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "championship-final",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "scope",
+            "left": {
+              "value": "team",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "team",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "settlementScope",
+            "left": {
+              "value": "championship-final",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "championship-final",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship Game."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      }
+    }
+  ]
+}

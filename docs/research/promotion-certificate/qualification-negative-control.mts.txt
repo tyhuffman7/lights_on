@@ -1,0 +1,16 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {paperSettlement} from '../../lib/research/hot-confirmation.ts';
+const p='work/promotion-certificate-20261001/';
+if(JSON.parse(readFileSync(p+'summary.json','utf8')).phase!=='STOPPED')throw Error('COLLECTION_MUST_BE_STOPPED');
+const source=JSON.parse(readFileSync(p+'promoted-audit-input.json','utf8')).candidates.find((r:any)=>r.rank===18).quote.route;
+const results=[];
+for(const target of ['Mountain West','National']){
+ const r=structuredClone(source);r.pair.id='synthetic-unseen-conference-'+target;r.warnings=[];r.matchSource='TEXT';r.pair.inverted=false;
+ for(const [m,level] of [[r.pair.a,'Conference USA'],[r.pair.b,target]] as const){
+  m.id='synthetic-'+m.venue;m.identity=undefined;m.propositionContext=undefined;m.series=undefined;
+  m.rules=`${m.venue==='kalshi'?'If':'This market will settle to Yes if'} New Team qualifies for the 2026 College Football ${level} Championship Game${m.venue==='kalshi'?', then the market resolves to Yes.':'.'}`;
+  m.title=m.rules;m.outcome='New Team';
+ }
+ const c=paperSettlement(r);results.push({scope:'Post-stop synthetic semantic negative control; no price/book/economics/actual market excluded or relabeled',target,expected:'DIFFERENT_QUESTION',observed:c.classification,native:[r.pair.a.rules,r.pair.b.rules],certificate:c.certificate});
+}
+writeFileSync(p+'qualification-negative-control.json',JSON.stringify({sourceCommit:'f22822de3c5e3107c59e31802addf14315617a32',results},null,2)+'\n');console.log(JSON.stringify(results.map(r=>({target:r.target,expected:r.expected,observed:r.observed,fields:r.certificate.dimensions.filter(d=>['competition','stage','settlementScope'].includes(d.dimension))})),null,2));

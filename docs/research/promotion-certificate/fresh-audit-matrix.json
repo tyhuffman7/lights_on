@@ -1,0 +1,103 @@
+{
+  "sourceCommit": "f22822de3c5e3107c59e31802addf14315617a32",
+  "matrices": {
+    "promoted": [
+      {
+        "prediction": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "reference": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "n": 50
+      }
+    ],
+    "unresolved": [
+      {
+        "prediction": "UNRESOLVED",
+        "reference": "DIFFERENT_QUESTION",
+        "n": 9
+      },
+      {
+        "prediction": "UNRESOLVED",
+        "reference": "UNRESOLVED",
+        "n": 5
+      },
+      {
+        "prediction": "UNRESOLVED",
+        "reference": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "n": 15
+      }
+    ],
+    "rejected": [
+      {
+        "prediction": "DIFFERENT_QUESTION",
+        "reference": "DIFFERENT_QUESTION",
+        "n": 30
+      }
+    ]
+  },
+  "metrics": {
+    "promoted": {
+      "rows": 50,
+      "uniquePairs": 50,
+      "priorRetainedPairs": 11,
+      "paperEligible": 46,
+      "stressFailureCounts": {
+        "EXTREME_FRAGMENTATION_FEE": 50,
+        "SETTLEMENT_RISK": 50,
+        "ONE_NATIVE_TICK_EACH_LEG": 12
+      },
+      "executionBlockerCounts": {
+        "FIRST_LEG_EXPOSURE_CAP": 4
+      },
+      "sources": {
+        "VALID_NATIVE_WS": 48,
+        "NATIVE_FALLBACK": 2
+      }
+    },
+    "unresolved": {
+      "rows": 29,
+      "uniquePairs": 29,
+      "priorRetainedPairs": 13,
+      "paperEligible": 26,
+      "stressFailureCounts": {
+        "EXTREME_FRAGMENTATION_FEE": 29,
+        "SETTLEMENT_RISK": 29,
+        "NATIVE_PRICE_GRID_UNPROVEN": 7,
+        "ONE_NATIVE_TICK_EACH_LEG": 13
+      },
+      "executionBlockerCounts": {
+        "FIRST_LEG_EXPOSURE_CAP": 2,
+        "PAIRED_COMMITMENT_CAP": 1
+      },
+      "sources": {
+        "VALID_NATIVE_WS": 29
+      }
+    },
+    "rejected": {
+      "rows": 30,
+      "uniquePairs": 30,
+      "priorRetainedPairs": 28,
+      "paperEligible": 0,
+      "stressFailureCounts": {
+        "EXTREME_FRAGMENTATION_FEE": 30,
+        "BOOK_FRESHNESS": 30,
+        "SETTLEMENT_RISK": 30,
+        "NATIVE_PRICE_GRID_UNPROVEN": 7
+      },
+      "executionBlockerCounts": {
+        "BOOK_STALE_OR_NOT_STREAM_CONFIRMED": 30
+      },
+      "sources": {
+        "None": 30
+      }
+    }
+  },
+  "freshAuditedPromotedPrecision": 1,
+  "freshFalsePromotions": 0,
+  "legitimateRejected": 0,
+  "strictEquivalent": 0,
+  "syntheticNegativeControls": {
+    "n": 2,
+    "falsePromotions": 2,
+    "includedInFreshSample": false
+  },
+  "overallValidated": false
+}

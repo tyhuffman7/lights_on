@@ -1,0 +1,280 @@
+{
+  "scope": "240 correlated retained native reference rows; labels preserved. Missing evidence downgrades require inspection. Not population accuracy.",
+  "matrices": {
+    "retained-120": {
+      "DIFFERENT_QUESTION": {
+        "DIFFERENT_QUESTION": 86
+      },
+      "UNRESOLVED": {
+        "UNRESOLVED": 3
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 31
+      }
+    },
+    "fresh-previous-promoted": {
+      "DIFFERENT_QUESTION": {
+        "DIFFERENT_QUESTION": 3
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 24
+      },
+      "UNRESOLVED": {
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 3
+      }
+    },
+    "fresh-previous-unresolved": {
+      "UNRESOLVED": {
+        "DIFFERENT_QUESTION": 25
+      },
+      "DIFFERENT_QUESTION": {
+        "DIFFERENT_QUESTION": 5
+      }
+    },
+    "fresh-previous-rejected": {
+      "DIFFERENT_QUESTION": {
+        "DIFFERENT_QUESTION": 30
+      }
+    },
+    "fresh-previous-confirmed-unresolved": {
+      "UNRESOLVED": {
+        "DIFFERENT_QUESTION": 9,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 18,
+        "UNRESOLVED": 3
+      }
+    }
+  },
+  "rows": 240,
+  "falsePromotions": 0,
+  "wrongRejections": 0,
+  "lostBasis": [
+    {
+      "source": "fresh-previous-promoted",
+      "rank": 5,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing windowEnd"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-promoted",
+      "rank": 10,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing windowEnd"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-promoted",
+      "rank": 19,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing windowEnd"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 5,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing subject"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 8,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing subject"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 10,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing subject"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 12,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 13,
+      "after": "UNRESOLVED",
+      "missing": [
+        "No complete ordinary proposition profile",
+        "Missing family",
+        "Missing competition",
+        "Missing metric",
+        "Missing timeframe",
+        "Missing stage",
+        "Missing scope",
+        "Missing settlementScope"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 14,
+      "after": "UNRESOLVED",
+      "missing": [
+        "No complete ordinary proposition profile",
+        "Missing family"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 15,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 16,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition",
+        "Missing metric",
+        "Missing period",
+        "Missing settlementScope"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 17,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition",
+        "Missing metric",
+        "Missing period",
+        "Missing settlementScope"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 21,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing timeframe"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 22,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition",
+        "Missing timeframe"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 23,
+      "after": "UNRESOLVED",
+      "missing": [
+        "No complete ordinary proposition profile",
+        "Missing family",
+        "Missing competition",
+        "Missing metric",
+        "Missing timeframe",
+        "Missing stage",
+        "Missing scope",
+        "Missing settlementScope"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 24,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition",
+        "Missing timeframe"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 26,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition",
+        "Missing timeframe"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 27,
+      "after": "UNRESOLVED",
+      "missing": [
+        "No complete ordinary proposition profile",
+        "Missing family",
+        "Missing metric",
+        "Missing comparator",
+        "Missing threshold",
+        "Missing timeframe",
+        "Missing stage",
+        "Missing scope",
+        "Missing settlementScope"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 28,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition",
+        "Missing metric",
+        "Missing period",
+        "Missing settlementScope"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 29,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition",
+        "Missing timeframe"
+      ],
+      "conflicts": []
+    },
+    {
+      "source": "fresh-previous-confirmed-unresolved",
+      "rank": 30,
+      "after": "UNRESOLVED",
+      "missing": [
+        "Missing competition",
+        "Missing timeframe"
+      ],
+      "conflicts": []
+    }
+  ],
+  "preservedOriginalBasis": 31,
+  "certificatesEmitted": 55
+}

@@ -1,0 +1,41 @@
+{
+  "scope": "Four post-stop public native event lookups for manual reference labels only; frozen predictions unchanged; no books/orders/accounts requested",
+  "requests": [
+    {
+      "id": "KXNCAAF-27",
+      "url": "https://external-api.kalshi.com/trade-api/v2/events/KXNCAAF-27",
+      "at": "2026-10-01T20:16:44.136853+00:00",
+      "status": 200,
+      "sha256": "836fbfbef5daa54b7e58d43682fc4c1d94dc49821d8b984a9534124badebfa2c",
+      "title": "College Football National Championship Winner",
+      "subtitle": "2026-27"
+    },
+    {
+      "id": "KXF1CONSTRUCTORS-26",
+      "url": "https://external-api.kalshi.com/trade-api/v2/events/KXF1CONSTRUCTORS-26",
+      "at": "2026-10-01T20:16:44.516071+00:00",
+      "status": 200,
+      "sha256": "3e5554b8d6ba8613de61d4cfb1446c14194bf58b4ba9d107e75df59e7607a2f3",
+      "title": "F1 Constructors Champion",
+      "subtitle": "2026"
+    },
+    {
+      "id": "KXNFLAFCCHAMP-27",
+      "url": "https://external-api.kalshi.com/trade-api/v2/events/KXNFLAFCCHAMP-27",
+      "at": "2026-10-01T20:16:44.828168+00:00",
+      "status": 200,
+      "sha256": "0c0bf6274a23f49d6d04d4cbbd9268c68d65fcfc4bc924dfc4d05b60bad95796",
+      "title": "AFC Championship Winner",
+      "subtitle": "2026-27"
+    },
+    {
+      "id": "KXPGATOUR-BAOUC26",
+      "url": "https://external-api.kalshi.com/trade-api/v2/events/KXPGATOUR-BAOUC26",
+      "at": "2026-10-01T20:16:45.396072+00:00",
+      "status": 200,
+      "sha256": "e499529ea38a52690cf5c9367d3ec67428a1196b22892ef73c4e7621fbbd369a",
+      "title": "Bank of Utah Championship Winner",
+      "subtitle": "2026 Bank of Utah Championship"
+    }
+  ]
+}
