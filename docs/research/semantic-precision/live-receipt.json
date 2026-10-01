@@ -1,0 +1,206 @@
+{
+  "scope": "PAPER / READ-ONLY. Native repeated quote readings, no fills or realized profit.",
+  "start": 1790864199310,
+  "deadline": 1790865399310,
+  "stopped": true,
+  "durationObservedMs": 1200680.412125,
+  "frozen": {
+    "policy": {
+      "ordersEnabled": false,
+      "sampleMs": 25,
+      "discoveryMs": 3600000,
+      "durationMs": 1200000,
+      "maxContracts": 10,
+      "maxConfirmationJobs": 4,
+      "confirmationCooldownMs": 1000,
+      "metadataTtlMs": 300000,
+      "hotHoldMs": 10000,
+      "maxHotRoutes": 128,
+      "evaluationBudgetMs": 20,
+      "hotNearNet": 2000000,
+      "auditMs": 30000,
+      "maxPendingAgeMs": 2000,
+      "streamGroupSize": 100,
+      "maxStreamRestarts": 3,
+      "maxPublicHttpAttempts": 3,
+      "maxBookAgeMs": 2000,
+      "restSpacingMs": 300,
+      "maxEvidenceBytes": 1073741824,
+      "delayMs": [
+        0,
+        100,
+        250,
+        500,
+        1000
+      ],
+      "simulatedCapitalPerVenue": 50,
+      "maxPairedCommitment": 5
+    },
+    "sourceHashes": {
+      "worker/recall-observer.ts": "cb5093ca4e64f005502ab728fe4da2311e410a106237f8b199da218c759c2657",
+      "worker/recall-matching-thread.ts": "e795bb594858e99b02f8dbc421f0e7ae293cc549c3f5466f56223da43ddd8b3a",
+      "lib/research/recall-detector.ts": "6f2d969582eb9aa8b305e9b9c8429f9baa210856103371a0103d433a1bb2e46b",
+      "lib/research/ev-arb.ts": "161c33f99bf698c58d91658b252c690c36ca727000fe71c46bef7634199b3754",
+      "lib/arb/adapters.ts": "13f9741292acb82000d5939b29bf6f51ec69ddea329b9e188716bac1ee73dd8a",
+      "worker/streams.ts": "3d0f084bfa2924cebdf5d0a36e0be24e919d525a741d84213365895e32d0f129",
+      "lib/research/hot-confirmation.ts": "39c72b902c4cbef6e4f9e37c55d07bd4e0ef7fdbd1fde59d83f6bed2fbbcc5f3",
+      "lib/research/proposition.ts": "7d1549dcf82120903c3534e3c2e8801ee013f7a2740d28f0d3004ec6ef87d922",
+      "lib/research/identity.ts": "bbb9aa083b4b621a27497b8d60759cf3ddc45413cbbea496ddf643b25fd722a4",
+      "lib/research/entities.ts": "b5b03f6710a9fa908ea786240269372ce1ca5d5baffe532d5d23462d209fe69a",
+      "lib/research/non-sports.ts": "a57ca9c2e46e67fb9e86fc0ace650dcfb9df9e16ba6d5222772e646f8c900aee",
+      "lib/research/canonical-template.ts": "25abc56e103c7dd5751afdb84f2ffed4741c680640462dd161c6091206ba0de9",
+      "lib/research/settlement-validation.ts": "df69c2a01cd7983697cb5790d5cd2b4384efa8953fe4660c62e481c257394b67",
+      "worker/book-confirmation-adapter.ts": "797e0ad1e7146eadf16ec2822839dd05d3a319b11ad1dc4e22fa5b59f6425463"
+    },
+    "ordersEnabled": false,
+    "preparedAt": 1790863984899
+  },
+  "discoveredRoutes": 21589,
+  "visitedRoutes": 21589,
+  "twoBookRoutes": 21589,
+  "freshRoutes": 7895,
+  "catalog": {
+    "kalshi": 130790,
+    "poly": 70101,
+    "complete": true,
+    "errors": [],
+    "startedAt": 1790863984900,
+    "endedAt": 1790864116994,
+    "fetchAndNormalizationMs": 132094
+  },
+  "semanticRouteCounts": {
+    "UNRESOLVED": 4000,
+    "DIFFERENT_QUESTION": 14793,
+    "ORDINARY_EQUIVALENT_BASIS_RISK": 2796
+  },
+  "completedConfirmations": 892,
+  "freshExecutableSurvivors": 665,
+  "classes": {
+    "ORDINARY_EQUIVALENT_BASIS_RISK": 574,
+    "UNRESOLVED": 318
+  },
+  "freshClasses": {
+    "ORDINARY_EQUIVALENT_BASIS_RISK": 440,
+    "UNRESOLVED": 225
+  },
+  "broadEconomicClasses": {
+    "DIFFERENT_QUESTION": 17177,
+    "UNRESOLVED": 1127,
+    "ORDINARY_EQUIVALENT_BASIS_RISK": 209
+  },
+  "distinctConfirmedRouteOrientations": 108,
+  "distinctBroadFreshRouteOrientations": 74,
+  "hotFalseMatchConfirmations": 0,
+  "broadDifferentQuestionEconomicSignals": 17177,
+  "differentQuestionSignalsPriorClassifierWouldPass": 14356,
+  "wsOnlySignalLatencyMs": {
+    "n": 461,
+    "median": 2,
+    "p95": 12,
+    "max": 33
+  },
+  "freshSurvivorSignalLatencyMs": {
+    "n": 665,
+    "median": 5,
+    "p95": 105,
+    "max": 1131
+  },
+  "allSignalLatencyMs": {
+    "n": 892,
+    "median": 14,
+    "p95": 446,
+    "max": 11879
+  },
+  "summaryLatencyMs": {
+    "queue": {
+      "n": 892,
+      "median": 3,
+      "p95": 16,
+      "max": 1354
+    },
+    "work": {
+      "n": 892,
+      "median": 0,
+      "p95": 387,
+      "max": 11038
+    },
+    "signal": {
+      "n": 892,
+      "median": 14,
+      "p95": 446,
+      "max": 11879
+    },
+    "firstSignal": {
+      "n": 892,
+      "median": 15,
+      "p95": 465,
+      "max": 11879
+    }
+  },
+  "counts": {
+    "streamBookEvents": 1959354,
+    "twoBookObservations": 1939154,
+    "staleTwoBookObservations": 1606694,
+    "orientationObservations": 3878308,
+    "grossNonpositive": 2298049,
+    "extremeStressFailures": 3123204,
+    "observedSemantic:DIFFERENT_QUESTION": 1091896,
+    "noQuantityOneDepth": 755104,
+    "grossPositive": 825155,
+    "normalFeesEraseGross": 92591,
+    "oneTickFailures": 1757506,
+    "distinctEconomicCandidates": 18513,
+    "falseMatchPositiveReadings": 723576,
+    "observedSemantic:UNRESOLVED": 578945,
+    "normalFeePositive": 732564,
+    "quantityExecutablePositive": 732564,
+    "smallCapitalPositive": 732564,
+    "candidatesCensoredBeforeDispatch": 36302,
+    "independentRestAudits": 40,
+    "observedSemantic:ORDINARY_EQUIVALENT_BASIS_RISK": 268313,
+    "freshTwoBookObservations": 332460,
+    "hotPromotions": 6072,
+    "freshNormalFeePositive": 36453,
+    "freshExecutablePositive": 12942,
+    "hotDemotions": 1520,
+    "hotBudgetDemotions": 4425,
+    "hotPromotionBudgetDeferred": 54624,
+    "hotConfirmationDispatches": 893,
+    "confirmationRequests": 893,
+    "confirmationsEntirelyValidWs": 461,
+    "confirmationEconomicSurvivors": 860,
+    "confirmedExecutableCandidates": 665,
+    "settlement:ORDINARY_EQUIVALENT_BASIS_RISK": 574,
+    "freshSurvivor:ORDINARY_EQUIVALENT_BASIS_RISK": 440,
+    "settlement:UNRESOLVED": 318,
+    "freshSurvivor:UNRESOLVED": 225,
+    "restFallbackConfirmations": 431,
+    "kalshiWsSnapshotFallbacks": 251,
+    "confirmationDisappeared": 32,
+    "metadataRefreshes": 99,
+    "candidatesExpiredBeforeDispatch": 14,
+    "kalshiWsSnapshotFallbackFailures": 1,
+    "streamRestarts": 3,
+    "missingTwoBooks": 179,
+    "metadataRefreshFailures": 1
+  },
+  "reasons": {
+    "CONFIRMATION:This operation was aborted": 1
+  },
+  "feedHealth": {
+    "total": 181,
+    "healthy": 181
+  },
+  "requests": {
+    "external-api.kalshi.com:metadata": 432,
+    "gateway.polymarket.us:catalog": 141,
+    "gateway.polymarket.us:book": 255,
+    "gateway.polymarket.us:metadata": 99
+  },
+  "requestFailures": {
+    "gateway.polymarket.us:HTTP_429": 18
+  },
+  "candidatesForManualReview": 20,
+  "strictProofs": 0,
+  "guaranteedArbitrage": false
+}

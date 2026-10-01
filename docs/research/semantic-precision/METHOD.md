@@ -15,7 +15,16 @@ The fresh observation uses the existing 20-minute duration, maximum ten contract
 Reproduce the retained replay without network:
 
 ```sh
-node --experimental-strip-types scripts/proposition-replay.ts work/hot-final-20261001-v2 docs/research/semantic-precision/frozen-replay.json
+node --experimental-strip-types scripts/proposition-replay.ts work/hot-final-20261001-v2 work/semantic-precision/replay-copy.json
 ```
 
 The original frozen run remains under `work/hot-final-20261001-v2`, with published receipts under `docs/research/hot-confirmation`. Stop all collection after the authorized checkpoint. No merge or live launch.
+
+
+The source frozen for the fresh window is `a328a3c`; all 14 manifest hashes match. Generalized fixes made after the completed window are `2bab556`; their native evidence replay and human review are separately labeled. Do not overwrite the pre-window replay or observed classes. To reproduce the final new-window replay without collection:
+
+```sh
+node --experimental-strip-types scripts/proposition-replay.ts work/semantic-final-20261001-v1 work/semantic-precision/live-replay-copy.json tests/fixtures/proposition-live-top20.json
+```
+
+[Results](RESULTS.md) distinguishes original observed precision, post-review replay, and unmeasured final live behavior. No second live window or recovery run is authorized by this checkpoint.

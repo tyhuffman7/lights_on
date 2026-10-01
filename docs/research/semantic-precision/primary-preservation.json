@@ -1,0 +1,12 @@
+{
+  "scope": "Primary tracked index and tracked working files other than authorized handoff update remained unchanged at publication. No primary staging performed.",
+  "before": {
+    "indexSha256": "dd8c0d52b9f042169bedc3aaac422919319b7e7d2d6e59d1f0b4b7f7d2a13e74",
+    "otherTrackedWorkingFilesSha256": "f31b879f60c22dc42d2b22cd56d745eeb1842c9f914b1931c8236c4101f9ef51"
+  },
+  "after": {
+    "indexSha256": "dd8c0d52b9f042169bedc3aaac422919319b7e7d2d6e59d1f0b4b7f7d2a13e74",
+    "otherTrackedWorkingFilesSha256": "f31b879f60c22dc42d2b22cd56d745eeb1842c9f914b1931c8236c4101f9ef51"
+  },
+  "equal": true
+}
