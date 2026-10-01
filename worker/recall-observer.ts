@@ -315,6 +315,11 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         const gross=one.filter(q=>q.evaluation.grossProfit!==null).sort((a,b)=>b.evaluation.grossProfit!-a.evaluation.grossProfit!)[0];
         const net=one.filter(q=>q.evaluation.estimatedNetProfit!==null).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0];
         if(gross)highestGross=retain(highestGross,r,gross,s=>s.evaluation.grossProfit!);
+        if(net&&net.evaluation.estimatedNetProfit!<=0)nearPositive=retain(nearPositive,r,net,s=>s.evaluation.estimatedNetProfit!);
+        if(net&&r.matchSource==='CANONICAL')canonicalChecks=retain(canonicalChecks,r,net,s=>s.evaluation.estimatedNetProfit!);
+        if(bestQ.evaluation.grossProfit!==null){best=best.filter(x=>x.route.pair.id!==id);best.push({route:r,signal:bestQ});
+          best.sort((a,b)=>(b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity));best=best.slice(0,20);}
+        const q=qs.filter(x=>x.candidate&&x.withinCapital).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0]??qs.find(x=>x.candidate);
         if(!differentQuestion(r).length&&net&&net.fresh&&net.evaluation.estimatedNetProfit!>=-recallPolicy.hotNearNet){
           hotSignals.set(id,net);
           if(hot.has(id))hot.set(id,now);
@@ -330,8 +335,11 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
           if(!candidateFingerprints.has(fingerprint)){candidateFingerprints.add(fingerprint);count('distinctEconomicCandidates');record('ECONOMIC_SIGNAL',{route:r,signal:q,books,settlement:classify(r)});}
         }
         if(falseMatch.length){falseMatches.add(id);if(q)count('falseMatchPositiveReadings');queue.update(r,[],now);}
-        else {const eligible=qs.filter(q=>!inFlight.has(candidateKey(r,q))&&now-(cooldown.get(candidateKey(r,q))??0)>=recallPolicy.confirmationCooldownMs);
-          queue.update(r,eligible.filter(s=>s.fresh||hot.has(id)),now);}
+        else {queue.update(r,qs,now);
+          for(const side of ['yes','no'] as const){const key=id+':'+side,item=pendingCandidates.get(key);if(!item)continue;
+            if(inFlight.has(key)||now-(cooldown.get(key)??0)<recallPolicy.confirmationCooldownMs||!item.signal.fresh&&!hot.has(id)){
+              pendingCandidates.delete(key);count('candidatesCensoredBeforeDispatch');}}
+        }
       }
       for(const [id,at] of hot)if(Date.now()-at>recallPolicy.hotHoldMs){hot.delete(id);hotSignals.delete(id);count('hotDemotions');}
       for(const [key,item] of pendingCandidates)if(Date.now()-item.queuedAt>recallPolicy.maxPendingAgeMs){pendingCandidates.delete(key);count('candidatesExpiredBeforeDispatch');}
