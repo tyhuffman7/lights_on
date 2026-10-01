@@ -6,7 +6,7 @@ import {catalogEntities} from './entities.ts';
 import {canonicalTemplate,canonicalTemplateKey} from './canonical-template.ts';
 import {differenceDimensions,nativeDifferences,fixtureTimingUncertainty} from './proposition-differences.ts';
 
-export const propositionDimensions=['subject','event','competition','family','metric','outcome','comparator','threshold','unit','timeframe','period','stage','geography','scope','conditions','settlementScope','awardEvent','creator',...differenceDimensions] as const;
+export const propositionDimensions=['subject','event','competition','competitionLevel','family','metric','outcome','comparator','threshold','unit','timeframe','period','stage','geography','scope','conditions','settlementScope','awardEvent','creator',...differenceDimensions] as const;
 export type PropositionDimension=typeof propositionDimensions[number];
 export type Proposition={version:1;dimensions:Partial<Record<PropositionDimension,string>>;
  evidence:Partial<Record<PropositionDimension,string>>;unknown:PropositionDimension[];canonicalKey?:string};
@@ -32,7 +32,7 @@ const seasonBranches=['Modified/shortened season and cancellation: actual count 
 export const settlementFamilyProfiles:Record<string,{required:PropositionDimension[];branches:string[]}>={
  'season-wins':{required:['subject','competition','metric','comparator','threshold','unit','timeframe','period','scope','settlementScope','conditions'],branches:seasonBranches},
  championship:{required:['subject','competition','metric','timeframe','stage','scope','settlementScope','conditions'],branches:seasonBranches},
- qualification:{required:['subject','competition','metric','timeframe','stage','scope','settlementScope','conditions'],branches:seasonBranches},
+ qualification:{required:['subject','event','competition','competitionLevel','metric','timeframe','stage','scope','settlementScope','conditions'],branches:seasonBranches},
  ranking:{required:['subject','competition','metric','comparator','threshold','timeframe','stage','scope','settlementScope','conditions'],branches:[...seasonBranches,'Ties, ranking publication and source finality']},
  'player-statistic':{required:['subject','event','competition','metric','comparator','threshold','unit','timeframe','period','scope','conditions'],branches:[...seasonBranches,'Participation, nullified snaps, overtime and stat corrections']},
  'statistic-leader':{required:['subject','competition','metric','outcome','timeframe','period','scope','settlementScope','conditions'],branches:[...seasonBranches,'Tied leaders may receive fractional payouts']},
@@ -130,6 +130,23 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
   if(!stage&&/playoff/.test(s))stage='playoff-entry';
   if(!stage&&d.family==='championship'&&/(?:wins? (?:the )?.*(?:championship|cup|league|pennant|world series|singles title)|(?:is|are) (?:the )?.*champions?\b)/.test(s)&&!/group|division|conference/.test(s))stage='overall-champion';
   put('stage',stage);put('settlementScope',stage);
+ }
+ // Qualification binds the named tournament independently of the reached
+ // stage. Generic sport + final cannot certify conference or national identity.
+ if(d.family==='qualification'){
+  const conference=s.match(/\b(big ten|big 12|sec|acc|sun belt|mountain west|mid american|american athletic|conference usa|pac 12)\b/);
+  const national=/national championship/.test(s);
+  if((conference||national)&&/football/.test(s))put('competition','cfb');
+  const level=conference?'conference':national?'national':/\b(?:nfc|afc|eastern conference|western conference)\b/.test(s)?'conference':undefined;
+  put('competitionLevel',level);
+  const named=conference?.[1]??(national?'college football playoff':s.match(/\b(?:nfc|afc|eastern conference|western conference)\b/)?.[0]);
+  put('event',named?`${d.competition??'unspecified'}:${named}`:undefined);
+  const reached=/quarterfinal/.test(s)?'quarterfinal':/semifinal/.test(s)?'semifinal':
+   s.match(/round (?:of )?(\d+)/)?.[0]??(/playoff berth/.test(s)?'playoff-berth':/national championship|championship game|playoff final|\bfinal\b/.test(s)?'final':/playoff/.test(s)?'playoff-berth':undefined);
+  // Replace the legacy generic stage for qualifications only. Missing native
+  // tournament/level/stage remains unresolved; no market-ID exceptions.
+  delete d.stage;delete e.stage;delete d.settlementScope;delete e.settlementScope;
+  put('stage',reached);put('settlementScope',reached);
  }
  if(/nomination|nominee|nominate/.test(s)&&/party|presiden|\bvp\b/.test(s+' '+title)&&!/defeats?/.test(s)){
   put('family','nomination');put('metric',/vice presiden|\bvp\b/.test(s+' '+title)?'vice-presidential-nomination':'presidential-nomination');

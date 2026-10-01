@@ -57,3 +57,27 @@ test('exact calendar deadline cannot be certified from date-only canonical norma
  const c=paperSettlement(native('If xAI releases Grok 5 before Jan 1, 2027, then the market resolves to Yes.','This market will settle to Yes if xAI releases Grok 5 by December 31, 2026, 11:59 PM ET.'));
  assert.equal(c.classification,'UNRESOLVED');assert.ok(c.certificate.missing.includes('Missing windowEnd'));
 });
+for(const target of ['Mountain West','National'])test('qualification negative control Conference USA versus '+target,()=>{
+ const c=paperSettlement(native('If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.',`This market will settle to Yes if New Team qualifies for the 2026 College Football ${target} Championship Game.`));
+ assert.equal(c.classification,'DIFFERENT_QUESTION');assert.ok(c.certificate.conflicts.some(x=>x.startsWith('event:')));
+ if(target==='National')assert.ok(c.certificate.conflicts.some(x=>x.startsWith('competitionLevel:')));
+});
+for(const conference of ['Conference USA','Mountain West','SEC','American Athletic Conference','Pac-12'])test('same-event qualification retained: '+conference,()=>{
+ const c=paperSettlement(native(`If New Team qualifies for the 2026 College Football ${conference} Championship Game, then the market resolves to Yes.`,`This market will settle to Yes if New Team qualifies for the 2026 ${conference} Football Championship Game scheduled for December 5, 2026.`));
+ assert.equal(c.classification,'ORDINARY_EQUIVALENT_BASIS_RISK');
+ for(const d of ['event','competitionLevel','timeframe','stage'])assert.ok(c.certificate.requiredDimensions.includes(d as any));
+});
+for(const stage of ['Semifinal','Quarterfinal','Playoff berth','Round of 16'])test('qualification reached-stage conflict: '+stage,()=>{
+ const c=paperSettlement(native('If New Team qualifies for the 2026 College Football National Championship Game, then the market resolves to Yes.',`This market will settle to Yes if New Team qualifies for the 2026 College Football National Championship ${stage}.`));
+ assert.equal(c.classification,'DIFFERENT_QUESTION');assert.ok(c.certificate.conflicts.some(x=>x.startsWith('stage:')));
+});
+test('qualification season binds independently and generic final cannot promote',()=>{
+ const a='If New Team qualifies for the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.';
+ assert.equal(paperSettlement(native(a,a.replace('2026','2027'))).classification,'DIFFERENT_QUESTION');
+ const generic=a.replace('Conference USA ','');const c=paperSettlement(native(generic,generic));
+ assert.equal(c.classification,'UNRESOLVED');assert.ok(c.certificate.missing.includes('Missing competitionLevel'));
+});
+test('fresh audited qualification references remain promoted',()=>{
+ const rows=JSON.parse(readFileSync(new URL('../docs/research/promotion-certificate/promoted-audited.json',import.meta.url),'utf8')).rows;
+ for(const r of rows.filter((r:any)=>r.settlement.certificate.family==='qualification'))assert.equal(paperSettlement(r.route).classification,'ORDINARY_EQUIVALENT_BASIS_RISK');
+});

@@ -14,6 +14,7 @@ import {LatestCandidates,candidateKey,priority,paperSettlement,selectConfirmatio
 import {transactionVersion} from '../lib/screen/book-confirmation.ts';
 import {ConfirmationFeed} from './book-confirmation-adapter.ts';
 import {rankedSemanticLists,isPromoted} from '../lib/research/semantic-lists.ts';
+import {PaperExecutionStudy,executionStudyPolicy,type StudyBook} from '../lib/research/paper-execution-study.ts';
 import {reconcileGroups} from './coverage.ts';
 
 const K='https://external-api.kalshi.com/trade-api/v2',P='https://gateway.polymarket.us/v1';
@@ -174,12 +175,12 @@ export function delayCounterfactual(route:RecallRoute,signal:Signal,entry:Record
     modeledNet:unwind&&unwindFee!==null?unwind.cost-firstTake.cost-fee-unwindFee:null};
 }
 
-export async function observeRecall(directory:string,durationMs=recallPolicy.durationMs,env?:string,catalogPath?:string){
+export async function observeRecall(directory:string,durationMs=recallPolicy.durationMs,env?:string,catalogPath?:string,executionStudy=false){
   if(!Number.isSafeInteger(durationMs)||durationMs<1000||durationMs>90*60_000)throw Error('BOUNDED_DURATION_REQUIRED');
   if(env)process.loadEnvFile(resolve(env));mkdirSync(directory,{recursive:true,mode:0o700});
-  const sourceHashes=Object.fromEntries(['worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
+  const sourceHashes=Object.fromEntries(['scripts/report-paper-execution.ts','lib/research/paper-execution-study.ts','lib/research/paper-execution-report.ts','worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
     'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/promotion-certificate.ts','lib/research/proposition-differences.ts','lib/research/semantic-lists.ts','lib/research/identity.ts','lib/research/entities.ts','lib/research/non-sports.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
-  const frozen={policy:{...recallPolicy,durationMs},sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
+  const frozen={policy:{...recallPolicy,durationMs},executionStudy:executionStudy?executionStudyPolicy:null,sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
   writeFileSync(resolve(directory,'frozen.json'),JSON.stringify(frozen,null,2)+'\n',{flag:'wx',mode:0o600});
   const control=new AbortController(),preparation=setTimeout(()=>control.abort(),20*60_000);
   let evidenceBytes=0;const counts:Record<string,number>={},reasons:Record<string,number>={};
@@ -217,9 +218,11 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   const retain=(list:typeof best,route:RecallRoute,signal:Signal,value:(s:Signal)=>number)=>{
     const next=list.filter(x=>x.route.pair.id!==route.pair.id);next.push({route,signal});
     return next.sort((a,b)=>value(b.signal)-value(a.signal)).slice(0,10);};
+  let study:PaperExecutionStudy|null=null;
+  let lastStudySweep=0;
   let lastActiveFeedHealth:unknown[]=[];
   const delayOutcomes:Record<string,number>={};
-  const save=()=>writeFileSync(resolve(directory,'summary.json'),JSON.stringify({ordersEnabled:false,simulation:'PUBLIC_L2_COUNTERFACTUAL_NOT_FILLS',
+  const save=()=>{if(study)writeFileSync(resolve(directory,'paper-study.json'),JSON.stringify(study.summary())+'\n',{mode:0o600});writeFileSync(resolve(directory,'summary.json'),JSON.stringify({ordersEnabled:false,simulation:'PUBLIC_L2_COUNTERFACTUAL_NOT_FILLS',
     phase:stopped?'STOPPED':'RUNNING',start,deadline,at:Date.now(),durationObservedMs:performance.now()-mono,catalogCycles:cycles,
     catalog:{kalshi:data.kalshi.length,poly:data.poly.length,complete:data.complete,errors:data.errors,
       startedAt:data.at,endedAt:data.endedAt,fetchAndNormalizationMs:data.endedAt-data.at},
@@ -240,7 +243,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     feedHealth:[...feeds].map(([key,f])=>({key,ids:f.stream.options.ids.length,...f.health(),failures:f.failures,reconnects:f.stream.reconnectCount})),
     best:best.filter(x=>isPromoted(x.route.semanticClass??'UNRESOLVED')).map(({route,signal})=>({event:route.pair.a.title,route,signal,settlement:classify(route)})),
     observedEconomicLists:rankedSemanticLists(best.map(x=>({...x,settlement:classify(x.route)})),x=>x.settlement.classification,x=>x.signal.evaluation.estimatedNetProfit??-Infinity),
-    independentCheckRoutes:{highestGross,nearPositive,canonicalChecks},frozen},null,2)+'\n',{mode:0o600});
+    independentCheckRoutes:{highestGross,nearPositive,canonicalChecks},frozen},null,2)+'\n',{mode:0o600});};
   const bookKey=(v:Venue,id:string)=>v+':'+id;
   const observedSignals=(route:RecallRoute,books:Record<Venue,ObservedBook>,at:number,quantities?:number[])=>screenNativeSignals(route,books,at,quantities,reason=>{
     count('invalidNativeLevelObservations');record('INVALID_NATIVE_LEVEL',{pairId:route.pair.id,reason,books});queue.update(route,[],at);
@@ -251,10 +254,10 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     for(const venue of ['kalshi','poly'] as Venue[]){const ids=[...new Set(routes.map(r=>venue==='kalshi'?r.pair.a.id:r.pair.b.id))].sort();
       const previous=[...feeds.values()].filter(f=>f.stream.options.venue===venue).map(f=>f.stream.options.ids);
       for(const group of reconcileGroups(previous,ids,recallPolicy.streamGroupSize))desired.set(venue+':'+sha(JSON.stringify(group)),{venue,ids:group});}
-    for(const [key,f] of feeds)if(!desired.has(key)){f.stop();feeds.delete(key);for(const id of f.stream.options.ids){observed.delete(bookKey(f.stream.options.venue,id));marketFeeds.delete(bookKey(f.stream.options.venue,id));}}
+    for(const [key,f] of feeds)if(!desired.has(key)){study?.invalidate(f.stream.options.venue);f.stop();feeds.delete(key);for(const id of f.stream.options.ids){observed.delete(bookKey(f.stream.options.venue,id));marketFeeds.delete(bookKey(f.stream.options.venue,id));}}
     for(const [key,g] of desired)if(!feeds.has(key)){
-      try{const f=new ConfirmationFeed(g.venue,g.ids,(kind,body)=>{if(kind!=='WS_BOOK')record(kind,body);}, {onBook:r=>{const key=bookKey(g.venue,r.e.book.marketId);
-        observed.set(key,{book:r.e.book});for(const id of byMarket.get(key)??[])dirty.add(id);count('streamBookEvents');}});
+      try{const f=new ConfirmationFeed(g.venue,g.ids,(kind,body)=>{if(kind==='FEED_INVALID')study?.invalidate(g.venue);if(kind!=='WS_BOOK')record(kind,body);}, {onBook:r=>{const key=bookKey(g.venue,r.e.book.marketId);
+        observed.set(key,{book:r.e.book});study?.book(g.venue,r.e.book.marketId,{book:r.e.book,proof:{sid:r.sid,sequence:r.e.book.sequence,transactTime:r.transactTime,faults:r.e.faults}});for(const id of byMarket.get(key)??[])dirty.add(id);count('streamBookEvents');}});
         feeds.set(key,f);feedStarted.set(key,Date.now());for(const id of g.ids)marketFeeds.set(bookKey(g.venue,id),f);f.start();await sleep(100);
       }catch(error){const reason='STREAM_START:'+(error as Error).message;reasons[reason]=(reasons[reason]??0)+1;}
     }
@@ -268,6 +271,11 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
       return b.book.source==='rest'?b:ws??{book:{...b.book,valid:false,connection:'DISCONNECTED' as const}};};
     return {kalshi:current('kalshi',k),poly:current('poly',p)};
   };
+  const nativeStudyBooks=(r:RecallRoute):Record<Venue,StudyBook>|null=>{
+    const k=marketFeeds.get(bookKey('kalshi',r.pair.a.id))?.liveBook(r.pair.a.id),p=marketFeeds.get(bookKey('poly',r.pair.b.id))?.liveBook(r.pair.b.id);
+    return k&&p?{kalshi:k,poly:p}:null;
+  };
+  if(executionStudy)study=new PaperExecutionStudy(nativeStudyBooks,record);
   const metadataRefresh=(route:RecallRoute)=>{
     const cached=metadata.get(route.pair.id);if(cached&&Date.now()-cached.metadata.at<recallPolicy.metadataTtlMs)return;
     if(Date.now()-data.endedAt<recallPolicy.metadataTtlMs||metadataJobs.size||Date.now()-lastMetadata<3000)return;lastMetadata=Date.now();
@@ -324,6 +332,9 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     clearTimeout(preparation);start=Date.now();mono=performance.now();deadline=start+durationMs;lastDiscovery=start;lastHealthCheck=start;
     deadlineTimer=setTimeout(()=>control.abort(),durationMs);record('OBSERVATION_STARTED',{start,deadline});
     while(!control.signal.aborted&&performance.now()-mono<durationMs){
+      study?.pulse();
+      if(study&&Date.now()-lastStudySweep>=250){lastStudySweep=Date.now();for(const e of [...study.active.values()])study.observe(e.route,nativeStudyBooks(e.route),classify(e.route));}
+
       const routeIndex=allRoutes;
       const evaluationStarted=performance.now();
       // Promoted routes get first service; bound CPU work so native ingress can drain between batches.
@@ -352,6 +363,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         if(net&&net.evaluation.estimatedNetProfit!<=0)nearPositive=retain(nearPositive,r,net,s=>s.evaluation.estimatedNetProfit!);
         if(net&&r.matchSource==='CANONICAL')canonicalChecks=retain(canonicalChecks,r,net,s=>s.evaluation.estimatedNetProfit!);
         classify(r);
+        if(study)study.observe(r,nativeStudyBooks(r),classify(r));
         if(bestQ.evaluation.grossProfit!==null){best=best.filter(x=>x.route.pair.id!==id);best.push({route:r,signal:bestQ});
           const lists=rankedSemanticLists(best,x=>x.route.semanticClass??'UNRESOLVED',x=>x.signal.evaluation.estimatedNetProfit??-Infinity);
           best=[...lists.promotedOpportunities,...lists.unresolvedResearch,...lists.rejectedDifferentQuestions];}
@@ -403,7 +415,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
       if(Date.now()-lastHealthCheck>=5000){lastHealthCheck=Date.now();let restarted=false;
         for(const [key,f] of feeds)if(!f.health().connected&&Date.now()-(feedStarted.get(key)??0)>10_000&&
           (feedRestarts.get(key)??0)<recallPolicy.maxStreamRestarts){
-          f.stop();feeds.delete(key);for(const id of f.stream.options.ids){observed.delete(bookKey(f.stream.options.venue,id));marketFeeds.delete(bookKey(f.stream.options.venue,id));}
+          study?.invalidate(f.stream.options.venue);f.stop();feeds.delete(key);for(const id of f.stream.options.ids){observed.delete(bookKey(f.stream.options.venue,id));marketFeeds.delete(bookKey(f.stream.options.venue,id));}
           feedRestarts.set(key,(feedRestarts.get(key)??0)+1);count('streamRestarts');restarted=true;
         }
         if(restarted)await reconcile();
@@ -436,12 +448,12 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   }finally{
     control.abort();if(deadlineTimer)clearTimeout(deadlineTimer);clearTimeout(preparation);clearInterval(heartbeat);process.off('SIGINT',signalStop);process.off('SIGTERM',signalStop);
     lastActiveFeedHealth=[...feeds].map(([key,f])=>({key,ids:f.stream.options.ids.length,...f.health(),failures:f.failures,restarts:feedRestarts.get(key)??0}));
-    for(const f of feeds.values())f.stop();await Promise.allSettled([...jobs,...metadataJobs,...(refreshing?[refreshing]:[])]);stopped=true;save();
+    study?.pulse();study?.stop();for(const f of feeds.values())f.stop();await Promise.allSettled([...jobs,...metadataJobs,...(refreshing?[refreshing]:[])]);stopped=true;save();
   }
   return JSON.parse(readFileSync(resolve(directory,'summary.json'),'utf8'));
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
   const directory=process.argv[2],duration=Number(process.argv.find(s=>s.startsWith('--duration-seconds='))?.split('=')[1]??1200)*1000;
   const env=process.argv.find(s=>s.startsWith('--env='))?.slice(6);if(!directory)throw Error('Usage: npm run research:recall -- NEW_DIRECTORY [--duration-seconds=1200] [--env=READ_STREAM_ENV]');
-  const result=await observeRecall(resolve(directory),duration,env,process.argv.find(s=>s.startsWith('--catalog='))?.slice(10));console.log(JSON.stringify({phase:'STOPPED',counts:result.counts,reasons:result.reasons}));
+  const result=await observeRecall(resolve(directory),duration,env,process.argv.find(s=>s.startsWith('--catalog='))?.slice(10),process.argv.includes('--execution-study'));console.log(JSON.stringify({phase:'STOPPED',counts:result.counts,reasons:result.reasons}));
 }
