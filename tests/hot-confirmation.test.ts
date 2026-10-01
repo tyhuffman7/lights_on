@@ -37,3 +37,7 @@ test('Kalshi sequence, backlog, clock and PM conflicting versions fail closed',(
  p.health=()=>({connected:true,backlog:1,clockOkay:true});assert.equal(p.liveBook('P')?.book.valid,false);
  p.health=()=>({connected:true,backlog:0,clockOkay:true});p.latest.get('P')!.e.faults.push('SAME_VERSION_CONFLICTING_BOOKS');assert.equal(p.liveBook('P')?.book.valid,false);
 });
+const nativeClassifications=JSON.parse((await import('node:fs')).readFileSync(new URL('./fixtures/hot-native-classifications.json',import.meta.url),'utf8'));
+for(const c of nativeClassifications)test('native hot-question classification: '+c.label,()=>{
+ assert.equal(paperSettlement(c.route).classification,c.expected);
+});

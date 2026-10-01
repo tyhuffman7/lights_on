@@ -180,6 +180,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   let byMarket=new Map<string,string[]>(),restCursor=0,restActive=false,refreshing:Promise<void>|null=null;
   const jobs=new Set<Promise<void>>(),cooldown=new Map<string,number>(),candidateFingerprints=new Set<string>();
   const queue=new LatestCandidates(),pendingCandidates=queue.pending,inFlight=new Set<string>(),hot=new Map<string,number>();
+  const hotSignals=new Map<string,Signal>();
   const metadata=new Map<string,Awaited<ReturnType<typeof refreshCandidateMetadata>>>(),metadataJobs=new Set<Promise<void>>();
   const latency={queue:[] as number[],work:[] as number[],signal:[] as number[],firstSignal:[] as number[]};
   let lastAudit=0,peakHot=0,peakQueue=0,lastMetadata=0;
@@ -290,7 +291,10 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     deadlineTimer=setTimeout(()=>control.abort(),durationMs);record('OBSERVATION_STARTED',{start,deadline});
     while(!control.signal.aborted&&performance.now()-mono<durationMs){
       const routeIndex=allRoutes;
-      for(const id of [...dirty]){dirty.delete(id);const r=routeIndex.get(id);if(!r)continue;visited.add(id);const books=pairBooks(r);
+      const evaluationStarted=performance.now();
+      // Promoted routes get first service; bound CPU work so native ingress can drain between batches.
+      const evaluationOrder=[...hot.keys()].filter(id=>dirty.has(id)).concat([...dirty].filter(id=>!hot.has(id)));
+      for(const id of evaluationOrder){if(performance.now()-evaluationStarted>recallPolicy.evaluationBudgetMs)break;dirty.delete(id);const r=routeIndex.get(id);if(!r)continue;visited.add(id);const books=pairBooks(r);
         if(!books){count('missingTwoBooks');continue;}twoBook.add(id);count('twoBookObservations');
         const now=Date.now();for(const v of ['kalshi','poly'] as Venue[]){const a=bookAges(books[v],now);
           for(const kind of ['receipt','exchange'] as const){const key=freshnessBucket(kind==='receipt'?a.receiptMs:a.exchangeMs);
@@ -311,21 +315,26 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         const gross=one.filter(q=>q.evaluation.grossProfit!==null).sort((a,b)=>b.evaluation.grossProfit!-a.evaluation.grossProfit!)[0];
         const net=one.filter(q=>q.evaluation.estimatedNetProfit!==null).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0];
         if(gross)highestGross=retain(highestGross,r,gross,s=>s.evaluation.grossProfit!);
-        if(!differentQuestion(r).length&&net&&net.evaluation.estimatedNetProfit!<=0)nearPositive=retain(nearPositive,r,net,s=>s.evaluation.estimatedNetProfit!);
-        if(net&&r.matchSource==='CANONICAL')canonicalChecks=retain(canonicalChecks,r,net,s=>s.evaluation.estimatedNetProfit!);
-        if(bestQ.evaluation.grossProfit!==null){best=best.filter(x=>x.route.pair.id!==id);best.push({route:r,signal:bestQ});
-          best.sort((a,b)=>(b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity));best=best.slice(0,20);}
-        const q=qs.filter(x=>x.candidate&&x.withinCapital).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0]??qs.find(x=>x.candidate);
-        if(!differentQuestion(r).length&&net&&net.evaluation.estimatedNetProfit!>=-recallPolicy.hotNearNet){if(!hot.has(id))count('hotPromotions');hot.set(id,now);peakHot=Math.max(peakHot,hot.size);}
+        if(!differentQuestion(r).length&&net&&net.fresh&&net.evaluation.estimatedNetProfit!>=-recallPolicy.hotNearNet){
+          hotSignals.set(id,net);
+          if(hot.has(id))hot.set(id,now);
+          else {const rank=(id:string)=>({key:id,route:allRoutes.get(id)!,signal:hotSignals.get(id)!,queuedAt:now,firstQueuedAt:now});
+            const worst=hot.size>=recallPolicy.maxHotRoutes?[...hot.keys()].sort((a,b)=>priority(rank(b),rank(a)))[0]:undefined;
+            if(!worst||priority(rank(id),rank(worst))<0){if(worst){hot.delete(worst);hotSignals.delete(worst);count('hotBudgetDemotions');}
+              hot.set(id,now);count('hotPromotions');peakHot=Math.max(peakHot,hot.size);}
+            else {hotSignals.delete(id);count('hotPromotionBudgetDeferred');}}
+        }
+
         const falseMatch=differentQuestion(r);
         if(q){const fingerprint=JSON.stringify([id,q.evaluation.orientation,q.evaluation.quantity,q.evaluation.kalshi?.levels,q.evaluation.poly?.levels]);
           if(!candidateFingerprints.has(fingerprint)){candidateFingerprints.add(fingerprint);count('distinctEconomicCandidates');record('ECONOMIC_SIGNAL',{route:r,signal:q,books,settlement:classify(r)});}
         }
         if(falseMatch.length){falseMatches.add(id);if(q)count('falseMatchPositiveReadings');queue.update(r,[],now);}
         else {const eligible=qs.filter(q=>!inFlight.has(candidateKey(r,q))&&now-(cooldown.get(candidateKey(r,q))??0)>=recallPolicy.confirmationCooldownMs);
-          queue.update(r,eligible,now);}
+          queue.update(r,eligible.filter(s=>s.fresh||hot.has(id)),now);}
       }
-      for(const [id,at] of hot)if(Date.now()-at>recallPolicy.hotHoldMs){hot.delete(id);count('hotDemotions');}
+      for(const [id,at] of hot)if(Date.now()-at>recallPolicy.hotHoldMs){hot.delete(id);hotSignals.delete(id);count('hotDemotions');}
+      for(const [key,item] of pendingCandidates)if(Date.now()-item.queuedAt>recallPolicy.maxPendingAgeMs){pendingCandidates.delete(key);count('candidatesExpiredBeforeDispatch');}
       peakQueue=Math.max(peakQueue,pendingCandidates.size);
       let dispatched=0;
       while(pendingCandidates.size&&dispatched++<100){
@@ -334,7 +343,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         // Reprice both orientations and available quantities before dispatch. Replace historical economics with current state.
         const qs=recallSignals(item.route,current,Date.now());const latest=qs.filter(s=>s.evaluation.kalshiSide===item.signal.evaluation.kalshiSide&&s.candidate)
           .sort((a,b)=>Number(b.withinCapital)-Number(a.withinCapital)||(b.evaluation.estimatedNetProfit??-Infinity)-(a.evaluation.estimatedNetProfit??-Infinity))[0];
-        if(!latest){pendingCandidates.delete(item.key);queue.disappeared++;continue;}item.signal=latest;
+        if(!latest){pendingCandidates.delete(item.key);queue.disappeared++;continue;}item.signal={...latest,evaluation:{...latest.evaluation,at:item.signal.evaluation.at}};
         const fallback=selectConfirmationBooks(item.route,current,Date.now()).length>0;
         if(fallback&&jobs.size>=2){
           // Slow fallback work cannot block any ready WS candidate further down the priority list.

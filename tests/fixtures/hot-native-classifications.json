@@ -1,0 +1,1868 @@
+[
+  {
+    "label": "Will Chris Sale be selected as a finalist for the Pro Baseball National League Cy Young in the 2026 season?",
+    "route": {
+      "pair": {
+        "id": "KXMLBAWARDFIN-26NLCY-CSALE51::tec-mlb-nl-2026-11-27-cy-chrsal",
+        "a": {
+          "id": "KXMLBAWARDFIN-26NLCY-CSALE51",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "baseball",
+            "competition": "mlb",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "chris sale",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "pro baseball award finalists"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Chris Sale be selected as a finalist for the Pro Baseball National League Cy Young in the 2026 season?",
+          "outcome": "Chris Sale",
+          "opposite": "Chris Sale",
+          "category": "Sports",
+          "rules": "If Chris Sale is selected as a finalist for National League Cy Young in the 2026 Pro Baseball season, then the market resolves to Yes.\n\nThis market resolves based on who is selected as a finalist for National League Cy Young as reported by one of the Source Agencies. In the event that finalists are not announced and reported by one of the Source Agencies prior to the award winner being announced, then all markets resolve to No.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/MLBAWARDFINALISTS.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+          "url": "https://kalshi.com/markets/kxmlbawardfin/kxmlbawardfin-26nlcy",
+          "closeAt": "2026-12-01T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "168cacbf0fd741726b61ac2cdafefb0af39cd14e501da0643e2a6868da45945e",
+          "settlement": null,
+          "series": "KXMLBAWARDFIN"
+        },
+        "b": {
+          "id": "tec-mlb-nl-2026-11-27-cy-chrsal",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "baseball",
+            "competition": "mlb",
+            "eventAt": "2026-11-27T23:00:00.000Z",
+            "eventDate": "2026-11-27",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "national league cy young award"
+          },
+          "title": "Chris Sale \u00b7 National League Cy Young Award",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "Will Chris Sale win the 2026 National League Cy Young award, scheduled for November 7-27, 2026? If the event is postponed, delayed, or rescheduled, the expiration date will be amended to align with the new event date. If the event is not rescheduled within two weeks of the originally scheduled date, the instrument may settle at last fair market prices. If the event is canceled, the instrument may settle at last fair market prices. If the player is eliminated from contention, the instrument will settle to $0.00. If multiple players are declared as having attained victory, holders receive $1.00 divided by the number of such players, rounded down to the nearest tick. The instrument will resolve based on the official BBWAA announcement.",
+          "url": "https://polymarket.us/event/tec-mlb-nl-2026-11-27-cy-chrsal",
+          "closeAt": "2026-12-12T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "1e7f72b9cd27c78ab2cca7ad10f4f8c9fe56e7e8913fa970ffcd6abf0ea233cc",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "pro baseball award finalists::national league cy young award",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 10
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Who will be the top Spotify artist this year?",
+    "route": {
+      "pair": {
+        "id": "KXTOPARTIST-26B-BAD::ccrc-sptfy-1-artst-us-yr-2026-badbun",
+        "a": {
+          "id": "KXTOPARTIST-26B-BAD",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "bad bunny",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Who will be the top Spotify artist this year?",
+          "outcome": "Bad Bunny",
+          "opposite": "Bad Bunny",
+          "category": "Entertainment",
+          "rules": "If Bad Bunny is the most streamed Spotify artist in 2026, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/TOPARTIST.pdf\n\n[{\"name\":\"Spotify\",\"url\":\"https://open.spotify.com/\"}]",
+          "url": "https://kalshi.com/markets/kxtopartist/kxtopartist-26b",
+          "closeAt": "2026-12-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "e4993dee81dfa50445b85e86f64805f54a088fcebb43835925ddf6b5e30f410a",
+          "settlement": null,
+          "series": "KXTOPARTIST"
+        },
+        "b": {
+          "id": "ccrc-sptfy-1-artst-us-yr-2026-badbun",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "sptfy",
+            "eventAt": "2026-12-02T17:00:00.000Z",
+            "eventDate": "2026-12-02",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "top artist in the us 2026"
+          },
+          "title": "Bad Bunny \u00b7 Top Artist in the US 2026?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "This market will settle to Yes if Bad Bunny is ranked the top artist in the US on Spotify in 2026. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists in the US ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.\n\nNote: This market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Polymarket. Spotify and related marks are the property of Spotify AB and its group companies.",
+          "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-us-yr-2026-badbun",
+          "closeAt": "2026-12-17T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "cf17ca3e530893153fac0cc5c5c6795be51e5135081a6f0f2b65ab4f5254a3b0",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXTOPARTIST-26B-BAD::top artist in the us 2026",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "DK Metcalf Receiving Yards Escalator",
+    "route": {
+      "pair": {
+        "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4::astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte10",
+        "a": {
+          "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflescalatorrecyds",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "DK Metcalf Receiving Yards Escalator",
+          "outcome": "DK Metcalf",
+          "opposite": "DK Metcalf",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays per receiving yards by DK Metcalf in the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each 10 receiving yards increase the payout by the following schedule: 0\u20139 yards, $0.0000; 10\u201319, $0.0001; 20\u201329, $0.0010; 30\u201339, $0.0033; 40\u201349, $0.0080; 50\u201359, $0.0156; 60\u201369, $0.0270; 70\u201379, $0.0428; 80\u201389, $0.0640; 90\u201399, $0.0911; 100\u2013109, $0.1250; 110\u2013119, $0.1663; 120\u2013129, $0.2160; 130\u2013139, $0.2746; 140\u2013149, $0.3430; 150\u2013159, $0.4218; 160\u2013169, $0.5120; 170\u2013179, $0.6141; 180\u2013189, $0.7290; 190\u2013199, $0.8573; and 200 or more, $1.0000. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract shown above follows this calculation:\nPayout Formula = floor(10000 x (y / 200)^3) / 10000\ny = min(200, max(0, 10 x floor(s / 10)))\ns = official receiving yards\n\nThe No payout is $1.00 minus the Yes payout. Negative receiving yard totals pay Yes $0.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflescalatorrecyds/kxnflescalatorrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "a1637e30a453595fd0d5e3a1a2544e67cb98dc7865f713cfe4bca832198f7cc4",
+          "settlement": null,
+          "series": "KXNFLESCALATORRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte10",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "dk metcalf",
+            "marketType": "prop",
+            "line": 9.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [
+              "10",
+              "10"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "DK Metcalf 10+ receiving yards \u00b7 Will DK Metcalf record 10+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if DK Metcalf records at least 10 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte10",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "f7e82307852e731ba8980518fc50d4f0894467cc8bf3e32256c6eb592547210c",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 1,
+        "poly": 100
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "Who will win the Florida House of Representatives?",
+    "route": {
+      "pair": {
+        "id": "KXSTATELEG-FLHOUS26-R::paccc-usho-midterms-2026-11-03-rep",
+        "a": {
+          "id": "KXSTATELEG-FLHOUS26-R",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "winner",
+            "outcome": "republican party",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Who will win the Florida House of Representatives?",
+          "outcome": "Republican party",
+          "opposite": "Republican party",
+          "category": "Elections",
+          "rules": "If the Republican party wins the Florida House of Representatives in 2026, then the market resolves to Yes.\n\nWinning is defined as holding more seats than any other party two weeks after the House of Representatives is sat for the session following the election. If both parties are tied, then the market resolves to No. This market is also eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details.\n\nhttps://assets.kalshi.com/contract_terms/STATELEG.pdf\n\n[{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"}]",
+          "url": "https://kalshi.com/markets/kxstateleg/kxstateleg-flhous26",
+          "closeAt": "2026-11-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "a56b830de3326ffea32cabd2ba5c5c2bec5211681ac2d46d72be3ab422fe6f84",
+          "settlement": null,
+          "series": "KXSTATELEG"
+        },
+        "b": {
+          "id": "paccc-usho-midterms-2026-11-03-rep",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usho",
+            "eventAt": "2026-11-03T00:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "winner",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "title": "Republican Party \u00b7 U.S House Midterm Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if the Republican Party wins control of the United States House of Representatives in the 2026 United States midterm election. Outcome sourced from relevant state electoral authorities, and the United States House of Representatives.\n\nA party wins control of the United States House of Representatives if it wins a majority of the chamber\u2019s voting seats. If no party wins a majority of voting seats, the chamber will be deemed controlled by the party with which the first elected Speaker of the House of the Congress that convenes after the 2026 midterm election is affiliated.\n\nThe following rules govern the counting of seats for determining which party wins control of the chamber.\n\nAll House elections in the 2026 United States midterm election that elect voting members and determine representation in the upcoming 120th Congress are included. Where a seat is decided by a runoff, the runoff result will determine attribution of that seat.\n\nSeats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected.\n\nHouse members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party are included in that party\u2019s count. If the caucus decisions of members of the House elected as independents cannot be determined on the date of the election, this market may remain open until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n",
+          "url": "https://polymarket.us/event/paccc-usho-midterms-2026-11-03-rep",
+          "closeAt": "2027-02-02T04:59:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "dcb5b105eabb48e9e73cf71af3a1435dbfc7d6d189d32e218e43d1bcd8ae82c6",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXSTATELEG-FLHOUS26-R::paccc-usho-midterms-2026-11-03-rep",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 10
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "Harold Fannin Jr. receiving yards ladder",
+    "route": {
+      "pair": {
+        "id": "KXNFLLADDERRECYDS-26OCT01PITCLE-CLEHFANNIN44::astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte10",
+        "a": {
+          "id": "KXNFLLADDERRECYDS-26OCT01PITCLE-CLEHFANNIN44",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflladderrecyds",
+            "outcome": "harold fannin jr",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Harold Fannin Jr. receiving yards ladder",
+          "outcome": "Harold Fannin Jr.",
+          "opposite": "Harold Fannin Jr.",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays $0.0025 per receiving yard recorded by Harold Fannin Jr. during the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract is $0.0025 per receiving yard constrained between $0.00\u2013$1.00 with a cap at 400 yards. The No payout is $1.00 minus the Yes payout. Payouts are proportional to the size of the holder's position. For example, 80 receiving yards pays Yes $0.20 and No $0.80; 200 yards pays Yes $0.50 and No $0.50; zero yards pay Yes $0.00 and No $1.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NFL. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflladderrecyds/kxnflladderrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "a4e91ec8d514e6b5277fc2d400c271bc0573dbc4c3848d71b5170c89adc5a6c4",
+          "settlement": null,
+          "series": "KXNFLLADDERRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte10",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "harold fannin jr",
+            "marketType": "prop",
+            "line": 9.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "harold fannin jr",
+            "entities": [],
+            "numbers": [
+              "10",
+              "10"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "Harold Fannin Jr. 10+ receiving yards \u00b7 Will Harold Fannin Jr. record 10+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Harold Fannin Jr. records at least 10 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte10",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "69c1c08ef88ed5769c6384d6eec348c652d4c30434919b8ac4fb32bde61ba9f0",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLLADDERRECYDS-26OCT01PITCLE-CLEHFANNIN44::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "Will LeBron James announce his retirement before the 2028-29 NBA season?",
+    "route": {
+      "pair": {
+        "id": "KXNBARETIRE-LJAMES23-2829::tec-nba-mvp-2027-05-17-w-lebjam",
+        "a": {
+          "id": "KXNBARETIRE-LJAMES23-2829",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "basketball",
+            "competition": "nba",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "before the 2028 29 season",
+            "entities": [],
+            "numbers": [
+              "2028",
+              "29",
+              "2028",
+              "29"
+            ],
+            "aliases": [],
+            "eventKey": "nba retirement"
+          },
+          "exchangeIndex": 0,
+          "title": "Will LeBron James announce his retirement before the 2028-29 NBA season?",
+          "outcome": "Before the 2028-29 season",
+          "opposite": "Before the 2028-29 season",
+          "category": "Sports",
+          "rules": "If LeBron James announces his retirement from the NBA before the 2028-29 NBA season start date, then the market resolves to Yes.\n\nNote: The retirement must be intended to be effective immediately or prior to the first new season after the announcement.\n\nFor the purposes of this market, the NBA season start date is defined as the date of the first regular season game for that season.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/RETIRESPORT.pdf\n\n[{\"name\":\"the Governing League\",\"url\":\"https://www.nba.com\"},{\"name\":\"Sports Illustrated\",\"url\":\"https://www.si.com\"},{\"name\":\"Fox Sports\",\"url\":\"https://foxsports.com\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"NBC Sports\",\"url\":\"https://www.nbcsports.com\"},{\"name\":\"CBS Sports\",\"url\":\"https://www.cbssports.com\"},{\"name\":\"The Athletic\",\"url\":\"https://theathletic.com\"},{\"name\":\"AP\",\"url\":\"https://apnews.com/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com\"},{\"name\":\"ABC\",\"url\":\"https://abcnews.go.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com\"}]",
+          "url": "https://kalshi.com/markets/kxnbaretire/kxnbaretire-ljames23",
+          "closeAt": "2029-11-15T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "f31c3d3e5bbdb389abb76209736d49c9e05347aa5f0e9e9be371e760f529046e",
+          "settlement": null,
+          "series": "KXNBARETIRE"
+        },
+        "b": {
+          "id": "tec-nba-mvp-2027-05-17-w-lebjam",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "basketball",
+            "competition": "nba",
+            "eventAt": "2027-04-19T00:00:00.000Z",
+            "eventDate": "2027-04-19",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "nba mvp"
+          },
+          "title": "LeBron James \u00b7 NBA MVP",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if LeBron James wins the 2026-27 NBA MVP Award. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/tec-nba-mvp-2027-05-17-w-lebjam",
+          "closeAt": "2027-06-01T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "3fb603d24915d36901a73bf4aa77f1f2483893ef3e9ba1b5c6e77af19e100d22",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "nba retirement::nba mvp",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "Will Bernadette Wilson receive at least 16% of the popular vote in the first round of the 2026 Alaska gubernatorial election? vs Bernadette Wilson \u00b7 Alaska Governor Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXVOTEGENERAL-GOVAK-26BWIL-16::usgubewc-usgub-ak-2026-11-03-berwil",
+        "a": {
+          "id": "KXVOTEGENERAL-GOVAK-26BWIL-16",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "line": 16,
+            "outcome": "at least 16",
+            "entities": [],
+            "numbers": [
+              "16",
+              "2026",
+              "16"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Bernadette Wilson receive at least 16% of the popular vote in the first round of the 2026 Alaska gubernatorial election?",
+          "outcome": "At least 16%",
+          "opposite": "At least 16%",
+          "category": "Elections",
+          "rules": "If the certified percentage of the popular vote received by Bernadette Wilson in the first round of the 2026 Alaska gubernatorial election is 16% to 100%, inclusive of both endpoints, then the market resolves to Yes.\n\nThe percentage is calculated as (total votes received by Bernadette Wilson \u00f7 total valid votes cast) \u00d7 100, rounded to two decimal places. Except as provided in the Contract, resolution is based on certified/official results only, not preliminary results. Write-in votes are included if they appear in certified results. Invalid, spoiled, or rejected ballots are excluded from both numerator and denominator. The percentage is based on the first round of voting.\n\nhttps://assets.kalshi.com/contract_terms/VOTEPERCENT.pdf\n\n[{\"name\":\"official government website of \",\"url\":\"https://www.usa.gov/\"}]",
+          "url": "https://kalshi.com/markets/kxvotegeneral/kxvotegeneral-govak-26bwil",
+          "closeAt": "2027-01-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "394b625ca74583d151f1563a8d025881d65daa678303c898b85ab0044ab971a5",
+          "settlement": null,
+          "series": "KXVOTEGENERAL"
+        },
+        "b": {
+          "id": "usgubewc-usgub-ak-2026-11-03-berwil",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usgub",
+            "eventAt": "2026-08-12T22:38:00.000Z",
+            "eventDate": "2026-08-12",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "alaska governor election winner"
+          },
+          "title": "Bernadette Wilson \u00b7 Alaska Governor Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Bernadette Wilson wins the 2026 midterm election for Governor of Alaska. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/usgubewc-usgub-ak-2026-11-03-berwil",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "f5cfa9468f45aaad00159c7b3cb65c5dada03bffec50beba59a0dfe25306708c",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXVOTEGENERAL-GOVAK-26BWIL-16::alaska governor election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "DK Metcalf receiving yards ladder",
+    "route": {
+      "pair": {
+        "id": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITDMETCALF4::astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte10",
+        "a": {
+          "id": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITDMETCALF4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflladderrecyds",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "DK Metcalf receiving yards ladder",
+          "outcome": "DK Metcalf",
+          "opposite": "DK Metcalf",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays $0.0025 per receiving yard recorded by DK Metcalf during the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract is $0.0025 per receiving yard constrained between $0.00\u2013$1.00 with a cap at 400 yards. The No payout is $1.00 minus the Yes payout. Payouts are proportional to the size of the holder's position. For example, 80 receiving yards pays Yes $0.20 and No $0.80; 200 yards pays Yes $0.50 and No $0.50; zero yards pay Yes $0.00 and No $1.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NFL. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflladderrecyds/kxnflladderrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "4d6ba86139eee452ea5a7d5f4a3ecff6c108d464a4286ac0c202a6762d9b4ea3",
+          "settlement": null,
+          "series": "KXNFLLADDERRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte10",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "dk metcalf",
+            "marketType": "prop",
+            "line": 9.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [
+              "10",
+              "10"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "DK Metcalf 10+ receiving yards \u00b7 Will DK Metcalf record 10+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if DK Metcalf records at least 10 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte10",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "f7e82307852e731ba8980518fc50d4f0894467cc8bf3e32256c6eb592547210c",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITDMETCALF4::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "Will Bernadette Wilson receive at least 18% of the popular vote in the first round of the 2026 Alaska gubernatorial election? vs Bernadette Wilson \u00b7 Alaska Governor Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXVOTEGENERAL-GOVAK-26BWIL-18::usgubewc-usgub-ak-2026-11-03-berwil",
+        "a": {
+          "id": "KXVOTEGENERAL-GOVAK-26BWIL-18",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "line": 18,
+            "outcome": "at least 18",
+            "entities": [],
+            "numbers": [
+              "18",
+              "2026",
+              "18"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Bernadette Wilson receive at least 18% of the popular vote in the first round of the 2026 Alaska gubernatorial election?",
+          "outcome": "At least 18%",
+          "opposite": "At least 18%",
+          "category": "Elections",
+          "rules": "If the certified percentage of the popular vote received by Bernadette Wilson in the first round of the 2026 Alaska gubernatorial election is 18% to 100%, inclusive of both endpoints, then the market resolves to Yes.\n\nThe percentage is calculated as (total votes received by Bernadette Wilson \u00f7 total valid votes cast) \u00d7 100, rounded to two decimal places. Except as provided in the Contract, resolution is based on certified/official results only, not preliminary results. Write-in votes are included if they appear in certified results. Invalid, spoiled, or rejected ballots are excluded from both numerator and denominator. The percentage is based on the first round of voting.\n\nhttps://assets.kalshi.com/contract_terms/VOTEPERCENT.pdf\n\n[{\"name\":\"official government website of \",\"url\":\"https://www.usa.gov/\"}]",
+          "url": "https://kalshi.com/markets/kxvotegeneral/kxvotegeneral-govak-26bwil",
+          "closeAt": "2027-01-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "743e157a3b5d3d406d8d481473ba93f2f541a0d9f8deb5c6933a9384cf007669",
+          "settlement": null,
+          "series": "KXVOTEGENERAL"
+        },
+        "b": {
+          "id": "usgubewc-usgub-ak-2026-11-03-berwil",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usgub",
+            "eventAt": "2026-08-12T22:38:00.000Z",
+            "eventDate": "2026-08-12",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "alaska governor election winner"
+          },
+          "title": "Bernadette Wilson \u00b7 Alaska Governor Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Bernadette Wilson wins the 2026 midterm election for Governor of Alaska. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/usgubewc-usgub-ak-2026-11-03-berwil",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "f5cfa9468f45aaad00159c7b3cb65c5dada03bffec50beba59a0dfe25306708c",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXVOTEGENERAL-GOVAK-26BWIL-18::alaska governor election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Bernadette Wilson receive at least 20% of the popular vote in the first round of the 2026 Alaska gubernatorial election? vs Bernadette Wilson \u00b7 Alaska Governor Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXVOTEGENERAL-GOVAK-26BWIL-20::usgubewc-usgub-ak-2026-11-03-berwil",
+        "a": {
+          "id": "KXVOTEGENERAL-GOVAK-26BWIL-20",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "line": 20,
+            "outcome": "at least 20",
+            "entities": [],
+            "numbers": [
+              "20",
+              "2026",
+              "20"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Bernadette Wilson receive at least 20% of the popular vote in the first round of the 2026 Alaska gubernatorial election?",
+          "outcome": "At least 20%",
+          "opposite": "At least 20%",
+          "category": "Elections",
+          "rules": "If the certified percentage of the popular vote received by Bernadette Wilson in the first round of the 2026 Alaska gubernatorial election is 20% to 100%, inclusive of both endpoints, then the market resolves to Yes.\n\nThe percentage is calculated as (total votes received by Bernadette Wilson \u00f7 total valid votes cast) \u00d7 100, rounded to two decimal places. Except as provided in the Contract, resolution is based on certified/official results only, not preliminary results. Write-in votes are included if they appear in certified results. Invalid, spoiled, or rejected ballots are excluded from both numerator and denominator. The percentage is based on the first round of voting.\n\nhttps://assets.kalshi.com/contract_terms/VOTEPERCENT.pdf\n\n[{\"name\":\"official government website of \",\"url\":\"https://www.usa.gov/\"}]",
+          "url": "https://kalshi.com/markets/kxvotegeneral/kxvotegeneral-govak-26bwil",
+          "closeAt": "2027-01-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "be810bcf695460be1ca73f3a227118aefeef7536ed7c610b30a62d13c42b595b",
+          "settlement": null,
+          "series": "KXVOTEGENERAL"
+        },
+        "b": {
+          "id": "usgubewc-usgub-ak-2026-11-03-berwil",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usgub",
+            "eventAt": "2026-08-12T22:38:00.000Z",
+            "eventDate": "2026-08-12",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "alaska governor election winner"
+          },
+          "title": "Bernadette Wilson \u00b7 Alaska Governor Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Bernadette Wilson wins the 2026 midterm election for Governor of Alaska. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/usgubewc-usgub-ak-2026-11-03-berwil",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "f5cfa9468f45aaad00159c7b3cb65c5dada03bffec50beba59a0dfe25306708c",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXVOTEGENERAL-GOVAK-26BWIL-20::alaska governor election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Jacob Misiorowski be selected as a finalist for the Pro Baseball National League MVP in the 2026 season?",
+    "route": {
+      "pair": {
+        "id": "KXMLBAWARDFIN-26NLMVP-JMISIOROWSKI32::tec-mlb-nl-2026-11-27-cy-jacmis",
+        "a": {
+          "id": "KXMLBAWARDFIN-26NLMVP-JMISIOROWSKI32",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "baseball",
+            "competition": "mlb",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "jacob misiorowski",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "pro baseball award finalists"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Jacob Misiorowski be selected as a finalist for the Pro Baseball National League MVP in the 2026 season?",
+          "outcome": "Jacob Misiorowski",
+          "opposite": "Jacob Misiorowski",
+          "category": "Sports",
+          "rules": "If Jacob Misiorowski is selected as a finalist for National League MVP in the 2026 Pro Baseball season, then the market resolves to Yes.\n\nThis market resolves based on who is selected as a finalist for National League MVP as reported by one of the Source Agencies. In the event that finalists are not announced and reported by one of the Source Agencies prior to the award winner being announced, then all markets resolve to No.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/MLBAWARDFINALISTS.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.mlb.com/\"}]",
+          "url": "https://kalshi.com/markets/kxmlbawardfin/kxmlbawardfin-26nlmvp",
+          "closeAt": "2026-12-01T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "8f453ffd87616f12dbba1774e076acb4decd224a0cc06eed5870302ec58a41d5",
+          "settlement": null,
+          "series": "KXMLBAWARDFIN"
+        },
+        "b": {
+          "id": "tec-mlb-nl-2026-11-27-cy-jacmis",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "baseball",
+            "competition": "mlb",
+            "eventAt": "2026-11-27T23:00:00.000Z",
+            "eventDate": "2026-11-27",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "national league cy young award"
+          },
+          "title": "Jacob Misiorowski \u00b7 National League Cy Young Award",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "Will Jacob Misiorowski win the 2026 National League Cy Young award, scheduled for November 7-27, 2026? If the event is postponed, delayed, or rescheduled, the expiration date will be amended to align with the new event date. If the event is not rescheduled within two weeks of the originally scheduled date, the instrument may settle at last fair market prices. If the event is canceled, the instrument may settle at last fair market prices. If the player is eliminated from contention, the instrument will settle to $0.00. If multiple players are declared as having attained victory, holders receive $1.00 divided by the number of such players, rounded down to the nearest tick. The instrument will resolve based on the official BBWAA announcement.",
+          "url": "https://polymarket.us/event/tec-mlb-nl-2026-11-27-cy-jacmis",
+          "closeAt": "2026-12-12T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "a4bf9c8d1c934b34416577f009c4193d1693f9f2cb8e7e3d8f81a01b6c6f7b4c",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "pro baseball award finalists::national league cy young award",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 10
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "2027 Best Supporting Actress Oscar nominations?",
+    "route": {
+      "pair": {
+        "id": "KXOSCARNOMSUPACTR-27-PEN::tac-oscars-03-14-2027-bestactre-pencru",
+        "a": {
+          "id": "KXOSCARNOMSUPACTR-27-PEN",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "penelope cruz",
+            "entities": [],
+            "numbers": [
+              "2027"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "2027 Best Supporting Actress Oscar nominations?",
+          "outcome": "Pen\u00e9lope Cruz",
+          "opposite": "Pen\u00e9lope Cruz",
+          "category": "Entertainment",
+          "rules": "If Pen\u00e9lope Cruz has been nominated for Best Supporting Actress at the 99th Academy Awards, then the market resolves to Yes.\n\nThe 99th Academy Awards Nominations are expected to be announced in January 2027.\n\nThis market and these products have not been endorsed by the Oscars. Any references to Oscars, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Oscars and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/OSCARNOMS.pdf\n\n[{\"name\":\"Academy of Motion Picture Arts and Sciences\",\"url\":\"https://www.oscars.org/oscars\"}]",
+          "url": "https://kalshi.com/markets/kxoscarnomsupactr/kxoscarnomsupactr-27",
+          "closeAt": "2027-12-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "ee0de204d16315cd075019161c546726efcb086d7acff8c20d845f8887ae2378",
+          "settlement": null,
+          "series": "KXOSCARNOMSUPACTR"
+        },
+        "b": {
+          "id": "tac-oscars-03-14-2027-bestactre-pencru",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "oscars",
+            "eventAt": "2026-07-25T03:59:00.000Z",
+            "eventDate": "2026-07-25",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "oscar winner best actress"
+          },
+          "title": "Penelope Cruz \u00b7 Oscar Winner: Best Actress",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "This market will settle to Yes if Penelope Cruz wins Best Actress at the 99th Academy Awards. Outcome sourced from Academy of Motion Picture Arts and Sciences.",
+          "url": "https://polymarket.us/event/tac-oscars-03-14-2027-bestactre-pencru",
+          "closeAt": "2027-03-29T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "c924ea3687b3a1b87f0dafd5821cb8b6e63fc324e5a00c3c3039922a87c0bad5",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXOSCARNOMSUPACTR-27-PEN::oscar winner best actress",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Bernadette Wilson receive at least 22% of the popular vote in the first round of the 2026 Alaska gubernatorial election? vs Bernadette Wilson \u00b7 Alaska Governor Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXVOTEGENERAL-GOVAK-26BWIL-22::usgubewc-usgub-ak-2026-11-03-berwil",
+        "a": {
+          "id": "KXVOTEGENERAL-GOVAK-26BWIL-22",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "line": 22,
+            "outcome": "at least 22",
+            "entities": [],
+            "numbers": [
+              "22",
+              "2026",
+              "22"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Bernadette Wilson receive at least 22% of the popular vote in the first round of the 2026 Alaska gubernatorial election?",
+          "outcome": "At least 22%",
+          "opposite": "At least 22%",
+          "category": "Elections",
+          "rules": "If the certified percentage of the popular vote received by Bernadette Wilson in the first round of the 2026 Alaska gubernatorial election is 22% to 100%, inclusive of both endpoints, then the market resolves to Yes.\n\nThe percentage is calculated as (total votes received by Bernadette Wilson \u00f7 total valid votes cast) \u00d7 100, rounded to two decimal places. Except as provided in the Contract, resolution is based on certified/official results only, not preliminary results. Write-in votes are included if they appear in certified results. Invalid, spoiled, or rejected ballots are excluded from both numerator and denominator. The percentage is based on the first round of voting.\n\nhttps://assets.kalshi.com/contract_terms/VOTEPERCENT.pdf\n\n[{\"name\":\"official government website of \",\"url\":\"https://www.usa.gov/\"}]",
+          "url": "https://kalshi.com/markets/kxvotegeneral/kxvotegeneral-govak-26bwil",
+          "closeAt": "2027-01-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "2b059133bb046350eb94b8c7bba14a4570ac2b9ac6c8a2162f4e59cdde67b52c",
+          "settlement": null,
+          "series": "KXVOTEGENERAL"
+        },
+        "b": {
+          "id": "usgubewc-usgub-ak-2026-11-03-berwil",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usgub",
+            "eventAt": "2026-08-12T22:38:00.000Z",
+            "eventDate": "2026-08-12",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "alaska governor election winner"
+          },
+          "title": "Bernadette Wilson \u00b7 Alaska Governor Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Bernadette Wilson wins the 2026 midterm election for Governor of Alaska. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/usgubewc-usgub-ak-2026-11-03-berwil",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "f5cfa9468f45aaad00159c7b3cb65c5dada03bffec50beba59a0dfe25306708c",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXVOTEGENERAL-GOVAK-26BWIL-22::alaska governor election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Georgia win the College Football Playoff National Championship?",
+    "route": {
+      "pair": {
+        "id": "KXNCAAF-27-UGA::aqc-cfb-cfp-2026-12-06-playoffq-ga",
+        "a": {
+          "id": "KXNCAAF-27-UGA",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:GEORGIA",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "ncaaf championship"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Georgia win the College Football Playoff National Championship?",
+          "outcome": "Georgia",
+          "opposite": "Georgia",
+          "category": "Sports",
+          "rules": "If Georgia wins the College Football Playoff National Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated,  associated,  authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAF.pdf\n\n[{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxncaaf/kxncaaf-27",
+          "closeAt": "2027-01-26T04:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "09e93cae28489891d9536d2f9db4eaa51b6d184c0af3de3755cc83bd3fcf4c7b",
+          "settlement": null,
+          "series": "KXNCAAF"
+        },
+        "b": {
+          "id": "aqc-cfb-cfp-2026-12-06-playoffq-ga",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "eventAt": "2026-08-29T16:00:00.000Z",
+            "eventDate": "2026-08-29",
+            "participants": [
+              "CFB:GEORGIA"
+            ],
+            "participant": "CFB:GEORGIA",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:GEORGIA",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "georgia",
+                "venue": "poly",
+                "venueId": "1256",
+                "aliases": [
+                  "georgia",
+                  "bulldogs",
+                  "georgia",
+                  "ga",
+                  "uga"
+                ]
+              },
+              {
+                "name": "georgia",
+                "venue": "poly",
+                "venueId": "1256",
+                "aliases": [
+                  "georgia",
+                  "bulldogs",
+                  "georgia",
+                  "ga",
+                  "uga"
+                ]
+              }
+            ],
+            "eventKey": "college football playoff qualifiers"
+          },
+          "title": "Georgia \u00b7 College Football Playoff Qualifiers",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Georgia advances to the 2026-27 College Football Playoff. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/aqc-cfb-cfp-2026-12-06-playoffq-ga",
+          "closeAt": "2026-12-21T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "f69db075427655ee789a91a43ebac7743609814cef4e2bd839a2a52a88397833",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "ncaaf championship::college football playoff qualifiers",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Chris Pappas underperform Kamala Harris in New Hampshire? vs Chris Pappas (D) \u00b7 New Hampshire Senate Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXUNDERHARRIS-27JAN04-CPAP::ewc-usse-nh-2026-11-03-dem",
+        "a": {
+          "id": "KXUNDERHARRIS-27JAN04-CPAP",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "chris pappas",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Chris Pappas underperform Kamala Harris in New Hampshire?",
+          "outcome": "Chris Pappas",
+          "opposite": "Chris Pappas",
+          "category": "Elections",
+          "rules": "If Chris Pappas's certified vote share in the 2026 general election is lower than Kamala Harris's certified 2024 presidential vote share in their state, then the market resolves to Yes.\n\nA candidate's 2026 vote share is their share of all votes cast in the November 3, 2026 general election for the listed office, as certified by that state's official election authority, including votes received on every ballot line on which the candidate appears. Where a race uses ranked-choice tabulation or a runoff, the first-round (first-choice) share is used. Kamala Harris's 2024 vote share is her share of that state's certified 2024 presidential vote, including every ballot line on which she appeared, per the Federal Election Commission's official 2024 presidential general election results. Shares are compared unrounded.\n\nOffices: Troy Jackson, U.S. Senate (Maine); Tina Kotek, Governor (Oregon); Keisha Lance Bottoms, Governor (Georgia); Kathy Hochul, Governor (New York); Chris Pappas, U.S. Senate (New Hampshire); Abdul El-Sayed, U.S. Senate (Michigan); Angie Nixon, U.S. Senate (Florida); David Jolly, Governor (Florida); Peggy Flanagan, U.S. Senate (Minnesota). A market resolves NO if the listed person is not the Democratic nominee (for Minnesota, the Democratic-Farmer-Labor nominee) on that race's 2026 general-election ballot.\n\nhttps://assets.kalshi.com/contract_terms/POLITICALSTAT.pdf\n\n[{\"name\":\"Georgia Secretary of State\",\"url\":\"https://results.sos.ga.gov/\"},{\"name\":\"Maine Secretary of State\",\"url\":\"https://www.maine.gov/sos/cec/elec/\"},{\"name\":\"Florida Department of State\",\"url\":\"https://dos.fl.gov/elections/\"},{\"name\":\"Federal Election Commission\",\"url\":\"https://www.fec.gov\"},{\"name\":\"New York State Board of Elections\",\"url\":\"https://elections.ny.gov/\"},{\"name\":\"Oregon Secretary of State\",\"url\":\"https://sos.oregon.gov/elections/\"},{\"name\":\"Michigan Department of State\",\"url\":\"https://www.michigan.gov/sos/elections\"},{\"name\":\"New Hampshire Secretary of State\",\"url\":\"https://www.sos.nh.gov/elections\"},{\"name\":\"Minnesota Secretary of State\",\"url\":\"https://www.sos.mn.gov/elections-voting/election-results/\"}]",
+          "url": "https://kalshi.com/markets/kxunderharris/kxunderharris-27jan04",
+          "closeAt": "2027-01-04T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "c86a894e54dc4a7de27977afd71109b51b107f6d9a758f196d64b7b199ff5521",
+          "settlement": null,
+          "series": "KXUNDERHARRIS"
+        },
+        "b": {
+          "id": "ewc-usse-nh-2026-11-03-dem",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T17:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "new hampshire senate election winner"
+          },
+          "title": "Chris Pappas (D) \u00b7 New Hampshire Senate Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if the Democratic Party nominee wins the 2026 midterm election for US Senator from New Hampshire. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/ewc-usse-nh-2026-11-03-dem",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "25426fc4d4247ffadad27bf77a04bb57db226532de9977b585aab9187cb004e4",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXUNDERHARRIS-27JAN04-CPAP::new hampshire senate election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Manchester City win the Champions League?",
+    "route": {
+      "pair": {
+        "id": "KXUCL-27-MCI::arankc-epl-2027-05-30-top4-mnc",
+        "a": {
+          "id": "KXUCL-27-MCI",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "manchester city",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "uefa champions league"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Manchester City win the Champions League?",
+          "outcome": "Manchester City",
+          "opposite": "Manchester City",
+          "category": "Sports",
+          "rules": "If Manchester City is the 2026-27 Champions League winner, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCER.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxucl/kxucl-27",
+          "closeAt": "2027-06-05T21:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "4b5cd2a7fc1a9e52305cc2432019c6a5056f7102fea5aad3cdccf667f3ac8930",
+          "settlement": null,
+          "series": "KXUCL"
+        },
+        "b": {
+          "id": "arankc-epl-2027-05-30-top4-mnc",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "epl",
+            "eventAt": "2026-08-21T19:00:00.000Z",
+            "eventDate": "2026-08-21",
+            "participants": [
+              "EPL:MANCHESTER_CITY"
+            ],
+            "participant": "EPL:MANCHESTER_CITY",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "EPL:MANCHESTER_CITY",
+            "entities": [],
+            "numbers": [
+              "4"
+            ],
+            "aliases": [
+              {
+                "name": "manchester city",
+                "venue": "poly",
+                "venueId": "2693",
+                "aliases": [
+                  "manchester city fc",
+                  "city",
+                  "manchester city",
+                  "mnc",
+                  "mnc"
+                ]
+              },
+              {
+                "name": "manchester city",
+                "venue": "poly",
+                "venueId": "2693",
+                "aliases": [
+                  "manchester city fc",
+                  "city",
+                  "manchester city",
+                  "mnc",
+                  "mnc"
+                ]
+              }
+            ],
+            "eventKey": "english premier league top 4 finisher"
+          },
+          "title": "Manchester City \u00b7 English Premier League Top 4 Finisher",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Manchester City FC finishes in the top 4 of the 2026-2027 Premier League. Outcome sourced from Premier League.",
+          "url": "https://polymarket.us/event/arankc-epl-2027-05-30-top4-mnc",
+          "closeAt": "2027-06-14T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "c64fae8f27f8669476531fdf55cafce9d0fc6c5568dca128b5d4eb7984d27aad",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "uefa champions league::english premier league top 4 finisher",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "Will Fl\u00e1vio Bolsonaro receive at least 39% of the popular vote in the first round of the 2026 Brazilian presidential election? vs Flavio Bolsonaro \u00b7 Brazil Presidential Election First Round Winner",
+    "route": {
+      "pair": {
+        "id": "KXVOTEBR1-BRPRES26FBOL-39::pvwc-pres-bra-2026-10-04-r1-flabol",
+        "a": {
+          "id": "KXVOTEBR1-BRPRES26FBOL-39",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "line": 39,
+            "outcome": "at least 39",
+            "entities": [],
+            "numbers": [
+              "39",
+              "2026",
+              "39"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Fl\u00e1vio Bolsonaro receive at least 39% of the popular vote in the first round of the 2026 Brazilian presidential election?",
+          "outcome": "At least 39%",
+          "opposite": "At least 39%",
+          "category": "Elections",
+          "rules": "If the certified percentage of the popular vote received by Fl\u00e1vio Bolsonaro in the first round of the 2026 Brazilian presidential election is 39% to 100%, inclusive of both endpoints, then the market resolves to Yes.\n\nThe percentage is Fl\u00e1vio Bolsonaro's share of the valid votes cast in the first round, calculated as votes received divided by total valid votes cast, times 100, rounded to two decimal places. Except as provided by the Fully-Conducted Elections and Accelerated Resolution provisions in the Contract, resolution uses certified official results from the Tribunal Superior Eleitoral, not preliminary results. Invalid, spoiled, blank, and rejected ballots are excluded from both numerator and denominator. If a recount changes the certified percentage before expiration, the most recent certified percentage is used.\n\nhttps://assets.kalshi.com/contract_terms/VOTEPERCENT.pdf\n\n[{\"name\":\"Tribunal Superior Eleitoral (TSE)\",\"url\":\"https://international.tse.jus.br/en\"}]",
+          "url": "https://kalshi.com/markets/kxvotebr1/kxvotebr1-brpres26fbol",
+          "closeAt": "2026-11-04T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "a8b167bd227febaacb46b6bd808b94b432676c190c28b3fd736faf37dd41faa1",
+          "settlement": null,
+          "series": "KXVOTEBR1"
+        },
+        "b": {
+          "id": "pvwc-pres-bra-2026-10-04-r1-flabol",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "pres",
+            "eventAt": "2026-10-04T16:00:00.000Z",
+            "eventDate": "2026-10-04",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "brazil presidential election first round winner"
+          },
+          "title": "Flavio Bolsonaro \u00b7 Brazil Presidential Election First Round Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Flavio Bolsonaro receives the most valid votes of any candidate in the first round of the 2026 Brazilian presidential election. Outcome sourced from relevant government authorities.\n\nVote totals will be inclusive of all valid votes cast in the first round of the 2026 Brazilian presidential election. If multiple candidates tie for the most votes in the first round, Yes contract holders for each tied candidate receive $1.00 divided by the number of tied candidates, rounded down to the nearest tick, per contract.",
+          "url": "https://polymarket.us/event/pvwc-pres-bra-2026-10-04-r1-flabol",
+          "closeAt": "2026-10-19T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "aeb29130c29994b7ca765271ca08f97a5d7e12fa04819d4eb2c0388acbf5925a",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXVOTEBR1-BRPRES26FBOL-39::brazil presidential election first round winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Jaylen Warren Receiving Yards Escalator",
+    "route": {
+      "pair": {
+        "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITJWARREN30::astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+        "a": {
+          "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITJWARREN30",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflescalatorrecyds",
+            "outcome": "jaylen warren",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Jaylen Warren Receiving Yards Escalator",
+          "outcome": "Jaylen Warren",
+          "opposite": "Jaylen Warren",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays per receiving yards by Jaylen Warren in the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each 10 receiving yards increase the payout by the following schedule: 0\u20139 yards, $0.0000; 10\u201319, $0.0001; 20\u201329, $0.0010; 30\u201339, $0.0033; 40\u201349, $0.0080; 50\u201359, $0.0156; 60\u201369, $0.0270; 70\u201379, $0.0428; 80\u201389, $0.0640; 90\u201399, $0.0911; 100\u2013109, $0.1250; 110\u2013119, $0.1663; 120\u2013129, $0.2160; 130\u2013139, $0.2746; 140\u2013149, $0.3430; 150\u2013159, $0.4218; 160\u2013169, $0.5120; 170\u2013179, $0.6141; 180\u2013189, $0.7290; 190\u2013199, $0.8573; and 200 or more, $1.0000. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract shown above follows this calculation:\nPayout Formula = floor(10000 x (y / 200)^3) / 10000\ny = min(200, max(0, 10 x floor(s / 10)))\ns = official receiving yards\n\nThe No payout is $1.00 minus the Yes payout. Negative receiving yard totals pay Yes $0.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflescalatorrecyds/kxnflescalatorrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "4b5d2f61b01cbd26afe23773704ca1e9a6194717a9bd303a4bb9bca29defd529",
+          "settlement": null,
+          "series": "KXNFLESCALATORRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "jaylen warren",
+            "marketType": "prop",
+            "line": 24.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "jaylen warren",
+            "entities": [],
+            "numbers": [
+              "25",
+              "25"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "Jaylen Warren 25+ receiving yards \u00b7 Will Jaylen Warren record 25+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Jaylen Warren records at least 25 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "eb3e1b96ad0a387102342c62f973f661acc5c067d9a41221a146127ae88f6b36",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITJWARREN30::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 1,
+        "poly": 100
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "Will Indiana reach the College Football Playoff National Championship Game?",
+    "route": {
+      "pair": {
+        "id": "KXNCAAFFINALIST-27-IND::aqc-cfb-cfp-2026-12-06-playoffq-ind",
+        "a": {
+          "id": "KXNCAAFFINALIST-27-IND",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:INDIANA",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "college football finalist"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Indiana reach the College Football Playoff National Championship Game?",
+          "outcome": "Indiana",
+          "opposite": "Indiana",
+          "category": "Sports",
+          "rules": "If Indiana is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFMILESTONES.pdf\n\n[{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxncaaffinalist/kxncaaffinalist-27",
+          "closeAt": "2027-01-11T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "8cc3693a67ead775a7077b53730da382b836fe759caf579de1058b406f9a96fa",
+          "settlement": null,
+          "series": "KXNCAAFFINALIST"
+        },
+        "b": {
+          "id": "aqc-cfb-cfp-2026-12-06-playoffq-ind",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "eventAt": "2026-08-29T16:00:00.000Z",
+            "eventDate": "2026-08-29",
+            "participants": [
+              "CFB:INDIANA"
+            ],
+            "participant": "CFB:INDIANA",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:INDIANA",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "indiana",
+                "venue": "poly",
+                "venueId": "1124",
+                "aliases": [
+                  "indiana",
+                  "hoosiers",
+                  "indiana",
+                  "ind",
+                  "ind"
+                ]
+              },
+              {
+                "name": "indiana",
+                "venue": "poly",
+                "venueId": "1124",
+                "aliases": [
+                  "indiana",
+                  "hoosiers",
+                  "indiana",
+                  "ind",
+                  "ind"
+                ]
+              }
+            ],
+            "eventKey": "college football playoff qualifiers"
+          },
+          "title": "Indiana \u00b7 College Football Playoff Qualifiers",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Indiana advances to the 2026-27 College Football Playoff. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/aqc-cfb-cfp-2026-12-06-playoffq-ind",
+          "closeAt": "2026-12-21T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "2f67842b9a9fab7ec28df8e50963d6f4fa36c351395eea0588deaef564b8fb67",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "college football finalist::college football playoff qualifiers",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "UNRESOLVED"
+  },
+  {
+    "label": "2027 Best Actress Oscar nominations?",
+    "route": {
+      "pair": {
+        "id": "KXOSCARNOMACTR-27-REN::tac-oscars-03-14-2027-bestactre-renrei",
+        "a": {
+          "id": "KXOSCARNOMACTR-27-REN",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "renate reinsve",
+            "entities": [],
+            "numbers": [
+              "2027"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "2027 Best Actress Oscar nominations?",
+          "outcome": "Renate Reinsve",
+          "opposite": "Renate Reinsve",
+          "category": "Entertainment",
+          "rules": "If Renate Reinsve has been nominated for Best Actress at the 99th Academy Awards, then the market resolves to Yes.\n\nThe 99th Academy Awards Nominations are expected to be announced in January 2027.\n\nThis market and these products have not been endorsed by the Oscars. Any references to Oscars, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Oscars and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/OSCARNOMS.pdf\n\n[{\"name\":\"Academy of Motion Picture Arts and Sciences\",\"url\":\"https://www.oscars.org/oscars\"}]",
+          "url": "https://kalshi.com/markets/kxoscarnomactr/kxoscarnomactr-27",
+          "closeAt": "2027-01-21T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "3dcebd70046823d5e207d6822e09d6530a59289f1fbbf1ea58ed6214bd212675",
+          "settlement": null,
+          "series": "KXOSCARNOMACTR"
+        },
+        "b": {
+          "id": "tac-oscars-03-14-2027-bestactre-renrei",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "oscars",
+            "eventAt": "2026-07-25T03:59:00.000Z",
+            "eventDate": "2026-07-25",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "oscar winner best actress"
+          },
+          "title": "Renate Reinsve \u00b7 Oscar Winner: Best Actress",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "This market will settle to Yes if Renate Reinsve wins Best Actress at the 99th Academy Awards. Outcome sourced from Academy of Motion Picture Arts and Sciences.",
+          "url": "https://polymarket.us/event/tac-oscars-03-14-2027-bestactre-renrei",
+          "closeAt": "2027-03-29T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "83fed3ee145c708ad1040d693072b73ec7502a23876b41a98e3eceb1ddbe96e0",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXOSCARNOMACTR-27-REN::oscar winner best actress",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Mistral IPO with unresolved issuance contingencies",
+    "route": {
+      "pair": {
+        "id": "KXIPO-26-MISTRAL::ipcc-2026ipos-mistral-ai",
+        "a": {
+          "id": "KXIPO-26-MISTRAL",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "mistral ai",
+            "entities": [],
+            "numbers": [
+              "2027"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Who will IPO before 2027?",
+          "outcome": "Mistral AI",
+          "opposite": "Mistral AI",
+          "category": "Financials",
+          "rules": "If Mistral AI confirms an IPO before Jan 1, 2027, then the market resolves to Yes.\n\nAn IPO is confirmed if 1) the SEC declares the company's Form S-1 effective OR 2) the IPO is priced OR 3) a securities exchange has assigned a ticker to it. As long as any of those events occur, the market will immediately resolve to Yes, even if the company does not start trading until after Jan 1, 2027.\n\nhttps://assets.kalshi.com/contract_terms/IPOEVENTANNOUNCE.pdf\n\n[{\"name\":\"the New York Times\",\"url\":\"https://www.nytimes.com\"},{\"name\":\"ABC\",\"url\":\"https://abcnews.go.com/\"},{\"name\":\"Bloomberg\",\"url\":\"https://www.bloomberg.com\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Financial Times\",\"url\":\"https://www.ft.com\"},{\"name\":\"CNBC\",\"url\":\"https://www.cnbc.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com\"},{\"name\":\"BBC\",\"url\":\"https://www.bbc.co.uk\"}]",
+          "url": "https://kalshi.com/markets/kxipo/kxipo-26",
+          "closeAt": "2027-01-01T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "7b655f4bdf21a4618291725ec4733c84388b4af020127569fe90167b842ef325",
+          "settlement": null,
+          "series": "KXIPO"
+        },
+        "b": {
+          "id": "ipcc-2026ipos-mistral-ai",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "2026ipos",
+            "eventAt": "2027-01-01T04:59:00.000Z",
+            "eventDate": "2027-01-01",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "which companies will confirm an ipo in 2026"
+          },
+          "title": "Mistral AI \u00b7 Which Companies Will Confirm an IPO in 2026",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "finance",
+          "rules": "If Mistral AI confirms an IPO by December 31, 2026, 11:59 PM ET, this market will settle to Yes. Outcome verified by Mistral AI, the relevant IPO regulatory authority, and the IPOs primary listing exchange.\n\nAn IPO is confirmed when i) the SEC declares the specified companys Form S-1 or equivalent registration statement effective, or an equivalent filing with an alternative recognized national securities regulator is approved and made public ii) the IPO is priced (e.g., through a final pricing press release or submission of SEC Form 424B4) or iii) a public securities exchange assigns the specified company a ticker symbol and announces that the company has been approved for initial listing pursuant to an IPO. The occurrence of any of these events qualifies, regardless of when the specified companys equity shares begin public trading.",
+          "url": "https://polymarket.us/event/ipcc-2026ipos-mistral-ai",
+          "closeAt": "2027-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "95b9a98e053e62973937b399af0fee29f40a836315536e643de3349d342e50e7",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "CANONICAL",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXIPO-26-MISTRAL::which companies will confirm an ipo in 2026",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "ORDINARY_EQUIVALENT_BASIS_RISK"
+  }
+]

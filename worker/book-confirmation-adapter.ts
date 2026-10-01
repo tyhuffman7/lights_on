@@ -42,13 +42,13 @@ export class ConfirmationFeed{
  liveBook(id:string,at=Date.now(),mono=performance.now()){
   const r=this.latest.get(id),h=this.health();if(!r)return null;
   const b=r.e.book;const sequenced=b.venue==='kalshi'?
-   Number.isSafeInteger(b.sequence)&&this.cache.subscriptions.get(id)===r.sid&&this.cache.sequences.get(r.sid)!>=b.sequence!:
+   Number.isSafeInteger(b.sequence)&&Number.isSafeInteger(r.sid)&&this.cache.subscriptions.get(id)===r.sid&&this.cache.sequences.get(r.sid!)!>=b.sequence!:
    transactionVersion(r.transactTime)!==null;
   const valid=h.connected&&h.backlog===0&&h.clockOkay&&r.e.faults.length===0&&sequenced&&b.valid&&mono>=b.receivedMono&&
    Math.abs((at-b.receivedAt)-(mono-b.receivedMono))<=1000;
   return {book:{...b,valid,connection:valid?'LIVE' as const:'RECOVERING' as const},proof:{
    source:'NATIVE_WS',validation:b.venue==='kalshi'?'CONTIGUOUS_SUBSCRIPTION_SEQUENCE':'FULL_SNAPSHOT_MONOTONIC_TRANSACTION_VERSION_NO_NATIVE_SEQUENCE',
-   sequence:b.sequence,subscriptionSequence:this.cache.sequences.get(r.sid),transactTime:r.transactTime,health:h,faults:r.e.faults}};
+   sequence:b.sequence,subscriptionSequence:r.sid===undefined?null:this.cache.sequences.get(r.sid),transactTime:r.transactTime,health:h,faults:r.e.faults}};
  }
  health():FeedHealth{if(Math.abs((Date.now()-this.wall)-(performance.now()-this.mono))>1000)this.clockFault=true;return {connected:this.failures.length===0&&this.stream.isHealthy(),backlog:this.stream.ingress?.depth??0,clockOkay:!this.clockFault};}
  start(){this.stream.start();}
