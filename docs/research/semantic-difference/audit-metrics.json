@@ -1,0 +1,144 @@
+{
+  "scope": "Finite enriched and correlated agent reference labels; not population precision/recall or independent human audit. Temporal holdout; no post-window semantic repair/replay.",
+  "samples": {
+    "promoted": {
+      "reviewed": 30,
+      "available": 75,
+      "referenceCounts": {
+        "DIFFERENT_QUESTION": 3,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 27
+      },
+      "fresh": 30,
+      "uniquePairIds": 30
+    },
+    "unresolved": {
+      "reviewed": 30,
+      "available": 130,
+      "referenceCounts": {
+        "DIFFERENT_QUESTION": 30
+      },
+      "fresh": 0,
+      "uniquePairIds": 30
+    },
+    "rejected": {
+      "reviewed": 30,
+      "available": 12583,
+      "referenceCounts": {
+        "DIFFERENT_QUESTION": 30
+      },
+      "fresh": 0,
+      "uniquePairIds": 30
+    },
+    "confirmed-unresolved": {
+      "reviewed": 30,
+      "available": 31,
+      "referenceCounts": {
+        "DIFFERENT_QUESTION": 9,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 18,
+        "UNRESOLVED": 3
+      },
+      "fresh": 30,
+      "uniquePairIds": 29
+    }
+  },
+  "matrices": {
+    "primary90": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "UNRESOLVED": 0,
+        "DIFFERENT_QUESTION": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 27,
+        "UNRESOLVED": 0,
+        "DIFFERENT_QUESTION": 3
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "UNRESOLVED": 0,
+        "DIFFERENT_QUESTION": 30
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "UNRESOLVED": 0,
+        "DIFFERENT_QUESTION": 30
+      }
+    },
+    "supplemental30": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "UNRESOLVED": 0,
+        "DIFFERENT_QUESTION": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "UNRESOLVED": 0,
+        "DIFFERENT_QUESTION": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 18,
+        "UNRESOLVED": 3,
+        "DIFFERENT_QUESTION": 9
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "UNRESOLVED": 0,
+        "DIFFERENT_QUESTION": 0
+      }
+    }
+  },
+  "basisPromotionPrecision": {
+    "numerator": 27,
+    "denominator": 30,
+    "value": 0.9
+  },
+  "falseBasisPromotions": [
+    "KXUCLLEADER-27GOAL-KMBAPP10::aachc-ucl-2027-06-05-mostast-kylmba:no",
+    "KXUCLLEADER-27AST-LYAMAL10::aachc-ucl-2027-06-05-topscorer-lamyam:no",
+    "KXUCLLEADER-27AST-MOLISE17::aachc-ucl-2027-06-05-topscorer-micoli:no"
+  ],
+  "legitimateRejected": {
+    "numerator": 0,
+    "denominator": 30
+  },
+  "strictCandidates": 0,
+  "reviewedRows": 120,
+  "uniqueRouteOrientations": 116,
+  "primarySupplementalOverlap": 4,
+  "novelty": {
+    "promoted": {
+      "pairNotInPriorRetainedCandidateIndex": 11,
+      "termHashPairNotInPriorRetainedCandidateIndex": 11,
+      "scope": "Compared only with prior retained candidate index, not complete prior catalog or proof of unseen markets."
+    },
+    "unresolved": {
+      "pairNotInPriorRetainedCandidateIndex": 30,
+      "termHashPairNotInPriorRetainedCandidateIndex": 30,
+      "scope": "Compared only with prior retained candidate index, not complete prior catalog or proof of unseen markets."
+    },
+    "rejected": {
+      "pairNotInPriorRetainedCandidateIndex": 0,
+      "termHashPairNotInPriorRetainedCandidateIndex": 0,
+      "scope": "Compared only with prior retained candidate index, not complete prior catalog or proof of unseen markets."
+    },
+    "confirmed-unresolved": {
+      "pairNotInPriorRetainedCandidateIndex": 22,
+      "termHashPairNotInPriorRetainedCandidateIndex": 22,
+      "scope": "Compared only with prior retained candidate index, not complete prior catalog or proof of unseen markets."
+    }
+  },
+  "stress": {
+    "ordinaryQuoteRows": 45,
+    "fragmentationStressFailures": 45,
+    "oneTickStressFailures": 32,
+    "executionBlockerRows": 4
+  }
+}
