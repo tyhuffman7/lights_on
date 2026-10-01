@@ -5,8 +5,8 @@ import {canonicalTemplate, canonicalTemplateKey} from './canonical-template.ts';
 import {normalizeText,generalHints} from './identity.ts';
 import {evaluateEvArb, evPaperDefaults, USD_SCALE} from './ev-arb.ts';
 
-export const recallPolicy = Object.freeze({ordersEnabled:false, sampleMs:250, discoveryMs:300_000,
-  durationMs:20*60_000, maxContracts:10, maxConfirmationJobs:2, confirmationCooldownMs:10_000,
+export const recallPolicy = Object.freeze({ordersEnabled:false, sampleMs:25, discoveryMs:3600_000,
+  durationMs:20*60_000, maxContracts:10, maxConfirmationJobs:4, confirmationCooldownMs:1000, metadataTtlMs:300_000, hotHoldMs:10_000, hotNearNet:200, auditMs:30_000, maxPendingAgeMs:2000,
   streamGroupSize:100,maxStreamRestarts:3,maxPublicHttpAttempts:3, maxBookAgeMs:2000, restSpacingMs:300, maxEvidenceBytes:256*1024*1024,
   delayMs:[0,100,250,500,1000], simulatedCapitalPerVenue:50, maxPairedCommitment:5});
 export type RecallRoute={pair:Pair;matchSource:'CANONICAL'|'SPORTS_EVENT'|'TEXT';warnings:string[];eventKey:string;ticks?:Record<Venue,number>};

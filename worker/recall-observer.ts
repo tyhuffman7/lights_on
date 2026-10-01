@@ -10,6 +10,7 @@ import {assessSettlement} from '../lib/research/settlement-validation.ts';
 import {takeDepth,normalFee,USD_SCALE} from '../lib/research/ev-arb.ts';
 import {recallPolicy,recallMatches,recallSignals,fairRoutes,currentBook,bookAges,freshnessBucket,
   type RecallRoute,type ObservedBook} from '../lib/research/recall-detector.ts';
+import {LatestCandidates,candidateKey,priority,paperSettlement,differentQuestion,selectConfirmationBooks} from '../lib/research/hot-confirmation.ts';
 import {ConfirmationFeed} from './book-confirmation-adapter.ts';
 import {reconcileGroups} from './coverage.ts';
 
@@ -25,7 +26,7 @@ export function matchOffThread(kalshi:Market[],poly:Market[],signal:AbortSignal)
   });
 }
 export class PublicData {
-  slots=new Map<string,number>();cooldowns=new Map<string,number>();counts:Record<string,number>={};failures:Record<string,number>={};
+  endpointCounts:Record<string,number>={};durations:Record<string,number[]>={};slots=new Map<string,number>();cooldowns=new Map<string,number>();counts:Record<string,number>={};failures:Record<string,number>={};
   signal:AbortSignal;record:(kind:string,body:unknown)=>void;
   constructor(signal:AbortSignal,record:(kind:string,body:unknown)=>void=()=>{}){this.signal=signal;this.record=record;}
   async get(url:string,uncached=false){
@@ -38,6 +39,8 @@ export class PublicData {
       while((this.cooldowns.get(u.hostname)??0)>Date.now()){
         await sleep(Math.min(1000,this.cooldowns.get(u.hostname)!-Date.now()));this.signal.throwIfAborted();}
       if(uncached)u.searchParams.set('lights_on',randomUUID());
+      const endpoint=u.hostname+(u.pathname.endsWith('/book')?':book':u.pathname==='/v1/markets'?':catalog':':metadata');
+      this.endpointCounts[endpoint]=(this.endpointCounts[endpoint]??0)+1;
       const requestAt=Date.now(),mono=performance.now();this.counts[u.hostname]=(this.counts[u.hostname]??0)+1;
       try{
         const response=await fetch(u,{headers:{accept:'application/json','cache-control':'no-cache, no-store',pragma:'no-cache'},
@@ -48,7 +51,7 @@ export class PublicData {
         if(!response.ok){if(response.status===429){const seconds=Number(response.headers.get('retry-after')??0);
           this.cooldowns.set(u.hostname,Date.now()+Math.min(30_000,Math.max(2000*2**attempt,(Number.isFinite(seconds)?seconds:0)*1000)));}
           throw Error('HTTP_'+response.status);}
-        const data=JSON.parse(raw);this.record('HTTP_PUBLIC',{url:u.toString(),transport,data});return {data,transport};
+        (this.durations[endpoint]??=[]).push(transport.durationMs);const data=JSON.parse(raw);this.record('HTTP_PUBLIC',{url:u.toString(),transport,data});return {data,transport};
       }catch(error){const key=u.hostname+':'+(error as Error).message;this.failures[key]=(this.failures[key]??0)+1;
         this.record('HTTP_PUBLIC_FAILURE',{host:u.hostname,path:u.pathname,attempt:attempt+1,reason:(error as Error).message});
         if((error as Error).message==='HTTP_429'&&attempt+1<recallPolicy.maxPublicHttpAttempts)continue;throw error;}
@@ -123,10 +126,7 @@ async function refreshCandidateMetadata(api:PublicData,route:RecallRoute){
 
 type Signal=ReturnType<typeof recallSignals>[number];
 export function nextConfirmation<T extends {route:RecallRoute;signal:Signal;queuedAt:number}>(pending:T[],fair:boolean){
-  return [...pending].sort((a,b)=>fair?a.queuedAt-b.queuedAt:
-    Number(b.route.matchSource==='CANONICAL')-Number(a.route.matchSource==='CANONICAL')||
-    Number(a.route.warnings.includes('ORIENTATION_UNPROVEN'))-Number(b.route.warnings.includes('ORIENTATION_UNPROVEN'))||
-    Number(b.signal.fresh)-Number(a.signal.fresh)||a.queuedAt-b.queuedAt)[0];
+  return [...pending].sort((a,b)=>fair?a.queuedAt-b.queuedAt:priority({...a,key:'',firstQueuedAt:a.queuedAt},{...b,key:'',firstQueuedAt:b.queuedAt}))[0];
 }
 export function delayCounterfactual(route:RecallRoute,signal:Signal,entry:Record<Venue,ObservedBook>,
   future:Record<Venue,ObservedBook>|null,first:Venue,requestedDelayMs:number,actualDelayMs:number,at:number){
@@ -151,14 +151,14 @@ export function delayCounterfactual(route:RecallRoute,signal:Signal,entry:Record
     modeledNet:unwind&&unwindFee!==null?unwind.cost-firstTake.cost-fee-unwindFee:null};
 }
 
-export async function observeRecall(directory:string,durationMs=recallPolicy.durationMs,env?:string){
+export async function observeRecall(directory:string,durationMs=recallPolicy.durationMs,env?:string,catalogPath?:string){
   if(!Number.isSafeInteger(durationMs)||durationMs<1000||durationMs>90*60_000)throw Error('BOUNDED_DURATION_REQUIRED');
   if(env)process.loadEnvFile(resolve(env));mkdirSync(directory,{recursive:true,mode:0o700});
   const sourceHashes=Object.fromEntries(['worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
-    'lib/arb/adapters.ts','worker/streams.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
+    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
   const frozen={policy:{...recallPolicy,durationMs},sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
   writeFileSync(resolve(directory,'frozen.json'),JSON.stringify(frozen,null,2)+'\n',{flag:'wx',mode:0o600});
-  const control=new AbortController(),preparation=setTimeout(()=>control.abort(),10*60_000);
+  const control=new AbortController(),preparation=setTimeout(()=>control.abort(),20*60_000);
   let evidenceBytes=0;const counts:Record<string,number>={},reasons:Record<string,number>={};
   const count=(k:string,n=1)=>counts[k]=(counts[k]??0)+n;
   const record=(kind:string,body:unknown)=>{const row=JSON.stringify({at:Date.now(),kind,body})+'\n';
@@ -166,20 +166,27 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     appendFileSync(resolve(directory,'evidence.ndjson'),row,{mode:0o600});evidenceBytes+=Buffer.byteLength(row);};
   // Catalog bodies are saved once separately, not repeated in the L2 event log.
   const api=new PublicData(control.signal,(kind,body)=>{if(kind==='HTTP_PUBLIC_FAILURE')record(kind,body);});
-  let data=await currentCatalog(api,x=>console.log(JSON.stringify(x)));
+  let data=catalogPath?JSON.parse(readFileSync(resolve(catalogPath),'utf8')):await currentCatalog(api,x=>console.log(JSON.stringify(x)));
+  if(catalogPath){if(Date.now()-data.endedAt>30*60_000||!data.complete)throw Error('BOOTSTRAP_CATALOG_EXPIRED_OR_INCOMPLETE');data.raw=new Map(data.raw);}
   if(!data.kalshi.length||!data.poly.length)throw Error('NO_NATIVE_CATALOG');
   let matched=await matchOffThread(data.kalshi,data.poly,control.signal),routes=fairRoutes(matched.routes),cycles=1;
   let start=0,mono=performance.now(),deadline=0,deadlineTimer:ReturnType<typeof setTimeout>|null=null;
   attachTicks(routes,data.raw);
   const catalogSave=()=>writeFileSync(resolve(directory,`catalog-${cycles}.json`),JSON.stringify({at:data.at,endedAt:data.endedAt,
-    complete:data.complete,errors:data.errors,counts:data.counts,kalshi:data.kalshi,poly:data.poly})+'\n',{mode:0o600});catalogSave();
+    complete:data.complete,errors:data.errors,counts:data.counts,kalshi:data.kalshi,poly:data.poly,raw:routes.flatMap(r=>[['kalshi:'+r.pair.a.id,data.raw.get('kalshi:'+r.pair.a.id)],['poly:'+r.pair.b.id,data.raw.get('poly:'+r.pair.b.id)]])})+'\n',{mode:0o600});catalogSave();
   const allRoutes=new Map(routes.map(r=>[r.pair.id,r])),visited=new Set<string>(),twoBook=new Set<string>(),freshRoutes=new Set<string>();
   const buckets={kalshi:{receipt:{} as Record<string,number>,exchange:{} as Record<string,number>},poly:{receipt:{} as Record<string,number>,exchange:{} as Record<string,number>}};
   const observed=new Map<string,ObservedBook>(),feeds=new Map<string,ConfirmationFeed>(),marketFeeds=new Map<string,ConfirmationFeed>(),dirty=new Set<string>();
   let byMarket=new Map<string,string[]>(),restCursor=0,restActive=false,refreshing:Promise<void>|null=null;
   const jobs=new Set<Promise<void>>(),cooldown=new Map<string,number>(),candidateFingerprints=new Set<string>();
-  const pendingCandidates=new Map<string,{route:RecallRoute;signal:Signal;queuedAt:number}>();
-  let confirmationTurn=0;
+  const queue=new LatestCandidates(),pendingCandidates=queue.pending,inFlight=new Set<string>(),hot=new Map<string,number>();
+  const metadata=new Map<string,Awaited<ReturnType<typeof refreshCandidateMetadata>>>(),metadataJobs=new Set<Promise<void>>();
+  const latency={queue:[] as number[],work:[] as number[],signal:[] as number[],firstSignal:[] as number[]};
+  let lastAudit=0,peakHot=0,peakQueue=0,lastMetadata=0;
+  const classifications=new Map<string,ReturnType<typeof paperSettlement>>(),falseMatches=new Set<string>();
+  const classify=(r:RecallRoute)=>{const key=r.pair.id+':'+r.pair.a.hash+':'+r.pair.b.hash;let c=classifications.get(key);if(!c){c=paperSettlement(r);classifications.set(key,c);}return c;};
+  let strongestConfirmed:{route:RecallRoute;signal:Signal;entry:Record<Venue,ObservedBook>;settlement:ReturnType<typeof paperSettlement>;at:number}[]=[];
+  const percentiles=(xs:number[])=>{const a=[...xs].sort((a,b)=>a-b);return {n:a.length,median:a.length?a[Math.floor((a.length-1)*.5)]:null,p95:a.length?a[Math.floor((a.length-1)*.95)]:null,max:a.length?a.at(-1):null};};
   const feedRestarts=new Map<string,number>(),feedStarted=new Map<string,number>();let lastHealthCheck=start;
   let best:{route:RecallRoute;signal:Signal}[]=[],stopped=false,lastDiscovery=0;
   let highestGross:typeof best=[],nearPositive:typeof best=[],canonicalChecks:typeof best=[];
@@ -197,7 +204,11 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     unvisitedRoutes:[...allRoutes.keys()].filter(id=>!visited.has(id)).length,matchingDiagnostics:matched.diagnostics,
     counts,reasons,buckets,delayOutcomes,requests:api.counts,requestFailures:api.failures,evidenceBytes,
     contractVerifiedOpportunities:0,confirmedPaperArbs:0,
-    pendingConfirmations:pendingCandidates.size,
+    strongestConfirmed,falseMatchRoutes:falseMatches.size,pendingConfirmations:pendingCandidates.size,peakPendingConfirmations:peakQueue,hotRoutes:hot.size,peakHotRoutes:peakHot,
+    candidatesSuperseded:queue.superseded,candidatesDisappearedBeforeDispatch:queue.disappeared,
+    latencyMs:Object.fromEntries(Object.entries(latency).map(([k,v])=>[k,percentiles(v)])),
+    confirmationsPerSecond:(counts.confirmationRequests??0)/Math.max(1,(Date.now()-start)/1000),
+    endpointRequests:api.endpointCounts,httpLatencyMs:Object.fromEntries(Object.entries(api.durations).map(([k,v])=>[k,percentiles(v)])),
     lastActiveFeedHealth,
     feedHealth:[...feeds].map(([key,f])=>({key,ids:f.stream.options.ids.length,...f.health(),failures:f.failures,reconnects:f.stream.reconnectCount})),
     best:best.map(({route,signal})=>({event:route.pair.a.title,route,signal})),
@@ -220,37 +231,55 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   };
   const pairBooks=(r:RecallRoute):Record<Venue,ObservedBook>|null=>{
     const k=observed.get(bookKey('kalshi',r.pair.a.id)),p=observed.get(bookKey('poly',r.pair.b.id));if(!k||!p)return null;
-    const live=(v:Venue,b:ObservedBook)=>b.book.source==='rest'||marketFeeds.get(bookKey(v,b.book.marketId))?.health().connected===true;
-    return {kalshi:{...k,book:{...k.book,connection:live('kalshi',k)?'LIVE':'DISCONNECTED'}},poly:{...p,book:{...p.book,connection:live('poly',p)?'LIVE':'DISCONNECTED'}}};
+    const current=(v:Venue,b:ObservedBook)=>{const ws=marketFeeds.get(bookKey(v,b.book.marketId))?.liveBook(b.book.marketId);
+      // A newer stream snapshot always supersedes fallback state; REST never relabels stream health.
+      if(ws&&ws.book.receivedAt>=b.book.receivedAt)return ws;
+      return b.book.source==='rest'?b:ws??{book:{...b.book,valid:false,connection:'DISCONNECTED' as const}};};
+    return {kalshi:current('kalshi',k),poly:current('poly',p)};
   };
-  async function confirm(route:RecallRoute,signal:Signal,queuedAt:number){
-    const startedAt=Date.now();
-    count('confirmationRequests');record('CANDIDATE',{route,signal,books:pairBooks(route)});
+  const metadataRefresh=(route:RecallRoute)=>{
+    const cached=metadata.get(route.pair.id);if(cached&&Date.now()-cached.metadata.at<recallPolicy.metadataTtlMs)return;
+    if(Date.now()-data.endedAt<recallPolicy.metadataTtlMs||metadataJobs.size||Date.now()-lastMetadata<3000)return;lastMetadata=Date.now();
+    const job=refreshCandidateMetadata(api,route).then(r=>{metadata.set(route.pair.id,r);allRoutes.set(route.pair.id,r.route);dirty.add(route.pair.id);
+      count('metadataRefreshes');record('METADATA_REFRESH',{pairId:route.pair.id,...r});}).catch(error=>{count('metadataRefreshFailures');record('METADATA_FAILURE',{pairId:route.pair.id,reason:(error as Error).message});});
+    metadataJobs.add(job);void job.finally(()=>metadataJobs.delete(job));
+  };
+  async function confirm(item:ReturnType<LatestCandidates['next']>){
+    if(!item)return;let {route,signal,queuedAt,firstQueuedAt}=item;const startedAt=Date.now();
+    count('confirmationRequests');
     try{
-      const refreshed=await refreshCandidateMetadata(api,route);route=refreshed.route;
-      const [kalshi,poly]=await Promise.all([api.book(route.pair.a),api.book(route.pair.b)]),entry={kalshi,poly},at=Date.now();
-      const q=recallSignals(route,entry,at,[signal.evaluation.quantity]).find(s=>s.evaluation.kalshiSide===signal.evaluation.kalshiSide)!;
+      const cached=metadata.get(route.pair.id);if(cached)route=cached.route;
+      let entry=pairBooks(route);const missing=selectConfirmationBooks(route,entry,Date.now());
+      if(missing.length){count('restFallbackConfirmations');
+        await Promise.all(missing.map(async v=>{const m=v==='kalshi'?route.pair.a:route.pair.b;
+          // Kalshi correlated snapshot is preferred to REST when its sequence-valid stream is connected.
+          const feed=marketFeeds.get(bookKey(v,m.id));
+          if(v==='kalshi'&&feed?.health().connected){try{await feed.confirmKalshi(m.id);count('kalshiWsSnapshotFallbacks');return;}catch{count('kalshiWsSnapshotFallbackFailures');}}
+          const b=await api.book(m);const old=observed.get(bookKey(v,m.id));if(!old||old.book.receivedAt<=b.book.receivedAt)observed.set(bookKey(v,m.id),b);
+        }));entry=pairBooks(route);
+      }
+      if(!entry)throw Error('NO_PAIR_AFTER_FALLBACK');
+      const at=Date.now(),q=recallSignals(route,entry,at,[signal.evaluation.quantity]).find(s=>s.evaluation.kalshiSide===signal.evaluation.kalshiSide)!;
+      const wsOnly=missing.length===0&&entry.kalshi.book.source==='stream'&&entry.poly.book.source==='stream'&&q.fresh;
+      if(wsOnly)count('confirmationsEntirelyValidWs');
       count(q.candidate?'confirmationEconomicSurvivors':'confirmationDisappeared');
       if(q.candidate&&q.executable)count('confirmedExecutableCandidates');
-      const verification=assessSettlement(route.pair);
-      const unsupportedMatcher=verification.blockers.some(b=>/matching rejects|unavailable|unsupported|missing/i.test(b));
-      const state=verification.status==='CONFLICT'&&!unsupportedMatcher?'not-equivalent':'insufficient-information';
-      count(state==='not-equivalent'?'notEquivalent':'verificationPending');
-      // This assessment never certifies strict equivalence. Do not elevate its
-      // ordinary-result match or a Synpath label into a true arbitrage.
-      record('CONFIRMATION',{route,initial:signal,queueWaitMs:startedAt-queuedAt,confirmationWorkMs:at-startedAt,
-        quoteToConfirmationMs:at-signal.evaluation.at,signal:q,entry,metadata:refreshed.metadata,verification,
-        verificationState:state,status:!q.candidate?'disappeared':state==='not-equivalent'?'not-equivalent':
-          q.executable?'confirmed-executable-verification-pending':'economic-positive-freshness-pending'});
-      if(!q.candidate)return;
-      count('paperCandidateAttempts');const entryMono=performance.now();
-      for(const delay of recallPolicy.delayMs){await sleep(delay-(performance.now()-entryMono));if(control.signal.aborted)break;
-        const future=delay===0?entry:pairBooks(route),actual=performance.now()-entryMono;
-        for(const first of ['kalshi','poly'] as Venue[]){const result=delayCounterfactual(route,q,entry,future,first,delay,actual,Date.now());
-          const key=delay+'ms:'+result.outcome;delayOutcomes[key]=(delayOutcomes[key]??0)+1;record('DELAY_COUNTERFACTUAL',{pairId:route.pair.id,...result});}
-      }
+      const settlement=classify(route);count('settlement:'+settlement.classification);
+      if(q.candidate&&q.executable){count('freshSurvivor:'+settlement.classification);
+        strongestConfirmed=[...strongestConfirmed.filter(x=>x.route.pair.id!==route.pair.id),{route,signal:q,entry,settlement,at}]
+          .sort((a,b)=>(b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity)).slice(0,20);}
+      latency.queue.push(startedAt-queuedAt);latency.work.push(at-startedAt);latency.signal.push(at-signal.evaluation.at);latency.firstSignal.push(at-firstQueuedAt);
+      record('CONFIRMATION',{route,initial:signal,queueWaitMs:startedAt-queuedAt,firstSignalToConfirmationMs:at-firstQueuedAt,
+        confirmationWorkMs:at-startedAt,quoteToConfirmationMs:at-signal.evaluation.at,signal:q,entry,
+        source:wsOnly?'VALID_NATIVE_WS':missing.length?'NATIVE_FALLBACK':'CURRENT_NATIVE_STATE',
+        metadata:cached?.metadata??{at:data.endedAt,source:'NATIVE_CATALOG',reviewPending:true},settlement,
+        status:!q.candidate?'disappeared':q.executable?'fresh-executable-paper-candidate':'economic-positive-freshness-pending'});
+      // Metadata and independent audits run outside confirmation; no delayed-fill experiments occupy this lane.
+      if(q.candidate&&q.executable)metadataRefresh(route);
     }catch(error){const key='CONFIRMATION:'+(error as Error).message;reasons[key]=(reasons[key]??0)+1;record('CONFIRMATION_FAILURE',{pairId:route.pair.id,reason:key});}
+    finally{inFlight.delete(item.key);}
   }
+
   const signalStop=()=>control.abort();process.once('SIGINT',signalStop);process.once('SIGTERM',signalStop);
   const heartbeat=setInterval(()=>{if(!start)return;save();console.log(JSON.stringify({phase:'OBSERVE',elapsedSeconds:Math.round((performance.now()-mono)/1000),
     routes:routes.length,visited:visited.size,twoBook:twoBook.size,freshRoutes:freshRoutes.size,counts,requests:api.counts}));},30_000);
@@ -260,7 +289,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     clearTimeout(preparation);start=Date.now();mono=performance.now();deadline=start+durationMs;lastDiscovery=start;lastHealthCheck=start;
     deadlineTimer=setTimeout(()=>control.abort(),durationMs);record('OBSERVATION_STARTED',{start,deadline});
     while(!control.signal.aborted&&performance.now()-mono<durationMs){
-      const routeIndex=new Map(routes.map(r=>[r.pair.id,r]));
+      const routeIndex=allRoutes;
       for(const id of [...dirty]){dirty.delete(id);const r=routeIndex.get(id);if(!r)continue;visited.add(id);const books=pairBooks(r);
         if(!books){count('missingTwoBooks');continue;}twoBook.add(id);count('twoBookObservations');
         const now=Date.now();for(const v of ['kalshi','poly'] as Venue[]){const a=bookAges(books[v],now);
@@ -282,25 +311,39 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         const gross=one.filter(q=>q.evaluation.grossProfit!==null).sort((a,b)=>b.evaluation.grossProfit!-a.evaluation.grossProfit!)[0];
         const net=one.filter(q=>q.evaluation.estimatedNetProfit!==null).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0];
         if(gross)highestGross=retain(highestGross,r,gross,s=>s.evaluation.grossProfit!);
-        if(net&&net.evaluation.estimatedNetProfit!<=0)nearPositive=retain(nearPositive,r,net,s=>s.evaluation.estimatedNetProfit!);
+        if(!differentQuestion(r).length&&net&&net.evaluation.estimatedNetProfit!<=0)nearPositive=retain(nearPositive,r,net,s=>s.evaluation.estimatedNetProfit!);
         if(net&&r.matchSource==='CANONICAL')canonicalChecks=retain(canonicalChecks,r,net,s=>s.evaluation.estimatedNetProfit!);
         if(bestQ.evaluation.grossProfit!==null){best=best.filter(x=>x.route.pair.id!==id);best.push({route:r,signal:bestQ});
           best.sort((a,b)=>(b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity));best=best.slice(0,20);}
         const q=qs.filter(x=>x.candidate&&x.withinCapital).sort((a,b)=>b.evaluation.estimatedNetProfit!-a.evaluation.estimatedNetProfit!)[0]??qs.find(x=>x.candidate);
+        if(!differentQuestion(r).length&&net&&net.evaluation.estimatedNetProfit!>=-recallPolicy.hotNearNet){if(!hot.has(id))count('hotPromotions');hot.set(id,now);peakHot=Math.max(peakHot,hot.size);}
+        const falseMatch=differentQuestion(r);
         if(q){const fingerprint=JSON.stringify([id,q.evaluation.orientation,q.evaluation.quantity,q.evaluation.kalshi?.levels,q.evaluation.poly?.levels]);
-          if(!candidateFingerprints.has(fingerprint)){candidateFingerprints.add(fingerprint);count('distinctEconomicCandidates');record('ECONOMIC_SIGNAL',{route:r,signal:q,books});}
-          if(now-(cooldown.get(id)??0)>=recallPolicy.confirmationCooldownMs)pendingCandidates.set(id,{route:r,signal:q,queuedAt:pendingCandidates.get(id)?.queuedAt??now});
-          else count('confirmationCooldown');
+          if(!candidateFingerprints.has(fingerprint)){candidateFingerprints.add(fingerprint);count('distinctEconomicCandidates');record('ECONOMIC_SIGNAL',{route:r,signal:q,books,settlement:classify(r)});}
         }
+        if(falseMatch.length){falseMatches.add(id);if(q)count('falseMatchPositiveReadings');queue.update(r,[],now);}
+        else {const eligible=qs.filter(q=>!inFlight.has(candidateKey(r,q))&&now-(cooldown.get(candidateKey(r,q))??0)>=recallPolicy.confirmationCooldownMs);
+          queue.update(r,eligible,now);}
       }
-      // Broad hypotheses stay visible, but cannot monopolize confirmation over
-      // explicit matching predicates. Every third dispatch is oldest-first;
-      // the other two prioritize canonical, known-orientation, fresh routes.
-      while(pendingCandidates.size&&jobs.size<recallPolicy.maxConfirmationJobs){
-        const fair=confirmationTurn++%3===2,item=nextConfirmation([...pendingCandidates.values()],fair);
-        count(fair?'fairConfirmationDispatches':'hotConfirmationDispatches');
-        pendingCandidates.delete(item.route.pair.id);cooldown.set(item.route.pair.id,Date.now());
-        const job=confirm(item.route,item.signal,item.queuedAt);jobs.add(job);void job.finally(()=>jobs.delete(job));}
+      for(const [id,at] of hot)if(Date.now()-at>recallPolicy.hotHoldMs){hot.delete(id);count('hotDemotions');}
+      peakQueue=Math.max(peakQueue,pendingCandidates.size);
+      let dispatched=0;
+      while(pendingCandidates.size&&dispatched++<100){
+        const item=queue.next()!;const current=pairBooks(item.route);
+        if(!current||Date.now()-item.queuedAt>recallPolicy.maxPendingAgeMs){pendingCandidates.delete(item.key);count('candidatesExpiredBeforeDispatch');continue;}
+        // Reprice both orientations and available quantities before dispatch. Replace historical economics with current state.
+        const qs=recallSignals(item.route,current,Date.now());const latest=qs.filter(s=>s.evaluation.kalshiSide===item.signal.evaluation.kalshiSide&&s.candidate)
+          .sort((a,b)=>Number(b.withinCapital)-Number(a.withinCapital)||(b.evaluation.estimatedNetProfit??-Infinity)-(a.evaluation.estimatedNetProfit??-Infinity))[0];
+        if(!latest){pendingCandidates.delete(item.key);queue.disappeared++;continue;}item.signal=latest;
+        const fallback=selectConfirmationBooks(item.route,current,Date.now()).length>0;
+        if(fallback&&jobs.size>=2){
+          // Slow fallback work cannot block any ready WS candidate further down the priority list.
+          const ready=[...pendingCandidates.values()].filter(x=>!selectConfirmationBooks(x.route,pairBooks(x.route),Date.now()).length).sort(priority)[0];
+          if(!ready)break;pendingCandidates.delete(ready.key);inFlight.add(ready.key);cooldown.set(ready.key,Date.now());count('hotConfirmationDispatches');void confirm(ready);continue;
+        }
+        pendingCandidates.delete(item.key);inFlight.add(item.key);cooldown.set(item.key,Date.now());count('hotConfirmationDispatches');
+        const job=confirm(item);if(fallback){jobs.add(job);void job.finally(()=>jobs.delete(job));}
+      }
       if(Date.now()-lastHealthCheck>=5000){lastHealthCheck=Date.now();let restarted=false;
         for(const [key,f] of feeds)if(!f.health().connected&&Date.now()-(feedStarted.get(key)??0)>10_000&&
           (feedRestarts.get(key)??0)<recallPolicy.maxStreamRestarts){
@@ -309,12 +352,19 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         }
         if(restarted)await reconcile();
       }
-      // REST fallback is fair, and never holds up event-driven stream evaluation.
-      if(!restActive&&routes.length){const r=routes[restCursor++%routes.length];restActive=true;
-        const job=(async()=>{try{const [kalshi,poly]=await Promise.all([api.book(r.pair.a),api.book(r.pair.b)]);
-          observed.set(bookKey('kalshi',r.pair.a.id),kalshi);observed.set(bookKey('poly',r.pair.b.id),poly);dirty.add(r.pair.id);count('restPairRefreshes');
-          record('REST_PAIR',{pairId:r.pair.id,kalshi,poly});
-        }catch(error){const key='REST_PAIR:'+(error as Error).message;reasons[key]=(reasons[key]??0)+1;}finally{restActive=false;}})();jobs.add(job);void job.finally(()=>jobs.delete(job));}
+      // At most one independent audit per 30 seconds; otherwise refresh only stale/absent hot books.
+      if(!restActive&&Date.now()-lastAudit>=recallPolicy.auditMs&&routes.length){lastAudit=Date.now();
+        const candidates=[...hot.keys()].map(id=>allRoutes.get(id)!).filter(Boolean);
+        const r=candidates[restCursor++%Math.max(1,candidates.length)]??routes[restCursor%routes.length];restActive=true;
+        const job=(async()=>{try{const before=pairBooks(r),poly=await api.book(r.pair.b);count('independentRestAudits');
+          const stream=marketFeeds.get(bookKey('poly',r.pair.b.id))?.liveBook(r.pair.b.id);
+          const conflict=stream&&stream.book.exchangeAt===poly.book.exchangeAt&&JSON.stringify([stream.book.yesBids,stream.book.noBids,stream.book.open])!==JSON.stringify([poly.book.yesBids,poly.book.noBids,poly.book.open]);
+          if(conflict){count('independentAuditVersionConflicts');marketFeeds.get(bookKey('poly',r.pair.b.id))?.cache.quarantine(r.pair.b.id,'poly');}
+          record('REST_AUDIT',{pairId:r.pair.id,before,poly,stream,conflict:!!conflict});
+          const old=observed.get(bookKey('poly',r.pair.b.id));if(!stream?.book.valid&&(!old||old.book.receivedAt<=poly.book.receivedAt))observed.set(bookKey('poly',r.pair.b.id),poly);
+          dirty.add(r.pair.id);
+        }catch(error){count('independentAuditFailures');record('AUDIT_FAILURE',{reason:(error as Error).message});}finally{restActive=false;}})();
+        metadataJobs.add(job);void job.finally(()=>metadataJobs.delete(job));}
       if(Date.now()-lastDiscovery>=recallPolicy.discoveryMs&&!refreshing){lastDiscovery=Date.now();
         refreshing=(async()=>{const fresh=await currentCatalog(api,x=>record('DISCOVERY_PROGRESS',x));if(control.signal.aborted)return;
           if(!fresh.complete){count('incompleteDiscoveryRefresh');record('DISCOVERY_INCOMPLETE',{at:fresh.at,endedAt:fresh.endedAt,errors:fresh.errors,counts:fresh.counts});return;}
@@ -329,12 +379,12 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   }finally{
     control.abort();if(deadlineTimer)clearTimeout(deadlineTimer);clearTimeout(preparation);clearInterval(heartbeat);process.off('SIGINT',signalStop);process.off('SIGTERM',signalStop);
     lastActiveFeedHealth=[...feeds].map(([key,f])=>({key,ids:f.stream.options.ids.length,...f.health(),failures:f.failures,restarts:feedRestarts.get(key)??0}));
-    for(const f of feeds.values())f.stop();await Promise.allSettled([...jobs,...(refreshing?[refreshing]:[])]);stopped=true;save();
+    for(const f of feeds.values())f.stop();await Promise.allSettled([...jobs,...metadataJobs,...(refreshing?[refreshing]:[])]);stopped=true;save();
   }
   return JSON.parse(readFileSync(resolve(directory,'summary.json'),'utf8'));
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
   const directory=process.argv[2],duration=Number(process.argv.find(s=>s.startsWith('--duration-seconds='))?.split('=')[1]??1200)*1000;
   const env=process.argv.find(s=>s.startsWith('--env='))?.slice(6);if(!directory)throw Error('Usage: npm run research:recall -- NEW_DIRECTORY [--duration-seconds=1200] [--env=READ_STREAM_ENV]');
-  const result=await observeRecall(resolve(directory),duration,env);console.log(JSON.stringify({phase:'STOPPED',counts:result.counts,reasons:result.reasons}));
+  const result=await observeRecall(resolve(directory),duration,env,process.argv.find(s=>s.startsWith('--catalog='))?.slice(10));console.log(JSON.stringify({phase:'STOPPED',counts:result.counts,reasons:result.reasons}));
 }
