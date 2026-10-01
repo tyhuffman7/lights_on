@@ -7,7 +7,7 @@ import {evaluateEvArb, evPaperDefaults, USD_SCALE} from './ev-arb.ts';
 
 export const recallPolicy = Object.freeze({ordersEnabled:false, sampleMs:25, discoveryMs:3600_000,
   durationMs:20*60_000, maxContracts:10, maxConfirmationJobs:4, confirmationCooldownMs:1000, metadataTtlMs:300_000, hotHoldMs:10_000, maxHotRoutes:128, evaluationBudgetMs:20, hotNearNet:200, auditMs:30_000, maxPendingAgeMs:2000,
-  streamGroupSize:100,maxStreamRestarts:3,maxPublicHttpAttempts:3, maxBookAgeMs:2000, restSpacingMs:300, maxEvidenceBytes:256*1024*1024,
+  streamGroupSize:100,maxStreamRestarts:3,maxPublicHttpAttempts:3, maxBookAgeMs:2000, restSpacingMs:300, maxEvidenceBytes:1024*1024*1024,
   delayMs:[0,100,250,500,1000], simulatedCapitalPerVenue:50, maxPairedCommitment:5});
 export type RecallRoute={pair:Pair;matchSource:'CANONICAL'|'SPORTS_EVENT'|'TEXT';warnings:string[];eventKey:string;ticks?:Record<Venue,number>};
 const stop=new Set('will the be in of by a an to on at for is than before after above below yes no and or win wins winner over under total game match'.split(' '));
@@ -124,7 +124,7 @@ export function recallMatches(kalshi:Market[],poly:Market[]){
 
 export type TransportEvidence={requestAt:number;responseAt:number;durationMs:number;cacheAgeSeconds:number|null;
   cacheStatus:string|null;bodySha256:string};
-export type ObservedBook={book:StreamBook;transport?:TransportEvidence};
+export type ObservedBook={book:StreamBook;transport?:TransportEvidence;nativeVersion?:string};
 export function bookAges(b:ObservedBook,now:number){
   return {receiptMs:now-b.book.receivedAt,exchangeMs:b.book.exchangeAt===null?null:now-b.book.exchangeAt,
     cacheMs:b.transport?.cacheAgeSeconds===null||b.transport?.cacheAgeSeconds===undefined?null:b.transport.cacheAgeSeconds*1000,

@@ -257,7 +257,7 @@
         "poly": 100
       }
     },
-    "expected": "UNRESOLVED"
+    "expected": "DIFFERENT_QUESTION"
   },
   {
     "label": "Who will win the Florida House of Representatives?",
@@ -430,7 +430,7 @@
         "poly": 100
       }
     },
-    "expected": "UNRESOLVED"
+    "expected": "DIFFERENT_QUESTION"
   },
   {
     "label": "Will LeBron James announce his retirement before the 2028-29 NBA season?",
@@ -696,7 +696,7 @@
         "poly": 100
       }
     },
-    "expected": "UNRESOLVED"
+    "expected": "DIFFERENT_QUESTION"
   },
   {
     "label": "Will Bernadette Wilson receive at least 18% of the popular vote in the first round of the 2026 Alaska gubernatorial election? vs Bernadette Wilson \u00b7 Alaska Governor Election Winner",
@@ -1589,7 +1589,7 @@
         "poly": 100
       }
     },
-    "expected": "UNRESOLVED"
+    "expected": "DIFFERENT_QUESTION"
   },
   {
     "label": "Will Indiana reach the College Football Playoff National Championship Game?",
@@ -1701,7 +1701,7 @@
         "poly": 100
       }
     },
-    "expected": "UNRESOLVED"
+    "expected": "DIFFERENT_QUESTION"
   },
   {
     "label": "2027 Best Actress Oscar nominations?",
@@ -1864,5 +1864,1830 @@
       }
     },
     "expected": "ORDINARY_EQUIVALENT_BASIS_RISK"
+  },
+  {
+    "label": "Michael Pittman Jr. Receiving Yards Escalator vs Michael Pittman Jr. 10+ receiving yards \u00b7 Will Michael Pittman Jr. record 10+ receiving yards?",
+    "route": {
+      "pair": {
+        "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITMPITTMAN11::astatc-nfl-pit-cle-2026-10-01-recyd-micpit-gte10",
+        "a": {
+          "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITMPITTMAN11",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflescalatorrecyds",
+            "outcome": "michael pittman jr",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Michael Pittman Jr. Receiving Yards Escalator",
+          "outcome": "Michael Pittman Jr.",
+          "opposite": "Michael Pittman Jr.",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays per receiving yards by Michael Pittman Jr. in the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each 10 receiving yards increase the payout by the following schedule: 0\u20139 yards, $0.0000; 10\u201319, $0.0001; 20\u201329, $0.0010; 30\u201339, $0.0033; 40\u201349, $0.0080; 50\u201359, $0.0156; 60\u201369, $0.0270; 70\u201379, $0.0428; 80\u201389, $0.0640; 90\u201399, $0.0911; 100\u2013109, $0.1250; 110\u2013119, $0.1663; 120\u2013129, $0.2160; 130\u2013139, $0.2746; 140\u2013149, $0.3430; 150\u2013159, $0.4218; 160\u2013169, $0.5120; 170\u2013179, $0.6141; 180\u2013189, $0.7290; 190\u2013199, $0.8573; and 200 or more, $1.0000. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract shown above follows this calculation:\nPayout Formula = floor(10000 x (y / 200)^3) / 10000\ny = min(200, max(0, 10 x floor(s / 10)))\ns = official receiving yards\n\nThe No payout is $1.00 minus the Yes payout. Negative receiving yard totals pay Yes $0.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflescalatorrecyds/kxnflescalatorrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "d457140193722ff8d377274398b392c8baf33f046a85f200d52531c77206ed47",
+          "settlement": null,
+          "series": "KXNFLESCALATORRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-micpit-gte10",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "michael pittman jr",
+            "marketType": "prop",
+            "line": 9.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "michael pittman jr",
+            "entities": [],
+            "numbers": [
+              "10",
+              "10"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "Michael Pittman Jr. 10+ receiving yards \u00b7 Will Michael Pittman Jr. record 10+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Michael Pittman Jr. records at least 10 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-micpit-gte10",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "1feb9a99d63f1e10b33347944e24073ea6953847e036f966f2c89213bfe4fe6f",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITMPITTMAN11::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 1,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Social Democratic Party win the 2026 Brazilian Senate election? vs Democratic Party \u00b7 U.S Senate Midterm Winner",
+    "route": {
+      "pair": {
+        "id": "KXBRAZILSENATE-26OCT04-PSD::paccc-usse-midterms-2026-11-03-dem",
+        "a": {
+          "id": "KXBRAZILSENATE-26OCT04-PSD",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "winner",
+            "outcome": "social democratic party",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Social Democratic Party win the 2026 Brazilian Senate election?",
+          "outcome": "Social Democratic Party",
+          "opposite": "Social Democratic Party",
+          "category": "Elections",
+          "rules": "If Social Democratic Party wins the 2026 Brazilian Senate election, then the market resolves to Yes.\n\nFor parliamentary/legislative elections, the winner is the party, coalition, or alliance winning the most seats in the specified chamber. If two parties have the same number of seats, the one entering government will resolve to Yes and all others to No; if both or neither enter government, the one with the higher share of the vote will resolve to Yes and all others to No.\n\nThis market may resolve early once a consensus of designated media sources has declared a winner. See full rules for details.\n\nhttps://assets.kalshi.com/contract_terms/ELECTION.pdf\n\n[{\"name\":\"or equivalent electoral authority of the relevant jurisdiction; the formal proclamation by the head of state or government when constitutionally required; for religious elections\",\"url\":\"https://kalshi.com/\"},{\"name\":\"in hierarchical order: Primary Sources: the official electoral commission\",\"url\":\"https://kalshi.com/\"},{\"name\":\"constitutional court\",\"url\":\"https://kalshi.com/\"}]",
+          "url": "https://kalshi.com/markets/kxbrazilsenate/kxbrazilsenate-26oct04",
+          "closeAt": "2026-10-04T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "fa719ff1f02617724418723d401769d7a9ecbf87039ffaebbdb34f3e0f9827f0",
+          "settlement": null,
+          "series": "KXBRAZILSENATE"
+        },
+        "b": {
+          "id": "paccc-usse-midterms-2026-11-03-dem",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T00:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "winner",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "title": "Democratic Party \u00b7 U.S Senate Midterm Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "\nThis market will settle to Yes if the Democratic Party wins control of the United States Senate in the 2026 United States midterm election. Outcome sourced from relevant state electoral authorities, and the United States Senate.\n\nA party wins control of the United States Senate if it wins a majority of the chamber\u2019s voting seats. If no party wins a majority of voting seats, the party that wins control of the chamber is the party that wins half of the voting seats and holds the Vice Presidency. If the outcome remains ambiguous after applying the above criteria, the chamber will be deemed controlled by the party with which the first selected President Pro Tempore of the Congress that convenes after the specified election is affiliated.\n\nThe following rules govern the counting of seats for determining which party wins control of the chamber.\n\nAll regular and special Senate elections that determine representation in the upcoming 120th Congress and are scheduled to take place in November 2026 as of October 31, 2026 are included. Runoffs for qualifying elections will determine attribution of the relevant seat, even if they take place after November 2026. Vacant seats for which no election or special election to fill the seat is scheduled to take place in November 2026 as of October 31, 2026 will be treated as held by the party affiliation of the most recent member to hold that seat.\n\nFor seats contested in the specified election, seats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected. \n\nFor seats not contested in the specified election, seats are attributed to the party that holds the seat as of the date of the election. If a current sitting member of the U.S. Senate who is not up for election changes party affiliation or vacates their seat after the date of the election, the seat is attributed to the party under which the member was affiliated at the time of the election.\n\nSenate members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party are included in that party\u2019s count. If the caucus decisions of members of the Senate elected as independents cannot be determined on the date of the election, settlement may be postponed until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n",
+          "url": "https://polymarket.us/event/paccc-usse-midterms-2026-11-03-dem",
+          "closeAt": "2027-02-02T04:59:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "e2908c390898d8763f3bc26c1a8331017242d6503c4e31f054dd633598661ee5",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXBRAZILSENATE-26OCT04-PSD::paccc-usse-midterms-2026-11-03-dem",
+      "ticks": {
+        "kalshi": 0,
+        "poly": 10
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Alaska Governor winner be Republican party and Alaska Senate winner be Democratic party? vs Democratic Party \u00b7 U.S Senate Midterm Winner",
+    "route": {
+      "pair": {
+        "id": "KXAKSENGOVCOMBO-26NOV-REPDEM::paccc-usse-midterms-2026-11-03-dem",
+        "a": {
+          "id": "KXAKSENGOVCOMBO-26NOV-REPDEM",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "winner",
+            "outcome": "republican governor democratic senator",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Alaska Governor winner be Republican party and Alaska Senate winner be Democratic party?",
+          "outcome": "Republican Governor, Democratic Senator",
+          "opposite": "Republican Governor, Democratic Senator",
+          "category": "Elections",
+          "rules": "If ALL of the following occur: Alaska Governor winner: Republican party, Alaska Senate winner: Democratic party, then the market resolves to Yes.\n\nThis is a combination market requiring ALL specified outcomes to occur for the contract to pay out. If ANY single component resolves to No or becomes impossible, the entire contract immediately resolves to No. Each component is resolved according to its corresponding Kalshi ruleset: Alaska Governor winner (GOVPARTY), Alaska Senate winner (SENATEPARTY).\n\nhttps://assets.kalshi.com/contract_terms/POLITICALECONOMICEVENTS.pdf\n\n[{\"name\":\"Bureau of Labor Statistics\",\"url\":\"https://www.bls.gov/news.release/empsit.nr0.htm\"},{\"name\":\"Bureau of Labor Statistics\",\"url\":\"https://www.bls.gov/cpi/\"},{\"name\":\"Federal Reserve Board of Governors\",\"url\":\"https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\"}]",
+          "url": "https://kalshi.com/markets/kxaksengovcombo/kxaksengovcombo-26nov",
+          "closeAt": "2027-11-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "f5d032e07cc1c8ae594a9fce076140e7573ce4d97af10f1216aee20bfbd35521",
+          "settlement": null,
+          "series": "KXAKSENGOVCOMBO"
+        },
+        "b": {
+          "id": "paccc-usse-midterms-2026-11-03-dem",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T00:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "winner",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "title": "Democratic Party \u00b7 U.S Senate Midterm Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "\nThis market will settle to Yes if the Democratic Party wins control of the United States Senate in the 2026 United States midterm election. Outcome sourced from relevant state electoral authorities, and the United States Senate.\n\nA party wins control of the United States Senate if it wins a majority of the chamber\u2019s voting seats. If no party wins a majority of voting seats, the party that wins control of the chamber is the party that wins half of the voting seats and holds the Vice Presidency. If the outcome remains ambiguous after applying the above criteria, the chamber will be deemed controlled by the party with which the first selected President Pro Tempore of the Congress that convenes after the specified election is affiliated.\n\nThe following rules govern the counting of seats for determining which party wins control of the chamber.\n\nAll regular and special Senate elections that determine representation in the upcoming 120th Congress and are scheduled to take place in November 2026 as of October 31, 2026 are included. Runoffs for qualifying elections will determine attribution of the relevant seat, even if they take place after November 2026. Vacant seats for which no election or special election to fill the seat is scheduled to take place in November 2026 as of October 31, 2026 will be treated as held by the party affiliation of the most recent member to hold that seat.\n\nFor seats contested in the specified election, seats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected. \n\nFor seats not contested in the specified election, seats are attributed to the party that holds the seat as of the date of the election. If a current sitting member of the U.S. Senate who is not up for election changes party affiliation or vacates their seat after the date of the election, the seat is attributed to the party under which the member was affiliated at the time of the election.\n\nSenate members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party are included in that party\u2019s count. If the caucus decisions of members of the Senate elected as independents cannot be determined on the date of the election, settlement may be postponed until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n",
+          "url": "https://polymarket.us/event/paccc-usse-midterms-2026-11-03-dem",
+          "closeAt": "2027-02-02T04:59:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "e2908c390898d8763f3bc26c1a8331017242d6503c4e31f054dd633598661ee5",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXAKSENGOVCOMBO-26NOV-REPDEM::paccc-usse-midterms-2026-11-03-dem",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 10
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Harold Fannin Jr. Receiving Yards Escalator vs Harold Fannin Jr. 40+ receiving yards \u00b7 Will Harold Fannin Jr. record 40+ receiving yards?",
+    "route": {
+      "pair": {
+        "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-CLEHFANNIN44::astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte40",
+        "a": {
+          "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-CLEHFANNIN44",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflescalatorrecyds",
+            "outcome": "harold fannin jr",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Harold Fannin Jr. Receiving Yards Escalator",
+          "outcome": "Harold Fannin Jr.",
+          "opposite": "Harold Fannin Jr.",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays per receiving yards by Harold Fannin Jr. in the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each 10 receiving yards increase the payout by the following schedule: 0\u20139 yards, $0.0000; 10\u201319, $0.0001; 20\u201329, $0.0010; 30\u201339, $0.0033; 40\u201349, $0.0080; 50\u201359, $0.0156; 60\u201369, $0.0270; 70\u201379, $0.0428; 80\u201389, $0.0640; 90\u201399, $0.0911; 100\u2013109, $0.1250; 110\u2013119, $0.1663; 120\u2013129, $0.2160; 130\u2013139, $0.2746; 140\u2013149, $0.3430; 150\u2013159, $0.4218; 160\u2013169, $0.5120; 170\u2013179, $0.6141; 180\u2013189, $0.7290; 190\u2013199, $0.8573; and 200 or more, $1.0000. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract shown above follows this calculation:\nPayout Formula = floor(10000 x (y / 200)^3) / 10000\ny = min(200, max(0, 10 x floor(s / 10)))\ns = official receiving yards\n\nThe No payout is $1.00 minus the Yes payout. Negative receiving yard totals pay Yes $0.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflescalatorrecyds/kxnflescalatorrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "0f2d4bd1687436803c328cba3470e385ff9b2353c4fb35fbc3618f40798228fc",
+          "settlement": null,
+          "series": "KXNFLESCALATORRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte40",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "harold fannin jr",
+            "marketType": "prop",
+            "line": 39.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "harold fannin jr",
+            "entities": [],
+            "numbers": [
+              "40",
+              "40"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "Harold Fannin Jr. 40+ receiving yards \u00b7 Will Harold Fannin Jr. record 40+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Harold Fannin Jr. records at least 40 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte40",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "8034b326fa454775096b9c056452d973d803c5dc367dd9bb3046b3a3fb91bcdc",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLESCALATORRECYDS-26OCT01PITCLE-CLEHFANNIN44::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 1,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Jaylen Warren Receiving Yards Escalator vs Jaylen Warren 25+ receiving yards \u00b7 Will Jaylen Warren record 25+ receiving yards?",
+    "route": {
+      "pair": {
+        "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITJWARREN30::astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+        "a": {
+          "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITJWARREN30",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflescalatorrecyds",
+            "outcome": "jaylen warren",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Jaylen Warren Receiving Yards Escalator",
+          "outcome": "Jaylen Warren",
+          "opposite": "Jaylen Warren",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays per receiving yards by Jaylen Warren in the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each 10 receiving yards increase the payout by the following schedule: 0\u20139 yards, $0.0000; 10\u201319, $0.0001; 20\u201329, $0.0010; 30\u201339, $0.0033; 40\u201349, $0.0080; 50\u201359, $0.0156; 60\u201369, $0.0270; 70\u201379, $0.0428; 80\u201389, $0.0640; 90\u201399, $0.0911; 100\u2013109, $0.1250; 110\u2013119, $0.1663; 120\u2013129, $0.2160; 130\u2013139, $0.2746; 140\u2013149, $0.3430; 150\u2013159, $0.4218; 160\u2013169, $0.5120; 170\u2013179, $0.6141; 180\u2013189, $0.7290; 190\u2013199, $0.8573; and 200 or more, $1.0000. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract shown above follows this calculation:\nPayout Formula = floor(10000 x (y / 200)^3) / 10000\ny = min(200, max(0, 10 x floor(s / 10)))\ns = official receiving yards\n\nThe No payout is $1.00 minus the Yes payout. Negative receiving yard totals pay Yes $0.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflescalatorrecyds/kxnflescalatorrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "4b5d2f61b01cbd26afe23773704ca1e9a6194717a9bd303a4bb9bca29defd529",
+          "settlement": null,
+          "series": "KXNFLESCALATORRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "jaylen warren",
+            "marketType": "prop",
+            "line": 24.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "jaylen warren",
+            "entities": [],
+            "numbers": [
+              "25",
+              "25"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "Jaylen Warren 25+ receiving yards \u00b7 Will Jaylen Warren record 25+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Jaylen Warren records at least 25 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "eb3e1b96ad0a387102342c62f973f661acc5c067d9a41221a146127ae88f6b36",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITJWARREN30::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 1,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Renan Santos finish 3rd in the first round of the 2026 Brazilian presidential election? vs Renan Santos \u00b7 2026 Brazil Presidential Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXBRPRESIDENT3-BRPRES26-3-RSAN::ewc-pres-bra-2026-10-04-rensan",
+        "a": {
+          "id": "KXBRPRESIDENT3-BRPRES26-3-RSAN",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "renan santos",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Renan Santos finish 3rd in the first round of the 2026 Brazilian presidential election?",
+          "outcome": "Renan Santos",
+          "opposite": "Renan Santos",
+          "category": "Elections",
+          "rules": "If Renan Santos finishes in 3rd place in the first round of the 2026 Brazilian presidential election according to the certified results, then the market resolves to Yes.\n\nRanking is determined by the specified counting method:\nFor plurality voting: rank is based on vote count or percentage\nFor ranked choice voting: rank is determined by elimination order (runner-up is eliminated in final round for second place)\nFor two-round systems: rank is based on final round results if it proceeds to second round, otherwise first-round totals\nFor proportional representation: rank follows the electoral authority's final seat allocation order\n\nIn case of exact ties, markets resolve proportionally (1/number of tied entities). Write-in candidates achieving the specified rank resolve all named candidate markets to NO unless a specific \"Write-in\" or \"Other\" option exists. Candidates who withdraw or are disqualified after the filing deadline but remain on the ballot are ranked based on votes received. If the election is cancelled or postponed beyond expiration, all markets resolve to NO.\n\nhttps://assets.kalshi.com/contract_terms/ELECTIONPLACE.pdf\n\n[{\"name\":\"official election authority responsible for certifying results in geography\",\"url\":\"https://kalshi.com/\"}]",
+          "url": "https://kalshi.com/markets/kxbrpresident3/kxbrpresident3-brpres26-3",
+          "closeAt": "2027-10-04T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "abb1c82cf0af6e3c9dbcda2d2291a48183ca56338e3bca4c04a492b5818015ac",
+          "settlement": null,
+          "series": "KXBRPRESIDENT3"
+        },
+        "b": {
+          "id": "ewc-pres-bra-2026-10-04-rensan",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "pres",
+            "eventAt": "2026-10-04T16:00:00.000Z",
+            "eventDate": "2026-10-04",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "2026 brazil presidential election winner"
+          },
+          "title": "Renan Santos \u00b7 2026 Brazil Presidential Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "If Renan Santos wins the 2026 Brazilian Presidential Election, including any potential runoff, this market will settle to Yes. Outcome verified from relevant government authorities.\n\nIn the event that the 2026 Brazilian Presidential Election is rescheduled, this market will settle based on the results of the next Brazilian Presidential Election to be held within two years of October 4, 2026.",
+          "url": "https://polymarket.us/event/ewc-pres-bra-2026-10-04-rensan",
+          "closeAt": "2026-10-19T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "74e485c2317ff84286fb7d7c32c8f1ce4bbd595e66241b1cec0a3f989535d75e",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXBRPRESIDENT3-BRPRES26-3-RSAN::2026 brazil presidential election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Jaylen Warren receiving yards ladder vs Jaylen Warren 25+ receiving yards \u00b7 Will Jaylen Warren record 25+ receiving yards?",
+    "route": {
+      "pair": {
+        "id": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITJWARREN30::astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+        "a": {
+          "id": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITJWARREN30",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflladderrecyds",
+            "outcome": "jaylen warren",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Jaylen Warren receiving yards ladder",
+          "outcome": "Jaylen Warren",
+          "opposite": "Jaylen Warren",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays $0.0025 per receiving yard recorded by Jaylen Warren during the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract is $0.0025 per receiving yard constrained between $0.00\u2013$1.00 with a cap at 400 yards. The No payout is $1.00 minus the Yes payout. Payouts are proportional to the size of the holder's position. For example, 80 receiving yards pays Yes $0.20 and No $0.80; 200 yards pays Yes $0.50 and No $0.50; zero yards pay Yes $0.00 and No $1.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NFL. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflladderrecyds/kxnflladderrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "22730bc7a2df55b6376f5af487db6ce9524ee8f40eb268aa22bbfc78ce0c2d58",
+          "settlement": null,
+          "series": "KXNFLLADDERRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "jaylen warren",
+            "marketType": "prop",
+            "line": 24.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "jaylen warren",
+            "entities": [],
+            "numbers": [
+              "25",
+              "25"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "Jaylen Warren 25+ receiving yards \u00b7 Will Jaylen Warren record 25+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Jaylen Warren records at least 25 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-jaywar-gte25",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "eb3e1b96ad0a387102342c62f973f661acc5c067d9a41221a146127ae88f6b36",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITJWARREN30::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Cruz Azul win the Liga MX Apertura? vs Will CF Correcaminos UAT win against Cruz Azul Hidalgo in the Liga de Expansion MX match scheduled for Oct 2, 2026?",
+    "route": {
+      "pair": {
+        "id": "KXLIGAMX-27APER-CRA::atc-lexp-cor-cah-2026-10-02-cor",
+        "a": {
+          "id": "KXLIGAMX-27APER-CRA",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "participants": [],
+            "marketType": "winner",
+            "period": "full event",
+            "outcome": "cruz azul",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Cruz Azul win the Liga MX Apertura?",
+          "outcome": "Cruz Azul",
+          "opposite": "Cruz Azul",
+          "category": "Sports",
+          "rules": "If Cruz Azul is the 2026-27 Liga MX Apertura champion, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCER.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxligamx/kxligamx-27aper",
+          "closeAt": "2027-01-02T03:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "f507c45aff42b19f6077d03148720284a16fc761bc6ff45dde7ad719eed4af2d",
+          "settlement": null,
+          "series": "KXLIGAMX"
+        },
+        "b": {
+          "id": "atc-lexp-cor-cah-2026-10-02-cor",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "lexp",
+            "eventAt": "2026-10-03T01:00:00.000Z",
+            "eventDate": "2026-10-03",
+            "participants": [
+              "cf correcaminos uat"
+            ],
+            "participant": "cf correcaminos uat",
+            "marketType": "winner",
+            "period": "full event",
+            "outcome": "cf correcaminos uat",
+            "entities": [],
+            "numbers": [
+              "2",
+              "2026"
+            ],
+            "aliases": [
+              {
+                "name": "cf correcaminos uat",
+                "venue": "poly",
+                "venueId": "21853",
+                "aliases": [
+                  "cf correcaminos uat",
+                  "cf correcaminos uat",
+                  "cf correcaminos uat",
+                  "cor",
+                  "cor"
+                ]
+              },
+              {
+                "name": "cf correcaminos uat",
+                "venue": "poly",
+                "venueId": "21853",
+                "aliases": [
+                  "cf correcaminos uat",
+                  "cf correcaminos uat",
+                  "cf correcaminos uat",
+                  "cor",
+                  "cor"
+                ]
+              }
+            ]
+          },
+          "title": "Will CF Correcaminos UAT win against Cruz Azul Hidalgo in the Liga de Expansion MX match scheduled for Oct 2, 2026?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to the winner at the end of 90 minutes plus stoppage time in the CF Correcaminos UAT vs Cruz Azul Hidalgo Liga de Expansion MX match scheduled for 2026-10-02 9:00PM ET. If the match is tied following 90 minutes plus stoppage time, the market will settle to Tie. If the match is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from Liga MX.",
+          "url": "https://polymarket.us/event/atc-lexp-cor-cah-2026-10-02-cor",
+          "closeAt": "2026-10-17T05:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "38a81935fe4e3cb9052fc657d8fcc9ba5683a195ae3285d51e12107f36fb90f1",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXLIGAMX-27APER-CRA::atc-lexp-cor-cah-2026-10-02-cor",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Miami (FL) be selected as a top 4 seed in the 2026-27 College Football Playoff? vs Miami (FL) \u00b7 College Football Playoff Qualifiers",
+    "route": {
+      "pair": {
+        "id": "KXNCAAFTOPSEED-27T4-MIA::aqc-cfb-cfp-2026-12-06-playoffq-mia",
+        "a": {
+          "id": "KXNCAAFTOPSEED-27T4-MIA",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "participants": [],
+            "period": "full event",
+            "outcome": "CFB:MIAMI_FL",
+            "entities": [],
+            "numbers": [
+              "4",
+              "2026",
+              "27"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Miami (FL) be selected as a top 4 seed in the 2026-27 College Football Playoff?",
+          "outcome": "Miami (FL)",
+          "opposite": "Miami (FL)",
+          "category": "Sports",
+          "rules": "If Miami (FL) is selected as a top 4 seed in the 2026-27 College Football Playoff, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFTOPSEEDS.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+          "url": "https://kalshi.com/markets/kxncaaftopseed/kxncaaftopseed-27t4",
+          "closeAt": "2027-01-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "71335fe4cc5abdf784772680bad3addd17ccc9f8f1d9c0512c269c5eb07a806c",
+          "settlement": null,
+          "series": "KXNCAAFTOPSEED"
+        },
+        "b": {
+          "id": "aqc-cfb-cfp-2026-12-06-playoffq-mia",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "eventAt": "2026-08-29T16:00:00.000Z",
+            "eventDate": "2026-08-29",
+            "participants": [
+              "CFB:MIAMI_FL"
+            ],
+            "participant": "CFB:MIAMI_FL",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:MIAMI_FL",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "miami fl",
+                "venue": "poly",
+                "venueId": "1084",
+                "aliases": [
+                  "miami fl",
+                  "hurricanes",
+                  "miami fl",
+                  "mia",
+                  "mia"
+                ]
+              },
+              {
+                "name": "miami fl",
+                "venue": "poly",
+                "venueId": "1084",
+                "aliases": [
+                  "miami fl",
+                  "hurricanes",
+                  "miami fl",
+                  "mia",
+                  "mia"
+                ]
+              }
+            ],
+            "eventKey": "college football playoff qualifiers"
+          },
+          "title": "Miami (FL) \u00b7 College Football Playoff Qualifiers",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Miami (FL) advances to the 2026-27 College Football Playoff. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/aqc-cfb-cfp-2026-12-06-playoffq-mia",
+          "closeAt": "2026-12-21T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "e770b071b2006a206927f3362ce67cc89261e87e58e290208fa848c9f63532e5",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNCAAFTOPSEED-27T4-MIA::college football playoff qualifiers",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "DK Metcalf Receiving Yards Escalator vs DK Metcalf 50+ receiving yards \u00b7 Will DK Metcalf record 50+ receiving yards?",
+    "route": {
+      "pair": {
+        "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4::astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte50",
+        "a": {
+          "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflescalatorrecyds",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "DK Metcalf Receiving Yards Escalator",
+          "outcome": "DK Metcalf",
+          "opposite": "DK Metcalf",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays per receiving yards by DK Metcalf in the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each 10 receiving yards increase the payout by the following schedule: 0\u20139 yards, $0.0000; 10\u201319, $0.0001; 20\u201329, $0.0010; 30\u201339, $0.0033; 40\u201349, $0.0080; 50\u201359, $0.0156; 60\u201369, $0.0270; 70\u201379, $0.0428; 80\u201389, $0.0640; 90\u201399, $0.0911; 100\u2013109, $0.1250; 110\u2013119, $0.1663; 120\u2013129, $0.2160; 130\u2013139, $0.2746; 140\u2013149, $0.3430; 150\u2013159, $0.4218; 160\u2013169, $0.5120; 170\u2013179, $0.6141; 180\u2013189, $0.7290; 190\u2013199, $0.8573; and 200 or more, $1.0000. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract shown above follows this calculation:\nPayout Formula = floor(10000 x (y / 200)^3) / 10000\ny = min(200, max(0, 10 x floor(s / 10)))\ns = official receiving yards\n\nThe No payout is $1.00 minus the Yes payout. Negative receiving yard totals pay Yes $0.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflescalatorrecyds/kxnflescalatorrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "a1637e30a453595fd0d5e3a1a2544e67cb98dc7865f713cfe4bca832198f7cc4",
+          "settlement": null,
+          "series": "KXNFLESCALATORRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte50",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "dk metcalf",
+            "marketType": "prop",
+            "line": 49.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [
+              "50",
+              "50"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "DK Metcalf 50+ receiving yards \u00b7 Will DK Metcalf record 50+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if DK Metcalf records at least 50 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte50",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "415791674182ec08daed679773d7c23a646d2b7a177037551f13d5a25602c858",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 1,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Harold Fannin Jr. Receiving Yards Escalator vs Harold Fannin Jr. 50+ receiving yards \u00b7 Will Harold Fannin Jr. record 50+ receiving yards?",
+    "route": {
+      "pair": {
+        "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-CLEHFANNIN44::astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte50",
+        "a": {
+          "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-CLEHFANNIN44",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflescalatorrecyds",
+            "outcome": "harold fannin jr",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Harold Fannin Jr. Receiving Yards Escalator",
+          "outcome": "Harold Fannin Jr.",
+          "opposite": "Harold Fannin Jr.",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays per receiving yards by Harold Fannin Jr. in the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each 10 receiving yards increase the payout by the following schedule: 0\u20139 yards, $0.0000; 10\u201319, $0.0001; 20\u201329, $0.0010; 30\u201339, $0.0033; 40\u201349, $0.0080; 50\u201359, $0.0156; 60\u201369, $0.0270; 70\u201379, $0.0428; 80\u201389, $0.0640; 90\u201399, $0.0911; 100\u2013109, $0.1250; 110\u2013119, $0.1663; 120\u2013129, $0.2160; 130\u2013139, $0.2746; 140\u2013149, $0.3430; 150\u2013159, $0.4218; 160\u2013169, $0.5120; 170\u2013179, $0.6141; 180\u2013189, $0.7290; 190\u2013199, $0.8573; and 200 or more, $1.0000. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract shown above follows this calculation:\nPayout Formula = floor(10000 x (y / 200)^3) / 10000\ny = min(200, max(0, 10 x floor(s / 10)))\ns = official receiving yards\n\nThe No payout is $1.00 minus the Yes payout. Negative receiving yard totals pay Yes $0.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflescalatorrecyds/kxnflescalatorrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "0f2d4bd1687436803c328cba3470e385ff9b2353c4fb35fbc3618f40798228fc",
+          "settlement": null,
+          "series": "KXNFLESCALATORRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte50",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "harold fannin jr",
+            "marketType": "prop",
+            "line": 49.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "harold fannin jr",
+            "entities": [],
+            "numbers": [
+              "50",
+              "50"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "Harold Fannin Jr. 50+ receiving yards \u00b7 Will Harold Fannin Jr. record 50+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Harold Fannin Jr. records at least 50 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-harfan-gte50",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "f67d358f3eb6fcdd89d798595adffcaec4f6e757874b26f727a41c81f0860b26",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLESCALATORRECYDS-26OCT01PITCLE-CLEHFANNIN44::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 1,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Fl\u00e1vio Bolsonaro finish 2nd in the first round of the 2026 Brazilian presidential election? vs Flavio Bolsonaro \u00b7 Brazil Presidential Election First Round Winner",
+    "route": {
+      "pair": {
+        "id": "KXBRPRESIDENT2-BRPRES26-2-FBOL::pvwc-pres-bra-2026-10-04-r1-flabol",
+        "a": {
+          "id": "KXBRPRESIDENT2-BRPRES26-2-FBOL",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "flavio bolsonaro",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Fl\u00e1vio Bolsonaro finish 2nd in the first round of the 2026 Brazilian presidential election?",
+          "outcome": "Fl\u00e1vio Bolsonaro",
+          "opposite": "Fl\u00e1vio Bolsonaro",
+          "category": "Elections",
+          "rules": "If Fl\u00e1vio Bolsonaro finishes in 2nd place in the first round of the 2026 Brazilian presidential election according to the certified results, then the market resolves to Yes.\n\nRanking is determined by the specified counting method:\nFor plurality voting: rank is based on vote count or percentage\nFor ranked choice voting: rank is determined by elimination order (runner-up is eliminated in final round for second place)\nFor two-round systems: rank is based on final round results if it proceeds to second round, otherwise first-round totals\nFor proportional representation: rank follows the electoral authority's final seat allocation order\n\nIn case of exact ties, markets resolve proportionally (1/number of tied entities). Write-in candidates achieving the specified rank resolve all named candidate markets to NO unless a specific \"Write-in\" or \"Other\" option exists. Candidates who withdraw or are disqualified after the filing deadline but remain on the ballot are ranked based on votes received. If the election is cancelled or postponed beyond expiration, all markets resolve to NO.\n\nhttps://assets.kalshi.com/contract_terms/ELECTIONPLACE.pdf\n\n[{\"name\":\"official election authority responsible for certifying results in geography\",\"url\":\"https://kalshi.com/\"}]",
+          "url": "https://kalshi.com/markets/kxbrpresident2/kxbrpresident2-brpres26-2",
+          "closeAt": "2027-10-04T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "e9b5273d68478a1cb5db02dd3bc1770f32b89cdfe4b6ff7bd0734a7224374fe1",
+          "settlement": null,
+          "series": "KXBRPRESIDENT2"
+        },
+        "b": {
+          "id": "pvwc-pres-bra-2026-10-04-r1-flabol",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "pres",
+            "eventAt": "2026-10-04T16:00:00.000Z",
+            "eventDate": "2026-10-04",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "brazil presidential election first round winner"
+          },
+          "title": "Flavio Bolsonaro \u00b7 Brazil Presidential Election First Round Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Flavio Bolsonaro receives the most valid votes of any candidate in the first round of the 2026 Brazilian presidential election. Outcome sourced from relevant government authorities.\n\nVote totals will be inclusive of all valid votes cast in the first round of the 2026 Brazilian presidential election. If multiple candidates tie for the most votes in the first round, Yes contract holders for each tied candidate receive $1.00 divided by the number of tied candidates, rounded down to the nearest tick, per contract.",
+          "url": "https://polymarket.us/event/pvwc-pres-bra-2026-10-04-r1-flabol",
+          "closeAt": "2026-10-19T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "aeb29130c29994b7ca765271ca08f97a5d7e12fa04819d4eb2c0388acbf5925a",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXBRPRESIDENT2-BRPRES26-2-FBOL::brazil presidential election first round winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Who will win the Nevada Senate? vs Republican Party \u00b7 U.S Senate Midterm Winner",
+    "route": {
+      "pair": {
+        "id": "KXSTATELEG-NVSENA26-R::paccc-usse-midterms-2026-11-03-rep",
+        "a": {
+          "id": "KXSTATELEG-NVSENA26-R",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "winner",
+            "outcome": "republican party",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Who will win the Nevada Senate?",
+          "outcome": "Republican party",
+          "opposite": "Republican party",
+          "category": "Elections",
+          "rules": "If the Republican party wins the Nevada Senate in 2026, then the market resolves to Yes.\n\nWinning is defined as holding more seats than any other party two weeks after the Senate is sat for the session following the election. If both parties are tied, then the market resolves to No. This market is also eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details.\n\nhttps://assets.kalshi.com/contract_terms/STATELEG.pdf\n\n[{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"}]",
+          "url": "https://kalshi.com/markets/kxstateleg/kxstateleg-nvsena26",
+          "closeAt": "2026-11-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "3887d23f59ee05385bac3299811397d434b3bd923af55c9e01cb2d7c01c3142a",
+          "settlement": null,
+          "series": "KXSTATELEG"
+        },
+        "b": {
+          "id": "paccc-usse-midterms-2026-11-03-rep",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T00:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "winner",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "title": "Republican Party \u00b7 U.S Senate Midterm Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "\nThis market will settle to Yes if the Republican Party wins control of the United States Senate in the 2026 United States midterm election. Outcome sourced from relevant state electoral authorities, and the United States Senate.\n\nA party wins control of the United States Senate if it wins a majority of the chamber\u2019s voting seats. If no party wins a majority of voting seats, the party that wins control of the chamber is the party that wins half of the voting seats and holds the Vice Presidency. If the outcome remains ambiguous after applying the above criteria, the chamber will be deemed controlled by the party with which the first selected President Pro Tempore of the Congress that convenes after the specified election is affiliated.\n\nThe following rules govern the counting of seats for determining which party wins control of the chamber.\n\nAll regular and special Senate elections that determine representation in the upcoming 120th Congress and are scheduled to take place in November 2026 as of October 31, 2026 are included. Runoffs for qualifying elections will determine attribution of the relevant seat, even if they take place after November 2026. Vacant seats for which no election or special election to fill the seat is scheduled to take place in November 2026 as of October 31, 2026 will be treated as held by the party affiliation of the most recent member to hold that seat.\n\nFor seats contested in the specified election, seats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected. \n\nFor seats not contested in the specified election, seats are attributed to the party that holds the seat as of the date of the election. If a current sitting member of the U.S. Senate who is not up for election changes party affiliation or vacates their seat after the date of the election, the seat is attributed to the party under which the member was affiliated at the time of the election.\n\nSenate members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party are included in that party\u2019s count. If the caucus decisions of members of the Senate elected as independents cannot be determined on the date of the election, settlement may be postponed until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n",
+          "url": "https://polymarket.us/event/paccc-usse-midterms-2026-11-03-rep",
+          "closeAt": "2027-02-02T04:59:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "4e97ab2d6467e4adefaca5f484aed1fc4958640fa77ca6a4e9876347f5274e76",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXSTATELEG-NVSENA26-R::paccc-usse-midterms-2026-11-03-rep",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 10
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Liberty win the College Football Conference USA Championship? vs Conference USA \u00b7 Conference to Win College Football National Championship",
+    "route": {
+      "pair": {
+        "id": "KXNCAAFCUSA-26-LIB::tec-cfb-conf-2027-01-25-w-cusa",
+        "a": {
+          "id": "KXNCAAFCUSA-26-LIB",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:LIBERTY",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "conference usa champion"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Liberty win the College Football Conference USA Championship?",
+          "outcome": "Liberty",
+          "opposite": "Liberty",
+          "category": "Sports",
+          "rules": "If Liberty wins the 2026 College Football Conference USA Championship Game, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAF.pdf\n\n[{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxncaafcusa/kxncaafcusa-26",
+          "closeAt": "2026-12-06T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "f2b0842554effb50821d81e986a65709e558c3da6fa76d7b45e86a5b423cdf3a",
+          "settlement": null,
+          "series": "KXNCAAFCUSA"
+        },
+        "b": {
+          "id": "tec-cfb-conf-2027-01-25-w-cusa",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "eventAt": "2026-08-29T16:00:00.000Z",
+            "eventDate": "2026-08-29",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "conference to win college football national championship"
+          },
+          "title": "Conference USA \u00b7 Conference to Win College Football National Championship",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if a team from the Conference USA wins the College Football Playoff National Championship scheduled for January 25, 2027. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/tec-cfb-conf-2027-01-25-w-cusa",
+          "closeAt": "2027-02-09T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "4229ed09041c1e06e7ee868cd2200ca2cbe132a2b7f5393069cecf084a978c0b",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "conference usa champion::conference to win college football national championship",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Alaska Governor winner be Republican party and Alaska Senate winner be Democratic party? vs Republican Party \u00b7 U.S Senate Midterm Winner",
+    "route": {
+      "pair": {
+        "id": "KXAKSENGOVCOMBO-26NOV-REPDEM::paccc-usse-midterms-2026-11-03-rep",
+        "a": {
+          "id": "KXAKSENGOVCOMBO-26NOV-REPDEM",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "winner",
+            "outcome": "republican governor democratic senator",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Alaska Governor winner be Republican party and Alaska Senate winner be Democratic party?",
+          "outcome": "Republican Governor, Democratic Senator",
+          "opposite": "Republican Governor, Democratic Senator",
+          "category": "Elections",
+          "rules": "If ALL of the following occur: Alaska Governor winner: Republican party, Alaska Senate winner: Democratic party, then the market resolves to Yes.\n\nThis is a combination market requiring ALL specified outcomes to occur for the contract to pay out. If ANY single component resolves to No or becomes impossible, the entire contract immediately resolves to No. Each component is resolved according to its corresponding Kalshi ruleset: Alaska Governor winner (GOVPARTY), Alaska Senate winner (SENATEPARTY).\n\nhttps://assets.kalshi.com/contract_terms/POLITICALECONOMICEVENTS.pdf\n\n[{\"name\":\"Bureau of Labor Statistics\",\"url\":\"https://www.bls.gov/news.release/empsit.nr0.htm\"},{\"name\":\"Bureau of Labor Statistics\",\"url\":\"https://www.bls.gov/cpi/\"},{\"name\":\"Federal Reserve Board of Governors\",\"url\":\"https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\"}]",
+          "url": "https://kalshi.com/markets/kxaksengovcombo/kxaksengovcombo-26nov",
+          "closeAt": "2027-11-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "f5d032e07cc1c8ae594a9fce076140e7573ce4d97af10f1216aee20bfbd35521",
+          "settlement": null,
+          "series": "KXAKSENGOVCOMBO"
+        },
+        "b": {
+          "id": "paccc-usse-midterms-2026-11-03-rep",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T00:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "winner",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "title": "Republican Party \u00b7 U.S Senate Midterm Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "\nThis market will settle to Yes if the Republican Party wins control of the United States Senate in the 2026 United States midterm election. Outcome sourced from relevant state electoral authorities, and the United States Senate.\n\nA party wins control of the United States Senate if it wins a majority of the chamber\u2019s voting seats. If no party wins a majority of voting seats, the party that wins control of the chamber is the party that wins half of the voting seats and holds the Vice Presidency. If the outcome remains ambiguous after applying the above criteria, the chamber will be deemed controlled by the party with which the first selected President Pro Tempore of the Congress that convenes after the specified election is affiliated.\n\nThe following rules govern the counting of seats for determining which party wins control of the chamber.\n\nAll regular and special Senate elections that determine representation in the upcoming 120th Congress and are scheduled to take place in November 2026 as of October 31, 2026 are included. Runoffs for qualifying elections will determine attribution of the relevant seat, even if they take place after November 2026. Vacant seats for which no election or special election to fill the seat is scheduled to take place in November 2026 as of October 31, 2026 will be treated as held by the party affiliation of the most recent member to hold that seat.\n\nFor seats contested in the specified election, seats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected. \n\nFor seats not contested in the specified election, seats are attributed to the party that holds the seat as of the date of the election. If a current sitting member of the U.S. Senate who is not up for election changes party affiliation or vacates their seat after the date of the election, the seat is attributed to the party under which the member was affiliated at the time of the election.\n\nSenate members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party are included in that party\u2019s count. If the caucus decisions of members of the Senate elected as independents cannot be determined on the date of the election, settlement may be postponed until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n",
+          "url": "https://polymarket.us/event/paccc-usse-midterms-2026-11-03-rep",
+          "closeAt": "2027-02-02T04:59:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "4e97ab2d6467e4adefaca5f484aed1fc4958640fa77ca6a4e9876347f5274e76",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXAKSENGOVCOMBO-26NOV-REPDEM::paccc-usse-midterms-2026-11-03-rep",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 10
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "DK Metcalf Receiving Yards Escalator vs DK Metcalf 60+ receiving yards \u00b7 Will DK Metcalf record 60+ receiving yards?",
+    "route": {
+      "pair": {
+        "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4::astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte60",
+        "a": {
+          "id": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflescalatorrecyds",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "DK Metcalf Receiving Yards Escalator",
+          "outcome": "DK Metcalf",
+          "opposite": "DK Metcalf",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays per receiving yards by DK Metcalf in the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each 10 receiving yards increase the payout by the following schedule: 0\u20139 yards, $0.0000; 10\u201319, $0.0001; 20\u201329, $0.0010; 30\u201339, $0.0033; 40\u201349, $0.0080; 50\u201359, $0.0156; 60\u201369, $0.0270; 70\u201379, $0.0428; 80\u201389, $0.0640; 90\u201399, $0.0911; 100\u2013109, $0.1250; 110\u2013119, $0.1663; 120\u2013129, $0.2160; 130\u2013139, $0.2746; 140\u2013149, $0.3430; 150\u2013159, $0.4218; 160\u2013169, $0.5120; 170\u2013179, $0.6141; 180\u2013189, $0.7290; 190\u2013199, $0.8573; and 200 or more, $1.0000. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract shown above follows this calculation:\nPayout Formula = floor(10000 x (y / 200)^3) / 10000\ny = min(200, max(0, 10 x floor(s / 10)))\ns = official receiving yards\n\nThe No payout is $1.00 minus the Yes payout. Negative receiving yard totals pay Yes $0.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflescalatorrecyds/kxnflescalatorrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "a1637e30a453595fd0d5e3a1a2544e67cb98dc7865f713cfe4bca832198f7cc4",
+          "settlement": null,
+          "series": "KXNFLESCALATORRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte60",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "dk metcalf",
+            "marketType": "prop",
+            "line": 59.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [
+              "60",
+              "60"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "DK Metcalf 60+ receiving yards \u00b7 Will DK Metcalf record 60+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if DK Metcalf records at least 60 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte60",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "b4772a153f2b9c8ba6382efbfdbebd46dac0f6bb5726184b2ce5ca3df844063d",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLESCALATORRECYDS-26OCT01PITCLE-PITDMETCALF4::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 1,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "DK Metcalf receiving yards ladder vs DK Metcalf 50+ receiving yards \u00b7 Will DK Metcalf record 50+ receiving yards?",
+    "route": {
+      "pair": {
+        "id": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITDMETCALF4::astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte50",
+        "a": {
+          "id": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITDMETCALF4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "prop",
+            "period": "full event",
+            "propType": "kxnflladderrecyds",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [],
+            "units": "yards",
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "DK Metcalf receiving yards ladder",
+          "outcome": "DK Metcalf",
+          "opposite": "DK Metcalf",
+          "category": "Sports",
+          "rules": "If Each Yes contract pays $0.0025 per receiving yard recorded by DK Metcalf during the Pittsburgh vs Cleveland Pro Football game originally scheduled for Oct 1, 2026. Each No contract pays $1.00 minus the Yes payout. Yes pays out at most $1.00. Then the market resolves to Yes.\n\nThis is a scalar market. The Yes payout per contract is $0.0025 per receiving yard constrained between $0.00\u2013$1.00 with a cap at 400 yards. The No payout is $1.00 minus the Yes payout. Payouts are proportional to the size of the holder's position. For example, 80 receiving yards pays Yes $0.20 and No $0.80; 200 yards pays Yes $0.50 and No $0.50; zero yards pay Yes $0.00 and No $1.00.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NFL. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLENTITYSCALARSTAT.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflladderrecyds/kxnflladderrecyds-26oct01pitcle",
+          "closeAt": "2026-10-02T03:15:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "4d6ba86139eee452ea5a7d5f4a3ecff6c108d464a4286ac0c202a6762d9b4ea3",
+          "settlement": null,
+          "series": "KXNFLLADDERRECYDS"
+        },
+        "b": {
+          "id": "astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte50",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-10-02T00:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "NFL:CLE",
+              "NFL:PITTSBURGH"
+            ],
+            "participant": "dk metcalf",
+            "marketType": "prop",
+            "line": 49.5,
+            "period": "full event",
+            "propType": "receiving yards",
+            "outcome": "dk metcalf",
+            "entities": [],
+            "numbers": [
+              "50",
+              "50"
+            ],
+            "units": "yards",
+            "aliases": []
+          },
+          "title": "DK Metcalf 50+ receiving yards \u00b7 Will DK Metcalf record 50+ receiving yards?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if DK Metcalf records at least 50 receiving yards in the Pittsburgh Steelers vs Cleveland Browns professional football game scheduled for Oct 1, 2026. Overtime is included if played. The listed player must participate in the game by taking at least one snap on offense, defense, or special teams, with a snap nullified by penalty counting; otherwise, the market will settle to the last fair market price. The market will settle based on the official box score at the conclusion of the game. For purposes of this market, stat corrections enforced after the game has been completed will not count. If the game is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/astatc-nfl-pit-cle-2026-10-01-recyd-dkmet-gte50",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "415791674182ec08daed679773d7c23a646d2b7a177037551f13d5a25602c858",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLLADDERRECYDS-26OCT01PITCLE-PITDMETCALF4::[\"nfl\",\"2026-10-01\",[\"NFL:CLE\",\"NFL:PITTSBURGH\"]]",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Florida qualify for the College Football Playoff Quarterfinals in the 2026-27 season? vs Florida \u00b7 College Football Playoff Final Qualifiers",
+    "route": {
+      "pair": {
+        "id": "KXNCAAFQF-27-FLA::aqc-cfb-cfp-2027-01-25-finalq-fl",
+        "a": {
+          "id": "KXNCAAFQF-27-FLA",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:FLORIDA",
+            "entities": [],
+            "numbers": [
+              "2026",
+              "27"
+            ],
+            "aliases": [],
+            "eventKey": "college football playoff quarterfinals qualifiers"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Florida qualify for the College Football Playoff Quarterfinals in the 2026-27 season?",
+          "outcome": "Florida",
+          "opposite": "Florida",
+          "category": "Sports",
+          "rules": "If Florida qualifies for the College Football Playoff Quarterfinals in the 2026-27 season, then the market resolves to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFMILESTONES.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+          "url": "https://kalshi.com/markets/kxncaafqf/kxncaafqf-27",
+          "closeAt": "2027-01-17T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "f0f327b952b141da26d5cfb38904b10fc8919aed1975347a851579166511c960",
+          "settlement": null,
+          "series": "KXNCAAFQF"
+        },
+        "b": {
+          "id": "aqc-cfb-cfp-2027-01-25-finalq-fl",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "eventAt": "2026-08-29T16:00:00.000Z",
+            "eventDate": "2026-08-29",
+            "participants": [
+              "CFB:FLORIDA"
+            ],
+            "participant": "CFB:FLORIDA",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:FLORIDA",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "florida",
+                "venue": "poly",
+                "venueId": "1255",
+                "aliases": [
+                  "florida",
+                  "gators",
+                  "florida",
+                  "fl",
+                  "fla"
+                ]
+              },
+              {
+                "name": "florida",
+                "venue": "poly",
+                "venueId": "1255",
+                "aliases": [
+                  "florida",
+                  "gators",
+                  "florida",
+                  "fl",
+                  "fla"
+                ]
+              }
+            ],
+            "eventKey": "college football playoff final qualifiers"
+          },
+          "title": "Florida \u00b7 College Football Playoff Final Qualifiers",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Florida advances to the 2026-27 College Football Playoff National Championship. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/aqc-cfb-cfp-2027-01-25-finalq-fl",
+          "closeAt": "2027-01-30T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "d5d2009214d29b16b971e1caf3035ebea6c690fa82a032f1bf96c234b14c331e",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "college football playoff quarterfinals qualifiers::college football playoff final qualifiers",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Taylor Brown win Big Brother Season 28? vs Taylor Brown \u00b7 Big Brother Season 28: 2nd Place",
+    "route": {
+      "pair": {
+        "id": "KXBIGBROTHER-26DEC31-TAY::rtc-bbus-s28-2-2026-10-01-taybro",
+        "a": {
+          "id": "KXBIGBROTHER-26DEC31-TAY",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "future",
+            "outcome": "taylor brown",
+            "entities": [],
+            "numbers": [
+              "28"
+            ],
+            "aliases": [],
+            "eventKey": "who will win big brother"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Taylor Brown win Big Brother Season 28?",
+          "outcome": "Taylor Brown",
+          "opposite": "Taylor Brown",
+          "category": "Entertainment",
+          "rules": "If Taylor Brown are officially declared the winner of Big Brother Season 28, then the market resolves to Yes.\n\nHow this is resolved\nThe winner must be officially announced in the finale or via official channels immediately following.\nMultiple joint winners each resolve to Yes with split payouts ($1 divided by number of winners).\nIf no winner is declared, all markets resolve to No. \nDisqualifications or withdrawals before the finale resolve to No.\nLater title stripping doesn't affect resolution - the original finale announcement governs.\n\nPayout criteria\nWinners who decline the award still count unless acceptance was a condition of victory.\nFor couples/teams competitions, being part of the winning unit counts.\n\nDoesn't count for payout: Fan favorite or other secondary awards don't count as winning.\n\nThis market and these products have not been endorsed by Big Brother. Any references to Big Brother, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Big Brother and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/BIGBROTHERWINNER.pdf\n\n[{\"name\":\"CBS\",\"url\":\"https://www.cbsnews.com/\"},{\"name\":\"Paramount+\",\"url\":\"https://www.paramountplus.com/home/\"}]",
+          "url": "https://kalshi.com/markets/kxbigbrother/kxbigbrother-26dec31",
+          "closeAt": "2026-12-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "83f3cd55a933ec07b94d00a3c84d52bde8baa9fb229d2f4e8ec3b8cc35b067e8",
+          "settlement": null,
+          "series": "KXBIGBROTHER"
+        },
+        "b": {
+          "id": "rtc-bbus-s28-2-2026-10-01-taybro",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "bbus",
+            "eventAt": "2026-10-01T04:00:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "future",
+            "period": "set 28",
+            "entities": [],
+            "numbers": [
+              "28"
+            ],
+            "aliases": [],
+            "eventKey": "big brother season 28 2nd place"
+          },
+          "title": "Taylor Brown \u00b7 Big Brother Season 28: 2nd Place",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "If Taylor Brown comes in second-place in Big Brother season 28, this market will settle to Yes. If the finale of Big Brother season 28 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date.",
+          "url": "https://polymarket.us/event/rtc-bbus-s28-2-2026-10-01-taybro",
+          "closeAt": "2026-10-16T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "93cad52938caf09ff2a9c916d715e966a62e7189b76060775666fc8ea8e86771",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "who will win big brother::big brother season 28 2nd place",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Donald Trump Jr. and Marco Rubio be the 2028 Republican Presidential ticket? vs Marco Rubio \u00b7 2028 Republican VP Nominee",
+    "route": {
+      "pair": {
+        "id": "KXRTICKET-28NOV07-DTJRMRUB::enwc-uspres-vpnom-rep-2028-marrub",
+        "a": {
+          "id": "KXRTICKET-28NOV07-DTJRMRUB",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "donald trump jr and marco rubio",
+            "entities": [],
+            "numbers": [
+              "2028"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Donald Trump Jr. and Marco Rubio be the 2028 Republican Presidential ticket?",
+          "outcome": "Donald Trump Jr. and Marco Rubio",
+          "opposite": "Donald Trump Jr. and Marco Rubio",
+          "category": "Elections",
+          "rules": "If the Republican presidential nominee is Donald Trump Jr. AND the Republican vice presidential nominee is Marco Rubio in the 2028 presidential election, then the market resolves to Yes.\n\nOrder matters: the first person listed is the presidential nominee and the second is the vice presidential nominee.\n\nThis is a combination market requiring ALL specified outcomes to occur for the contract to pay out. If ANY single component resolves to No or becomes impossible, the entire contract immediately resolves to No. Each component is resolved according to its corresponding Kalshi ruleset: Presidential Nominee (PRESNOM), Vice Presidential Nominee (VPRESNOM). The presidential nominee (listed first) is resolved under PRESNOM and the vice presidential nominee (listed second) is resolved under VPRESNOM.\n\nhttps://assets.kalshi.com/contract_terms/POLITICALECONOMICEVENTS.pdf\n\n[{\"name\":\"Republican Party\",\"url\":\"https://gop.com/\"},{\"name\":\"Democratic Party\",\"url\":\"https://democrats.org/\"}]",
+          "url": "https://kalshi.com/markets/kxrticket/kxrticket-28nov07",
+          "closeAt": "2028-11-14T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "fda18fe5f8cfb550f4000b0fd413a2ea8bb8686fb71de725141fe65e0c8a7a64",
+          "settlement": null,
+          "series": "KXRTICKET"
+        },
+        "b": {
+          "id": "enwc-uspres-vpnom-rep-2028-marrub",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "uspres",
+            "eventAt": "2026-09-21T17:00:00.000Z",
+            "eventDate": "2026-09-21",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [
+              "2028"
+            ],
+            "aliases": [],
+            "eventKey": "2028 republican vp nominee"
+          },
+          "title": "Marco Rubio \u00b7 2028 Republican VP Nominee",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Marco Rubio wins and accepts the Republican Party nomination for Vice-President in the 2028 United States Presidential Election. Outcome sourced from the Republican Party.\n\nAny replacement of the Republican Party Vice-Presidential nominee before election day will not affect the settlement of this market.",
+          "url": "https://polymarket.us/event/enwc-uspres-vpnom-rep-2028-marrub",
+          "closeAt": "2028-08-25T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "14e0ae473791dacf2936b1426fa96cd130da59b998055d43c938de7e9fd63e0d",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXRTICKET-28NOV07-DTJRMRUB::2028 republican vp nominee",
+      "ticks": {
+        "kalshi": 0,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
   }
 ]

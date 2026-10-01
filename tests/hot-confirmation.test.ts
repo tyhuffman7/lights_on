@@ -41,3 +41,17 @@ const nativeClassifications=JSON.parse((await import('node:fs')).readFileSync(ne
 for(const c of nativeClassifications)test('native hot-question classification: '+c.label,()=>{
  assert.equal(paperSettlement(c.route).classification,c.expected);
 });
+test('equivalent nanosecond timestamp encodings cannot hide conflicting full books',()=>{
+ const f=new ConfirmationFeed('poly',['P']);const at=Date.now(),mono=performance.now();
+ const message=(transactTime:string,qty:string)=>({marketData:{marketSlug:'P',transactTime,state:'MARKET_STATE_OPEN',
+  bids:[{px:{value:'0.40',currency:'USD'},qty}],offers:[{px:{value:'0.60',currency:'USD'},qty:'3'}]}});
+ f.stream.options.onMessage(message('2026-10-01T05:00:00.100Z','2'),at,mono);
+ f.stream.options.onMessage(message('2026-10-01T05:00:00.100000000Z','4'),at+1,mono+1);
+ assert.ok(f.failures.includes('SAME_VERSION_CONFLICTING_BOOKS'));assert.equal(f.latest.get('P')?.e.book.valid,false);
+});
+test('matching full-event winner and same playoff stage retain broad hypotheses',()=>{
+ const {route}=fixture();route.pair.a.title='Will Example qualify for the College Football Playoff Final?';route.pair.b.title='Example · College Football Playoff Final Qualifiers';
+ route.pair.a.rules='If Example advances to the College Football Playoff National Championship, then the market resolves to Yes.';
+ route.pair.b.rules='This market will settle to Yes if Example advances to the College Football Playoff National Championship.';
+ assert.deepEqual(differentQuestion(route),[]);
+});

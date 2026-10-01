@@ -5,7 +5,7 @@ import {assessSettlement} from './settlement-validation.ts';
 export type HotSignal=ReturnType<typeof recallSignals>[number];
 export type Pending={key:string;route:RecallRoute;signal:HotSignal;queuedAt:number;firstQueuedAt:number};
 export const candidateKey=(r:RecallRoute,s:HotSignal)=>r.pair.id+':'+s.evaluation.kalshiSide;
-export function priority(a:Pending,b:Pending){return Number(b.route.matchSource==='CANONICAL')-Number(a.route.matchSource==='CANONICAL')||
+export function priority(a:Pending,b:Pending){return ({CANONICAL:3,SPORTS_EVENT:2,TEXT:1}[b.route.matchSource])-({CANONICAL:3,SPORTS_EVENT:2,TEXT:1}[a.route.matchSource])||
  Number(a.route.warnings.includes('ORIENTATION_UNPROVEN'))-Number(b.route.warnings.includes('ORIENTATION_UNPROVEN'))||
  Number(b.signal.fresh)-Number(a.signal.fresh)||
  (b.signal.evaluation.estimatedNetProfit??-Infinity)-(a.signal.evaluation.estimatedNetProfit??-Infinity)||
@@ -28,18 +28,24 @@ export function differentQuestion(route:RecallRoute){
  const [a,b]=[route.pair.a,route.pair.b];const text=(m:typeof a)=>normalizeText(m.title+' '+m.outcome+' '+m.rules.split('\n')[0]);
  const x=text(a),y=text(b),reasons:string[]=[];
  const dimension=(name:string,fn:(s:string)=>string|undefined)=>{const p=fn(x),q=fn(y);if(p&&q&&p!==q)reasons.push(name+':'+p+' vs '+q);};
+ dimension('payout shape',s=>/each yes contract pays|scalar market|escalator|yards ladder/.test(s)?'scalar':/settle to yes if|then the market resolves to yes|this market will settle to yes/.test(s)?'binary':undefined);
+ dimension('combined outcomes',s=>/all of the following occur|combination market|presidential ticket|nominee is.*and.*nominee is/.test(s)?'conjunction':/this market will settle to yes if|if .+ (?:wins|win|comes|receives)/.test(s)?'single-outcome':undefined);
+ dimension('country',s=>/senate|presidential|election/.test(s)?/brazil|brazilian/.test(s)?'brazil':/united states|u s senate|u s house|us presidential/.test(s)?'united-states':undefined:undefined);
+ dimension('playoff stage',s=>!/playoff/.test(s)?undefined:/quarterfinal/.test(s)?'quarterfinal':/semifinal/.test(s)?'semifinal':/top 4 seed/.test(s)?'top-four-seed':/qualif|advances|reach/.test(s)?/national championship|final qualif/.test(s)?'championship-final':'any-playoff':undefined);
+ dimension('election round',s=>!/presidential.*election|election.*winner/.test(s)?undefined:/first round|first-round/.test(s)?'first-round':/including any potential runoff|presidential election winner/.test(s)?'whole-election':undefined);
+ dimension('team/aggregate conference',s=>/a team from|conference to win.*national championship/.test(s)?'any-team-in-conference':/if .+ wins|will .+ win/.test(s)&&/college football|championship/.test(s)?'named-team':undefined);
  dimension('economic metric',s=>{const ms=[['fantasy points',/fantasy points|fantasy scoring/],['QBR',/\bqbr\b/],['passing touchdowns',/passing touchdowns|passing tds/],['passing yards',/passing yards/],['rushing yards',/rushing yards/],['receiving yards',/receiving yards/],['receptions',/\breceptions\b/],['MVP',/most valuable player|\bmvp\b/],['Cy Young',/cy young/]] as const;return ms.find(([,r])=>r.test(s))?.[0];});
  dimension('election metric',s=>/popular vote|vote share|percentage of.*vote|receive at least.*%/.test(s)?'vote-share':/\d+[- ]\d+ house seats|how many.*seats|win \d+.*seats/.test(s)?'seat-count':
   /control.*house|house.*midterm winner/.test(s)?'national-control':/election.*winner|wins? the.*election|win.*gubernatorial election/.test(s)?'election-winner':undefined);
  dimension('relative performance',s=>/underperform|outperform|more fantasy points than|fewer.*than/.test(s)?'relative-to-named-comparator':/election winner|season leader|regular season leader/.test(s)?'absolute-winner-or-leader':undefined);
- dimension('finish rank',s=>/finish in.*(?:2 place|3 place|second|third|top [2-9])|placing (?:second|third)|top (?:five|ten)|top (?:5|10)/.test(s)?'non-winner-rank':/season.*winner|winner.*season|\bwin(?:ner)?\b.*(?:ballon d or|big brother|dancing)|ballon d or.*winner/.test(s)?'winner':undefined);
+ dimension('finish rank',s=>/finish in.*(?:2 place|3 place|2nd|3rd|second|third|top [2-9])|\b(?:2nd|3rd|second|third)[ -]place|placing (?:second|third)|top (?:five|ten)|top (?:5|10)/.test(s)?'non-winner-rank':/season.*winner|winner.*season|\bwin(?:ner)?\b.*(?:ballon d or|big brother|dancing)|ballon d or.*winner|election.*winner|receives the most valid votes/.test(s)?'winner':undefined);
  dimension('qualifier/winner',s=>/qualify for|qualifiers|reach.*championship game/.test(s)?'qualifier':/win.*(?:championship|clausura)|championship.*winner/.test(s)?'champion':undefined);
  dimension('office/stage',s=>/\bvp nominee|vice president.*nominee/.test(s)?'vp-nomination':/democratic nominee|republican nominee|presidential.*nominee/.test(s)&&!/defeat|election winner/.test(s)?'presidential-nomination':/presidential election|us presidential election winner/.test(s)?'presidential-election':undefined);
  dimension('award status',s=>/selected as a finalist|nominations|nominees/.test(s)?'nominee-finalist':/award|mvp|cy young/.test(s)&&/winner|selected|win/.test(s)?'award-winner':undefined);
  dimension('acting award',s=>/supporting actress/.test(s)?'supporting-actress':/supporting actor/.test(s)?'supporting-actor':/best actress/.test(s)?'leading-actress':/best actor/.test(s)?'leading-actor':undefined);
- dimension('political scope',s=>/control.*(?:house|senate)|house.*midterm winner|(?:house|senate).*control|majority.*(?:house|senate)/.test(s)?'national-control':
-  /(?:alaska|district|gubernatorial|governor|mayor)|(?:house|senate) (?:race|election|seat)/.test(s)?'local-race':undefined);
- dimension('competition scope',s=>/season|championship|series winner|world series|tournament winner/.test(s)?'season-series':/game winner|wins the .* game|winner of the .* game|match winner|wins the .* match|match scheduled|game scheduled|win against/.test(s)?'single-event':undefined);
+ dimension('political scope',s=>/control.*(?:house|senate)|(?:house|senate).*midterm winner|(?:house|senate).*control|majority.*(?:house|senate)/.test(s)?'national-control':
+  /(?:alaska|nevada|district|gubernatorial|governor|mayor)|(?:house|senate) (?:race|election|seat)/.test(s)?'local-race':undefined);
+ dimension('competition scope',s=>/season|champion|apertura|clausura|series winner|world series|tournament winner/.test(s)?'season-series':/game winner|wins the .* game|winner of the .* game|match winner|wins the .* match|match scheduled|game scheduled|win against/.test(s)?'single-event':undefined);
  dimension('individual/aggregate',s=>/team total|combined|aggregate|national control/.test(s)?'aggregate':/player .* (?:yards|points)|individual/.test(s)?'individual':undefined);
  dimension('period',s=>s.match(/\b(?:first|second|third|fourth|1st|2nd|3rd|4th) (?:half|quarter|set)\b/)?.[0]??(/full (?:game|match)|entire game/.test(s)?'full-event':undefined));
  dimension('outcome kind',s=>/campaign|announce.*(?:candidacy|run for)/.test(s)?'campaign':/win.*(?:election|nomination)/.test(s)?'election-winner':undefined);

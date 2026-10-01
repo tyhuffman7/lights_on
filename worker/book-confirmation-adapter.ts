@@ -29,7 +29,7 @@ export class ConfirmationFeed{
     const e=observeBook(b,previous?.e,venue==='kalshi'?message.type:'marketData',Date.now(),performance.now());
     const receipt:SnapshotReceipt={e,messageType:venue==='kalshi'?message.type:'marketData',requestId:message.requestId,sid:message.sid,transactTime:message.marketData?.transactTime};
     // Equal timestamps with conflicting full books are quarantined, including within the persistent stream.
-    if(venue==='poly'&&previous?.transactTime===receipt.transactTime&&JSON.stringify([previous?.e.book.yesBids,previous?.e.book.noBids,previous?.e.book.open])!==JSON.stringify([b.yesBids,b.noBids,b.open])){e.faults.push('SAME_VERSION_CONFLICTING_BOOKS');this.failures.push('SAME_VERSION_CONFLICTING_BOOKS');b.valid=false;}
+    if(venue==='poly'&&previous&&transactionVersion(previous.transactTime)!==null&&transactionVersion(previous.transactTime)===transactionVersion(receipt.transactTime)&&JSON.stringify([previous?.e.book.yesBids,previous?.e.book.noBids,previous?.e.book.open])!==JSON.stringify([b.yesBids,b.noBids,b.open])){e.faults.push('SAME_VERSION_CONFLICTING_BOOKS');this.failures.push('SAME_VERSION_CONFLICTING_BOOKS');b.valid=false;}
     if(venue==='poly'&&previous){const oldVersion=transactionVersion(previous.transactTime),newVersion=transactionVersion(receipt.transactTime);
      if(oldVersion===null||newVersion===null||newVersion<oldVersion){this.failures.push('PM_VERSION_BACKWARDS_OR_UNKNOWN');previous.e.book.valid=false;record('FEED_INVALID',{venue,reason:'PM_VERSION_BACKWARDS_OR_UNKNOWN'});queueMicrotask(()=>this.stream.stop());return;}
     }

@@ -11,6 +11,7 @@ import {takeDepth,normalFee,USD_SCALE} from '../lib/research/ev-arb.ts';
 import {recallPolicy,recallMatches,recallSignals,fairRoutes,currentBook,bookAges,freshnessBucket,
   type RecallRoute,type ObservedBook} from '../lib/research/recall-detector.ts';
 import {LatestCandidates,candidateKey,priority,paperSettlement,differentQuestion,selectConfirmationBooks} from '../lib/research/hot-confirmation.ts';
+import {transactionVersion} from '../lib/screen/book-confirmation.ts';
 import {ConfirmationFeed} from './book-confirmation-adapter.ts';
 import {reconcileGroups} from './coverage.ts';
 
@@ -48,7 +49,7 @@ export class PublicData {
         const raw=await response.text(),responseAt=Date.now(),cacheAge=response.headers.get('age');
         const transport={requestAt,responseAt,durationMs:performance.now()-mono,
           cacheAgeSeconds:cacheAge===null?null:Number(cacheAge),cacheStatus:response.headers.get('cf-cache-status'),bodySha256:sha(raw)};
-        if(!response.ok){if(response.status===429){const seconds=Number(response.headers.get('retry-after')??0);
+        if(!response.ok){if(response.status===429){this.record('NATIVE_RATE_LIMIT',{endpoint,path:u.pathname,requestAt,responseAt,transport,attempt:attempt+1,retryAfter:response.headers.get('retry-after'),limit:response.headers.get('x-ratelimit-limit'),remaining:response.headers.get('x-ratelimit-remaining')});const seconds=Number(response.headers.get('retry-after')??0);
           this.cooldowns.set(u.hostname,Date.now()+Math.min(30_000,Math.max(2000*2**attempt,(Number.isFinite(seconds)?seconds:0)*1000)));}
           throw Error('HTTP_'+response.status);}
         (this.durations[endpoint]??=[]).push(transport.durationMs);const data=JSON.parse(raw);this.record('HTTP_PUBLIC',{url:u.toString(),transport,data});return {data,transport};
@@ -64,7 +65,7 @@ export class PublicData {
     if(m.venue==='poly'&&data.marketData?.marketSlug!==m.id)throw Error('BOOK_IDENTITY_MISMATCH');
     const book=normalizeBook(m.venue,data,transport.responseAt);
     return {book:{...book,venue:m.venue,marketId:m.id,receivedMono:performance.now(),sequence:null,
-      connection:'LIVE',valid:true,source:'rest'},transport};
+      connection:'LIVE',valid:true,source:'rest'},transport,nativeVersion:m.venue==='poly'?data.marketData?.transactTime:undefined};
   }
 }
 
@@ -165,7 +166,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     if(evidenceBytes+Buffer.byteLength(row)>recallPolicy.maxEvidenceBytes){reasons.EVIDENCE_LIMIT=(reasons.EVIDENCE_LIMIT??0)+1;control.abort();return;}
     appendFileSync(resolve(directory,'evidence.ndjson'),row,{mode:0o600});evidenceBytes+=Buffer.byteLength(row);};
   // Catalog bodies are saved once separately, not repeated in the L2 event log.
-  const api=new PublicData(control.signal,(kind,body)=>{if(kind==='HTTP_PUBLIC_FAILURE')record(kind,body);});
+  const api=new PublicData(control.signal,(kind,body)=>{if(kind==='HTTP_PUBLIC_FAILURE'||kind==='NATIVE_RATE_LIMIT')record(kind,body);});
   let data=catalogPath?JSON.parse(readFileSync(resolve(catalogPath),'utf8')):await currentCatalog(api,x=>console.log(JSON.stringify(x)));
   if(catalogPath){if(Date.now()-data.endedAt>30*60_000||!data.complete)throw Error('BOOTSTRAP_CATALOG_EXPIRED_OR_INCOMPLETE');data.raw=new Map(data.raw);}
   if(!data.kalshi.length||!data.poly.length)throw Error('NO_NATIVE_CATALOG');
@@ -346,7 +347,9 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
       peakQueue=Math.max(peakQueue,pendingCandidates.size);
       let dispatched=0;
       while(pendingCandidates.size&&dispatched++<100){
-        const item=queue.next()!;const current=pairBooks(item.route);
+        const item=queue.next()!;item.route=allRoutes.get(item.route.pair.id)??item.route;
+        if(differentQuestion(item.route).length){pendingCandidates.delete(item.key);count('differentQuestionDispatchVetoes');continue;}
+        const current=pairBooks(item.route);
         if(!current||Date.now()-item.queuedAt>recallPolicy.maxPendingAgeMs){pendingCandidates.delete(item.key);count('candidatesExpiredBeforeDispatch');continue;}
         // Reprice both orientations and available quantities before dispatch. Replace historical economics with current state.
         const qs=recallSignals(item.route,current,Date.now());const latest=qs.filter(s=>s.evaluation.kalshiSide===item.signal.evaluation.kalshiSide&&s.candidate)
@@ -375,9 +378,10 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         const r=candidates[restCursor++%Math.max(1,candidates.length)]??routes[restCursor%routes.length];restActive=true;
         const job=(async()=>{try{const before=pairBooks(r),poly=await api.book(r.pair.b);count('independentRestAudits');
           const stream=marketFeeds.get(bookKey('poly',r.pair.b.id))?.liveBook(r.pair.b.id);
-          const conflict=stream&&stream.book.exchangeAt===poly.book.exchangeAt&&JSON.stringify([stream.book.yesBids,stream.book.noBids,stream.book.open])!==JSON.stringify([poly.book.yesBids,poly.book.noBids,poly.book.open]);
+          const sameVersion=stream&&transactionVersion(stream.proof.transactTime)!==null&&transactionVersion(stream.proof.transactTime)===transactionVersion(poly.nativeVersion);
+          const conflict=sameVersion&&stream&&JSON.stringify([stream.book.yesBids,stream.book.noBids,stream.book.open])!==JSON.stringify([poly.book.yesBids,poly.book.noBids,poly.book.open]);
           if(conflict){count('independentAuditVersionConflicts');marketFeeds.get(bookKey('poly',r.pair.b.id))?.cache.quarantine(r.pair.b.id,'poly');}
-          record('REST_AUDIT',{pairId:r.pair.id,before,poly,stream,conflict:!!conflict});
+          record('REST_AUDIT',{pairId:r.pair.id,before,poly,stream,sameVersion:!!sameVersion,conflict:!!conflict});
           const old=observed.get(bookKey('poly',r.pair.b.id));if(!stream?.book.valid&&(!old||old.book.receivedAt<=poly.book.receivedAt))observed.set(bookKey('poly',r.pair.b.id),poly);
           dirty.add(r.pair.id);
         }catch(error){count('independentAuditFailures');record('AUDIT_FAILURE',{reason:(error as Error).message});}finally{restActive=false;}})();
