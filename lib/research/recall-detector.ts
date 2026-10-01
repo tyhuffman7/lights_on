@@ -6,13 +6,15 @@ import {normalizeText,generalHints} from './identity.ts';
 import {evaluateEvArb, evPaperDefaults, USD_SCALE} from './ev-arb.ts';
 
 export const recallPolicy = Object.freeze({ordersEnabled:false, sampleMs:25, discoveryMs:3600_000,
-  durationMs:20*60_000, maxContracts:10, maxConfirmationJobs:4, confirmationCooldownMs:1000, metadataTtlMs:300_000, hotHoldMs:10_000, maxHotRoutes:128, evaluationBudgetMs:20, hotNearNet:200, auditMs:30_000, maxPendingAgeMs:2000,
+  durationMs:20*60_000, maxContracts:10, maxConfirmationJobs:4, confirmationCooldownMs:1000, metadataTtlMs:300_000, hotHoldMs:10_000, maxHotRoutes:128, evaluationBudgetMs:20, hotNearNet:2_000_000, auditMs:30_000, maxPendingAgeMs:2000,
   streamGroupSize:100,maxStreamRestarts:3,maxPublicHttpAttempts:3, maxBookAgeMs:2000, restSpacingMs:300, maxEvidenceBytes:1024*1024*1024,
   delayMs:[0,100,250,500,1000], simulatedCapitalPerVenue:50, maxPairedCommitment:5});
 export type RecallRoute={pair:Pair;matchSource:'CANONICAL'|'SPORTS_EVENT'|'TEXT';warnings:string[];eventKey:string;ticks?:Record<Venue,number>};
 const stop=new Set('will the be in of by a an to on at for is than before after above below yes no and or win wins winner over under total game match'.split(' '));
 const tokens=(m:Market)=>new Set(normalizeText(m.title+' '+m.outcome).split(' ').filter(w=>w.length>2&&!stop.has(w)&&!/^\d+$/.test(w)));
 
+export function singleEventWinner(m:Market){return /^If .+ wins the .+ (?:game|match)\b/i.test(m.rules.trim().split('\n')[0])||
+ /^This market will settle to the winner (?:of|at the end)\b/i.test(m.rules.trim().split('\n')[0]);}
 // Independent public proposition hints, not settlement/exception verification.
 function proposition(m:Market){
   const primary=m.rules.split('\n')[0].split(/\. (?=[A-Z])/)[0],s=normalizeText(m.title+' '+primary);
@@ -107,8 +109,12 @@ export function recallMatches(kalshi:Market[],poly:Market[]){
       const source=exact?'CANONICAL':sports?'SPORTS_EVENT':'TEXT';
       if(source==='CANONICAL')diagnostics.canonical++;else if(source==='SPORTS_EVENT')diagnostics.sports++;else diagnostics.text++;
       const named=(s:string|undefined)=>!!s&&!/^(yes|no|unknown long|unknown short)$/i.test(s);
+      const scopedA=ia&&registry.normalize({...ia,competition:ia.competition??ib?.competition}),scopedOutcomeA=scopedA?.outcome;
+      const namedParticipants=ib?.participants.length===2?ib.participants:scopedA?.participants;
       let orientations:boolean[];
       if(exact)orientations=[false];
+      else if(ia?.sports&&ib?.sports&&(ia.marketType==='winner'||singleEventWinner(a.market))&&(ib.marketType==='winner'||singleEventWinner(b.market))&&ia.eventDate===ib.eventDate&&
+        scopedOutcomeA&&ib.outcome&&namedParticipants?.length===2&&namedParticipants.includes(scopedOutcomeA)&&namedParticipants.includes(ib.outcome))orientations=[scopedOutcomeA!==ib.outcome];
       else if(sameSubject||subjectInOther||named(ia?.outcome)&&named(ib?.outcome)&&ia!.outcome===ib!.outcome)orientations=[false];
       else if(sports&&ia?.marketType==='winner'&&ib?.marketType==='winner'&&ia.participants.length===2&&
         ia.participants.includes(ia.outcome??'')&&ib.participants.includes(ib.outcome??''))orientations=[true];

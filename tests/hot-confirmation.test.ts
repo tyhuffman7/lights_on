@@ -5,7 +5,7 @@ import {LatestCandidates,paperSettlement,differentQuestion,selectConfirmationBoo
 import {recallSignals,type RecallRoute,type ObservedBook} from '../lib/research/recall-detector.ts';
 import {ConfirmationFeed} from '../worker/book-confirmation-adapter.ts';
 function fixture(){const now=Date.now();const route:RecallRoute={pair:{id:'K::P',a:market('kalshi','K') as any,b:market('poly','P') as any,inverted:false,reviewed:false},matchSource:'TEXT',eventKey:'x',warnings:[]};
- const books={kalshi:{book:{...book('kalshi','K'),source:'stream'}} as ObservedBook,poly:{book:{...book('poly','P'),source:'stream'}} as ObservedBook};
+ const books={kalshi:{book:{...book('kalshi','K',performance.now(),now),source:'stream'}} as ObservedBook,poly:{book:{...book('poly','P',performance.now(),now),source:'stream'}} as ObservedBook};
  return {now,route,books};}
 test('latest state coalesces per orientation and removes disappearing economics',()=>{
  const {route,books,now}=fixture(),q=new LatestCandidates();q.update(route,recallSignals(route,books,now),now);
@@ -54,4 +54,10 @@ test('matching full-event winner and same playoff stage retain broad hypotheses'
  route.pair.a.rules='If Example advances to the College Football Playoff National Championship, then the market resolves to Yes.';
  route.pair.b.rules='This market will settle to Yes if Example advances to the College Football Playoff National Championship.';
  assert.deepEqual(differentQuestion(route),[]);
+});
+test('native opposite named winners correct complement orientation without dropping the route',async()=>{
+ const {recallMatches}=await import('../lib/research/recall-detector.ts');
+ const c=nativeClassifications.find((c:any)=>c.label.includes('Jermaine Wattimena win'));
+ const rs=recallMatches([c.route.pair.a],[c.route.pair.b]).routes;
+ assert.equal(rs.length,1);assert.equal(rs[0].pair.inverted,true);assert.deepEqual(differentQuestion(rs[0]),[]);
 });

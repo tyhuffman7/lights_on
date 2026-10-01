@@ -3689,5 +3689,1909 @@
       }
     },
     "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Tampa Bay wins vs Will Miami FC win against Tampa Bay Rowdies in the USL Championship match scheduled for Oct 3, 2026?",
+    "route": {
+      "pair": {
+        "id": "KXUSLGAME-26OCT03TAMMIA-TAM::atc-uslc-tam-mia-2026-10-03-mia",
+        "a": {
+          "id": "KXUSLGAME-26OCT03TAMMIA-TAM",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "eventDate": "2026-10-03",
+            "participants": [
+              "miami",
+              "tampa bay"
+            ],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "tampa bay",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "usl championship game"
+          },
+          "exchangeIndex": 0,
+          "title": "Tampa Bay wins",
+          "outcome": "Tampa Bay",
+          "opposite": "Tampa Bay",
+          "category": "Sports",
+          "rules": "If Tampa Bay wins the Tampa Bay vs Miami professional USL Championship soccer game originally scheduled for Oct 3, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties), then the market resolves to Yes.\n\nThe following market refers to the Tampa Bay vs Miami professional USL Championship soccer game originally scheduled for Oct 3, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties). If the game ends in a tie, the market called \"Tie\" resolves to Yes. If the game is cancelled or rescheduled to over 48 hours away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCERGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxuslgame/kxuslgame-26oct03tammia",
+          "closeAt": "2026-10-04T02:30:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "61b5e8ea2fe91d4185a63fa15cb4e36221d57329352d4e6c6c66c9e9d20dc36a",
+          "settlement": null,
+          "series": "KXUSLGAME"
+        },
+        "b": {
+          "id": "atc-uslc-tam-mia-2026-10-03-mia",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "uslc",
+            "eventAt": "2026-10-03T23:30:00.000Z",
+            "eventDate": "2026-10-03",
+            "participants": [
+              "USLC:MIAMI_FC"
+            ],
+            "participant": "USLC:MIAMI_FC",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "USLC:MIAMI_FC",
+            "entities": [],
+            "numbers": [
+              "3",
+              "2026"
+            ],
+            "aliases": [
+              {
+                "name": "miami fc",
+                "venue": "poly",
+                "venueId": "21286",
+                "aliases": [
+                  "miami fc",
+                  "miami fc",
+                  "miami fc",
+                  "mia",
+                  "mia"
+                ]
+              },
+              {
+                "name": "miami fc",
+                "venue": "poly",
+                "venueId": "21286",
+                "aliases": [
+                  "miami fc",
+                  "miami fc",
+                  "miami fc",
+                  "mia",
+                  "mia"
+                ]
+              }
+            ],
+            "eventKey": "will miami fc win against tampa bay rowdies in the usl championship match scheduled for oct 3 2026"
+          },
+          "title": "Will Miami FC win against Tampa Bay Rowdies in the USL Championship match scheduled for Oct 3, 2026?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to the winner at the end of 90 minutes plus stoppage time in the Tampa Bay Rowdies vs Miami FC USL Championship match scheduled for 2026-10-03 7:30PM ET. If the match is tied following 90 minutes plus stoppage time, the market will settle to Tie. If the match is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from USL.",
+          "url": "https://polymarket.us/event/atc-uslc-tam-mia-2026-10-03-mia",
+          "closeAt": "2026-10-18T03:30:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "ca5855ad2b64f60e149581cc2ecabfcf4e17fb131e8a39a4eb1a6ff28a7ef3c2",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "[null,\"2026-10-03\",[\"miami\",\"tampa bay\"]]::will miami fc win against tampa bay rowdies in the usl championship match scheduled for oct 3 2026",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Indiana finish in the top 5 in the Big Ten in the 2026 college football regular season? vs Indiana \u00b7 College Football Undefeated Regular Season",
+    "route": {
+      "pair": {
+        "id": "KXNCAAFBIGTENREGTOP-27T5-IND::aachc-cfb-undefeated-2026-11-28-ind",
+        "a": {
+          "id": "KXNCAAFBIGTENREGTOP-27T5-IND",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:INDIANA",
+            "entities": [],
+            "numbers": [
+              "5",
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "college football big ten regular season top finishers"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Indiana finish in the top 5 in the Big Ten in the 2026 college football regular season?",
+          "outcome": "Indiana",
+          "opposite": "Indiana",
+          "category": "Sports",
+          "rules": "If Indiana finishes in the top 5 in the Big Ten in the 2026 college football regular season, then the market resolves to Yes.\n\nTie-Breaking Resolution: If two or more teams finish with identical win-loss records within their conference, all tied teams will resolve as having achieved that position (e.g., all teams tied for 5th place will be considered to have finished in the top 5).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFREGULARSEASON.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+          "url": "https://kalshi.com/markets/kxncaafbigtenregtop/kxncaafbigtenregtop-27t5",
+          "closeAt": "2027-01-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "b6cbdf1b2360f38f944259d931e896c4702b9ac8193979af6c014df3cd054f95",
+          "settlement": null,
+          "series": "KXNCAAFBIGTENREGTOP"
+        },
+        "b": {
+          "id": "aachc-cfb-undefeated-2026-11-28-ind",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "eventAt": "2026-08-29T16:00:00.000Z",
+            "eventDate": "2026-08-29",
+            "participants": [
+              "CFB:INDIANA"
+            ],
+            "participant": "CFB:INDIANA",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:INDIANA",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "indiana",
+                "venue": "poly",
+                "venueId": "1124",
+                "aliases": [
+                  "indiana",
+                  "hoosiers",
+                  "indiana",
+                  "ind",
+                  "ind"
+                ]
+              },
+              {
+                "name": "indiana",
+                "venue": "poly",
+                "venueId": "1124",
+                "aliases": [
+                  "indiana",
+                  "hoosiers",
+                  "indiana",
+                  "ind",
+                  "ind"
+                ]
+              }
+            ],
+            "eventKey": "college football undefeated regular season"
+          },
+          "title": "Indiana \u00b7 College Football Undefeated Regular Season",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Indiana goes undefeated in the 2026 College Football regular season. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/aachc-cfb-undefeated-2026-11-28-ind",
+          "closeAt": "2026-12-13T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "5ecff2adb384a276ab42d1bb2034d8811b4eec3753c070489abf7d7dc3a4df1a",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "college football big ten regular season top finishers::college football undefeated regular season",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Who will win the North Carolina State Senate? vs Democratic Party \u00b7 U.S Senate Midterm Winner",
+    "route": {
+      "pair": {
+        "id": "KXSTATELEG-NCSEN26-D::paccc-usse-midterms-2026-11-03-dem",
+        "a": {
+          "id": "KXSTATELEG-NCSEN26-D",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "winner",
+            "outcome": "democratic party",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Who will win the North Carolina State Senate?",
+          "outcome": "Democratic party",
+          "opposite": "Democratic party",
+          "category": "Elections",
+          "rules": "If the Democratic party wins the North Carolina State Senate in 2026, then the market resolves to Yes.\n\nWinning is defined as holding more seats than any other party two weeks after the State Senate is sat for the session following the election. If both parties are tied, then the market resolves to No. This market is also eligible for accelerated determination after a consensus of media organizations project the winner. See full rules for details.\n\nhttps://assets.kalshi.com/contract_terms/STATELEG.pdf\n\n[{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"}]",
+          "url": "https://kalshi.com/markets/kxstateleg/kxstateleg-ncsen26",
+          "closeAt": "2026-11-03T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "0021e4feb9e4502ada0ad6367191ff03d1b29c39612281278556386ec9184017",
+          "settlement": null,
+          "series": "KXSTATELEG"
+        },
+        "b": {
+          "id": "paccc-usse-midterms-2026-11-03-dem",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T00:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "winner",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "title": "Democratic Party \u00b7 U.S Senate Midterm Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "\nThis market will settle to Yes if the Democratic Party wins control of the United States Senate in the 2026 United States midterm election. Outcome sourced from relevant state electoral authorities, and the United States Senate.\n\nA party wins control of the United States Senate if it wins a majority of the chamber\u2019s voting seats. If no party wins a majority of voting seats, the party that wins control of the chamber is the party that wins half of the voting seats and holds the Vice Presidency. If the outcome remains ambiguous after applying the above criteria, the chamber will be deemed controlled by the party with which the first selected President Pro Tempore of the Congress that convenes after the specified election is affiliated.\n\nThe following rules govern the counting of seats for determining which party wins control of the chamber.\n\nAll regular and special Senate elections that determine representation in the upcoming 120th Congress and are scheduled to take place in November 2026 as of October 31, 2026 are included. Runoffs for qualifying elections will determine attribution of the relevant seat, even if they take place after November 2026. Vacant seats for which no election or special election to fill the seat is scheduled to take place in November 2026 as of October 31, 2026 will be treated as held by the party affiliation of the most recent member to hold that seat.\n\nFor seats contested in the specified election, seats are attributed to the party under which the member was elected. If a member-elect changes party affiliation, or vacates their seat, between election day and the formal organization of Congress, the seat is attributed to the party under which the member was elected. \n\nFor seats not contested in the specified election, seats are attributed to the party that holds the seat as of the date of the election. If a current sitting member of the U.S. Senate who is not up for election changes party affiliation or vacates their seat after the date of the election, the seat is attributed to the party under which the member was affiliated at the time of the election.\n\nSenate members elected as independents who formally caucus with, or, for newly elected members, who announce their intent to caucus with, a party are included in that party\u2019s count. If the caucus decisions of members of the Senate elected as independents cannot be determined on the date of the election, settlement may be postponed until the earlier of (i) an announcement from the relevant members of their intents to caucus, or (ii) January 4th, 11:59 PM ET of the following calendar year. If no such announcement is made by January 4th, 11:59 PM ET of the following calendar year, the member will not count towards the seat count of any party.\n",
+          "url": "https://polymarket.us/event/paccc-usse-midterms-2026-11-03-dem",
+          "closeAt": "2027-02-02T04:59:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "e2908c390898d8763f3bc26c1a8331017242d6503c4e31f054dd633598661ee5",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXSTATELEG-NCSEN26-D::paccc-usse-midterms-2026-11-03-dem",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 10
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Drew Campbell finish in 3 place in Big Brother Season 28? vs Drew Campbell \u00b7 Big Brother Season 28: 2nd Place",
+    "route": {
+      "pair": {
+        "id": "KXBIGBROTHERRANK-26DEC31R3-DRE::rtc-bbus-s28-2-2026-10-01-drecam",
+        "a": {
+          "id": "KXBIGBROTHERRANK-26DEC31R3-DRE",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "future",
+            "outcome": "drew campbell",
+            "entities": [],
+            "numbers": [
+              "3",
+              "28"
+            ],
+            "aliases": [],
+            "eventKey": "big brother rank"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Drew Campbell finish in 3 place in Big Brother Season 28?",
+          "outcome": "Drew Campbell",
+          "opposite": "Drew Campbell",
+          "category": "Entertainment",
+          "rules": "If Drew Campbell finishes 3rd in Big Brother Season 28, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Big Brother. Any references to Big Brother, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Big Brother and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/BIGBROTHERRANK.pdf\n\n[{\"name\":\"CBS\",\"url\":\"https://www.cbsnews.com/\"},{\"name\":\"Paramount+\",\"url\":\"https://www.paramountplus.com/home/\"}]",
+          "url": "https://kalshi.com/markets/kxbigbrotherrank/kxbigbrotherrank-26dec31r3",
+          "closeAt": "2026-12-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "e9a1763d89e2aa8b38efd8788fe265389ec92c0cd23956350c2b5433b44c8b05",
+          "settlement": null,
+          "series": "KXBIGBROTHERRANK"
+        },
+        "b": {
+          "id": "rtc-bbus-s28-2-2026-10-01-drecam",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "bbus",
+            "eventAt": "2026-10-01T04:00:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "future",
+            "period": "set 28",
+            "entities": [],
+            "numbers": [
+              "28"
+            ],
+            "aliases": [],
+            "eventKey": "big brother season 28 2nd place"
+          },
+          "title": "Drew Campbell \u00b7 Big Brother Season 28: 2nd Place",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "If Drew Campbell comes in second-place in Big Brother season 28, this market will settle to Yes. If the finale of Big Brother season 28 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date.",
+          "url": "https://polymarket.us/event/rtc-bbus-s28-2-2026-10-01-drecam",
+          "closeAt": "2026-10-16T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "13974eec36048ea8ccf23471f390a43939b92d95e3b63d98228300ddad3be82c",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "big brother rank::big brother season 28 2nd place",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Drew Campbell finish in 2 place in Big Brother Season 28? vs Drew Campbell \u00b7 Big Brother Season 28: 3rd Place",
+    "route": {
+      "pair": {
+        "id": "KXBIGBROTHERRANK-26DEC31R2-DRE::rtc-bbus-s28-3-2026-10-01-drecam",
+        "a": {
+          "id": "KXBIGBROTHERRANK-26DEC31R2-DRE",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "future",
+            "outcome": "drew campbell",
+            "entities": [],
+            "numbers": [
+              "2",
+              "28"
+            ],
+            "aliases": [],
+            "eventKey": "big brother rank"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Drew Campbell finish in 2 place in Big Brother Season 28?",
+          "outcome": "Drew Campbell",
+          "opposite": "Drew Campbell",
+          "category": "Entertainment",
+          "rules": "If Drew Campbell finishes 2nd in Big Brother Season 28, then the market resolves to Yes.\n\nThis market and these products have not been endorsed by Big Brother. Any references to Big Brother, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Big Brother and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/BIGBROTHERRANK.pdf\n\n[{\"name\":\"CBS\",\"url\":\"https://www.cbsnews.com/\"},{\"name\":\"Paramount+\",\"url\":\"https://www.paramountplus.com/home/\"}]",
+          "url": "https://kalshi.com/markets/kxbigbrotherrank/kxbigbrotherrank-26dec31r2",
+          "closeAt": "2026-12-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "82ba54fdc32ec3d99a1f876efad24e5ee35853c904282e26fa25aaf559e2cc7b",
+          "settlement": null,
+          "series": "KXBIGBROTHERRANK"
+        },
+        "b": {
+          "id": "rtc-bbus-s28-3-2026-10-01-drecam",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "bbus",
+            "eventAt": "2026-10-01T04:00:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [],
+            "marketType": "future",
+            "period": "set 28",
+            "entities": [],
+            "numbers": [
+              "28"
+            ],
+            "aliases": [],
+            "eventKey": "big brother season 28 3rd place"
+          },
+          "title": "Drew Campbell \u00b7 Big Brother Season 28: 3rd Place",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "If Drew Campbell comes in third-place in Big Brother season 28, this market will settle to Yes. If the finale of Big Brother season 28 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date.",
+          "url": "https://polymarket.us/event/rtc-bbus-s28-3-2026-10-01-drecam",
+          "closeAt": "2026-10-16T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "a4b364b8dd6ec533b8c46f07e9f99d1e6d570d32de7e1649925e7d1b168cfa2b",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "big brother rank::big brother season 28 3rd place",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Bad Bunny be in the Top 5 rank on Google\u2019s Year in Search 2026 Global \u2013 People? vs Bad Bunny \u00b7 Top Artist in the US 2026?",
+    "route": {
+      "pair": {
+        "id": "KXRANKLISTGOOGLESEARCHTOP5-26DEC-BAD::ccrc-sptfy-1-artst-us-yr-2026-badbun",
+        "a": {
+          "id": "KXRANKLISTGOOGLESEARCHTOP5-26DEC-BAD",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "bad bunny",
+            "entities": [],
+            "numbers": [
+              "5",
+              "2026"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Bad Bunny be in the Top 5 rank on Google\u2019s Year in Search 2026 Global \u2013 People?",
+          "outcome": "Bad Bunny",
+          "opposite": "Bad Bunny",
+          "category": "Entertainment",
+          "rules": "If Bad Bunny is in Top 5 search on Google\u2019s Year in Search 2026 Global \u2013 People in 2026, then the market resolves to Yes.\n\nThis market resolves based on the individuals ranked in the \u201cPeople\u201d section of Google\u2019s official Year in Search 2026 \u2013 Global list. Google\u2019s report includes multiple sections such as Searches, News, Passings, and People \u2014 only the People section applies to this market. If Liam Payne is #1 in \u201cSearches\u201d but Donald Trump is #1 in \u201cPeople,\u201d the market resolves Yes to Donald Trump.\n\nThis market and these products have not been endorsed by Google. Any references Google, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Google and Kalshi.\n\n\nhttps://assets.kalshi.com/contract_terms/RANKLISTGOOGLESEARCH.pdf\n\n[{\"name\":\"Google Trends\",\"url\":\"https://trends.google.com/home\"}]",
+          "url": "https://kalshi.com/markets/kxranklistgooglesearchtop5/kxranklistgooglesearchtop5-26dec",
+          "closeAt": "2026-12-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "66f862c1ed8aea1c5175d95ce459cc30a4b3efd94100ee45be776c6c65c28034",
+          "settlement": null,
+          "series": "KXRANKLISTGOOGLESEARCHTOP5"
+        },
+        "b": {
+          "id": "ccrc-sptfy-1-artst-us-yr-2026-badbun",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "sptfy",
+            "eventAt": "2026-12-02T17:00:00.000Z",
+            "eventDate": "2026-12-02",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "top artist in the us 2026"
+          },
+          "title": "Bad Bunny \u00b7 Top Artist in the US 2026?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "This market will settle to Yes if Bad Bunny is ranked the top artist in the US on Spotify in 2026. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists in the US ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.\n\nNote: This market and these products have not been endorsed by Spotify. Any references to Spotify, Spotify charts, streaming data, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Spotify and Polymarket. Spotify and related marks are the property of Spotify AB and its group companies.",
+          "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-us-yr-2026-badbun",
+          "closeAt": "2026-12-17T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "cf17ca3e530893153fac0cc5c5c6795be51e5135081a6f0f2b65ab4f5254a3b0",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXRANKLISTGOOGLESEARCHTOP5-26DEC-BAD::top artist in the us 2026",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Bad Bunny be in the Top 5 rank on Google\u2019s Year in Search 2026 Global \u2013 People? vs Bad Bunny \u00b7 Spotify Top Global Artist 2026",
+    "route": {
+      "pair": {
+        "id": "KXRANKLISTGOOGLESEARCHTOP5-26DEC-BAD::ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+        "a": {
+          "id": "KXRANKLISTGOOGLESEARCHTOP5-26DEC-BAD",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "bad bunny",
+            "entities": [],
+            "numbers": [
+              "5",
+              "2026"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Bad Bunny be in the Top 5 rank on Google\u2019s Year in Search 2026 Global \u2013 People?",
+          "outcome": "Bad Bunny",
+          "opposite": "Bad Bunny",
+          "category": "Entertainment",
+          "rules": "If Bad Bunny is in Top 5 search on Google\u2019s Year in Search 2026 Global \u2013 People in 2026, then the market resolves to Yes.\n\nThis market resolves based on the individuals ranked in the \u201cPeople\u201d section of Google\u2019s official Year in Search 2026 \u2013 Global list. Google\u2019s report includes multiple sections such as Searches, News, Passings, and People \u2014 only the People section applies to this market. If Liam Payne is #1 in \u201cSearches\u201d but Donald Trump is #1 in \u201cPeople,\u201d the market resolves Yes to Donald Trump.\n\nThis market and these products have not been endorsed by Google. Any references Google, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Google and Kalshi.\n\n\nhttps://assets.kalshi.com/contract_terms/RANKLISTGOOGLESEARCH.pdf\n\n[{\"name\":\"Google Trends\",\"url\":\"https://trends.google.com/home\"}]",
+          "url": "https://kalshi.com/markets/kxranklistgooglesearchtop5/kxranklistgooglesearchtop5-26dec",
+          "closeAt": "2026-12-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "66f862c1ed8aea1c5175d95ce459cc30a4b3efd94100ee45be776c6c65c28034",
+          "settlement": null,
+          "series": "KXRANKLISTGOOGLESEARCHTOP5"
+        },
+        "b": {
+          "id": "ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "sptfy",
+            "eventAt": "2026-12-02T17:00:00.000Z",
+            "eventDate": "2026-12-02",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "spotify top global artist 2026"
+          },
+          "title": "Bad Bunny \u00b7 Spotify Top Global Artist 2026",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "If Bad Bunny is ranked the #1 artist globally on Spotify in 2026, this market will settle to Yes. Outcome verified by Spotify.\n\nThe relevant ranking is the 2026 edition of the Spotify Top Artists Globally ranking released as part of the annual Spotify Wrapped campaign (see past edition: https://newsroom.spotify.com/2025-12-03/wrapped-top-artists-songs-albums-podcasts-audiobooks/). This ranking will be used for resolution even if it is released before the end of calendar year 2026.",
+          "url": "https://polymarket.us/event/ccrc-sptfy-1-artst-glbl-yr-2026-badbun",
+          "closeAt": "2026-12-17T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "c01977f77a2eb05c5d3c842e4a4694d96a5deb571e778bfe99461bb98b6223ce",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXRANKLISTGOOGLESEARCHTOP5-26DEC-BAD::spotify top global artist 2026",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Jermaine Wattimena win the Luke Humphries vs Jermaine Wattimena darts match? vs Who will win in the upcoming darts event Luke Humphries vs Jermaine Wattimena scheduled for October 1, 2026 at 8:15 PM UTC?",
+    "route": {
+      "pair": {
+        "id": "KXDARTSMATCH-26OCT011610LHUMJWAT-JWAT::aec-pdcdarts-lukhum-jerwat-2026-10-01",
+        "a": {
+          "id": "KXDARTSMATCH-26OCT011610LHUMJWAT-JWAT",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "eventAt": "2026-10-01T20:10:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "luke humphries",
+              "jermaine wattimena world grand prix 1 8 finals darts"
+            ],
+            "marketType": "winner",
+            "period": "full event",
+            "outcome": "jermaine wattimena",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Jermaine Wattimena win the Luke Humphries vs Jermaine Wattimena darts match?",
+          "outcome": "Jermaine Wattimena",
+          "opposite": "Jermaine Wattimena",
+          "category": "Sports",
+          "rules": "If Jermaine Wattimena wins the Luke Humphries vs Jermaine Wattimena World Grand Prix 1/8 Finals darts match originally scheduled for Oct 1, 2026 at 4:10 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the Luke Humphries vs Jermaine Wattimena darts match originally scheduled for Oct 1, 2026. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks). If the cancelled match is not played, rescheduled, or declared a tie, the market will resolve to the fair market price.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"Flashscore\",\"url\":\"https://www.flashscoreusa.com/darts/\"},{\"name\":\"Sofascore\",\"url\":\"https://www.sofascore.com/darts\"},{\"name\":\"Sky Sports\",\"url\":\"https://www.skysports.com/darts/schedule\"}]",
+          "url": "https://kalshi.com/markets/kxdartsmatch/kxdartsmatch-26oct011610lhumjwat",
+          "closeAt": "2026-10-01T23:10:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "f91fa5d48967e53dcc2de1a34aaeda4227c163a09878e9672b54cd7f95b78fac",
+          "settlement": null,
+          "series": "KXDARTSMATCH"
+        },
+        "b": {
+          "id": "aec-pdcdarts-lukhum-jerwat-2026-10-01",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "pdcdarts",
+            "eventAt": "2026-10-01T20:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "luke humphries",
+              "jermaine wattimena"
+            ],
+            "home": "luke humphries",
+            "away": "jermaine wattimena",
+            "marketType": "winner",
+            "period": "full event",
+            "outcome": "luke humphries",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2026",
+              "8",
+              "15"
+            ],
+            "aliases": [
+              {
+                "name": "luke humphries",
+                "venue": "poly",
+                "venueId": "29643",
+                "aliases": [
+                  "luke humphries",
+                  "luke humphries",
+                  "luke humphries",
+                  "lukhum",
+                  "humphries"
+                ]
+              },
+              {
+                "name": "jermaine wattimena",
+                "venue": "poly",
+                "venueId": "29631",
+                "aliases": [
+                  "jermaine wattimena",
+                  "jermaine wattimena",
+                  "jermaine wattimena",
+                  "jerwat",
+                  "wattimena"
+                ]
+              }
+            ]
+          },
+          "title": "Who will win in the upcoming darts event Luke Humphries vs Jermaine Wattimena scheduled for October 1, 2026 at 8:15 PM UTC?",
+          "outcome": "Luke Humphries",
+          "opposite": "Jermaine Wattimena",
+          "category": "sports",
+          "rules": "This market will settle to the winner of the Luke Humphries vs Jermaine Wattimena PDC match scheduled for Oct 1, 2026. If the match does not begin due to a walkover, withdrawal, or cancellation, the market will settle to $0.50. If the match is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to $0.50. Outcome sourced from PDC.",
+          "url": "https://polymarket.us/event/aec-pdcdarts-lukhum-jerwat-2026-10-01",
+          "closeAt": "2026-10-16T00:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "9d31b1162cb7b4c473fcc9b6d927b7f693ed912e5c324ce7c9664447ee8a404e",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "[null,\"2026-10-01\",[\"jermaine wattimena world grand prix 1 8 finals darts\",\"luke humphries\"]]::[\"pdcdarts\",\"2026-10-01\",[\"PDCDARTS:JERMAINE_WATTIMENA\",\"PDCDARTS:LUKE_HUMPHRIES\"]]",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will A Different World: Season 1 be #2 US Netflix Show on Oct 5, 2026? vs A Different World: Season 1 \u00b7 Top US Netflix Show This Week?",
+    "route": {
+      "pair": {
+        "id": "KXNETFLIXRANKSHOWRUNNERUP-26OCT05-ADI::ccrc-ntflx-1shwus-2026-10-06-difwor",
+        "a": {
+          "id": "KXNETFLIXRANKSHOWRUNNERUP-26OCT05-ADI",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "future",
+            "outcome": "a different world season 1",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2",
+              "5",
+              "2026",
+              "1"
+            ],
+            "aliases": [],
+            "eventKey": "runner up netflix show"
+          },
+          "exchangeIndex": 0,
+          "title": "Will A Different World: Season 1 be #2 US Netflix Show on Oct 5, 2026?",
+          "outcome": "A Different World: Season 1",
+          "opposite": "A Different World: Season 1",
+          "category": "Entertainment",
+          "rules": "If A Different World: Season 1 is #2 on the Netflix Top 10 US Show on the chart published on Oct 6, 2026, then the market resolves to Yes.\n\nThe Netflix charts are updated on Tuesday. Therefore, the market will close at 11:59 PM ET the day before. The chart published on Oct 6, 2026 will be for the week ending the previous Sunday.\n\nThis market and these products have not been endorsed by Netflix. Any references to Netflix, or any associated marks are descriptive only and do not indicate an endorsement of this product or any affiliation between Netflix and Kalshi.\n\nhttps://assets.kalshi.com/contract_terms/NETFLIXRANK.pdf\n\n[{\"name\":\"Netflix\",\"url\":\"https://www.netflix.com/tudum/top10\"}]",
+          "url": "https://kalshi.com/markets/kxnetflixrankshowrunnerup/kxnetflixrankshowrunnerup-26oct05",
+          "closeAt": "2026-10-06T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "13b03dba6644c30b85eb4c0b17e5b5e974f763d00f9ed6ef4dd197b2ee1d6a3b",
+          "settlement": null,
+          "series": "KXNETFLIXRANKSHOWRUNNERUP"
+        },
+        "b": {
+          "id": "ccrc-ntflx-1shwus-2026-10-06-difwor",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "ntflx",
+            "eventAt": "2026-10-06T16:00:00.000Z",
+            "eventDate": "2026-10-06",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [
+              "1"
+            ],
+            "aliases": [],
+            "eventKey": "top us netflix show this week"
+          },
+          "title": "A Different World: Season 1 \u00b7 Top US Netflix Show This Week?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "This market will settle to Yes if A Different World: Season 1 is #1 on the Netflix Top 10 Shows in United States chart published on October 6, 2026. Outcome sourced from Netflix (https://www.netflix.com/tudum/top10/united-states/tv).\n\nNetflix charts are updated on Tuesdays, reflecting viewership from the previous week (Monday-Sunday).",
+          "url": "https://polymarket.us/event/ccrc-ntflx-1shwus-2026-10-06-difwor",
+          "closeAt": "2026-10-21T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "49622906583b3f48f78d8c10c336a1b3103880f40c06be098124cfebe51385d1",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "runner up netflix show::top us netflix show this week",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Tyler Cameron win Dancing with the Stars Season 35? vs Tyler Cameron \u00b7 Dancing With The Stars S35: Week 4 Elimination",
+    "route": {
+      "pair": {
+        "id": "KXDANCINGWITHTHESTARS-26DEC31-TCAM::rtc-dwts-s35-elim-2026-10-06-tylcam",
+        "a": {
+          "id": "KXDANCINGWITHTHESTARS-26DEC31-TCAM",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "marketType": "future",
+            "outcome": "tyler cameron",
+            "entities": [],
+            "numbers": [
+              "35"
+            ],
+            "aliases": [],
+            "eventKey": "who will win dancing with the stars"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Tyler Cameron win Dancing with the Stars Season 35?",
+          "outcome": "Tyler Cameron",
+          "opposite": "Tyler Cameron",
+          "category": "Entertainment",
+          "rules": "If Tyler Cameron is officially declared the winner of Dancing with the Stars Season 35, then the market resolves to Yes.\n\nHow this is resolved\nThe winner must be officially announced in the finale or via official channels immediately following.\nMultiple joint winners each resolve to Yes with split payouts ($1 divided by number of winners).\nIf no winner is declared, all markets resolve to No. \nDisqualifications or withdrawals before the finale resolve to No.\nLater title stripping doesn't affect resolution - the original finale announcement governs.\n\nPayout criteria\nWinners who decline the award still count unless acceptance was a condition of victory.\nFor couples/teams competitions, being part of the winning unit counts.\n\nDoesn't count for payout: Fan favorite or other secondary awards don't count as winning.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Dancing with the Stars. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/COMPETITIONREALITYWIN.pdf\n\n[{\"name\":\"\ue907the official broadcaster or streaming platform of  (e\",\"url\":\"https://kalshi.com/\"},{\"name\":\"The Source Agencies are\",\"url\":\"https://kalshi.com/\"},{\"name\":\"in hierarchical order\",\"url\":\"https://kalshi.com/\"}]",
+          "url": "https://kalshi.com/markets/kxdancingwiththestars/kxdancingwiththestars-26dec31",
+          "closeAt": "2026-12-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "fba460ed9c2d92292bb3fb88cfce01b134bc4ea8530a1a9e2d06133e7027ee75",
+          "settlement": null,
+          "series": "KXDANCINGWITHTHESTARS"
+        },
+        "b": {
+          "id": "rtc-dwts-s35-elim-2026-10-06-tylcam",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "dwts",
+            "eventAt": "2026-09-30T04:00:00.000Z",
+            "eventDate": "2026-09-30",
+            "participants": [],
+            "marketType": "future",
+            "period": "set 35",
+            "entities": [],
+            "numbers": [
+              "4"
+            ],
+            "aliases": [],
+            "eventKey": "dancing with the stars s35 week 4 elimination"
+          },
+          "title": "Tyler Cameron \u00b7 Dancing With The Stars S35: Week 4 Elimination",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "culture",
+          "rules": "This market will settle to Yes if Tyler Cameron is officially eliminated from Dancing With The Stars season 35 by October 6, 2026, 11:59 PM PT. Settlement is based on the participant's initial elimination. If Tyler Cameron later returns, re-enters, or is reinstated, the original elimination will still determine the market outcome. An elimination that is reversed within the same episode (e.g., through a save or twist) will not count as an official elimination. Outcome sourced from ABC.",
+          "url": "https://polymarket.us/event/rtc-dwts-s35-elim-2026-10-06-tylcam",
+          "closeAt": "2026-10-21T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "08e0d7a7ea7214b65a5f9b28ef8aa94bcfd28b02abb70265aafd3657407ec221",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "who will win dancing with the stars::dancing with the stars s35 week 4 elimination",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will the margin of victory for Fl\u00e1vio Bolsonaro in the first round of the 2026 Brazilian presidential election be between 5% and 10%? vs Flavio Bolsonaro \u00b7 Brazil Presidential Election First Round Winner",
+    "route": {
+      "pair": {
+        "id": "KXBRPRES1MOV-BRPRES26-FBOL-P7::pvwc-pres-bra-2026-10-04-r1-flabol",
+        "a": {
+          "id": "KXBRPRES1MOV-BRPRES26-FBOL-P7",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "flavio bolsonaro 5 10",
+            "entities": [],
+            "numbers": [
+              "2026",
+              "5",
+              "10",
+              "5",
+              "10"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will the margin of victory for Fl\u00e1vio Bolsonaro in the first round of the 2026 Brazilian presidential election be between 5% and 10%?",
+          "outcome": "Fl\u00e1vio Bolsonaro, 5-10%",
+          "opposite": "Fl\u00e1vio Bolsonaro, 5-10%",
+          "category": "Elections",
+          "rules": "If the margin of victory for Fl\u00e1vio Bolsonaro in the first round of the 2026 Brazilian presidential election falls within 5% to 10%, inclusive of its lower bound and exclusive of its upper bound, then the market resolves to Yes.\n\nThe margin of victory is the vote share received by Fl\u00e1vio Bolsonaro minus the vote share received by the candidate that finishes immediately behind Fl\u00e1vio Bolsonaro if Fl\u00e1vio Bolsonaro wins, or the candidate that finishes first if Fl\u00e1vio Bolsonaro loses. If Fl\u00e1vio Bolsonaro wins, the margin will be positive; if Fl\u00e1vio Bolsonaro loses, the margin will be negative; if Fl\u00e1vio Bolsonaro ties for first place, the margin shall be 0.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound, and no rounding shall be applied. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If Fl\u00e1vio Bolsonaro runs under multiple parties or is listed multiple times, votes attributable to the same underlying candidate will be summed.\n\nhttps://assets.kalshi.com/contract_terms/ELECTIONMOV.pdf\n\n[{\"name\":\"official election authority responsible for certifying results in \",\"url\":\"https://www.nass.org/can-I-vote\"}]",
+          "url": "https://kalshi.com/markets/kxbrpres1mov/kxbrpres1mov-brpres26",
+          "closeAt": "2027-10-04T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "aeb614911d7eb8c8c97e08ef08997886f44820ecb8c822bb191cf76a59230919",
+          "settlement": null,
+          "series": "KXBRPRES1MOV"
+        },
+        "b": {
+          "id": "pvwc-pres-bra-2026-10-04-r1-flabol",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "pres",
+            "eventAt": "2026-10-04T16:00:00.000Z",
+            "eventDate": "2026-10-04",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "brazil presidential election first round winner"
+          },
+          "title": "Flavio Bolsonaro \u00b7 Brazil Presidential Election First Round Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Flavio Bolsonaro receives the most valid votes of any candidate in the first round of the 2026 Brazilian presidential election. Outcome sourced from relevant government authorities.\n\nVote totals will be inclusive of all valid votes cast in the first round of the 2026 Brazilian presidential election. If multiple candidates tie for the most votes in the first round, Yes contract holders for each tied candidate receive $1.00 divided by the number of tied candidates, rounded down to the nearest tick, per contract.",
+          "url": "https://polymarket.us/event/pvwc-pres-bra-2026-10-04-r1-flabol",
+          "closeAt": "2026-10-19T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "aeb29130c29994b7ca765271ca08f97a5d7e12fa04819d4eb2c0388acbf5925a",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXBRPRES1MOV-BRPRES26-FBOL-P7::brazil presidential election first round winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Donald Trump endorse Fl\u00e1vio Bolsonaro in the 2026 Brazilian presidential election before Oct 26, 2026? vs Flavio Bolsonaro \u00b7 2026 Brazil Presidential Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXTRUMPFLAVIO-26OCT26::ewc-pres-bra-2026-10-04-flabol",
+        "a": {
+          "id": "KXTRUMPFLAVIO-26OCT26",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "entities": [],
+            "numbers": [
+              "2026",
+              "26",
+              "2026"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Donald Trump endorse Fl\u00e1vio Bolsonaro in the 2026 Brazilian presidential election before Oct 26, 2026?",
+          "outcome": "Yes",
+          "opposite": "Yes",
+          "category": "Elections",
+          "rules": "If Donald Trump publicly endorses Fl\u00e1vio Bolsonaro in the 2026 Brazilian presidential election before Oct 26, 2026, then the market resolves to Yes.\n\nAn \"endorsement\" requires:\nA clear, affirmative statement of support for candidate's election\nThe statement must be public (not private communications)\nThe endorsement must specifically reference the 2026 Brazilian presidential election or be clearly in context of the 2026 Brazilian presidential election\nThe endorsement must come directly from Donald Trump or through official channels\n\nThe following scenarios would resolve to YES:\nDonald Trump states \"I endorse candidate for [office]\"\nDonald Trump states \"I support candidate\" with clear reference to the 2026 Brazilian presidential election\nDonald Trump states \"I'm voting for candidate\" publicly\nDonald Trump states \"candidate has my full support\" for the 2026 Brazilian presidential election\nDonald Trump appears at campaign events specifically to endorse\nDonald Trump releases official endorsement through their organization\nDonald Trump allows their name/image to be used in candidate's campaign materials\n\nStatements of obvious sarcasm (or which are immediately followed by clarifications that Donald Trump is joking) are NOT encompassed by the Payout Criterion.\n\nThe Contract shall resolve immediately upon confirmation of the first qualifying endorsement in the specified race. If multiple candidates are listed for a listed race and exactly one is endorsed, that candidate's strike resolves \"Yes\" at $1.00 and all other named-candidate strikes resolve \"No.\" If multiple are endorsed, each endorsed candidate's strike resolves \"Yes\" at a value of ($1.00 / N) rounded down to the nearest $0.01. \n\nIf no endorsement occurs before expiration, the \"No one\" strike resolves \"Yes\" at $1.00 and all named-candidate strikes resolve \"No.\"\n\nIf a candidate withdraws from, suspends their campaign for, ceases to be a candidate in, or loses the primary or general election for the specified race before a qualifying endorsement is confirmed, their strike may resolve to No in the sole discretion of the Exchange.\n\nhttps://assets.kalshi.com/contract_terms/ENDORSE.pdf\n\n[{\"name\":\"official social media accounts controlled by \",\"url\":\"https://kalshi.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"official campaign announcements from \",\"url\":\"https://kalshi.com/\"},{\"name\":\"MSNBC\",\"url\":\"https://www.msnbc.com\"},{\"name\":\"ABC\",\"url\":\"https://abcnews.go.com/\"},{\"name\":\"Politico EU\",\"url\":\"https://www.politico.eu/europe-poll-of-polls/united-kingdom/#starmer-approval\"},{\"name\":\"NBC\",\"url\":\"https://www.nbcnews.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com\"},{\"name\":\"Axios\",\"url\":\"https://www.axios.com\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"official statements from organizations where  holds a leadership position\",\"url\":\"https://kalshi.com/\"},{\"name\":\"CBS\",\"url\":\"https://www.cbsnews.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com\"}]",
+          "url": "https://kalshi.com/markets/kxtrumpflavio/kxtrumpflavio-26oct26",
+          "closeAt": "2026-10-26T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "56483f82ee1514036b4e7c8367df10e6759e53e9246b9d4f06fa9a121891bc92",
+          "settlement": null,
+          "series": "KXTRUMPFLAVIO"
+        },
+        "b": {
+          "id": "ewc-pres-bra-2026-10-04-flabol",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "pres",
+            "eventAt": "2026-10-04T16:00:00.000Z",
+            "eventDate": "2026-10-04",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "2026 brazil presidential election winner"
+          },
+          "title": "Flavio Bolsonaro \u00b7 2026 Brazil Presidential Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "If Flavio Bolsonaro wins the 2026 Brazilian Presidential Election, including any potential runoff, this market will settle to Yes. Outcome verified from relevant government authorities.\n\nIn the event that the 2026 Brazilian Presidential Election is rescheduled, this market will settle based on the results of the next Brazilian Presidential Election to be held within two years of October 4, 2026.",
+          "url": "https://polymarket.us/event/ewc-pres-bra-2026-10-04-flabol",
+          "closeAt": "2026-10-19T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "fb8aa0e681cd789eea85784b0838186c6cdd73ca305c097fe6a146e259f809aa",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXTRUMPFLAVIO-26OCT26::2026 brazil presidential election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will the Alabama college football team finish in the top 3 in the Southeastern Conference in the 2026 regular season? vs Alabama \u00b7 College Football Undefeated Regular Season",
+    "route": {
+      "pair": {
+        "id": "KXNCAAFSECREGTOP-27T3-ALA::aachc-cfb-undefeated-2026-11-28-ala",
+        "a": {
+          "id": "KXNCAAFSECREGTOP-27T3-ALA",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:ALABAMA",
+            "entities": [],
+            "numbers": [
+              "3",
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "college football sec regular season top finishers"
+          },
+          "exchangeIndex": 0,
+          "title": "Will the Alabama college football team finish in the top 3 in the Southeastern Conference in the 2026 regular season?",
+          "outcome": "Alabama",
+          "opposite": "Alabama",
+          "category": "Sports",
+          "rules": "If Alabama finishes in the top 3 in the Southeastern Conference in the 2026 college football regular season, then the market resolves to Yes.\n\nTie-Breaking Resolution: If two or more teams finish with identical win-loss records within their conference, all tied teams will resolve as having achieved that position (e.g., all teams tied for 3rd place will be considered to have finished in the top 3).\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the NCAA. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NCAAFREGULARSEASON.pdf\n\n[{\"name\":\"Kalshi using information originating from the NCAA\",\"url\":\"https://www.ncaa.com/sports/football/fbs\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+          "url": "https://kalshi.com/markets/kxncaafsecregtop/kxncaafsecregtop-27t3",
+          "closeAt": "2027-01-31T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "75ad5facc12fb2ab8ee0ba76f5af78a95936eac4e3e308f74f83aa02837811cd",
+          "settlement": null,
+          "series": "KXNCAAFSECREGTOP"
+        },
+        "b": {
+          "id": "aachc-cfb-undefeated-2026-11-28-ala",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "cfb",
+            "eventAt": "2026-08-29T16:00:00.000Z",
+            "eventDate": "2026-08-29",
+            "participants": [
+              "CFB:ALABAMA"
+            ],
+            "participant": "CFB:ALABAMA",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "CFB:ALABAMA",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "alabama",
+                "venue": "poly",
+                "venueId": "1259",
+                "aliases": [
+                  "alabama",
+                  "crimson tide",
+                  "alabama",
+                  "ala",
+                  "bama"
+                ]
+              },
+              {
+                "name": "alabama",
+                "venue": "poly",
+                "venueId": "1259",
+                "aliases": [
+                  "alabama",
+                  "crimson tide",
+                  "alabama",
+                  "ala",
+                  "bama"
+                ]
+              }
+            ],
+            "eventKey": "college football undefeated regular season"
+          },
+          "title": "Alabama \u00b7 College Football Undefeated Regular Season",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Alabama goes undefeated in the 2026 College Football regular season. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/aachc-cfb-undefeated-2026-11-28-ala",
+          "closeAt": "2026-12-13T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "8183b9ca7afdce399a821cc282bc710d9ff04f8246c6ae81d644ba3f32c8ac06",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "college football sec regular season top finishers::college football undefeated regular season",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will the margin of victory for Dan Sullivan in the 2026 Alaska Senate election be between 9% and 12%? vs Dan Sullivan (R) \u00b7 Alaska Senate Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXAKMOV-AKSENATE26NOV03-DSUL-P10::ewc-usse-ak-2026-11-03-rep",
+        "a": {
+          "id": "KXAKMOV-AKSENATE26NOV03-DSUL-P10",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "dan sullivan 9 12",
+            "entities": [],
+            "numbers": [
+              "2026",
+              "9",
+              "12",
+              "9",
+              "12"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will the margin of victory for Dan Sullivan in the 2026 Alaska Senate election be between 9% and 12%?",
+          "outcome": "Dan Sullivan, 9-12%",
+          "opposite": "Dan Sullivan, 9-12%",
+          "category": "Elections",
+          "rules": "If the margin of victory for Dan Sullivan in the 2026 Alaska Senate election falls within 9% to 12%, inclusive of its lower bound and exclusive of its upper bound, then the market resolves to Yes.\n\nImportant information: the margin shall be calculated using the results from the final round of tabulation.\n\n\"Dan Sullivan\" refers to Daniel S. Sullivan, the incumbent Senator.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If Dan Sullivan runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural Dan Sullivan will be summed.\n\nIf Dan Sullivan wins the election, the margin will be positive. If Dan Sullivan loses the election, the margin will be negative. If Dan Sullivan ties for first place, the margin shall be 0. For uncontested races where Dan Sullivan is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes).\n\nhttps://assets.kalshi.com/contract_terms/ELECTIONMOV.pdf\n\n[{\"name\":\"official election authority responsible for certifying results in \",\"url\":\"https://www.nass.org/can-I-vote\"}]",
+          "url": "https://kalshi.com/markets/kxakmov/kxakmov-aksenate26nov03",
+          "closeAt": "2027-06-02T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "55c6fd7d380d6f1e2ab77edcfca6c81ad1579de3e3ff34a509c502ed5e2b863b",
+          "settlement": null,
+          "series": "KXAKMOV"
+        },
+        "b": {
+          "id": "ewc-usse-ak-2026-11-03-rep",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T17:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "alaska senate election winner"
+          },
+          "title": "Dan Sullivan (R) \u00b7 Alaska Senate Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if a representative of the Republican Party wins the 2026 midterm election for US Senator from Alaska. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/ewc-usse-ak-2026-11-03-rep",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "5163e8d7a1e0eaabc790f74645b46ea17acb28995150fface37928ebbc4aeb86",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXAKMOV-AKSENATE26NOV03-DSUL-P10::alaska senate election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will the margin of victory for Dan Sullivan in the 2026 Alaska Senate election be above 12%? vs Dan Sullivan (R) \u00b7 Alaska Senate Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXAKMOV-AKSENATE26NOV03-DSUL-P56::ewc-usse-ak-2026-11-03-rep",
+        "a": {
+          "id": "KXAKMOV-AKSENATE26NOV03-DSUL-P56",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "line": 12,
+            "outcome": "dan sullivan 12",
+            "entities": [],
+            "numbers": [
+              "2026",
+              "12",
+              "12"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will the margin of victory for Dan Sullivan in the 2026 Alaska Senate election be above 12%?",
+          "outcome": "Dan Sullivan, \u226512%",
+          "opposite": "Dan Sullivan, \u226512%",
+          "category": "Elections",
+          "rules": "If the margin of victory for Dan Sullivan in the 2026 Alaska Senate election falls within 12% to 100%, inclusive of its lower bound and exclusive of its upper bound, then the market resolves to Yes.\n\nImportant information: the margin shall be calculated using the results from the final round of tabulation.\n\n\"Dan Sullivan\" refers to Daniel S. Sullivan, the incumbent Senator.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If Dan Sullivan runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural Dan Sullivan will be summed.\n\nIf Dan Sullivan wins the election, the margin will be positive. If Dan Sullivan loses the election, the margin will be negative. If Dan Sullivan ties for first place, the margin shall be 0. For uncontested races where Dan Sullivan is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes).\n\nhttps://assets.kalshi.com/contract_terms/ELECTIONMOV.pdf\n\n[{\"name\":\"official election authority responsible for certifying results in \",\"url\":\"https://www.nass.org/can-I-vote\"}]",
+          "url": "https://kalshi.com/markets/kxakmov/kxakmov-aksenate26nov03",
+          "closeAt": "2027-06-02T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "44b18048f689441a94d9084c29c85d55e7222b59055202072c6fe82e04121038",
+          "settlement": null,
+          "series": "KXAKMOV"
+        },
+        "b": {
+          "id": "ewc-usse-ak-2026-11-03-rep",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T17:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "alaska senate election winner"
+          },
+          "title": "Dan Sullivan (R) \u00b7 Alaska Senate Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if a representative of the Republican Party wins the 2026 midterm election for US Senator from Alaska. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/ewc-usse-ak-2026-11-03-rep",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "5163e8d7a1e0eaabc790f74645b46ea17acb28995150fface37928ebbc4aeb86",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXAKMOV-AKSENATE26NOV03-DSUL-P56::alaska senate election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Real Madrid qualify for the Champions League Semifinals? vs Real Madrid \u00b7 UEFA Champions League Winner",
+    "route": {
+      "pair": {
+        "id": "KXUCLROUND-27SEMI-RMA::tec-ucl-final-2026-06-05-w-rma",
+        "a": {
+          "id": "KXUCLROUND-27SEMI-RMA",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "real madrid",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "round qualifiers"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Real Madrid qualify for the Champions League Semifinals?",
+          "outcome": "Real Madrid",
+          "opposite": "Real Madrid",
+          "category": "Sports",
+          "rules": "If Real Madrid is one of the teams to qualify for the Semifinals in the 2026-27 Champions League, then the market resolves to Yes.\n\nThis will be determined by whether or not they qualify; if they qualify but do not end up competing, the market will still resolve to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCERROUND.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"}]",
+          "url": "https://kalshi.com/markets/kxuclround/kxuclround-27semi",
+          "closeAt": "2027-04-15T00:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "79d676942d1d469e0e5e7964467ae10f892970ca2b0dbde676c607547445c6b1",
+          "settlement": null,
+          "series": "KXUCLROUND"
+        },
+        "b": {
+          "id": "tec-ucl-final-2026-06-05-w-rma",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "ucl",
+            "eventAt": "2026-09-08T13:00:00.000Z",
+            "eventDate": "2026-09-08",
+            "participants": [
+              "UCL:REAL_MADRID"
+            ],
+            "participant": "UCL:REAL_MADRID",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "UCL:REAL_MADRID",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "real madrid",
+                "venue": "poly",
+                "venueId": "2796",
+                "aliases": [
+                  "real madrid cf",
+                  "los merengues",
+                  "real madrid",
+                  "rma",
+                  "rma"
+                ]
+              },
+              {
+                "name": "real madrid",
+                "venue": "poly",
+                "venueId": "2796",
+                "aliases": [
+                  "real madrid cf",
+                  "los merengues",
+                  "real madrid",
+                  "rma",
+                  "rma"
+                ]
+              }
+            ],
+            "eventKey": "uefa champions league winner"
+          },
+          "title": "Real Madrid \u00b7 UEFA Champions League Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Real Madrid CF wins the 2026-2027 UEFA Champions League final scheduled for June 5, 2027. Outcome sourced from UEFA.",
+          "url": "https://polymarket.us/event/tec-ucl-final-2026-06-05-w-rma",
+          "closeAt": "2027-06-20T03:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "07b6c5c641bf28474843aeba856b340118f22bb1e981e3a05b882a4425875053",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "round qualifiers::uefa champions league winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will the margin of victory for Dan Sullivan in the 2026 Alaska Senate election be between 6% and 9%? vs Dan Sullivan (R) \u00b7 Alaska Senate Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXAKMOV-AKSENATE26NOV03-DSUL-P7::ewc-usse-ak-2026-11-03-rep",
+        "a": {
+          "id": "KXAKMOV-AKSENATE26NOV03-DSUL-P7",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "dan sullivan 6 9",
+            "entities": [],
+            "numbers": [
+              "2026",
+              "6",
+              "9",
+              "6",
+              "9"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will the margin of victory for Dan Sullivan in the 2026 Alaska Senate election be between 6% and 9%?",
+          "outcome": "Dan Sullivan, 6-9%",
+          "opposite": "Dan Sullivan, 6-9%",
+          "category": "Elections",
+          "rules": "If the margin of victory for Dan Sullivan in the 2026 Alaska Senate election falls within 6% to 9%, inclusive of its lower bound and exclusive of its upper bound, then the market resolves to Yes.\n\nImportant information: the margin shall be calculated using the results from the final round of tabulation.\n\n\"Dan Sullivan\" refers to Daniel S. Sullivan, the incumbent Senator.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If Dan Sullivan runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural Dan Sullivan will be summed.\n\nIf Dan Sullivan wins the election, the margin will be positive. If Dan Sullivan loses the election, the margin will be negative. If Dan Sullivan ties for first place, the margin shall be 0. For uncontested races where Dan Sullivan is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes).\n\nhttps://assets.kalshi.com/contract_terms/ELECTIONMOV.pdf\n\n[{\"name\":\"official election authority responsible for certifying results in <geography>\",\"url\":\"https://www.nass.org/can-I-vote\"}]",
+          "url": "https://kalshi.com/markets/kxakmov/kxakmov-aksenate26nov03",
+          "closeAt": "2027-06-02T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "554a728d1bfc192e37305a8b84ad4e20dc6ef8263fcf8f8302055b27b1fa4f57",
+          "settlement": null,
+          "series": "KXAKMOV"
+        },
+        "b": {
+          "id": "ewc-usse-ak-2026-11-03-rep",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T17:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "alaska senate election winner"
+          },
+          "title": "Dan Sullivan (R) \u00b7 Alaska Senate Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if a representative of the Republican Party wins the 2026 midterm election for US Senator from Alaska. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/ewc-usse-ak-2026-11-03-rep",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "5163e8d7a1e0eaabc790f74645b46ea17acb28995150fface37928ebbc4aeb86",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING",
+        "METADATA_CHANGED_SINCE_DISCOVERY"
+      ],
+      "eventKey": "KXAKMOV-AKSENATE26NOV03-DSUL-P7::alaska senate election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Ryan Searle win the Gian van Veen vs Ryan Searle darts match? vs Who will win in the upcoming darts event Gian van Veen vs Ryan Searle scheduled for October 1, 2026 at 9:15 PM UTC?",
+    "route": {
+      "pair": {
+        "id": "KXDARTSMATCH-26OCT011710GVANRSEA-RSEA::aec-pdcdarts-giavee-ryasea-2026-10-01",
+        "a": {
+          "id": "KXDARTSMATCH-26OCT011710GVANRSEA-RSEA",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "eventAt": "2026-10-01T21:10:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "gian van veen",
+              "ryan searle world grand prix 1 8 finals darts"
+            ],
+            "marketType": "winner",
+            "period": "full event",
+            "outcome": "ryan searle",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Ryan Searle win the Gian van Veen vs Ryan Searle darts match?",
+          "outcome": "Ryan Searle",
+          "opposite": "Ryan Searle",
+          "category": "Sports",
+          "rules": "If Ryan Searle wins the Gian van Veen vs Ryan Searle World Grand Prix 1/8 Finals darts match originally scheduled for Oct 1, 2026 at 5:10 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the Gian van Veen vs Ryan Searle darts match originally scheduled for Oct 1, 2026. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks). If the cancelled match is not played, rescheduled, or declared a tie, the market will resolve to the fair market price.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"Flashscore\",\"url\":\"https://www.flashscoreusa.com/darts/\"},{\"name\":\"Sofascore\",\"url\":\"https://www.sofascore.com/darts\"},{\"name\":\"Sky Sports\",\"url\":\"https://www.skysports.com/darts/schedule\"}]",
+          "url": "https://kalshi.com/markets/kxdartsmatch/kxdartsmatch-26oct011710gvanrsea",
+          "closeAt": "2026-10-02T00:10:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "b7cb85fd83b40ccccb8fd7dc110179c9fab39d02cdbb89352dbe2a5021aad556",
+          "settlement": null,
+          "series": "KXDARTSMATCH"
+        },
+        "b": {
+          "id": "aec-pdcdarts-giavee-ryasea-2026-10-01",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "pdcdarts",
+            "eventAt": "2026-10-01T21:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "gian van veen",
+              "ryan searle"
+            ],
+            "home": "gian van veen",
+            "away": "ryan searle",
+            "marketType": "winner",
+            "period": "full event",
+            "outcome": "gian van veen",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2026",
+              "9",
+              "15"
+            ],
+            "aliases": [
+              {
+                "name": "gian van veen",
+                "venue": "poly",
+                "venueId": "27438",
+                "aliases": [
+                  "gian van veen",
+                  "gian van veen",
+                  "gian van veen",
+                  "giavee",
+                  "veen"
+                ]
+              },
+              {
+                "name": "ryan searle",
+                "venue": "poly",
+                "venueId": "29638",
+                "aliases": [
+                  "ryan searle",
+                  "ryan searle",
+                  "ryan searle",
+                  "ryasea",
+                  "searle"
+                ]
+              }
+            ]
+          },
+          "title": "Who will win in the upcoming darts event Gian van Veen vs Ryan Searle scheduled for October 1, 2026 at 9:15 PM UTC?",
+          "outcome": "Gian van Veen",
+          "opposite": "Ryan Searle",
+          "category": "sports",
+          "rules": "This market will settle to the winner of the Gian van Veen vs Ryan Searle PDC match scheduled for Oct 1, 2026. If the match does not begin due to a walkover, withdrawal, or cancellation, the market will settle to $0.50. If the match is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to $0.50. Outcome sourced from PDC.",
+          "url": "https://polymarket.us/event/aec-pdcdarts-giavee-ryasea-2026-10-01",
+          "closeAt": "2026-10-16T01:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "26155191d49261f05dbd162557e57cbf4dd9262aaacbdb40c4a47cadb53c5590",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "[null,\"2026-10-01\",[\"gian van veen\",\"ryan searle world grand prix 1 8 finals darts\"]]::[\"pdcdarts\",\"2026-10-01\",[\"PDCDARTS:GIAN_VAN_VEEN\",\"PDCDARTS:RYAN_SEARLE\"]]",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will the margin of victory for Dan Sullivan in the 2026 Alaska Senate election be between 3% and 6%? vs Dan Sullivan (R) \u00b7 Alaska Senate Election Winner",
+    "route": {
+      "pair": {
+        "id": "KXAKMOV-AKSENATE26NOV03-DSUL-P4::ewc-usse-ak-2026-11-03-rep",
+        "a": {
+          "id": "KXAKMOV-AKSENATE26NOV03-DSUL-P4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "dan sullivan 3 6",
+            "entities": [],
+            "numbers": [
+              "2026",
+              "3",
+              "6",
+              "3",
+              "6"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will the margin of victory for Dan Sullivan in the 2026 Alaska Senate election be between 3% and 6%?",
+          "outcome": "Dan Sullivan, 3-6%",
+          "opposite": "Dan Sullivan, 3-6%",
+          "category": "Elections",
+          "rules": "If the margin of victory for Dan Sullivan in the 2026 Alaska Senate election falls within 3% to 6%, inclusive of its lower bound and exclusive of its upper bound, then the market resolves to Yes.\n\nImportant information: the margin shall be calculated using the results from the final round of tabulation.\n\n\"Dan Sullivan\" refers to Daniel S. Sullivan, the incumbent Senator.\n\nEach margin range is inclusive of its lower bound and exclusive of its upper bound. No rounding shall be applied to the calculated margin. For example, for consecutive ranges of 5-6% and 6-7%, a margin of 5.99999% resolves within the 5-6% range, while a margin of exactly 6% resolves within the 6-7% range. If Dan Sullivan runs under multiple parties or is listed multiple times, votes attributable to the same underlying natural Dan Sullivan will be summed.\n\nIf Dan Sullivan wins the election, the margin will be positive. If Dan Sullivan loses the election, the margin will be negative. If Dan Sullivan ties for first place, the margin shall be 0. For uncontested races where Dan Sullivan is the only candidate, the margin shall be 100 percentage points or the total number of votes cast (for raw votes).\n\nhttps://assets.kalshi.com/contract_terms/ELECTIONMOV.pdf\n\n[{\"name\":\"official election authority responsible for certifying results in \",\"url\":\"https://www.nass.org/can-I-vote\"}]",
+          "url": "https://kalshi.com/markets/kxakmov/kxakmov-aksenate26nov03",
+          "closeAt": "2027-06-02T14:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "b6fbe469ab562c1fd0388d934e917c453bd16d044f87cf943ce45fa4fd43acc2",
+          "settlement": null,
+          "series": "KXAKMOV"
+        },
+        "b": {
+          "id": "ewc-usse-ak-2026-11-03-rep",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "usse",
+            "eventAt": "2026-11-03T17:00:00.000Z",
+            "eventDate": "2026-11-03",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "alaska senate election winner"
+          },
+          "title": "Dan Sullivan (R) \u00b7 Alaska Senate Election Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if a representative of the Republican Party wins the 2026 midterm election for US Senator from Alaska. Outcome sourced from relevant government authorities.\n\nThe determination of the winner includes any runoff, tiebreak, or other relevant procedure under the applicable rules of the relevant jurisdiction.",
+          "url": "https://polymarket.us/event/ewc-usse-ak-2026-11-03-rep",
+          "closeAt": "2027-01-15T00:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 1,
+          "hash": "5163e8d7a1e0eaabc790f74645b46ea17acb28995150fface37928ebbc4aeb86",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXAKMOV-AKSENATE26NOV03-DSUL-P4::alaska senate election winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
+  },
+  {
+    "label": "Will Stephen Bunting win the James Wade vs Stephen Bunting darts match? vs Who will win in the upcoming darts event James Wade vs Stephen Bunting scheduled for October 1, 2026 at 7:15 PM UTC?",
+    "route": {
+      "pair": {
+        "id": "KXDARTSMATCH-26OCT011510JWADSBUN-SBUN::aec-pdcdarts-jamwad-stebun-2026-10-01",
+        "a": {
+          "id": "KXDARTSMATCH-26OCT011510JWADSBUN-SBUN",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "eventAt": "2026-10-01T19:10:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "james wade",
+              "stephen bunting world grand prix 1 8 finals darts"
+            ],
+            "marketType": "winner",
+            "period": "full event",
+            "outcome": "stephen bunting",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Stephen Bunting win the James Wade vs Stephen Bunting darts match?",
+          "outcome": "Stephen Bunting",
+          "opposite": "Stephen Bunting",
+          "category": "Sports",
+          "rules": "If Stephen Bunting wins the James Wade vs Stephen Bunting World Grand Prix 1/8 Finals darts match originally scheduled for Oct 1, 2026 at 3:10 PM EDT, then the market resolves to Yes.\n\nThe following market refers to the James Wade vs Stephen Bunting darts match originally scheduled for Oct 1, 2026. If this match is postponed or delayed, the market will remain open and close after the rescheduled match has finished (within two weeks). If the cancelled match is not played, rescheduled, or declared a tie, the market will resolve to the fair market price.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ACHIEVEMENTS.pdf\n\n[{\"name\":\"Flashscore\",\"url\":\"https://www.flashscoreusa.com/darts/\"},{\"name\":\"Sofascore\",\"url\":\"https://www.sofascore.com/darts\"},{\"name\":\"Sky Sports\",\"url\":\"https://www.skysports.com/darts/schedule\"}]",
+          "url": "https://kalshi.com/markets/kxdartsmatch/kxdartsmatch-26oct011510jwadsbun",
+          "closeAt": "2026-10-01T22:10:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "316e7db3a7f1bdabd07d826b7232543a55abdf606a3aacc3d46e00dc88459868",
+          "settlement": null,
+          "series": "KXDARTSMATCH"
+        },
+        "b": {
+          "id": "aec-pdcdarts-jamwad-stebun-2026-10-01",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "pdcdarts",
+            "eventAt": "2026-10-01T19:15:00.000Z",
+            "eventDate": "2026-10-01",
+            "participants": [
+              "james wade",
+              "stephen bunting"
+            ],
+            "home": "james wade",
+            "away": "stephen bunting",
+            "marketType": "winner",
+            "period": "full event",
+            "outcome": "james wade",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2026",
+              "7",
+              "15"
+            ],
+            "aliases": [
+              {
+                "name": "james wade",
+                "venue": "poly",
+                "venueId": "27434",
+                "aliases": [
+                  "james wade",
+                  "james wade",
+                  "james wade",
+                  "jamwad",
+                  "wade"
+                ]
+              },
+              {
+                "name": "stephen bunting",
+                "venue": "poly",
+                "venueId": "27444",
+                "aliases": [
+                  "stephen bunting",
+                  "stephen bunting",
+                  "stephen bunting",
+                  "stebun",
+                  "bunting"
+                ]
+              }
+            ]
+          },
+          "title": "Who will win in the upcoming darts event James Wade vs Stephen Bunting scheduled for October 1, 2026 at 7:15 PM UTC?",
+          "outcome": "James Wade",
+          "opposite": "Stephen Bunting",
+          "category": "sports",
+          "rules": "This market will settle to the winner of the James Wade vs Stephen Bunting PDC match scheduled for Oct 1, 2026. If the match does not begin due to a walkover, withdrawal, or cancellation, the market will settle to $0.50. If the match is delayed, postponed, or suspended and not rescheduled to a date within two days of the originally scheduled date, the market will settle to $0.50. Outcome sourced from PDC.",
+          "url": "https://polymarket.us/event/aec-pdcdarts-jamwad-stebun-2026-10-01",
+          "closeAt": "2026-10-15T23:15:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "c52917937f63cbc25b81dafbf83d9c882473e231f5268a66a9af42016a046c6b",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "[null,\"2026-10-01\",[\"james wade\",\"stephen bunting world grand prix 1 8 finals darts\"]]::[\"pdcdarts\",\"2026-10-01\",[\"PDCDARTS:JAMES_WADE\",\"PDCDARTS:STEPHEN_BUNTING\"]]",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      }
+    },
+    "expected": "DIFFERENT_QUESTION"
   }
 ]
