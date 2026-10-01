@@ -64,3 +64,32 @@ test('hockey ending-year finals and a spanning season preserve the same predicat
  r.pair.a.identity={sports:true,competition:'nhl',participants:[],entities:[],numbers:[]};r.pair.b.identity=r.pair.a.identity;
  assert.equal(paperSettlement(r).classification,'ORDINARY_EQUIVALENT_BASIS_RISK');
 });
+
+const fresh=JSON.parse(readFileSync(new URL('./fixtures/proposition-live-top20.json',import.meta.url),'utf8'));
+for(const row of fresh)test('fresh native top '+row.rank+': '+row.label,()=>{
+ assert.equal(paperSettlement(row.route).classification,row.expected);
+ const r=structuredClone(row.route);r.pair.a.id='new-native-k';r.pair.b.id='new-native-p';r.pair.id='new-native-route';
+ assert.equal(paperSettlement(r).classification,row.expected);
+});
+test('same ordinary undefeated season stays visible after fresh evidence',()=>{
+ const r=unseen('If New Team goes undefeated in the 2026 College Football regular season, then the market resolves to Yes.','This market will settle to Yes if New Team goes undefeated in the 2026 College Football regular season.');
+ assert.equal(paperSettlement(r).classification,'ORDINARY_EQUIVALENT_BASIS_RISK');
+});
+
+for(const [label,a,b] of [
+ ['semifinal/final','If New Team qualifies for the Semifinals in the 2026-27 Champions League, then the market resolves to Yes.','This market will settle to Yes if New Team qualifies for the Final of the 2026-27 Champions League.'],
+ ['published rank/tournament title','If New Player is the #1 ranked player on the ATP singles rankings on December 31, 2026, then the market resolves to Yes.','This market will settle to Yes if New Player wins the Australian Open singles title in 2027.'],
+ ['relative/absolute wins','If Alpha records more wins than Beta in the 2026 Pro Football regular season, then the market resolves to Yes.','This market will settle to Yes if Alpha finishes the 2026 Pro Football regular season with over 10.5 wins.'],
+ ['monthly/annual award','If New Player wins the Offensive Rookie of the Month in September 2026, then the market resolves to Yes.','This market will settle to Yes if New Player wins the Offensive Rookie of the Year in the 2026 season.'],
+ ['any/next departure','If New Person leaves their Secretary position before December 31, 2027, then the market resolves to Yes.','This market will settle to Yes if New Person is the next member of the Cabinet whose departure from their position is announced by December 31, 2027.']
+])test('fresh structural regression with new entities: '+label,()=>assert.equal(paperSettlement(unseen(a,b)).classification,'DIFFERENT_QUESTION'));
+test('same-team regulation soccer win is retained despite the draw outcome',()=>{
+ const r=structuredClone(fresh.find((r:any)=>r.rank===1).route);
+ r.pair.b=structuredClone(r.pair.a);r.pair.b.venue='poly';r.pair.b.id='new-soccer-p';r.pair.inverted=false;
+ assert.notEqual(paperSettlement(r).classification,'DIFFERENT_QUESTION');
+});
+
+test('fresh native semifinal qualifier is not a final qualifier',()=>{
+ const r=JSON.parse(readFileSync(new URL('./fixtures/proposition-live-stage.json',import.meta.url),'utf8'));
+ assert.equal(paperSettlement(r).classification,'DIFFERENT_QUESTION');
+});

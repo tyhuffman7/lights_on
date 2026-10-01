@@ -20,9 +20,9 @@ for await(const line of createInterface({input:createReadStream(resolve(director
  const routeKey=b.route.pair.id+':'+b.signal.evaluation.kalshiSide;
  if((routes.get(routeKey)?.modeledNet??-Infinity)<b.signal.evaluation.estimatedNetProfit)routes.set(routeKey,{
   route:b.route,side:b.signal.evaluation.kalshiSide,modeledNet:b.signal.evaluation.estimatedNetProfit,
-  before:old,after:c.classification,semantic:c,quoteAt:b.signal.evaluation.at});
+  before:old,after:c.classification,semantic:c,quoteAt:b.signal.evaluation.at,quote:b});
 }
-const manual=JSON.parse(readFileSync(resolve('tests/fixtures/proposition-frozen-top20.json'),'utf8'));
+const manual=JSON.parse(readFileSync(resolve(process.argv[4]??'tests/fixtures/proposition-frozen-top20.json'),'utf8'));
 const top20=manual.map((r:any)=>{const c=paperSettlement(r.route);return {rank:r.rank,id:r.route.pair.id,label:r.expected,
   after:c.classification,agrees:c.classification===r.expected,reasons:c.differentQuestionReasons,missing:c.proposition.missing};});
 const summary=JSON.parse(readFileSync(resolve(directory,'summary.json'),'utf8'));

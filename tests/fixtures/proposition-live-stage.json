@@ -1,0 +1,106 @@
+{
+  "pair": {
+    "id": "KXUCLROUND-27SEMI-RMA::aqc-ucl-2027-06-05-finalq-rma",
+    "a": {
+      "id": "KXUCLROUND-27SEMI-RMA",
+      "venue": "kalshi",
+      "identity": {
+        "sports": true,
+        "participants": [],
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "real madrid",
+        "entities": [],
+        "numbers": [],
+        "aliases": [],
+        "eventKey": "round qualifiers"
+      },
+      "exchangeIndex": 0,
+      "title": "Will Real Madrid qualify for the Champions League Semifinals?",
+      "outcome": "Real Madrid",
+      "opposite": "Real Madrid",
+      "category": "Sports",
+      "rules": "If Real Madrid is one of the teams to qualify for the Semifinals in the 2026-27 Champions League, then the market resolves to Yes.\n\nThis will be determined by whether or not they qualify; if they qualify but do not end up competing, the market will still resolve to Yes.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCERROUND.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"}]",
+      "url": "https://kalshi.com/markets/kxuclround/kxuclround-27semi",
+      "closeAt": "2027-04-15T00:00:00Z",
+      "open": true,
+      "feeRate": 700,
+      "feeRounding": "ceil",
+      "minQty": 1,
+      "hash": "79d676942d1d469e0e5e7964467ae10f892970ca2b0dbde676c607547445c6b1",
+      "settlement": null,
+      "series": "KXUCLROUND"
+    },
+    "b": {
+      "id": "aqc-ucl-2027-06-05-finalq-rma",
+      "venue": "poly",
+      "identity": {
+        "sports": true,
+        "competition": "ucl",
+        "eventAt": "2026-09-08T19:00:00.000Z",
+        "eventDate": "2026-09-08",
+        "participants": [
+          "UCL:REAL_MADRID"
+        ],
+        "participant": "UCL:REAL_MADRID",
+        "marketType": "future",
+        "period": "full event",
+        "outcome": "UCL:REAL_MADRID",
+        "entities": [],
+        "numbers": [],
+        "aliases": [
+          {
+            "name": "real madrid",
+            "venue": "poly",
+            "venueId": "2796",
+            "aliases": [
+              "real madrid cf",
+              "los merengues",
+              "real madrid",
+              "rma",
+              "rma"
+            ]
+          },
+          {
+            "name": "real madrid",
+            "venue": "poly",
+            "venueId": "2796",
+            "aliases": [
+              "real madrid cf",
+              "los merengues",
+              "real madrid",
+              "rma",
+              "rma"
+            ]
+          }
+        ],
+        "eventKey": "champions league final qualifiers"
+      },
+      "title": "Real Madrid \u00b7 Champions League Final Qualifiers",
+      "outcome": "Yes",
+      "opposite": "No",
+      "category": "sports",
+      "rules": "This market will settle to Yes if Real Madrid CF qualifies for the Final of the 2026-27 UEFA Champions League. Outcome sourced from UEFA.",
+      "url": "https://polymarket.us/event/aqc-ucl-2027-06-05-finalq-rma",
+      "closeAt": "2027-06-20T03:00:00Z",
+      "open": true,
+      "feeRate": 695,
+      "feeRounding": "even",
+      "minQty": 0.01,
+      "hash": "0fd7895e7623aeaa7be3ed0c52ebea04a40c2b4b8b9fb35349e1a3aebcdb2413",
+      "settlement": null
+    },
+    "inverted": false,
+    "reviewed": false
+  },
+  "matchSource": "TEXT",
+  "warnings": [
+    "SETTLEMENT_REVIEW_PENDING"
+  ],
+  "eventKey": "round qualifiers::champions league final qualifiers",
+  "ticks": {
+    "kalshi": 100,
+    "poly": 100
+  },
+  "semanticClass": "UNRESOLVED"
+}

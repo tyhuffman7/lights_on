@@ -1,0 +1,1906 @@
+[
+  {
+    "rank": 1,
+    "label": "Named team win versus draw; three regulation outcomes prevent binary complement inference.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXUSLGAME-26OCT03TAMMIA-TAM::atc-uslc-tam-mia-2026-10-03-draw",
+        "a": {
+          "id": "KXUSLGAME-26OCT03TAMMIA-TAM",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "eventDate": "2026-10-03",
+            "participants": [
+              "miami",
+              "tampa bay"
+            ],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "tampa bay",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "usl championship game"
+          },
+          "exchangeIndex": 0,
+          "title": "Tampa Bay wins",
+          "outcome": "Tampa Bay",
+          "opposite": "Tampa Bay",
+          "category": "Sports",
+          "rules": "If Tampa Bay wins the Tampa Bay vs Miami professional USL Championship soccer game originally scheduled for Oct 3, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties), then the market resolves to Yes.\n\nThe following market refers to the Tampa Bay vs Miami professional USL Championship soccer game originally scheduled for Oct 3, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties). If the game ends in a tie, the market called \"Tie\" resolves to Yes. If the game is cancelled or rescheduled to over 48 hours away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCERGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxuslgame/kxuslgame-26oct03tammia",
+          "closeAt": "2026-10-04T02:30:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "61b5e8ea2fe91d4185a63fa15cb4e36221d57329352d4e6c6c66c9e9d20dc36a",
+          "settlement": null,
+          "series": "KXUSLGAME"
+        },
+        "b": {
+          "id": "atc-uslc-tam-mia-2026-10-03-draw",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "uslc",
+            "eventAt": "2026-10-03T23:30:00.000Z",
+            "eventDate": "2026-10-03",
+            "participants": [
+              "miami fc scheduled for oct 3 2026 end in a draw",
+              "will the usl championship match tampa bay rowdies"
+            ],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [
+              "3",
+              "2026"
+            ],
+            "aliases": [],
+            "eventKey": "will the usl championship match tampa bay rowdies vs miami fc scheduled for oct 3 2026 end in a draw"
+          },
+          "title": "Will the USL Championship match Tampa Bay Rowdies vs Miami FC scheduled for Oct 3, 2026 end in a draw?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to the winner at the end of 90 minutes plus stoppage time in the Tampa Bay Rowdies vs Miami FC USL Championship match scheduled for 2026-10-03 7:30PM ET. If the match is tied following 90 minutes plus stoppage time, the market will settle to Tie. If the match is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from USL.",
+          "url": "https://polymarket.us/event/atc-uslc-tam-mia-2026-10-03-draw",
+          "closeAt": "2026-10-18T03:30:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "ca5855ad2b64f60e149581cc2ecabfcf4e17fb131e8a39a4eb1a6ff28a7ef3c2",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "[null,\"2026-10-03\",[\"miami\",\"tampa bay\"]]::[\"uslc\",\"2026-10-03\",[\"miami fc scheduled for oct 3 2026 end in a draw\",\"will the usl championship match tampa bay rowdies\"]]",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 2,
+    "label": "Top-ten fantasy scoring among rookies versus AP Offensive Rookie of the Year.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXNFLFFLEADERTOP-27ROOKT10-JLOVE4::tec-nfl-oroy-2027-02-11-w-jerlov",
+        "a": {
+          "id": "KXNFLFFLEADERTOP-27ROOKT10-JLOVE4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "jeremiyah love",
+            "entities": [],
+            "numbers": [
+              "10",
+              "2026",
+              "27"
+            ],
+            "aliases": [],
+            "eventKey": "top fantasy"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Jeremiyah Love be a top 10 fantasy rookie in the 2026-27 Pro Football regular season?",
+          "outcome": "Jeremiyah Love",
+          "opposite": "Jeremiyah Love",
+          "category": "Sports",
+          "rules": "If Jeremiyah Love finishes top 10 in scoring among rookies for the 2026-27 Pro Football regular season, then the market resolves to Yes.\n\nDead-heat rules apply in the event that two or more players are tied at the final qualifying position.\n\nIf a tie occurs at the cutoff position, each tied player's contract shall settle at 1/N, where N is the total number of players tied for the remaining qualifying position(s).\n\nExample: In a market for the top 10 fantasy quarterbacks, if two quarterbacks are tied for 10th place, each tied player's contract will settle at $0.50.\n\nThis market will be based on Sleeper's FFL Points Per Reception (PPR) scoring, and refers to the totals for the entirety of the Pro Football regular season.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FFSTATLEADER.pdf\n\n[{\"name\":\"Sleeper\",\"url\":\"https://sleeper.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflffleadertop/kxnflffleadertop-27rookt10",
+          "closeAt": "2027-01-18T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "fc52412e63ba159feca36cb95f912dc13a20dec552e376b51f69fbcf32c23729",
+          "settlement": null,
+          "series": "KXNFLFFLEADERTOP"
+        },
+        "b": {
+          "id": "tec-nfl-oroy-2027-02-11-w-jerlov",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2027-02-12T01:00:00.000Z",
+            "eventDate": "2027-02-12",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "pro football offensive rookie of the year"
+          },
+          "title": "Jeremiyah Love \u00b7 Pro Football Offensive Rookie of the Year",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Jeremiyah Love wins the Pro Football AP Offensive Rookie of the Year Award for the 2026-27 regular season. Outcome sourced from the relevant governing body. If Jeremiyah Love ties with one or more other players for the award Yes contract holders receive $1.00 divided by the number of tied players, rounded down to the nearest cent, per contract.",
+          "url": "https://polymarket.us/event/tec-nfl-oroy-2027-02-11-w-jerlov",
+          "closeAt": "2027-02-26T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "029a3fbfe46ac5a1a4051ff4662e17dc0730076dadc1d74b69af98ba65456cdc",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "top fantasy::pro football offensive rookie of the year",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 3,
+    "label": "Any departure by a deadline versus the next Cabinet departure announcement.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXLUTNICKOUT-26SEP-29JAN01::ncpdc-trmpcab-nxtout-1-howlut",
+        "a": {
+          "id": "KXLUTNICKOUT-26SEP-29JAN01",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "before jan 1 2029",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2029",
+              "1",
+              "2029"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Howard Lutnick be out as Commerce Secretary before Jan 1, 2029?",
+          "outcome": "Before Jan 1, 2029",
+          "opposite": "Before Jan 1, 2029",
+          "category": "Politics",
+          "rules": "If Howard Lutnick leaves as Commerce Secretary before Jan 1, 2029, then the market resolves to Yes.\n\nHoward Lutnick must have an actual departure date and vacate the role within the time period.\n\nTemporary leaves of absence, suspensions, or recusals do not constitute leaving, resigning from, or retiring from the role unless the individual formally and permanently ceases to hold the position. If the person vacates the role and then re-occupies the role, the contract shall settle on the initial vacation of the role.\n\nFor \"leave,\" cessation of holding the role qualifies, including resignation, retirement, removal, expulsion, expiration of term without renewal, recall, or other means by which the individual no longer occupies the role. This includes both voluntary and involuntary early departure AND the natural expiration of a term.\n\nhttps://assets.kalshi.com/contract_terms/EFFECTIVELEAVE.pdf\n\n[{\"name\":\"person\",\"url\":\"https://kalshi.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"official government records and registries\",\"url\":\"https://kalshi.com\"},{\"name\":\"the body, agency, company, organization, or entity at which role is held\",\"url\":\"https://kalshi.com\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com\"},{\"name\":\"the New York Times\",\"url\":\"https://www.nytimes.com\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com/\"}]",
+          "url": "https://kalshi.com/markets/kxlutnickout/kxlutnickout-26sep",
+          "closeAt": "2029-01-08T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "efee78ea17866e0cf466a967c44a4a341006fcb009d8cc42b4461d3dcf84021a",
+          "settlement": null,
+          "series": "KXLUTNICKOUT"
+        },
+        "b": {
+          "id": "ncpdc-trmpcab-nxtout-1-howlut",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "trmpcab",
+            "eventAt": "2026-09-09T22:51:00.000Z",
+            "eventDate": "2026-09-09",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "next trump cabinet member announced out"
+          },
+          "title": "Howard Lutnick - Secretary of Commerce \u00b7 Next Trump Cabinet Member Announced Out?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Howard Lutnick is the next member of the United States Cabinet whose departure from their position is announced by December 31, 2027, 11:59 PM ET. Outcome sourced from Howard Lutnick and the White House.\n\nThe Cabinet consists of the Vice President and the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President's Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officeholders are not included.\n\nA departure will be considered to be announced when a cabinet member, the White House, or their authorized representatives publicly and definitively announce that the cabinet member has ceased or will cease to hold their cabinet position. Such an announcement will qualify regardless of when the cabinet member formally leaves the position. Announcements of the cabinet member's resignation, removal, or departure through other means all qualify.\n\nOnly announcements which are framed as announcing a departure intended to be effective within 18 months of the date of the announcement will qualify (e.g., neither \"I will leave office in 2 years,\" nor \"I will not be in office forever,\" would qualify). If a cabinet member holds their position on a predefined term with a scheduled end date, only announcements that they will depart the position prior to the scheduled end of their term qualify.\n\nAnnouncements of temporary leaves of absence, dated suspensions, indefinite suspensions, administrative leaves, or other temporary changes to a cabinet member's duties in their position do not qualify.\n\nThe following do not qualify as public and definitive announcements: statements that a cabinet member is considering or open to departing; conditional statements that a cabinet member will depart only if certain conditions are met; the announcement of an offer of resignation that requires acceptance and remains pending or has been refused; media reports that the relevant person may depart their specified position absent reporting on a qualifying announcement; statements made in sarcasm or jest; and statements by persons other than a cabinet member, the White House, or their respective authorized representatives.\n\nIf a cabinet member formally ceases to hold the specified position before the end of their scheduled term without a qualifying announcement, the Sources' confirmation of such departure will be treated as a qualifying announcement of that person's departure.\n\nIf the departures of multiple cabinet members from their cabinet-level positions are announced concurrently, the Contract for each departing member settles to $1.00 divided by the number of listed members whose departures are concurrently announced (rounded down to the nearest tick), and all other Contracts settle to $0.00. Announcements will be considered to be issued concurrently only if they are issued in the same written statement (e.g., a public social media post), or in a single public speaking event (e.g., a press conference, a speech).",
+          "url": "https://polymarket.us/event/ncpdc-trmpcab-nxtout-1-howlut",
+          "closeAt": "2028-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "2b284f9f3df3cc19ae183756d9cd64c8928d676b64e485fe192732ae40bfc3ec",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXLUTNICKOUT-26SEP-29JAN01::next trump cabinet member announced out",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 4,
+    "label": "Published ATP year-end ranking versus winning the next Australian Open.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXATP1RANK-26DEC31-AZVE::tec-atp-ao-2027-01-31-w-alezve",
+        "a": {
+          "id": "KXATP1RANK-26DEC31-AZVE",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "tennis",
+            "competition": "atp",
+            "participants": [],
+            "period": "full event",
+            "outcome": "ATP:ALEXANDER_ZVEREV",
+            "entities": [],
+            "numbers": [
+              "1",
+              "31",
+              "2026"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Who will be the #1 ranked ATP men's singles player on Dec 31, 2026?",
+          "outcome": "Alexander Zverev",
+          "opposite": "Alexander Zverev",
+          "category": "Sports",
+          "rules": "If Alexander Zverev is the #1 ranked on the PIF ATP singles rankings on Dec 31, 2026 at 12:00 PM ET, then the market resolves to Yes.\n\nFor the purposes of this market, resolution will be based on the most recently published PIF ATP Rankings available at the time of resolution.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ATPTITLEHOLDER.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+          "url": "https://kalshi.com/markets/kxatp1rank/kxatp1rank-26dec31",
+          "closeAt": "2026-12-31T17:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "cd40b8a8dad661d444c90e882010704b6e257e10e0519c028b3a4aa46e72c043",
+          "settlement": null,
+          "series": "KXATP1RANK"
+        },
+        "b": {
+          "id": "tec-atp-ao-2027-01-31-w-alezve",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "tennis",
+            "competition": "atp",
+            "eventAt": "2027-01-11T17:00:00.000Z",
+            "eventDate": "2027-01-11",
+            "participants": [
+              "ATP:ALEXANDER_ZVEREV"
+            ],
+            "participant": "ATP:ALEXANDER_ZVEREV",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "ATP:ALEXANDER_ZVEREV",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "alexander zverev",
+                "venue": "poly",
+                "venueId": "3115",
+                "aliases": [
+                  "alexander zverev",
+                  "alexander zverev",
+                  "alexander zverev",
+                  "alezve",
+                  "zverev"
+                ]
+              },
+              {
+                "name": "alexander zverev",
+                "venue": "poly",
+                "venueId": "3115",
+                "aliases": [
+                  "alexander zverev",
+                  "alexander zverev",
+                  "alexander zverev",
+                  "alezve",
+                  "zverev"
+                ]
+              }
+            ],
+            "eventKey": "australian open men s singles winner"
+          },
+          "title": "Alexander Zverev \u00b7 Australian Open Men's Singles Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Alexander Zverev wins the men's singles title at the 2027 Australian Open. If the player does not compete, withdraws, or does not win for any reason, the market will settle to No. Outcome sourced from ATP.",
+          "url": "https://polymarket.us/event/tec-atp-ao-2027-01-31-w-alezve",
+          "closeAt": "2027-02-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "be4cccb17232285501848a755c55f3cec874d9b47ff29b7de0fca5c4d2760331",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXATP1RANK-26DEC31-AZVE::australian open men s singles winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 5,
+    "label": "Any departure by a deadline versus the next Cabinet departure announcement.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXLUTNICKOUT-26SEP-28JUL01::ncpdc-trmpcab-nxtout-1-howlut",
+        "a": {
+          "id": "KXLUTNICKOUT-26SEP-28JUL01",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "before jul 1 2028",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2028",
+              "1",
+              "2028"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Howard Lutnick be out as Commerce Secretary before Jul 1, 2028?",
+          "outcome": "Before Jul 1, 2028",
+          "opposite": "Before Jul 1, 2028",
+          "category": "Politics",
+          "rules": "If Howard Lutnick leaves as Commerce Secretary before Jul 1, 2028, then the market resolves to Yes.\n\nHoward Lutnick must have an actual departure date and vacate the role within the time period.\n\nTemporary leaves of absence, suspensions, or recusals do not constitute leaving, resigning from, or retiring from the role unless the individual formally and permanently ceases to hold the position. If the person vacates the role and then re-occupies the role, the contract shall settle on the initial vacation of the role.\n\nFor \"leave,\" cessation of holding the role qualifies, including resignation, retirement, removal, expulsion, expiration of term without renewal, recall, or other means by which the individual no longer occupies the role. This includes both voluntary and involuntary early departure AND the natural expiration of a term.\n\nhttps://assets.kalshi.com/contract_terms/EFFECTIVELEAVE.pdf\n\n[{\"name\":\"person\",\"url\":\"https://kalshi.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"official government records and registries\",\"url\":\"https://kalshi.com\"},{\"name\":\"the body, agency, company, organization, or entity at which role is held\",\"url\":\"https://kalshi.com\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com\"},{\"name\":\"the New York Times\",\"url\":\"https://www.nytimes.com\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com/\"}]",
+          "url": "https://kalshi.com/markets/kxlutnickout/kxlutnickout-26sep",
+          "closeAt": "2029-01-08T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "e5a682dc58a4ede4c5cd57884fe4633d147f2abc037ea8f0c11120184083ae2e",
+          "settlement": null,
+          "series": "KXLUTNICKOUT"
+        },
+        "b": {
+          "id": "ncpdc-trmpcab-nxtout-1-howlut",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "trmpcab",
+            "eventAt": "2026-09-09T22:51:00.000Z",
+            "eventDate": "2026-09-09",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "next trump cabinet member announced out"
+          },
+          "title": "Howard Lutnick - Secretary of Commerce \u00b7 Next Trump Cabinet Member Announced Out?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Howard Lutnick is the next member of the United States Cabinet whose departure from their position is announced by December 31, 2027, 11:59 PM ET. Outcome sourced from Howard Lutnick and the White House.\n\nThe Cabinet consists of the Vice President and the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President's Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officeholders are not included.\n\nA departure will be considered to be announced when a cabinet member, the White House, or their authorized representatives publicly and definitively announce that the cabinet member has ceased or will cease to hold their cabinet position. Such an announcement will qualify regardless of when the cabinet member formally leaves the position. Announcements of the cabinet member's resignation, removal, or departure through other means all qualify.\n\nOnly announcements which are framed as announcing a departure intended to be effective within 18 months of the date of the announcement will qualify (e.g., neither \"I will leave office in 2 years,\" nor \"I will not be in office forever,\" would qualify). If a cabinet member holds their position on a predefined term with a scheduled end date, only announcements that they will depart the position prior to the scheduled end of their term qualify.\n\nAnnouncements of temporary leaves of absence, dated suspensions, indefinite suspensions, administrative leaves, or other temporary changes to a cabinet member's duties in their position do not qualify.\n\nThe following do not qualify as public and definitive announcements: statements that a cabinet member is considering or open to departing; conditional statements that a cabinet member will depart only if certain conditions are met; the announcement of an offer of resignation that requires acceptance and remains pending or has been refused; media reports that the relevant person may depart their specified position absent reporting on a qualifying announcement; statements made in sarcasm or jest; and statements by persons other than a cabinet member, the White House, or their respective authorized representatives.\n\nIf a cabinet member formally ceases to hold the specified position before the end of their scheduled term without a qualifying announcement, the Sources' confirmation of such departure will be treated as a qualifying announcement of that person's departure.\n\nIf the departures of multiple cabinet members from their cabinet-level positions are announced concurrently, the Contract for each departing member settles to $1.00 divided by the number of listed members whose departures are concurrently announced (rounded down to the nearest tick), and all other Contracts settle to $0.00. Announcements will be considered to be issued concurrently only if they are issued in the same written statement (e.g., a public social media post), or in a single public speaking event (e.g., a press conference, a speech).",
+          "url": "https://polymarket.us/event/ncpdc-trmpcab-nxtout-1-howlut",
+          "closeAt": "2028-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "2b284f9f3df3cc19ae183756d9cd64c8928d676b64e485fe192732ae40bfc3ec",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXLUTNICKOUT-26SEP-28JUL01::next trump cabinet member announced out",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 6,
+    "label": "Any departure by a deadline versus the next Cabinet departure announcement.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXLUTNICKOUT-26SEP-28JAN01::ncpdc-trmpcab-nxtout-1-howlut",
+        "a": {
+          "id": "KXLUTNICKOUT-26SEP-28JAN01",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "before jan 1 2028",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2028",
+              "1",
+              "2028"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Howard Lutnick be out as Commerce Secretary before Jan 1, 2028?",
+          "outcome": "Before Jan 1, 2028",
+          "opposite": "Before Jan 1, 2028",
+          "category": "Politics",
+          "rules": "If Howard Lutnick leaves as Commerce Secretary before Jan 1, 2028, then the market resolves to Yes.\n\nHoward Lutnick must have an actual departure date and vacate the role within the time period.\n\nTemporary leaves of absence, suspensions, or recusals do not constitute leaving, resigning from, or retiring from the role unless the individual formally and permanently ceases to hold the position. If the person vacates the role and then re-occupies the role, the contract shall settle on the initial vacation of the role.\n\nFor \"leave,\" cessation of holding the role qualifies, including resignation, retirement, removal, expulsion, expiration of term without renewal, recall, or other means by which the individual no longer occupies the role. This includes both voluntary and involuntary early departure AND the natural expiration of a term.\n\nhttps://assets.kalshi.com/contract_terms/EFFECTIVELEAVE.pdf\n\n[{\"name\":\"person\",\"url\":\"https://kalshi.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"official government records and registries\",\"url\":\"https://kalshi.com\"},{\"name\":\"the body, agency, company, organization, or entity at which role is held\",\"url\":\"https://kalshi.com\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com\"},{\"name\":\"the New York Times\",\"url\":\"https://www.nytimes.com\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com/\"}]",
+          "url": "https://kalshi.com/markets/kxlutnickout/kxlutnickout-26sep",
+          "closeAt": "2029-01-08T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "b3f34b352a6c8fdefda3941f3d811f53f509756df469efd46dad860168170034",
+          "settlement": null,
+          "series": "KXLUTNICKOUT"
+        },
+        "b": {
+          "id": "ncpdc-trmpcab-nxtout-1-howlut",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "trmpcab",
+            "eventAt": "2026-09-09T22:51:00.000Z",
+            "eventDate": "2026-09-09",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "next trump cabinet member announced out"
+          },
+          "title": "Howard Lutnick - Secretary of Commerce \u00b7 Next Trump Cabinet Member Announced Out?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Howard Lutnick is the next member of the United States Cabinet whose departure from their position is announced by December 31, 2027, 11:59 PM ET. Outcome sourced from Howard Lutnick and the White House.\n\nThe Cabinet consists of the Vice President and the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President's Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officeholders are not included.\n\nA departure will be considered to be announced when a cabinet member, the White House, or their authorized representatives publicly and definitively announce that the cabinet member has ceased or will cease to hold their cabinet position. Such an announcement will qualify regardless of when the cabinet member formally leaves the position. Announcements of the cabinet member's resignation, removal, or departure through other means all qualify.\n\nOnly announcements which are framed as announcing a departure intended to be effective within 18 months of the date of the announcement will qualify (e.g., neither \"I will leave office in 2 years,\" nor \"I will not be in office forever,\" would qualify). If a cabinet member holds their position on a predefined term with a scheduled end date, only announcements that they will depart the position prior to the scheduled end of their term qualify.\n\nAnnouncements of temporary leaves of absence, dated suspensions, indefinite suspensions, administrative leaves, or other temporary changes to a cabinet member's duties in their position do not qualify.\n\nThe following do not qualify as public and definitive announcements: statements that a cabinet member is considering or open to departing; conditional statements that a cabinet member will depart only if certain conditions are met; the announcement of an offer of resignation that requires acceptance and remains pending or has been refused; media reports that the relevant person may depart their specified position absent reporting on a qualifying announcement; statements made in sarcasm or jest; and statements by persons other than a cabinet member, the White House, or their respective authorized representatives.\n\nIf a cabinet member formally ceases to hold the specified position before the end of their scheduled term without a qualifying announcement, the Sources' confirmation of such departure will be treated as a qualifying announcement of that person's departure.\n\nIf the departures of multiple cabinet members from their cabinet-level positions are announced concurrently, the Contract for each departing member settles to $1.00 divided by the number of listed members whose departures are concurrently announced (rounded down to the nearest tick), and all other Contracts settle to $0.00. Announcements will be considered to be issued concurrently only if they are issued in the same written statement (e.g., a public social media post), or in a single public speaking event (e.g., a press conference, a speech).",
+          "url": "https://polymarket.us/event/ncpdc-trmpcab-nxtout-1-howlut",
+          "closeAt": "2028-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "2b284f9f3df3cc19ae183756d9cd64c8928d676b64e485fe192732ae40bfc3ec",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXLUTNICKOUT-26SEP-28JAN01::next trump cabinet member announced out",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 7,
+    "label": "Top-three fantasy scoring among rookies versus AP Offensive Rookie of the Year.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXNFLFFLEADERTOP-27ROOKT3-JLOVE4::tec-nfl-oroy-2027-02-11-w-jerlov",
+        "a": {
+          "id": "KXNFLFFLEADERTOP-27ROOKT3-JLOVE4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "jeremiyah love",
+            "entities": [],
+            "numbers": [
+              "3",
+              "2026",
+              "27"
+            ],
+            "aliases": [],
+            "eventKey": "top fantasy"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Jeremiyah Love be a top 3 fantasy rookie in the 2026-27 Pro Football regular season?",
+          "outcome": "Jeremiyah Love",
+          "opposite": "Jeremiyah Love",
+          "category": "Sports",
+          "rules": "If Jeremiyah Love finishes top 3 in scoring among rookies for the 2026-27 Pro Football regular season, then the market resolves to Yes.\n\nDead-heat rules apply in the event that two or more players are tied at the final qualifying position.\n\nIf a tie occurs at the cutoff position, each tied player's contract shall settle at 1/N, where N is the total number of players tied for the remaining qualifying position(s).\n\nExample: In a market for the top 10 fantasy quarterbacks, if two quarterbacks are tied for 10th place, each tied player's contract will settle at $0.50.\n\nThis market will be based on Sleeper's FFL Points Per Reception (PPR) scoring, and refers to the totals for the entirety of the Pro Football regular season.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FFSTATLEADER.pdf\n\n[{\"name\":\"Sleeper\",\"url\":\"https://sleeper.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflffleadertop/kxnflffleadertop-27rookt3",
+          "closeAt": "2027-01-18T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "ef7b228b1c05c2000491065798206d3de088a10b6dffbff07047d00b7ce12301",
+          "settlement": null,
+          "series": "KXNFLFFLEADERTOP"
+        },
+        "b": {
+          "id": "tec-nfl-oroy-2027-02-11-w-jerlov",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2027-02-12T01:00:00.000Z",
+            "eventDate": "2027-02-12",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "pro football offensive rookie of the year"
+          },
+          "title": "Jeremiyah Love \u00b7 Pro Football Offensive Rookie of the Year",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Jeremiyah Love wins the Pro Football AP Offensive Rookie of the Year Award for the 2026-27 regular season. Outcome sourced from the relevant governing body. If Jeremiyah Love ties with one or more other players for the award Yes contract holders receive $1.00 divided by the number of tied players, rounded down to the nearest cent, per contract.",
+          "url": "https://polymarket.us/event/tec-nfl-oroy-2027-02-11-w-jerlov",
+          "closeAt": "2027-02-26T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "029a3fbfe46ac5a1a4051ff4662e17dc0730076dadc1d74b69af98ba65456cdc",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "top fantasy::pro football offensive rookie of the year",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 8,
+    "label": "More season wins than another named team versus an absolute season-win threshold.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXNFLH2HWINS-27JACDAL-JAC::aachc-nfl-wins-2027-01-10-jax-11pt5wins",
+        "a": {
+          "id": "KXNFLH2HWINS-27JACDAL-JAC",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "participants": [],
+            "marketType": "total",
+            "period": "full event",
+            "outcome": "NFL:JACKSONVILLE",
+            "entities": [],
+            "numbers": [
+              "2026",
+              "27"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Jacksonville record more wins than Dallas in the 2026-27 Pro Football regular season?",
+          "outcome": "Jacksonville",
+          "opposite": "Jacksonville",
+          "category": "Sports",
+          "rules": "If Jacksonville records more wins than Dallas in the 2026-27 Pro Football regular season, then the market resolves to Yes.\n\nIf Jacksonville and Dallas record an equal number of wins in the 2026-27 Pro Football regular season, then all markets will resolve to 50/50.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FOOTBALLH2H.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflh2hwins/kxnflh2hwins-27jacdal",
+          "closeAt": "2027-01-18T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "41247bdc03bf43e652a6a7385cda1701fcd6d1e22ee62873c3e08a590a2d8ad3",
+          "settlement": null,
+          "series": "KXNFLH2HWINS"
+        },
+        "b": {
+          "id": "aachc-nfl-wins-2027-01-10-jax-11pt5wins",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2026-09-10T00:00:00.000Z",
+            "eventDate": "2026-09-10",
+            "participants": [
+              "NFL:JACKSONVILLE"
+            ],
+            "participant": "NFL:JACKSONVILLE",
+            "marketType": "total",
+            "period": "full event",
+            "outcome": "NFL:JACKSONVILLE",
+            "entities": [],
+            "numbers": [
+              "11.5"
+            ],
+            "aliases": [
+              {
+                "name": "jac jaguars",
+                "venue": "poly",
+                "venueId": "62",
+                "aliases": [
+                  "jacksonville jaguars",
+                  "jaguars",
+                  "jac jaguars",
+                  "jax",
+                  "jax"
+                ]
+              },
+              {
+                "name": "jac jaguars",
+                "venue": "poly",
+                "venueId": "62",
+                "aliases": [
+                  "jacksonville jaguars",
+                  "jaguars",
+                  "jac jaguars",
+                  "jax",
+                  "jax"
+                ]
+              }
+            ]
+          },
+          "title": "11.5+ Wins \u00b7 Jacksonville Regular Season Win Total",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Jacksonville finishes the 2026 Pro Football regular season with over 11.5 wins. Statistics are based on official regular season games only. Outcome sourced from the relevant governing body.",
+          "url": "https://polymarket.us/event/aachc-nfl-wins-2027-01-10-jax-11pt5wins",
+          "closeAt": "2027-01-25T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "fa169dca6c951c4d0b1bb936c9811975ff5bf297f470649a5fb7e0c9c984a0ef",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLH2HWINS-27JACDAL-JAC::aachc-nfl-wins-2027-01-10-jax-11pt5wins",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 9,
+    "label": "Any departure by a deadline versus the next Cabinet departure announcement.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXLUTNICKOUT-26SEP-27OCT01::ncpdc-trmpcab-nxtout-1-howlut",
+        "a": {
+          "id": "KXLUTNICKOUT-26SEP-27OCT01",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "before oct 1 2027",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2027",
+              "1",
+              "2027"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Howard Lutnick be out as Commerce Secretary before Oct 1, 2027?",
+          "outcome": "Before Oct 1, 2027",
+          "opposite": "Before Oct 1, 2027",
+          "category": "Politics",
+          "rules": "If Howard Lutnick leaves as Commerce Secretary before Oct 1, 2027, then the market resolves to Yes.\n\nHoward Lutnick must have an actual departure date and vacate the role within the time period.\n\nTemporary leaves of absence, suspensions, or recusals do not constitute leaving, resigning from, or retiring from the role unless the individual formally and permanently ceases to hold the position. If the person vacates the role and then re-occupies the role, the contract shall settle on the initial vacation of the role.\n\nFor \"leave,\" cessation of holding the role qualifies, including resignation, retirement, removal, expulsion, expiration of term without renewal, recall, or other means by which the individual no longer occupies the role. This includes both voluntary and involuntary early departure AND the natural expiration of a term.\n\nhttps://assets.kalshi.com/contract_terms/EFFECTIVELEAVE.pdf\n\n[{\"name\":\"person\",\"url\":\"https://kalshi.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"official government records and registries\",\"url\":\"https://kalshi.com\"},{\"name\":\"the body, agency, company, organization, or entity at which role is held\",\"url\":\"https://kalshi.com\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com\"},{\"name\":\"the New York Times\",\"url\":\"https://www.nytimes.com\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com/\"}]",
+          "url": "https://kalshi.com/markets/kxlutnickout/kxlutnickout-26sep",
+          "closeAt": "2029-01-08T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "547775225b3698d567ea2d067343f9b21d96a428be318d59c16f9459dd24733f",
+          "settlement": null,
+          "series": "KXLUTNICKOUT"
+        },
+        "b": {
+          "id": "ncpdc-trmpcab-nxtout-1-howlut",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "trmpcab",
+            "eventAt": "2026-09-09T22:51:00.000Z",
+            "eventDate": "2026-09-09",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "next trump cabinet member announced out"
+          },
+          "title": "Howard Lutnick - Secretary of Commerce \u00b7 Next Trump Cabinet Member Announced Out?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Howard Lutnick is the next member of the United States Cabinet whose departure from their position is announced by December 31, 2027, 11:59 PM ET. Outcome sourced from Howard Lutnick and the White House.\n\nThe Cabinet consists of the Vice President and the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President's Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officeholders are not included.\n\nA departure will be considered to be announced when a cabinet member, the White House, or their authorized representatives publicly and definitively announce that the cabinet member has ceased or will cease to hold their cabinet position. Such an announcement will qualify regardless of when the cabinet member formally leaves the position. Announcements of the cabinet member's resignation, removal, or departure through other means all qualify.\n\nOnly announcements which are framed as announcing a departure intended to be effective within 18 months of the date of the announcement will qualify (e.g., neither \"I will leave office in 2 years,\" nor \"I will not be in office forever,\" would qualify). If a cabinet member holds their position on a predefined term with a scheduled end date, only announcements that they will depart the position prior to the scheduled end of their term qualify.\n\nAnnouncements of temporary leaves of absence, dated suspensions, indefinite suspensions, administrative leaves, or other temporary changes to a cabinet member's duties in their position do not qualify.\n\nThe following do not qualify as public and definitive announcements: statements that a cabinet member is considering or open to departing; conditional statements that a cabinet member will depart only if certain conditions are met; the announcement of an offer of resignation that requires acceptance and remains pending or has been refused; media reports that the relevant person may depart their specified position absent reporting on a qualifying announcement; statements made in sarcasm or jest; and statements by persons other than a cabinet member, the White House, or their respective authorized representatives.\n\nIf a cabinet member formally ceases to hold the specified position before the end of their scheduled term without a qualifying announcement, the Sources' confirmation of such departure will be treated as a qualifying announcement of that person's departure.\n\nIf the departures of multiple cabinet members from their cabinet-level positions are announced concurrently, the Contract for each departing member settles to $1.00 divided by the number of listed members whose departures are concurrently announced (rounded down to the nearest tick), and all other Contracts settle to $0.00. Announcements will be considered to be issued concurrently only if they are issued in the same written statement (e.g., a public social media post), or in a single public speaking event (e.g., a press conference, a speech).",
+          "url": "https://polymarket.us/event/ncpdc-trmpcab-nxtout-1-howlut",
+          "closeAt": "2028-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "2b284f9f3df3cc19ae183756d9cd64c8928d676b64e485fe192732ae40bfc3ec",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXLUTNICKOUT-26SEP-27OCT01::next trump cabinet member announced out",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 10,
+    "label": "Any departure by a deadline versus the next Cabinet departure announcement.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXLUTNICKOUT-26SEP-27JUL01::ncpdc-trmpcab-nxtout-1-howlut",
+        "a": {
+          "id": "KXLUTNICKOUT-26SEP-27JUL01",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "before jul 1 2027",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2027",
+              "1",
+              "2027"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Howard Lutnick be out as Commerce Secretary before Jul 1, 2027?",
+          "outcome": "Before Jul 1, 2027",
+          "opposite": "Before Jul 1, 2027",
+          "category": "Politics",
+          "rules": "If Howard Lutnick leaves as Commerce Secretary before Jul 1, 2027, then the market resolves to Yes.\n\nHoward Lutnick must have an actual departure date and vacate the role within the time period.\n\nTemporary leaves of absence, suspensions, or recusals do not constitute leaving, resigning from, or retiring from the role unless the individual formally and permanently ceases to hold the position. If the person vacates the role and then re-occupies the role, the contract shall settle on the initial vacation of the role.\n\nFor \"leave,\" cessation of holding the role qualifies, including resignation, retirement, removal, expulsion, expiration of term without renewal, recall, or other means by which the individual no longer occupies the role. This includes both voluntary and involuntary early departure AND the natural expiration of a term.\n\nhttps://assets.kalshi.com/contract_terms/EFFECTIVELEAVE.pdf\n\n[{\"name\":\"person\",\"url\":\"https://kalshi.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"official government records and registries\",\"url\":\"https://kalshi.com\"},{\"name\":\"the body, agency, company, organization, or entity at which role is held\",\"url\":\"https://kalshi.com\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com\"},{\"name\":\"the New York Times\",\"url\":\"https://www.nytimes.com\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com/\"}]",
+          "url": "https://kalshi.com/markets/kxlutnickout/kxlutnickout-26sep",
+          "closeAt": "2029-01-08T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "3b51082628a937355dd6f51c00ddec489a36c3532eb8377e08ba099f26285b17",
+          "settlement": null,
+          "series": "KXLUTNICKOUT"
+        },
+        "b": {
+          "id": "ncpdc-trmpcab-nxtout-1-howlut",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "trmpcab",
+            "eventAt": "2026-09-09T22:51:00.000Z",
+            "eventDate": "2026-09-09",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "next trump cabinet member announced out"
+          },
+          "title": "Howard Lutnick - Secretary of Commerce \u00b7 Next Trump Cabinet Member Announced Out?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Howard Lutnick is the next member of the United States Cabinet whose departure from their position is announced by December 31, 2027, 11:59 PM ET. Outcome sourced from Howard Lutnick and the White House.\n\nThe Cabinet consists of the Vice President and the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President's Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officeholders are not included.\n\nA departure will be considered to be announced when a cabinet member, the White House, or their authorized representatives publicly and definitively announce that the cabinet member has ceased or will cease to hold their cabinet position. Such an announcement will qualify regardless of when the cabinet member formally leaves the position. Announcements of the cabinet member's resignation, removal, or departure through other means all qualify.\n\nOnly announcements which are framed as announcing a departure intended to be effective within 18 months of the date of the announcement will qualify (e.g., neither \"I will leave office in 2 years,\" nor \"I will not be in office forever,\" would qualify). If a cabinet member holds their position on a predefined term with a scheduled end date, only announcements that they will depart the position prior to the scheduled end of their term qualify.\n\nAnnouncements of temporary leaves of absence, dated suspensions, indefinite suspensions, administrative leaves, or other temporary changes to a cabinet member's duties in their position do not qualify.\n\nThe following do not qualify as public and definitive announcements: statements that a cabinet member is considering or open to departing; conditional statements that a cabinet member will depart only if certain conditions are met; the announcement of an offer of resignation that requires acceptance and remains pending or has been refused; media reports that the relevant person may depart their specified position absent reporting on a qualifying announcement; statements made in sarcasm or jest; and statements by persons other than a cabinet member, the White House, or their respective authorized representatives.\n\nIf a cabinet member formally ceases to hold the specified position before the end of their scheduled term without a qualifying announcement, the Sources' confirmation of such departure will be treated as a qualifying announcement of that person's departure.\n\nIf the departures of multiple cabinet members from their cabinet-level positions are announced concurrently, the Contract for each departing member settles to $1.00 divided by the number of listed members whose departures are concurrently announced (rounded down to the nearest tick), and all other Contracts settle to $0.00. Announcements will be considered to be issued concurrently only if they are issued in the same written statement (e.g., a public social media post), or in a single public speaking event (e.g., a press conference, a speech).",
+          "url": "https://polymarket.us/event/ncpdc-trmpcab-nxtout-1-howlut",
+          "closeAt": "2028-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "2b284f9f3df3cc19ae183756d9cd64c8928d676b64e485fe192732ae40bfc3ec",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXLUTNICKOUT-26SEP-27JUL01::next trump cabinet member announced out",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 11,
+    "label": "Opposite named team wins do not exhaust outcomes when a regulation draw is explicit.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXUSLGAME-26OCT03LOUIEL-IEL::atc-uslc-lou-iel-2026-10-03-lou::inverted",
+        "a": {
+          "id": "KXUSLGAME-26OCT03LOUIEL-IEL",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "eventDate": "2026-10-03",
+            "participants": [
+              "indy eleven",
+              "loudoun united fc"
+            ],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "indy eleven",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "usl championship game"
+          },
+          "exchangeIndex": 0,
+          "title": "Indy Eleven wins",
+          "outcome": "Indy Eleven",
+          "opposite": "Indy Eleven",
+          "category": "Sports",
+          "rules": "If Indy Eleven wins the Loudoun United FC vs Indy Eleven professional USL Championship soccer game originally scheduled for Oct 3, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties), then the market resolves to Yes.\n\nThe following market refers to the Loudoun United FC vs Indy Eleven professional USL Championship soccer game originally scheduled for Oct 3, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties). If the game ends in a tie, the market called \"Tie\" resolves to Yes. If the game is cancelled or rescheduled to over 48 hours away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCERGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxuslgame/kxuslgame-26oct03louiel",
+          "closeAt": "2026-10-04T01:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "aafd1098bddf61188242109f687fb041f932c4aa176d0803deb65f58f37761fc",
+          "settlement": null,
+          "series": "KXUSLGAME"
+        },
+        "b": {
+          "id": "atc-uslc-lou-iel-2026-10-03-lou",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "uslc",
+            "eventAt": "2026-10-03T22:00:00.000Z",
+            "eventDate": "2026-10-03",
+            "participants": [
+              "USLC:LOUDOUN_UNITED_FC"
+            ],
+            "participant": "USLC:LOUDOUN_UNITED_FC",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "USLC:LOUDOUN_UNITED_FC",
+            "entities": [],
+            "numbers": [
+              "3",
+              "2026"
+            ],
+            "aliases": [
+              {
+                "name": "loudoun united fc",
+                "venue": "poly",
+                "venueId": "21294",
+                "aliases": [
+                  "loudoun united fc",
+                  "loudoun united fc",
+                  "loudoun united fc",
+                  "lou",
+                  "lou"
+                ]
+              },
+              {
+                "name": "loudoun united fc",
+                "venue": "poly",
+                "venueId": "21294",
+                "aliases": [
+                  "loudoun united fc",
+                  "loudoun united fc",
+                  "loudoun united fc",
+                  "lou",
+                  "lou"
+                ]
+              }
+            ],
+            "eventKey": "will loudoun united fc win against indy eleven in the usl championship match scheduled for oct 3 2026"
+          },
+          "title": "Will Loudoun United FC win against Indy Eleven in the USL Championship match scheduled for Oct 3, 2026?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to the winner at the end of 90 minutes plus stoppage time in the Loudoun United FC vs Indy Eleven USL Championship match scheduled for 2026-10-03 6:00PM ET. If the match is tied following 90 minutes plus stoppage time, the market will settle to Tie. If the match is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from USL.",
+          "url": "https://polymarket.us/event/atc-uslc-lou-iel-2026-10-03-lou",
+          "closeAt": "2026-10-18T02:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "c11f8c8e407df64bd3c08d7ad8b959b861f8183b1a367dc1f07b8c2f6524b435",
+          "settlement": null
+        },
+        "inverted": true,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "[null,\"2026-10-03\",[\"indy eleven\",\"loudoun united fc\"]]::will loudoun united fc win against indy eleven in the usl championship match scheduled for oct 3 2026",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 12,
+    "label": "Top-three fantasy scoring among rookies versus AP Offensive Rookie of the Year.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXNFLFFLEADERTOP-27ROOKT3-DBOSTON12::tec-nfl-oroy-2027-02-11-w-denbos",
+        "a": {
+          "id": "KXNFLFFLEADERTOP-27ROOKT3-DBOSTON12",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "denzel boston",
+            "entities": [],
+            "numbers": [
+              "3",
+              "2026",
+              "27"
+            ],
+            "aliases": [],
+            "eventKey": "top fantasy"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Denzel Boston be a top 3 fantasy rookie in the 2026-27 Pro Football regular season?",
+          "outcome": "Denzel Boston",
+          "opposite": "Denzel Boston",
+          "category": "Sports",
+          "rules": "If Denzel Boston finishes top 3 in scoring among rookies for the 2026-27 Pro Football regular season, then the market resolves to Yes.\n\nDead-heat rules apply in the event that two or more players are tied at the final qualifying position.\n\nIf a tie occurs at the cutoff position, each tied player's contract shall settle at 1/N, where N is the total number of players tied for the remaining qualifying position(s).\n\nExample: In a market for the top 10 fantasy quarterbacks, if two quarterbacks are tied for 10th place, each tied player's contract will settle at $0.50.\n\nThis market will be based on Sleeper's FFL Points Per Reception (PPR) scoring, and refers to the totals for the entirety of the Pro Football regular season.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FFSTATLEADER.pdf\n\n[{\"name\":\"Sleeper\",\"url\":\"https://sleeper.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflffleadertop/kxnflffleadertop-27rookt3",
+          "closeAt": "2027-01-18T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "7f3f900c35096fdbcaeeef5dfeb4345241eb509e38eabf772fcd1d03af4bda39",
+          "settlement": null,
+          "series": "KXNFLFFLEADERTOP"
+        },
+        "b": {
+          "id": "tec-nfl-oroy-2027-02-11-w-denbos",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2027-02-12T01:00:00.000Z",
+            "eventDate": "2027-02-12",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "pro football offensive rookie of the year"
+          },
+          "title": "Denzel Boston \u00b7 Pro Football Offensive Rookie of the Year",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Denzel Boston wins the Pro Football AP Offensive Rookie of the Year Award for the 2026-27 regular season. Outcome sourced from the relevant governing body. If Denzel Boston ties with one or more other players for the award Yes contract holders receive $1.00 divided by the number of tied players, rounded down to the nearest cent, per contract.",
+          "url": "https://polymarket.us/event/tec-nfl-oroy-2027-02-11-w-denbos",
+          "closeAt": "2027-02-26T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "bd3d532491945c8ad53fb835250a1fcf98d63c85cb2280b397dacd2b4dc47764",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "top fantasy::pro football offensive rookie of the year",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 13,
+    "label": "Opposite named team wins do not exhaust outcomes when a regulation draw is explicit.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXUSLGAME-26OCT04NEWPHO-PHO::atc-uslc-new-pho-2026-10-04-new::inverted",
+        "a": {
+          "id": "KXUSLGAME-26OCT04NEWPHO-PHO",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "eventDate": "2026-10-04",
+            "participants": [
+              "new mexico united",
+              "phoenix rising"
+            ],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "phoenix rising",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "usl championship game"
+          },
+          "exchangeIndex": 0,
+          "title": "Phoenix Rising wins",
+          "outcome": "Phoenix Rising",
+          "opposite": "Phoenix Rising",
+          "category": "Sports",
+          "rules": "If Phoenix Rising wins the New Mexico United vs Phoenix Rising professional USL Championship soccer game originally scheduled for Oct 4, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties), then the market resolves to Yes.\n\nThe following market refers to the New Mexico United vs Phoenix Rising professional USL Championship soccer game originally scheduled for Oct 4, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties). If the game ends in a tie, the market called \"Tie\" resolves to Yes. If the game is cancelled or rescheduled to over 48 hours away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCERGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxuslgame/kxuslgame-26oct04newpho",
+          "closeAt": "2026-10-05T01:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "7326f7811bbc4bf4a87bf604a591f62a8e9f86322b7ec1668cd911976dcf9363",
+          "settlement": null,
+          "series": "KXUSLGAME"
+        },
+        "b": {
+          "id": "atc-uslc-new-pho-2026-10-04-new",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "uslc",
+            "eventAt": "2026-10-04T22:00:00.000Z",
+            "eventDate": "2026-10-04",
+            "participants": [
+              "USLC:NEW_MEXICO_UNITED"
+            ],
+            "participant": "USLC:NEW_MEXICO_UNITED",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "USLC:NEW_MEXICO_UNITED",
+            "entities": [],
+            "numbers": [
+              "4",
+              "2026"
+            ],
+            "aliases": [
+              {
+                "name": "new mexico united",
+                "venue": "poly",
+                "venueId": "21288",
+                "aliases": [
+                  "new mexico united",
+                  "new mexico united",
+                  "new mexico united",
+                  "new",
+                  "new"
+                ]
+              },
+              {
+                "name": "new mexico united",
+                "venue": "poly",
+                "venueId": "21288",
+                "aliases": [
+                  "new mexico united",
+                  "new mexico united",
+                  "new mexico united",
+                  "new",
+                  "new"
+                ]
+              }
+            ],
+            "eventKey": "will new mexico united win against phoenix rising fc in the usl championship match scheduled for oct 4 2026"
+          },
+          "title": "Will New Mexico United win against Phoenix Rising FC in the USL Championship match scheduled for Oct 4, 2026?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to the winner at the end of 90 minutes plus stoppage time in the New Mexico United vs Phoenix Rising FC USL Championship match scheduled for 2026-10-04 6:00PM ET. If the match is tied following 90 minutes plus stoppage time, the market will settle to Tie. If the match is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from USL.",
+          "url": "https://polymarket.us/event/atc-uslc-new-pho-2026-10-04-new",
+          "closeAt": "2026-10-19T02:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "5abfd5a7cef52f21da16522cea1dd83643afda90390452ec916130770bb808ae",
+          "settlement": null
+        },
+        "inverted": true,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "[null,\"2026-10-04\",[\"new mexico united\",\"phoenix rising\"]]::will new mexico united win against phoenix rising fc in the usl championship match scheduled for oct 4 2026",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 14,
+    "label": "Published ATP year-end ranking versus winning the next Australian Open.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXATP1RANK-26DEC31-CALC::tec-atp-ao-2027-01-31-w-caralc",
+        "a": {
+          "id": "KXATP1RANK-26DEC31-CALC",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "tennis",
+            "competition": "atp",
+            "participants": [],
+            "period": "full event",
+            "outcome": "ATP:CARLOS_ALCARAZ",
+            "entities": [],
+            "numbers": [
+              "1",
+              "31",
+              "2026"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Who will be the #1 ranked ATP men's singles player on Dec 31, 2026?",
+          "outcome": "Carlos Alcaraz",
+          "opposite": "Carlos Alcaraz",
+          "category": "Sports",
+          "rules": "If Carlos Alcaraz is the #1 ranked on the PIF ATP singles rankings on Dec 31, 2026 at 12:00 PM ET, then the market resolves to Yes.\n\nFor the purposes of this market, resolution will be based on the most recently published PIF ATP Rankings available at the time of resolution.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/ATPTITLEHOLDER.pdf\n\n[{\"name\":\"ATP\",\"url\":\"https://www.atptour.com/\"}]",
+          "url": "https://kalshi.com/markets/kxatp1rank/kxatp1rank-26dec31",
+          "closeAt": "2026-12-31T17:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "d977ea3d656fbfefd7b65abbba8412746445397d9063152ed7e8cd4193431b89",
+          "settlement": null,
+          "series": "KXATP1RANK"
+        },
+        "b": {
+          "id": "tec-atp-ao-2027-01-31-w-caralc",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "tennis",
+            "competition": "atp",
+            "eventAt": "2027-01-11T17:00:00.000Z",
+            "eventDate": "2027-01-11",
+            "participants": [
+              "ATP:CARLOS_ALCARAZ"
+            ],
+            "participant": "ATP:CARLOS_ALCARAZ",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "ATP:CARLOS_ALCARAZ",
+            "entities": [],
+            "numbers": [],
+            "aliases": [
+              {
+                "name": "carlos alcaraz",
+                "venue": "poly",
+                "venueId": "3100",
+                "aliases": [
+                  "carlos alcaraz",
+                  "carlos alcaraz",
+                  "carlos alcaraz",
+                  "caralc",
+                  "alcaraz"
+                ]
+              },
+              {
+                "name": "carlos alcaraz",
+                "venue": "poly",
+                "venueId": "3100",
+                "aliases": [
+                  "carlos alcaraz",
+                  "carlos alcaraz",
+                  "carlos alcaraz",
+                  "caralc",
+                  "alcaraz"
+                ]
+              }
+            ],
+            "eventKey": "australian open men s singles winner"
+          },
+          "title": "Carlos Alcaraz \u00b7 Australian Open Men's Singles Winner",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Carlos Alcaraz wins the men's singles title at the 2027 Australian Open. If the player does not compete, withdraws, or does not win for any reason, the market will settle to No. Outcome sourced from ATP.",
+          "url": "https://polymarket.us/event/tec-atp-ao-2027-01-31-w-caralc",
+          "closeAt": "2027-02-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "9eeaea6e941b22910557bc2db6ff06f49d7b398a25b9dc2983d367a7a5486362",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXATP1RANK-26DEC31-CALC::australian open men s singles winner",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 15,
+    "label": "Any departure by a deadline versus the next Cabinet departure announcement.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXLUTNICKOUT-26SEP-27APR01::ncpdc-trmpcab-nxtout-1-howlut",
+        "a": {
+          "id": "KXLUTNICKOUT-26SEP-27APR01",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "before apr 1 2027",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2027",
+              "1",
+              "2027"
+            ],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Howard Lutnick be out as Commerce Secretary before Apr 1, 2027?",
+          "outcome": "Before Apr 1, 2027",
+          "opposite": "Before Apr 1, 2027",
+          "category": "Politics",
+          "rules": "If Howard Lutnick leaves as Commerce Secretary before Apr 1, 2027, then the market resolves to Yes.\n\nHoward Lutnick must have an actual departure date and vacate the role within the time period.\n\nTemporary leaves of absence, suspensions, or recusals do not constitute leaving, resigning from, or retiring from the role unless the individual formally and permanently ceases to hold the position. If the person vacates the role and then re-occupies the role, the contract shall settle on the initial vacation of the role.\n\nFor \"leave,\" cessation of holding the role qualifies, including resignation, retirement, removal, expulsion, expiration of term without renewal, recall, or other means by which the individual no longer occupies the role. This includes both voluntary and involuntary early departure AND the natural expiration of a term.\n\nhttps://assets.kalshi.com/contract_terms/EFFECTIVELEAVE.pdf\n\n[{\"name\":\"person\",\"url\":\"https://kalshi.com/\"},{\"name\":\"The Wall Street Journal\",\"url\":\"https://www.wsj.com/\"},{\"name\":\"Bloomberg News\",\"url\":\"https://www.bloomberg.com/news\"},{\"name\":\"The Washington Post\",\"url\":\"https://www.washingtonpost.com/\"},{\"name\":\"the Associated Press\",\"url\":\"https://apnews.com/\"},{\"name\":\"Fox News\",\"url\":\"https://www.foxnews.com\"},{\"name\":\"Reuters\",\"url\":\"https://www.reuters.com/\"},{\"name\":\"official government records and registries\",\"url\":\"https://kalshi.com\"},{\"name\":\"the body, agency, company, organization, or entity at which role is held\",\"url\":\"https://kalshi.com\"},{\"name\":\"CNN\",\"url\":\"https://www.cnn.com\"},{\"name\":\"the New York Times\",\"url\":\"https://www.nytimes.com\"},{\"name\":\"Politico\",\"url\":\"https://www.politico.com/\"}]",
+          "url": "https://kalshi.com/markets/kxlutnickout/kxlutnickout-26sep",
+          "closeAt": "2029-01-08T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "c93e60d27f37793602ba6c6324119234c054c0d9026a825cbf63174ffaf1f8b1",
+          "settlement": null,
+          "series": "KXLUTNICKOUT"
+        },
+        "b": {
+          "id": "ncpdc-trmpcab-nxtout-1-howlut",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "trmpcab",
+            "eventAt": "2026-09-09T22:51:00.000Z",
+            "eventDate": "2026-09-09",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "next trump cabinet member announced out"
+          },
+          "title": "Howard Lutnick - Secretary of Commerce \u00b7 Next Trump Cabinet Member Announced Out?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Howard Lutnick is the next member of the United States Cabinet whose departure from their position is announced by December 31, 2027, 11:59 PM ET. Outcome sourced from Howard Lutnick and the White House.\n\nThe Cabinet consists of the Vice President and the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President's Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officeholders are not included.\n\nA departure will be considered to be announced when a cabinet member, the White House, or their authorized representatives publicly and definitively announce that the cabinet member has ceased or will cease to hold their cabinet position. Such an announcement will qualify regardless of when the cabinet member formally leaves the position. Announcements of the cabinet member's resignation, removal, or departure through other means all qualify.\n\nOnly announcements which are framed as announcing a departure intended to be effective within 18 months of the date of the announcement will qualify (e.g., neither \"I will leave office in 2 years,\" nor \"I will not be in office forever,\" would qualify). If a cabinet member holds their position on a predefined term with a scheduled end date, only announcements that they will depart the position prior to the scheduled end of their term qualify.\n\nAnnouncements of temporary leaves of absence, dated suspensions, indefinite suspensions, administrative leaves, or other temporary changes to a cabinet member's duties in their position do not qualify.\n\nThe following do not qualify as public and definitive announcements: statements that a cabinet member is considering or open to departing; conditional statements that a cabinet member will depart only if certain conditions are met; the announcement of an offer of resignation that requires acceptance and remains pending or has been refused; media reports that the relevant person may depart their specified position absent reporting on a qualifying announcement; statements made in sarcasm or jest; and statements by persons other than a cabinet member, the White House, or their respective authorized representatives.\n\nIf a cabinet member formally ceases to hold the specified position before the end of their scheduled term without a qualifying announcement, the Sources' confirmation of such departure will be treated as a qualifying announcement of that person's departure.\n\nIf the departures of multiple cabinet members from their cabinet-level positions are announced concurrently, the Contract for each departing member settles to $1.00 divided by the number of listed members whose departures are concurrently announced (rounded down to the nearest tick), and all other Contracts settle to $0.00. Announcements will be considered to be issued concurrently only if they are issued in the same written statement (e.g., a public social media post), or in a single public speaking event (e.g., a press conference, a speech).",
+          "url": "https://polymarket.us/event/ncpdc-trmpcab-nxtout-1-howlut",
+          "closeAt": "2028-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "2b284f9f3df3cc19ae183756d9cd64c8928d676b64e485fe192732ae40bfc3ec",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXLUTNICKOUT-26SEP-27APR01::next trump cabinet member announced out",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 16,
+    "label": "Opposite named team wins do not exhaust outcomes when a regulation draw is explicit.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXUSLGAME-26OCT03TAMMIA-TAM::atc-uslc-tam-mia-2026-10-03-mia::inverted",
+        "a": {
+          "id": "KXUSLGAME-26OCT03TAMMIA-TAM",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "eventDate": "2026-10-03",
+            "participants": [
+              "miami",
+              "tampa bay"
+            ],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "tampa bay",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "usl championship game"
+          },
+          "exchangeIndex": 0,
+          "title": "Tampa Bay wins",
+          "outcome": "Tampa Bay",
+          "opposite": "Tampa Bay",
+          "category": "Sports",
+          "rules": "If Tampa Bay wins the Tampa Bay vs Miami professional USL Championship soccer game originally scheduled for Oct 3, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties), then the market resolves to Yes.\n\nThe following market refers to the Tampa Bay vs Miami professional USL Championship soccer game originally scheduled for Oct 3, 2026 after 90 minutes plus stoppage time (does not include extra time or penalties). If the game ends in a tie, the market called \"Tie\" resolves to Yes. If the game is cancelled or rescheduled to over 48 hours away, the market will resolve to a fair price in accordance with the rules.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/SOCCERGAMEWIN.pdf\n\n[{\"name\":\"ESPN\",\"url\":\"https://www.espn.com/\"},{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com/\"}]",
+          "url": "https://kalshi.com/markets/kxuslgame/kxuslgame-26oct03tammia",
+          "closeAt": "2026-10-04T02:30:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "61b5e8ea2fe91d4185a63fa15cb4e36221d57329352d4e6c6c66c9e9d20dc36a",
+          "settlement": null,
+          "series": "KXUSLGAME"
+        },
+        "b": {
+          "id": "atc-uslc-tam-mia-2026-10-03-mia",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "competition": "uslc",
+            "eventAt": "2026-10-03T23:30:00.000Z",
+            "eventDate": "2026-10-03",
+            "participants": [
+              "USLC:MIAMI_FC"
+            ],
+            "participant": "USLC:MIAMI_FC",
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "USLC:MIAMI_FC",
+            "entities": [],
+            "numbers": [
+              "3",
+              "2026"
+            ],
+            "aliases": [
+              {
+                "name": "miami fc",
+                "venue": "poly",
+                "venueId": "21286",
+                "aliases": [
+                  "miami fc",
+                  "miami fc",
+                  "miami fc",
+                  "mia",
+                  "mia"
+                ]
+              },
+              {
+                "name": "miami fc",
+                "venue": "poly",
+                "venueId": "21286",
+                "aliases": [
+                  "miami fc",
+                  "miami fc",
+                  "miami fc",
+                  "mia",
+                  "mia"
+                ]
+              }
+            ],
+            "eventKey": "will miami fc win against tampa bay rowdies in the usl championship match scheduled for oct 3 2026"
+          },
+          "title": "Will Miami FC win against Tampa Bay Rowdies in the USL Championship match scheduled for Oct 3, 2026?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to the winner at the end of 90 minutes plus stoppage time in the Tampa Bay Rowdies vs Miami FC USL Championship match scheduled for 2026-10-03 7:30PM ET. If the match is tied following 90 minutes plus stoppage time, the market will settle to Tie. If the match is delayed, postponed, or suspended and not rescheduled to a date within two weeks of the originally scheduled date, the market will settle to the last fair market price. Outcome sourced from USL.",
+          "url": "https://polymarket.us/event/atc-uslc-tam-mia-2026-10-03-mia",
+          "closeAt": "2026-10-18T03:30:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "ca5855ad2b64f60e149581cc2ecabfcf4e17fb131e8a39a4eb1a6ff28a7ef3c2",
+          "settlement": null
+        },
+        "inverted": true,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "[null,\"2026-10-03\",[\"miami\",\"tampa bay\"]]::will miami fc win against tampa bay rowdies in the usl championship match scheduled for oct 3 2026",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 17,
+    "label": "Offensive Rookie of the Month for September versus Offensive Rookie of the Year.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXNFLROTM-SEP26OFFENSE-JPRICE8::tec-nfl-oroy-2027-02-11-w-jadpri",
+        "a": {
+          "id": "KXNFLROTM-SEP26OFFENSE-JPRICE8",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "participants": [],
+            "period": "full event",
+            "outcome": "jadarian price",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Offensive Rookie of the Month in September: Jadarian Price",
+          "outcome": "Jadarian Price",
+          "opposite": "Jadarian Price",
+          "category": "Sports",
+          "rules": "If Jadarian Price wins the Offensive Rookie of the Month award for September of the 2026-27 NFL season, then the market resolves to Yes.\n\nIf multiple players are awarded, \u201cYes\u201d positions will pay $1/N (rounded down to the nearest cent), where N is the number of awarded players, and \u201cNo\u201d positions will pay 1 minus the \"Yes\" payout.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/NFLPOTMAWARDS.pdf\n\n[{\"name\":\"Fox Sports\",\"url\":\"https://www.foxsports.com\"},{\"name\":\"the Governing League\",\"url\":\"https://www.nfl.com/\"},{\"name\":\"ESPN\",\"url\":\"https://www.espn.com\"}]",
+          "url": "https://kalshi.com/markets/kxnflrotm/kxnflrotm-sep26offense",
+          "closeAt": "2026-09-30T14:00:59Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "fa56918cad05cd7e1d2f2851afa30f5679863492e3dce89acb2605dea6a09c00",
+          "settlement": null,
+          "series": "KXNFLROTM"
+        },
+        "b": {
+          "id": "tec-nfl-oroy-2027-02-11-w-jadpri",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2027-02-12T01:00:00.000Z",
+            "eventDate": "2027-02-12",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "pro football offensive rookie of the year"
+          },
+          "title": "Jadarian Price \u00b7 Pro Football Offensive Rookie of the Year",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Jadarian Price wins the Pro Football AP Offensive Rookie of the Year Award for the 2026-27 regular season. Outcome sourced from the relevant governing body. If Jadarian Price ties with one or more other players for the award Yes contract holders receive $1.00 divided by the number of tied players, rounded down to the nearest cent, per contract.",
+          "url": "https://polymarket.us/event/tec-nfl-oroy-2027-02-11-w-jadpri",
+          "closeAt": "2027-02-26T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "3ef2012e2b077182f289bb6da2cc7ab30b9f5c65efa3d590c6fd5dd8d27efdbf",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXNFLROTM-SEP26OFFENSE-JPRICE8::pro football offensive rookie of the year",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 18,
+    "label": "First fantasy scoring among rookies versus AP Offensive Rookie of the Year.",
+    "expected": "DIFFERENT_QUESTION",
+    "route": {
+      "pair": {
+        "id": "KXNFLFFLEADER-27ROOK-JLOVE4::tec-nfl-oroy-2027-02-11-w-jerlov",
+        "a": {
+          "id": "KXNFLFFLEADER-27ROOK-JLOVE4",
+          "venue": "kalshi",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "outcome": "jeremiyah love",
+            "entities": [],
+            "numbers": [
+              "1",
+              "2026",
+              "27"
+            ],
+            "aliases": [],
+            "eventKey": "best in fantasy by position"
+          },
+          "exchangeIndex": 0,
+          "title": "Will Jeremiyah Love be the #1 ranked fantasy rookie in the 2026-27 Pro Football regular season?",
+          "outcome": "Jeremiyah Love",
+          "opposite": "Jeremiyah Love",
+          "category": "Sports",
+          "rules": "If Jeremiyah Love finishes #1 in scoring among rookies for the 2026-27 Pro Football regular season, then the market resolves to Yes.\n\nThis market will be based on Sleeper's FFL Points Per Reception (PPR) scoring, and refers to the totals for the entirety of the Pro Football regular season.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.\n\nhttps://assets.kalshi.com/contract_terms/FFSTATLEADER.pdf\n\n[{\"name\":\"Sleeper\",\"url\":\"https://sleeper.com/\"}]",
+          "url": "https://kalshi.com/markets/kxnflffleader/kxnflffleader-27rook",
+          "closeAt": "2027-01-18T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "474c51abedb2369faf084a10d2928fdf9f8f64eade5a07119baa575017cfd936",
+          "settlement": null,
+          "series": "KXNFLFFLEADER"
+        },
+        "b": {
+          "id": "tec-nfl-oroy-2027-02-11-w-jerlov",
+          "venue": "poly",
+          "identity": {
+            "sports": true,
+            "sport": "football",
+            "competition": "nfl",
+            "eventAt": "2027-02-12T01:00:00.000Z",
+            "eventDate": "2027-02-12",
+            "participants": [],
+            "marketType": "future",
+            "period": "full event",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "pro football offensive rookie of the year"
+          },
+          "title": "Jeremiyah Love \u00b7 Pro Football Offensive Rookie of the Year",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "sports",
+          "rules": "This market will settle to Yes if Jeremiyah Love wins the Pro Football AP Offensive Rookie of the Year Award for the 2026-27 regular season. Outcome sourced from the relevant governing body. If Jeremiyah Love ties with one or more other players for the award Yes contract holders receive $1.00 divided by the number of tied players, rounded down to the nearest cent, per contract.",
+          "url": "https://polymarket.us/event/tec-nfl-oroy-2027-02-11-w-jerlov",
+          "closeAt": "2027-02-26T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "029a3fbfe46ac5a1a4051ff4662e17dc0730076dadc1d74b69af98ba65456cdc",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "best in fantasy by position::pro football offensive rookie of the year",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 19,
+    "label": "Next departure or intent announcement versus next departure announcement; cohort, trigger, start cutoff, deadline and tie treatment remain unbound.",
+    "expected": "UNRESOLVED",
+    "route": {
+      "pair": {
+        "id": "KXCABOUT-26MAY22-PHEG::ncpdc-trmpcab-nxtout-1-petheg",
+        "a": {
+          "id": "KXCABOUT-26MAY22-PHEG",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "pete hegseth",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Pete Hegseth be the next person to leave the Trump Cabinet?",
+          "outcome": "Pete Hegseth",
+          "opposite": "Pete Hegseth",
+          "category": "Politics",
+          "rules": "If Pete Hegseth is the first member of the Cabinet of Donald Trump to leave or announce they will leave (such as by quitting, being fired, or being impeached) after May 22, 2026, then the market resolves to Yes.\n\nIf two persons announce they intend to leave at the same time, then the one who leaves first will resolve to Yes and all others will resolve to No. If multiple persons both announce they intend to leave and leave at the same time as other members, then the one whose last name is alphabetically first will resolve to Yes and all others will resolve to No. A leave of absence does not constitute leaving the position. \n\nFor purposes of this Contract, the Cabinet includes the heads of the 15 government agencies in the Cabinet as of Issuance, as well the Administrator of the EPA, the President\u2019s Chief of Staff, Director of National Intelligence, Director of OMB, Director of CIA, United States Trade Representative, Ambassador to the UN, Chair of the Council of Economic Advisers, Administrator of the SBA, and Director of OSTP. Acting roles are not included. Leaving office as a result of death is not encompassed by the Payout Criterion.\n\nhttps://assets.kalshi.com/contract_terms/CABOUT.pdf\n\n[{\"name\":\"White House\",\"url\":\"https://whitehouse.gov/\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"}]",
+          "url": "https://kalshi.com/markets/kxcabout/kxcabout-26may22",
+          "closeAt": "2029-01-20T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "55b231955a7a7c123da7b476658830336bfa82387ff1ddcbbf6a483d274e0768",
+          "settlement": null,
+          "series": "KXCABOUT"
+        },
+        "b": {
+          "id": "ncpdc-trmpcab-nxtout-1-petheg",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "trmpcab",
+            "eventAt": "2026-09-09T22:51:00.000Z",
+            "eventDate": "2026-09-09",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "next trump cabinet member announced out"
+          },
+          "title": "Pete Hegseth - Secretary of War \u00b7 Next Trump Cabinet Member Announced Out?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Pete Hegseth is the next member of the United States Cabinet whose departure from their position is announced by December 31, 2027, 11:59 PM ET. Outcome sourced from Pete Hegseth and the White House.\n\nThe Cabinet consists of the Vice President and the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President's Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officeholders are not included.\n\nA departure will be considered to be announced when a cabinet member, the White House, or their authorized representatives publicly and definitively announce that the cabinet member has ceased or will cease to hold their cabinet position. Such an announcement will qualify regardless of when the cabinet member formally leaves the position. Announcements of the cabinet member's resignation, removal, or departure through other means all qualify.\n\nOnly announcements which are framed as announcing a departure intended to be effective within 18 months of the date of the announcement will qualify (e.g., neither \"I will leave office in 2 years,\" nor \"I will not be in office forever,\" would qualify). If a cabinet member holds their position on a predefined term with a scheduled end date, only announcements that they will depart the position prior to the scheduled end of their term qualify.\n\nAnnouncements of temporary leaves of absence, dated suspensions, indefinite suspensions, administrative leaves, or other temporary changes to a cabinet member's duties in their position do not qualify.\n\nThe following do not qualify as public and definitive announcements: statements that a cabinet member is considering or open to departing; conditional statements that a cabinet member will depart only if certain conditions are met; the announcement of an offer of resignation that requires acceptance and remains pending or has been refused; media reports that the relevant person may depart their specified position absent reporting on a qualifying announcement; statements made in sarcasm or jest; and statements by persons other than a cabinet member, the White House, or their respective authorized representatives.\n\nIf a cabinet member formally ceases to hold the specified position before the end of their scheduled term without a qualifying announcement, the Sources' confirmation of such departure will be treated as a qualifying announcement of that person's departure.\n\nIf the departures of multiple cabinet members from their cabinet-level positions are announced concurrently, the Contract for each departing member settles to $1.00 divided by the number of listed members whose departures are concurrently announced (rounded down to the nearest tick), and all other Contracts settle to $0.00. Announcements will be considered to be issued concurrently only if they are issued in the same written statement (e.g., a public social media post), or in a single public speaking event (e.g., a press conference, a speech).",
+          "url": "https://polymarket.us/event/ncpdc-trmpcab-nxtout-1-petheg",
+          "closeAt": "2028-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "c4521aeaf49ece9eaf54ccb9a01b3e5c2d360992521e7be8e5824df3ac02add4",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXCABOUT-26MAY22-PHEG::next trump cabinet member announced out",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  },
+  {
+    "rank": 20,
+    "label": "Next departure or intent announcement versus next departure announcement; cohort, trigger, name alias, start cutoff, deadline and tie treatment remain unbound.",
+    "expected": "UNRESOLVED",
+    "route": {
+      "pair": {
+        "id": "KXCABOUT-26MAY22-RVOU::ncpdc-trmpcab-nxtout-1-rusvou",
+        "a": {
+          "id": "KXCABOUT-26MAY22-RVOU",
+          "venue": "kalshi",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "participants": [],
+            "outcome": "russell vought",
+            "entities": [],
+            "numbers": [],
+            "aliases": []
+          },
+          "exchangeIndex": 0,
+          "title": "Will Russell Vought be the next person to leave the Trump Cabinet?",
+          "outcome": "Russell Vought",
+          "opposite": "Russell Vought",
+          "category": "Politics",
+          "rules": "If Russell Vought is the first member of the Cabinet of Donald Trump to leave or announce they will leave (such as by quitting, being fired, or being impeached) after May 22, 2026, then the market resolves to Yes.\n\nIf two persons announce they intend to leave at the same time, then the one who leaves first will resolve to Yes and all others will resolve to No. If multiple persons both announce they intend to leave and leave at the same time as other members, then the one whose last name is alphabetically first will resolve to Yes and all others will resolve to No. A leave of absence does not constitute leaving the position. \n\nFor purposes of this Contract, the Cabinet includes the heads of the 15 government agencies in the Cabinet as of Issuance, as well the Administrator of the EPA, the President\u2019s Chief of Staff, Director of National Intelligence, Director of OMB, Director of CIA, United States Trade Representative, Ambassador to the UN, Chair of the Council of Economic Advisers, Administrator of the SBA, and Director of OSTP. Acting roles are not included. Leaving office as a result of death is not encompassed by the Payout Criterion.\n\nhttps://assets.kalshi.com/contract_terms/CABOUT.pdf\n\n[{\"name\":\"White House\",\"url\":\"https://whitehouse.gov/\"},{\"name\":\"The New York Times\",\"url\":\"https://www.nytimes.com/\"}]",
+          "url": "https://kalshi.com/markets/kxcabout/kxcabout-26may22",
+          "closeAt": "2029-01-20T15:00:00Z",
+          "open": true,
+          "feeRate": 700,
+          "feeRounding": "ceil",
+          "minQty": 1,
+          "hash": "c04836f43cf0f50ec5cd419f8b260f7168ee84f8828d3e43995e49ebc6e19e79",
+          "settlement": null,
+          "series": "KXCABOUT"
+        },
+        "b": {
+          "id": "ncpdc-trmpcab-nxtout-1-rusvou",
+          "venue": "poly",
+          "identity": {
+            "sports": false,
+            "general": {},
+            "competition": "trmpcab",
+            "eventAt": "2026-09-09T22:51:00.000Z",
+            "eventDate": "2026-09-09",
+            "participants": [],
+            "marketType": "future",
+            "entities": [],
+            "numbers": [],
+            "aliases": [],
+            "eventKey": "next trump cabinet member announced out"
+          },
+          "title": "Russell T. Vought - Director of the Office of Management and Budget \u00b7 Next Trump Cabinet Member Announced Out?",
+          "outcome": "Yes",
+          "opposite": "No",
+          "category": "politics",
+          "rules": "This market will settle to Yes if Russell T. Vought is the next member of the United States Cabinet whose departure from their position is announced by December 31, 2027, 11:59 PM ET. Outcome sourced from Russell T. Vought and the White House.\n\nThe Cabinet consists of the Vice President and the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President's Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officeholders are not included.\n\nA departure will be considered to be announced when a cabinet member, the White House, or their authorized representatives publicly and definitively announce that the cabinet member has ceased or will cease to hold their cabinet position. Such an announcement will qualify regardless of when the cabinet member formally leaves the position. Announcements of the cabinet member's resignation, removal, or departure through other means all qualify.\n\nOnly announcements which are framed as announcing a departure intended to be effective within 18 months of the date of the announcement will qualify (e.g., neither \"I will leave office in 2 years,\" nor \"I will not be in office forever,\" would qualify). If a cabinet member holds their position on a predefined term with a scheduled end date, only announcements that they will depart the position prior to the scheduled end of their term qualify.\n\nAnnouncements of temporary leaves of absence, dated suspensions, indefinite suspensions, administrative leaves, or other temporary changes to a cabinet member's duties in their position do not qualify.\n\nThe following do not qualify as public and definitive announcements: statements that a cabinet member is considering or open to departing; conditional statements that a cabinet member will depart only if certain conditions are met; the announcement of an offer of resignation that requires acceptance and remains pending or has been refused; media reports that the relevant person may depart their specified position absent reporting on a qualifying announcement; statements made in sarcasm or jest; and statements by persons other than a cabinet member, the White House, or their respective authorized representatives.\n\nIf a cabinet member formally ceases to hold the specified position before the end of their scheduled term without a qualifying announcement, the Sources' confirmation of such departure will be treated as a qualifying announcement of that person's departure.\n\nIf the departures of multiple cabinet members from their cabinet-level positions are announced concurrently, the Contract for each departing member settles to $1.00 divided by the number of listed members whose departures are concurrently announced (rounded down to the nearest tick), and all other Contracts settle to $0.00. Announcements will be considered to be issued concurrently only if they are issued in the same written statement (e.g., a public social media post), or in a single public speaking event (e.g., a press conference, a speech).",
+          "url": "https://polymarket.us/event/ncpdc-trmpcab-nxtout-1-rusvou",
+          "closeAt": "2028-01-15T04:00:00Z",
+          "open": true,
+          "feeRate": 695,
+          "feeRounding": "even",
+          "minQty": 0.01,
+          "hash": "e5bf1a2cb47082baf14a58dc1d10e157891ef83cf0d182be81a96c5437ffa20a",
+          "settlement": null
+        },
+        "inverted": false,
+        "reviewed": false
+      },
+      "matchSource": "TEXT",
+      "warnings": [
+        "SETTLEMENT_REVIEW_PENDING"
+      ],
+      "eventKey": "KXCABOUT-26MAY22-RVOU::next trump cabinet member announced out",
+      "ticks": {
+        "kalshi": 100,
+        "poly": 100
+      },
+      "semanticClass": "UNRESOLVED"
+    }
+  }
+]

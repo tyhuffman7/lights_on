@@ -47,10 +47,10 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
  const canonical=canonicalTemplate(m,registry);
  const resolve=(v:string)=>normalizeText((registry.resolve(normalizeText(v.replace(/^the /i,'')),m.identity?.competition)??v.replace(/^the /i,'')).split(':').at(-1));
  // Named ordinary subject is taken from the payout clause where possible.
- const subject=primary.match(/^(?:If|This market will settle to Yes if) (?:the )?(.+?) (?:college football team has|records?|scores?|finishes|goes|leads|accepts|wins?|advances|is selected|is one of|is the|receives|defeats|has|becomes|will be|comes|qualifies|is nominated)\b/i)?.[1];
+ const subject=primary.match(/^(?:If|This market will settle to Yes if) (?:the )?(.+?) (?:college football team has|records?|scores?|finishes|goes|leads|accepts|wins?|advances|is selected|is one of|is the|receives|defeats|has|becomes|will be|comes|qualifies|is nominated|leaves|departs)\b/i)?.[1];
  const named=m.identity?.general?.person??m.identity?.participant??m.identity?.outcome;
  put('subject',subject?resolve(subject):named&&!/^(yes|no|over|under|unknown long|unknown short|before .+|after .+)$/i.test(named)?resolve(named):undefined);
- const competition=[[/champions league/,'uefa-champions-league'],[/europa league/,'uefa-europa-league'],[/english premier league/,'epl'],[/major league soccer|\bmls\b/,'mls'],[/college football/,'cfb'],[/pro(?:fessional)? football|national football conference|\bnfc\b|\bafc\b/,'nfl']] as const;
+ const competition=[[/usl championship/,'uslc'],[/champions league/,'uefa-champions-league'],[/europa league/,'uefa-europa-league'],[/english premier league/,'epl'],[/major league soccer|\bmls\b/,'mls'],[/college football/,'cfb'],[/pro(?:fessional)? football|national football conference|\bnfc\b|\bafc\b/,'nfl']] as const;
  put('competition',competition.find(([r])=>r.test(s+' '+title))?.[1]||canonicalCompetition(m.identity?.competition)||undefined);
  const year=s.match(/\b(20\d\d)(?:[ -](?:20)?\d\d)?\b/)?.[1];
  const period=/regular season/.test(s)?'regular-season':/postseason|playoffs/.test(s)?'postseason':/career|retirement/.test(s)?'career':undefined;
@@ -68,8 +68,9 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
   put('family','player-statistic');put('metric','first-touchdown');put('unit','rank');put('scope','player');
   put('settlementScope',/first touchdown for|first .+ touchdown/.test(s+' '+title)&&!/first touchdown in/.test(s)?'team-touchdowns':'game-touchdowns');
  }
- if(/wins in/.test(s)&&/season/.test(s)){put('family','season-wins');put('metric','team-wins');put('scope','team');put('unit','wins');put('settlementScope',/home/.test(s)?'home-games':'all-regular-season-games');}
- if(/undefeated/.test(s)){put('family','season-wins');put('metric','undefeated');put('scope','team');put('settlementScope',/home games|undefeated at home/.test(s)?'home-games':'all-regular-season-games');}
+ if(/\bwins\b/.test(s)&&/season/.test(s)&&!stat){put('family','season-wins');put('metric','team-wins');put('scope','team');put('unit','wins');put('settlementScope',/home/.test(s)?'home-games':'all-regular-season-games');}
+ if(/undefeated/.test(s)){put('family','season-wins');put('metric','zero-losses');put('comparator','eq');put('threshold','0');put('unit','losses');put('scope','team');put('settlementScope',/home games|undefeated at home/.test(s)?'home-games':'all-regular-season-games');}
+ const eventWinner=/\b(?:game|match|fight) (?:originally )?scheduled\b/.test(s)&&/^(?:If .+ wins the |This market will settle to the winner)/i.test(primary);
  const seed=s.match(/(?:selected as the|is the) (\d+)(?:st|nd|rd|th)? seed/);
  const rank=s.match(/finishes? (?:in )?(?:the )?(?:first|last|(?:\d+)(?:st|nd|rd|th)?)(?: \((\d+)(?:st|nd|rd|th)?\))?/);
  const top=s.match(/(?:top|at least) (\d+) (?:finish|place|seed)/);
@@ -79,10 +80,23 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
   put('family','ranking');put('metric','finish-rank');put('comparator',top?'lte':'eq');
   put('threshold',top?.[1]??rank?.[1]??(/first|top finisher/.test(s)?'1':undefined));put('scope','team');
  }else if(qualifying){put('family','qualification');put('metric','advancement');put('scope','team');}
- else if(/champion|wins? the .*cup|wins? the .*league|wins? the .*conference.*final|wins? the .*pennant|world series/.test(s)&&!stat){put('family','championship');put('metric','champion');put('scope','team');}
+ else if(/champion|wins? the .*cup|wins? the .*league|wins? the .*conference.*final|wins? the .*pennant|world series|wins? the .+ singles title/.test(s)&&!stat&&!eventWinner){put('family','championship');put('metric','champion');put('scope',/singles|tennis|golf/.test(s)?'player':'team');}
+ // Ranking and awards are different predicates even for the same rookie/player.
+ // Scoring methods still need a complete profile before ranking promotion.
+ if(!canonical&&/fantasy/.test(title)&&/scoring|points/.test(s)){
+  put('family','statistic-ranking');put('metric','fantasy-points');put('scope','player');put('unit','points');put('outcome','rank');
+  const r=primary.match(/(?:top\s+|#)(\d+)/i);put('comparator',/top \d+/.test(s)?'lte':'eq');put('threshold',r?.[1]);
+  put('conditions',/rookies/.test(s)?'rookie-cohort':'all-players',primary+' '+m.title);
+ }else if(!canonical&&!seed&&!/league phase/.test(s)&&/ranked.+rankings/.test(s)){
+  put('family','ranking');put('metric','published-ranking');put('scope','player');put('unit','rank');put('outcome','rank');
+  put('comparator','eq');put('threshold',primary.match(/#(\d+)\s+ranked/i)?.[1]);
+  put('stage',s.match(/on (?:the )?(.+? rankings)/)?.[1]);
+ }
+ const award=s.match(/(?:offensive|defensive) rookie of the (?:month|year)|most valuable player|cy young/);
+ if(award){put('family','award');put('metric',award[0].replaceAll(' ','-'));put('outcome','award-winner');put('scope','player');delete d.unit;delete e.unit;}
  if(['championship','qualification','ranking'].includes(d.family??'')){
   let stage=/league phase/.test(s)?'league-phase':s.match(/round (?:of )?(\d+)/)?.[0]??
-   (/quarterfinal/.test(s)?'quarterfinal':/semifinal/.test(s)?'semifinal':undefined);
+   (/quarterfinal/.test(s)?'quarterfinal':/semifinal/.test(s)?'semifinal':/qualif.+\bfinal\b/.test(s)?'final':undefined);
   // Named scopes are retained: Eastern vs Western, NFC vs AFC, division vs league.
   const conference=s.match(/(?:eastern|western|national football|american football) conference|\bnfc\b|\bafc\b/);
   if(!stage&&/division/.test(s))stage='division:'+((s.match(/(?:nfc|afc) (?:north|south|east|west)/)?.[0])??'unspecified');
@@ -94,13 +108,20 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
   if(!stage&&d.family==='championship')stage='overall-champion';
   put('stage',stage);put('settlementScope',stage);
  }
- if(/nomination|nominee|nominate/.test(s)&&!/defeats?/.test(s)){
+ if(/nomination|nominee|nominate/.test(s)&&/party|presiden|\bvp\b/.test(s+' '+title)&&!/defeats?/.test(s)){
   put('family','nomination');put('metric',/vice presiden|\bvp\b/.test(s+' '+title)?'vice-presidential-nomination':'presidential-nomination');
   put('outcome',/democratic/.test(s+' '+title)?'democratic':/republican/.test(s+' '+title)?'republican':undefined);
   put('geography','us');put('scope','person');
  }else if(/presidential election/.test(s)){
   put('family','election');put('metric',/declare|candidacy|announce.+run/.test(s)?'candidacy-announcement':'election-winner');
   put('outcome','president');put('geography',/brazil/.test(s)?'brazil':'us');put('scope','person');
+ }
+ // Departure quantifiers are ordinary dimensions: any departure and the next
+ // departure are different. Same-next contracts stay unresolved until cohort,
+ // start cutoff, trigger and tie treatment are bound in a complete profile.
+ if(/leaves|depart/.test(s)&&/secretary|cabinet|position|office/.test(s+' '+title)){
+  put('family','office-departure');put('metric','departure');put('scope','office-holder');
+  put('outcome',/first member|next member|first person|next person/.test(s)?'next-in-cohort':'occurrence');
  }
  if(/house|senate|gubernatorial|governor|mayor/.test(s+' '+title)&&!/white house/.test(s+' '+title)){
   const political=s+' '+title;
@@ -114,13 +135,20 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
  const plus=primary.match(/\b(\d+(?:\.\d+)?)\+\s+(?:rushing|passing|receiving|receptions|yards|points)/i);
  if(threshold||plus){
   const value=Number(threshold?.[1]??plus![1]);let comparator=plus||/^at least/i.test(threshold![0])?'gte':/^at most/i.test(threshold![0])?'lte':/^(under|below|less than)/i.test(threshold![0])?'lt':'gt';
-  const integer=!!stat&&!['qbr','fantasy-points'].includes(stat[0]);let boundary=value;
+  const integer=d.family==='season-wins'||!!stat&&!['qbr','fantasy-points'].includes(stat[0]);let boundary=value;
   if(integer){if(comparator==='gt'){boundary=Math.floor(value)+1;comparator='gte';}else if(comparator==='gte')boundary=Math.ceil(value);
    else if(comparator==='lt'){boundary=Math.ceil(value)-1;comparator='lte';}else boundary=Math.floor(value);}
   put('comparator',comparator);put('threshold',String(boundary));
  }
+ const relativeWins=primary.match(/more wins than (.+?) in the /i);
+ if(relativeWins){put('comparator','gt');put('threshold','entity:'+resolve(relativeWins[1]));put('outcome','relative-win-count');}
  if(d.family==='statistic-leader')put('outcome','maximum');
  const game=/game (?:originally )?scheduled|match (?:originally )?scheduled|fight (?:originally )?scheduled/.test(s);
+ if(eventWinner){
+  put('family','event-winner');put('metric','event-winner');put('scope','event-participant');
+  put('outcome',/end in a draw|end in a tie/.test(title)?'draw':d.subject?'named:'+d.subject:undefined,primary+' '+m.title);
+  if(/90 minutes plus stoppage/.test(s)){put('period','regulation');put('settlementScope','regulation');}
+ }
  if(game&&!['championship','qualification','ranking'].includes(d.family??'')){
   put('event',m.identity?.participants.length===2&&!m.identity.participants.some(p=>/finals|round|scheduled|game|match|darts/.test(normalizeText(p)))?m.identity.participants.map(resolve).sort().join('|'):undefined);
   put('timeframe',m.identity?.eventDate?'date:'+m.identity.eventDate:undefined);
@@ -148,10 +176,13 @@ export function structuredProposition(m:Market,registry=catalogEntities([m.ident
 export function comparePropositions(pair:Pair,namedWinnerOrientation:boolean|null=null){
  const registry=catalogEntities([pair.a.identity,pair.b.identity]),a=structuredProposition(pair.a,registry),b=structuredProposition(pair.b,registry);
  const conflicts:string[]=[],missing:string[]=[];
+ const drawDomain=[pair.a,pair.b].some(m=>/market will settle to (?:Tie|Draw)\b/i.test(m.rules));
+ const eventWinners=a.dimensions.family==='event-winner'&&b.dimensions.family==='event-winner';
+ if(drawDomain&&eventWinners&&pair.inverted)conflicts.push('outcome: explicit regulation draw means opposing named wins do not exhaust the outcome space');
  for(const k of propositionDimensions){const x=a.dimensions[k],y=b.dimensions[k];
   // Canonical event/outcome values may describe a threshold, while a named
   // two-player winner uses opposite outcomes. The latter is proved separately.
-  if(k==='subject'&&namedWinnerOrientation!==null&&namedWinnerOrientation===pair.inverted)continue;
+  if((k==='subject'||k==='outcome')&&!drawDomain&&namedWinnerOrientation!==null&&namedWinnerOrientation===pair.inverted)continue;
   if(x!==undefined&&y!==undefined&&x!==y)conflicts.push(`${k}: ${x} vs ${y}`);
  }
  const sameCanonical=!!a.canonicalKey&&a.canonicalKey===b.canonicalKey&&!pair.inverted;
