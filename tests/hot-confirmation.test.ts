@@ -39,7 +39,7 @@ test('Kalshi sequence, backlog, clock and PM conflicting versions fail closed',(
 const nativeClassifications=JSON.parse((await import('node:fs')).readFileSync(new URL('./fixtures/hot-native-classifications.json',import.meta.url),'utf8'));
 for(const c of nativeClassifications)test('native hot-question classification: '+c.label,()=>{
  const structurallyDifferent=['Who will be the top Spotify artist this year?','Who will win the Florida House of Representatives?','Will Manchester City win the Champions League?'];
- assert.equal(paperSettlement(c.route).classification,structurallyDifferent.includes(c.label)?'DIFFERENT_QUESTION':c.expected);
+ assert.equal(paperSettlement(c.route).classification,structurallyDifferent.includes(c.label)?'DIFFERENT_QUESTION':c.label==='Mistral IPO with unresolved issuance contingencies'?'UNRESOLVED':c.expected);
 });
 test('equivalent nanosecond timestamp encodings cannot hide conflicting full books',()=>{
  const f=new ConfirmationFeed('poly',['P']);const at=Date.now(),mono=performance.now();

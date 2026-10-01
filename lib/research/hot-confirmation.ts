@@ -3,6 +3,7 @@ import {recallSignals,currentBook,singleEventWinner} from './recall-detector.ts'
 import {normalizeText} from './identity.ts';
 import {catalogEntities} from './entities.ts';
 import {comparePropositions} from './proposition.ts';
+import {promotionCertificate} from './promotion-certificate.ts';
 import {assessSettlement} from './settlement-validation.ts';
 export type HotSignal=ReturnType<typeof recallSignals>[number];
 export type Pending={key:string;route:RecallRoute;signal:HotSignal;queuedAt:number;firstQueuedAt:number};
@@ -81,16 +82,13 @@ export function paperSettlement(route:RecallRoute){
  const proposition=comparePropositions(route.pair,namedOrientation(route));
  const falseMatch=[...new Set([...proposition.conflicts,...legacyDifferentQuestion(route)])];
  const assessment=assessSettlement(route.pair);
- let classification:SettlementClass='UNRESOLVED';
+ const certificate=promotionCertificate(route.pair,proposition,namedOrientation(route),falseMatch,assessment.risks);
+ const classification:SettlementClass=certificate.decision;
  const checks=[...assessment.checks];
- if(falseMatch.length)classification='DIFFERENT_QUESTION';
- else if((proposition.ordinaryAligned||assessment.normalOutcomeMatched)&&!proposition.missing.some(x=>x.startsWith('Unconfirmed fixture timing:'))){
-  classification='ORDINARY_EQUIVALENT_BASIS_RISK';
-  checks.push(proposition.ordinaryAligned?'All required ordinary proposition dimensions align':'Existing native family proof aligns ordinary dimensions');
- }
+ if(classification==='ORDINARY_EQUIVALENT_BASIS_RISK')checks.push('All required promotion certificate dimensions are known and equal');
  return {classification,strictEquivalent:false,guaranteedArbitrage:false,checks,
   divergenceBranches:[...new Set([...proposition.divergenceBranches,...assessment.risks])],
-  blockers:[...proposition.missing,...assessment.blockers],differentQuestionReasons:falseMatch,proposition,assessment};
+  blockers:[...certificate.missing,...assessment.blockers],differentQuestionReasons:certificate.conflicts,proposition,assessment,certificate};
 }
 export function selectConfirmationBooks(route:RecallRoute,books:Record<'kalshi'|'poly',ObservedBook>|null,at:number){
  return (['kalshi','poly'] as const).filter(v=>!books||!currentBook(books[v],at));

@@ -178,7 +178,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
   if(!Number.isSafeInteger(durationMs)||durationMs<1000||durationMs>90*60_000)throw Error('BOUNDED_DURATION_REQUIRED');
   if(env)process.loadEnvFile(resolve(env));mkdirSync(directory,{recursive:true,mode:0o700});
   const sourceHashes=Object.fromEntries(['worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
-    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/proposition-differences.ts','lib/research/semantic-lists.ts','lib/research/identity.ts','lib/research/entities.ts','lib/research/non-sports.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
+    'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/promotion-certificate.ts','lib/research/proposition-differences.ts','lib/research/semantic-lists.ts','lib/research/identity.ts','lib/research/entities.ts','lib/research/non-sports.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
   const frozen={policy:{...recallPolicy,durationMs},sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
   writeFileSync(resolve(directory,'frozen.json'),JSON.stringify(frozen,null,2)+'\n',{flag:'wx',mode:0o600});
   const control=new AbortController(),preparation=setTimeout(()=>control.abort(),20*60_000);
@@ -238,8 +238,8 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     endpointRequests:api.endpointCounts,httpLatencyMs:Object.fromEntries(Object.entries(api.durations).map(([k,v])=>[k,percentiles(v)])),
     lastActiveFeedHealth,
     feedHealth:[...feeds].map(([key,f])=>({key,ids:f.stream.options.ids.length,...f.health(),failures:f.failures,reconnects:f.stream.reconnectCount})),
-    best:best.filter(x=>isPromoted(x.route.semanticClass??'UNRESOLVED')).map(({route,signal})=>({event:route.pair.a.title,route,signal})),
-    observedEconomicLists:rankedSemanticLists(best,x=>x.route.semanticClass??'UNRESOLVED',x=>x.signal.evaluation.estimatedNetProfit??-Infinity),
+    best:best.filter(x=>isPromoted(x.route.semanticClass??'UNRESOLVED')).map(({route,signal})=>({event:route.pair.a.title,route,signal,settlement:classify(route)})),
+    observedEconomicLists:rankedSemanticLists(best.map(x=>({...x,settlement:classify(x.route)})),x=>x.settlement.classification,x=>x.signal.evaluation.estimatedNetProfit??-Infinity),
     independentCheckRoutes:{highestGross,nearPositive,canonicalChecks},frozen},null,2)+'\n',{mode:0o600});
   const bookKey=(v:Venue,id:string)=>v+':'+id;
   const observedSignals=(route:RecallRoute,books:Record<Venue,ObservedBook>,at:number,quantities?:number[])=>screenNativeSignals(route,books,at,quantities,reason=>{

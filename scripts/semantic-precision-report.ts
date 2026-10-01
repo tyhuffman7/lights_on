@@ -37,9 +37,9 @@ for await(const line of createInterface({input:createReadStream(resolve(director
  count(freshClasses,c);freshLatency.push(b.quoteToConfirmationMs);const key=b.route.pair.id+':'+b.signal.evaluation.kalshiSide;
  if((routes.get(key)?.signal.evaluation.estimatedNetProfit??-Infinity)<b.signal.evaluation.estimatedNetProfit)routes.set(key,b);
 }
-const lists=rankedSemanticLists([...routes.values()],b=>b.settlement.classification,b=>b.signal.evaluation.estimatedNetProfit);
+const lists=rankedSemanticLists([...routes.values()],b=>b.settlement.classification,b=>b.signal.evaluation.estimatedNetProfit,50);
 const strongest=lists.promotedOpportunities;
-const research=lists.unresolvedResearch;
+const research=lists.unresolvedResearch.slice(0,30);
 const rejected=rankedSemanticLists([...rejectedRoutes.values()],b=>b.settlement.classification,b=>b.signal.evaluation.estimatedNetProfit).rejectedDifferentQuestions;
 const top20=strongest.map((quote,i)=>({rank:i+1,observedClassification:quote.settlement.classification,
  reviewClassification:null,reviewReason:null,quote}));
