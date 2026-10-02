@@ -1,4 +1,8 @@
-# Lights On handoff — 2026-10-01 EDT
+# Lights On handoff — 2026-10-02 EDT
+
+Current authorized checkpoint: build the small PAPER bot on `codex/simple-paper-bot`, starting at exact PR #22 head `9362b703aa575718c5be7ea67ab5d6dc4fd92682`. Runtime and separate research command implemented; 15 reviewed ordinary season-win pairs, 12/12 targeted tests passed. Public research command and first pair metadata verified. Full GitHub CI and one frozen five-minute smoke remain; then publish the authorized draft and STOP. No orders, account mutations, recovery retest, automation or live launch. [Runtime](../../paper/README.md), [validation](../../paper/VALIDATION.md). New checkout: `work/simple-paper-bot`. Commands there: `npm run test:bot`; `npm run bot:research -- --query='college football wins'`; `npm run bot:paper -- --env=../../.env.research --seconds=300`.
+
+PR #22 is completed research history; the notes below describe that checkpoint, not the new runtime.
 
 Draft [PR #22](https://github.com/tyhuffman7/lights_on/pull/22), branch `codex/recall-first-detector`, completes the newly authorized execution-realism checkpoint. **STOP: collector/worker absent, pending captures/confirmations zero. PAPER/read-only; no orders, actual fills, account/wallet/funding mutations, live launch, recovery operating retest or automation.** GitHub `tyhuffman7` only; repo-local SSH signing preserved. Main checkout's unrelated working tree and staging were verified unchanged before its handoff update.
 

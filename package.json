@@ -38,7 +38,10 @@
     "paper": "node --experimental-strip-types worker/paper-cli.ts",
     "paper:approve": "node --experimental-strip-types worker/paper-approve.ts",
     "paper:review": "node --experimental-strip-types worker/paper-review.ts",
-    "paper:exits": "node --experimental-strip-types worker/paper-exit-cli.ts"
+    "paper:exits": "node --experimental-strip-types worker/paper-exit-cli.ts",
+    "bot:paper": "node --experimental-strip-types paper/cli.ts",
+    "bot:research": "node --experimental-strip-types paper/research.ts",
+    "test:bot": "node --experimental-strip-types --test tests/simple-paper-bot.test.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
