@@ -32,7 +32,8 @@ md+='## Negative modeled trades\n\nAll negative fully priced execution outcomes,
 for(const p of report.portfolios.filter(p=>p.delayMs===100))for(const t of p.negativeTrades)md+=`- ${p.model}, $${p.capDollars} cap, episode ${t.episodeId}: ${money(t.attempt.negativeKnownPnl===null?null:t.attempt.negativeKnownPnl/100_000_000)}, ${t.attempt.outcome} / ${t.attempt.unwind?.outcome}.\n`;
 md+='\n## Representative trades and basis clauses\n\n';
 const baseline=report.baseline,sorted=[...baseline.ledger].filter(e=>e.attempt.negativeKnownPnl!==null).sort((a,b)=>b.attempt.negativeKnownPnl!-a.attempt.negativeKnownPnl!);
-for(const t of [sorted[0],sorted.at(-1)].filter(Boolean)){
+for(const t of [sorted[0],sorted.at(-1)]){
+ if(!t||t.attempt.negativeKnownPnl===null)continue;
  const e=study.episodes.find((e:any)=>e.id===t.episodeId);
  md+=`- Episode ${t.episodeId}: ${e.route.pair.a.title}; ${e.side}, paired ${t.attempt.pairedQuantity}/${t.attempt.targetQuantity} target contracts, modeled net ${money(t.attempt.negativeKnownPnl/100_000_000)}, ${t.lockupDays?.toFixed(1)??'unknown'} days lockup proxy. Native IDs: ${e.route.pair.a.id} × ${e.route.pair.b.id}.\n`;
 }

@@ -13,7 +13,7 @@ export const realismPolicy=Object.freeze({version:1,ordersEnabled:false,duration
  models:['DISPLAYED','HAIRCUT_50','ONE_TICK','FEE_LEVEL_DIAGNOSTIC','EXTREME_FRAGMENT_DIAGNOSTIC'] as const});
 export type Model=typeof realismPolicy.models[number];
 export type Evidence={initial:Record<Venue,StudyBook>;future:Map<number,StudyBook|null>;unwind:Map<number,StudyBook|null>};
-export type RealAttempt=Attempt&{model:Model;targetQuantity:number;firstFillQuantity:number;grossProfit:number|null;fees:number;slippage:number;edgeRetained:boolean|null;negativeKnownPnl:number|null};
+export type RealAttempt=Attempt&{model:Model;targetQuantity:number;firstFillQuantity:number;grossProfit:number|null;fees:number;slippage:number;edgeRetained:boolean|null;negativeKnownPnl:number|null;knownPnl:number};
 const depth=(ls:Level[])=>Math.floor(ls.reduce((n,l)=>n+Math.round(l.quantity*10000),0)/10000);
 const cost=(ls:Level[])=>ls.reduce((n,l)=>n+l.price*Math.round(l.quantity*10000),0);
 function adjusted(ls:Level[],model:Model,tick:number,sell=false):Level[]|null{
@@ -33,7 +33,7 @@ function fee(ls:Level[],rate:number,v:Venue,model:Model,sell=false):number|null{
 export function realisticAttempt(e:Episode,p:Plan,ev:Evidence,delayMs:number,model:Model):RealAttempt{
  const r=e.route,original=p.evaluation.kalshi!,tick=r.ticks??{kalshi:0,poly:0};
  const base:RealAttempt={model,targetQuantity:original.quantity,firstFillQuantity:0,capDollars:p.capDollars,delayMs,outcome:'UNOBSERVED',first:original,firstFee:0,
-  second:null,secondFee:null,pairedQuantity:0,residualQuantity:0,ordinaryProfit:null,committed:0,futureDepth:null,grossProfit:null,fees:0,slippage:0,edgeRetained:null,negativeKnownPnl:null};
+  second:null,secondFee:null,pairedQuantity:0,residualQuantity:0,ordinaryProfit:null,committed:0,futureDepth:null,grossProfit:null,fees:0,slippage:0,edgeRetained:null,negativeKnownPnl:null,knownPnl:0};
  const firstLevels=adjusted(ev.initial.kalshi.book[e.side],model,tick.kalshi);
  if(!firstLevels)return {...base,reason:'NATIVE_TICK_OR_PRICE_BOUND_UNAVAILABLE'};
  const q=Math.min(original.quantity,depth(firstLevels));
@@ -60,6 +60,7 @@ export function realisticAttempt(e:Episode,p:Plan,ev:Evidence,delayMs:number,mod
   const signalSecond=takeDepth(ev.initial.poly.book[p.evaluation.polySide],base.pairedQuantity)!;
   base.slippage+=base.second.cost-signalSecond.cost+signalSecond.cost-ev.initial.poly.book[p.evaluation.polySide][0].price*base.pairedQuantity*10000;
  }
+ base.knownPnl=base.ordinaryProfit??0;
  if(base.residualQuantity){
   const b=ev.unwind.get(delayMs),bids=b?adjusted(b.book[e.side==='yes'?'yesBids':'noBids'],model,tick.kalshi,true):null;
   if(!bids){base.unwind={outcome:'UNOBSERVED',quantity:0,proceeds:0,fees:0,loss:0,levels:[]};return base;}
@@ -68,10 +69,13 @@ export function realisticAttempt(e:Episode,p:Plan,ev:Evidence,delayMs:number,mod
   if(sf===null){base.unwind={outcome:'UNOBSERVED',quantity:0,proceeds:0,fees:0,loss:0,levels:[]};return base;}
   const pairedCost=base.pairedQuantity?takeDepth(first.levels,base.pairedQuantity)!.cost:0;
   const residualCost=first.cost-pairedCost+(base.pairedQuantity?0:kf);
+  const soldCost=sellQ?takeDepth(first.levels,base.pairedQuantity+sellQ)!.cost-pairedCost:0;
+  base.knownPnl=(base.ordinaryProfit??0)+(sold?.cost??0)-soldCost-sf-(base.pairedQuantity?0:kf);
+  base.grossProfit=(base.grossProfit??0)-soldCost+(sold?.cost??0);
   base.unwind={outcome:sellQ===base.residualQuantity?'UNWIND':'ORPHAN',quantity:sellQ,proceeds:sold?.cost??0,fees:sf,
    loss:sellQ===base.residualQuantity?residualCost-(sold?.cost??0)+sf:0,levels:sold?.levels??[]};
-  if(sellQ===base.residualQuantity){base.negativeKnownPnl=(base.ordinaryProfit??0)-base.unwind.loss;base.grossProfit=(base.grossProfit??0)-(first.cost-pairedCost)+(sold?.cost??0);}
- }else base.negativeKnownPnl=base.ordinaryProfit;
+  if(sellQ===base.residualQuantity)base.negativeKnownPnl=base.knownPnl;
+ }else{base.negativeKnownPnl=base.ordinaryProfit;base.knownPnl=base.ordinaryProfit??0;}
  return base;
 }
 const median=(ns:number[])=>ns.length?[...ns].sort((a,b)=>a-b)[Math.floor((ns.length-1)/2)]:null;
@@ -89,15 +93,17 @@ export function realismPortfolio(rows:{e:Episode;a:RealAttempt}[],cap:number,del
   if(a.firstFillQuantity===0){skip(a.outcome);continue;}
   const p=a.outcome==='UNOBSERVED'?pReserve:(a.second?.cost??0)+(a.secondFee??0);
   const proceeds=a.unwind?(a.unwind.proceeds-a.unwind.fees):0;
-  const kLocked=k-proceeds;
   // Original capital is debited; only observed scenario unwind proceeds return.
   cash.kalshi-=k-proceeds;cash.poly-=p;committed+=a.committed;
   const unresolved=a.outcome==='UNOBSERVED'||a.residualQuantity>(a.unwind?.quantity??0);
-  if(unresolved){unpriced+=Math.max(0,kLocked)+p;}
+  
   const pairK=a.pairedQuantity?takeDepth(a.first.levels,a.pairedQuantity)!.cost+a.firstFee:0;
-  const exposure=unresolved?Math.max(0,kLocked)+p:pairK+p;
+  const soldQ=a.unwind?.quantity??0,pairedCost=a.pairedQuantity?takeDepth(a.first.levels,a.pairedQuantity)!.cost:0;
+  const soldCost=soldQ?takeDepth(a.first.levels,a.pairedQuantity+soldQ)!.cost-pairedCost:0;
+  const exposure=unresolved?k-soldCost+p:pairK+p;
+  if(unresolved)unpriced+=exposure;
   locked+=exposure;peak=Math.max(peak,locked);if(exposure>0)ids.forEach(id=>held.add(id));
-  known+=a.negativeKnownPnl??a.ordinaryProfit??0;gross+=a.grossProfit??0;fees+=a.fees+(a.unwind?.fees??0);unwindLoss+=a.unwind?.loss??0;slippage+=a.slippage;
+  known+=a.knownPnl;gross+=a.grossProfit??0;fees+=a.fees+(a.unwind?.fees??0);unwindLoss+=a.unwind?.loss??0;slippage+=a.slippage;
   entries.push({episodeId:e.id,classification:e.settlement.classification,lockupDays:e.resolutionHorizon===null?null:(e.resolutionHorizon-e.start)/86400_000,attempt:a});
  }
  const ns=entries.flatMap(x=>x.attempt.negativeKnownPnl===null?[]:[x.attempt.negativeKnownPnl/USD_SCALE]);
@@ -107,7 +113,7 @@ export function realismPortfolio(rows:{e:Episode;a:RealAttempt}[],cap:number,del
  knownPnl:known/USD_SCALE,netPnl:complete?known/USD_SCALE:null,unpricedExposure:unpriced/USD_SCALE,roiCommitted:complete&&committed?known/committed:null,roiPeak:complete&&peak?known/peak:null,
  averageProfit:complete&&ns.length?ns.reduce((a,b)=>a+b,0)/ns.length:null,medianProfit:complete?median(ns):null,worstTrade:ns.length?Math.min(...ns):null,
  negativeTrades:entries.filter(x=>x.attempt.negativeKnownPnl!==null&&x.attempt.negativeKnownPnl<0),medianLockupDays:median(entries.flatMap(x=>x.lockupDays===null?[]:[x.lockupDays])),
- unknownLockups:entries.filter(x=>x.lockupDays===null).length,byClass:Object.fromEntries(['STRICT_EQUIVALENT','ORDINARY_EQUIVALENT_BASIS_RISK'].map(c=>{const es=entries.filter(x=>x.classification===c),fullyPriced=es.every(x=>x.attempt.negativeKnownPnl!==null);return [c,{entries:es.length,knownPnl:es.reduce((n,x)=>n+(x.attempt.negativeKnownPnl??x.attempt.ordinaryProfit??0),0)/USD_SCALE,netPnl:fullyPriced?es.reduce((n,x)=>n+x.attempt.negativeKnownPnl!,0)/USD_SCALE:null,unpricedEntries:es.filter(x=>x.attempt.negativeKnownPnl===null).length}];})),ledger:entries};
+ unknownLockups:entries.filter(x=>x.lockupDays===null).length,byClass:Object.fromEntries(['STRICT_EQUIVALENT','ORDINARY_EQUIVALENT_BASIS_RISK'].map(c=>{const es=entries.filter(x=>x.classification===c),fullyPriced=es.every(x=>x.attempt.negativeKnownPnl!==null);return [c,{entries:es.length,knownPnl:es.reduce((n,x)=>n+x.attempt.knownPnl,0)/USD_SCALE,netPnl:fullyPriced?es.reduce((n,x)=>n+x.attempt.negativeKnownPnl!,0)/USD_SCALE:null,unpricedEntries:es.filter(x=>x.attempt.negativeKnownPnl===null).length}];})),ledger:entries};
 }
 export function realismReport(episodes:Episode[],evidence:Map<number,Evidence>,windowMs:number){
  const continuity=conservativeOpportunityGroups(episodes),groups=continuity.groups;
