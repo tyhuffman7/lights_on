@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-02T00:14:50.776Z",
+  "sources": [
+    {
+      "url": "https://docs.kalshi.com/getting_started/fee_rounding",
+      "retainedLocalPath": "work/execution-realism-20261001/kalshi-fee-rounding.html",
+      "bytes": 263300,
+      "sha256": "752281a8b7402401c68f339b5b9ff00bfe7d1cc1ac1f8c5fa80f2aaa7dfa3f51"
+    },
+    {
+      "url": "https://docs.polymarket.us/fees",
+      "retainedLocalPath": "work/execution-realism-20261001/pm-us-fees.html",
+      "bytes": 464784,
+      "sha256": "f4fb79dbcbd8fae395bbd0de5c58245f731f9ecdf887270808088316a2f37f71"
+    }
+  ],
+  "kalshiPdf": {
+    "url": "https://kalshi.com/docs/kalshi-fee-schedule.pdf",
+    "status": "HTTP_429_UNAVAILABLE"
+  },
+  "confirmed": [
+    "Kalshi microdollar trade fees, signed revenue balance alignment and per-order accumulator",
+    "PM-US standard theta .0695 and cumulative banker-rounded taker commission ceiling"
+  ],
+  "assumed": [
+    "Kalshi non-direct cent precision",
+    "One hypothetical Kalshi fill per consumed level",
+    "PM-US cumulative ceiling charged (actual fragmentation may reduce)"
+  ],
+  "diagnostics": [
+    "Per-level cent rounding without rebate",
+    "0.01-contract fragmentation without rebate"
+  ],
+  "noActualAccountFeeValidation": true,
+  "ordersEnabled": false
+}

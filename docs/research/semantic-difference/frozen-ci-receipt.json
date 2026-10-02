@@ -1,0 +1,43 @@
+{
+  "commit": "00077d3aaddb16821e28e7f99ac9e7c7c42917bc",
+  "mode": "correctness",
+  "results": [
+    {
+      "name": "install",
+      "command": "npm run install:ci",
+      "exitCode": 0,
+      "log": ".ci/install.log"
+    },
+    {
+      "name": "tests",
+      "command": "npm test",
+      "exitCode": 0,
+      "log": ".ci/tests.log"
+    },
+    {
+      "name": "types",
+      "command": "npx --no-install tsc --noEmit --incremental false",
+      "exitCode": 0,
+      "log": ".ci/types.log"
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": ".ci/build.log"
+    }
+  ],
+  "totals": [
+    "# tests 1061",
+    "# pass 1061",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0"
+  ],
+  "failures": [],
+  "highlights": {},
+  "artifacts": ".ci/ (7-day workflow artifact)",
+  "runId": 36905650208,
+  "headCommit": "9f226d9f0541dcf70b6e1a7811233f5540f13864",
+  "url": "https://github.com/tyhuffman7/lights_on/actions/runs/36905650208"
+}

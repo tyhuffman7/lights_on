@@ -1,0 +1,41 @@
+{
+  "scope": "Frozen predictions, observed quote economics; not fills/profit. Unique route/orientations; temporal holdout may repeat contracts.",
+  "nominalCounts": {
+    "STRICT_EQUIVALENT": 0,
+    "ORDINARY_EQUIVALENT_BASIS_RISK": 140,
+    "UNRESOLVED": 130,
+    "DIFFERENT_QUESTION": 12583
+  },
+  "confirmedCounts": {
+    "STRICT_EQUIVALENT": 0,
+    "ORDINARY_EQUIVALENT_BASIS_RISK": 75,
+    "UNRESOLVED": 31,
+    "DIFFERENT_QUESTION": 0
+  },
+  "sets": {
+    "promoted": {
+      "available": 75,
+      "reviewN": 30,
+      "freshN": 30,
+      "confirmedN": 30
+    },
+    "unresolved": {
+      "available": 130,
+      "reviewN": 30,
+      "freshN": 0,
+      "confirmedN": 0
+    },
+    "rejected": {
+      "available": 12583,
+      "reviewN": 30,
+      "freshN": 0,
+      "confirmedN": 0
+    },
+    "confirmed-unresolved": {
+      "available": 31,
+      "reviewN": 30,
+      "freshN": 30,
+      "confirmedN": 30
+    }
+  }
+}

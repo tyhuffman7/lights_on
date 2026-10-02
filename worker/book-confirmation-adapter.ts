@@ -29,7 +29,7 @@ export class ConfirmationFeed{
     const e=observeBook(b,previous?.e,venue==='kalshi'?message.type:'marketData',Date.now(),performance.now());
     const receipt:SnapshotReceipt={e,messageType:venue==='kalshi'?message.type:'marketData',requestId:message.requestId,sid:message.sid,transactTime:message.marketData?.transactTime};
     // Equal timestamps with conflicting full books are quarantined, including within the persistent stream.
-    if(venue==='poly'&&previous?.transactTime===receipt.transactTime&&JSON.stringify([previous?.e.book.yesBids,previous?.e.book.noBids,previous?.e.book.open])!==JSON.stringify([b.yesBids,b.noBids,b.open])){e.faults.push('SAME_VERSION_CONFLICTING_BOOKS');this.failures.push('SAME_VERSION_CONFLICTING_BOOKS');}
+    if(venue==='poly'&&previous&&transactionVersion(previous.transactTime)!==null&&transactionVersion(previous.transactTime)===transactionVersion(receipt.transactTime)&&JSON.stringify([previous?.e.book.yesBids,previous?.e.book.noBids,previous?.e.book.open])!==JSON.stringify([b.yesBids,b.noBids,b.open])){e.faults.push('SAME_VERSION_CONFLICTING_BOOKS');this.failures.push('SAME_VERSION_CONFLICTING_BOOKS');b.valid=false;}
     if(venue==='poly'&&previous){const oldVersion=transactionVersion(previous.transactTime),newVersion=transactionVersion(receipt.transactTime);
      if(oldVersion===null||newVersion===null||newVersion<oldVersion){this.failures.push('PM_VERSION_BACKWARDS_OR_UNKNOWN');previous.e.book.valid=false;record('FEED_INVALID',{venue,reason:'PM_VERSION_BACKWARDS_OR_UNKNOWN'});queueMicrotask(()=>this.stream.stop());return;}
     }
@@ -38,6 +38,17 @@ export class ConfirmationFeed{
     // Only public book envelopes, never authentication headers or account channels.
     record('WS_BOOK',{message,receipt});hooks.onBook?.(receipt);this.pending.get(b.marketId)?.(receipt);
    }});
+ }
+ liveBook(id:string,at=Date.now(),mono=performance.now()){
+  const r=this.latest.get(id),h=this.health();if(!r)return null;
+  const b=r.e.book;const sequenced=b.venue==='kalshi'?
+   Number.isSafeInteger(b.sequence)&&Number.isSafeInteger(r.sid)&&this.cache.subscriptions.get(id)===r.sid&&this.cache.sequences.get(r.sid!)!>=b.sequence!:
+   transactionVersion(r.transactTime)!==null;
+  const valid=h.connected&&h.backlog===0&&h.clockOkay&&r.e.faults.length===0&&sequenced&&b.valid&&mono>=b.receivedMono&&
+   Math.abs((at-b.receivedAt)-(mono-b.receivedMono))<=1000;
+  return {book:{...b,valid,connection:valid?'LIVE' as const:'RECOVERING' as const},proof:{
+   source:'NATIVE_WS',validation:b.venue==='kalshi'?'CONTIGUOUS_SUBSCRIPTION_SEQUENCE':'FULL_SNAPSHOT_MONOTONIC_TRANSACTION_VERSION_NO_NATIVE_SEQUENCE',
+   sequence:b.sequence,subscriptionSequence:r.sid===undefined?null:this.cache.sequences.get(r.sid),transactTime:r.transactTime,health:h,faults:r.e.faults}};
  }
  health():FeedHealth{if(Math.abs((Date.now()-this.wall)-(performance.now()-this.mono))>1000)this.clockFault=true;return {connected:this.failures.length===0&&this.stream.isHealthy(),backlog:this.stream.ingress?.depth??0,clockOkay:!this.clockFault};}
  start(){this.stream.start();}

@@ -1,0 +1,50 @@
+{
+  "scope": "Raw evidence retained locally in the PR checkout, never replaced; manifest does not publish credentials/account state. Native market-data evidence only. The collection ceiling stopped the requested 45-minute window at 42.23 minutes. Used book/level evidence independently verified; no rerun.",
+  "files": [
+    {
+      "path": "work/paper-economics-20261001-final/evidence.ndjson",
+      "bytes": 1073725217,
+      "sha256": "5203535325c4fd5600adcb95b67d98af4aef95cef051b2ae90cede4cebfd054d"
+    },
+    {
+      "path": "work/paper-economics-20261001-final/paper-study.json",
+      "bytes": 16828489,
+      "sha256": "b0cc77abb4b861169f5e9e7d26320256072d739e05da042a637ec0365a88ccee"
+    },
+    {
+      "path": "work/paper-economics-20261001-final/summary.json",
+      "bytes": 6415075,
+      "sha256": "682724ed85d9354032a254d4eff0cdc2dbab0a9eb83646b14ee19fb0be7c7966"
+    },
+    {
+      "path": "work/paper-economics-20261001-final/catalog-1.json",
+      "bytes": 461177497,
+      "sha256": "0b03516f229d32419e4ebae956ca31e96e6a342649eb734cd5a6f69ba8e1ec97"
+    },
+    {
+      "path": "work/paper-economics-20261001-final/supervisor.json",
+      "bytes": 835,
+      "sha256": "07fc136244b4e8db2f09f1dfe4a0fe39f74cbad534e909a1510dc94bbf9f7fa3"
+    },
+    {
+      "path": "work/paper-economics-20261001-final/post-window-receipt.json",
+      "bytes": 159,
+      "sha256": "1bdf844b101715a8d70bce3c9d2d83f27207e295152f26a131695841b6183e76"
+    },
+    {
+      "path": "work/paper-economics-20261001-final/pre-window-freeze.json",
+      "bytes": 20529,
+      "sha256": "cecf239d01b87830ab7468f826a093cb3103c17f9069ea65e683dc7c4d2fd1fc"
+    },
+    {
+      "path": "work/paper-economics-20261001-final/frozen.json",
+      "bytes": 3637,
+      "sha256": "a50fdac23441c787150ba72672b808bee7ff5d8f15be0fa66becd1bcd9634bb2"
+    },
+    {
+      "path": "work/paper-economics-20261001-final/independent-execution-verification.json",
+      "bytes": 316,
+      "sha256": "012d4c500ec4003372e28e974cd82b660828cc9d0a1ab05644a4a1b318fd1e1b"
+    }
+  ]
+}

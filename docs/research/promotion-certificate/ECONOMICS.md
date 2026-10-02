@@ -1,0 +1,15 @@
+# Strongest promoted quote economics
+
+PAPER / READ-ONLY. These are independently checked native quote readings under $50 simulated capital per venue, a $5 paired commitment cap and max 10 contracts. “Modeled net” equals ordinary $1-per-pair payout minus executable consumed-level cost and estimated normal fees. It is neither a fill nor profit. There is no strict equivalence, fee precision remains `UNCONFIRMED_ACCOUNT_PRECISION`, and settlement status remains `UNVERIFIED`.
+
+| Pair / observed UTC | Purchased legs and consumed native levels | Quantity | Total cost | Fees | Modeled net | Receipt / exchange ages (K, PM) |
+|---|---|---:|---:|---:|---:|---|
+| Will Nebraska win at least 9 games this season?; 2026-10-01T19:47:44.064000+00:00 | kalshi yes: 3 @ $0.3800 = $1.1400; poly no: 2.99 @ $0.2700, 0.01 @ $0.6200 = $0.8135 | 3 | $1.9535 | $0.0900 | $0.9565 | receipt 15/30 ms; exchange -153/28 ms |
+| Will Houston win at least 9 games this season?; 2026-10-01T19:52:57.412000+00:00 | kalshi yes: 3 @ $0.5100 = $1.5300; poly no: 3 @ $0.2000 = $0.6000 | 3 | $2.1300 | $0.0900 | $0.7800 | receipt 35/104 ms; exchange -79/-16 ms |
+| Will Indiana win at least 11 games this season?; 2026-10-01T20:03:17.789000+00:00 | kalshi yes: 5 @ $0.4600 = $2.3000; poly no: 5 @ $0.3600 = $1.8000 | 5 | $4.1000 | $0.1700 | $0.7300 | receipt 8/8 ms; exchange -136/-12 ms |
+
+All three were `VALID_NATIVE_WS`, fresh and quantity/depth/capital feasible; all three pass the existing first-leg paper exposure admission and one-tick-per-leg stress. Negative exchange ages fall within the preserved -1,000ms skew allowance. Nebraska consumes 2.99 PM contracts at $0.27 plus 0.01 at $0.62, so quoting its best price alone would overstate net. Certificates bind Nebraska >=9/over8.5, Houston >=9/over8.5 and Indiana >=11/over10.5 regular-season wins in 2026, excluding bowls, conference championships and playoffs. Their native evidence is fully retained in the first three [audited rows](promoted-audited.json).
+
+Across the top 50, 48 used valid native WS and 2 native fallback. All50 fail the existing extreme fragmentation fee-bound stress and carry settlement risk ; 12 fail one native tick on each leg ; 4 fail first-leg exposure cap, leaving 46 admitted by the existing paper execution gate. A fresh executable depth flag alone does not mean full execution admission. Among unresolved 29,13 fail one-tick stress,7 lack a proven native grid,2 fail first-leg exposure and1 paired commitment. All rejected 30 fail freshness/stream confirmation.
+
+The independent [verification receipt](verification-receipt.json) checks 109/109 integer quote cost, fee, quantity and net calculations across all strata. Highest observed readings are selected per route and may occur at different times; do not sum these nets, assume simultaneous capital deployment, infer repeatability, fills, recovery success or realized P&L. Exceptional cancellation/shortened-season payouts, corrections/finality, source precedence and timing remain explicitly distinct in every certificate. Ohio/eligibility, settlement, fee, freshness and risk gates remain in force; no live launch is authorized.

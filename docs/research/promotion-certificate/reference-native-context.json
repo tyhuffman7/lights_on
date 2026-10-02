@@ -1,0 +1,176 @@
+{
+  "scope": "Post-stop public event context only; frozen predictions unchanged",
+  "memberships": [
+    {
+      "rank": 11,
+      "marketId": "KXNCAAF-27-ND",
+      "event": {
+        "category": "Sports",
+        "collateral_return_type": "MECNET",
+        "event_ticker": "KXNCAAF-27",
+        "exchange_index": 0,
+        "last_updated_ts": "0001-01-01T00:00:00Z",
+        "mutually_exclusive": true,
+        "product_metadata": {
+          "competition": "NCAA Football",
+          "competition_scope": "Future"
+        },
+        "series_ticker": "KXNCAAF",
+        "settlement_sources": [
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/"
+          },
+          {
+            "name": "Fox Sports",
+            "url": "https://www.foxsports.com/"
+          },
+          {
+            "name": "The Wall Street Journal",
+            "url": "https://www.wsj.com/"
+          }
+        ],
+        "strike_period": "",
+        "sub_title": "2026-27",
+        "title": "College Football National Championship Winner"
+      },
+      "marketMembershipVerified": true
+    },
+    {
+      "rank": 14,
+      "marketId": "KXF1CONSTRUCTORS-26-MER",
+      "event": {
+        "category": "Sports",
+        "collateral_return_type": "MECNET",
+        "event_ticker": "KXF1CONSTRUCTORS-26",
+        "exchange_index": 0,
+        "last_updated_ts": "0001-01-01T00:00:00Z",
+        "mutually_exclusive": true,
+        "product_metadata": {
+          "competition": "F1",
+          "competition_scope": "Future"
+        },
+        "series_ticker": "KXF1CONSTRUCTORS",
+        "settlement_sources": [
+          {
+            "name": "Fox Sports",
+            "url": "https://www.foxsports.com/"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/"
+          },
+          {
+            "name": "The Wall Street Journal",
+            "url": "https://www.wsj.com/"
+          },
+          {
+            "name": "AP",
+            "url": "https://apnews.com/"
+          }
+        ],
+        "strike_period": "",
+        "sub_title": "2026",
+        "title": "F1 Constructors Champion"
+      },
+      "marketMembershipVerified": true
+    },
+    {
+      "rank": 17,
+      "marketId": "KXNFLAFCCHAMP-27-CIN",
+      "event": {
+        "category": "Sports",
+        "collateral_return_type": "MECNET",
+        "event_ticker": "KXNFLAFCCHAMP-27",
+        "exchange_index": 0,
+        "last_updated_ts": "0001-01-01T00:00:00Z",
+        "mutually_exclusive": true,
+        "product_metadata": {
+          "competition": "Pro Football",
+          "competition_scope": "Future"
+        },
+        "series_ticker": "KXNFLAFCCHAMP",
+        "settlement_sources": [
+          {
+            "name": "the Governing League",
+            "url": "https://www.nfl.com/"
+          }
+        ],
+        "strike_period": "",
+        "sub_title": "2026-27",
+        "title": "AFC Championship Winner"
+      },
+      "marketMembershipVerified": true
+    },
+    {
+      "rank": 28,
+      "marketId": "KXPGATOUR-BAOUC26-EGRI",
+      "event": {
+        "category": "Sports",
+        "collateral_return_type": "MECNET",
+        "event_ticker": "KXPGATOUR-BAOUC26",
+        "exchange_index": 0,
+        "last_updated_ts": "0001-01-01T00:00:00Z",
+        "mutually_exclusive": true,
+        "product_metadata": {
+          "competition": "Bank of Utah Championship",
+          "competition_scope": "Game"
+        },
+        "series_ticker": "KXPGATOUR",
+        "settlement_sources": [
+          {
+            "name": "Fox Sports",
+            "url": "https://www.foxsports.com"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/"
+          },
+          {
+            "name": "the Governing League",
+            "url": "https://www.pgatour.com/"
+          }
+        ],
+        "strike_period": "",
+        "sub_title": "2026 Bank of Utah Championship",
+        "title": "Bank of Utah Championship Winner"
+      },
+      "marketMembershipVerified": true
+    },
+    {
+      "rank": 29,
+      "marketId": "KXPGATOUR-BAOUC26-ADUM",
+      "event": {
+        "category": "Sports",
+        "collateral_return_type": "MECNET",
+        "event_ticker": "KXPGATOUR-BAOUC26",
+        "exchange_index": 0,
+        "last_updated_ts": "0001-01-01T00:00:00Z",
+        "mutually_exclusive": true,
+        "product_metadata": {
+          "competition": "Bank of Utah Championship",
+          "competition_scope": "Game"
+        },
+        "series_ticker": "KXPGATOUR",
+        "settlement_sources": [
+          {
+            "name": "Fox Sports",
+            "url": "https://www.foxsports.com"
+          },
+          {
+            "name": "ESPN",
+            "url": "https://www.espn.com/"
+          },
+          {
+            "name": "the Governing League",
+            "url": "https://www.pgatour.com/"
+          }
+        ],
+        "strike_period": "",
+        "sub_title": "2026 Bank of Utah Championship",
+        "title": "Bank of Utah Championship Winner"
+      },
+      "marketMembershipVerified": true
+    }
+  ]
+}

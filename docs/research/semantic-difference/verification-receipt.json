@@ -1,0 +1,737 @@
+{
+  "scope": "Independent integer quote arithmetic and frozen-runtime verification; not fills or realized P&L.",
+  "at": "2026-10-01T18:53:34.102764+00:00",
+  "sourceCommit": "9f226d9f0541dcf70b6e1a7811233f5540f13864",
+  "runtimeHashesVerified": 195,
+  "changedSources": [],
+  "observerManifestMatches": true,
+  "policyMatches": true,
+  "durationObservedMs": 1800240.868917,
+  "pendingConfirmations": 0,
+  "supervisorExitCode": 0,
+  "evidenceSha256": "9780ae88e728c09d5d1e30e8140177551d9503399d96c2ca48fe66217c53dbe6",
+  "evidenceBytes": 584446975,
+  "quoteChecks": 120,
+  "receipts": [
+    {
+      "stratum": "promoted",
+      "rank": 1,
+      "key": "KXUCLLEADER-27GOAL-KMBAPP10::aachc-ucl-2027-06-05-mostast-kylmba:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 2,
+      "key": "KXUCLLEADER-27AST-LYAMAL10::aachc-ucl-2027-06-05-topscorer-lamyam:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 3,
+      "key": "KXNCAAFWINS-26OKLA-8::aachc-cfb-wins-ou-2026-11-28-okl:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 4,
+      "key": "KXNCAAFWINS-26HOU-9::aachc-cfb-wins-2026-11-28-hou-8pt5wins:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 5,
+      "key": "KXIPOANTHROPIC-DATE-27JAN01::ipcc-2026ipos-anthropic:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 6,
+      "key": "KXNCAAFFINALIST-27-TTU::aqc-cfb-cfp-2027-01-25-finalq-txtech:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 7,
+      "key": "KXNCAAFWINS-26MIZZ-7::aachc-cfb-wins-2026-11-28-missr-6pt5wins:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 8,
+      "key": "KXUCLLEADER-27AST-MOLISE17::aachc-ucl-2027-06-05-topscorer-micoli:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 9,
+      "key": "KXNCAAFWINS-26ND-11::aachc-cfb-wins-2026-11-28-nd-10pt5wins:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 10,
+      "key": "KXIPOANTHROPIC-DATE-26DEC01::ipcc-anthropic-2026-11-30:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 11,
+      "key": "KXNCAAFSBELT-26-USA::tec-cfb-sbeltchamp-2026-12-04-w-sala:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 12,
+      "key": "KXNCAAFWINS-26UNC-7::aachc-cfb-wins-2026-11-28-ncar-6pt5wins:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 13,
+      "key": "KXNCAAFWINS-26VT-7::aachc-cfb-wins-ou-2026-11-28-vtech:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 14,
+      "key": "KXNCAAFAACQUAL-26-UTSA::aqc-cfb-aac-2026-12-05-champq-utsa:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 15,
+      "key": "KXLEADERNFLRUSHYDS-27-DHENRY22::aachc-nfl-mostrushyds-2027-01-10-derhen:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 16,
+      "key": "KXLEADERNFLRUSHTDS-27-JGIBBS0::aachc-nfl-mostrushtds-2027-01-10-jahgib:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 17,
+      "key": "KXNCAAFWINS-26CIN-5::aachc-cfb-wins-2026-11-28-cin-4pt5wins:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 18,
+      "key": "KXNCAAFWINS-26WIS-6::aachc-cfb-wins-2026-11-28-wisc-5pt5wins:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 19,
+      "key": "KXGROK-GROK5-27JAN01::aimc-xai-grok-5-2026-12-31:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 20,
+      "key": "KXNCAAFCUSA-26-FIU::tec-cfb-cusachamp-2026-12-04-w-flint:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 21,
+      "key": "KXNHLEAST-27-BUF::tec-nhl-eastconf-2027-05-19-w-buf:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 22,
+      "key": "KXNCAAFWINS-26CAL-8::aachc-cfb-wins-2026-11-28-cah-7pt5wins:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 23,
+      "key": "KXNHLWEST-27-MIN::tec-nhl-westconf-2027-05-19-w-min:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 24,
+      "key": "KXNCAAFWINS-26ND-8::aachc-cfb-wins-2026-11-28-nd-7pt5wins:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 25,
+      "key": "KXBIGBROTHERRANK-26DEC31R3-TAY::rtc-bbus-s28-3-2026-10-01-taybro:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 26,
+      "key": "KXLEADERNFLRTDS-27-MEVANS13::aachc-nfl-mostrectds-2027-01-10-mikeva:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 27,
+      "key": "KXLEADERNFLRUSHYDS-27-KWALKER9::aachc-nfl-mostrushyds-2027-01-10-kenwal:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 28,
+      "key": "KXBIGBROTHERRANK-26DEC31R2-DRE::rtc-bbus-s28-2-2026-10-01-drecam:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 29,
+      "key": "KXNCAAFWINS-26PUR-4::aachc-cfb-wins-2026-11-28-pur-3pt5wins:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "promoted",
+      "rank": 30,
+      "key": "KXNHLWEST-27-ANA::tec-nhl-westconf-2027-05-19-w-ana:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 1,
+      "key": "KXNBARETIRE-LJAMES23-2930::tec-nba-mvp-2027-05-17-w-lebjam:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 2,
+      "key": "KXNBARETIRE-LJAMES23-2829::tec-nba-mvp-2027-05-17-w-lebjam:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 3,
+      "key": "KXRTCOMPARE-DUNVSAVE26DEC21-DUN::rotc-t-dune3-2026-12-21-gte95:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 4,
+      "key": "KXOSCARNOMSCORE-27-DIS::tac-oscars-nom-2027-01-31-bestpic-disday:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 5,
+      "key": "KXUCLTOP-27-MCI::arankc-ucl-2027-01-27-top8-mnc:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 6,
+      "key": "KXVALORANTGROUPWIN-CHAMPSH26B-VIT::tec-valorant-champs-2026-10-18-w-vit:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 7,
+      "key": "KXVALORANTGROUPWIN-CHAMPSH26C-PR::tec-valorant-champs-2026-10-18-w-pr:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 8,
+      "key": "KXVALORANTGROUPWIN-CHAMPSH26D-NRG::tec-valorant-champs-2026-10-18-w-nrg:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 9,
+      "key": "KXNBARETIRE-KLEONARD2-3031::tec-nba-mvp-2027-05-17-w-kawleo:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 10,
+      "key": "KXNBARETIRE-SCURRY30-2930::tec-nba-mvp-2027-05-17-w-stecur:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 11,
+      "key": "KXUCLTOP-27-RMA::arankc-ucl-2027-01-27-top8-rma:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 12,
+      "key": "KXUCLTOP-27-SPO::arankc-ucl-2027-01-27-9to24-spo:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 13,
+      "key": "KXUCLBOTTOM-27-SPO::arankc-ucl-2027-01-27-9to24-spo:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 14,
+      "key": "KXNBARETIRE-KDURANT7-2930::tec-nba-mvp-2027-05-17-w-kevdur:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 15,
+      "key": "KXNBARETIRE-LJAMES23-2728::tec-nba-mvp-2027-05-17-w-lebjam:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 16,
+      "key": "KXUCLTOP8-27-RMA::arankc-ucl-2027-01-27-lgphasetop-rma:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 17,
+      "key": "KXNBARETIRE-KLEONARD2-2930::tec-nba-mvp-2027-05-17-w-kawleo:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 18,
+      "key": "KXUCLTOP-27-AVL::arankc-ucl-2027-01-27-top8-ast:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 19,
+      "key": "KXLEADERNFLAPYDS-27-JGIBBS0::aachc-nfl-mostrec-2027-01-10-jahgib:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 20,
+      "key": "KXNBARETIRE-SCURRY30-2829::tec-nba-mvp-2027-05-17-w-stecur:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 21,
+      "key": "KXUCLTOP-27-MUN::arankc-ucl-2027-01-27-top8-mnu:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 22,
+      "key": "KXNBARETIRE-KDURANT7-2829::tec-nba-mvp-2027-05-17-w-kevdur:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 23,
+      "key": "KXUCLTOP8-27-MCI::arankc-ucl-2027-01-27-lgphasetop-mnc:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 24,
+      "key": "KXTIMEDECADE20S-30-EMUS::tpoyc-2026-elomus:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 25,
+      "key": "KXRTCOMPARE-DUNVSAVE26DEC21-DUN::rotc-t-dune3-2026-12-21-gte90:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 26,
+      "key": "KXLEADERNFLAPYDS-27-KWALKER9::aachc-nfl-mostrec-2027-01-10-kenwal:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 27,
+      "key": "KXUCLTOP8-27-SPO::arankc-ucl-2027-01-27-9to24-spo:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 28,
+      "key": "KXTIMEDECADE20S-30-TAY::tpoyc-2026-tayswi:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 29,
+      "key": "KXUCLBOTTOM-27-RMA::arankc-ucl-2027-01-27-lgphasetop-rma:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "unresolved",
+      "rank": 30,
+      "key": "KXPERFORMBONDSONG-35-SAB::ccpc-bilbrd-1song-any2026-sabcar:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 1,
+      "key": "KXMLBAWARDFIN-26NLMVP-SOHTANI17::tec-mlb-nl-2026-11-27-cy-shooht:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 2,
+      "key": "KXDECLAREPRESFIRSTD-28NOV01-AOCA::ushrewc-ushr-ny-14-2026-11-03-dem:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 3,
+      "key": "KXVOTEBR1-BRPRES26ACUR-1::ewc-pres-bra-2026-10-04-augcur:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 4,
+      "key": "KXDECLAREPRESFIRSTD-28NOV07-AOCA::ushrewc-ushr-ny-14-2026-11-03-dem:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 5,
+      "key": "KXLLM1-26OCT05-GOOG::ccrc-ntflx-1movus-2026-10-06-besbes:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 6,
+      "key": "KXLLM1-26OCT05-GOOG::ccrc-ntflx-1movglbl-2026-10-06-besbes:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 7,
+      "key": "KXVOTEGENERAL-GOVAK-26DBRO-10::usgubewc-usgub-ak-2026-11-03-davbro:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 8,
+      "key": "KXLEADERNFLPYDS-27-CSTROUD7::astatc-nfl-dal-hou-2026-10-04-pyd-cstr-gte150:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 9,
+      "key": "KXBALLONDORRANK-26T10-MOLI::tec-uefa-bdor-2026-10-26-w-micoli:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 10,
+      "key": "KXVOTECOUNTY-GOVCA26LOSANGELESXBEC-78::ewc-usgub-ca-2026-11-03-xavbec:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 11,
+      "key": "KXVOTEBR1-BRPRES26RSAN-1::ewc-pres-bra-2026-10-04-rensan:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 12,
+      "key": "KXMLBAWARDFIN-26ALCY-DCEASE84::tec-mlb-al-2026-11-27-cy-dylcea:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 13,
+      "key": "KXVOTECOUNTY-GOVCA26LOSANGELESXBEC-76::ewc-usgub-ca-2026-11-03-xavbec:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 14,
+      "key": "KXVOTEGENERAL-GOVPARTYCA-26XBEC-70::ewc-usgub-ca-2026-11-03-xavbec:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 15,
+      "key": "KXBALLONDORRANK-26T10-KMBA::tec-uefa-bdor-2026-10-26-w-kylmba:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 16,
+      "key": "KXNFLRRYDS-26OCT01PITCLE-CLERSANDERS23-70::astatc-nfl-pit-cle-2026-10-01-recyd-romwil-gte70::inverted:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 17,
+      "key": "KXOSCARNOMSUPACTR-27-ANN::tac-oscars-03-14-2027-bestactre-annhat:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 18,
+      "key": "KXVOTEBR1-BRPRES26ACUR-2::ewc-pres-bra-2026-10-04-augcur:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 19,
+      "key": "KXHOUSERACE-LA01-26-D::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 20,
+      "key": "KXDHOUSESEATS-27-216::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 21,
+      "key": "KXMLBAWARDFIN-26NLCY-CSALE51::tec-mlb-nl-2026-11-27-cy-chrsal:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 22,
+      "key": "KXENDORSECOLLINS-26NOV03-JAUC::ushrewc-ushr-ma-04-2026-11-03-dem:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 23,
+      "key": "KXNFLPASSYDS-26OCT04DETCAR-CARBYOUNG9-150::astatc-nfl-det-car-2026-10-04-pyd-jargof-gte150::inverted:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 24,
+      "key": "KXNFLRECYDS-26OCT01PITCLE-PITJWARREN30-70::astatc-nfl-pit-cle-2026-10-01-recyd-romwil-gte70::inverted:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 25,
+      "key": "KXNFLRSHYDS-26OCT01PITCLE-CLERSANDERS23-30::astatc-nfl-pit-cle-2026-10-01-ryd-jaywar-gte30:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 26,
+      "key": "KXVOTEGENERAL-GOVPARTYCA-26SHIL-30::ewc-usgub-ca-2026-11-03-stehil:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 27,
+      "key": "KXVOTEBR1-BRPRES26RCAI-1::ewc-pres-bra-2026-10-04-roncai:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 28,
+      "key": "KXDHOUSESEATS-27-212::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 29,
+      "key": "KXNFLRRYDS-26OCT01PITCLE-CLERSANDERS23-70::astatc-nfl-pit-cle-2026-10-01-recyd-patfre-gte70::inverted:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "rejected",
+      "rank": 30,
+      "key": "HOUSEAKAL-26-D::paccc-usho-midterms-2026-11-03-dem:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 1,
+      "key": "KXUCLTOP8-27-RMA::arankc-ucl-2027-01-27-lgphasetop-rma:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 2,
+      "key": "KXUCLTOP-27-AVL::arankc-ucl-2027-01-27-top8-ast:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 3,
+      "key": "KXTIMEDECADE20S-30-EMUS::tpoyc-2026-elomus:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 4,
+      "key": "KXUCLBOTTOM-27-RMA::arankc-ucl-2027-01-27-lgphasetop-rma:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 5,
+      "key": "KXOSCARNOMACTR-27-SAN::tac-oscars-nom-bstactre-2027-01-21-sanhul:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 6,
+      "key": "KXLEADERNFLSACKS-27-TWATT90::tec-nfl-mvp-2027-02-11-w-tjwatt:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 7,
+      "key": "KXNEXTPRESSEC-29JAN21-KDOR::nphc-presssec-repkl-kaedor:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 8,
+      "key": "KXOSCARNOMPIC-27-PRO::tac-oscars-nom-2027-01-31-bestpic-promar:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 9,
+      "key": "KXCHINAAI-26OCT31-ZAI::aimrc-cmpny-china-1-2026-10-31-zai:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 10,
+      "key": "KXOSCARNOMACTR-27-OLI::tac-oscars-nom-bstactre-2027-01-21-oliwil:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 11,
+      "key": "KXDARTSMATCH-26OCT011410NZONGAND-GAND::aec-pdcdarts-niezon-garand-2026-10-01::inverted:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 12,
+      "key": "KXNASCARCUPSERIES-NCS26-KLAR::tec-nascar-cupseries-2026-11-08-w-kyllar:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 13,
+      "key": "KXF1CONSTRUCTORS-26-MER::tec-f1-cc-2026-12-06-w-merce:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 14,
+      "key": "KXUFCWELTERWEIGHTTITLE-26-CPRA::aachc-ufc-welterw-2026-12-31-champ-carpra:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 15,
+      "key": "KXNASCARCUPSERIES-NCS26-CBEL::tec-nascar-cupseries-2026-11-08-w-chrbel:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 16,
+      "key": "KXPGAR1LEAD-BAOUC26-SJAE::tec-pga-bankutah-2026-10-01-r1l-stejae:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 17,
+      "key": "KXPGAR1LEAD-BAOUC26-PFIS::tec-pga-bankutah-2026-10-01-r1l-patfis:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 18,
+      "key": "KXDARTSMATCH-26OCT011410NZONGAND-NZON::aec-pdcdarts-niezon-garand-2026-10-01:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 19,
+      "key": "KXUFCLIGHTWEIGHTTITLE-26-JGAE::aachc-ufc-lightw-2026-12-31-champ-jusgae:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 20,
+      "key": "KXUFCMIDDLEWEIGHTTITLE-26-SSTR::aachc-ufc-middlew-2026-12-31-champ-seastr:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 21,
+      "key": "KXNCAAF-27-ND::tec-cfb-champ-2027-01-25-w-nd:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 22,
+      "key": "KXPGATOUR-BAOUC26-MBRE::tec-pga-bankutah-2026-10-01-w-micbre:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 23,
+      "key": "KXPDCDARTS-27-LHUM::tec-pdc-worldchamp-2027-01-03-w-lukhum:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 24,
+      "key": "KXPGATOUR-BAOUC26-ADUM::tec-pga-bankutah-2026-10-01-w-adrcha:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 25,
+      "key": "KXDARTSMATCH-26OCT011410NZONGAND-GAND::aec-pdcdarts-niezon-garand-2026-10-01::inverted:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 26,
+      "key": "KXLPGATOUR-LOTCPBH26-HYOKIM::tec-lpga-lottcham-2026-10-01-w-hyokim:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 27,
+      "key": "KXNFL1SEED-AFC26-JAC::aachc-nfl-afc1seed-2027-01-10-jax:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 28,
+      "key": "KXPGAR1LEAD-BAOUC26-DLIP::tec-pga-bankutah-2026-10-01-r1l-davlip:no",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 29,
+      "key": "KXPGATOUR-BAOUC26-JSUB::tec-pga-bankutah-2026-10-01-w-jacsub:yes",
+      "arithmeticPassed": true
+    },
+    {
+      "stratum": "confirmed-unresolved",
+      "rank": 30,
+      "key": "KXPGATOUR-BAOUC26-KYU::tec-pga-bankutah-2026-10-01-w-kevyu:yes",
+      "arithmeticPassed": true
+    }
+  ]
+}

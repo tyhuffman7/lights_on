@@ -1,0 +1,375 @@
+{
+  "scope": "Finite ranked audit, correlated and enriched strata; no population precision/recall estimate. No retraining.",
+  "primarySurvivors": {
+    "n": 50,
+    "frozenClasses": {
+      "UNRESOLVED": 40,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 10
+    },
+    "humanClasses": {
+      "DIFFERENT_QUESTION": 36,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 14
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 10,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 4,
+        "DIFFERENT_QUESTION": 36,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "supplementaryPromoted": {
+    "n": 20,
+    "frozenClasses": {
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 20
+    },
+    "humanClasses": {
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 20
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 20,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "allSurvivors": {
+    "n": 70,
+    "frozenClasses": {
+      "UNRESOLVED": 40,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 30
+    },
+    "humanClasses": {
+      "DIFFERENT_QUESTION": 36,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 34
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 30,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 4,
+        "DIFFERENT_QUESTION": 36,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "highestRejected": {
+    "n": 30,
+    "frozenClasses": {
+      "DIFFERENT_QUESTION": 30
+    },
+    "humanClasses": {
+      "DIFFERENT_QUESTION": 30
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 30,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "freshExecutableRejected": {
+    "n": 20,
+    "frozenClasses": {
+      "DIFFERENT_QUESTION": 20
+    },
+    "humanClasses": {
+      "DIFFERENT_QUESTION": 20
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 20,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "allReviewed": {
+    "n": 120,
+    "frozenClasses": {
+      "UNRESOLVED": 40,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 30,
+      "DIFFERENT_QUESTION": 50
+    },
+    "humanClasses": {
+      "DIFFERENT_QUESTION": 86,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 34
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 30,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 50,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 4,
+        "DIFFERENT_QUESTION": 36,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "metrics": {
+    "promotedBasisPrecision": {
+      "numerator": 30,
+      "denominator": 30,
+      "rate": 1.0
+    },
+    "falsePromotion": {
+      "numerator": 0,
+      "denominator": 30,
+      "rate": 0.0
+    },
+    "unresolvedPromotions": {
+      "numerator": 0,
+      "denominator": 30,
+      "rate": 0.0
+    },
+    "primaryFrozenUnresolvedRate": 0.8,
+    "primaryHumanUnresolvedRate": 0.0,
+    "differentQuestionCaptureReviewed": {
+      "numerator": 50,
+      "denominator": 86,
+      "rate": 0.5813953488372093
+    },
+    "obviousFalseHotPrimary": {
+      "numerator": 36,
+      "denominator": 50
+    },
+    "obviousFalseHotTop20": {
+      "numerator": 20,
+      "denominator": 20
+    },
+    "legitimateBasisRejected": {
+      "numerator": 0,
+      "denominator": 50
+    },
+    "legitimateBasisLeftUnresolved": {
+      "numerator": 4,
+      "denominator": 34
+    }
+  },
+  "novelPairPrimary": {
+    "n": 13,
+    "frozenClasses": {
+      "UNRESOLVED": 11,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 2
+    },
+    "humanClasses": {
+      "DIFFERENT_QUESTION": 8,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 5
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 2,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 3,
+        "DIFFERENT_QUESTION": 8,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "novelTermsPrimary": {
+    "n": 13,
+    "frozenClasses": {
+      "UNRESOLVED": 11,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 2
+    },
+    "humanClasses": {
+      "DIFFERENT_QUESTION": 8,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 5
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 2,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 3,
+        "DIFFERENT_QUESTION": 8,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "novelPairReviewed": {
+    "n": 14,
+    "frozenClasses": {
+      "UNRESOLVED": 11,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 3
+    },
+    "humanClasses": {
+      "DIFFERENT_QUESTION": 8,
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 6
+    },
+    "confusion": {
+      "STRICT_EQUIVALENT": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "ORDINARY_EQUIVALENT_BASIS_RISK": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 3,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "DIFFERENT_QUESTION": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 0,
+        "DIFFERENT_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "STRICT_EQUIVALENT": 0,
+        "ORDINARY_EQUIVALENT_BASIS_RISK": 3,
+        "DIFFERENT_QUESTION": 8,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "strictHumanCandidates": 0,
+  "sensitivity": {
+    "conservativeDartsBinding": "If all three nominal same-match darts readings are held unresolved for the 25-minute gameStartTime discrepancy, primary labels become 11 basis/36 different/3 unresolved; promoted precision remains 30/30 and top20 false matches remain 20/20."
+  }
+}

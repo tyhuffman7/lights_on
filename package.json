@@ -20,6 +20,7 @@
     "research:probe": "node --experimental-strip-types worker/cli.ts probe",
     "research:audit-pair": "node --experimental-strip-types worker/ev-pair-audit.ts",
     "research:ev-watch": "node --experimental-strip-types worker/ev-paper-watch.ts",
+    "research:recall": "node --experimental-strip-types worker/recall-observer.ts",
     "research:ev-replay": "node --experimental-strip-types scripts/replay-ev-candidate-watch.ts",
     "research:ev-report": "node --experimental-strip-types worker/ev-report.ts",
     "test:detector": "node --experimental-strip-types --test tests/detector-equivalence.test.ts",

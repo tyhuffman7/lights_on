@@ -1,0 +1,19 @@
+{
+  "scope": "120 retained manually reviewed records; enriched/correlated reference sample, not population accuracy.",
+  "matrix": {
+    "DIFFERENT_QUESTION": {
+      "DIFFERENT_QUESTION": 86
+    },
+    "UNRESOLVED": {
+      "UNRESOLVED": 3
+    },
+    "ORDINARY_EQUIVALENT_BASIS_RISK": {
+      "ORDINARY_EQUIVALENT_BASIS_RISK": 31
+    }
+  },
+  "caughtFalseSurvivors": 36,
+  "preservedBasis": 30,
+  "preservedRejections": 50,
+  "wrongRejections": 0,
+  "disagreements": []
+}

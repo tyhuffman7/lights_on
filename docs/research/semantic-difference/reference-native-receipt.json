@@ -1,0 +1,157 @@
+[
+  {
+    "row": 13,
+    "url": "https://external-api.kalshi.com/trade-api/v2/events/KXF1CONSTRUCTORS-26",
+    "retrievedAt": "2026-10-01T18:57:24.115422+00:00",
+    "sha256": "73e91e3e676496ffdfcba0548d70e54de2e8e24893183290daefe18415a1a794",
+    "event": {
+      "category": "Sports",
+      "collateral_return_type": "MECNET",
+      "event_ticker": "KXF1CONSTRUCTORS-26",
+      "exchange_index": 0,
+      "last_updated_ts": "0001-01-01T00:00:00Z",
+      "mutually_exclusive": true,
+      "product_metadata": {
+        "competition": "F1",
+        "competition_scope": "Future"
+      },
+      "series_ticker": "KXF1CONSTRUCTORS",
+      "settlement_sources": [
+        {
+          "name": "Fox Sports",
+          "url": "https://www.foxsports.com/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "name": "The Wall Street Journal",
+          "url": "https://www.wsj.com/"
+        },
+        {
+          "name": "AP",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "strike_period": "",
+      "sub_title": "2026",
+      "title": "F1 Constructors Champion"
+    }
+  },
+  {
+    "row": 21,
+    "url": "https://external-api.kalshi.com/trade-api/v2/events/KXNCAAF-27",
+    "retrievedAt": "2026-10-01T18:57:24.515188+00:00",
+    "sha256": "945ba6e2539d46186b0c9a59243dfd1a3460081d01dbf6fc112fbef87920f725",
+    "event": {
+      "category": "Sports",
+      "collateral_return_type": "MECNET",
+      "event_ticker": "KXNCAAF-27",
+      "exchange_index": 0,
+      "last_updated_ts": "0001-01-01T00:00:00Z",
+      "mutually_exclusive": true,
+      "product_metadata": {
+        "competition": "NCAA Football",
+        "competition_scope": "Future"
+      },
+      "series_ticker": "KXNCAAF",
+      "settlement_sources": [
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "name": "Fox Sports",
+          "url": "https://www.foxsports.com/"
+        },
+        {
+          "name": "The Wall Street Journal",
+          "url": "https://www.wsj.com/"
+        }
+      ],
+      "strike_period": "",
+      "sub_title": "2026-27",
+      "title": "College Football National Championship Winner"
+    }
+  },
+  {
+    "row": 22,
+    "url": "https://external-api.kalshi.com/trade-api/v2/events/KXPGATOUR-BAOUC26",
+    "retrievedAt": "2026-10-01T18:57:25.025680+00:00",
+    "sha256": "203ab0d80e1580f33eaa61951b21b9d99cd1146e67d1ca600ab5a39bf854cd56",
+    "event": {
+      "category": "Sports",
+      "collateral_return_type": "MECNET",
+      "event_ticker": "KXPGATOUR-BAOUC26",
+      "exchange_index": 0,
+      "last_updated_ts": "0001-01-01T00:00:00Z",
+      "mutually_exclusive": true,
+      "product_metadata": {
+        "competition": "Bank of Utah Championship",
+        "competition_scope": "Game"
+      },
+      "series_ticker": "KXPGATOUR",
+      "settlement_sources": [
+        {
+          "name": "Fox Sports",
+          "url": "https://www.foxsports.com"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "name": "the Governing League",
+          "url": "https://www.pgatour.com/"
+        }
+      ],
+      "strike_period": "",
+      "sub_title": "2026 Bank of Utah Championship",
+      "title": "Bank of Utah Championship Winner"
+    }
+  },
+  {
+    "row": 26,
+    "url": "https://external-api.kalshi.com/trade-api/v2/events/KXLPGATOUR-LOTCPBH26",
+    "retrievedAt": "2026-10-01T18:57:25.507523+00:00",
+    "sha256": "aea6c6769ff5e12bf9f51439749fd48e79a6169aca87073523cdcc2cebf0f2a5",
+    "event": {
+      "category": "Sports",
+      "collateral_return_type": "MECNET",
+      "event_ticker": "KXLPGATOUR-LOTCPBH26",
+      "exchange_index": 0,
+      "last_updated_ts": "0001-01-01T00:00:00Z",
+      "mutually_exclusive": true,
+      "product_metadata": {
+        "competition": "LOTTE Championship presented by Hoakalei",
+        "competition_scope": "Game"
+      },
+      "series_ticker": "KXLPGATOUR",
+      "settlement_sources": [
+        {
+          "name": "The Wall Street Journal",
+          "url": "https://www.wsj.com/"
+        },
+        {
+          "name": "ESPN",
+          "url": "https://www.espn.com/"
+        },
+        {
+          "name": "Fox Sports",
+          "url": "https://www.foxsports.com/"
+        }
+      ],
+      "strike_period": "",
+      "sub_title": "2026 LOTTE Championship presented by Hoakalei",
+      "title": "LOTTE Championship presented by Hoakalei Winner"
+    }
+  },
+  {
+    "url": "https://assets.kalshi.com/contract_terms/TITLEHOLDER.pdf",
+    "retrievedAt": "2026-10-01T18:57:25.939215+00:00",
+    "sha256": "7bc14f9dfcfa734537f6d5d130e8b0ab20be504e59a3166a01e0c011070ce92b",
+    "pages": 2,
+    "status": "RETRIEVED_NATIVE_DOCUMENT"
+  }
+]

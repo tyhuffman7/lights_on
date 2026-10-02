@@ -1,0 +1,115 @@
+{
+  "frozenCollectorCommit": "d0771ea7a4a24d556814982c97eb839239ff715e",
+  "frozenSourceFiles": 199,
+  "changedDuringObservation": [],
+  "ordersEnabled": false,
+  "fillClaim": false,
+  "targetedSemanticAndExecutionTests": {
+    "tests": 335,
+    "passed": 335
+  },
+  "postRunReportingTests": {
+    "tests": 8,
+    "passed": 8
+  },
+  "retainedSemanticReplay": {
+    "rows": 240,
+    "falsePromotions": 0,
+    "wrongRejections": 0,
+    "originalBasisPreserved": 31
+  },
+  "freshPriorAuditPreserved": 50,
+  "qualificationControlsFixed": 2,
+  "frozenCI": {
+    "url": "https://github.com/tyhuffman7/lights_on/actions/runs/36931476917",
+    "merge": "a2bfd3fdca297a50133d69c443d836813707115b",
+    "parents": [
+      "a200abf36cd590c894f936dbe1d6f4c81f461468",
+      "d0771ea7a4a24d556814982c97eb839239ff715e"
+    ],
+    "tests": 1095,
+    "passed": 1095,
+    "typecheck": "passed",
+    "build": "passed"
+  },
+  "arithmeticAudit": {
+    "scope": "Independent Python integer arithmetic and exact recorded native level consumption, not actual fills",
+    "episodes": 416,
+    "checks": {
+      "takenCost": 36254,
+      "signalPlans": 2068,
+      "attempts": 16544,
+      "fullyUnwound": 160
+    },
+    "sourceFiles": 199,
+    "changed": [],
+    "ordersEnabled": false
+  },
+  "reportingOnlyCorrection": {
+    "files": [
+      "lib/research/paper-execution-report.ts",
+      "scripts/report-paper-execution.ts"
+    ],
+    "economicGroupsLowerBound": 67,
+    "rawSegments": 416,
+    "confirmedReturns": 3,
+    "paperPortfoliosUnchangedFromFrozenReport": true
+  },
+  "observation": {
+    "plannedSeconds": 2700,
+    "actualSeconds": 2533.8190855420003,
+    "start": 1790892083454,
+    "end": 1790894617292,
+    "stopReason": "EVIDENCE_LIMIT_1_GIB",
+    "rejectedRecordAttempts": 2,
+    "pendingConfirmations": 0,
+    "pendingCaptures": 0,
+    "workerExitCode": 0,
+    "supervisorExitCode": 0,
+    "workerPid": 70127,
+    "supervisorPid": 70106,
+    "processCheck": "ps returned no matching PIDs after exit",
+    "lastRetainedRecordAt": 1790894616932,
+    "allClaimedDepthArithmeticCorroborated": true
+  },
+  "captureCoverage": {
+    "rowsByKind": {
+      "WS_SUBSCRIPTION_REQUEST": 357,
+      "CONNECTED": 357,
+      "OBSERVATION_STARTED": 1,
+      "ECONOMIC_SIGNAL": 44719,
+      "REST_AUDIT": 85,
+      "PAPER_EPISODE_START": 416,
+      "PAPER_EPISODE_QUOTE": 1117,
+      "CONFIRMATION": 1074,
+      "PAPER_LATENCY_STATE": 2912,
+      "PAPER_ATTEMPTS": 416,
+      "METADATA_REFRESH": 153,
+      "REQUESTED_SNAPSHOT": 208,
+      "SNAPSHOT_REQUEST": 208,
+      "PAPER_EPISODE_END": 416,
+      "PAPER_NATIVE_STATE": 906,
+      "PAPER_UNWIND_STATE": 163,
+      "NATIVE_RATE_LIMIT": 21,
+      "HTTP_PUBLIC_FAILURE": 21,
+      "FEED_INVALID": 133,
+      "RECONNECT": 133,
+      "INVALID_NATIVE_LEVEL": 5
+    },
+    "lateOver250ms": {
+      "250": 2,
+      "500": 1,
+      "1000": 2
+    },
+    "unchangedAtLatency": {
+      "10": 408,
+      "25": 401,
+      "50": 394,
+      "100": 333,
+      "250": 275,
+      "500": 243,
+      "1000": 178
+    }
+  },
+  "finalPublicationChecks": "See draft PR #22 checks; final CI receipt retained locally at work/paper-economics-20261001-final/publication-ci-receipt.json."
+}

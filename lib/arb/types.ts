@@ -30,6 +30,8 @@ export type Market = {
   series?: string;
   identity?: Identity;
   exchangeIndex?: number;
+  // Public native event context, bound to this market's parent during research.
+  propositionContext?: {eventId:string;title:string;subtitle:string;source:string;at:number};
 };
 export type Pair = {
   paperApproval?: import("./paper-approval.ts").ConditionalPaperApproval;

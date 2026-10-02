@@ -1,0 +1,21 @@
+{
+  "sourceHead": "2bab556fa447649753c0895a7e063ecb072771dd",
+  "testedMergeSha": "249d16da6953a00255806305abe7b3e2af26961b",
+  "runId": 36879536098,
+  "url": "https://github.com/tyhuffman7/lights_on/actions/runs/36879536098",
+  "conclusion": "success",
+  "tests": {
+    "total": 921,
+    "pass": 921,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "typecheck": "pass",
+  "build": "pass",
+  "targetedTests": {
+    "total": 153,
+    "pass": 153
+  },
+  "collectionStoppedBeforeRun": true
+}

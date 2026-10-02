@@ -1,0 +1,11 @@
+{
+  "rows": 68337,
+  "bytes": 227358819,
+  "sha256": "d1f0fcee7d0395b472557acbcdfe369bf9234f68e13e4a5f8fb1b27643658863",
+  "episodesWithInitialEvidence": 2092,
+  "collectorPhase": "STOPPED",
+  "pending": 0,
+  "reasons": {
+    "CONFIRMATION:This operation was aborted": 1
+  }
+}

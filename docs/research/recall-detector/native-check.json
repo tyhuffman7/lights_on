@@ -1,0 +1,4300 @@
+{
+  "ordersEnabled": false,
+  "scope": "POST_WINDOW_NATIVE_HIGH_GROSS_NEAR_NET_CANONICAL_AND_ALL_FRESH_SURVIVORS",
+  "sourceWindow": {
+    "start": 1790809796249,
+    "deadline": 1790810996249
+  },
+  "rawSha256": [
+    "1bd28d911381fb042ce091347aa98d47a6d8da300c7788692fe1748959c89ea3",
+    "3ca9f965fdb27a9e6d8538fda956d7891cfcb032b62ebf26946b20488eb399f0"
+  ],
+  "arithmeticAuditScriptSha256": "67d46550e39604a5c1f48fb2791eb7f478f2ed7075bf191e9be3e6d0c9018b04",
+  "note": "Prices were checked after the frozen observation stopped. This is a selected-route check, not proof of whole-catalog absence or complete matching recall. Strict settlement equivalence is not established.",
+  "results": [
+    {
+      "pairId": "KXMLBAWARDFIN-26NLMVP-SOHTANI17::tec-mlb-nl-2026-11-27-cy-shooht",
+      "event": "Will Shohei Ohtani be selected as a finalist for the Pro Baseball National League MVP in the 2026 season?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980696,
+      "nativeCheckedAt": 1790811118538,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": null,
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.040000000000000036,
+            "used": [
+              {
+                "p": 0.040000000000000036,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.001,
+            "used": [
+              {
+                "p": 0.001,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.959,
+          "fees": 0.01,
+          "normalNet": 0.949
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811118489,
+        "responseAt": 1790811118538,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811118250,
+        "responseAt": 1790811118357,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:31:53.001760456Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "ee02705d4afe9446ea2d74af00ecb4f1ebc958c5512644f888f07c01ff434b27"
+    },
+    {
+      "pairId": "KXVOTEBR1-BRPRES26ACUR-1::ewc-pres-bra-2026-10-04-augcur",
+      "event": "Will Augusto Cury receive at least 1% of the popular vote in the first round of the 2026 Brazilian presidential election?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980703,
+      "nativeCheckedAt": 1790811120146,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.98,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 1
+              }
+            ]
+          },
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.06000000000000005,
+            "used": [
+              {
+                "p": 0.06000000000000005,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.01,
+            "used": [
+              {
+                "p": 0.01,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.9299999999999999,
+          "fees": 0.01,
+          "normalNet": 0.9199999999999999
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811120091,
+        "responseAt": 1790811120146,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811119758,
+        "responseAt": 1790811119842,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:29:28.501850293Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "b941d32ca07e451c57946f8c622d001a04d2ce4212e7198d5d69e38c4bbc7bfd"
+    },
+    {
+      "pairId": "KXVOTEBR1-BRPRES26RSAN-1::ewc-pres-bra-2026-10-04-rensan",
+      "event": "Will Renan Santos receive at least 1% of the popular vote in the first round of the 2026 Brazilian presidential election?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980696,
+      "nativeCheckedAt": 1790811121750,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.98,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 1
+              }
+            ]
+          },
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.07999999999999996,
+            "used": [
+              {
+                "p": 0.07999999999999996,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.01,
+            "used": [
+              {
+                "p": 0.01,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.91,
+          "fees": 0.01,
+          "normalNet": 0.9
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811121691,
+        "responseAt": 1790811121747,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811121361,
+        "responseAt": 1790811121419,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:29:02.421578861Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "21044fa28856f15bcf8f2c6b76f619a6d0b0af92cf0eee25fdf5b9bce85c9b8d"
+    },
+    {
+      "pairId": "KXVOTEBR1-BRPRES26RCAI-1::ewc-pres-bra-2026-10-04-roncai",
+      "event": "Will Ronaldo Caiado receive at least 1% of the popular vote in the first round of the 2026 Brazilian presidential election?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980700,
+      "nativeCheckedAt": 1790811123618,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": null,
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.08999999999999997,
+            "used": [
+              {
+                "p": 0.08999999999999997,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.01,
+            "used": [
+              {
+                "p": 0.01,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.9,
+          "fees": 0.01,
+          "normalNet": 0.89
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811123290,
+        "responseAt": 1790811123618,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811122959,
+        "responseAt": 1790811123021,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:28:16.928247623Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "53b1056bb03061632124e2dbd2ca5bcc40d33fcd0f3e377457c09e1b4ee167c3"
+    },
+    {
+      "pairId": "KXOSCARNOMSUPACTR-27-ANN::tac-oscars-nom-bstactre-2027-01-21-annhat",
+      "event": "2027 Best Supporting Actress Oscar nominations?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980829,
+      "nativeCheckedAt": 1790811124941,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.94,
+            "used": [
+              {
+                "p": 0.94,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.9299999999999999,
+          "fees": 0.01,
+          "normalNet": -0.94
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.06999999999999995,
+            "used": [
+              {
+                "p": 0.06999999999999995,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.02,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.91,
+          "fees": 0.01,
+          "normalNet": 0.9
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811124887,
+        "responseAt": 1790811124940,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811124550,
+        "responseAt": 1790811124609,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:14:59.204634871Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "9eda8a5907b8b9d5fad0919e6977aad557ab1589926d9c3a190184424c39109b"
+    },
+    {
+      "pairId": "KXBALLONDORRANK-26T10-MOLI::tec-uefa-bdor-2026-10-26-w-micoli",
+      "event": "Michael Olise: Top 10 in the 2026 men's Ballon d'Or?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810981000,
+      "nativeCheckedAt": 1790811126544,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.94,
+            "used": [
+              {
+                "p": 0.94,
+                "q": 1
+              }
+            ]
+          },
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.08999999999999997,
+            "used": [
+              {
+                "p": 0.08999999999999997,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.01,
+            "used": [
+              {
+                "p": 0.01,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.9,
+          "fees": 0.01,
+          "normalNet": 0.89
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811126489,
+        "responseAt": 1790811126544,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811126164,
+        "responseAt": 1790811126225,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:28:54.417064036Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "ef40ff3db96aa64f90cc4e6413f998eaafc12c3aeda708d1f7dc37ac3becb7cd"
+    },
+    {
+      "pairId": "KXVOTECOUNTY-GOVCA26LOSANGELESXBEC-78::ewc-usgub-ca-2026-11-03-xavbec",
+      "event": "Will Xavier Becerra receive at least 78% of the popular vote in the 2026 gubernatorial election in Los Angeles County, California?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810981661,
+      "nativeCheckedAt": 1790811128148,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.050000000000000044,
+            "used": [
+              {
+                "p": 0.050000000000000044,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.050000000000000044,
+            "used": [
+              {
+                "p": 0.050000000000000044,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.8999999999999999,
+          "fees": 0.01,
+          "normalNet": 0.8899999999999999
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.96,
+            "used": [
+              {
+                "p": 0.96,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.95,
+          "fees": 0.01,
+          "normalNet": -0.96
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811128089,
+        "responseAt": 1790811128147,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811127983,
+        "responseAt": 1790811128056,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:00.171945114Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "1d9da4e6ed0e8675eb7561c99f67025f7223b06537f260fa5a7fcedc78d85338"
+    },
+    {
+      "pairId": "KXLLM1-26OCT05-GOOG::ccrc-ntflx-1movus-2026-10-06-besbes",
+      "event": "Best AI this week",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810986366,
+      "nativeCheckedAt": 1790811139603,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic_with_maker_fees",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.96,
+            "used": [
+              {
+                "p": 0.96,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.95,
+          "fees": 0.01,
+          "normalNet": -0.96
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.07999999999999996,
+            "used": [
+              {
+                "p": 0.07999999999999996,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.02,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.9,
+          "fees": 0.01,
+          "normalNet": 0.89
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811129690,
+        "responseAt": 1790811129747,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811139421,
+        "responseAt": 1790811139603,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:30:47.355745195Z",
+        "attempts": 2
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      },
+      "metadataSha256": "057fb491ec6d2c637f532c6b4899ecf6502fa0608b6759fb527d44a97cadf004"
+    },
+    {
+      "pairId": "KXVOTECOUNTY-GOVCA26LOSANGELESXBEC-76::ewc-usgub-ca-2026-11-03-xavbec",
+      "event": "Will Xavier Becerra receive at least 76% of the popular vote in the 2026 gubernatorial election in Los Angeles County, California?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810981661,
+      "nativeCheckedAt": 1790811140857,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.06000000000000005,
+            "used": [
+              {
+                "p": 0.06000000000000005,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.050000000000000044,
+            "used": [
+              {
+                "p": 0.050000000000000044,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.8899999999999999,
+          "fees": 0.01,
+          "normalNet": 0.8799999999999999
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.96,
+            "used": [
+              {
+                "p": 0.96,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.95,
+          "fees": 0.01,
+          "normalNet": -0.96
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 0.6000000000000005,
+            "used": [
+              {
+                "p": 0.06000000000000005,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.5000000000000004,
+            "used": [
+              {
+                "p": 0.050000000000000044,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.899999999999999,
+          "fees": 0.07,
+          "normalNet": 8.83
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 9.9,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 9.6,
+            "used": [
+              {
+                "p": 0.96,
+                "q": 10
+              }
+            ]
+          },
+          "gross": -9.5,
+          "fees": 0.04,
+          "normalNet": -9.54
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811140807,
+        "responseAt": 1790811140857,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811140479,
+        "responseAt": 1790811140535,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:00.171945114Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "10f8a88ace235135300342cd7054a83ae02333e4624f16d8cb41c97709411a7a"
+    },
+    {
+      "pairId": "KXVOTEGENERAL-GOVPARTYCA-26XBEC-70::ewc-usgub-ca-2026-11-03-xavbec",
+      "event": "Will Xavier Becerra receive at least 70% of the popular vote in the 2026 California gubernatorial election?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810981662,
+      "nativeCheckedAt": 1790811142453,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.06000000000000005,
+            "used": [
+              {
+                "p": 0.06000000000000005,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.050000000000000044,
+            "used": [
+              {
+                "p": 0.050000000000000044,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.8899999999999999,
+          "fees": 0.01,
+          "normalNet": 0.8799999999999999
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": null,
+          "poly": {
+            "cost": 0.96,
+            "used": [
+              {
+                "p": 0.96,
+                "q": 1
+              }
+            ]
+          },
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 0.6000000000000005,
+            "used": [
+              {
+                "p": 0.06000000000000005,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.5000000000000004,
+            "used": [
+              {
+                "p": 0.050000000000000044,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.899999999999999,
+          "fees": 0.07,
+          "normalNet": 8.83
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": null,
+          "poly": {
+            "cost": 9.6,
+            "used": [
+              {
+                "p": 0.96,
+                "q": 10
+              }
+            ]
+          },
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811142405,
+        "responseAt": 1790811142453,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811142073,
+        "responseAt": 1790811142129,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:00.171945114Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "688c38b32bb12ebcca741f034125b4300716ac284e7a884a4b88820f9e1dfeb6"
+    },
+    {
+      "pairId": "KXVOTEGENERAL-GOVPARTYCA-26SHIL-30::ewc-usgub-ca-2026-11-03-stehil",
+      "event": "Will Steve Hilton receive at least 30% of the popular vote in the 2026 California gubernatorial election?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810982993,
+      "nativeCheckedAt": 1790811144064,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": null,
+          "poly": {
+            "cost": 0.97,
+            "used": [
+              {
+                "p": 0.97,
+                "q": 1
+              }
+            ]
+          },
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.06999999999999995,
+            "used": [
+              {
+                "p": 0.06999999999999995,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.04,
+            "used": [
+              {
+                "p": 0.04,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.89,
+          "fees": 0.01,
+          "normalNet": 0.88
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": null,
+          "poly": {
+            "cost": 9.7,
+            "used": [
+              {
+                "p": 0.97,
+                "q": 10
+              }
+            ]
+          },
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 0.6999999999999995,
+            "used": [
+              {
+                "p": 0.06999999999999995,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.4,
+            "used": [
+              {
+                "p": 0.04,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.9,
+          "fees": 0.08,
+          "normalNet": 8.82
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811144005,
+        "responseAt": 1790811144064,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811143661,
+        "responseAt": 1790811143724,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:31:47.885689766Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "0044b4232cfc66a71b1efa023e9c33edd06548674e5b8db24639241121417bd6"
+    },
+    {
+      "pairId": "KXHOUSERACE-LA01-26-D::paccc-usho-midterms-2026-11-03-dem",
+      "event": "Will Democratic win the House race for LA-01?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810995490,
+      "nativeCheckedAt": 1790811145654,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.025000000000000022,
+            "used": [
+              {
+                "p": 0.025000000000000022,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.08699999999999997,
+            "used": [
+              {
+                "p": 0.08699999999999997,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.888,
+          "fees": 0.02,
+          "normalNet": 0.868
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.997,
+            "used": [
+              {
+                "p": 0.997,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.914,
+            "used": [
+              {
+                "p": 0.914,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.911,
+          "fees": 0.02,
+          "normalNet": -0.931
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 0.2500000000000002,
+            "used": [
+              {
+                "p": 0.025000000000000022,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.8699999999999997,
+            "used": [
+              {
+                "p": 0.08699999999999997,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.88,
+          "fees": 0.08,
+          "normalNet": 8.8
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 9.97,
+            "used": [
+              {
+                "p": 0.997,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 9.14,
+            "used": [
+              {
+                "p": 0.914,
+                "q": 10
+              }
+            ]
+          },
+          "gross": -9.110000000000001,
+          "fees": 0.060000000000000005,
+          "normalNet": -9.170000000000002
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811145606,
+        "responseAt": 1790811145654,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811145272,
+        "responseAt": 1790811145333,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:22.468222435Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "313122b41f9876e994d885bbb6470484cfa001b0ad57c601652fcb795bc937d4"
+    },
+    {
+      "pairId": "KXMLBAWARDFIN-26ALCY-DCEASE84::tec-mlb-al-2026-11-27-cy-dylcea",
+      "event": "Will Dylan Cease be selected as a finalist for the Pro Baseball American League Cy Young in the 2026 season?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980695,
+      "nativeCheckedAt": 1790811147256,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.94,
+            "used": [
+              {
+                "p": 0.94,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.993,
+            "used": [
+              {
+                "p": 0.993,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.9329999999999999,
+          "fees": 0.01,
+          "normalNet": -0.943
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.09999999999999998,
+            "used": [
+              {
+                "p": 0.09999999999999998,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.008,
+            "used": [
+              {
+                "p": 0.008,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.892,
+          "fees": 0.01,
+          "normalNet": 0.882
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811147207,
+        "responseAt": 1790811147256,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811146875,
+        "responseAt": 1790811147072,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:04.453112431Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "782eccfb324f15097cd05d2b2910446f4bf60c8084c0c717a459b05c57789d91"
+    },
+    {
+      "pairId": "KXDHOUSESEATS-27-216::paccc-usho-midterms-2026-11-03-dem",
+      "event": "Will the Democratic party win 214-217 House seats in the 120th Congress?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810995491,
+      "nativeCheckedAt": 1790811158667,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.029000000000000026,
+            "used": [
+              {
+                "p": 0.029000000000000026,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.08699999999999997,
+            "used": [
+              {
+                "p": 0.08699999999999997,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.884,
+          "fees": 0.02,
+          "normalNet": 0.864
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.976,
+            "used": [
+              {
+                "p": 0.976,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.914,
+            "used": [
+              {
+                "p": 0.914,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.89,
+          "fees": 0.02,
+          "normalNet": -0.91
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 0.29000000000000026,
+            "used": [
+              {
+                "p": 0.029000000000000026,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.8699999999999997,
+            "used": [
+              {
+                "p": 0.08699999999999997,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.84,
+          "fees": 0.08,
+          "normalNet": 8.76
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 9.76,
+            "used": [
+              {
+                "p": 0.976,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 9.14,
+            "used": [
+              {
+                "p": 0.914,
+                "q": 10
+              }
+            ]
+          },
+          "gross": -8.9,
+          "fees": 0.07,
+          "normalNet": -8.97
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811148806,
+        "responseAt": 1790811148865,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811158529,
+        "responseAt": 1790811158667,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:37.484867132Z",
+        "attempts": 2
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": false,
+        "poly": true
+      },
+      "metadataSha256": "1adc4a685a9ca43c7a0ec4dd7dbf25760c1a36519f4b2c9ec3ed273d841abc6f"
+    },
+    {
+      "pairId": "KXMLBAWARDFIN-26NLCY-CSALE51::tec-mlb-nl-2026-11-27-cy-chrsal",
+      "event": "Will Chris Sale be selected as a finalist for the Pro Baseball National League Cy Young in the 2026 season?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980683,
+      "nativeCheckedAt": 1790811159939,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.94,
+            "used": [
+              {
+                "p": 0.94,
+                "q": 1
+              }
+            ]
+          },
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.10999999999999999,
+            "used": [
+              {
+                "p": 0.10999999999999999,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.001,
+            "used": [
+              {
+                "p": 0.001,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.889,
+          "fees": 0.01,
+          "normalNet": 0.879
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 9.43,
+            "used": [
+              {
+                "p": 0.94,
+                "q": 7
+              },
+              {
+                "p": 0.95,
+                "q": 3
+              }
+            ]
+          },
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 1.17,
+            "used": [
+              {
+                "p": 0.10999999999999999,
+                "q": 3
+              },
+              {
+                "p": 0.12,
+                "q": 7
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.01,
+            "used": [
+              {
+                "p": 0.001,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.82,
+          "fees": 0.09,
+          "normalNet": 8.73
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811159869,
+        "responseAt": 1790811159938,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811159545,
+        "responseAt": 1790811159613,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:30.437104967Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "4d5ec0e99e31909055963b5258322dc5e3366bdcdfab19d0c4c7dc97d4864189"
+    },
+    {
+      "pairId": "KXNBARETIRE-LJAMES23-2930::tec-nba-mvp-2027-05-17-w-lebjam",
+      "event": "Will LeBron James announce his retirement before the 2029-30 NBA season?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810985271,
+      "nativeCheckedAt": 1790811161537,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.9299999999999999,
+            "used": [
+              {
+                "p": 0.9299999999999999,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.9199999999999999,
+          "fees": 0.01,
+          "normalNet": -0.9299999999999999
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.08999999999999997,
+            "used": [
+              {
+                "p": 0.08999999999999997,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.02,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.89,
+          "fees": 0.01,
+          "normalNet": 0.88
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811161468,
+        "responseAt": 1790811161537,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811161129,
+        "responseAt": 1790811161181,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:28.171703812Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "ecfd555e3b68b945826e3ae08b4075b0d82967f64f6433b1eda7c915ad694b5d"
+    },
+    {
+      "pairId": "KXVOTEGENERAL-GOVAK-26DBRO-10::usgubewc-usgub-ak-2026-11-03-davbro",
+      "event": "Will Dave Bronson receive at least 10% of the popular vote in the first round of the 2026 Alaska gubernatorial election?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980653,
+      "nativeCheckedAt": 1790811163140,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.92,
+            "used": [
+              {
+                "p": 0.92,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.91,
+          "fees": 0.01,
+          "normalNet": -0.92
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.09999999999999998,
+            "used": [
+              {
+                "p": 0.09999999999999998,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.02,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.88,
+          "fees": 0.01,
+          "normalNet": 0.87
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 9.200000000000001,
+            "used": [
+              {
+                "p": 0.92,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 9.9,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 10
+              }
+            ]
+          },
+          "gross": -9.100000000000001,
+          "fees": 0.06999999999999999,
+          "normalNet": -9.170000000000002
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 0.9999999999999998,
+            "used": [
+              {
+                "p": 0.09999999999999998,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.2,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.8,
+          "fees": 0.08,
+          "normalNet": 8.72
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811163070,
+        "responseAt": 1790811163140,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811162739,
+        "responseAt": 1790811162800,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:30:35.151174617Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "48edcde8b1b7b6e40c2146c1766c8a656a7f18cd42ad3a900dd38589bf0d568b"
+    },
+    {
+      "pairId": "KXVOTEBR1-BRPRES26ACUR-2::ewc-pres-bra-2026-10-04-augcur",
+      "event": "Will Augusto Cury receive at least 2% of the popular vote in the first round of the 2026 Brazilian presidential election?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980702,
+      "nativeCheckedAt": 1790811164727,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.94,
+            "used": [
+              {
+                "p": 0.94,
+                "q": 1
+              }
+            ]
+          },
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.10999999999999999,
+            "used": [
+              {
+                "p": 0.10999999999999999,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.01,
+            "used": [
+              {
+                "p": 0.01,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.88,
+          "fees": 0.01,
+          "normalNet": 0.87
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 9.45,
+            "used": [
+              {
+                "p": 0.94,
+                "q": 5
+              },
+              {
+                "p": 0.95,
+                "q": 5
+              }
+            ]
+          },
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 1.0999999999999999,
+            "used": [
+              {
+                "p": 0.10999999999999999,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.1,
+            "used": [
+              {
+                "p": 0.01,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.8,
+          "fees": 0.08,
+          "normalNet": 8.72
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811164668,
+        "responseAt": 1790811164727,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811164340,
+        "responseAt": 1790811164401,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:29:28.501850293Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "b50e889732427d42588d10ae675443a9bd2fbfee2fef5293a52f8163806222cf"
+    },
+    {
+      "pairId": "KXENDORSECOLLINS-26NOV03-JAUC::ushrewc-ushr-ma-04-2026-11-03-dem",
+      "event": "Will Jake Auchincloss endorse Susan Collins in the 2026 Maine Senate election before Nov 3, 2026?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980751,
+      "nativeCheckedAt": 1790811166336,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.08999999999999997,
+            "used": [
+              {
+                "p": 0.08999999999999997,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.030000000000000027,
+            "used": [
+              {
+                "p": 0.030000000000000027,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.88,
+          "fees": 0.01,
+          "normalNet": 0.87
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.98,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.98,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.96,
+          "fees": 0.01,
+          "normalNet": -0.97
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 0.8999999999999997,
+            "used": [
+              {
+                "p": 0.08999999999999997,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.30000000000000027,
+            "used": [
+              {
+                "p": 0.030000000000000027,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.799999999999999,
+          "fees": 0.08,
+          "normalNet": 8.719999999999999
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 9.850000000000001,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 5
+              },
+              {
+                "p": 0.99,
+                "q": 5
+              }
+            ]
+          },
+          "poly": {
+            "cost": 9.8,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 10
+              }
+            ]
+          },
+          "gross": -9.650000000000002,
+          "fees": 0.03,
+          "normalNet": -9.680000000000001
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811166270,
+        "responseAt": 1790811166336,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811165936,
+        "responseAt": 1790811165992,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:29:22.717944222Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "2af7402ed43bfc0f2766f3afd7e8a83869ceeca3a0490e5a111354952ee1a0a5"
+    },
+    {
+      "pairId": "KXDHOUSESEATS-27-212::paccc-usho-midterms-2026-11-03-dem",
+      "event": "Will the Democratic party win 210-213 House seats in the 120th Congress?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810995491,
+      "nativeCheckedAt": 1790811167921,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.03300000000000003,
+            "used": [
+              {
+                "p": 0.03300000000000003,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.08699999999999997,
+            "used": [
+              {
+                "p": 0.08699999999999997,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.88,
+          "fees": 0.02,
+          "normalNet": 0.86
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.968,
+            "used": [
+              {
+                "p": 0.968,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.914,
+            "used": [
+              {
+                "p": 0.914,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.882,
+          "fees": 0.02,
+          "normalNet": -0.902
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 0.3300000000000003,
+            "used": [
+              {
+                "p": 0.03300000000000003,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.8699999999999997,
+            "used": [
+              {
+                "p": 0.08699999999999997,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 8.8,
+          "fees": 0.09,
+          "normalNet": 8.71
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 9.68088,
+            "used": [
+              {
+                "p": 0.968,
+                "q": 9.12
+              },
+              {
+                "p": 0.969,
+                "q": 0.8800000000000008
+              }
+            ]
+          },
+          "poly": {
+            "cost": 9.14,
+            "used": [
+              {
+                "p": 0.914,
+                "q": 10
+              }
+            ]
+          },
+          "gross": -8.82088,
+          "fees": 0.08,
+          "normalNet": -8.90088
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811167868,
+        "responseAt": 1790811167921,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811167543,
+        "responseAt": 1790811167610,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:41.538757180Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "ce3b8f2360041ec00e930cb62682a36c89ad307e53becd11685e0dc906196f2c"
+    },
+    {
+      "pairId": "KX20SONG-26DEC26-LAD::ccrc-sptfy-1-artst-us-yr-2026-ladgag",
+      "event": "Will Lady Gaga have a top 20 song this year?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810147051,
+      "nativeCheckedAt": 1790811179360,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.29000000000000004,
+            "used": [
+              {
+                "p": 0.29000000000000004,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.28,
+          "fees": 0.02,
+          "normalNet": -0.30000000000000004
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.8,
+            "used": [
+              {
+                "p": 0.8,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.02,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.17999999999999997,
+          "fees": 0.02,
+          "normalNet": 0.15999999999999998
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811169469,
+        "responseAt": 1790811169530,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811179199,
+        "responseAt": 1790811179360,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:28:13.889845353Z",
+        "attempts": 2
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      },
+      "metadataSha256": "de526698f1d6d63259989fdf803aeed99eeb948d38e4304a6965f1dc81b0ad9c"
+    },
+    {
+      "pairId": "KXCABOUT-26MAY22-BROL::ncpdc-trmpcab-nxtout-1-brorol",
+      "event": "Will Brooke Rollins be the next person to leave the Trump Cabinet?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980668,
+      "nativeCheckedAt": 1790811180678,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.06999999999999995,
+            "used": [
+              {
+                "p": 0.06999999999999995,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.05999999999999994,
+          "fees": 0.01,
+          "normalNet": -0.06999999999999994
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.97,
+            "used": [
+              {
+                "p": 0.97,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.02,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.010000000000000026,
+          "fees": 0.01,
+          "normalNet": 2.6020852139652106e-17
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811180563,
+        "responseAt": 1790811180678,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811180285,
+        "responseAt": 1790811180344,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:37.045227178Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "b27a5df19872521d4f7630cf4a4b6a92483ec4bbcb0561c67e94348f9ad1aa6e"
+    },
+    {
+      "pairId": "KXDANCINGWITHTHESTARS-26DEC31-JSTIL::rtc-dwts-s35-elim-2026-10-06-julsti",
+      "event": "Will Julia Stiles win Dancing with the Stars Season 35?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980772,
+      "nativeCheckedAt": 1790811182214,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.010000000000000009,
+            "used": [
+              {
+                "p": 0.010000000000000009,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.98,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.010000000000000009,
+          "fees": 0.01,
+          "normalNet": 8.673617379884035e-18
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": null,
+          "poly": {
+            "cost": 0.1296,
+            "used": [
+              {
+                "p": 0.03,
+                "q": 0.17
+              },
+              {
+                "p": 0.15,
+                "q": 0.83
+              }
+            ]
+          },
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811182162,
+        "responseAt": 1790811182214,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811181821,
+        "responseAt": 1790811181886,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:04.426987299Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "68a3a3b8b9e9545ee132c1519ab9de4481e4f222205918f5e7339da20ee77943"
+    },
+    {
+      "pairId": "KXDTICKET-28NOV07-AOCGWHI::enwc-uspres-vpnom-dem-2028-grewhi",
+      "event": "Will Alexandria Ocasio-Cortez and Gretchen Whitmer be the 2028 Democratic Presidential ticket?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980810,
+      "nativeCheckedAt": 1790811183814,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.010000000000000009,
+            "used": [
+              {
+                "p": 0.010000000000000009,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.98,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.010000000000000009,
+          "fees": 0.01,
+          "normalNet": 8.673617379884035e-18
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.999,
+            "used": [
+              {
+                "p": 0.999,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.03,
+            "used": [
+              {
+                "p": 0.03,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.028999999999999998,
+          "fees": 0.01,
+          "normalNet": -0.039
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811183763,
+        "responseAt": 1790811183814,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811183422,
+        "responseAt": 1790811183474,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:33:01.743546625Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "21d3a9fe525b83c417084bc8df1026465cb5fcfba08dde44d77069647663238d"
+    },
+    {
+      "pairId": "KX1ALBUM-26DEC-LAD::ccpc-bilbrd-1album-any2026-ladgag",
+      "event": "Will Lady Gaga have a #1 album this year?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810980862,
+      "nativeCheckedAt": 1790811185403,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.18000000000000005,
+            "used": [
+              {
+                "p": 0.18000000000000005,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.79,
+            "used": [
+              {
+                "p": 0.79,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.029999999999999916,
+          "fees": 0.03,
+          "normalNet": -8.500145032286355e-17
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.87,
+            "used": [
+              {
+                "p": 0.87,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.22,
+            "used": [
+              {
+                "p": 0.22,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.09,
+          "fees": 0.02,
+          "normalNet": -0.10999999999999999
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811185360,
+        "responseAt": 1790811185403,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811185027,
+        "responseAt": 1790811185083,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:24:34.983179109Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "534d33c7b0d3050327f3c37acf50a8641b009ef9320b27c6f15e8190814a96fb"
+    },
+    {
+      "pairId": "KXBALLONDORRANK-26T3-KKVA::tec-uefa-bdor-2026-10-26-w-khvkva",
+      "event": "Khvicha Kvaratskhelia: Top 3 in the 2026 men's Ballon d'Or?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810981002,
+      "nativeCheckedAt": 1790811187015,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.050000000000000044,
+            "used": [
+              {
+                "p": 0.050000000000000044,
+                "q": 1
+              }
+            ]
+          },
+          "poly": null,
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.98,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.01,
+            "used": [
+              {
+                "p": 0.01,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.010000000000000018,
+          "fees": 0.01,
+          "normalNet": 1.734723475976807e-17
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811186961,
+        "responseAt": 1790811187015,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811186630,
+        "responseAt": 1790811186682,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:31:31.036419005Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "fb1e01cb935fc5393225e6ab9dc3d2d64c7305f472afda1b8489c20301737b9a"
+    },
+    {
+      "pairId": "KXNFLRECYDS-26OCT01PITCLE-PITJWARREN30-60::astatc-nfl-pit-cle-2026-10-01-recyd-patfre-gte60",
+      "event": "Jaylen Warren: 60+ receiving yards",
+      "matchSource": "SPORTS_EVENT",
+      "inverted": false,
+      "originalObservedAt": 1790810981294,
+      "nativeCheckedAt": 1790811198434,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.10999999999999999,
+            "used": [
+              {
+                "p": 0.10999999999999999,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.87,
+            "used": [
+              {
+                "p": 0.87,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.020000000000000018,
+          "fees": 0.02,
+          "normalNet": 1.734723475976807e-17
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.92,
+            "used": [
+              {
+                "p": 0.92,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.14,
+            "used": [
+              {
+                "p": 0.14,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.06000000000000005,
+          "fees": 0.02,
+          "normalNet": -0.08000000000000004
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811188563,
+        "responseAt": 1790811188609,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811198280,
+        "responseAt": 1790811198434,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:28:00.650771468Z",
+        "attempts": 2
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      },
+      "metadataSha256": "4c80b97b84d89660edfd4dfc548cd382c9c793ad9318d4af08ad2967c748071d"
+    },
+    {
+      "pairId": "KXDECLAREPRESFIRSTD-28NOV01-KHAR::ewc-usp-2028-11-07-kamhar",
+      "event": "Will Kamala Harris be first this list to declare for 2028 United States presidential election before Nov 1, 2028?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810985267,
+      "nativeCheckedAt": 1790811199756,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.06000000000000005,
+            "used": [
+              {
+                "p": 0.06000000000000005,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.97,
+            "used": [
+              {
+                "p": 0.97,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.030000000000000027,
+          "fees": 0.01,
+          "normalNet": -0.04000000000000003
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.95,
+            "used": [
+              {
+                "p": 0.95,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.04,
+            "used": [
+              {
+                "p": 0.04,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.010000000000000044,
+          "fees": 0.01,
+          "normalNet": 4.336808689942018e-17
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811199637,
+        "responseAt": 1790811199755,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811199302,
+        "responseAt": 1790811199356,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:33:12.563431624Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "08119c840c1fa0979ff8431425152dd0b88f298c73115053d575e181953e5896"
+    },
+    {
+      "pairId": "KXDANCINGWITHTHESTARS-26DEC31-JSTIL::rtc-dwts-s35-2-2026-11-17-julsti",
+      "event": "Will Julia Stiles win Dancing with the Stars Season 35?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810994428,
+      "nativeCheckedAt": 1790811201302,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.010000000000000009,
+            "used": [
+              {
+                "p": 0.010000000000000009,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.98,
+            "used": [
+              {
+                "p": 0.98,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.010000000000000009,
+          "fees": 0.01,
+          "normalNet": 8.673617379884035e-18
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": null,
+          "poly": {
+            "cost": 0.03,
+            "used": [
+              {
+                "p": 0.03,
+                "q": 1
+              }
+            ]
+          },
+          "gross": null,
+          "fees": null,
+          "normalNet": null
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811201237,
+        "responseAt": 1790811201302,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811200902,
+        "responseAt": 1790811200968,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:31:33.015393399Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "34b5fcaf7b5f7fd8728e5869a3970c330c7a294a1974a5f2fa4782d93f18fdcf"
+    },
+    {
+      "pairId": "KXPGATOUR-BAOUC26-MWAL::tec-pga-bankutah-2026-10-01-w-matwal",
+      "event": "Bank of Utah Championship: Matt Wallace wins",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790810995752,
+      "nativeCheckedAt": 1790811202902,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic_with_maker_fees",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.030000000000000027,
+            "used": [
+              {
+                "p": 0.030000000000000027,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.96,
+            "used": [
+              {
+                "p": 0.96,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.010000000000000009,
+          "fees": 0.01,
+          "normalNet": 8.673617379884035e-18
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.971,
+            "used": [
+              {
+                "p": 0.971,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.047,
+            "used": [
+              {
+                "p": 0.047,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.017999999999999974,
+          "fees": 0.01,
+          "normalNet": -0.027999999999999976
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811202837,
+        "responseAt": 1790811202902,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811202508,
+        "responseAt": 1790811202567,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:33:19.080001613Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "6ccdfa40a16fd6a12fce55dc56864c644ae68caa6bfbd097f0fd8872c15321a7"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26MSST-5::aachc-cfb-wins-ou-2026-11-28-mspst",
+      "event": "Will Mississippi St. win at least 5 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810981112,
+      "nativeCheckedAt": 1790811204489,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.96,
+            "used": [
+              {
+                "p": 0.96,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.15000000000000002,
+            "used": [
+              {
+                "p": 0.15000000000000002,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.10999999999999999,
+          "fees": 0.02,
+          "normalNet": -0.12999999999999998
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.06999999999999995,
+            "used": [
+              {
+                "p": 0.06999999999999995,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.86,
+            "used": [
+              {
+                "p": 0.86,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.07000000000000006,
+          "fees": 0.02,
+          "normalNet": 0.05000000000000006
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811204436,
+        "responseAt": 1790811204489,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811204121,
+        "responseAt": 1790811204183,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:06.030277043Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "73e4d8f5fb9e829572686d9387b420a071bae49405df5c960a264183710dcdd4"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26NW-6::aachc-cfb-wins-ou-2026-11-28-nw",
+      "event": "Will Northwestern win at least 6 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810983260,
+      "nativeCheckedAt": 1790811206087,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.74,
+            "used": [
+              {
+                "p": 0.74,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.42000000000000004,
+            "used": [
+              {
+                "p": 0.42000000000000004,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.16000000000000003,
+          "fees": 0.04,
+          "normalNet": -0.2
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.31999999999999995,
+            "used": [
+              {
+                "p": 0.31999999999999995,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.59,
+            "used": [
+              {
+                "p": 0.59,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.09000000000000008,
+          "fees": 0.04,
+          "normalNet": 0.05000000000000007
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811206034,
+        "responseAt": 1790811206087,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811205703,
+        "responseAt": 1790811205761,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:02.705879968Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "e652c90cb73f6dcef134b8db12a6b382fcf963370cc245413304c313e72a6fb9"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26UK-5::aachc-cfb-wins-ou-2026-11-28-uk",
+      "event": "Will Kentucky win at least 5 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810981072,
+      "nativeCheckedAt": 1790811207688,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.83,
+            "used": [
+              {
+                "p": 0.83,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.32999999999999996,
+            "used": [
+              {
+                "p": 0.32999999999999996,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.15999999999999992,
+          "fees": 0.03,
+          "normalNet": -0.18999999999999992
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.24,
+            "used": [
+              {
+                "p": 0.24,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.68,
+            "used": [
+              {
+                "p": 0.68,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.07999999999999996,
+          "fees": 0.04,
+          "normalNet": 0.03999999999999995
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811207635,
+        "responseAt": 1790811207688,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811207347,
+        "responseAt": 1790811207406,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:33:06.580672569Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "ff598bc62eeac51aad7d8e6b08af530540040ab43d9bdcca51455b78698c850f"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26VAN-6::aachc-cfb-wins-ou-2026-11-28-vand",
+      "event": "Will Vanderbilt win at least 6 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810981117,
+      "nativeCheckedAt": 1790811219147,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.38,
+            "used": [
+              {
+                "p": 0.38,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.54,
+            "used": [
+              {
+                "p": 0.54,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.07999999999999996,
+          "fees": 0.04,
+          "normalNet": 0.03999999999999995
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.6699999999999999,
+            "used": [
+              {
+                "p": 0.6699999999999999,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.47,
+            "used": [
+              {
+                "p": 0.47,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.1399999999999999,
+          "fees": 0.04,
+          "normalNet": -0.17999999999999988
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811209237,
+        "responseAt": 1790811209298,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811218956,
+        "responseAt": 1790811219147,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:06.027004101Z",
+        "attempts": 2
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      },
+      "metadataSha256": "11ffb15c488ee986c97fbe0a97e55938416213a81fef97d76f57428ec868288d"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26ALA-9::aachc-cfb-wins-ou-2026-11-28-ala",
+      "event": "Will Alabama win at least 9 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810981130,
+      "nativeCheckedAt": 1790811220400,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.72,
+            "used": [
+              {
+                "p": 0.72,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.39,
+            "used": [
+              {
+                "p": 0.39,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.10999999999999999,
+          "fees": 0.04,
+          "normalNet": -0.14999999999999997
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.30000000000000004,
+            "used": [
+              {
+                "p": 0.30000000000000004,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.62,
+            "used": [
+              {
+                "p": 0.62,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.07999999999999996,
+          "fees": 0.04,
+          "normalNet": 0.03999999999999995
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811220348,
+        "responseAt": 1790811220400,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811220010,
+        "responseAt": 1790811220081,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:11.154392700Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "cb3c566d9d82ee1ef9a829696efe4ef51a8fe97d87829d6499c6a60c3fe2fec6"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26UTAH-9::aachc-cfb-wins-ou-2026-11-28-utah",
+      "event": "Will Utah win at least 9 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810995495,
+      "nativeCheckedAt": 1790811222005,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.85,
+            "used": [
+              {
+                "p": 0.85,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.26,
+            "used": [
+              {
+                "p": 0.26,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.10999999999999999,
+          "fees": 0.02,
+          "normalNet": -0.12999999999999998
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.18000000000000005,
+            "used": [
+              {
+                "p": 0.18000000000000005,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.75,
+            "used": [
+              {
+                "p": 0.75,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.06999999999999995,
+          "fees": 0.03,
+          "normalNet": 0.039999999999999945
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811221950,
+        "responseAt": 1790811222005,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811221608,
+        "responseAt": 1790811221654,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:34.745927701Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "c114f6a55bd1aa18f8285d4b4f9151cce87227c976bb5736235d5c98cb4ee865"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26TXAM-9::aachc-cfb-wins-ou-2026-11-28-txam",
+      "event": "Will Texas A&M win at least 9 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810996025,
+      "nativeCheckedAt": 1790811223599,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.12,
+            "used": [
+              {
+                "p": 0.12,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.8200000000000001,
+            "used": [
+              {
+                "p": 0.8200000000000001,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.05999999999999994,
+          "fees": 0.02,
+          "normalNet": 0.03999999999999994
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.91,
+            "used": [
+              {
+                "p": 0.91,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.19,
+            "used": [
+              {
+                "p": 0.19,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.10000000000000003,
+          "fees": 0.02,
+          "normalNet": -0.12000000000000002
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811223546,
+        "responseAt": 1790811223599,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811223232,
+        "responseAt": 1790811223291,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:33:42.791221407Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": true
+      },
+      "metadataSha256": "49eae476d47bd75ef4200c1445d652e7b1a8f44fa4cee500ba29ad437cc1c52e"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26CLEM-8::aachc-cfb-wins-ou-2026-11-28-clmsn",
+      "event": "Will Clemson win at least 8 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810981120,
+      "nativeCheckedAt": 1790811225198,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.41000000000000003,
+            "used": [
+              {
+                "p": 0.41000000000000003,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.52,
+            "used": [
+              {
+                "p": 0.52,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.06999999999999995,
+          "fees": 0.04,
+          "normalNet": 0.029999999999999947
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.63,
+            "used": [
+              {
+                "p": 0.63,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.49,
+            "used": [
+              {
+                "p": 0.49,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.12,
+          "fees": 0.04,
+          "normalNet": -0.15999999999999998
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811225149,
+        "responseAt": 1790811225198,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811224806,
+        "responseAt": 1790811224877,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:32:40.153455321Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "abc44354b9cff8258bd05236315cc9337226e465af9a75d874cce1bb56c51bb7"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26VT-7::aachc-cfb-wins-ou-2026-11-28-vtech",
+      "event": "Will Virginia Tech win at least 7 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810981643,
+      "nativeCheckedAt": 1790811226797,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.88,
+            "used": [
+              {
+                "p": 0.88,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.22999999999999998,
+            "used": [
+              {
+                "p": 0.22999999999999998,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.10999999999999999,
+          "fees": 0.02,
+          "normalNet": -0.12999999999999998
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.17000000000000004,
+            "used": [
+              {
+                "p": 0.17000000000000004,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.78,
+            "used": [
+              {
+                "p": 0.78,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.04999999999999993,
+          "fees": 0.02,
+          "normalNet": 0.02999999999999993
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811226748,
+        "responseAt": 1790811226797,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811226408,
+        "responseAt": 1790811226462,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:33:44.590780049Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "89ea07299ffab269ee92cf5b7c5058bb717da5d6a81ca2a16f2135325d922938"
+    },
+    {
+      "pairId": "KXGROK-GROK5-27JAN01::aimc-xai-grok-5-2026-12-31",
+      "event": "Will xAI release Grok 5 before Jan 1, 2027?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810980644,
+      "nativeCheckedAt": 1790811238237,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.51,
+            "used": [
+              {
+                "p": 0.51,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.43000000000000005,
+            "used": [
+              {
+                "p": 0.43000000000000005,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.05999999999999994,
+          "fees": 0.04,
+          "normalNet": 0.019999999999999938
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.55,
+            "used": [
+              {
+                "p": 0.55,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.58,
+            "used": [
+              {
+                "p": 0.58,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.13,
+          "fees": 0.04,
+          "normalNet": -0.16999999999999998
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811228348,
+        "responseAt": 1790811228422,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811238061,
+        "responseAt": 1790811238237,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:33:48.159097247Z",
+        "attempts": 2
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": false,
+        "poly": false
+      },
+      "metadataSha256": "3204086b67c1aff6679ed6190228aa2b9a42e7db07da75199e8c1e7ad199a365"
+    },
+    {
+      "pairId": "HOUSEAKAL-26-R::paccc-usho-midterms-2026-11-03-rep",
+      "event": "Will Republican win the House race for AK-AL?",
+      "matchSource": "TEXT",
+      "inverted": false,
+      "originalObservedAt": 1790809928836,
+      "nativeCheckedAt": 1790811345781,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.86,
+            "used": [
+              {
+                "p": 0.86,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.91,
+            "used": [
+              {
+                "p": 0.91,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.77,
+          "fees": 0.02,
+          "normalNet": -0.79
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.15000000000000002,
+            "used": [
+              {
+                "p": 0.15000000000000002,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.091,
+            "used": [
+              {
+                "p": 0.091,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.759,
+          "fees": 0.02,
+          "normalNet": 0.739
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 8.6,
+            "used": [
+              {
+                "p": 0.86,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 9.1,
+            "used": [
+              {
+                "p": 0.91,
+                "q": 10
+              }
+            ]
+          },
+          "gross": -7.699999999999999,
+          "fees": 0.15,
+          "normalNet": -7.849999999999999
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "kalshi": {
+            "cost": 1.5000000000000002,
+            "used": [
+              {
+                "p": 0.15000000000000002,
+                "q": 10
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.9099999999999999,
+            "used": [
+              {
+                "p": 0.091,
+                "q": 10
+              }
+            ]
+          },
+          "gross": 7.59,
+          "fees": 0.15,
+          "normalNet": 7.44
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811345727,
+        "responseAt": 1790811345780,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811345380,
+        "responseAt": 1790811345478,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:35:41.606664143Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "4f090aa824a56704a8f5e5df8d28adfba008556f4a3cbbf0f08527f610b03eb1"
+    },
+    {
+      "pairId": "KXNCAAFWINS-26PUR-4::aachc-cfb-wins-ou-2026-11-28-pur",
+      "event": "Will Purdue win at least 4 games this season?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810456527,
+      "nativeCheckedAt": 1790811347394,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.28,
+            "used": [
+              {
+                "p": 0.28,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.6699999999999999,
+            "used": [
+              {
+                "p": 0.6699999999999999,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.050000000000000044,
+          "fees": 0.04,
+          "normalNet": 0.010000000000000044
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.75,
+            "used": [
+              {
+                "p": 0.75,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.34,
+            "used": [
+              {
+                "p": 0.34,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.09000000000000002,
+          "fees": 0.04,
+          "normalNet": -0.13000000000000003
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 4,
+          "kalshi": {
+            "cost": 1.12,
+            "used": [
+              {
+                "p": 0.28,
+                "q": 4
+              }
+            ]
+          },
+          "poly": {
+            "cost": 2.6799999999999997,
+            "used": [
+              {
+                "p": 0.6699999999999999,
+                "q": 4
+              }
+            ]
+          },
+          "gross": 0.20000000000000018,
+          "fees": 0.12,
+          "normalNet": 0.08000000000000018
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 4,
+          "kalshi": {
+            "cost": 3,
+            "used": [
+              {
+                "p": 0.75,
+                "q": 4
+              }
+            ]
+          },
+          "poly": {
+            "cost": 1.36,
+            "used": [
+              {
+                "p": 0.34,
+                "q": 4
+              }
+            ]
+          },
+          "gross": -0.3600000000000001,
+          "fees": 0.12,
+          "normalNet": -0.4800000000000001
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811347329,
+        "responseAt": 1790811347394,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811346991,
+        "responseAt": 1790811347039,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:33:05.310547484Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "f97ef4e39e7d246a8fe7b0947ed87b67bd345d773beb29122d2450ef7c4cb04b"
+    },
+    {
+      "pairId": "KXIPO-26-MISTRAL::ipcc-2026ipos-mistral-ai",
+      "event": "Who will IPO before 2027?",
+      "matchSource": "CANONICAL",
+      "inverted": false,
+      "originalObservedAt": 1790810897084,
+      "nativeCheckedAt": 1790811348974,
+      "currentFeeMetadata": {
+        "kRate": 0.07,
+        "pRate": 0.0695,
+        "feeType": "quadratic_with_maker_fees",
+        "multiplier": 1
+      },
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.08999999999999997,
+            "used": [
+              {
+                "p": 0.08999999999999997,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.99,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 1
+              }
+            ]
+          },
+          "gross": -0.07999999999999996,
+          "fees": 0.01,
+          "normalNet": -0.08999999999999996
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "kalshi": {
+            "cost": 0.97,
+            "used": [
+              {
+                "p": 0.97,
+                "q": 1
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.02,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 1
+              }
+            ]
+          },
+          "gross": 0.010000000000000026,
+          "fees": 0.01,
+          "normalNet": 2.6020852139652106e-17
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 3,
+          "kalshi": {
+            "cost": 0.2699999999999999,
+            "used": [
+              {
+                "p": 0.08999999999999997,
+                "q": 3
+              }
+            ]
+          },
+          "poly": {
+            "cost": 2.9699999999999998,
+            "used": [
+              {
+                "p": 0.99,
+                "q": 3
+              }
+            ]
+          },
+          "gross": -0.23999999999999977,
+          "fees": 0.02,
+          "normalNet": -0.2599999999999998
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 3,
+          "kalshi": {
+            "cost": 2.91,
+            "used": [
+              {
+                "p": 0.97,
+                "q": 3
+              }
+            ]
+          },
+          "poly": {
+            "cost": 0.06,
+            "used": [
+              {
+                "p": 0.02,
+                "q": 3
+              }
+            ]
+          },
+          "gross": 0.02999999999999986,
+          "fees": 0.01,
+          "normalNet": 0.019999999999999858
+        }
+      ],
+      "kalshi": {
+        "requestAt": 1790811348928,
+        "responseAt": 1790811348974,
+        "age": null,
+        "cache": null,
+        "attempts": 1
+      },
+      "poly": {
+        "requestAt": 1790811348585,
+        "responseAt": 1790811348636,
+        "age": null,
+        "cache": "MISS",
+        "exchangeAt": "2026-09-30T23:34:21.394726144Z",
+        "attempts": 1
+      },
+      "appearedAsPositiveDuringWindow": true,
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      },
+      "metadataSha256": "fba509434fa0ae8adffc665fb0b898fc080d19e4fd5ded6ddfb8015f257de1d0"
+    }
+  ],
+  "totals": {
+    "checked": 43,
+    "uniqueRoutes": 43,
+    "failed": 0,
+    "normalFeePositive": 34,
+    "canonicalPositive": 12,
+    "nativePositiveNotPreviouslySurfaced": 0,
+    "arithmeticCases": 112,
+    "arithmeticMismatches": 0,
+    "nativePositiveSuppressedByDetector": 0,
+    "strictEquivalentArbs": 0,
+    "strictEquivalenceClaim": "UNPROVEN — DO NOT INFER ABSENCE FROM THIS ZERO"
+  }
+}

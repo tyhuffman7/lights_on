@@ -1,0 +1,36 @@
+{
+  "sourceCommit": "60a770f5a7dbdc659d3185d115621be9ff4ac4de",
+  "ciMergeCommit": "eba2fdec287c2626131cf32376a1cc59da08ed3c",
+  "parents": [
+    "a200abf36cd590c894f936dbe1d6f4c81f461468",
+    "60a770f5a7dbdc659d3185d115621be9ff4ac4de"
+  ],
+  "runId": 36946033039,
+  "url": "https://github.com/tyhuffman7/lights_on/actions/runs/36946033039",
+  "totals": [
+    "# tests 1103",
+    "# pass 1103",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0"
+  ],
+  "results": [
+    {
+      "name": "install",
+      "exitCode": 0
+    },
+    {
+      "name": "tests",
+      "exitCode": 0
+    },
+    {
+      "name": "types",
+      "exitCode": 0
+    },
+    {
+      "name": "build",
+      "exitCode": 0
+    }
+  ],
+  "verifiedAt": "2026-10-02T00:29:21.911Z"
+}

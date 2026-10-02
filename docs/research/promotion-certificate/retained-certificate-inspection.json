@@ -1,0 +1,1324 @@
+{
+  "reviewedFamilies": 7,
+  "rows": [
+    {
+      "source": "retained-120",
+      "rank": 27,
+      "family": "season-wins",
+      "a": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes.",
+      "b": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins. Statistics are based on official regular season games only. Conference championship games, bowl games, and college football playoff games do not count. Outcome sourced from the relevant governing body.",
+      "certificate": {
+        "version": 1,
+        "family": "season-wins",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "comparator",
+          "threshold",
+          "unit",
+          "timeframe",
+          "period",
+          "scope",
+          "settlementScope",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "season-wins",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "season-wins",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "nebraska",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "nebraska",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "cfb",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "cfb",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "team-wins",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "team-wins",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "comparator",
+            "left": {
+              "value": "gte",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "gte",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "threshold",
+            "left": {
+              "value": "7",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "7",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Integer win support: > x = >= floor(x)+1; >= x = >= ceil(x); comparator also required equal",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "unit",
+            "left": {
+              "value": "wins",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "wins",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "2026:regular-season",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "2026:regular-season",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "period",
+            "left": {
+              "value": "regular-season",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "regular-season",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "scope",
+            "left": {
+              "value": "team",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "team",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "settlementScope",
+            "left": {
+              "value": "all-regular-season-games",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "all-regular-season-games",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If the Nebraska college football team has at least 7 wins in the 2026 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if Nebraska finishes the 2026 College Football regular season with over 6.5 wins. Statistics are based on official regular season games only. Conference championship games, bowl games, and college football playoff games do not count. Outcome sourced from the relevant governing body."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      },
+      "inspection": "Agent read both native payout clauses and all required evidence; normalized subject, metric, season, stage and scope supported; only exceptional branches remain. Not independent human review."
+    },
+    {
+      "source": "retained-120",
+      "rank": 38,
+      "family": "named-list-award",
+      "a": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes.",
+      "b": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes. Outcome verified by TIME Magazine.",
+      "certificate": {
+        "version": 1,
+        "family": "named-list-award",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "comparator",
+          "threshold",
+          "timeframe",
+          "geography",
+          "outcome",
+          "conditions",
+          "awardEvent",
+          "awardCategory",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "named-list-award",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "named-list-award",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "dario amodei",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "dario amodei",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "time",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "time",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "person-of-the-year",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "person-of-the-year",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "comparator",
+            "left": {
+              "value": "eq",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "eq",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "threshold",
+            "left": {
+              "value": "1",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "1",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "2026",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "2026",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "geography",
+            "left": {
+              "value": "publisher-scope",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "publisher-scope",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "outcome",
+            "left": {
+              "value": "named",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "named",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "awardEvent",
+            "left": {
+              "value": "time",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "time",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "awardCategory",
+            "left": {
+              "value": "person-of-the-year",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "person-of-the-year",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If Dario Amodei is Time Person of the Year for 2026, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "If Dario Amodei is TIME Person of the Year in 2026, this market will settle to Yes. Outcome verified by TIME Magazine."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing",
+          "Shared awards, rescission and source finality"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      },
+      "inspection": "Agent read both native payout clauses and all required evidence; normalized subject, metric, season, stage and scope supported; only exceptional branches remain. Not independent human review."
+    },
+    {
+      "source": "retained-120",
+      "rank": 41,
+      "family": "championship",
+      "a": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes.",
+      "b": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals. Outcome sourced from the NHL.",
+      "certificate": {
+        "version": 1,
+        "family": "championship",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "timeframe",
+          "stage",
+          "scope",
+          "settlementScope",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "championship",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "championship",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "anaheim ducks",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "anaheim ducks",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals"
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "nhl",
+              "evidence": "{\"primary\":\"If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes.\",\"title\":\"Will the Anaheim Ducks win the Western Conference Finals?\",\"competition\":\"nhl\"}"
+            },
+            "right": {
+              "value": "nhl",
+              "evidence": "{\"primary\":\"This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals\",\"title\":\"Anaheim Ducks \u00b7 NHL Western Conference Champion\",\"competition\":\"nhl\"}"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "champion",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "champion",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals"
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "season-ending:2027",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "season-ending:2027",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals"
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "stage",
+            "left": {
+              "value": "conference:western conference",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "conference:western conference",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals"
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "scope",
+            "left": {
+              "value": "team",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "team",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "settlementScope",
+            "left": {
+              "value": "conference:western conference",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "conference:western conference",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals"
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If the Anaheim Ducks win the 2026-27 NHL Western Conference Finals, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if the Anaheim Ducks win the 2027 NHL Western Conference Finals. Outcome sourced from the NHL."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      },
+      "inspection": "Agent read both native payout clauses and all required evidence; normalized subject, metric, season, stage and scope supported; only exceptional branches remain. Not independent human review."
+    },
+    {
+      "source": "retained-120",
+      "rank": 42,
+      "family": "qualification",
+      "a": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes.",
+      "b": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship. Outcome sourced from the relevant governing body.",
+      "certificate": {
+        "version": 1,
+        "family": "qualification",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "timeframe",
+          "stage",
+          "scope",
+          "settlementScope",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "qualification",
+              "evidence": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "qualification",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "texas tech",
+              "evidence": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "texas tech",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship"
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "cfb",
+              "evidence": "{\"primary\":\"If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes.\",\"title\":\"Will Texas Tech reach the College Football Playoff National Championship Game?\",\"competition\":\"cfb\"}"
+            },
+            "right": {
+              "value": "cfb",
+              "evidence": "{\"primary\":\"This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship\",\"title\":\"Texas Tech \u00b7 College Football Playoff Final Qualifiers\",\"competition\":\"cfb\"}"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "advancement",
+              "evidence": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "advancement",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship"
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "season:2026",
+              "evidence": "{\"eventId\":\"KXNCAAFFINALIST-27\",\"title\":\"College Football National Championship Qualifiers\",\"subtitle\":\"2026-27\",\"source\":\"https://external-api.kalshi.com/trade-api/v2/events/KXNCAAFFINALIST-27\",\"at\":1790880000000}"
+            },
+            "right": {
+              "value": "season:2026",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship"
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "stage",
+            "left": {
+              "value": "championship-final",
+              "evidence": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "championship-final",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship"
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "scope",
+            "left": {
+              "value": "team",
+              "evidence": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "team",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "settlementScope",
+            "left": {
+              "value": "championship-final",
+              "evidence": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "championship-final",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship"
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If Texas Tech is one of the teams to reach the College Football Playoff National Championship Game, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if Texas Tech advances to the 2026-27 College Football Playoff National Championship. Outcome sourced from the relevant governing body."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      },
+      "inspection": "Agent read both native payout clauses and all required evidence; normalized subject, metric, season, stage and scope supported; only exceptional branches remain. Not independent human review."
+    },
+    {
+      "source": "retained-120",
+      "rank": 44,
+      "family": "ceremony-award",
+      "a": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes.",
+      "b": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards. Outcome sourced from Academy of Motion Picture Arts and Sciences.",
+      "certificate": {
+        "version": 1,
+        "family": "ceremony-award",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "comparator",
+          "threshold",
+          "timeframe",
+          "geography",
+          "outcome",
+          "conditions",
+          "awardEvent",
+          "awardCategory",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "ceremony-award",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "ceremony-award",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "robert pattinson",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "robert pattinson",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "99th academy awards",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "99th academy awards",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "best actor",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "best actor",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "comparator",
+            "left": {
+              "value": "eq",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "eq",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "threshold",
+            "left": {
+              "value": "1",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "1",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "99th academy awards",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "99th academy awards",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "geography",
+            "left": {
+              "value": "ceremony-scope",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "ceremony-scope",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "outcome",
+            "left": {
+              "value": "winner",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "winner",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "awardEvent",
+            "left": {
+              "value": "99th academy awards",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "99th academy awards",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "awardCategory",
+            "left": {
+              "value": "best actor",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "best actor",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards. Outcome sourced from Academy of Motion Picture Arts and Sciences."
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If Robert Pattinson has won Best Actor at the 99th Academy Awards, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if Robert Pattinson wins Best Actor at the 99th Academy Awards. Outcome sourced from Academy of Motion Picture Arts and Sciences."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing",
+          "Shared awards, rescission and source finality"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      },
+      "inspection": "Agent read both native payout clauses and all required evidence; normalized subject, metric, season, stage and scope supported; only exceptional branches remain. Not independent human review."
+    },
+    {
+      "source": "retained-120",
+      "rank": 60,
+      "family": "statistic-leader",
+      "a": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes.",
+      "b": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season. If two or more players tie, each tied player's market will settle at $1.00 divided by the number of tied players. Outcome sourced from the relevant governing body.",
+      "certificate": {
+        "version": 1,
+        "family": "statistic-leader",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "outcome",
+          "timeframe",
+          "period",
+          "scope",
+          "settlementScope",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "statistic-leader",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "statistic-leader",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "derrick henry",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "derrick henry",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "nfl",
+              "evidence": "{\"primary\":\"If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes.\",\"title\":\"Will Derrick Henry lead Pro Football in rushing yards for the 2026-2027 regular season?\"}"
+            },
+            "right": {
+              "value": "nfl",
+              "evidence": "{\"primary\":\"This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season\",\"title\":\"Derrick Henry \u00b7 Regular Season Rushing Yards Leader\",\"competition\":\"nfl\"}"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "rushing-yards",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "rushing-yards",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "outcome",
+            "left": {
+              "value": "maximum",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "maximum",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "season:2026",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "season:2026",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "period",
+            "left": {
+              "value": "regular-season",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "regular-season",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "scope",
+            "left": {
+              "value": "player",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "player",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "settlementScope",
+            "left": {
+              "value": "regular-season",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "regular-season",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Explicit native reached stage, championship level or counted scope; no top-N-to-knockout inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If Derrick Henry leads Pro Football in rushing yards for the 2026-2027 regular season, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "This market will settle to Yes if Derrick Henry records the most rushing yards in the 2026 Pro Football regular season. If two or more players tie, each tied player's market will settle at $1.00 divided by the number of tied players. Outcome sourced from the relevant governing body."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing",
+          "Tied leaders may receive fractional payouts"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      },
+      "inspection": "Agent read both native payout clauses and all required evidence; normalized subject, metric, season, stage and scope supported; only exceptional branches remain. Not independent human review."
+    },
+    {
+      "source": "fresh-previous-promoted",
+      "rank": 25,
+      "family": "reality-placement",
+      "a": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes.",
+      "b": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes. If the finale of Big Brother season 28 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date.",
+      "certificate": {
+        "version": 1,
+        "family": "reality-placement",
+        "requiredDimensions": [
+          "family",
+          "subject",
+          "competition",
+          "metric",
+          "comparator",
+          "threshold",
+          "timeframe",
+          "geography",
+          "outcome",
+          "conditions",
+          "orientation"
+        ],
+        "dimensions": [
+          {
+            "dimension": "family",
+            "left": {
+              "value": "reality-placement",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "reality-placement",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "subject",
+            "left": {
+              "value": "taylor brown",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "taylor brown",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Native named entity; existing competition-scoped alias registry; no price or market-ID inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "competition",
+            "left": {
+              "value": "big brother",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "big brother",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Native competition name or normalized native identity; no equality from Champions League context alone",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "metric",
+            "left": {
+              "value": "exact-place",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "exact-place",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Explicit primary payout statistic/category; one recognized statistic only; no competition-name substitution",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "comparator",
+            "left": {
+              "value": "eq",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "eq",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "threshold",
+            "left": {
+              "value": "3",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "3",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "timeframe",
+            "left": {
+              "value": "season-28",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "season-28",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Native season/ceremony/measurement window; NFL/CFB start-year and NHL/NBA/WNBA ending-year conventions; no close-date inference",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "geography",
+            "left": {
+              "value": "program-scope",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "program-scope",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "outcome",
+            "left": {
+              "value": "placement",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "placement",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "conditions",
+            "left": {
+              "value": "unconditional",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "unconditional",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes"
+            },
+            "rule": "Equal normalized native proposition values with nonempty evidence on both venues",
+            "status": "EQUAL"
+          },
+          {
+            "dimension": "orientation",
+            "left": {
+              "value": "same-YES",
+              "evidence": "If Taylor Brown finishes 3rd in Big Brother Season 28, then the market resolves to Yes."
+            },
+            "right": {
+              "value": "same-YES",
+              "evidence": "If Taylor Brown comes in third-place in Big Brother season 28, this market will settle to Yes. If the finale of Big Brother season 28 is postponed or rescheduled, the Expiration Date will be amended to align with the new broadcast date."
+            },
+            "rule": "Same native YES predicate, or independently proved two-participant complement without explicit regulation draw",
+            "status": "EQUAL"
+          }
+        ],
+        "missing": [],
+        "conflicts": [],
+        "exceptionalSettlementBranches": [
+          "Modified/shortened season and cancellation: actual count versus independent fair-price settlement",
+          "Corrections and disqualification after expiry versus official-result finality",
+          "Native source precedence, review rights and administrative extensions",
+          "Different deadlines and settlement timing"
+        ],
+        "decision": "ORDINARY_EQUIVALENT_BASIS_RISK",
+        "strictEquivalent": false
+      },
+      "inspection": "Agent read both native payout clauses and all required evidence; normalized subject, metric, season, stage and scope supported; only exceptional branches remain. Not independent human review."
+    }
+  ]
+}

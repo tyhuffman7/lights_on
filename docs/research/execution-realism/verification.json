@@ -1,0 +1,43 @@
+{
+  "verifiedAt": "2026-10-02T03:45:49.585Z",
+  "ordersEnabled": false,
+  "collectionStopped": true,
+  "pendingCaptures": 0,
+  "pendingConfirmations": 0,
+  "workerAbsent": true,
+  "supervisorAbsent": true,
+  "sourceFreeze": {
+    "result": {
+      "reason": "WORKER_EXITED",
+      "exitCode": 0,
+      "exitSignal": null
+    },
+    "sourceCommit": "60a770f5a7dbdc659d3185d115621be9ff4ac4de",
+    "sourceHashesUnchanged": true,
+    "changed": [],
+    "at": 1790912005818
+  },
+  "retainedEpisodeCount": 2092,
+  "portfolioEntriesAudited": 6925,
+  "fullyPricedCashflowsAudited": 6249,
+  "errors": [],
+  "strictEpisodes": 0,
+  "basisEpisodes": 384,
+  "postStopCorrection": {
+    "postStopOnly": true,
+    "reason": "Unused deep boundary quotes incorrectly invalidated supported consumed one-tick levels. Validate consumed prices only; unsupported consumed levels still UNOBSERVED.",
+    "primaryModelsAndBaselineUnchanged": true,
+    "conclusionUnchanged": true,
+    "originalReportSha256": "588d341ba6ff1b85aed114c62479276ea324e00cefd3e7fc56421a5d30e4256f",
+    "targetedRegression": "Failed before / passed after; 8/8 targeted tests pass",
+    "nativePolyCoefficients": [
+      0.0695
+    ],
+    "nativePolyTickSizes": [
+      0.01,
+      0.005,
+      0.001
+    ],
+    "updatedAt": "2026-10-02T03:42:40.149Z"
+  }
+}

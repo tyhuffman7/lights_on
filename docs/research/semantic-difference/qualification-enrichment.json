@@ -1,0 +1,35 @@
+{
+  "retrievedAt": "2026-10-01T17:44:35.574358+00:00",
+  "url": "https://external-api.kalshi.com/trade-api/v2/events/KXNCAAFFINALIST-27",
+  "sha256": "fa49aaec3962832c4897aeae3371c6010ecb1cae971e4c3dc828ed38cfde0ff6",
+  "event": {
+    "category": "Sports",
+    "collateral_return_type": "",
+    "event_ticker": "KXNCAAFFINALIST-27",
+    "exchange_index": 0,
+    "last_updated_ts": "0001-01-01T00:00:00Z",
+    "mutually_exclusive": false,
+    "product_metadata": {
+      "competition": "NCAA Football",
+      "competition_scope": "Future"
+    },
+    "series_ticker": "KXNCAAFFINALIST",
+    "settlement_sources": [
+      {
+        "name": "ESPN",
+        "url": "https://www.espn.com/"
+      },
+      {
+        "name": "Fox Sports",
+        "url": "https://www.foxsports.com/"
+      },
+      {
+        "name": "The Wall Street Journal",
+        "url": "https://www.wsj.com/"
+      }
+    ],
+    "strike_period": "",
+    "sub_title": "2026-27",
+    "title": "College Football National Championship Qualifiers"
+  }
+}

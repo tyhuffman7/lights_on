@@ -1,0 +1,211 @@
+{
+  "scope": "POST_WINDOW_NATIVE_ARITHMETIC_AND_SIGNAL_CROSS_CHECK",
+  "ordersEnabled": false,
+  "note": "Independent prices were collected after the window. Later price changes are not proof of a missed earlier signal. This does not establish whole-catalog matching recall or settlement equivalence.",
+  "cases": 12,
+  "mismatches": [],
+  "missedPositive": [],
+  "results": [
+    {
+      "pairId": "HOUSEAKAL-26-R::paccc-usho-midterms-2026-11-03-rep",
+      "at": 1790811345781,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.79,
+          "detectorNet": -0.79,
+          "independentGross": -0.77,
+          "detectorGross": -0.77,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 0.739,
+          "detectorNet": 0.739,
+          "independentGross": 0.759,
+          "detectorGross": 0.759,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 10,
+          "independentNet": -7.849999999999999,
+          "detectorNet": -7.85,
+          "independentGross": -7.699999999999999,
+          "detectorGross": -7.7,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": false,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 10,
+          "independentNet": 7.44,
+          "detectorNet": 7.44,
+          "independentGross": 7.59,
+          "detectorGross": 7.59,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXNCAAFWINS-26PUR-4::aachc-cfb-wins-ou-2026-11-28-pur",
+      "at": 1790811347394,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": 0.010000000000000044,
+          "detectorNet": 0.01,
+          "independentGross": 0.050000000000000044,
+          "detectorGross": 0.05,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": -0.13000000000000003,
+          "detectorNet": -0.13,
+          "independentGross": -0.09000000000000002,
+          "detectorGross": -0.09,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 4,
+          "independentNet": 0.08000000000000018,
+          "detectorNet": 0.08,
+          "independentGross": 0.20000000000000018,
+          "detectorGross": 0.2,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 4,
+          "independentNet": -0.4800000000000001,
+          "detectorNet": -0.48,
+          "independentGross": -0.3600000000000001,
+          "detectorGross": -0.36,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    },
+    {
+      "pairId": "KXIPO-26-MISTRAL::ipcc-2026ipos-mistral-ai",
+      "at": 1790811348974,
+      "appearedAsPositiveDuringWindow": true,
+      "cases": [
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 1,
+          "independentNet": -0.08999999999999996,
+          "detectorNet": -0.09,
+          "independentGross": -0.07999999999999996,
+          "detectorGross": -0.08,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 1,
+          "independentNet": 2.6020852139652106e-17,
+          "detectorNet": 0,
+          "independentGross": 0.010000000000000026,
+          "detectorGross": 0.01,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_yes+pm_us_no",
+          "quantity": 3,
+          "independentNet": -0.2599999999999998,
+          "detectorNet": -0.26,
+          "independentGross": -0.23999999999999977,
+          "detectorGross": -0.24,
+          "sameArithmetic": true,
+          "candidate": false,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        },
+        {
+          "orientation": "kalshi_no+pm_us_yes",
+          "quantity": 3,
+          "independentNet": 0.019999999999999858,
+          "detectorNet": 0.02,
+          "independentGross": 0.02999999999999986,
+          "detectorGross": 0.03,
+          "sameArithmetic": true,
+          "candidate": true,
+          "fresh": false,
+          "quantityExecutable": true,
+          "withinCapital": true,
+          "quoteExecutable": false
+        }
+      ],
+      "booksFresh": {
+        "kalshi": true,
+        "poly": false
+      }
+    }
+  ]
+}

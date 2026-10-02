@@ -1,0 +1,9 @@
+{
+  "reason": "WORKER_EXITED",
+  "exitCode": 0,
+  "exitSignal": null,
+  "ordersEnabled": false,
+  "sourceFiles": 199,
+  "changed": [],
+  "at": 1790894617506
+}

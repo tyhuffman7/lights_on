@@ -1,0 +1,39 @@
+{
+  "scope": "ABORTED ATTEMPT, NOT THE REQUIRED 30-MINUTE VALIDATION",
+  "reason": "INVALID_EXECUTABLE_LEVEL propagated from existing takeDepth through observation loop; exact offending level not retained by the old failure path",
+  "supervisor": {
+    "scope": "PAPER_ONLY_NO_REAL_ORDERS",
+    "phase": "STOPPED",
+    "supervisorPid": 85440,
+    "childPid": 85456,
+    "command": [
+      "/opt/homebrew/Cellar/node/25.8.1/bin/node",
+      "--experimental-strip-types",
+      "worker/recall-observer.ts",
+      "work/semantic-difference-20261001-v2",
+      "--duration-seconds=1800",
+      "--env=/Users/tylerhuffman/Documents/code_projects/lights-on/.env.research"
+    ],
+    "cwd": "/Users/tylerhuffman/Documents/code_projects/lights-on/work/recall-detector-20260930/checkout",
+    "startedAt": 1790876875738,
+    "deadlineAt": 1790879875738,
+    "at": 1790878263933,
+    "reason": "WORKER_FAILED",
+    "lastOutputAt": 1790878263759,
+    "lastStatus": null,
+    "endedAt": 1790878263933,
+    "exitCode": 1,
+    "exitSignal": null
+  },
+  "observedMs": 1176853.726542,
+  "classifierHashes": {
+    "lib/research/hot-confirmation.ts": "849747417ba864a87cdcbc91176b2d26d6e63a68714c82f75f72888bce844396",
+    "lib/research/proposition-differences.ts": "1b826949ad89c3fc7d64e326ba14ca7ed72854a2d2d879506b506011043da53f",
+    "lib/research/proposition.ts": "54e2f893a5b797dd10cf2bca158099b3fb5da00a06d6a3ebefe0cf5415d0e5a2",
+    "lib/research/semantic-lists.ts": "0b152e60b4c8d70aea196b876e56a99527f8e188bd532a70566ad330761c545a"
+  },
+  "runtimeHashesUnchangedAtFailure": 195,
+  "partialEvidenceSha256": "178511ba24fe375db5012e7f9f702d512448123876fae347842200fcec51e398",
+  "partialEvidenceBytes": 491024321,
+  "excludedFromFinalValidation": true
+}
