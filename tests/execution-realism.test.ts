@@ -66,3 +66,11 @@ test('all requested latency unwind books retained even when displayed pairs clea
  assert.ok(rows.some(x=>x.kind==='PAPER_UNWIND_BOOK'&&x.body.delayMs===100));
  assert.equal(s.captures.length,0);
 });
+test('one-tick stress validates consumed prices without rejecting unused boundary depth',()=>{
+ const {e,p,ev}=fixture();
+ ev.initial.kalshi.book.yes.push({price:9900,quantity:100});
+ ev.future.get(100)!.book.no.push({price:9900,quantity:100});
+ const a=realisticAttempt(e,p,ev,100,'ONE_TICK');assert.equal(a.outcome,'CLEAN_PAIR');assert.equal(a.negativeKnownPnl,216000000);
+ ev.initial.kalshi.book.yes=[{price:9900,quantity:100}];
+ assert.equal(realisticAttempt(e,p,ev,100,'ONE_TICK').outcome,'UNOBSERVED');
+});

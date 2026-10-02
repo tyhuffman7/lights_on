@@ -1,0 +1,17 @@
+{
+  "postStopOnly": true,
+  "reason": "Unused deep boundary quotes incorrectly invalidated supported consumed one-tick levels. Validate consumed prices only; unsupported consumed levels still UNOBSERVED.",
+  "primaryModelsAndBaselineUnchanged": true,
+  "conclusionUnchanged": true,
+  "originalReportSha256": "588d341ba6ff1b85aed114c62479276ea324e00cefd3e7fc56421a5d30e4256f",
+  "targetedRegression": "Failed before / passed after; 8/8 targeted tests pass",
+  "nativePolyCoefficients": [
+    0.0695
+  ],
+  "nativePolyTickSizes": [
+    0.01,
+    0.005,
+    0.001
+  ],
+  "updatedAt": "2026-10-02T03:42:40.149Z"
+}

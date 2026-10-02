@@ -1,0 +1,82 @@
+{
+  "sourceCommit": "60a770f5a7dbdc659d3185d115621be9ff4ac4de",
+  "rawEvidence": {
+    "rows": 68337,
+    "bytes": 227358819,
+    "sha256": "d1f0fcee7d0395b472557acbcdfe369bf9234f68e13e4a5f8fb1b27643658863",
+    "episodesWithInitialEvidence": 2092,
+    "collectorPhase": "STOPPED",
+    "pending": 0,
+    "reasons": {
+      "CONFIRMATION:This operation was aborted": 1
+    }
+  },
+  "localDirectory": "work/execution-realism-20261001-final/",
+  "files": [
+    {
+      "name": "analysis.log",
+      "bytes": 280,
+      "sha256": "133374a6c6be93c625726671450ed0668e8dd0e8ab6fcc322673d1943440e515"
+    },
+    {
+      "name": "catalog-1.json",
+      "bytes": 467886267,
+      "sha256": "df97e31e69b75411d7362ee96bfbe92feba1259c59d7b740d6b4c582f827f5b6"
+    },
+    {
+      "name": "catalog-2.json",
+      "bytes": 470360926,
+      "sha256": "72349f6f01a8123c9c38a9ff56e00ba5e1d39d443f0cb04953962a1f5a787895"
+    },
+    {
+      "name": "catalog-3.json",
+      "bytes": 468404110,
+      "sha256": "34db6aa80451d0d7a6447bb35e35a52ac779e306383fe6fb6ae62a94d408118f"
+    },
+    {
+      "name": "correct-tick-diagnostic.mjs",
+      "bytes": 6680,
+      "sha256": "a294b15d034a437403f0525394dcba8c6533b6dd68eaac0df17362e4228a9ad9"
+    },
+    {
+      "name": "evidence.ndjson",
+      "bytes": 227358819,
+      "sha256": "d1f0fcee7d0395b472557acbcdfe369bf9234f68e13e4a5f8fb1b27643658863"
+    },
+    {
+      "name": "frozen.json",
+      "bytes": 5204,
+      "sha256": "8904dc0b7af7ffb81baf3728c0ca29775e0d839c07802555c570c883cd9d4b59"
+    },
+    {
+      "name": "paper-study.json",
+      "bytes": 76517730,
+      "sha256": "9d9999c6a199bf8ac3f3b64861bd464a0ae3a602a1a5c15fd66ae6e9a6c7b3f4"
+    },
+    {
+      "name": "post-window-receipt.json",
+      "bytes": 230,
+      "sha256": "87c17bdea1aaece02bb38347b83205b44da5871fa818e44a7e6288db36ba88f5"
+    },
+    {
+      "name": "pre-window-freeze.json",
+      "bytes": 21200,
+      "sha256": "ddcbb9f915383c786a2049410b8e43ec5b6b186b10c51706ed37694b204fba5d"
+    },
+    {
+      "name": "summary.json",
+      "bytes": 6584485,
+      "sha256": "6219b91324282bd14f5d515080c117e6b8dcf43ae07970bca54e3df809b98eff"
+    },
+    {
+      "name": "supervisor.json",
+      "bytes": 892,
+      "sha256": "8043f2e6648d0fc2e533d37512d17819080f3cb8a0c1326486df94cd458a17fe"
+    },
+    {
+      "name": "worker.log",
+      "bytes": 596780,
+      "sha256": "8a4c8642ff9f20a41915cf7ab44f871b91e2bca1e46ada925c1cc53c141bf6a8"
+    }
+  ]
+}

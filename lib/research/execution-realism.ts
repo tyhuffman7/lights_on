@@ -19,8 +19,11 @@ const cost=(ls:Level[])=>ls.reduce((n,l)=>n+l.price*Math.round(l.quantity*10000)
 function adjusted(ls:Level[],model:Model,tick:number,sell=false):Level[]|null{
  if(model==='ONE_TICK'&&(!Number.isSafeInteger(tick)||tick<=0))return null;
  const result=ls.map(l=>({price:l.price+(model==='ONE_TICK'?(sell?-tick:tick):0),quantity:model==='HAIRCUT_50'?Math.floor(Math.round(l.quantity*10000)/2)/10000:l.quantity})).filter(l=>l.quantity>0);
- if(result.some(l=>l.price<=0||l.price>=10000))return null;
+ // Validate shifted prices only if consumed: unused boundary levels are not fills.
  return result;
+}
+function boundedTake(ls:Level[],q:number,sell=false){
+ try{return takeDepth(ls,q,sell);}catch(error){if((error as Error).message==='INVALID_EXECUTABLE_LEVEL')return null;throw error;}
 }
 function fee(ls:Level[],rate:number,v:Venue,model:Model,sell=false):number|null{
  if(model==='EXTREME_FRAGMENT_DIAGNOSTIC'&&v==='kalshi'){
@@ -38,7 +41,9 @@ export function realisticAttempt(e:Episode,p:Plan,ev:Evidence,delayMs:number,mod
  if(!firstLevels)return {...base,reason:'NATIVE_TICK_OR_PRICE_BOUND_UNAVAILABLE'};
  const q=Math.min(original.quantity,depth(firstLevels));
  if(q<Math.ceil(r.pair.a.minQty))return {...base,outcome:'FIRST_LEG_UNFILLED' as Outcome,reason:'HAIRCUT_DEPTH_BELOW_MINIMUM',ordinaryProfit:0,grossProfit:0,negativeKnownPnl:0};
- const first=takeDepth(firstLevels,q)!,kf=fee(first.levels,r.pair.a.feeRate!, 'kalshi',model);
+ const first=boundedTake(firstLevels,q);
+ if(!first)return {...base,reason:'CONSUMED_NATIVE_TICK_PRICE_BOUND_UNAVAILABLE'};
+ const kf=fee(first.levels,r.pair.a.feeRate!, 'kalshi',model);
  if(kf===null)return {...base,reason:'FEE_UNAVAILABLE'};
  Object.assign(base,{first,firstFee:kf,firstFillQuantity:q,residualQuantity:q,committed:first.cost+kf,fees:kf});
  const future=delayMs===0?ev.initial.poly:ev.future.get(delayMs);
@@ -47,7 +52,9 @@ export function realisticAttempt(e:Episode,p:Plan,ev:Evidence,delayMs:number,mod
  if(!ls)return {...base,reason:'NATIVE_TICK_OR_PRICE_BOUND_UNAVAILABLE'};
  base.futureDepth=depth(ls);base.outcome=base.futureDepth?'EDGE_DISAPPEARED':'FIRST_LEG_ONLY';
  for(let h=Math.min(q,depth(ls));h>=Math.ceil(r.pair.b.minQty);h--){
-  const second=takeDepth(ls,h)!,pf=fee(second.levels,r.pair.b.feeRate!,'poly',model);
+  const second=boundedTake(ls,h);
+  if(!second)return {...base,outcome:'UNOBSERVED',reason:'CONSUMED_NATIVE_TICK_PRICE_BOUND_UNAVAILABLE'};
+  const pf=fee(second.levels,r.pair.b.feeRate!,'poly',model);
   if(pf===null)return {...base,outcome:'UNOBSERVED',reason:'FEE_UNAVAILABLE'};
   const firstPaired=takeDepth(first.levels,h)!,net=h*USD_SCALE-firstPaired.cost-kf-second.cost-pf;
   if(net<=0||first.cost+kf+second.cost+pf>p.capDollars*USD_SCALE)continue;
@@ -64,7 +71,8 @@ export function realisticAttempt(e:Episode,p:Plan,ev:Evidence,delayMs:number,mod
  if(base.residualQuantity){
   const b=ev.unwind.get(delayMs),bids=b?adjusted(b.book[e.side==='yes'?'yesBids':'noBids'],model,tick.kalshi,true):null;
   if(!bids){base.unwind={outcome:'UNOBSERVED',quantity:0,proceeds:0,fees:0,loss:0,levels:[]};return base;}
-  const sellQ=Math.min(base.residualQuantity,depth(bids)),sold=sellQ?takeDepth(bids,sellQ,true):null;
+  const sellQ=Math.min(base.residualQuantity,depth(bids)),sold=sellQ?boundedTake(bids,sellQ,true):null;
+  if(sellQ&&!sold){base.unwind={outcome:'UNOBSERVED',quantity:0,proceeds:0,fees:0,loss:0,levels:[]};return base;}
   const sf=sold?fee(sold.levels,r.pair.a.feeRate!,'kalshi',model,true):0;
   if(sf===null){base.unwind={outcome:'UNOBSERVED',quantity:0,proceeds:0,fees:0,loss:0,levels:[]};return base;}
   const pairedCost=base.pairedQuantity?takeDepth(first.levels,base.pairedQuantity)!.cost:0;
