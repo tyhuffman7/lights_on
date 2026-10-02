@@ -47,7 +47,7 @@ test('known vanished hedge records loss; orphan and missing future never get fab
  const a=realisticAttempt(e,p,ev,100,'DISPLAYED');assert.equal(a.unwind!.outcome,'UNWIND');assert.equal(a.negativeKnownPnl,-60000000);
  assert.equal(realismPortfolio([{e,a}],10,100,'DISPLAYED').worstTrade,-.6);
  ev.unwind.get(100)!.book.yesBids=[{price:3500,quantity:2}];const orphan=realisticAttempt(e,p,ev,100,'DISPLAYED');
- assert.equal(orphan.unwind!.outcome,'ORPHAN');const op=realismPortfolio([{e,a:orphan}],10,100,'DISPLAYED');assert.equal(op.netPnl,null);assert.equal(op.knownPnl,-.1);assert.equal(op.peakLocked,4);
+ assert.equal(orphan.unwind!.outcome,'ORPHAN');const op=realismPortfolio([{e,a:orphan}],10,100,'DISPLAYED');assert.equal(op.netPnl,null);assert.equal(op.knownPnl,-.1);assert.equal(op.peakLocked,4.8);assert.equal(op.lockedAtEnd,4);
  ev.future.set(100,null);assert.equal(realisticAttempt(e,p,ev,100,'DISPLAYED').outcome,'UNOBSERVED');
 });
 test('conservative economic grouping prevents reharvesting after freshness gaps/full unwinds',()=>{

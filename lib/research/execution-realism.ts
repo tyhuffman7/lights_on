@@ -102,7 +102,7 @@ export function realismPortfolio(rows:{e:Episode;a:RealAttempt}[],cap:number,del
   const soldCost=soldQ?takeDepth(a.first.levels,a.pairedQuantity+soldQ)!.cost-pairedCost:0;
   const exposure=unresolved?k-soldCost+p:pairK+p;
   if(unresolved)unpriced+=exposure;
-  locked+=exposure;peak=Math.max(peak,locked);if(exposure>0)ids.forEach(id=>held.add(id));
+  peak=Math.max(peak,locked+a.committed);locked+=exposure;peak=Math.max(peak,locked);if(exposure>0)ids.forEach(id=>held.add(id));
   known+=a.knownPnl;gross+=a.grossProfit??0;fees+=a.fees+(a.unwind?.fees??0);unwindLoss+=a.unwind?.loss??0;slippage+=a.slippage;
   entries.push({episodeId:e.id,classification:e.settlement.classification,lockupDays:e.resolutionHorizon===null?null:(e.resolutionHorizon-e.start)/86400_000,attempt:a});
  }
