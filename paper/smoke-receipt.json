@@ -1,0 +1,75 @@
+{
+  "sourceCommit": "3f04ba05b2fb32f4207466545a1032abb3e938e9",
+  "sourceHashesUnchanged": true,
+  "lockReleased": true,
+  "streamSeconds": 300.13477858399995,
+  "startedAt": "2026-10-02T04:46:03.555Z",
+  "stoppedAt": "2026-10-02T04:51:16.972Z",
+  "approvedPairs": 15,
+  "currentMetadataApproved": 15,
+  "books": {
+    "kalshi": 695,
+    "poly": 240
+  },
+  "paperEntries": 1,
+  "earlyExits": 0,
+  "settlements": 0,
+  "metadataFailures": 0,
+  "streamHealth": [
+    {
+      "venue": "kalshi",
+      "connectedBeforeStop": true,
+      "reconnects": 0,
+      "ingressMaximumDepth": 1
+    },
+    {
+      "venue": "poly",
+      "connectedBeforeStop": true,
+      "reconnects": 0,
+      "ingressMaximumDepth": 1
+    }
+  ],
+  "positions": [
+    {
+      "pair": "kxncaafwins-26mizz-7",
+      "sides": [
+        "yes",
+        "no"
+      ],
+      "quantity": 87,
+      "askLevels": {
+        "kalshi": [
+          {
+            "price": 4400,
+            "quantity": 36
+          },
+          {
+            "price": 4600,
+            "quantity": 51
+          }
+        ],
+        "poly": [
+          {
+            "price": 5100,
+            "quantity": 87
+          }
+        ]
+      },
+      "feesUsd": 3.25,
+      "totalCostUsd": 86.92,
+      "conditionalLockedSettlementProfitUsd": 0.08,
+      "status": "open",
+      "timestamp": "2026-10-02T04:47:08.801Z"
+    }
+  ],
+  "capitalLockedUsd": 86.92,
+  "conditionalOpenSettlementProfitUsd": 0.08,
+  "cumulativeClosedPaperPnlUsd": 0,
+  "cashUsd": {
+    "kalshi": 58.96,
+    "poly": 54.12
+  },
+  "assertion": "Displayed paper execution only; no real fills. $1 settlement and open locked profit are conditional. No live early exit occurred; synthetic tests cover exits.",
+  "localRawDirectory": "research-data/simple-paper-smoke-20261002",
+  "localRawLog": "research-data/simple-paper-validation/smoke.log"
+}

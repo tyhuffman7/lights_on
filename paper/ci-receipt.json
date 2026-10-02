@@ -1,0 +1,40 @@
+{
+  "commit": "333b882f043d13de7da938df9ed225482a2b4e3a",
+  "mode": "correctness",
+  "results": [
+    {
+      "name": "install",
+      "command": "npm run install:ci",
+      "exitCode": 0,
+      "log": ".ci/install.log"
+    },
+    {
+      "name": "tests",
+      "command": "npm test",
+      "exitCode": 0,
+      "log": ".ci/tests.log"
+    },
+    {
+      "name": "types",
+      "command": "npx --no-install tsc --noEmit --incremental false",
+      "exitCode": 0,
+      "log": ".ci/types.log"
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "exitCode": 0,
+      "log": ".ci/build.log"
+    }
+  ],
+  "totals": [
+    "# tests 1116",
+    "# pass 1116",
+    "# fail 0",
+    "# cancelled 0",
+    "# skipped 0"
+  ],
+  "failures": [],
+  "highlights": {},
+  "artifacts": ".ci/ (7-day workflow artifact)"
+}
