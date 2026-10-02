@@ -329,7 +329,7 @@ Exceptional divergence branches across admitted families: ["Modified/shortened s
 
 Public books cannot identify competing takers, hidden order fragmentation or our fill priority. The deterministic depth haircut is a bounded sensitivity, not a probability. Basis exceptional clauses and native rules are retained in [basis clauses](basis-clauses.json.gz). Fee evidence and assumptions are in [methodology](METHODOLOGY.md). No real fill, realized profit or live authorization.
 
-[Machine-readable outcomes and every portfolio entry](report.json), [raw evidence receipt](evidence-receipt.json).
+[Machine-readable outcomes and every portfolio entry](report.json.gz), [raw evidence receipt](evidence-receipt.json).
 
 
 ## Corrected one-tick diagnostic
