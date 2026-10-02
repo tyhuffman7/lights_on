@@ -3,13 +3,14 @@ import type {Side,Venue,Level} from '../arb/types.ts';
 import {currentBook,bookAges,type RecallRoute,type ObservedBook} from './recall-detector.ts';
 import {evaluateEvArb,normalFee,takeDepth,USD_SCALE,type ArbEvaluation,type Taken} from './ev-arb.ts';
 import {isPromoted} from './semantic-lists.ts';
+import {orderFee} from './study-fees.ts';
 import type {paperSettlement} from './hot-confirmation.ts';
 export const executionStudyPolicy=Object.freeze({version:1,ordersEnabled:false,latenciesMs:[0,10,25,50,100,250,500,1000],
  capitalCapsDollars:[5,10,25,50,100],baselineCapDollars:10,baselineLatencyMs:100,bankrollPerVenueDollars:100,
  maxContracts:200,maxBookAgeMs:2000,minimumAbsenceMs:1000,unknownGapMs:2000,maxCaptureLagMs:250,
  unwindDelayMs:250,maxEpisodes:10000,maxActiveCaptures:512,settlementBufferMs:24*3600_000,
  firstLeg:'kalshi',fillAssumption:'CONDITIONAL_DISPLAYED_TAKER_DEPTH_NOT_ACTUAL_FILLS'});
-export type Outcome='CLEAN_PAIR'|'PARTIAL_HEDGE'|'EDGE_DISAPPEARED'|'FIRST_LEG_ONLY'|'UNWIND'|'ORPHAN'|'UNOBSERVED';
+export type Outcome='CLEAN_PAIR'|'PARTIAL_HEDGE'|'EDGE_DISAPPEARED'|'FIRST_LEG_ONLY'|'UNWIND'|'ORPHAN'|'UNOBSERVED'|'FIRST_LEG_UNFILLED';
 export type StudyBook=ObservedBook&{proof?:unknown};
 type Books=Record<Venue,StudyBook>;
 type Settlement=ReturnType<typeof paperSettlement>;
@@ -31,7 +32,7 @@ export function studyEligible(r:RecallRoute,b:Books|null,at:number,c:Settlement)
 }
 // Scan bounded integer support; consumes actual levels, honors minimum quantity,
 // normal fees, budget and depth. Diagnostic stress never vetoes ordinary net.
-export function studyPlans(r:RecallRoute,b:Books,side:Side,at:number):Plan[]{
+export function studyPlans(r:RecallRoute,b:Books,side:Side,at:number,realism=false):Plan[]{
  const results=new Map<number,Plan>(),minimum=Math.ceil(Math.max(r.pair.a.minQty,r.pair.b.minQty));
  const maximum=Math.min(executionStudyPolicy.maxContracts,sumDepth(b.kalshi.book[side]),sumDepth(b.poly.book[otherSide(r,side)]));
  if(maximum<minimum)return [];
@@ -41,10 +42,15 @@ export function studyPlans(r:RecallRoute,b:Books,side:Side,at:number):Plan[]{
  if(first.grossProfit===null||first.grossProfit<=0)return [];
  for(let q=minimum;q<=maximum;q++){
   const e=evaluateEvArb(r.pair,{kalshi:b.kalshi.book,poly:b.poly.book},side,q,at,'UNVERIFIED',undefined,r.ticks);
+  if(realism&&e.kalshi&&e.poly&&e.estimatedFees!==null){
+   const fees=orderFee(e.kalshi.levels,r.pair.a.feeRate!,'kalshi')!+orderFee(e.poly.levels,r.pair.b.feeRate!,'poly')!;
+   e.estimatedFees=fees;e.estimatedNetProfit=e.grossProfit!-fees;e.economicStatus=e.estimatedNetProfit>0?'REALISTIC_NET_POSITIVE':'REALISTIC_NET_NONPOSITIVE';
+  }
   if(e.economicStatus!=='REALISTIC_NET_POSITIVE'||!e.kalshi||!e.poly||e.estimatedFees===null||e.acquisitionCost===null)continue;
-  const kf=normalFee(e.kalshi.levels,r.pair.a.feeRate!,'kalshi')!,pf=normalFee(e.poly.levels,r.pair.b.feeRate!,'poly')!;
+  const fee=realism?orderFee:normalFee;
+  const kf=fee(e.kalshi.levels,r.pair.a.feeRate!,'kalshi')!,pf=fee(e.poly.levels,r.pair.b.feeRate!,'poly')!;
   const commitment=e.acquisitionCost+e.estimatedFees;
-  for(const capDollars of executionStudyPolicy.capitalCapsDollars)if(commitment<=dollars(capDollars)&&e.kalshi.cost+kf<=dollars(executionStudyPolicy.bankrollPerVenueDollars)&&e.poly.cost+pf<=dollars(executionStudyPolicy.bankrollPerVenueDollars))
+  for(const capDollars of executionStudyPolicy.capitalCapsDollars.filter(cap=>!realism||cap<=50))if(commitment<=dollars(capDollars)&&e.kalshi.cost+kf<=dollars(executionStudyPolicy.bankrollPerVenueDollars)&&e.poly.cost+pf<=dollars(executionStudyPolicy.bankrollPerVenueDollars))
    results.set(capDollars,{capDollars,evaluation:e,kalshiFee:kf,polyFee:pf,commitment});
  }
  return [...results.values()];
@@ -81,13 +87,14 @@ export function residualUnwind(r:RecallRoute,side:Side,a:Attempt,b:StudyBook|nul
   loss:q===a.residualQuantity?residualCost-(sell?.cost??0)+fees:0,levels:sell?.levels??[]}};
 }
 type History={at:number;mono:number;book:StudyBook|null};
-type Capture={episode:Episode;books:Books;histories:Record<Venue,History[]>;next:number;done:Set<number>;invalid:boolean};
+type Capture={episode:Episode;books:Books;histories:Record<Venue,History[]>;next:number;done:Set<number>;unwindBooks:Set<number>;invalid:boolean};
 export class PaperExecutionStudy{
  episodes:Episode[]=[];active=new Map<string,Episode>();captures:Capture[]=[];
  states=new Map<string,{seen:boolean;absentAt:number|null;unknownAt:number|null;fingerprint:string}>();
  skipped:Record<string,number>={};timing:{delayMs:number;lagMs:number}[]=[];stopped=false;
  record:(kind:string,body:unknown)=>void;native:(r:RecallRoute)=>Books|null;
- constructor(native:(r:RecallRoute)=>Books|null,record:(kind:string,body:unknown)=>void){this.native=native;this.record=record;}
+ realism:boolean;
+ constructor(native:(r:RecallRoute)=>Books|null,record:(kind:string,body:unknown)=>void,realism=false){this.realism=realism;this.native=native;this.record=record;}
  book(venue:Venue,id:string,b:StudyBook,at=Date.now(),mono=performance.now()){
   let recorded=false;for(const c of this.captures)if((venue==='kalshi'?c.episode.route.pair.a.id:c.episode.route.pair.b.id)===id){
    c.histories[venue].push({at,mono,book:structuredClone(b)});recorded=true;
@@ -101,7 +108,7 @@ export class PaperExecutionStudy{
   if(this.stopped||!isPromoted(c.classification))return;
   for(const side of ['yes','no'] as Side[]){const key=r.pair.id+':'+side,state=this.states.get(key)??{seen:false,absentAt:null,unknownAt:null,fingerprint:''};
    const nativeOkay=studyEligible(r,b,at,c);
-   let plans:Plan[]=[];try{if(nativeOkay)plans=studyPlans(r,b!,side,at);}catch(error){this.skipped[(error as Error).message]=(this.skipped[(error as Error).message]??0)+1;}
+   let plans:Plan[]=[];try{if(nativeOkay)plans=studyPlans(r,b!,side,at,this.realism);}catch(error){this.skipped[(error as Error).message]=(this.skipped[(error as Error).message]??0)+1;}
    const eligible=plans.length>0;let e=this.active.get(key);
    if(!eligible){
     if(nativeOkay){state.absentAt??=at;state.unknownAt=null;if(e&&at-state.absentAt>=executionStudyPolicy.minimumAbsenceMs)this.close(e,state.absentAt,'ECONOMIC_DISAPPEARANCE');}
@@ -118,7 +125,7 @@ export class PaperExecutionStudy{
       leftCensored:!state.seen||state.unknownAt!==null,rightCensored:false,quoteUpdates:0,netEdges:[],maxQuantity:0,plans,attempts:[],resolutionHorizon:horizon,
       lockupBasis:'Later native closeAt + 24h assumption; actual settlement/admin extensions unknown; unknown horizons lock indefinitely'};
      this.episodes.push(e);this.active.set(key,e);
-     const initial=structuredClone(b!),capture:Capture={episode:e,books:initial,histories:{kalshi:[{at,mono,book:initial.kalshi}],poly:[{at,mono,book:initial.poly}]},next:0,done:new Set(),invalid:false};
+     const initial=structuredClone(b!),capture:Capture={episode:e,books:initial,histories:{kalshi:[{at,mono,book:initial.kalshi}],poly:[{at,mono,book:initial.poly}]},next:0,done:new Set(),unwindBooks:new Set(),invalid:false};
      this.captures.push(capture);this.record('PAPER_EPISODE_START',{episode:e,books:initial,ages:{kalshi:bookAges(initial.kalshi,at),poly:bookAges(initial.poly,at)}});
      for(const p of plans)e.attempts.push(secondLegAttempt(r,p,initial.poly,at,0));capture.done.add(0);
     }
@@ -150,12 +157,17 @@ export class PaperExecutionStudy{
      unchangedSinceSignal:!!b&&b.book.receivedAt===c.books.poly.book.receivedAt});
     for(const p of e.plans)e.attempts.push(secondLegAttempt(e.route,p,b,target,delayMs,!!b));c.done.add(delayMs);
    }
+   if(this.realism)for(const delayMs of executionStudyPolicy.latenciesMs){
+    const delay=delayMs+executionStudyPolicy.unwindDelayMs;if(c.unwindBooks.has(delayMs)||mono<e.startMono+delay)continue;
+    const target=e.start+delay,book=this.asof(c,'kalshi',e.startMono+delay,target,current,mono);
+    this.record('PAPER_UNWIND_BOOK',{id:e.id,delayMs,targetAt:target,book});c.unwindBooks.add(delayMs);
+   }
    for(const a of e.attempts)if(!a.unwind&&a.residualQuantity&&a.outcome!=='UNOBSERVED'&&mono>=e.startMono+a.delayMs+executionStudyPolicy.unwindDelayMs){
     const delay=a.delayMs+executionStudyPolicy.unwindDelayMs,target=e.start+delay,b=this.asof(c,'kalshi',e.startMono+delay,target,current,mono);
     Object.assign(a,residualUnwind(e.route,e.side,a,b,target));this.record('PAPER_UNWIND_STATE',{id:e.id,delayMs:a.delayMs,targetAt:target,book:b,result:a.unwind});
    }
   }
-  const complete=(c:Capture)=>c.done.size===executionStudyPolicy.latenciesMs.length&&c.episode.attempts.every(a=>a.outcome==='UNOBSERVED'||!a.residualQuantity||a.unwind);
+  const complete=(c:Capture)=>c.done.size===executionStudyPolicy.latenciesMs.length&&(!this.realism||c.unwindBooks.size===executionStudyPolicy.latenciesMs.length)&&c.episode.attempts.every(a=>a.outcome==='UNOBSERVED'||!a.residualQuantity||a.unwind);
   for(const c of this.captures.filter(complete))this.record('PAPER_ATTEMPTS',{id:c.episode.id,attempts:c.episode.attempts});
   this.captures=this.captures.filter(c=>!complete(c));
  }

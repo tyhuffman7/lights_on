@@ -1,0 +1,37 @@
+# Frozen execution realism study — 2026-10-01 EDT
+
+PAPER/read-only, public US market data and existing read-only stream authentication. No orders, order previews, fills, account/wallet/funding mutations, live launch, recovery operating retest or automation. Discovery, semantics, WebSockets, confirmation and legacy pricing remain frozen. Prior evidence/report remains in `paper-economics/`.
+
+One 60-second instrumentation smoke, then one 10,800-second (three-hour) final observation. Supervisor permits 20 minutes preparation plus two minutes shutdown; 1 GiB retained event guard, 8 GiB minimum free disk, 10,000 capture segments, 512 concurrent captures. Stop on bounds/faults; no rerun or tuning. Source commit and runtime hashes before/after, policy, fee model and all scenarios freeze before the final window. Full tests/typecheck/build use GitHub CI once code is stable. No tests, CI polling, repeated log inspections or result analysis during final collection. One deterministic offline analysis follows stop.
+
+## Entry policy and evidence
+
+Only `STRICT_EQUIVALENT` / `ORDINARY_EQUIVALENT_BASIS_RISK`; orientation/identity, minimum quantity, open status, sequence/version and two-second freshness gates remain. Fresh candidate market/series/event metadata (five-minute TTL) must be retained before entry; event overrides and waivers are respected. Catalog discovery is unchanged. Largest supported profitable integer quantity within $5/$10/$25/$50 paired commitment, venue minimums/depth, $100 per venue and 200 contracts. $10/100 ms baseline, $200 total simulated bankroll. No $100-cap scenario.
+
+One eligible sample per conservative economic route/orientation episode: freshness gaps merge until a witnessed disappearance lasting at least one second. No repeated harvesting after a missing observation or unwind. Native-market overlap is suppressed while any paired/unknown exposure remains. Chronological cash reservation: first cost/fee plus remaining paired cap on the second venue. Return only modeled proceeds from an observed unwind; settlement payouts are never recycled during this short window. The later native close plus 24 hours is a lockup proxy; missing dates lock indefinitely. It is not an observed settlement deadline.
+
+Full initial books, consumed levels, native IDs, orientation, fee/tick metadata, proof and timestamps retained for promoted episodes. At 0/10/25/50/100/250/500/1,000 ms, native PM-US states reconstruct only from timestamps at/before the target. Backlogs, feed faults, stale states, missing/invalid versions or >250 ms callback lag mean `UNOBSERVED`. All latency targets also retain first-venue bid books at target +250 ms, even if the displayed scenario paired cleanly, permitting independent conservative residual valuation. Native evolution for active captures is retained. Other event types aggregate counters; no repetitive irrelevant books persisted. Unobserved hedge/residual valuation makes full P&L/ROI null.
+
+## Frozen scenarios
+
+- **DISPLAYED:** immediately displayed taker depth conditionally fills; subsequent second leg requires actual valid/fresh native state. Upper feasibility bound, not actual fills.
+- **HAIRCUT_50:** halve each displayed level on both venues and unwind bids; walk retained levels and reduce the modeled first fill to supported integer depth, then hedge as much as positive ordinary economics and the original cap permit. A deterministic depth-availability stress, not a 50% fill probability or calibrated execution likelihood. No hidden/future liquidity assumed.
+- **ONE_TICK:** add one known native tick to both buy legs, subtract one from observed unwind bids; reprice fees. Unknown grids or boundary violations remain unobserved. Shifted prices are explicitly stress assumptions, not observed quotes.
+- **FEE_LEVEL_DIAGNOSTIC:** Kalshi each consumed level aligns signed revenue independently to cents without accumulator rebates. PM-US cumulative commission ceiling unchanged.
+- **EXTREME_FRAGMENT_DIAGNOSTIC:** prior 0.01-contract Kalshi fragmentation bound without rebates; unsupported finer quantities are unobserved. Not primary economics.
+
+Partial first fills, partial hedge, failed hedge, full/partial unwind, orphan and unknown outcomes are separate. Only positive-net hedges within the original cap are taken. Otherwise attempt fixed observed-depth unwind at +250 ms. No adaptive recovery. All negative priced outcomes are retained; unknown residuals are never marked to invented prices.
+
+## Fee validation
+
+Checked official native documentation on 2026-10-01. [Kalshi fee rounding](https://docs.kalshi.com/getting_started/fee_rounding) documents microdollar trade fees, member-dependent balance precision and an order accumulator. The primary model implements signed buy/sell revenue alignment and capped accumulator rebates, assuming cent balances and one hypothetical fill per consumed level. Exact hidden fill partition/member precision is unavailable. Per-event native fee overrides determine rate. Current fee schedule PDF retrieval returned HTTP 429; do not claim its bytes were verified. Native quadratic metadata and documented mechanics are used; unknown fee types are excluded.
+
+[Polymarket US fee schedule](https://docs.polymarket.us/fees), effective 10 AM EDT October 1, gives standard theta 0.0695 and a cumulative rounded taker commission ceiling. The model uses that ceiling, conservatively allowing fragmentation to reduce rather than increase commission. Combo curves remain excluded from quadratic pricing. Native metadata supplies candidate coefficients. No volume/maker rebates assumed. Official examples and integer rounding/accumulator tests validate arithmetic; this does not validate actual account fees. Retrieved HTML bytes/hashes are retained locally; a compact fee receipt records sources and assumptions.
+
+## Decision and basis risk
+
+All basis P&L assumes ordinary complementary $1 payout, with native exceptional clauses/certificates retained separately; no divergent-settlement probabilities invented. Strict counts/P&L remain separate. Frequency includes initially observed inventory and is not a new-opportunity arrival rate. Recurrence is only witnessed economic disappearance/return; hidden recurrence through gaps is unknown.
+
+Frozen descriptive rubric: incomplete accepted conservative valuations or no accepted entries yield insufficient evidence; nonpositive full conservative baseline P&L fails. Calling economics compelling requires at least $10 conservative modeled net on $200, median lockup <=7 days, >=80% clean at both 100/250 ms, and positive fully priced one-tick baseline. Otherwise positive P&L is not economically compelling. This is a business-screen rubric, not a statistical expected-profit estimate or live authorization. Public L2 cannot prove order acceptance, queue/competition, actual fills, repeated realized profit or basis probabilities.
+
+Report all caps, latency survival, reduced first fills/edge, negative trades, fees, slippage, unwind losses, unpriced exposure, peak lockup, both ROI denominators and representatives. Gross already includes consumed prices: explanatory slippage/unwind costs must not be subtracted twice. Collection stays stopped afterward.

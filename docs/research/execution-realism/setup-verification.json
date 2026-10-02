@@ -1,0 +1,8 @@
+{
+  "paperOnly": true,
+  "targetedTests": {"executionAndLegacy": "15/15 pass", "afterFinalStudyMetadataGate": "7/7 pass"},
+  "smoke": {"durationSeconds": 60.034, "exitCode": 0, "pendingCaptures": 0, "streamBookEvents": 140969, "feeMetadataRefreshes": 12, "nativePmUsCoefficients": [0.0695], "evidenceBytes": 138019, "economicCaptureSegments": 0, "sourceHashesUnchanged": true},
+  "smokeLimitation": "No economic captures passed fresh metadata gates in the one-minute smoke; native latency capture plumbing is covered by deterministic synthetic book tests, not a claimed observed trade.",
+  "postSmokeChanges": "Study-only fee metadata prioritizes promoted gross-positive routes; fee diagnostic aligns signed revenue; report preserves explicit divergence branches and class P&L. No discovery, matching, stream or confirmation changes.",
+  "sourceCi": "Pending GitHub CI before final collection"
+}

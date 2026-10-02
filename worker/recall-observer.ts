@@ -14,6 +14,7 @@ import {LatestCandidates,candidateKey,priority,paperSettlement,selectConfirmatio
 import {transactionVersion} from '../lib/screen/book-confirmation.ts';
 import {ConfirmationFeed} from './book-confirmation-adapter.ts';
 import {rankedSemanticLists,isPromoted} from '../lib/research/semantic-lists.ts';
+import {realismPolicy} from '../lib/research/execution-realism.ts';
 import {PaperExecutionStudy,executionStudyPolicy,type StudyBook} from '../lib/research/paper-execution-study.ts';
 import {reconcileGroups} from './coverage.ts';
 
@@ -175,17 +176,22 @@ export function delayCounterfactual(route:RecallRoute,signal:Signal,entry:Record
     modeledNet:unwind&&unwindFee!==null?unwind.cost-firstTake.cost-fee-unwindFee:null};
 }
 
-export async function observeRecall(directory:string,durationMs=recallPolicy.durationMs,env?:string,catalogPath?:string,executionStudy=false){
-  if(!Number.isSafeInteger(durationMs)||durationMs<1000||durationMs>90*60_000)throw Error('BOUNDED_DURATION_REQUIRED');
+export async function observeRecall(directory:string,durationMs=recallPolicy.durationMs,env?:string,catalogPath?:string,executionStudy=false,realism=false){
+  if(realism&&!executionStudy)throw Error('REALISM_REQUIRES_EXECUTION_STUDY');
+  if(!Number.isSafeInteger(durationMs)||durationMs<1000||durationMs>(realism?6*3600_000:90*60_000))throw Error('BOUNDED_DURATION_REQUIRED');
   if(env)process.loadEnvFile(resolve(env));mkdirSync(directory,{recursive:true,mode:0o700});
-  const sourceHashes=Object.fromEntries(['scripts/report-paper-execution.ts','lib/research/paper-execution-study.ts','lib/research/paper-execution-report.ts','worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
+  const sourceHashes=Object.fromEntries(['lib/research/study-fees.ts','lib/research/execution-realism.ts','scripts/report-execution-realism.ts','scripts/run-execution-realism.mjs','scripts/report-paper-execution.ts','lib/research/paper-execution-study.ts','lib/research/paper-execution-report.ts','worker/recall-observer.ts','worker/recall-matching-thread.ts','lib/research/recall-detector.ts','lib/research/ev-arb.ts',
     'lib/arb/adapters.ts','worker/streams.ts','lib/research/hot-confirmation.ts','lib/research/proposition.ts','lib/research/promotion-certificate.ts','lib/research/proposition-differences.ts','lib/research/semantic-lists.ts','lib/research/identity.ts','lib/research/entities.ts','lib/research/non-sports.ts','lib/research/canonical-template.ts','lib/research/settlement-validation.ts','worker/book-confirmation-adapter.ts'].map(p=>[p,sha(readFileSync(resolve(p),'utf8'))]));
-  const frozen={policy:{...recallPolicy,durationMs},executionStudy:executionStudy?executionStudyPolicy:null,sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
+  const retentionPolicy=realism?'PROMOTED_EPISODES_AND_NATIVE_FUTURES_AGGREGATE_OTHER_EVENTS':'LEGACY';
+  const frozen={retentionPolicy,realismPolicy:realism?realismPolicy:null,policy:{...recallPolicy,durationMs},executionStudy:executionStudy?executionStudyPolicy:null,sourceHashes,ordersEnabled:false,preparedAt:Date.now()};
   writeFileSync(resolve(directory,'frozen.json'),JSON.stringify(frozen,null,2)+'\n',{flag:'wx',mode:0o600});
   const control=new AbortController(),preparation=setTimeout(()=>control.abort(),20*60_000);
   let evidenceBytes=0;const counts:Record<string,number>={},reasons:Record<string,number>={};
   const count=(k:string,n=1)=>counts[k]=(counts[k]??0)+n;
-  const record=(kind:string,body:unknown)=>{const row=JSON.stringify({at:Date.now(),kind,body})+'\n';
+  const retainedCounts:Record<string,number>={},aggregatedCounts:Record<string,number>={};
+  const record=(kind:string,body:unknown)=>{
+    if(realism&&!kind.startsWith('PAPER_')&&!['OBSERVATION_STARTED','METADATA_REFRESH','NATIVE_RATE_LIMIT','FEED_INVALID','DISCOVERY_REFRESH','DISCOVERY_INCOMPLETE','HTTP_PUBLIC_FAILURE'].includes(kind)){aggregatedCounts[kind]=(aggregatedCounts[kind]??0)+1;return;}
+    retainedCounts[kind]=(retainedCounts[kind]??0)+1;const row=JSON.stringify({at:Date.now(),kind,body})+'\n';
     if(evidenceBytes+Buffer.byteLength(row)>recallPolicy.maxEvidenceBytes){reasons.EVIDENCE_LIMIT=(reasons.EVIDENCE_LIMIT??0)+1;control.abort();return;}
     appendFileSync(resolve(directory,'evidence.ndjson'),row,{mode:0o600});evidenceBytes+=Buffer.byteLength(row);};
   // Catalog bodies are saved once separately, not repeated in the L2 event log.
@@ -229,7 +235,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     candidateEventMatches:matched.eventMatches,matchedRoutes:routes.length,sportsRoutes:routes.filter(r=>r.pair.a.identity?.sports).length,
     allSeenRoutes:allRoutes.size,visitedRoutes:visited.size,twoBookRoutes:twoBook.size,freshRoutes:freshRoutes.size,
     unvisitedRoutes:[...allRoutes.keys()].filter(id=>!visited.has(id)).length,matchingDiagnostics:matched.diagnostics,
-    counts,reasons,buckets,delayOutcomes,requests:api.counts,requestFailures:api.failures,evidenceBytes,
+    counts,reasons,retainedCounts,aggregatedCounts,buckets,delayOutcomes,requests:api.counts,requestFailures:api.failures,evidenceBytes,
     contractVerifiedOpportunities:0,confirmedPaperArbs:0,
     strongestConfirmed:strongestConfirmed.filter(x=>isPromoted(x.settlement.classification)),
     ...rankedSemanticLists(strongestConfirmed,x=>x.settlement.classification,x=>x.signal.evaluation.estimatedNetProfit??-Infinity),
@@ -275,10 +281,11 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     const k=marketFeeds.get(bookKey('kalshi',r.pair.a.id))?.liveBook(r.pair.a.id),p=marketFeeds.get(bookKey('poly',r.pair.b.id))?.liveBook(r.pair.b.id);
     return k&&p?{kalshi:k,poly:p}:null;
   };
-  if(executionStudy)study=new PaperExecutionStudy(nativeStudyBooks,record);
+  const studyNative=(r:RecallRoute)=>realism&&(!metadata.has(r.pair.id)||Date.now()-metadata.get(r.pair.id)!.metadata.at>recallPolicy.metadataTtlMs)?null:nativeStudyBooks(r);
+  if(executionStudy)study=new PaperExecutionStudy(nativeStudyBooks,record,realism);
   const metadataRefresh=(route:RecallRoute)=>{
     const cached=metadata.get(route.pair.id);if(cached&&Date.now()-cached.metadata.at<recallPolicy.metadataTtlMs)return;
-    if(Date.now()-data.endedAt<recallPolicy.metadataTtlMs||metadataJobs.size||Date.now()-lastMetadata<3000)return;lastMetadata=Date.now();
+    if((!realism&&Date.now()-data.endedAt<recallPolicy.metadataTtlMs)||metadataJobs.size||Date.now()-lastMetadata<3000)return;lastMetadata=Date.now();
     const job=refreshCandidateMetadata(api,route).then(r=>{metadata.set(route.pair.id,r);allRoutes.set(route.pair.id,r.route);dirty.add(route.pair.id);
       count('metadataRefreshes');record('METADATA_REFRESH',{pairId:route.pair.id,...r});}).catch(error=>{count('metadataRefreshFailures');record('METADATA_FAILURE',{pairId:route.pair.id,reason:(error as Error).message});});
     metadataJobs.add(job);void job.finally(()=>metadataJobs.delete(job));
@@ -333,7 +340,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
     deadlineTimer=setTimeout(()=>control.abort(),durationMs);record('OBSERVATION_STARTED',{start,deadline});
     while(!control.signal.aborted&&performance.now()-mono<durationMs){
       study?.pulse();
-      if(study&&Date.now()-lastStudySweep>=250){lastStudySweep=Date.now();for(const e of [...study.active.values()])study.observe(e.route,nativeStudyBooks(e.route),classify(e.route));}
+      if(study&&Date.now()-lastStudySweep>=250){lastStudySweep=Date.now();for(const e of [...study.active.values()])study.observe(e.route,studyNative(e.route),classify(e.route));}
 
       const routeIndex=allRoutes;
       const evaluationStarted=performance.now();
@@ -363,7 +370,7 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
         if(net&&net.evaluation.estimatedNetProfit!<=0)nearPositive=retain(nearPositive,r,net,s=>s.evaluation.estimatedNetProfit!);
         if(net&&r.matchSource==='CANONICAL')canonicalChecks=retain(canonicalChecks,r,net,s=>s.evaluation.estimatedNetProfit!);
         classify(r);
-        if(study)study.observe(r,nativeStudyBooks(r),classify(r));
+        if(study){if(realism&&isPromoted(classify(r).classification)&&qs.some(q=>q.evaluation.grossStatus==='GROSS_ARB'))metadataRefresh(r);const sr=realism?metadata.get(r.pair.id)?.route??r:r;study.observe(sr,studyNative(sr),classify(sr));}
         if(bestQ.evaluation.grossProfit!==null){best=best.filter(x=>x.route.pair.id!==id);best.push({route:r,signal:bestQ});
           const lists=rankedSemanticLists(best,x=>x.route.semanticClass??'UNRESOLVED',x=>x.signal.evaluation.estimatedNetProfit??-Infinity);
           best=[...lists.promotedOpportunities,...lists.unresolvedResearch,...lists.rejectedDifferentQuestions];}
@@ -455,5 +462,5 @@ export async function observeRecall(directory:string,durationMs=recallPolicy.dur
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
   const directory=process.argv[2],duration=Number(process.argv.find(s=>s.startsWith('--duration-seconds='))?.split('=')[1]??1200)*1000;
   const env=process.argv.find(s=>s.startsWith('--env='))?.slice(6);if(!directory)throw Error('Usage: npm run research:recall -- NEW_DIRECTORY [--duration-seconds=1200] [--env=READ_STREAM_ENV]');
-  const result=await observeRecall(resolve(directory),duration,env,process.argv.find(s=>s.startsWith('--catalog='))?.slice(10),process.argv.includes('--execution-study'));console.log(JSON.stringify({phase:'STOPPED',counts:result.counts,reasons:result.reasons}));
+  const result=await observeRecall(resolve(directory),duration,env,process.argv.find(s=>s.startsWith('--catalog='))?.slice(10),process.argv.includes('--execution-study'),process.argv.includes('--realistic-execution'));console.log(JSON.stringify({phase:'STOPPED',counts:result.counts,reasons:result.reasons}));
 }
