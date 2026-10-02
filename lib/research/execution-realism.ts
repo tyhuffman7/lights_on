@@ -117,7 +117,8 @@ export function realismPortfolio(rows:{e:Episode;a:RealAttempt}[],cap:number,del
 }
 export function realismReport(episodes:Episode[],evidence:Map<number,Evidence>,windowMs:number){
  const continuity=conservativeOpportunityGroups(episodes),groups=continuity.groups;
- const portfolios=[],survival=[];
+ const portfolios:ReturnType<typeof realismPortfolio>[]=[];
+ const survival:{model:Model;delayMs:number;eligible:number;outcomes:Record<string,number>;terminal:Record<string,number>;fullSizeClean:number;reducedFirstFills:number;retainedEdge:number;reducedEdge:number;negativeTrades:{episodeId:number;pnl:number}[]}[]=[];
  for(const model of realismPolicy.models)for(const cap of realismPolicy.caps){
   const eligible=groups.flatMap(g=>{const e=g.find(e=>e.plans.some(p=>p.capDollars===cap));return e?[e]:[];});
   for(const delay of realismPolicy.latenciesMs){

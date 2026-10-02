@@ -25,6 +25,7 @@ test('current official fee examples and Kalshi cent balance alignment',()=>{
  assert.equal(orderFee([{price:5000,quantity:1000}],695,'poly'),1738000000);
  // Two levels each raw .0175. Accumulator removes the extra cent.
  assert.equal(orderFee([{price:5000,quantity:1},{price:5000,quantity:1}],700,'kalshi'),4000000);
+ assert.equal(orderFee([{price:5000,quantity:1},{price:5000,quantity:1},{price:4000,quantity:1},{price:4000,quantity:1}],700,'kalshi'),7000000);
  assert.equal(orderFee([{price:4000,quantity:1},{price:4000,quantity:1},{price:4000,quantity:1}],700,'kalshi'),6000000);
  assert.equal(orderFee([{price:4000,quantity:1},{price:4000,quantity:1},{price:4000,quantity:1}],700,'kalshi',false,true),6000000);
  assert.equal(orderFee([{price:5000,quantity:1}],NaN,'poly'),null);
